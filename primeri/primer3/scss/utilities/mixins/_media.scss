@@ -1,0 +1,37 @@
+// media 
+
+
+@use '../variables';
+
+
+// set css media screen styles with predefined breakpoints
+@mixin media_screen($small: false, $medium: false, $large: false, $huge: false) {
+    @if $small {
+        @media only screen and (max-width: variables.$media_screen_small) {
+            @content;
+        }
+    } 
+    @else if $medium {
+        @media only screen and (max-width: variables.$media_screen_medium) {
+            @content;
+        }
+    } 
+    @else if $large {
+        @media only screen and (max-width: variables.$media_screen_large) {
+            @content;
+        }
+    }
+    @else if $huge {
+        @media only screen and (max-width: variables.$media_screen_huge) {
+            @content;
+        }
+    }
+}
+
+
+// set css media screen styles with given breakpoint
+@mixin media_screen_breakpoint($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}

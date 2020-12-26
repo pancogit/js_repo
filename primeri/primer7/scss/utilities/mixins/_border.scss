@@ -1,0 +1,44 @@
+// border
+
+
+// set borders
+@mixin set_borders($style: null,
+                   $width: null,
+                   $color: null,
+
+                   $top-style: null,
+                   $top-width: null,
+                   $top-color: null,
+                   
+                   $bottom-style: null,
+                   $bottom-width: null,
+                   $bottom-color: null,
+                   
+                   $left-style: null,
+                   $left-width: null,
+                   $left-color: null,
+                   
+                   $right-style: null,
+                   $right-width: null,
+                   $right-color: null) {
+
+    border-style: $style;
+    border-width: $width;
+    border-color: $color;
+
+    border-top-style: $top-style;
+    border-top-width: $top-width;
+    border-top-color: $top-color;
+
+    border-bottom-style: $bottom-style;
+    border-bottom-width: $bottom-width;
+    border-bottom-color: $bottom-color;
+
+    border-left-style: $left-style;
+    border-left-width: $left-width;
+    border-left-color: $left-color;
+
+    border-right-style: $right-style;
+    border-right-width: $right-width;
+    border-right-color: $right-color;
+}
