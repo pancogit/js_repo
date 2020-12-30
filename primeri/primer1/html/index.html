@@ -11,20 +11,711 @@
     <!-- for responsive web design (mobile devices) -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
+    <!-- font awesome icons -->
+    <link href="../../../libraries/font-awesome/fontawesome-free-5.15.1-web/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+
     <!-- css styles -->
     <link href="../css/main.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <header>
-    </header>
+    <div class="page">
+        <header class="header">
+            <div class="header__top">
+                <div class="page__content header__logo">
+                    <div class="logo">
+                        <a href="index.html" class="logo__link">
+                            <h1 class="logo__title">
+                                <span class="logo__green logo__green--bold">Green</span>Company
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="header__icons">
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-search header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-calendar-alt header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-link header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-file-contract header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-th header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-bell header__icon"></i>
+                        </a>
+                        <a href="index.html" class="header__link">
+                            <i class="fas fa-users header__icon"></i>
+                        </a>
+                        <div class="login">
+                            <a href="index.html" class="header__link">
+                                <div class="login__circle">
+                                    <i class="fas fa-user header__icon login__icon"></i>
+                                </div>
+                            </a>
+                            <div class="login__box">
+                                <div class="login__content">
+                                    <a href="index.html" class="login__link">
+                                        <img src="../images/user_3.png" alt="user picture" width="50" height="50"
+                                            class="login__image" />
+                                    </a>
+                                    <a href="index.html" class="login__link">
+                                        <div class="login__name">Michael Shawn</div>
+                                    </a>
+                                </div>
+                                <a href="index.html" class="login__link login__logout">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="page__content header__navigation">
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Home</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Company</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link dropdown">Department</a>
+                                <!-- 
+                                    .dropdown::after {
+                                        font-weight: 900;
+                                        font-family: "Font Awesome 5 Free";
+                                        -webkit-font-smoothing: antialiased;
+                                        display: inline-block;
+                                        font-style: normal;
+                                        font-variant: normal;
+                                        text-rendering: auto;
+                                        line-height: 1;
 
-    <main>
-    </main>
+                                        content: "\f107"; (normal dropdown) or 
+                                        content: "\f106"; (expanded dropdown)
+                                    }
+                                    <i class="fas fa-angle-down"></i>    content: "\f107";
+                                    <i class="fas fa-angle-up"></i>      content: "\f106";
+                                -->
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Agronomy</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Plants</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Nutrition</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Biotechnology</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link dropdown">Forms</a>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Tabular</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Student form</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="index.html" class="dropdown__link">Experience</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Learning</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Projects</a>
+                            </li>
+                        </ul>
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Learn More</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Book a Personalised Demo
+                                    <i class="fas fa-long-arrow-alt-up fa-rotate-45 navigation__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-    <footer>
-    </footer>
+        <main class="main">
+            <div class="page__content main__content">
+                <div class="main__events">
+                    <div class="main__news">
+                        <h2 class="main__heading">Future Events</h2>
+                        <a class="main__event">Check out all our upcoming company and social events</a>
+                    </div>
+                </div>
+                <div class="main__cards">
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_bussiness.png" alt="bussiness card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Bussiness Process Management</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_learning.png" alt="learning card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Learning Management System</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_knowledge.png" alt="knowledge card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Knowledge Base</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_news.png" alt="news card" width="55" height="55" class="card__image" />
+                        <p class="card__info">News</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_gmail.png" alt="gmail card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Gmail</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_office365.png" alt="office 365 card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Office 365 Mail</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_trello.png" alt="trello card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Trello</p>
+                    </a>
+                    <a href="index.html" class="card">
+                        <img src="../images/icon_slack.png" alt="slack card" width="55" height="55"
+                            class="card__image" />
+                        <p class="card__info">Slack</p>
+                    </a>
+                </div>
+                <div class="main__badges">
+                    <div class="badge">
+                        <div class="badge__header">
+                            <h3 class="badge__heading">Current weather</h3>
+                        </div>
+                        <div class="badge__content weather">
+                            <form class="weather__form" method="POST">
+                                <select class="weather__select" name="weather-select">
+                                    <option class="weather__option" value="weather-choose" selected="selected"
+                                        disabled="disabled">Choose a location...</option>
+                                    <option class="weather__option" value="weather-addison">Addison, IL</option>
+                                    <option class="weather__option" value="weather-sd">Smederevo, SD</option>
+                                    <option class="weather__option" value="weather-bg">Belgrade, BG</option>
+                                    <option class="weather__option" value="weather-ca">Cacak, CA</option>
+                                    <option class="weather__option" value="weather-gm">Gornji Milanovac, GM</option>
+                                    <option class="weather__option" value="weather-ue">Uzice, UE</option>
+                                    <option class="weather__option" value="weather-pn">Paracin, PN</option>
+                                    <option class="weather__option" value="weather-ni">Nis, NI</option>
+                                    <option class="weather__option" value="weather-ns">Novi Sad, NS</option>
+                                    <option class="weather__option" value="weather-kg">Kragujevac, KG</option>
+                                </select>
+                                <div class="weather__degrees">
+                                    <button class="weather__button weather__button--active">&deg;C</button>
+                                    <button class="weather__button">&deg;F</button>
+                                </div>
+                            </form>
+                            <div class="weather__info">
+                                <h4 class="weather__location">N/A</h4>
+                                <p class="weather__message">Not allowed location</p>
+                            </div>
+                            <div class="weather__track">
+                                <h4 class="weather__place">N/A</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge__header">
+                        <h3 class="badge__heading">Recent Articles</h3>
+                    </div>
+                    <div class="badge__content">
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles_bug_tracker.png" alt="bug tracker article"
+                                    class="article__image" width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Bug Tracker</h4>
+                                </a>
+                                <p class="article__date">Thuesday, 8 February 2018</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles_employee.png" alt="employee article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Employee Of The Month</h4>
+                                </a>
+                                <p class="article__date">Sunday, 4 February 2018</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="exit interview article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Exit Interview</h4>
+                                </a>
+                                <p class="article__date">Wednesday, 17 January 2018</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="support tickets article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Support Tickets</h4>
+                                </a>
+                                <p class="article__date">Monday, 2 September 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="green plants article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Green Plants</h4>
+                                </a>
+                                <p class="article__date">Thuesday, 28 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="agronomy culture article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Agronomy Culture</h4>
+                                </a>
+                                <p class="article__date">Monday, 25 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="sports article" class="article__image" width="60"
+                                    height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Sports</h4>
+                                </a>
+                                <p class="article__date">Wednesday, 22 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="tickets for errors article"
+                                    class="article__image" width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Tickets for Errors</h4>
+                                </a>
+                                <p class="article__date">Thuesday, 21 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="inactivities article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Inactivities</h4>
+                                </a>
+                                <p class="article__date">Monday, 19 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="foods and planet article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Foods and Planet</h4>
+                                </a>
+                                <p class="article__date">Sunday, 15 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="foreign languages article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Foreign Languages</h4>
+                                </a>
+                                <p class="article__date">Friday, 13 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="index.html" class="article__link">
+                                <img src="../images/articles.png" alt="report problems article" class="article__image"
+                                    width="60" height="60" />
+                            </a>
+                            <div class="article__info">
+                                <a href="index.html" class="article__link">
+                                    <h4 class="article__heading">Report Problems</h4>
+                                </a>
+                                <p class="article__date">Wednesday, 10 August 2017</p>
+                                <a href="index.html" class="article__link article__link--small">Demo Processes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge__header">
+                        <h3 class="badge__heading">Green Initiatives</h3>
+                    </div>
+                    <form class="badge__content comment" method="POST">
+                        <input type="text" placeholder="Add a comment" name="comment-input" class="comment__input" />
+                        <div class="comment__controls">
+                            <input type="submit" class="comment__submit" value="Add a comment" />
+                            <a href="index.html" class="comment__cancel">Cancel</a>
+                        </div>
+                        <div class="comment__box">
+                            <a href="index.html" class="comment__link">
+                                <img src="../images/user_1.png" alt="user alison kelly" width="70" height="70"
+                                    class="comment__image" />
+                            </a>
+                            <div class="comment__info">
+                                <p class="comment__header">
+                                    <a href="index.html" class="comment__link comment__user">Alison Kelly</a> wrote...
+                                </p>
+                                <p class="comment__text">I really like the new layout of the homepage,
+                                    make things so much easier to find!
+                                </p>
+                                <p class="comment__footer">
+                                    <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">
+                                        <i class="far fa-thumbs-up comment__like"></i>
+                                        <span class="comment__count">1</span> person
+                                    </a>
+                                    <span class="comment__liked">liked this</span>
+                                    <span class="comment__dot">&bull;</span>
+                                    <span class="comment__date">06-03-2018 12:47</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comment__box">
+                            <a href="index.html" class="comment__link">
+                                <img src="../images/user_2.png" alt="user abigail clark" width="70" height="70"
+                                    class="comment__image" />
+                            </a>
+                            <div class="comment__info">
+                                <p class="comment__header">
+                                    <a href="index.html" class="comment__link comment__user">Abigail Clark</a> wrote...
+                                </p>
+                                <p class="comment__text">Hello everyone</p>
+                                <p class="comment__footer">
+                                    <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">
+                                        <i class="far fa-thumbs-up comment__like"></i>
+                                        <span class="comment__count">1</span> person
+                                    </a>
+                                    <span class="comment__liked">liked this</span>
+                                    <span class="comment__dot">&bull;</span>
+                                    <span class="comment__date">10-05-2017 11:09</span>
+                                </p>
+                            </div>
+                            <div class="comment__box">
+                                <a href="index.html" class="comment__link">
+                                    <img src="../images/user_4.png" alt="user nigel davies" width="70" height="70"
+                                        class="comment__image" />
+                                </a>
+                                <div class="comment__info">
+                                    <p class="comment__header">
+                                        <a href="index.html" class="comment__link comment__user">Nigel Davies</a>
+                                        wrote...
+                                    </p>
+                                    <p class="comment__text">Hi @abigail - welcome!</p>
+                                    <p class="comment__footer">
+                                        <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">
+                                            <i class="far fa-thumbs-up comment__like"></i>
+                                            <span class="comment__count">3</span> person
+                                        </a>
+                                        <span class="comment__liked">liked this</span>
+                                        <span class="comment__dot">&bull;</span>
+                                        <span class="comment__date">10-05-2017 13:20</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__box">
+                            <a href="index.html" class="comment__link">
+                                <img src="../images/user_5.png" alt="user ben franks" width="70" height="70"
+                                    class="comment__image" />
+                            </a>
+                            <div class="comment__info">
+                                <p class="comment__header">
+                                    <a href="index.html" class="comment__link comment__user">Ben Franks</a> wrote...
+                                </p>
+                                <p class="comment__text">Yes, it's really good to see all kind of explanations about
+                                    those messages that are discarded by email client...
+                                </p>
+                                <p class="comment__footer">
+                                    <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">
+                                        <i class="far fa-thumbs-up comment__like"></i>
+                                        <span class="comment__count">0</span> person
+                                    </a>
+                                    <span class="comment__liked">liked this</span>
+                                    <span class="comment__dot">&bull;</span>
+                                    <span class="comment__date">02-02-2017 08:22</span>
+                                </p>
+                            </div>
+                            <div class="comment__box">
+                                <a href="index.html" class="comment__link">
+                                    <img src="../images/user_6.png" alt="user alex jenkins" width="70" height="70"
+                                        class="comment__image" />
+                                </a>
+                                <div class="comment__info">
+                                    <p class="comment__header">
+                                        <a href="index.html" class="comment__link comment__user">Alex Jenkins</a>
+                                        wrote...
+                                    </p>
+                                    <p class="comment__text">I had the same problem several days ago, it wasn't good
+                                        experience at all, but it happens from time to time. Such a bad thing...
+                                    </p>
+                                    <p class="comment__footer">
+                                        <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">
+                                            <i class="far fa-thumbs-up comment__like"></i>
+                                            <span class="comment__count">0</span> person
+                                        </a>
+                                        <span class="comment__liked">liked this</span>
+                                        <span class="comment__dot">&bull;</span>
+                                        <span class="comment__date">04-02-2017 11:05</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="comment__box">
+                                <a href="index.html" class="comment__link">
+                                    <img src="../images/user_7.png" alt="user john clintwood" width="70" height="70"
+                                        class="comment__image" />
+                                </a>
+                                <div class="comment__info">
+                                    <p class="comment__header">
+                                        <a href="index.html" class="comment__link comment__user">John Clintwood</a>
+                                        wrote...
+                                    </p>
+                                    <p class="comment__text">Our servers has protection against that bug. But always
+                                        we have in mind that errors can occur at any time. Our IT team is working very
+                                        hard to support whole computer system.
+                                    </p>
+                                    <p class="comment__footer">
+                                        <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                        <span class="comment__dot">&bull;</span>
+                                        <a href="index.html" class="comment__link comment__link--small">
+                                            <i class="far fa-thumbs-up comment__like"></i>
+                                            <span class="comment__count">0</span> person
+                                        </a>
+                                        <span class="comment__liked">liked this</span>
+                                        <span class="comment__dot">&bull;</span>
+                                        <span class="comment__date">05-02-2017 09:08</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__box">
+                            <a href="index.html" class="comment__link">
+                                <img src="../images/user_8.png" alt="user david drack" width="70" height="70"
+                                    class="comment__image" />
+                            </a>
+                            <div class="comment__info">
+                                <p class="comment__header">
+                                    <a href="index.html" class="comment__link comment__user">David Drack</a> wrote...
+                                </p>
+                                <p class="comment__text">I like the idea about site, it looks good and
+                                    it makes sense. Thank you for all of your contributions and applications.
+                                    Thanks a lot!
+                                </p>
+                                <p class="comment__footer">
+                                    <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">
+                                        <i class="far fa-thumbs-up comment__like"></i>
+                                        <span class="comment__count">5</span> person
+                                    </a>
+                                    <span class="comment__liked">liked this</span>
+                                    <span class="comment__dot">&bull;</span>
+                                    <span class="comment__date">12-01-2017 20:10</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comment__box">
+                            <a href="index.html" class="comment__link">
+                                <img src="../images/user_9.png" alt="user shone brick" width="70" height="70"
+                                    class="comment__image" />
+                            </a>
+                            <div class="comment__info">
+                                <p class="comment__header">
+                                    <a href="index.html" class="comment__link comment__user">Shone Brick</a> wrote...
+                                </p>
+                                <p class="comment__text">Happy New Year! I wish you all the best in life! Don't forget
+                                    to subscribe our youtube channel and give us some likes!
+                                </p>
+                                <p class="comment__footer">
+                                    <a href="index.html" class="comment__link comment__link--small">Reply</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">Like</a>
+                                    <span class="comment__dot">&bull;</span>
+                                    <a href="index.html" class="comment__link comment__link--small">
+                                        <i class="far fa-thumbs-up comment__like"></i>
+                                        <span class="comment__count">2</span> person
+                                    </a>
+                                    <span class="comment__liked">liked this</span>
+                                    <span class="comment__dot">&bull;</span>
+                                    <span class="comment__date">01-01-2017 02:10</span>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="page__content footer__content">
+                <section class="footer__links">
+                    <h2 class="footer__heading">The Site of Your Campaigns</h2>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <h3 class="footer__caption">Services</h3>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Email marketing</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Campaigns</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Branding</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Offline</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <h3 class="footer__caption">About</h3>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Our story</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Benefits</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Careers</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <h3 class="footer__caption">Legal</h3>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Terms & Conditions</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">Terms of use</a>
+                        </li>
+                    </ul>
+                </section>
+                <div class="footer__media">
+                    <div class="social">
+                        <a href="https://www.facebook.com" class="social__link" target="_blank">
+                            <span class="social__circle">
+                                <i class="fab fa-facebook-f social__icon"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.twitter.com" class="social__link" target="_blank">
+                            <span class="social__circle">
+                                <i class="fab fa-twitter social__icon"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.google.com" class="social__link" target="_blank">
+                            <span class="social__circle">
+                                <i class="fab fa-google-plus-g social__icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <form class="subscribe" method="POST">
+                        <h3 class="subscribe__heading">Subscribe Now</h3>
+                        <input type="email" name="subscribe-email" placeholder="Email" class="subscribe__email" />
+                        <input type="submit" value="Send" class="subscribe__submit" />
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="../js/menu.js"></script>
 </body>
