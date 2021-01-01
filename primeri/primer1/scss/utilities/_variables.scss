@@ -7,11 +7,51 @@ $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
+// page
+$page_content_max_width: 75rem;
+$page_content_padding_small: 0 0.5rem;
+$page_content_padding: 0 1rem;
+
 // button 
 
 // logo
+$logo_title_font_size: 2.5rem;
+
+// login
+$login_circle_padding: 0.35rem;
+$login_circle_border_radius: 50%;
+
+// navigation
+
+// dropdown
+
+// card
+
+// badge
+
+// weather
+
+// article
+
+// comment
+
+// social
+
+// subscribe
 
 // header 
+$header_top_padding: 1rem 0;
+$header_logo_margin_right: 3rem;
+$header_logo_flex: 100%;
+$header_logo_margin_bottom: 1.5rem;
+$header_time_margin_left: 0.3rem;
+$header_icons_grid_col_low: 3rem;
+$header_icons_grid_col_high: 1fr;
+$header_icons_row_gap: 1rem;
+$header_icons_col_gap: 2rem;
+$header_icons_flex: 0 1 40rem;
+$header_icons_breakpoint: 64rem;
+$header_icons_margin_bottom_small: 1rem;
 
 // footer
 

@@ -1,1 +1,86 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    &__bottom {
+
+    }
+
+    &__feature {
+        
+    }
+
+    &__icon {
+
+    }
+
+    &__icons {
+        // align on main axis flex item with automatically margins
+        margin-left: auto;
+
+        // set css grid container
+        @include mixins.set_grid_container($grid_template_columns: repeat(auto-fit, minmax(variables.$header_icons_grid_col_low, 
+                                                                                           variables.$header_icons_grid_col_high)),
+                                           $row_gap: variables.$header_icons_row_gap,
+                                           $column_gap: variables.$header_icons_col_gap,
+                                           $align_items: center);
+
+        // grid layout is set, but there must be width set to spread items
+        // it's flex item at the same time and flex property can be used
+        // width for flex item is set via flex basis
+        @include mixins.set_flex_item($flex: variables.$header_icons_flex);
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_icons_breakpoint) {
+            margin-bottom: variables.$header_icons_margin_bottom_small;
+        }        
+    }
+
+    &__link {
+        color: colors.$header_link_color;
+
+        &:hover {
+            color: colors.$header_link_color_hover;
+        }
+    }
+
+    &__login {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap, 
+                                              $justify_content: space-between, 
+                                              $align_items: center);
+    }
+
+    &__logo {
+        margin-right: variables.$header_logo_margin_right;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_icons_breakpoint) {
+            // spread item to full width
+            flex: variables.$header_logo_flex;
+
+            margin-bottom: variables.$header_logo_margin_bottom;
+        }
+    }
+
+    &__navigation {
+
+    }
+
+    &__top {
+        padding: variables.$header_top_padding;
+        background-color: colors.$header_top_background_color;
+    }
+
+    &__calendar {
+        // set flexbox
+        @include mixins.set_flexbox_container($align_items: center);
+    }
+
+    &__time {
+        margin-left: variables.$header_time_margin_left;
+        color: colors.$header_link_color;
+    }
+}

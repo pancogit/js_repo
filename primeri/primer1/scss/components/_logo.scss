@@ -1,1 +1,25 @@
 /* logo */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.logo {
+
+    &__green {
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: colors.$logo_link_color;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: normal;
+        font-size: variables.$logo_title_font_size;
+    }
+}

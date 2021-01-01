@@ -1,0 +1,54 @@
+/* login */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.login {
+
+    &__box {
+        // hide by default
+        //display: none;
+
+        display: block;
+
+        // set absolute positioning to make box out of normal flow
+        position: absolute;
+
+        padding: 0.5rem;
+        background-color: hsl(0 0% 74% / 0.3);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    &__circle {
+        // draw circle around login icon
+        display: inline-block;
+        padding: variables.$login_circle_padding;
+        border-radius: variables.$login_circle_border_radius;
+        background-color: colors.$login_circle_background_color;
+    }
+
+    &__content {
+
+    }
+
+    &__icon {
+
+    }
+
+    &__image {
+
+    }
+
+    &__link {
+
+    }
+
+    &__logout {
+
+    }
+
+    &__name {
+        
+    }
+}

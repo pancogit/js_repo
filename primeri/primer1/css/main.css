@@ -18,9 +18,107 @@ a {
   transform: rotate(45deg);
 }
 
+/* page */
+.page__content {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 75rem;
+}
+@media only screen and (max-width: 40rem) {
+  .page__content {
+    padding: 0 0.5rem;
+  }
+}
+
 /* button */
 /* logo */
+.logo__green--bold {
+  font-weight: bold;
+}
+.logo__link {
+  display: inline-block;
+  color: white;
+}
+.logo__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+/* login */
+.login__box {
+  display: block;
+  position: absolute;
+  padding: 0.5rem;
+  background-color: rgba(189, 189, 189, 0.3);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.login__circle {
+  display: inline-block;
+  padding: 0.35rem;
+  border-radius: 50%;
+  background-color: #5c5c5c;
+}
+/* navigation */
+/* dropdown */
+/* card */
+/* badge */
+/* weather */
+/* article */
+/* comment */
+/* social */
+/* subscribe */
 /* header */
+.header__icons {
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+  row-gap: 1rem;
+  column-gap: 2rem;
+  align-items: center;
+  flex: 0 1 40rem;
+}
+@media only screen and (max-width: 64rem) {
+  .header__icons {
+    margin-bottom: 1rem;
+  }
+}
+.header__link {
+  color: white;
+}
+.header__link:hover {
+  color: silver;
+}
+.header__login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 3rem;
+}
+@media only screen and (max-width: 64rem) {
+  .header__logo {
+    flex: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+.header__top {
+  padding: 1rem 0;
+  background-color: #026701;
+}
+.header__calendar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.header__time {
+  margin-left: 0.3rem;
+  color: white;
+}
+
 /* footer */
 /* home */
 
