@@ -1,6 +1,14 @@
 /* home */ 
 
+@use '../utilities/variables';
+
 .home {
+
+    // url is relative to the html page, not to the final css file
+    background-image: url(variables.$home_background_image);
+
+    // stretch image to full width and height, but keep good proportions
+    background-size: cover;
 
     &__badges {
 

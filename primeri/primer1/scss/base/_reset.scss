@@ -8,15 +8,3 @@ body {
 a {
     text-decoration: none;
 }
-
-// add rotation by 45 degrees for fontawesome
-.fa-rotate-45 {
-    -webkit-filter: none;
-    filter: none;
-
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-}

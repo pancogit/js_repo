@@ -1,16 +1,99 @@
 /* dropdown */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .dropdown {
 
-    &__item {
+    &:hover {
+        .dropdown__list {
+            display: block;
+        }
 
+        .dropdown__icon {
+            &::after {
+                content: variables.$dropdown_icon_expanded;   // expanded dropdown
+            }
+        }
+    }
+
+    &__arrow {
+        // set flexbox container to not wrap dropdown arrow icon near dropdown menu text
+        @include mixins.set_flexbox_container();
+    }
+
+    &__icon {
+        margin-left: variables.$dropdown_icon_margin_left;
+
+        &:after {
+            font-weight: variables.$dropdown_icon_font_weight;
+            font-family: variables.$dropdown_icon_font_family;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: variables.$dropdown_icon_line_height;
+
+            content: variables.$dropdown_icon;  // normal dropdown
+        }
+    }
+
+    &__item {
+        background-color: colors.$dropdown_item_background_color;
+
+        &:hover {
+            background-color: colors.$dropdown_item_background_color_hover;
+        }
+
+        // set dropdown for hamburger menu
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            background-color: unset;
+        }
+    }
+
+    &__content {
+        // positioning container for dropdown list
+        position: relative;
     }
 
     &__link {
+        display: block;
+        padding: variables.$dropdown_link_padding;
+        color: colors.$dropdown_link_color;
+        font-weight: bold;
+        font-size: variables.$dropdown_link_font_size;
+        text-transform: uppercase;
 
+        &:hover {
+            color: colors.$dropdown_link_color_hover;
+        }
+
+        // set dropdown for hamburger menu
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            padding-left: variables.$dropdown_link_padding_left_small;
+
+            &:hover {
+                color: colors.$dropdown_link_color_hover_small;
+            }
+        }
     }
 
     &__list {
-        
+        // hide by default
+        display: none;
+
+        @include mixins.reset_list;
+
+        // set absolute positioning for dropdown list
+        position: absolute;
+        z-index: variables.$dropdown_list_z_index;
+
+        // set dropdown for hamburger menu
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            // remove absolute positioning
+            position: unset;
+        }
     }
 }

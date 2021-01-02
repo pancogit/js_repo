@@ -11,6 +11,7 @@ $media_screen_huge: 80rem;
 $page_content_max_width: 75rem;
 $page_content_padding_small: 0 0.5rem;
 $page_content_padding: 0 1rem;
+$page_min_width: 20rem;
 
 // button 
 
@@ -18,12 +19,42 @@ $page_content_padding: 0 1rem;
 $logo_title_font_size: 2.5rem;
 
 // login
-$login_circle_padding: 0.35rem;
-$login_circle_border_radius: 50%;
+$login_right: 0.3rem;
+$login_border_radius: 0.5rem;
+$login_content_padding: 0.5rem 1rem 0.7rem;
+$login_content_border_width: 0.1rem;
+$login_end_padding: 0.5rem 1rem;
+$login_user_margin_right: 1rem;
+$login_user_padding: 0.5rem;
+$login_user_border_radius: 50%;
+$login_name_font_size: 1.2rem;
+$login_z_index: 1000;
 
 // navigation
+$navigation_link_padding: 1rem;
+$navigation_link_font_size: 0.9rem;
+$navigation_link_flex: 1;
+$navigation_breakpoint: 58rem;
+$navigation_breakpoint_small: 35rem;
+$navigation_close_link_margin: 0.5rem 1rem;
+$navigation_close_link_font_size: 1.7rem;
 
 // dropdown
+$dropdown_icon: "\f107";
+$dropdown_icon_expanded: "\f106";
+$dropdown_icon_margin_left: 0.3rem;
+$dropdown_icon_font_weight: 900;
+$dropdown_icon_line_height: 1;
+$dropdown_icon_font_family: "Font Awesome 5 Free";
+$dropdown_link_padding: 1rem;
+$dropdown_link_padding_left_small: 3rem;
+$dropdown_link_font_size: 0.9rem;
+$dropdown_list_z_index: 500;
+
+// hamburger
+$hamburger_link_margin: 0.6rem 0;
+$hamburger_link_padding: 0.3rem;
+$hamburger_link_font_size: 1.3rem;
 
 // card
 
@@ -52,7 +83,11 @@ $header_icons_col_gap: 2rem;
 $header_icons_flex: 0 1 40rem;
 $header_icons_breakpoint: 64rem;
 $header_icons_margin_bottom_small: 1rem;
+$header_circle_padding: 0.35rem;
+$header_circle_border_radius: 50%;
+$header_feature_breakpoint: 42rem;
 
 // footer
 
 // home
+$home_background_image: "../images/leaves3.jpg";

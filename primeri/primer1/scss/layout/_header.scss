@@ -7,11 +7,32 @@
 .header {
 
     &__bottom {
+        
+    }
 
+    &__calendar {
+        // set flexbox
+        @include mixins.set_flexbox_container($align_items: center);
+    }
+
+    &__circle {
+        // draw circle around login icon
+        display: inline-block;
+        padding: variables.$header_circle_padding;
+        border-radius: variables.$header_circle_border_radius;
+        background-color: colors.$header_circle_background_color;
     }
 
     &__feature {
-        
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_feature_breakpoint) {
+            display: none;
+        }
+    }
+
+    &__user {
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_feature_breakpoint) {
+            text-align: right;
+        }
     }
 
     &__icon {
@@ -66,17 +87,13 @@
     }
 
     &__navigation {
-
+        // positioning container for .login css component
+        position: relative;
     }
 
     &__top {
         padding: variables.$header_top_padding;
         background-color: colors.$header_top_background_color;
-    }
-
-    &__calendar {
-        // set flexbox
-        @include mixins.set_flexbox_container($align_items: center);
     }
 
     &__time {

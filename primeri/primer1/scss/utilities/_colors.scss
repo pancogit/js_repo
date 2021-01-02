@@ -9,11 +9,31 @@
 $logo_link_color: white;
 
 // login
-$login_circle_background_color: #5c5c5c;
+$login_box_shadow: 0px 1px 4px 0px #5f4c4c;
+$login_content_border_color: #c7c7c7;
+$login_user_background_color: #a2a1a1;
+$login_logout_color: #026701;
+$login_logout_color_hover: green;
+$login_name_color: black;
 
 // navigation
+$navigation_link_color: #026701;
+$navigation_link_color_hover: black;
+$navigation_link_color_small: white;
+$navigation_background_color_small: #717171;
+$navigation_close_link_color: white;
+$navigation_close_link_color_hover: black;
 
 // dropdown
+$dropdown_item_background_color: #026701;
+$dropdown_item_background_color_hover: white;
+$dropdown_link_color: white;
+$dropdown_link_color_hover: #026701;
+$dropdown_link_color_hover_small: black;
+
+// hamburger
+$hamburger_link_color: #026701;
+$hamburger_link_color_hover: black;
 
 // card
 
@@ -33,6 +53,7 @@ $login_circle_background_color: #5c5c5c;
 $header_top_background_color: #026701;
 $header_link_color: white;
 $header_link_color_hover: silver;
+$header_circle_background_color: #5c5c5c;
 
 // footer
 

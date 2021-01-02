@@ -2,34 +2,39 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .login {
 
-    &__box {
-        // hide by default
-        //display: none;
+    // hide by default
+    display: none;
 
-        display: block;
+    // set absolute positioning to make box out of normal flow
+    position: absolute;
+    top: 0;
+    right: variables.$login_right;
+    z-index: variables.$login_z_index;
 
-        // set absolute positioning to make box out of normal flow
-        position: absolute;
-
-        padding: 0.5rem;
-        background-color: hsl(0 0% 74% / 0.3);
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-    }
-
-    &__circle {
-        // draw circle around login icon
-        display: inline-block;
-        padding: variables.$login_circle_padding;
-        border-radius: variables.$login_circle_border_radius;
-        background-color: colors.$login_circle_background_color;
-    }
+    background-color: white;
+    box-shadow: colors.$login_box_shadow;
+    border-bottom-left-radius: variables.$login_border_radius;
+    border-bottom-right-radius: variables.$login_border_radius;
 
     &__content {
+        padding: variables.$login_content_padding;
 
+        // set flexbox container to align items on cross axis
+        @include mixins.set_flexbox_container($align_items: center);
+
+        // set bottom border
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$login_content_border_width,
+                                    $bottom-color: colors.$login_content_border_color);
+    }
+
+    &__end {
+        padding: variables.$login_end_padding;
+        text-align: right;
     }
 
     &__icon {
@@ -41,14 +46,28 @@
     }
 
     &__link {
+        display: inline-block;        
+    }
 
+    &__user {
+        margin-right: variables.$login_user_margin_right;
+        padding: variables.$login_user_padding;
+        border-radius: variables.$login_user_border_radius;
+        background-color: colors.$login_user_background_color;
     }
 
     &__logout {
+        font-weight: bold;
+        color: colors.$login_logout_color;
 
+        &:hover {
+            color: colors.$login_logout_color_hover;
+        }
     }
 
     &__name {
-        
+        font-size: variables.$login_name_font_size;
+        font-style: italic;
+        color: colors.$login_name_color;
     }
 }

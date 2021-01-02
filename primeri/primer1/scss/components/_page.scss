@@ -5,6 +5,9 @@
 
 .page {
 
+    // set minimum width for page
+    min-width: variables.$page_min_width;
+
     &__content {
         padding: variables.$page_content_padding;
 
