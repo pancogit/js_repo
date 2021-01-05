@@ -1,5 +1,9 @@
 /* comment */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .comment {
 
     &__box {

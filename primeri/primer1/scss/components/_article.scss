@@ -1,13 +1,32 @@
 /* article */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .article {
 
-    &__date {
+    // set flexbox container
+    @include mixins.set_flexbox_container();
 
+    &--margin {
+        margin-bottom: variables.$article_margin_bottom;
+    }
+
+    &__left {
+        margin-right: variables.$article_left_margin_right;
+    }
+
+    &__date {
+        margin-top: 0;
+        margin-bottom: variables.$article_date_margin_bottom;
+        color: colors.$article_date_color;
     }
 
     &__heading {
-
+        margin-top: variables.$article_heading_margin_top;
+        margin-bottom: variables.$article_date_margin_bottom;
+        font-size: variables.$article_heading_font_size;
     }
 
     &__image {
@@ -19,9 +38,11 @@
     }
 
     &__link {
-
+        display: inline-block;
+        color: colors.$article_link_color;
+        
         &--small {
-
+            
         }
     }
 }

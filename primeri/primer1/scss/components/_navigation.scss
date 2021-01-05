@@ -8,16 +8,23 @@
 
     // set navigation for hamburger menu
     @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
-        //display: none;
 
         // set new styles for hamburger menu
+        // for hamburger menu, don't use flexbox, use simple block
         display: block;
+
+        // hide navigation when hamburger menu is shown
+        // when navigation is clicked and shown, then display will be block
+        display: none;
 
         // set fixed position for hamburger menu, to stretch across the screen
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
+
+        // set z-index for content stacking
+        z-index: variables.$navigation_z_index;
 
         background-color: colors.$navigation_background_color_small;
     }

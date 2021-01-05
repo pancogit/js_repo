@@ -36,12 +36,31 @@ $hamburger_link_color: #026701;
 $hamburger_link_color_hover: black;
 
 // card
+$card_background_color: white;
+$card_background_color_hover: rgb(255 255 255 / 0.75);
+$card_info_color: black;
 
 // badge
+$badge_background_color: white;
+$badge_header_border_color: #dadada;
 
 // weather
+$weather_button_background_color: white;
+$weather_button_border_color: silver;
+$weather_button_gradient_background_fallback: rgb(157,157,157);
+$weather_button_gradient_background: linear-gradient(180deg, 
+                                                   rgba(157,157,157,1) 0%, 
+                                                   rgba(193,192,192,1) 20%, 
+                                                   rgba(230,230,230,1) 100%);
+$weather_location_color: #679800;
+$weather_message_color: #5d5d5d;
+$weather_select_border_color: silver;
+$weather_track_color: white;
+$weather_track_background_color: #85c008;
 
 // article
+$article_date_color: #5d5d5d;
+$article_link_color: #187317;
 
 // comment
 
@@ -58,3 +77,6 @@ $header_circle_background_color: #5c5c5c;
 // footer
 
 // home
+$home_event_color: #046359;
+$home_events_box_shadow: 0px 2px 3px #424242;
+$home_news_background_color: rgba(255, 255, 255, 0.8);

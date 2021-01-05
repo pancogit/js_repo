@@ -1,12 +1,32 @@
 /* card */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .card {
+    display: inline-block;
+    padding: variables.$card_padding;
+    padding-top: variables.$card_padding_top;
+    background-color: colors.$card_background_color;
+    border-radius: variables.$home_events_border_radius;
+    box-shadow: colors.$home_events_box_shadow;
+
+    // set flexbox container to center items on cross axis
+    @include mixins.set_flexbox_container($flex_direction: column, $align_items: center);
+
+    &:hover {
+        // add transparency
+        background-color: colors.$card_background_color_hover;
+    }
 
     &__image {
-        
+
     }
 
     &__info {
-
+        margin-bottom: 0;
+        text-align: center;
+        color: colors.$card_info_color;
     }
 }

@@ -38,6 +38,7 @@ $navigation_breakpoint: 58rem;
 $navigation_breakpoint_small: 35rem;
 $navigation_close_link_margin: 0.5rem 1rem;
 $navigation_close_link_font_size: 1.7rem;
+$navigation_z_index: 1000;
 
 // dropdown
 $dropdown_icon: "\f107";
@@ -57,12 +58,55 @@ $hamburger_link_padding: 0.3rem;
 $hamburger_link_font_size: 1.3rem;
 
 // card
+$card_padding: 0.5rem;
+$card_padding_top: 1rem;
 
 // badge
+$badge_weather_flex: 1 12rem;
+$bagde_weather_flex_medium: 45%;
+$badge_weather_flex_full: 100%;
+$badge_weather_margin_right: 1.5rem;
+$badge_weather_margin_bottom: 1.5rem;
+$badge_weather_breakpoint_medium: 55rem;
+$badge_weather_breakpoint_small: 30rem;
+$badge_articles_flex: 1 12rem;
+$badge_articles_flex_medium: 45%;
+$badge_articles_margin_right: 1.5rem;
+$badge_articles_margin_bottom: 1.5rem;
+$badge_comments_flex: 2 20rem;
+$badge_wrapper_height: 30rem;
+$badge_wrapper_padding: 1rem;
+$badge_wrapper_weather_flex: 1;
+$badge_content_padding_small: 0.1rem;
+$badge_content_flex: 1;
+$badge_header_padding: 1rem 1.3rem;
+$badge_header_border_width: 0.1rem;
 
 // weather
+$weather_select_margin_bottom: 0.5rem;
+$weather_button_padding: 0.5rem 0.7rem;
+$weather_button_border_radius: 0.3rem;
+$weather_button_border_width: 0.1rem;
+$weather_info_padding: 0.1rem 0;
+$weather_location_margin_top: 1.2rem;
+$weather_location_margin_bottom: 2rem;
+$weather_location_font_size: 2.5rem;
+$weather_message_font_size: 1.1rem;
+$weather_option_font_size: 0.95rem;
+$weather_select_padding: 0.7rem 0.3rem;
+$weather_select_margin_right: 1rem;
+$weather_select_border_radius: 0.3rem;
+$weather_track_negative_margin: -1rem;
+$weather_track_padding: 1rem;
+$weather_track_font_size: 2.1rem;
+$weather_track_border_radius: 0.3rem;
 
 // article
+$article_margin_bottom: 2rem;
+$article_left_margin_right: 0.8rem;
+$article_date_margin_bottom: 0.3rem;
+$article_heading_margin_top: 0.5rem;
+$article_heading_font_size: 1.13rem;
 
 // comment
 
@@ -91,3 +135,15 @@ $header_feature_breakpoint: 42rem;
 
 // home
 $home_background_image: "../images/leaves3.jpg";
+$home_cards_width: 9rem;
+$home_cards_gap: 0.3rem;
+$home_cards_breakpoint: 30rem;
+$home_cards_margin_bottom: 1.5rem;
+$home_content_padding: 1.5rem;
+$home_events_margin_bottom: 1.5rem;
+$home_events_border_radius: 0.35rem;
+$home_events_background_image: "../images/nature.jpg";
+$home_events_height: 23rem;
+$home_news_padding: 1rem;
+$home_news_padding_bottom: 1.5rem;
+$home_news_border_radius: 0.35rem;
