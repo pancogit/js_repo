@@ -7,7 +7,7 @@
 .header {
 
     &__bottom {
-        
+        background-color: colors.$header_bottom_background_color;
     }
 
     &__calendar {

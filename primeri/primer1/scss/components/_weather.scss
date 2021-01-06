@@ -86,6 +86,7 @@
         margin-right: variables.$weather_select_margin_right;
         border-radius: variables.$weather_select_border_radius;
         border-color: colors.$weather_select_border_color;
+        border-width: variables.$weather_select_border_width;
         outline: none;
     }
 

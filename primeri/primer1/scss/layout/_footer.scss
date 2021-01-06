@@ -1,36 +1,84 @@
 /* footer */ 
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .footer {
+    color: colors.$footer_color;
 
     &__caption {
-
+        margin-top: 0;
+        margin-bottom: variables.$footer_caption_margin_bottom;
+        text-transform: uppercase;
+        letter-spacing: variables.$footer_caption_letter_spacing;
+        font-size: variables.$footer_caption_font_size;
     }
 
     &__content {
+        padding-top: variables.$footer_content_padding;
+        padding-bottom: variables.$footer_content_padding;
 
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+
+        // change layout to one column for medium screens and lower
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+            flex-direction: column;
+        }
     }
 
     &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$footer_heading_margin_bottom;
+        text-transform: uppercase;
+        letter-spacing: variables.$footer_heading_letter_spacing;
 
+        // one column layout, change size of heading
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+            font-size: variables.$footer_heading_font_size_small;
+        }
+    }
+
+    &__lists {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
     }
 
     &__item {
-
+        margin-bottom: variables.$footer_item_margin_bottom;
     }
 
     &__link {
+        color: colors.$footer_link;
 
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__links {
+        margin-right: variables.$footer_links_margin_right;
 
+        // set flex properties
+        @include mixins.set_flex_item($flex: variables.$footer_links_flex);
+
+        // for one column layout remove margin
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+            margin-right: 0;
+        }
     }
 
     &__list {
+        // reset list
+        @include mixins.reset_list;
 
+        margin-right: variables.$footer_list_margin;
+        margin-bottom: variables.$footer_list_margin;
     }
 
     &__media {
-        
+        // set flex properties
+        @include mixins.set_flex_item($flex: variables.$footer_media_flex);
     }
 }

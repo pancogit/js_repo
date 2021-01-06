@@ -1,5 +1,7 @@
 // colors
 
+// reset
+$body_background_color: black;
 
 // page
 
@@ -63,18 +65,38 @@ $article_date_color: #5d5d5d;
 $article_link_color: #187317;
 
 // comment
+$comment_cancel_color: #026701;
+$comment_cancel_color_hover: black;
+$comment_date_color: #737373;
+$comment_input_border_color: #cecdcd;
+$comment_input_border_color_hover: green;
+$comment_input_placeholder_color: rgb(167, 164, 164);
+$comment_link_color: #026701;
+$comment_submit_background_color: #026701;
+$comment_submit_background_color_hover: #6f9b0f;
+$comment_submit_color: white;
 
 // social
+$social_circle_background_color: white;
+$social_circle_background_color_hover: black;
+$social_icon_color: black;
+$social_icon_color_hover: white;
 
 // subscribe
+$subscribe_submit_background_color: #026701;
+$subscribe_submit_background_color_hover: green;
+$subscribe_submit_color: white;
 
 // header 
 $header_top_background_color: #026701;
 $header_link_color: white;
 $header_link_color_hover: silver;
 $header_circle_background_color: #5c5c5c;
+$header_bottom_background_color: white;
 
 // footer
+$footer_color: white;
+$footer_link: white;
 
 // home
 $home_event_color: #046359;

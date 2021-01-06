@@ -1,6 +1,9 @@
 // variables 
 
 
+// reset 
+$body_font_family: 'Times New Roman', Times, serif;
+
 // media screen
 $media_screen_small: 20rem;
 $media_screen_medium: 40rem;
@@ -67,8 +70,8 @@ $bagde_weather_flex_medium: 45%;
 $badge_weather_flex_full: 100%;
 $badge_weather_margin_right: 1.5rem;
 $badge_weather_margin_bottom: 1.5rem;
-$badge_weather_breakpoint_medium: 55rem;
-$badge_weather_breakpoint_small: 30rem;
+$badge_weather_breakpoint_medium: 67rem;
+$badge_weather_breakpoint_small: 40rem;
 $badge_articles_flex: 1 12rem;
 $badge_articles_flex_medium: 45%;
 $badge_articles_margin_right: 1.5rem;
@@ -83,7 +86,6 @@ $badge_header_padding: 1rem 1.3rem;
 $badge_header_border_width: 0.1rem;
 
 // weather
-$weather_select_margin_bottom: 0.5rem;
 $weather_button_padding: 0.5rem 0.7rem;
 $weather_button_border_radius: 0.3rem;
 $weather_button_border_width: 0.1rem;
@@ -93,9 +95,11 @@ $weather_location_margin_bottom: 2rem;
 $weather_location_font_size: 2.5rem;
 $weather_message_font_size: 1.1rem;
 $weather_option_font_size: 0.95rem;
+$weather_select_margin_bottom: 0.5rem;
 $weather_select_padding: 0.7rem 0.3rem;
 $weather_select_margin_right: 1rem;
 $weather_select_border_radius: 0.3rem;
+$weather_select_border_width: 0.1rem;
 $weather_track_negative_margin: -1rem;
 $weather_track_padding: 1rem;
 $weather_track_font_size: 2.1rem;
@@ -109,10 +113,49 @@ $article_heading_margin_top: 0.5rem;
 $article_heading_font_size: 1.13rem;
 
 // comment
+$comment_margin_bottom: 1rem;
+$comment_box_margin_left: 3rem;
+$comment_left_margin_right: 0.7rem;
+$comment_controls_margin_bottom: 1.2rem;
+$comment_date_font_size: 0.9rem;
+$comment_footer_margin_top: 0.5rem;
+$comment_footer_line_height: 1.4rem;
+$comment_header_margin_top: 0.3rem;
+$comment_header_margin_bottom: 0.5rem;
+$comment_input_padding: 0.7rem 1rem;
+$comment_input_margin_bottom: 1.2rem;
+$comment_input_flex: 0 0 5rem;
+$comment_input_font_family: 'Times New Roman', Times, serif;
+$comment_input_font_size: 1rem;
+$comment_input_border_width: 0.15rem;
+$comment_input_border_radius: 0.2rem;
+$comment_input_placeholder_font_size: 1.1rem;
+$comment_liked_font_size: 0.9rem;
+$comment_link_font_size_small: 0.9rem;
+$comment_submit_padding: 0.5rem 1rem;
+$comment_submit_margin_right: 1rem;
+$comment_text_margin: 0.5rem 0;
+$comment_text_line_height: 1.2rem;
 
 // social
+$social_column_width: 2.5rem;
+$social_row_gap: 0.5rem;
+$social_column_gap: 1rem;
+$social_margin_bottom: 2.5rem;
+$social_circle_padding: 0.5rem;
+$social_circle_border_radius: 50%;
+$social_circle_width: 1.5rem;
+$social_icon_font_size: 1.2rem;
 
 // subscribe
+$subscribe_email_margin_bottom: 1rem;
+$subscribe_email_padding: 0.5rem 1rem;
+$subscribe_email_width_small: 50%;
+$subscribe_heading_letter_spacing: 0.1rem;
+$subscribe_submit_padding: 1.2rem 1rem;
+$subscribe_submit_font_size: 0.95rem;
+$subscribe_submit_letter_spacing: 0.05rem;
+$subscribe_submit_width_small: 50%;
 
 // header 
 $header_top_padding: 1rem 0;
@@ -132,6 +175,19 @@ $header_circle_border_radius: 50%;
 $header_feature_breakpoint: 42rem;
 
 // footer
+$footer_caption_margin_bottom: 1.5rem;
+$footer_caption_letter_spacing: 0.1rem;
+$footer_caption_font_size: 0.85rem;
+$footer_content_padding: 3rem;
+$footer_content_breakpoint: 40rem;
+$footer_heading_margin_bottom: 2.5rem;
+$footer_heading_letter_spacing: 0.15rem;
+$footer_heading_font_size_small: 1.2rem;
+$footer_item_margin_bottom: 0.8rem;
+$footer_links_margin_right: 5rem;
+$footer_links_flex: 2;
+$footer_list_margin: 2rem;
+$footer_media_flex: 1;
 
 // home
 $home_background_image: "../images/leaves3.jpg";

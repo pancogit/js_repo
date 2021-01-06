@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  background-color: black;
 }
 
 a {
@@ -291,13 +292,13 @@ a {
   flex: 1 12rem;
   margin-right: 1.5rem;
 }
-@media only screen and (max-width: 55rem) {
+@media only screen and (max-width: 67rem) {
   .badge--weather {
     flex: 45%;
     margin-bottom: 1.5rem;
   }
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 40rem) {
   .badge--weather {
     flex: 100%;
     margin-right: 0;
@@ -307,11 +308,16 @@ a {
   flex: 1 12rem;
   margin-right: 1.5rem;
 }
-@media only screen and (max-width: 55rem) {
+@media only screen and (max-width: 67rem) {
   .badge--articles {
     flex: 45%;
     margin-right: 0;
     margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 40rem) {
+  .badge--articles {
+    flex: 100%;
   }
 }
 .badge--comments {
@@ -416,6 +422,7 @@ a {
   margin-right: 1rem;
   border-radius: 0.3rem;
   border-color: silver;
+  border-width: 0.1rem;
   outline: none;
 }
 .weather__track {
@@ -457,9 +464,187 @@ a {
   color: #187317;
 }
 /* comment */
+.comment {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.comment__box {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.comment__box--reply {
+  margin-left: 3rem;
+}
+.comment__left {
+  margin-right: 0.7rem;
+}
+.comment__controls {
+  display: none;
+  margin-bottom: 1.2rem;
+}
+.comment__cancel {
+  color: #026701;
+  font-weight: bold;
+}
+.comment__cancel:hover {
+  color: black;
+}
+.comment__date {
+  color: #737373;
+  font-size: 0.9rem;
+}
+.comment__dot {
+  color: #737373;
+}
+.comment__footer {
+  margin-top: 0.5rem;
+  line-height: 1.4rem;
+}
+.comment__header {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.comment__input {
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  resize: none;
+  flex: 0 0 5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  outline: none;
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color: #cecdcd;
+  border-radius: 0.2rem;
+}
+.comment__input:focus {
+  border-color: green;
+}
+.comment__input::placeholder {
+  color: #a7a4a4;
+  font-size: 1.1rem;
+}
+.comment__liked {
+  color: #737373;
+  font-size: 0.9rem;
+}
+.comment__link {
+  display: inline-block;
+  color: #026701;
+}
+.comment__link--small {
+  font-size: 0.9rem;
+}
+.comment__submit {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  background-color: #026701;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+.comment__submit:hover {
+  background-color: #6f9b0f;
+}
+.comment__text {
+  margin: 0.5rem 0;
+  line-height: 1.2rem;
+}
+.comment__user {
+  font-weight: bold;
+}
+
 /* social */
+.social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 2.5rem);
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+  justify-content: right;
+}
+@media only screen and (max-width: 40rem) {
+  .social {
+    justify-content: left;
+  }
+}
+.social--margin {
+  margin-bottom: 2.5rem;
+}
+.social__circle {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.social__icon {
+  color: black;
+  font-size: 1.2rem;
+}
+.social__link {
+  display: inline-block;
+}
+.social__link:hover .social__circle {
+  background-color: black;
+}
+.social__link:hover .social__icon {
+  color: white;
+}
+
 /* subscribe */
+.subscribe {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.subscribe__email {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+}
+@media only screen and (max-width: 40rem) {
+  .subscribe__email {
+    width: 50%;
+  }
+}
+.subscribe__heading {
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.subscribe__submit {
+  padding: 1.2rem 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 0.05rem;
+  outline: none;
+  background-color: #026701;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.subscribe__submit:hover {
+  background-color: green;
+}
+@media only screen and (max-width: 40rem) {
+  .subscribe__submit {
+    width: 50%;
+  }
+}
+
 /* header */
+.header__bottom {
+  background-color: white;
+}
 .header__calendar {
   display: flex;
   flex-wrap: nowrap;
@@ -529,6 +714,73 @@ a {
 }
 
 /* footer */
+.footer {
+  color: white;
+}
+.footer__caption {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.85rem;
+}
+.footer__content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 40rem) {
+  .footer__content {
+    flex-direction: column;
+  }
+}
+.footer__heading {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+@media only screen and (max-width: 40rem) {
+  .footer__heading {
+    font-size: 1.2rem;
+  }
+}
+.footer__lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__item {
+  margin-bottom: 0.8rem;
+}
+.footer__link {
+  color: white;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__links {
+  margin-right: 5rem;
+  flex: 2;
+}
+@media only screen and (max-width: 40rem) {
+  .footer__links {
+    margin-right: 0;
+  }
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.footer__media {
+  flex: 1;
+}
+
 /* home */
 .home {
   background-image: url("../images/leaves3.jpg");

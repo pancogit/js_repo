@@ -28,7 +28,6 @@
         }
 
         // change layout to one column, full width
-        // others will be pushed into separate rows
         @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_small) {
             @include mixins.set_flex_item($flex: variables.$badge_weather_flex_full);
 
@@ -48,6 +47,11 @@
 
             margin-right: 0;
             margin-bottom: variables.$badge_articles_margin_bottom;
+        }
+
+        // change layout to one column, full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_small) {
+            @include mixins.set_flex_item($flex: variables.$badge_weather_flex_full);
         }
     }
 

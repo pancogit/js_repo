@@ -6,16 +6,42 @@
 
 .comment {
 
-    &__box {
+    // set flexbox container to spread comment input to full width
+    @include mixins.set_flexbox_container($flex_direction: column);
 
+    &__box {
+        margin-bottom: variables.$comment_margin_bottom;
+
+        // set flexbox container
+        @include mixins.set_flexbox_container();
+
+        // element modifier for comment box
+        // set one level of nesting for better readability and looks better
+        // there is one post, and all replies to that post
+        // if there is reply on reply, that will be on the same level of nesting as original reply
+        &--reply {
+            margin-left: variables.$comment_box_margin_left;
+        }
+    }
+
+    &__left {
+        margin-right: variables.$comment_left_margin_right;
     }
 
     &__controls {
+        // hide by default
+        display: none;
 
+        margin-bottom: variables.$comment_controls_margin_bottom;
     }
 
     &__cancel {
+        color: colors.$comment_cancel_color;
+        font-weight: bold;
 
+        &:hover {
+            color: colors.$comment_cancel_color_hover;
+        }
     }
 
     &__count {
@@ -23,19 +49,22 @@
     }
 
     &__date {
-
+        color: colors.$comment_date_color;
+        font-size: variables.$comment_date_font_size;
     }
 
     &__dot {
-
+        color: colors.$comment_date_color;
     }
 
     &__footer {
-
+        margin-top: variables.$comment_footer_margin_top;
+        line-height: variables.$comment_footer_line_height;
     }
 
     &__header {
-
+        margin-top: variables.$comment_header_margin_top;
+        margin-bottom: variables.$comment_header_margin_bottom;
     }
 
     &__image {
@@ -47,7 +76,36 @@
     }
 
     &__input {
+        padding: variables.$comment_input_padding;
+        margin-bottom: variables.$comment_input_margin_bottom;
 
+        // don't resize comment input
+        resize: none;
+
+        // disable flex shrinking to set height of flex item via flex basis
+        // don't grow, don't shrink, just set flex basis as height
+        @include mixins.set_flex_item($flex: variables.$comment_input_flex);
+
+        // change font for comments
+        font-family: variables.$comment_input_font_family;
+        font-size: variables.$comment_input_font_size;
+
+        outline: none;
+
+        @include mixins.set_borders($color: colors.$comment_input_border_color,
+                                    $width: variables.$comment_input_border_width,
+                                    $style: solid);
+        border-radius: variables.$comment_input_border_radius;
+
+        &:focus {
+            border-color: colors.$comment_input_border_color_hover;
+        }
+
+        // change style of placeholder
+        &::placeholder {
+            color: colors.$comment_input_placeholder_color;
+            font-size: variables.$comment_input_placeholder_font_size;
+        }
     }
 
     &__like {
@@ -55,25 +113,39 @@
     }
 
     &__liked {
-
+        color: colors.$comment_date_color;
+        font-size: variables.$comment_liked_font_size;
     }
 
     &__link {
+        display: inline-block;
+        color: colors.$comment_link_color;
 
         &--small {
-
+            font-size: variables.$comment_link_font_size_small;
         }
     }
 
     &__submit {
+        padding: variables.$comment_submit_padding;
+        margin-right: variables.$comment_submit_margin_right;
+        background-color: colors.$comment_submit_background_color;
+        color: colors.$comment_submit_color;
+        font-weight: bold;
+        border: none;
+        outline: none;
 
+        &:hover {
+            background-color: colors.$comment_submit_background_color_hover;
+        }
     }
 
     &__text {
-
+        margin: variables.$comment_text_margin;
+        line-height: variables.$comment_text_line_height;
     }
 
     &__user {
-        
+        font-weight: bold;
     }
 }
