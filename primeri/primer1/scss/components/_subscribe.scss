@@ -12,11 +12,26 @@
         margin-bottom: variables.$subscribe_email_margin_bottom;
         padding: variables.$subscribe_email_padding;
         outline: none;
-        border: none;
+        
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$subscribe_email_border_width,
+                                    $color: colors.$subscribe_email_border_color);
 
         // for one column layout change width
         @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
             width: variables.$subscribe_email_width_small;
+        }
+
+        // element modifier for email
+        // correct input
+        &--good {
+            border-color: colors.$subscribe_email_good_border_color;
+        }
+
+        // input error
+        &--error {
+            border-color: colors.$subscribe_email_error_border_color;
         }
     }
 
@@ -35,11 +50,16 @@
         outline: none;
         background-color: colors.$subscribe_submit_background_color;
         color: colors.$subscribe_submit_color;
-        border: none;
         cursor: pointer;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$subscribe_email_border_width,
+                                    $color: colors.$subscribe_submit_background_color);
 
         &:hover {
             background-color: colors.$subscribe_submit_background_color_hover;
+            border-color: colors.$subscribe_submit_background_color_hover;
         }
 
         // change box to be content box, because email is content box, to match both width

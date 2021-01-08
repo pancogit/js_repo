@@ -437,7 +437,39 @@ a {
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
-
+.weather__data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.weather__picture {
+  margin-right: 1.5rem;
+}
+.weather__cf-degree {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.weather__image {
+  margin-right: 1rem;
+}
+.weather__degree {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.weather__cf {
+  margin-bottom: 2rem;
+}
+.weather__numbers {
+  padding-top: 0.5rem;
+  text-align: left;
+}
+.weather__paragraph {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 /* article */
 .article {
   display: flex;
@@ -607,12 +639,20 @@ a {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   outline: none;
-  border: none;
+  border-style: solid;
+  border-width: 0.13rem;
+  border-color: white;
 }
 @media only screen and (max-width: 40rem) {
   .subscribe__email {
     width: 50%;
   }
+}
+.subscribe__email--good {
+  border-color: #0c9e0b;
+}
+.subscribe__email--error {
+  border-color: red;
 }
 .subscribe__heading {
   margin-top: 0;
@@ -628,12 +668,15 @@ a {
   outline: none;
   background-color: #026701;
   color: white;
-  border: none;
   cursor: pointer;
+  border-style: solid;
+  border-width: 0.13rem;
+  border-color: #026701;
   box-sizing: content-box;
 }
 .subscribe__submit:hover {
   background-color: green;
+  border-color: green;
 }
 @media only screen and (max-width: 40rem) {
   .subscribe__submit {
