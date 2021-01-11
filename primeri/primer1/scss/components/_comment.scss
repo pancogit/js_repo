@@ -134,6 +134,7 @@
         font-weight: bold;
         border: none;
         outline: none;
+        cursor: pointer;
 
         &:hover {
             background-color: colors.$comment_submit_background_color_hover;

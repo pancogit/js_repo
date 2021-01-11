@@ -577,6 +577,7 @@ a {
   font-weight: bold;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .comment__submit:hover {
   background-color: #6f9b0f;

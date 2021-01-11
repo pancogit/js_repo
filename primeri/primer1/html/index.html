@@ -173,10 +173,10 @@
                         <div class="login__content">
                             <a href="index.html" class="login__link login__user">
                                 <img src="../images/user_3.png" alt="user picture" width="50" height="50"
-                                    class="login__image" />
+                                    class="login__image" id="login__image-id" />
                             </a>
                             <a href="index.html" class="login__link">
-                                <div class="login__name">Michael Shawn</div>
+                                <div class="login__name" id="login__name-id">Michael Shawn</div>
                             </a>
                         </div>
                         <div class="login__end">
@@ -201,7 +201,7 @@
                             events</a>
                     </div>
                 </div>
-                <div class="home__cards">
+                <div class="home__cards" id="home__cards-id">
                     <a href="index.html" class="card">
                         <img src="../images/icon_bussiness.png" alt="bussiness card" width="55" height="55"
                             class="card__image" />
@@ -250,7 +250,7 @@
                         <div class="badge__content">
                             <div class="badge__wrapper badge__wrapper--weather weather">
                                 <form class="weather__form" method="POST">
-                                    <select class="weather__select" name="weather-select">
+                                    <select class="weather__select" name="weather-select" id="weather__select-id">
                                         <option class="weather__option" value="weather-choose" selected="selected"
                                             disabled="disabled">Choose a location...</option>
                                         <option class="weather__option" value="weather-addison">Addison, IL</option>
@@ -305,7 +305,7 @@
                             <h3 class="badge__heading">Recent Articles</h3>
                         </div>
                         <div class="badge__content badge__content--articles">
-                            <div class="badge__wrapper badge__wrapper--overflow">
+                            <div class="badge__wrapper badge__wrapper--overflow" id="badge__wrapper--articles-id">
                                 <div class="article article--margin">
                                     <div class="article__left">
                                         <a href="index.html" class="article__link">
@@ -506,7 +506,7 @@
                             <h3 class="badge__heading">Green Initiatives</h3>
                         </div>
                         <div class="badge__content badge__content--comments">
-                            <form class="badge__wrapper badge__wrapper--overflow comment" method="POST">
+                            <form class="badge__wrapper badge__wrapper--overflow comment" method="POST" id="badge__wrapper--comments-id">
                                 <textarea placeholder="Add a comment" name="comment-input"
                                     class="comment__input"></textarea>
                                 <div class="comment__controls">
