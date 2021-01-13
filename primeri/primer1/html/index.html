@@ -45,7 +45,7 @@
                             <a href="index.html" class="header__link">
                                 <i class="fas fa-calendar-alt header__icon"></i>
                             </a>
-                            <span class="header__time">14:29</span>
+                            <span class="header__time" id="header__time-id">14:29</span>
                         </div>
                         <div class="header__feature">
                             <a href="index.html" class="header__link">
@@ -73,9 +73,9 @@
                             </a>
                         </div>
                         <div class="header__user">
-                            <a href="index.html" class="header__link">
-                                <div class="header__circle">
-                                    <i class="fas fa-user header__icon login__icon"></i>
+                            <a href="index.html" class="header__link" id="header__link--user-id">
+                                <div class="header__circle" id="header__circle-id">
+                                    <i class="fas fa-user header__icon login__icon" id="header__icon--user-id"></i>
                                 </div>
                             </a>
                         </div>
@@ -84,9 +84,9 @@
             </div>
             <div class="header__bottom">
                 <div class="page__content header__navigation">
-                    <nav class="navigation">
+                    <nav class="navigation" id="navigation-id">
                         <div class="navigation__close">
-                            <a href="index.html" class="navigation__close-link">
+                            <a href="index.html" class="navigation__close-link" id="navigation__close-link-id">
                                 <i class="fas fa-times navigation__close-icon"></i>
                             </a>
                         </div>
@@ -99,25 +99,8 @@
                             </li>
                             <li class="navigation__item dropdown">
                                 <a href="index.html" class="navigation__link dropdown__arrow">Department
-                                    <span class="dropdown__icon"></span>
+                                    <i class="fas fa-angle-down dropdown__icon"></i>
                                 </a>
-                                <!-- 
-                                    .dropdown::after {
-                                        font-weight: 900;
-                                        font-family: "Font Awesome 5 Free";
-                                        -webkit-font-smoothing: antialiased;
-                                        display: inline-block;
-                                        font-style: normal;
-                                        font-variant: normal;
-                                        text-rendering: auto;
-                                        line-height: 1;
-
-                                        content: "\f107"; (normal dropdown) or 
-                                        content: "\f106"; (expanded dropdown)
-                                    }
-                                    <i class="fas fa-angle-down"></i>    content: "\f107";
-                                    <i class="fas fa-angle-up"></i>      content: "\f106";
-                                -->
                                 <div class="dropdown__content">
                                     <ul class="dropdown__list">
                                         <li class="dropdown__item">
@@ -137,7 +120,7 @@
                             </li>
                             <li class="navigation__item dropdown">
                                 <a href="index.html" class="navigation__link dropdown__arrow">Forms
-                                    <span class="dropdown__icon"></span>
+                                    <i class="fas fa-angle-down dropdown__icon"></i>
                                 </a>
                                 <div class="dropdown__content">
                                     <ul class="dropdown__list">
@@ -169,8 +152,8 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="login">
-                        <div class="login__content">
+                    <div class="login" id="login-id">
+                        <div class="login__content" id="login__content-id">
                             <a href="index.html" class="login__link login__user">
                                 <img src="../images/user_3.png" alt="user picture" width="50" height="50"
                                     class="login__image" id="login__image-id" />
@@ -179,12 +162,12 @@
                                 <div class="login__name" id="login__name-id">Michael Shawn</div>
                             </a>
                         </div>
-                        <div class="login__end">
+                        <div class="login__end" id="login__end-id">
                             <a href="index.html" class="login__link login__logout">Log Out</a>
                         </div>
                     </div>
                     <div class="hamburger">
-                        <a href="index.html" class="hamburger__link">
+                        <a href="index.html" class="hamburger__link" id="hamburger__link-id">
                             <i class="fas fa-bars hamburger__icon"></i>
                         </a>
                     </div>
@@ -840,9 +823,9 @@
                             </span>
                         </a>
                     </div>
-                    <form class="subscribe" method="POST">
+                    <form class="subscribe" method="POST" id="subscribe-id">
                         <h3 class="subscribe__heading">Subscribe Now</h3>
-                        <input type="email" name="subscribe-email" placeholder="Email" class="subscribe__email" />
+                        <input type="email" name="subscribe-email" placeholder="Email" class="subscribe__email" id="subscribe__email-id" />
                         <input type="submit" value="Send" class="subscribe__submit" />
                     </form>
                 </div>
@@ -852,6 +835,12 @@
 
     <script src="../js/menu.js"></script>
     <script src="../js/server.js"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/dropdown.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/subscribe.js"></script>
+    
 </body>
 
 </html>

@@ -1,17 +1,10 @@
 // include all sass files
 
-// utilities
-@use 'utilities/colors';
-@use 'utilities/variables';
-@use 'utilities/functions';
-@use 'utilities/mixins/mixins';
-
 // base 
 @use 'base/reset';
 
 // components
 @use 'components/page';
-@use 'components/button';
 @use 'components/logo';
 @use 'components/login';
 @use 'components/navigation';
@@ -29,3 +22,10 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/home';
+
+// utilities
+@use 'utilities/colors';
+@use 'utilities/variables';
+@use 'utilities/functions';
+@use 'utilities/mixins/mixins';
+@use 'utilities/utils';
