@@ -397,6 +397,11 @@ a {
 .weather__place {
   margin: 0;
 }
+@media only screen and (max-width: 30rem) {
+  .weather__place {
+    font-size: 1.5rem;
+  }
+}
 .weather__select {
   padding: 0.7rem 0.3rem;
   margin-bottom: 0.5rem;
@@ -425,7 +430,7 @@ a {
   margin: 1rem 0;
 }
 .weather__picture {
-  margin-right: 1.5rem;
+  margin-right: 3rem;
 }
 .weather__cf-degree {
   display: flex;
@@ -539,6 +544,16 @@ a {
   color: #a7a4a4;
   font-size: 1.1rem;
 }
+.comment .comment__input--error {
+  border-color: red;
+}
+.comment__message {
+  margin-top: -1rem;
+  font-size: 1.15rem;
+}
+.comment__message--error {
+  color: red;
+}
 .comment__liked {
   color: #737373;
   font-size: 0.9rem;
@@ -635,6 +650,16 @@ a {
 }
 .subscribe__email--error {
   border-color: red;
+}
+.subscribe__message {
+  margin-top: -0.5rem;
+}
+.subscribe__message--error {
+  color: red;
+}
+.subscribe__message--good {
+  color: white;
+  font-size: 1.5rem;
 }
 .subscribe__heading {
   margin-top: 0;

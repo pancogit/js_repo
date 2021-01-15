@@ -100,13 +100,15 @@ $weather_track_padding: 1rem;
 $weather_track_font_size: 2.1rem;
 $weather_track_border_radius: 0.3rem;
 $weather_data_margin: 1rem 0;
-$weather_picture_margin_right: 1.5rem;
+$weather_picture_margin_right: 3rem;
 $weather_image_margin_right: 1rem;
 $weather_degree_margin_right: 0.5rem;
 $weather_degree_font_size: 4rem;
 $weather_cf_margin_bottom: 2rem;
 $weather_numbers_padding_top: 0.5rem;
 $weather_paragraph_margin_bottom: 0.5rem;
+$weather_place_breakpoint: 30rem;
+$weather_place_font_size_small: 1.5rem;
 
 // article
 $article_margin_bottom: 2rem;
@@ -139,6 +141,8 @@ $comment_submit_padding: 0.5rem 1rem;
 $comment_submit_margin_right: 1rem;
 $comment_text_margin: 0.5rem 0;
 $comment_text_line_height: 1.2rem;
+$comment_message_margin_top: -1rem;
+$comment_message_font_size: 1.15rem;
 
 // social
 $social_column_width: 2.5rem;
@@ -160,6 +164,8 @@ $subscribe_submit_padding: 1.2rem 1rem;
 $subscribe_submit_font_size: 0.95rem;
 $subscribe_submit_letter_spacing: 0.05rem;
 $subscribe_submit_width_small: 50%;
+$subscribe_message_margin_top: -0.5rem;
+$subscribe_message_good_font_size: 1.5rem;
 
 // header 
 $header_top_padding: 1rem 0;

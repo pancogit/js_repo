@@ -35,6 +35,20 @@
         }
     }
 
+    &__message {
+        margin-top: variables.$subscribe_message_margin_top;
+
+        &--error {
+            // the same color as email border color
+            color: colors.$subscribe_email_error_border_color;;
+        }
+
+        &--good {
+            color: colors.$subscribe_message_good_color;
+            font-size: variables.$subscribe_message_good_font_size;
+        }
+    }
+
     &__heading {
         margin-top: 0;
         text-transform: uppercase;

@@ -78,6 +78,11 @@
 
     &__place {
         margin: 0;
+
+        // for smaller screens, set smaller font size
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$weather_place_breakpoint) {
+            font-size: variables.$weather_place_font_size_small;
+        }
     }
 
     &__select {

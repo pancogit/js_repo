@@ -70,11 +70,13 @@ $comment_cancel_color_hover: black;
 $comment_date_color: #737373;
 $comment_input_border_color: #cecdcd;
 $comment_input_border_color_hover: green;
+$comment_input_border_color_error: red;
 $comment_input_placeholder_color: rgb(167, 164, 164);
 $comment_link_color: #026701;
 $comment_submit_background_color: #026701;
 $comment_submit_background_color_hover: #6f9b0f;
 $comment_submit_color: white;
+$comment_message_color_error: red;
 
 // social
 $social_circle_background_color: white;
@@ -89,6 +91,7 @@ $subscribe_submit_color: white;
 $subscribe_email_border_color: white;
 $subscribe_email_error_border_color: red;
 $subscribe_email_good_border_color: #0c9e0b;
+$subscribe_message_good_color: white;
 
 // header 
 $header_top_background_color: #026701;

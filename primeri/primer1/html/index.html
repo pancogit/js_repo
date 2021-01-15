@@ -231,7 +231,7 @@
                             <h3 class="badge__heading">Current weather</h3>
                         </div>
                         <div class="badge__content">
-                            <div class="badge__wrapper badge__wrapper--weather weather">
+                            <div class="badge__wrapper badge__wrapper--weather weather" id="weather-id">
                                 <form class="weather__form" method="POST">
                                     <select class="weather__select" name="weather-select" id="weather__select-id">
                                         <option class="weather__option" value="weather-choose" selected="selected"
@@ -491,10 +491,10 @@
                         <div class="badge__content badge__content--comments">
                             <form class="badge__wrapper badge__wrapper--overflow comment" method="POST" id="badge__wrapper--comments-id">
                                 <textarea placeholder="Add a comment" name="comment-input"
-                                    class="comment__input"></textarea>
-                                <div class="comment__controls">
-                                    <input type="submit" class="comment__submit" value="Add a comment" />
-                                    <a href="index.html" class="comment__cancel">Cancel</a>
+                                    class="comment__input" id="comment__input-id"></textarea>
+                                <div class="comment__controls" id="comment__controls-id">
+                                    <input type="submit" class="comment__submit" value="Add a comment" id="comment__submit-id" />
+                                    <a href="index.html" class="comment__cancel" id="comment__cancel-id">Cancel</a>
                                 </div>
                                 <div class="comment__box">
                                     <div class="comment__left">
@@ -840,6 +840,8 @@
     <script src="../js/dropdown.js"></script>
     <script src="../js/navigation.js"></script>
     <script src="../js/subscribe.js"></script>
+    <script src="../js/weather.js"></script>
+    <script src="../js/comments.js"></script>
     
 </body>
 

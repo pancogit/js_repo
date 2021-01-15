@@ -108,6 +108,23 @@
         }
     }
 
+    // comment input error
+    // comment input focus has higher cascade than simple class
+    // because of that, make higher cascade with nested class
+    .comment__input--error {
+        border-color: colors.$comment_input_border_color_error;
+    }
+
+    // comment message
+    &__message {
+        margin-top: variables.$comment_message_margin_top;
+        font-size: variables.$comment_message_font_size;
+
+        &--error {
+            color: colors.$comment_message_color_error;
+        }
+    }
+
     &__like {
 
     }
