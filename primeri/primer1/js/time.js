@@ -1,7 +1,7 @@
 // update time in header
 
 
-(function time() {
+function time() {
 
     // header time from DOM
     var time = document.getElementById('header__time-id');
@@ -30,4 +30,4 @@
         time.textContent = hours + ':' + mins;
     }
 
-}());
+}

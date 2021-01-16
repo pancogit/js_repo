@@ -1,7 +1,7 @@
 // navigation menu for hamburger menu
 
 
-(function navigation() {
+function navigation() {
 
     var hamburgerLink = document.getElementById('hamburger__link-id');
     var navigation = document.getElementById('navigation-id');
@@ -48,4 +48,4 @@
         }
     }
 
-}());
+}

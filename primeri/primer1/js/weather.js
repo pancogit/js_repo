@@ -1,7 +1,7 @@
 // weather for locations
 
 
-(function weather() {
+function weather() {
 
     // get DOM elements
     var weather = document.getElementById('weather-id');
@@ -255,4 +255,4 @@
         return data;
     }
 
-}());
+}

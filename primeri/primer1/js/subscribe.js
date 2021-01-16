@@ -1,7 +1,7 @@
 // subscribe with email in the footer
 
 
-(function subscribe() {
+function subscribe() {
 
     var email = document.getElementById('subscribe__email-id');
     var form = document.getElementById('subscribe-id');
@@ -64,4 +64,4 @@
         }
     }
 
-}());
+}

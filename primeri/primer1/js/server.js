@@ -4,6 +4,9 @@
 // save JSON data from server in global variable
 var responseObject;
 
+// unique ID for each comment
+// for each new comment, comment ID is incremented
+var commentID = 1;
 
 // read data for page from server
 // if javascript is not enabled, then static data will stay on page
@@ -40,6 +43,18 @@ var responseObject;
         loadWeathers();
         loadArticles();
         loadComments();
+
+        // after data is loaded on page, call functions for all javascript components on page
+        // if functions for javascript components are called before server data is loaded on page,
+        // then server data on page will overwrite DOM components and their javascript behavior (event listeners, etc.)
+        // after data is loaded on page, javascript components are then able to work properly
+        time();
+        login();
+        dropdown();
+        navigation();
+        subscribe();
+        weather();
+        comments();
     }
 
     // data is not loaded
@@ -266,6 +281,11 @@ var responseObject;
         var dotLiked = document.createElement('span');
         var date = document.createElement('span');
 
+
+        // add unique ID for each comment and save that ID in comments array
+        box.id = 'comment-' + commentID++;
+        element.id = box.id;
+
         // add attributes and data
         box.classList.add('comment__box');
         left.classList.add('comment__left');
@@ -284,17 +304,17 @@ var responseObject;
         text.classList.add('comment__text');
         text.textContent = element.comment;
         footer.classList.add('comment__footer');
-        replyLink.classList.add('comment__link', 'comment__link--small');
+        replyLink.classList.add('comment__link', 'comment__link--small', 'comment__reply-link');
         replyLink.href = element.link;
         replyLink.textContent = 'Reply';
         dotReply.classList.add('comment__dot');
         dotReply.innerHTML = '&bull;';  // add HTML entity as HTML
-        likeLink.classList.add('comment__link', 'comment__link--small');
+        likeLink.classList.add('comment__link', 'comment__link--small', 'comment__like-link');
         likeLink.href = element.link;
         likeLink.textContent = 'Like';
         dotLike.classList.add('comment__dot');
         dotLike.innerHTML = '&bull;';  // add HTML entity as HTML
-        thumbLink.classList.add('comment__link', 'comment__link--small');
+        thumbLink.classList.add('comment__link', 'comment__link--small', 'comment__person-link');
         thumbLink.href = element.link;
         thumb.classList.add('far', 'fa-thumbs-up', 'comment__like');
         count.classList.add('comment__count');

@@ -2,7 +2,7 @@
 
 
 // when dropdown menu is clicked, show menu and change dropdown arrow
-(function dropdown() {
+function dropdown() {
 
     // get all dropdowns from DOM
     var dropdownList = document.getElementsByClassName('dropdown');
@@ -94,4 +94,4 @@
         }
     }
 
-}());
+}

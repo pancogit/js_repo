@@ -1,7 +1,7 @@
 // user login box
 
 
-(function login() {
+function login() {
 
     // get user info from DOM
     var userLink = document.getElementById('header__link--user-id');
@@ -38,4 +38,4 @@
         }
     }
 
-}());
+}
