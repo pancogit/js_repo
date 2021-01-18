@@ -59,6 +59,7 @@
 
     &__footer {
         margin-top: variables.$comment_footer_margin_top;
+        margin-bottom: variables.$comment_footer_margin_bottom;
         line-height: variables.$comment_footer_line_height;
     }
 
@@ -108,6 +109,15 @@
         }
     }
 
+    &__link {
+        display: inline-block;
+        color: colors.$comment_link_color;
+
+        &--small {
+            font-size: variables.$comment_link_font_size_small;
+        }
+    }
+
     // comment input error
     // comment input focus has higher cascade than simple class
     // because of that, make higher cascade with nested class
@@ -135,6 +145,38 @@
 
     &__like-link {
 
+        // if comment is already liked, close pointer cursor and change color of link
+        &--already-liked {
+            cursor: auto;
+            color: colors.$comment_like_link_already_liked_color;
+        }
+    }
+
+    // relative positioning used for positioning container for dynamicaly inserted person list box
+    &__person-wrapper {
+        display: inline-block;
+        position: relative; 
+    }
+
+    &__person-list {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex-direction: column);
+
+        padding: variables.$comment_person_list_padding;
+
+        // spread person list to full person wrapper width
+        position: absolute;
+        right: variables.$comment_person_list_right;
+        left: 0;
+        z-index: variables.$comment_person_list_z_index;
+
+        background-color: colors.$comment_person_list_background_color;
+        border-radius: variables.$comment_person_list_border_radius;
+    }
+
+    &__person-name {
+        color: colors.$comment_person_name_color;
+        font-size: variables.$comment_person_name_font_size;
     }
 
     &__person-link {
@@ -144,15 +186,6 @@
     &__liked {
         color: colors.$comment_date_color;
         font-size: variables.$comment_liked_font_size;
-    }
-
-    &__link {
-        display: inline-block;
-        color: colors.$comment_link_color;
-
-        &--small {
-            font-size: variables.$comment_link_font_size_small;
-        }
     }
 
     &__submit {

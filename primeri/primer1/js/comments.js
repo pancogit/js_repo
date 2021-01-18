@@ -16,6 +16,7 @@ function comments() {
 
     var submit = document.getElementById('comment__submit-id');
     var cancel = document.getElementById('comment__cancel-id');
+    var commentsContainer = document.getElementById('badge__wrapper--comments-id');
 
     cancel.addEventListener('click', hideControls);
 
@@ -26,6 +27,15 @@ function comments() {
         // clear content and remove errors if exist
         controls.classList.remove('show');
         input.value = '';
+
+        // if cancel is clicked and controls are not at the top of comments (for reply post)
+        // then move comment input and controls to the top of comments
+        if (commentsContainer.firstElementChild !== input) {
+            input.remove();
+            controls.remove();
+            commentsContainer.prepend(input);
+            input.after(controls);
+        }
 
         // remove error info from page
         if (input.classList.contains(inputErrorClass)) {
@@ -82,8 +92,6 @@ function comments() {
     function insertComment(comment) {
 
         // if reply comment is posted, then it must be inserted as reply comment in DOM
-        var commentsContainer = document.getElementById('badge__wrapper--comments-id');
-
         // insert comment bellow comment controls
         controls.after(comment);
         controls.classList.remove('show');
@@ -304,6 +312,8 @@ function comments() {
 
         // add event listeners for new created comments for reply, like and person link
         reply.addEventListener('click', replyComment);
+        like.addEventListener('click', likeComment);
+        personLink.addEventListener('click', listPersons);
 
         return box;
     }
@@ -314,8 +324,10 @@ function comments() {
     var likes = document.getElementsByClassName('comment__like-link');
     var persons = document.getElementsByClassName('comment__person-link');
 
+    // add event listeners
     for (let i = 0; i < replies.length; i++) replies[i].addEventListener('click', replyComment);
-
+    for (let i = 0; i < likes.length; i++) likes[i].addEventListener('click', likeComment);
+    for (let i = 0; i < persons.length; i++) persons[i].addEventListener('click', listPersons);
 
     // last post to which is replied
     var lastRepliedPost;
@@ -362,4 +374,160 @@ function comments() {
         input.after(controls);
     }
 
+    // like comment
+    function likeComment(e) {
+        e.preventDefault();
+
+        // get target, comment box, count for likes and like link from DOM
+        var target = e.target;
+        var comment = target.parentElement.parentElement.parentElement;
+        var count = comment.getElementsByClassName('comment__count')[0];
+        var likeLink = comment.getElementsByClassName('comment__like-link')[0];
+
+        // ID for comment
+        var id = comment.id;
+
+        // find comment from cached comments
+        var commentCache = findCommentById(id);
+        var likeList = commentCache.likeList;
+        var personList = likeList.persons;
+        var personFound = false;
+
+        // username for logged user
+        var username = responseObject.login.name;
+        var userLink = responseObject.login.link;
+
+        // search in person list and if it is not already liked, like it
+        for (let i = 0; i < personList.length; i++) {
+            if (personList[i].name === username) {
+                personFound = true;
+                break;
+            }
+        }
+
+        // person is not found in like list, increment number of likes, display on the page
+        // and add logged user to the like list
+        if (!personFound) {
+            likeList.numberOfLikes++;
+
+            // update number of likes on page also
+            count.textContent = likeList.numberOfLikes;
+
+            personList.push({
+                name: username,
+                link: userLink
+            });
+
+            // remove cursor pointer for link and change color of liked comment
+            likeLink.classList.add('comment__like-link--already-liked');
+        }
+    }
+
+
+    // find comment by ID from response object
+    function findCommentById(id) {
+        var comments = responseObject.comments;
+
+        // search for comment with given ID
+        return findCommentByIdRecursive(id, comments);
+    }
+
+    // search for comment with given ID for given array recursively
+    function findCommentByIdRecursive(id, arrayObject) {
+
+        for (let i = 0; i < arrayObject.length; i++) {
+            if (arrayObject[i].id === id) {
+                return arrayObject[i];
+            }
+
+            // search deeper in comment replies array
+            let replies = arrayObject[i].reply;
+            let comment = findCommentByIdRecursive(id, replies);
+
+            // if comment is found in replies, return that comment
+            if (comment) return comment;
+        }
+    }
+
+    // show on page list of all persons who liked comment
+    function listPersons(e) {
+        e.preventDefault();
+
+        var target = e.target;
+        var personWrapper;
+        var comment;
+
+        if (target.classList.contains('comment__person-link')) {
+            comment = target.parentElement.parentElement.parentElement.parentElement;
+            personWrapper = target.parentElement;
+        }
+        else {
+            comment = target.parentElement.parentElement.parentElement.parentElement.parentElement;
+            personWrapper = target.parentElement.parentElement;
+        }
+
+        // if one page list is opened on page, then it must be removed before opening another
+        // all page lists must be closed on page before opening new one
+        var commentsContainer = document.getElementById('badge__wrapper--comments-id');
+        let pageLists = commentsContainer.getElementsByClassName('comment__person-list');
+
+        pageListsNumber = pageLists.length;
+
+        // close all page lists from page
+        if (pageListsNumber) {
+            for (let i = 0; i < pageListsNumber; i++) pageLists[0].remove();
+        }
+
+        // find cached comment object
+        var commentObject = findCommentById(comment.id);
+        var personList;
+        var personListClass = 'comment__person-list';
+
+        // add person list to the page if it's not already there
+        if (commentObject && !personWrapper.getElementsByClassName(personListClass)[0]) {
+            personList = commentObject.likeList.persons;
+
+            // person list container
+            let personListContainer = document.createElement('div');
+
+            personListContainer.classList.add(personListClass);
+
+            // create link for each person and add to container
+            personList.forEach(function iterate(value, index, array) {
+                let personName = document.createElement('a');
+
+                personName.classList.add('comment__person-name');
+                personName.textContent = value.name;
+                personName.href = value.link;
+                personListContainer.append(personName);
+            });
+
+            // add person list container to the page if they are any persons
+            if (personList.length) personWrapper.append(personListContainer);
+        }
+    }
+
+    // close person lists from page if it's clicked out of person list or person link
+    window.addEventListener('click', closePersonList);
+
+    // close person lists from page
+    function closePersonList(e) {
+        var target = e.target;
+        var commentsContainer = document.getElementById('badge__wrapper--comments-id');
+
+        if (!target.classList.contains('comment__person-link') &&
+            !target.classList.contains('comment__person-list') &&
+            !target.classList.contains('comment__like') &&
+            !target.classList.contains('comment__count') &&
+            !target.classList.contains('class="comment__person-name')) {
+
+            let list = commentsContainer.getElementsByClassName('comment__person-list');
+            listNum = list.length;
+
+            // remove all person lists from page
+            if (listNum) {
+                for (let i = 0; i < listNum; i++) list[0].remove();
+            }
+        }
+    }
 }

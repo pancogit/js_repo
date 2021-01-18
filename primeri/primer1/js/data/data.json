@@ -925,7 +925,7 @@
             "comment": "Yes, it's really good to see all kind of explanations about those messages that are discarded by email client...",
             "likeList": {
                 "numberOfLikes": "0",
-                "persons": null
+                "persons": []
             },
             "date": "02-02-2017 08:22",
             "reply": [
@@ -937,7 +937,7 @@
                     "comment": "I had the same problem several days ago, it wasn't good experience at all, but it happens from time to time. Such a bad thing...",
                     "likeList": {
                         "numberOfLikes": "0",
-                        "persons": null
+                        "persons": []
                     },
                     "date": "04-02-2017 11:05",
                     "reply": [
@@ -949,7 +949,7 @@
                             "comment": "Our servers has protection against that bug. But always we have in mind that errors can occur at any time. Our IT team is working very hard to support whole computer system.",
                             "likeList": {
                                 "numberOfLikes": "0",
-                                "persons": null
+                                "persons": []
                             },
                             "date": "05-02-2017 09:08",
                             "reply": []

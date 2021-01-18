@@ -124,6 +124,7 @@ $comment_left_margin_right: 0.7rem;
 $comment_controls_margin_bottom: 1.2rem;
 $comment_date_font_size: 0.9rem;
 $comment_footer_margin_top: 0.5rem;
+$comment_footer_margin_bottom: 1rem;
 $comment_footer_line_height: 1.4rem;
 $comment_header_margin_top: 0.3rem;
 $comment_header_margin_bottom: 0.5rem;
@@ -143,6 +144,11 @@ $comment_text_margin: 0.5rem 0;
 $comment_text_line_height: 1.2rem;
 $comment_message_margin_top: -1rem;
 $comment_message_font_size: 1.15rem;
+$comment_person_list_padding: 0.5rem;
+$comment_person_list_z_index: 1000;
+$comment_person_list_border_radius: 0.3rem;
+$comment_person_list_right: -2rem;
+$comment_person_name_font_size: 0.75rem;
 
 // social
 $social_column_width: 2.5rem;
