@@ -13,5 +13,13 @@ a {
 /* header */
 /* footer */
 /* home */
+/* utility helper classes */
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */

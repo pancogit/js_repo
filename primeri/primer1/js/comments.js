@@ -210,6 +210,7 @@ function comments() {
         var replyDot = document.createElement('span');
         var like = document.createElement('a');
         var likeDot = document.createElement('span');
+        var personWrapper = document.createElement('div');
         var personLink = document.createElement('a');
         var thumb = document.createElement('i');
         var count = document.createElement('span');
@@ -249,7 +250,12 @@ function comments() {
         like.textContent = 'Like';
         likeDot.classList.add('comment__dot');
         likeDot.innerHTML = '&bull;';
+        personWrapper.classList.add('comment__person-wrapper');
         personLink.classList.add('comment__link', 'comment__link--small', 'comment__person-link');
+
+        // then disable person link for clicking because for new comment there are likes yet
+        personLink.classList.add('comment__person-link--empty-list');
+
         personLink.href = login.link;
         thumb.classList.add('far', 'fa-thumbs-up', 'comment__like');
         count.classList.add('comment__count');
@@ -299,7 +305,8 @@ function comments() {
         footer.append(document.createTextNode('\n'));
         footer.append(likeDot);
         footer.append(document.createTextNode('\n'));
-        footer.append(personLink);
+        footer.append(personWrapper);
+        personWrapper.append(personLink);
         personLink.append(thumb);
         personLink.append(document.createTextNode('\n'));
         personLink.append(count);
@@ -405,6 +412,15 @@ function comments() {
             }
         }
 
+        // if number of likes is zero, than person list is disabled
+        // enable it, because number of likes is not zero anymore after first like
+        var emptyClass = 'comment__person-link--empty-list';
+        var persons = comment.getElementsByClassName(emptyClass)[0];
+
+        // enable person list
+        if (persons) persons.classList.remove(emptyClass);
+
+
         // person is not found in like list, increment number of likes, display on the page
         // and add logged user to the like list
         if (!personFound) {
@@ -455,6 +471,7 @@ function comments() {
 
         var target = e.target;
         var personWrapper;
+        var targetList;
         var comment;
 
         if (target.classList.contains('comment__person-link')) {
@@ -465,6 +482,9 @@ function comments() {
             comment = target.parentElement.parentElement.parentElement.parentElement.parentElement;
             personWrapper = target.parentElement.parentElement;
         }
+
+        // target person list
+        targetList = personWrapper.getElementsByClassName('comment__person-list')[0];
 
         // if one page list is opened on page, then it must be removed before opening another
         // all page lists must be closed on page before opening new one
@@ -484,7 +504,10 @@ function comments() {
         var personListClass = 'comment__person-list';
 
         // add person list to the page if it's not already there
-        if (commentObject && !personWrapper.getElementsByClassName(personListClass)[0]) {
+        // if person list is already on page, them don't add anything (it will be removed 
+        // from page with previous code)
+        if (commentObject && !personWrapper.getElementsByClassName(personListClass)[0] && !targetList) {
+            // read person list
             personList = commentObject.likeList.persons;
 
             // person list container
@@ -517,8 +540,8 @@ function comments() {
 
         if (!target.classList.contains('comment__person-link') &&
             !target.classList.contains('comment__person-list') &&
-            !target.classList.contains('comment__like') &&
-            !target.classList.contains('comment__count') &&
+            !target.classList.contains('comment__like')        &&
+            !target.classList.contains('comment__count')       &&
             !target.classList.contains('class="comment__person-name')) {
 
             let list = commentsContainer.getElementsByClassName('comment__person-list');

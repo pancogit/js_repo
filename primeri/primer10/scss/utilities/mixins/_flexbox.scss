@@ -1,1 +1,59 @@
 // flexbox 
+
+
+// set flexbox container with container properties
+@mixin set_flexbox_container($display: null, 
+
+                             $flex_wrap: nowrap, 
+                             $flex_direction: null,
+                             $flex_flow: null,
+
+                             $justify_content: null, 
+                             $align_items: null,
+                             $align_content: null) {
+
+    // flex is set by default, but if it can be changed if it's set as inline-flex
+    @if $display == 'inline-flex' {
+        display: inline-flex;
+    } @else {
+        display: flex;
+    }
+    
+    // container properties
+    flex-wrap: $flex_wrap;
+    flex-direction: $flex_direction;
+
+    // flex-direction / flex-wrap shortcut
+    flex-flow: $flex_flow; 
+
+    // aligning properties
+    justify-content: $justify_content;
+    align-items: $align_items;  
+    align-content: $align_content;
+}
+
+
+// set flex item properties
+@mixin set_flex_item($flex: null,
+                
+                     $flex_grow: null,
+                     $flex_shrink: null,
+                     $flex_basis: null,
+                     
+                     $align_self: null) {
+
+
+    // flex grow / shrink / basis shortcut
+    // set flex shortcut if it is set, otherwise, set individual flex item properties
+    @if $flex {
+        flex: $flex;
+    } @else {
+        flex-grow: $flex_grow;
+        flex-shrink: $flex_shrink;
+        flex-basis: $flex_basis;
+    }
+    
+    // aligning flex item
+    align-self: $align_self;
+    // aligning on the main axis can be done via auto margins
+}

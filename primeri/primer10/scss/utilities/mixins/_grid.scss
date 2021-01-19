@@ -1,1 +1,105 @@
 // grid 
+
+
+// set grid container
+@mixin set_grid_container($display: null,
+
+                          $grid_template: null,
+                          $grid_template_rows: null,
+                          $grid_template_columns: null,
+                          $grid_template_areas: null,
+                          
+                          $grid_auto_flow: null,
+                          
+                          $grid_auto_rows: null,
+                          $grid_auto_columns: null,
+                          
+                          $gap: null,
+                          $row_gap: null,
+                          $column_gap: null,
+                          
+                          $justify_content: null,
+                          $justify_items: null,
+                          $align_content: null,
+                          $align_items: null) {
+
+    // grid is set by default, but if it can be changed if it's set as inline-grid
+    @if $display == 'inline-grid' {
+        display: inline-grid;
+    } @else {
+        display: grid;
+    }
+
+    // set grid template shortcut if it's set, or set individual grid template properties
+    @if $grid_template {
+        grid-template: $grid_template;
+    } @else {
+        grid-template-rows: $grid_template_rows;
+        grid-template-columns: $grid_template_columns;
+        grid-template-areas: $grid_template_areas;
+    }
+
+    // how to place grid items in grid (by rows/columns or by using grid space as much efficient)
+    grid-auto-flow: $grid_auto_flow;
+
+    // automatically created grid lines (implicit lines)
+    grid-auto-rows: $grid_auto_rows;
+    grid-auto-columns: $grid_auto_columns;
+
+    // set gaps for rows/columns
+    // set shorthand for gaps if it's set or individual properties
+    @if $gap {
+        gap: $gap;
+    } @else {
+        row-gap: $row_gap;
+        column-gap: $column_gap;
+    }
+
+    // aligning items on grid container
+    justify-content: $justify_content;
+    justify-items: $justify_items;
+    align-content: $align_content;
+    align-items: $align_items;
+}
+
+
+// set grid item properties
+@mixin set_grid_item($grid-area: null,
+
+                     $grid_column: null,
+                     $grid_column_start: null,
+                     $grid_column_end: null,
+                     
+                     $grid_row: null,
+                     $grid_row_start: null,
+                     $grid_row_end: null,
+                     
+                     $justify_self: null,
+                     $align_self: null) {
+    
+
+    // set grid area shorthand if it's set or set individualy row/column start/end properties
+    @if $grid_area {
+        grid-area: $grid_area;
+    } @else {
+        // set grid column shorthand if it's set or individual properties
+        @if $grid_column {
+            grid-column: $grid_column;
+        } @else {
+            grid-column-start: $grid_column_start;
+            grid-column-end: $grid_column_end;
+        }
+
+        // set grid row shorthand if it's set or individual properties
+        @if $grid_column {
+            grid-row: $grid_row;
+        } @else {
+            grid-row-start: $grid_row_start;
+            grid-row-end: $grid_row_end;
+        }
+    }
+    
+    // aligning grid items
+    justify-self: $justify_self;
+    align-self: $align_self;
+}

@@ -318,6 +318,12 @@ var commentID = 1;
         personWrapper.classList.add('comment__person-wrapper');
         thumbLink.classList.add('comment__link', 'comment__link--small', 'comment__person-link');
         thumbLink.href = element.link;
+
+        // if there are no likes for comment, then disable list for clicking
+        if (element.likeList.numberOfLikes == 0) {
+            thumbLink.classList.add('comment__person-link--empty-list');
+        }
+
         thumb.classList.add('far', 'fa-thumbs-up', 'comment__like');
         count.classList.add('comment__count');
         count.textContent = element.likeList.numberOfLikes;

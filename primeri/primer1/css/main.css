@@ -586,6 +586,10 @@ a {
   color: white;
   font-size: 0.75rem;
 }
+.comment__person-link--empty-list {
+  cursor: auto;
+  color: #737373;
+}
 .comment__liked {
   color: #737373;
   font-size: 0.9rem;

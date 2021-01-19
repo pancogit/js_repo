@@ -180,7 +180,12 @@
     }
 
     &__person-link {
-        
+
+        // close pointer cursor and change color of link for empty person list
+        &--empty-list {
+            cursor: auto;
+            color: colors.$comment_person_list_empty_color;
+        }
     }
 
     &__liked {
