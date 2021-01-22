@@ -4,8 +4,16 @@
 @use 'base/reset';
 
 // components
-@use 'components/button';
+@use 'components/wrapper';
 @use 'components/logo';
+@use 'components/navigation';
+@use 'components/hamburger';
+@use 'components/submenu';
+@use 'components/slides';
+@use 'components/card';
+@use 'components/article';
+@use 'components/social';
+@use 'components/submit';
 
 // layout
 @use 'layout/header';

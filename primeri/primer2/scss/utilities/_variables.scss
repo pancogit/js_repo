@@ -2,7 +2,7 @@
 
 
 // reset 
-$body_font_family: 'Times New Roman', Times, serif;
+$body_font_family: Arial, Helvetica, sans-serif;
 
 // media screen
 $media_screen_small: 20rem;
@@ -10,11 +10,66 @@ $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// wrapper
+$wrapper_min_width: 20rem;
+$wrapper_content_max_width: 80rem;
+$wrapper_content_padding: 1rem;
 
-// logo
+// logo 
+$logo_margins_margin_top: 1rem;
+$logo_margins_margin_bottom: -10rem;
+
+// navigation
+$navigation_link_padding: 1.5rem 2rem;
+$navigation_link_font_size: 1.2rem;
+
+// hamburger
+$hamburger_icon_font_size: 1.3rem;
+
+// submenu
+$submenu_active_margin_left: 14.5rem;
+$submenu_link_padding: 1rem;
+$submenu_link_font_size: 0.75rem;
+
+// slides
+$slides_height: 40rem;
+$slides_height_medium: 30rem;
+$slides_breakpoint_medium: 43rem;
+$slides_breakpoint_small: 33rem;
+$slides_background_image: url("../images/tree_1.jpg");
+$slides_content_height: 100%;
+$slides_control_padding: 1.3rem 1.8rem;
+$slides_control_padding_medium: 1rem 1.5rem;
+$slides_control_border_radius: 0.4rem;
+$slides_icon_font_size: 2.3rem;
+$slides_icon_font_size_medium: 2rem;
+
+// card
+
+// article
+
+// social
+
+// submit
 
 // header 
+$header_nav_flex: 1;
+$header_nav_margin_left: 1rem;
+$header_nav_margin_right: 1.5rem;
+$header_nav_breakpoint: 70rem;
+$header_navigation_padding_top: 1.5rem;
+$header_navigation_breakpoint: 35rem;
+$header_language_font_size: 1.1rem;
+$header_language_margin_top: 1.5rem;
+$header_language_margin_left: 3rem;
+$header_language_flex: 1;
+$header_hamburger_margin_top: 1.5rem;
+$header_hamburger_margin_left: 2rem;
+$header_menu_flex: 1;
+$header_link_padding_top: 1rem;
+$header_link_padding_left: 1.4rem;
+$header_register_font_size: 0.75rem;
+$header_icon_font_size: 1.2rem;
 
 // footer
 

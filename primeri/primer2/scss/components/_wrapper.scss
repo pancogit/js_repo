@@ -1,0 +1,17 @@
+/* wrapper */
+
+@use '../utilities/variables';
+
+.wrapper {
+
+    min-width: variables.$wrapper_min_width;
+
+    &__content {
+        padding-left: variables.$wrapper_content_padding;
+        padding-right: variables.$wrapper_content_padding;
+        
+        // center content on page with maximum width allowed
+        margin: 0 auto;
+        max-width: variables.$wrapper_content_max_width;
+    }
+}
