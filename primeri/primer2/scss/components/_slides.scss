@@ -14,6 +14,11 @@
     background-repeat: no-repeat;
     background-size: cover;    // keep good proportions
 
+    // change height of slides when layout of cards is changed
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+        height: variables.$slides_height_smaller;
+    }
+
     // set smaller height for medium screens
     @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_medium) {
         height: variables.$slides_height_medium;

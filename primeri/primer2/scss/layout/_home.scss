@@ -1,12 +1,46 @@
 /* home */ 
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .home {
+    padding-bottom: variables.$home_padding_bottom;
 
     &__articles {
+        margin-top: variables.$home_articles_margin_top;
+        
+        // use css grid layout for articles
+        // use responsive css grid layout with given minimum article size
+        @include mixins.set_grid_container(
+            $grid_template_columns: repeat(auto-fit, minmax(variables.$home_articles_grid_min_width, 
+                                                            variables.$home_articles_grid_max_width)),
+            $gap: variables.$home_articles_grid_gap
+        );
 
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+            margin-top: variables.$home_articles_margin_top_medium;
+            padding-top: variables.$home_articles_padding_top_medium;
+
+            // set top border
+            @include mixins.set_borders($top-style: solid,
+                                        $top-width: variables.$home_articles_border_top_width,
+                                        $top-color: colors.$home_articles_border_top_color);
+        }
     }
 
     &__cards {
-        
+        // set flexbox container and spread flex items across main axis
+        @include mixins.set_flexbox_container($justify_content: space-between);
+
+        // move cardss up with negative margins
+        margin-top: variables.$home_cards_margin_top;
+
+        // change layout of cards
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+            flex-wrap: wrap;
+            margin-top: 0;
+            padding-top: variables.$home_cards_padding_top;
+        }
     }
 }

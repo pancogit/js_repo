@@ -1,55 +1,138 @@
 /* article */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .article {
 
+    // align article footer with flexbox
+    @include mixins.set_flexbox_container($flex_direction: column);
+
     &__button {
+        padding: variables.$article_button_padding;
+        background-color: colors.$article_button_background_color;
+        border-top-left-radius: variables.$article_button_border_radius;
+        border-bottom-left-radius: variables.$article_button_border_radius;
+
+        // set inset borders with transparent color
+        @include mixins.set_borders($top-style: inset,
+                                    $top-width: variables.$article_button_border_top-width,
+                                    $top-color: colors.$article_button_border_color,
+
+                                    $left-style: inset,
+                                    $left-width: variables.$article_button_border_top-width,
+                                    $left-color: colors.$article_button_border_color);
+
+        // remove pointer cursor
+        cursor: unset;
+
+        // set small left margin for all buttons except first
+        + .article__button {
+            margin-left: variables.$article_button_margin_left;
+        }
 
         &--active {
+            background-color: colors.$article_button_active_background_color;
+            border-top-color: colors.$article_button_border_top_color;
+            border-left-color: colors.$article_button_border_top_color;
 
+            // add pointer cursor
+            cursor: pointer;
+
+            // change color of active article navigation arrow
+            .article__navigation {
+                color: colors.$article_navigation_color_over;
+            }
+
+            &:hover {
+                background-color: colors.$article_active_background_color;
+            }
         }
     }
 
     &__buttons {
+        // set flexbox container
+        @include mixins.set_flexbox_container();
 
+        padding: variables.$article_buttons_padding;
+        margin-right: variables.$article_buttons_margin_right;
+        background-color: colors.$article_buttons_background_color;
+        border-radius: variables.$article_buttons_border_radius;
     }
 
     &__footer {
+        // set flexbox container and center flex items vertically on cross axis
+        @include mixins.set_flexbox_container($align_items: center);
 
+        // align flex on main axis item with auto margins
+        margin-top: auto;
     }
 
     &__heading {
-
+        margin: 0;
+        font-weight: normal;
+        font-size: variables.$article_heading_font_size;
+        color: colors.$article_heading_color;
     }
 
     &__more {
+        // set flexbox container to not wrap text and arrow
+        // align items on cross axis
+        @include mixins.set_flexbox_container($align_items: center);
 
+        font-weight: bold;
+        font-size: variables.$article_more_font_size;
+        color: colors.$article_more_color;
+
+        &:hover {
+
+            // when link is hovered, underline just text, not arrow
+            .article__view-all {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__more-arrow {
-
+        font-size: variables.$article_more_arrow_font_size;
     }
 
     &__navigation {
-
+        // set disabled look like color
+        color: colors.$article_navigation_color;
     }
 
     &__read-more {
+        color: colors.$article_read_more_color;
 
+        // don't break words from link into separate lines
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__subheading {
-
+        margin-top: variables.$article_subheading_margin_top;
+        margin-bottom: variables.$article_subheading_margin_bottom;
+        font-size: variables.$article_subheading_font_size;
+        color: colors.$article_subheading_color;
     }
 
     &__text {
-
+        margin-top: 0;
+        line-height: variables.$article_text_line_height;
+        font-size: variables.$article_text_font_size;
+        color: colors.$article_text_color;
     }
 
     &__uppercase {
-
+        text-transform: uppercase;
     }
 
     &__view-all {
-        
+        margin-right: variables.$article_view_all_margin_right;
     }
 }

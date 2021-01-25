@@ -23,8 +23,29 @@ $slides_control_background_color_hover: rgb(0 0 0 / 80%);
 $slides_control_color: white;
 
 // card
+$card_background_color: white;
+$card_box_shadow: 0px 4px 5px 0px silver;
+$card_button_background_color: #8ec33b;
+$card_button_background_color_hover: #7cad2e;
+$card_button_color: white;
+$card_button_border_color: #8bb273;
+$card_title_l1_color: #7b7272;
+$card_title_l2_color: #4e4d4d;
 
 // article
+$article_button_background_color: white;
+$article_button_border_color: rgb(255 255 255 / 30%);
+$article_button_active_background_color: #8ec33b;
+$article_button_border_top_color: rgb(94 136 28 / 10%);
+$article_navigation_color_over: #31690b;
+$article_active_background_color: #82b335;
+$article_buttons_background_color: #efefef;
+$article_heading_color: #413f3f;
+$article_more_color: #555353;
+$article_navigation_color: #a1ce83;
+$article_read_more_color: #008800;
+$article_subheading_color: #716f6f;
+$article_text_color: #615e5e;
 
 // social
 
@@ -40,7 +61,10 @@ $header_top_background_gradient: linear-gradient(180deg,
                                                rgba(241,240,241,1) 100%);
 $header_language_color: #8d8c8c;
 $header_link_color: #5f5f5f;
+$header_link_color_small: white;
+$header_bottom_background_color: #66a91d;
 
 // footer
 
 // home
+$home_articles_border_top_color: #dadada;

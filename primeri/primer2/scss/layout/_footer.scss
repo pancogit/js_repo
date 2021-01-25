@@ -1,13 +1,23 @@
 /* footer */ 
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .footer {
+
+    // use background image as background effect
+    background-image: url("../images/green.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  // spread image while keeping good ratio
 
     &__center {
 
     }
 
     &__copy {
-
+        // set transparent background color over background image in footer
+        background-color: rgb(82 136 52 / 70%);
     }
 
     &__copyright {
@@ -43,7 +53,8 @@
     }
 
     &__list {
-
+        // reset list
+        @include mixins.reset_list;
     }
 
     &__list-wrapper {
@@ -51,7 +62,8 @@
     }
 
     &__lists {
-
+        // set transparent background color over background image in footer
+        background-color: rgb(65 127 16 / 80%);
     }
 
     &__logo {
@@ -75,7 +87,12 @@
     }
 
     &__top {
-
+        // set transparent background color over background image in footer
+        //background-color: rgb(96 175 21 / 60%);
+        
+        background: rgb(26,47,6);
+        //background: linear-gradient(180deg, rgba(26,47,6,1) 0%, rgba(96,175,21,1) 82%);
+        background: linear-gradient(180deg, rgba(26,47,6,0.8) 0%, rgba(96,175,21,0.8) 82%);
     }
 
     &__top-content {

@@ -1,13 +1,87 @@
 /* card */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .card {
 
-    &__button {
+    // set flexbox container
+    @include mixins.set_flexbox_container();
 
+    padding: variables.$card_padding;
+
+    background-color: colors.$card_background_color;
+    box-shadow: colors.$card_box_shadow;
+
+    // layout of cards is changed
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+        margin-bottom: variables.$card_margin_bottom;
+        box-shadow: none;
+        
+        // spread flex items to the edges of flex container
+        justify-content: space-between;
+
+        // set flex item basis to be the same for each card to show cards in grid like view
+        // don't grow, allow shrink and fixed flex basis
+        @include mixins.set_flex_item($flex: variables.$card_flex_basis);
+    }
+
+    // change layout for small screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$card_breakpoint) {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    // when slides are hidden for smallest screens, spread flex items across main axis
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_small) {
+        @include mixins.set_flex_item($flex: variables.$card_flex);
+    }
+
+    // set left margin for all cards except first
+    + .card {
+        margin-left: variables.$card_margin_left;
+
+        // layout of cards is changed
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+            margin-left: 0;
+        }
+    }
+
+    &__button {
+        // set flexbox container to not break arrow from text and center flex items on both axis
+        // set flexbox as inline, because block flex will spread button to full width of outer element
+        @include mixins.set_flexbox_container($display: inline-flex, $justify_content: center, $align_items: center);
+
+        padding: variables.$card_button_padding;
+
+        background-color: colors.$card_button_background_color;
+        color: colors.$card_button_color;
+        font-weight: bold;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$card_button_border_width,
+                                    $color: colors.$card_button_border_color);
+
+        border-radius: variables.$card_button_border_radius;
+
+        // small transition when background color is changed
+        transition: variables.$card_button_transition_time background-color;
+
+        &:hover {
+            background-color: colors.$card_button_background_color_hover;
+        }
     }
 
     &__heading {
+        margin-bottom: variables.$card_heading_margin_bottom;
 
+        // layout for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$card_breakpoint) {
+            flex-direction: column;
+            margin-bottom: variables.$card_heading_margin_bottom_small;
+        }
     }
 
     &__image {
@@ -15,11 +89,22 @@
     }
 
     &__info {
-
+        margin-right: variables.$card_info_margin_right;
     }
 
     &__media {
+        // set flexbox container to vertically align flex items
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: flex-end);
 
+        // set negative margins to move image out of card a little
+        margin-top: variables.$card_media_margin_top;
+        margin-right: variables.$card_media_margin_right;
+
+        // layout of cards is changed
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+            margin-right: 0;
+            margin-top: 0;
+        }
     }
 
     &__more {
@@ -27,25 +112,40 @@
     }
 
     &__right {
-
+        font-size: variables.$card_right_font_size;
     }
 
     &__text {
+        // set flexbox container to vertically align flex items
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
 
+        margin-right: variables.$card_text_margin_right;
+
+        // change layout for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$card_breakpoint) {
+            margin-top: variables.$card_text_margin_top;
+            order: variables.$card_text_order;
+        }
     }
 
     &__title {
+        margin-top: 0;
+        margin-bottom: variables.$card_title_margin_bottom;
+        font-weight: normal;
 
         &--level-1 {
-
+            text-transform: uppercase;
+            font-size: variables.$card_title_l1_font_size;
+            color: colors.$card_title_l1_color;
         }
 
         &--level-2 {
-
+            color: colors.$card_title_l2_color;
+            font-size: variables.$card_title_l2_font_size;
         }
     }
 
     &__uppercase {
-        
+        text-transform: uppercase;
     }
 }

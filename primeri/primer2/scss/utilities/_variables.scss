@@ -32,7 +32,8 @@ $submenu_link_padding: 1rem;
 $submenu_link_font_size: 0.75rem;
 
 // slides
-$slides_height: 40rem;
+$slides_height: 60rem;
+$slides_height_smaller: 40rem;
 $slides_height_medium: 30rem;
 $slides_breakpoint_medium: 43rem;
 $slides_breakpoint_small: 33rem;
@@ -45,8 +46,46 @@ $slides_icon_font_size: 2.3rem;
 $slides_icon_font_size_medium: 2rem;
 
 // card
+$card_padding: 1.2rem;
+$card_margin_left: 1.5rem;
+$card_margin_bottom: 1.5rem;
+$card_breakpoint: 24rem;
+$card_flex: 1;
+$card_flex_basis: 0 1 22rem;
+$card_button_padding: 0.5rem 1.5rem;
+$card_button_border_width: 0.12rem;
+$card_button_border_radius: 0.3rem;
+$card_button_transition_time: 0.5s;
+$card_heading_margin_bottom: 3rem;
+$card_heading_margin_bottom_small: 1.5rem;
+$card_info_margin_right: 0.7rem;
+$card_media_margin_top: -2.5rem;
+$card_media_margin_right: -2rem;
+$card_right_font_size: 0.7rem;
+$card_text_margin_right: 1rem;
+$card_text_margin_top: 1.2rem;
+$card_text_order: 1;
+$card_title_margin_bottom: 0.1rem;
+$card_title_l1_font_size: 0.95rem;
+$card_title_l2_font_size: 1.4rem;
 
 // article
+$article_button_padding: 0.5rem 0.7rem;
+$article_button_border_radius: 0.25rem;
+$article_button_border_top-width: 0.3rem;
+$article_button_margin_left: 0.12rem;
+$article_buttons_padding: 0.3rem;
+$article_buttons_margin_right: 1.4rem;
+$article_buttons_border_radius: 0.25rem;
+$article_heading_font_size: 1.6rem;
+$article_more_font_size: 0.9rem;
+$article_more_arrow_font_size: 0.7rem;
+$article_subheading_margin_top: 0.3rem;
+$article_subheading_margin_bottom: 1.5rem;
+$article_subheading_font_size: 1rem;
+$article_text_line_height: 1.4rem;
+$article_text_font_size: 0.95rem;
+$article_view_all_margin_right: 0.65rem;
 
 // social
 
@@ -74,3 +113,14 @@ $header_icon_font_size: 1.2rem;
 // footer
 
 // home
+$home_padding_bottom: 3rem;
+$home_cards_margin_top: -12.5rem;
+$home_cards_breakpoint: 60rem;
+$home_cards_padding_top: 1.5rem;
+$home_articles_grid_min_width: 20rem;
+$home_articles_grid_max_width: 1fr;
+$home_articles_grid_gap: 2rem;
+$home_articles_margin_top: 3rem;
+$home_articles_margin_top_medium: 1.5rem;
+$home_articles_padding_top_medium: 2rem;
+$home_articles_border_top_width: 0.15rem;
