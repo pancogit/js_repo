@@ -7,29 +7,47 @@
 .footer {
 
     // use background image as background effect
-    background-image: url("../images/green.jpg");
+    background-image: variables.$footer_background_image;
     background-repeat: no-repeat;
     background-size: cover;  // spread image while keeping good ratio
 
     &__center {
-
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
     }
 
     &__copy {
+        padding-top: variables.$footer_copy_padding_top;
+        padding-bottom: variables.$footer_copy_padding_bottom;
+
         // set transparent background color over background image in footer
-        background-color: rgb(82 136 52 / 70%);
+        background-color: colors.$footer_copy_background_color;
+    }
+
+    &__copyright-wrapper {
+        // set flexbox container to remove whitespaces
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
     }
 
     &__copyright {
-
+        color: colors.$footer_copyright_color;
+        font-size: variables.$footer_copyright_font_size;
     }
 
     &__forms {
+        // spread to full width with flex item properties
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_forms_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$footer_forms_flex);
 
+            margin-top: variables.$footer_forms_margin_top;
+        }
     }
 
     &__heading {
-
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: variables.$footer_heading_font_size;
+        color: colors.$footer_heading_color;
     }
 
     &__image {
@@ -37,24 +55,74 @@
     }
 
     &__item {
-
+        margin-bottom: variables.$footer_item_margin_bottom;
     }
 
     &__join {
-
+        margin-right: variables.$footer_join_margin_right;
+        text-transform: uppercase;
+        color: colors.$footer_join_color;
+        font-weight: bold;
+        font-size: variables.$footer_join_font_size;
+        letter-spacing: variables.$footer_join_letter_spacing;
     }
 
     &__link {
+        font-size: variables.$footer_link_font_size;
+        color: colors.$footer_link_color;
 
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--small {
+            font-size: variables.$footer_link_font_size_small;
+        }
+    }
+
+    &__terms {
+        margin-left: variables.$footer_terms_margin_left;
+        font-size: variables.$footer_terms_font_size;
+
+        // insert generated content before small link in footer
+        &::before {
+            content: "|";
+            margin-right: variables.$footer_terms_margin_left;
+            color: colors.$footer_terms_color;
+        }
+
+        // spread flex items to full width and remove generated content
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_terms_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$footer_terms_flex);
+
+            margin-left: 0;
+            margin-top: variables.$footer_terms_margin_top;
+
+            &::before {
+                content: "";
+                margin-right: 0;
+            }
+        }
     }
 
     &__links {
+        // use css grid container for lists
+        @include mixins.set_grid_container($grid_template_columns: 
+                                                repeat(auto-fit, minmax(variables.$footer_links_grid_min_width, 
+                                                                        variables.$footer_links_grid_max_width)),
+                                           $gap: variables.$footer_links_grid_gap);
 
+        // spread flex item with flex growing
+        @include mixins.set_flex_item($flex: variables.$footer_links_flex);
     }
 
     &__list {
         // reset list
         @include mixins.reset_list;
+
+        &--margin-bottom {
+            margin-bottom: variables.$footer_list_margin_bottom;
+        }
     }
 
     &__list-wrapper {
@@ -62,12 +130,24 @@
     }
 
     &__lists {
+        padding-top: variables.$footer_lists_padding_top;
+        padding-bottom: variables.$footer_lists_padding_bottom;
+
         // set transparent background color over background image in footer
-        background-color: rgb(65 127 16 / 80%);
+        background-color: colors.$footer_lists_background_color;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_forms_breakpoint) {
+            padding-bottom: variables.$footer_lists_padding_bottom_small;
+        }
     }
 
     &__logo {
+        // set flexbox container and align flex items vertically
+        @include mixins.set_flexbox_container($align_items: center);
 
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_social_breakpoint) {
+            margin-bottom: variables.$footer_logo_margin_bottom;
+        }
     }
 
     &__newtree {
@@ -75,35 +155,57 @@
     }
 
     &__savor {
-
+        font-weight: bold;
+        font-size: variables.$footer_savor_font_size;
+        letter-spacing: variables.$footer_savor_letter_spacing;
     }
 
     &__social {
+        // set flexbox container and align flex items vertically
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $align_items: center);
 
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_social_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$footer_social_flex);
+        }
     }
 
     &__tm {
+        margin-left: variables.$footer_tm_margin_left;
+        font-size: variables.$footer_tm_font_size;
 
+        // vertically align text to the top of the remaining text
+        vertical-align: text-top;
     }
 
     &__top {
-        // set transparent background color over background image in footer
-        //background-color: rgb(96 175 21 / 60%);
-        
-        background: rgb(26,47,6);
-        //background: linear-gradient(180deg, rgba(26,47,6,1) 0%, rgba(96,175,21,1) 82%);
-        background: linear-gradient(180deg, rgba(26,47,6,0.8) 0%, rgba(96,175,21,0.8) 82%);
+        background: colors.$footer_top_background;
+        background: colors.$footer_top_background_gradient;
+
+        // set bottom border
+        @include mixins.set_borders($bottom-style: double,
+                                    $bottom-width: variables.$footer_top_border_width,
+                                    $bottom-color: colors.$footer_top_border_color);
     }
 
     &__top-content {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
 
+        padding-top: variables.$footer_top_content_padding;
+        padding-bottom: variables.$footer_top_content_padding;
     }
 
     &__trademark {
+        margin-left: variables.$footer_trademark_margin_left;
+        text-transform: uppercase;
+        color: colors.$footer_trademark_color;
 
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_trademark_breakpoint) {
+            margin-left: variables.$footer_trademark_margin_left_small;
+        }
     }
 
     &__uppercase {
-        
+        text-transform: uppercase;
     }
 }

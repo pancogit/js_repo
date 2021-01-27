@@ -88,8 +88,21 @@ $article_text_font_size: 0.95rem;
 $article_view_all_margin_right: 0.65rem;
 
 // social
+$social_icon_font_size: 1.2rem;
+$social_link_margin: 0.2rem;
+$social_circle_width: 1.5rem;
+$social_circle_padding: 0.35rem;
+$social_circle_border_radius: 50%;
 
 // submit
+$submit_margin_bottom: 2.5rem;
+$submit_button_padding: 0.85rem;
+$submit_button_font_size: 0.9rem;
+$submit_button_border_radius: 0.3rem;
+$submit_heading_font_size: 0.95rem;
+$submit_heading_letter_spacing: 0.05rem;
+$submit_input_padding: 0.6rem 1rem;
+$submit_input_border_width: 0.4rem;
 
 // header 
 $header_nav_flex: 1;
@@ -111,13 +124,52 @@ $header_register_font_size: 0.75rem;
 $header_icon_font_size: 1.2rem;
 
 // footer
+$footer_background_image: url("../images/green.jpg");
+$footer_copy_padding_top: 1.2rem;
+$footer_copy_padding_bottom: 2rem;
+$footer_copyright_font_size: 0.7rem;
+$footer_forms_breakpoint: 41rem;
+$footer_forms_flex: 100%;
+$footer_forms_margin_top: 3rem;
+$footer_heading_font_size: 0.9rem;
+$footer_item_margin_bottom: 0.5rem;
+$footer_join_margin_right: 0.7rem;
+$footer_join_font_size: 0.9rem;
+$footer_join_letter_spacing: 0.05rem;
+$footer_link_font_size: 0.9rem;
+$footer_link_font_size_small: 0.7rem;
+$footer_social_breakpoint: 53rem;
+$footer_terms_margin_left: 0.7rem;
+$footer_terms_font_size: 0.7rem;
+$footer_terms_breakpoint: 32rem;
+$footer_terms_flex: 100%;
+$footer_terms_margin_top: 0.3rem;
+$footer_links_grid_min_width: 8rem;
+$footer_links_grid_max_width: 1fr;
+$footer_links_grid_gap: 1.5rem;
+$footer_links_flex: 1;
+$footer_list_margin_bottom: 2rem;
+$footer_lists_padding_top: 1.5rem;
+$footer_lists_padding_bottom: 3.5rem;
+$footer_lists_padding_bottom_small: 2rem;
+$footer_logo_margin_bottom: 0.8rem;
+$footer_savor_font_size: 1rem;
+$footer_savor_letter_spacing: 0.2rem;
+$footer_social_flex: 100%;
+$footer_tm_margin_left: 0.2rem;
+$footer_tm_font_size: 0.65rem;
+$footer_top_border_width: 0.2rem;
+$footer_top_content_padding: 1rem;
+$footer_trademark_margin_left: 1.8rem;
+$footer_trademark_breakpoint: 23rem;
+$footer_trademark_margin_left_small: 1rem;
 
 // home
 $home_padding_bottom: 3rem;
 $home_cards_margin_top: -12.5rem;
 $home_cards_breakpoint: 60rem;
 $home_cards_padding_top: 1.5rem;
-$home_articles_grid_min_width: 20rem;
+$home_articles_grid_min_width: 18rem;
 $home_articles_grid_max_width: 1fr;
 $home_articles_grid_gap: 2rem;
 $home_articles_margin_top: 3rem;

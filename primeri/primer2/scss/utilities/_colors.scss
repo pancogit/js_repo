@@ -48,8 +48,29 @@ $article_subheading_color: #716f6f;
 $article_text_color: #615e5e;
 
 // social
+$social_icon_color: white;
+$social_circle_background_color: black;
+$social_circle_background_color_pinterest: #ab4e23;
+$social_circle_background_color_pinterest_hover: #c25c2d;
+$social_circle_background_color_twitter: #54bf98;
+$social_circle_background_color_twitter_hover: #60d1a8;
+$social_circle_background_color_facebook: #1e706d;
+$social_circle_background_color_facebook_hover: #288a86;
+$social_circle_background_color_amazon: #c34923;
+$social_circle_background_color_amazon_hover: #d8542c;
+$social_circle_background_color_linkedin: #51a6a2;
+$social_circle_background_color_linkedin_hover: #61bdb8;
+$social_circle_background_color_google: #263519;
+$social_circle_background_color_google_hover: #2f3f21;
 
 // submit
+$submit_button_background_color: #3e6319;
+$submit_button_color: white;
+$submit_heading_color: #1e330a;
+$submit_input_background_color: #50901c;
+$submit_input_color: #d1ffae;
+$submit_input_border_color: rgb(24 90 24 / 36%);
+$submit_input_placeholder_color: white;
 
 // header 
 $header_top_background: rgb(255,255,255);
@@ -65,6 +86,17 @@ $header_link_color_small: white;
 $header_bottom_background_color: #66a91d;
 
 // footer
+$footer_copy_background_color: rgb(51 113 20 / 80%);
+$footer_copyright_color: white;
+$footer_heading_color: white;
+$footer_join_color: #1e330a;
+$footer_link_color: #a2c785;
+$footer_terms_color: #a2c785;
+$footer_lists_background_color: rgb(65 127 16 / 80%);
+$footer_top_background: rgb(26,47,6);
+$footer_top_background_gradient: linear-gradient(180deg, rgba(26,47,6,0.95) 0%, rgba(96,175,21,0.8) 82%);
+$footer_top_border_color: #247b24;
+$footer_trademark_color: white;
 
 // home
 $home_articles_border_top_color: #dadada;

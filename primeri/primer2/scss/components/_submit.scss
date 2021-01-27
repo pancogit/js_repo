@@ -1,9 +1,29 @@
 /* submit */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .submit {
 
-    &__button {
+    &--margin-bottom {
+        margin-bottom: variables.$submit_margin_bottom
+    }
 
+    &__button {
+        padding: variables.$submit_button_padding;
+        background-color: colors.$submit_button_background_color;
+        color: colors.$submit_button_color;
+        font-weight: bold;
+        font-size: variables.$submit_button_font_size;
+        outline: none;
+        cursor: pointer;
+
+        // remove borders
+        @include mixins.set_borders($style: none);
+
+        border-top-right-radius: variables.$submit_button_border_radius;
+        border-bottom-right-radius: variables.$submit_button_border_radius;
     }
 
     &__email {
@@ -11,15 +31,43 @@
     }
 
     &__heading {
-
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: variables.$submit_heading_font_size;
+        color: colors.$submit_heading_color;
+        letter-spacing: variables.$submit_heading_letter_spacing;
     }
 
     &__input {
+        padding: variables.$submit_input_padding;
+        background-color: colors.$submit_input_background_color;
+        color: colors.$submit_input_color;
 
+        // remove outline when input is in focus
+        outline: none;
+
+        // remove any borders
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$submit_input_border_width,
+                                    $top-color: colors.$submit_input_border_color,
+                                    
+                                    $bottom-style: none,
+                                    
+                                    $left-style: solid,
+                                    $left-width: variables.$submit_input_border_width,
+                                    $left-color: colors.$submit_input_border_color,
+                                    
+                                    $right-style: none);
+
+        // add style for placeholder
+        &::placeholder {
+            color: colors.$submit_input_placeholder_color;
+        }
     }
 
     &__inputs {
-
+        // set flexbox container to not wrap inputs
+        @include mixins.set_flexbox_container();
     }
 
     &__zip {
