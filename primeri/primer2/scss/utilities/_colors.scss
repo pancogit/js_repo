@@ -41,11 +41,13 @@ $article_navigation_color_over: #31690b;
 $article_active_background_color: #82b335;
 $article_buttons_background_color: #efefef;
 $article_heading_color: #413f3f;
-$article_more_color: #555353;
 $article_navigation_color: #a1ce83;
 $article_read_more_color: #008800;
 $article_subheading_color: #716f6f;
 $article_text_color: #615e5e;
+
+// redirect
+$redirect_color: #555353;
 
 // social
 $social_icon_color: white;
@@ -71,6 +73,11 @@ $submit_input_background_color: #50901c;
 $submit_input_color: #d1ffae;
 $submit_input_border_color: rgb(24 90 24 / 36%);
 $submit_input_placeholder_color: white;
+
+// article-block
+$article_block_heading_color: #716f6f;
+$article_block_read_more_color: #008800;
+$article_block_text_color: #615e5e;
 
 // header 
 $header_top_background: rgb(255,255,255);
@@ -100,3 +107,10 @@ $footer_trademark_color: white;
 
 // home
 $home_articles_border_top_color: #dadada;
+
+// articles
+$articles_heading_color: #413f3f;
+
+// article-page
+$article_page_heading_color: #413f3f;
+$article_page_text_color: #615e5e;

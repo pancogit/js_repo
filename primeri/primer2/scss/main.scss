@@ -12,13 +12,17 @@
 @use 'components/slides';
 @use 'components/card';
 @use 'components/article';
+@use 'components/redirect';
 @use 'components/social';
 @use 'components/submit';
+@use 'components/article-block';
 
 // layout
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/home';
+@use 'layout/articles';
+@use 'layout/article-page';
 
 // utilities
 @use 'utilities/colors';

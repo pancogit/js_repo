@@ -78,14 +78,16 @@ $article_buttons_padding: 0.3rem;
 $article_buttons_margin_right: 1.4rem;
 $article_buttons_border_radius: 0.25rem;
 $article_heading_font_size: 1.6rem;
-$article_more_font_size: 0.9rem;
-$article_more_arrow_font_size: 0.7rem;
 $article_subheading_margin_top: 0.3rem;
 $article_subheading_margin_bottom: 1.5rem;
 $article_subheading_font_size: 1rem;
 $article_text_line_height: 1.4rem;
 $article_text_font_size: 0.95rem;
-$article_view_all_margin_right: 0.65rem;
+
+// redirect
+$redirect_font_size: 0.9rem;
+$redirect_text_margin_right: 0.65rem;
+$redirect_arrow_font_size: 0.7rem;
 
 // social
 $social_icon_font_size: 1.2rem;
@@ -103,6 +105,13 @@ $submit_heading_font_size: 0.95rem;
 $submit_heading_letter_spacing: 0.05rem;
 $submit_input_padding: 0.6rem 1rem;
 $submit_input_border_width: 0.4rem;
+
+// article-block
+$article_block_heading_margin_top: 0.3rem;
+$article_block_heading_margin_bottom: 1.5rem;
+$article_block_heading_font_size: 1rem;
+$article_block_text_line_height: 1.4rem;
+$article_block_text_font_size: 0.95rem;
 
 // header 
 $header_nav_flex: 1;
@@ -176,3 +185,22 @@ $home_articles_margin_top: 3rem;
 $home_articles_margin_top_medium: 1.5rem;
 $home_articles_padding_top_medium: 2rem;
 $home_articles_border_top_width: 0.15rem;
+
+// articles
+$articles_padding_top: 2.7rem;
+$articles_padding_bottom: 3rem;
+$articles_content_grid_min_width: 18rem;
+$articles_content_grid_max_width: 1fr;
+$articles_content_gap: 2rem;
+$articles_content_margin_bottom: 1rem;
+$articles_heading_margin_bottom: 2rem;
+$articles_heading_font_size: 1.6rem;
+
+// article-page
+$article_page_padding_top: 2.7rem;
+$article_page_padding_bottom: 3rem;
+$article_page_content_margin_bottom: 1rem;
+$article_page_heading_margin_bottom: 2rem;
+$article_page_heading_font_size: 1.6rem;
+$article_page_text_line_height: 1.4rem;
+$article_page_text_font_size: 0.95rem;

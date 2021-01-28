@@ -76,28 +76,6 @@
         color: colors.$article_heading_color;
     }
 
-    &__more {
-        // set flexbox container to not wrap text and arrow
-        // align items on cross axis
-        @include mixins.set_flexbox_container($align_items: center);
-
-        font-weight: bold;
-        font-size: variables.$article_more_font_size;
-        color: colors.$article_more_color;
-
-        &:hover {
-
-            // when link is hovered, underline just text, not arrow
-            .article__view-all {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__more-arrow {
-        font-size: variables.$article_more_arrow_font_size;
-    }
-
     &__navigation {
         // set disabled look like color
         color: colors.$article_navigation_color;
@@ -130,9 +108,5 @@
 
     &__uppercase {
         text-transform: uppercase;
-    }
-
-    &__view-all {
-        margin-right: variables.$article_view_all_margin_right;
     }
 }

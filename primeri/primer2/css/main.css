@@ -326,20 +326,6 @@ a {
   font-size: 1.6rem;
   color: #413f3f;
 }
-.article__more {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #555353;
-}
-.article__more:hover .article__view-all {
-  text-decoration: underline;
-}
-.article__more-arrow {
-  font-size: 0.7rem;
-}
 .article__navigation {
   color: #a1ce83;
 }
@@ -365,8 +351,24 @@ a {
 .article__uppercase {
   text-transform: uppercase;
 }
-.article__view-all {
+
+/* redirect */
+.redirect {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #555353;
+}
+.redirect:hover .redirect__text {
+  text-decoration: underline;
+}
+.redirect__text {
   margin-right: 0.65rem;
+}
+.redirect__arrow {
+  font-size: 0.7rem;
 }
 
 /* social */
@@ -468,6 +470,30 @@ a {
   display: flex;
   flex-wrap: nowrap;
 }
+/* article-block */
+.article-block__heading {
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #716f6f;
+}
+.article-block__read-more {
+  color: #008800;
+  white-space: nowrap;
+}
+.article-block__read-more:hover {
+  text-decoration: underline;
+}
+.article-block__text {
+  margin-top: 0;
+  line-height: 1.4rem;
+  font-size: 0.95rem;
+  color: #615e5e;
+}
+.article-block__uppercase {
+  text-transform: uppercase;
+}
+
 /* header */
 @media only screen and (max-width: 33rem) {
   .header__bottom {
@@ -757,6 +783,50 @@ a {
     margin-top: 0;
     padding-top: 1.5rem;
   }
+}
+
+/* articles */
+.articles {
+  padding-top: 2.7rem;
+  padding-bottom: 3rem;
+}
+.articles__content {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+}
+.articles__heading {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #413f3f;
+}
+
+/* article-page */
+.article-page {
+  padding-top: 2.7rem;
+  padding-bottom: 3rem;
+}
+.article-page__content {
+  margin-bottom: 1rem;
+}
+.article-page__heading {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #413f3f;
+}
+.article-page__text {
+  margin-top: 0;
+  line-height: 1.4rem;
+  font-size: 0.95rem;
+  color: #615e5e;
+}
+.article-page__uppercase {
+  text-transform: uppercase;
 }
 
 /* utility helper classes */

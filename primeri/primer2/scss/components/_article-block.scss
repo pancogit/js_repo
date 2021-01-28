@@ -1,0 +1,37 @@
+/* article-block */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.article-block {
+
+    &__heading {
+        margin-top: variables.$article_block_heading_margin_top;
+        margin-bottom: variables.$article_block_heading_margin_bottom;
+        font-size: variables.$article_block_heading_font_size;
+        color: colors.$article_block_heading_color;
+    }
+
+    &__read-more {
+        color: colors.$article_block_read_more_color;
+
+        // don't break words from link into separate lines
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        margin-top: 0;
+        line-height: variables.$article_block_text_line_height;
+        font-size: variables.$article_block_text_font_size;
+        color: colors.$article_block_text_color;
+    }
+
+    &__uppercase {
+        text-transform: uppercase;
+    }
+}
