@@ -828,7 +828,6 @@ a {
 .article-page__uppercase {
   text-transform: uppercase;
 }
-
 /* utility helper classes */
 .show {
   display: block;
