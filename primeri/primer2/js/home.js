@@ -4,9 +4,7 @@
 // javascript for homepage
 (function homepage() {
 
-    
-    var fetching = new FetchData();
-    var articles = new Articles();
+    var fetching = new FetchData('../js/data/data.json');
 
     // fetch data from server
     fetching.fetchDataFromServer()
@@ -15,6 +13,8 @@
 
     // update articles on page
     function updateArticles(value) {
+        var articles = new Articles(fetching.data);
+
         articles.updateNews();
         articles.updateTweets();
         articles.updateTips();
@@ -22,7 +22,7 @@
 
     // error occurs
     function errorHandle(e) {
-
+        console.error('Error is detected! ', e);
     }
 
 }());

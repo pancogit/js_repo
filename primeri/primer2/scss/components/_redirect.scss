@@ -8,7 +8,8 @@
 
     // set flexbox container to not wrap text and arrow
     // align items on cross axis
-    @include mixins.set_flexbox_container($align_items: center);
+    // set container as inlinesss
+    @include mixins.set_flexbox_container($display: inline-flex, $align_items: center);
 
     font-weight: bold;
     font-size: variables.$redirect_font_size;

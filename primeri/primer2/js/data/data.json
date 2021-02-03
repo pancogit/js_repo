@@ -17,8 +17,9 @@
             ],
             "link": {
                 "home": "news/news-savor-good-news-tips-and-more.html",
-                "news": "news-savor-good-news-tips-and-more.html"
-            }
+                "direct": "news-savor-good-news-tips-and-more.html"
+            },
+            "id": "1"
         },
         {
             "heading": "Most Advanced Artificial Heart Approved For Sale in Europe, Raising Hopes for Those Awaiting Transplants",
@@ -33,8 +34,9 @@
             ],
             "link": {
                 "home": "news/news-most-advanced-artificial-heart.html",
-                "news": "news-most-advanced-artificial-heart.html"
-            }
+                "direct": "news-most-advanced-artificial-heart.html"
+            },
+            "id": "2"
         },
         {
             "heading": "Salmon Spawning for the First Time in 80 Years in the Upper Columbia River",
@@ -51,8 +53,9 @@
             ],
             "link": {
                 "home": "news/news-salmon-spawing-for-the-first-time.html",
-                "news": "news-salmon-spawing-for-the-first-time.html"
-            }
+                "direct": "news-salmon-spawing-for-the-first-time.html"
+            },
+            "id": "3"
         },
         {
             "heading": "Space Station Captures Footage of Blue Lightning Bursting Toward Space",
@@ -68,8 +71,9 @@
             ],
             "link": {
                 "home": "news/news-space-station-captures-footage.html",
-                "news": "news-space-station-captures-footage.html"
-            }
+                "direct": "news-space-station-captures-footage.html"
+            },
+            "id": "4"
         },
         {
             "heading": "Startup Builds 3 Huge Indoor Farms in Appalachia Turning Coal Country into Agricultural Hub",
@@ -82,8 +86,9 @@
             ],
             "link": {
                 "home": "news/news-startup-build-huge-indoor.html",
-                "news": "news-startup-build-huge-indoor.html"
-            }
+                "direct": "news-startup-build-huge-indoor.html"
+            },
+            "id": "5"
         },
         {
             "heading": "Take This Test To See You if You Have a Face-Recognizing Superpower",
@@ -97,8 +102,9 @@
             ],
             "link": {
                 "home": "news/news-take-this-test-to-see-you-if.html",
-                "news": "news-take-this-test-to-see-you-if.html"
-            }
+                "direct": "news-take-this-test-to-see-you-if.html"
+            },
+            "id": "6"
         },
         {
             "heading": "What’s the Key to Raising Confident Kids? Here’s What the Majority of Parents Say…",
@@ -112,8 +118,9 @@
             ],
             "link": {
                 "home": "news/news-whats-the-key-to-raising-confident-kids.html",
-                "news": "news-whats-the-key-to-raising-confident-kids.html"
-            }
+                "direct": "news-whats-the-key-to-raising-confident-kids.html"
+            },
+            "id": "7"
         },
         {
             "heading": "You Should Not Be Eating Late at Night: Here’s Why and How You Can Avoid it",
@@ -132,8 +139,9 @@
             ],
             "link": {
                 "home": "news/news-you-should-not-be-eating-late-at-night.html",
-                "news": "news-you-should-not-be-eating-late-at-night.html"
-            }
+                "direct": "news-you-should-not-be-eating-late-at-night.html"
+            },
+            "id": "8"
         }
     ],
     "tweets": [
@@ -143,8 +151,9 @@
             "text": "RT @NEWTREE chocolat: Beautiful review of our Café & Chocolate Shop from @iPeggy at @SuccessnChoclat! http://t.co/hs8gDLr1#gratitude",
             "link": {
                 "home": "tweets/tweets-follow-us-newtree.html",
-                "tweets": "tweets-follow-us-newtree.html"
-            }
+                "direct": "tweets-follow-us-newtree.html"
+            },
+            "id": "1"
         },
         {
             "heading": "Catherine Barr",
@@ -152,8 +161,9 @@
             "text": "My most borrowed library books! Join and support your local library here Books https://gov.uk/local-library-services@PLR_UK @WelshLibraries @GreatSchLibs @Literacy_Trust @QuartoKids @OtterBarryBooks",
             "link": {
                 "home": "tweets/tweets-catherine-barr.html",
-                "tweets": "tweets-catherine-barr.html"
-            }
+                "direct": "tweets-catherine-barr.html"
+            },
+            "id": "2"
         },
         {
             "heading": "Elizabeth Hutchinson FCLIP BEM",
@@ -161,8 +171,9 @@
             "text": "Great blog! What a wonderful place libraries are and it saddens me to see their demise now. Without libraries, where would I have gone? This is why school libraries are so important! We need teachers to say more about their demise and support @GreatSchLibs in getting them back.",
             "link": {
                 "home": "tweets/tweets-elizabeth-hutchinson.html",
-                "tweets": "tweets-elizabeth-hutchinson.html"
-            }
+                "direct": "tweets-elizabeth-hutchinson.html"
+            },
+            "id": "3"
         },
         {
             "heading": "FHS Library",
@@ -170,8 +181,9 @@
             "text": "Please consider the positive impact that properly funded and staffed school libraries have repeatedly been shown to have on literacy (as well as information literacy, pastoral care etc). You may want to seek info from @GreatSchLibs @CILIPSLG @uksla @NickPoole1 or @IFLA",
             "link": {
                 "home": "tweets/tweets-fhs-library.html",
-                "tweets": "tweets-fhs-library.html"
-            }
+                "direct": "tweets-fhs-library.html"
+            },
+            "id": "4"
         },
         {
             "heading": "Julia Hale",
@@ -179,8 +191,9 @@
             "text": "If you missed last nights Twitter chat on Blogging check it out here... Blogging for school librarians -Twitter Chat @LGPSLibrary @julieloy @AbiLown @DebzHolland @LibraryLane1978 @MurrellHaze @CharlotteC1782 @MissNCleveland @DebHoggoz @NickPoole1 @sls_UK",
             "link": {
                 "home": "tweets/tweets-julia-hale.html",
-                "tweets": "tweets-julia-hale.html"
-            }
+                "direct": "tweets-julia-hale.html"
+            },
+            "id": "5"
         },
         {
             "heading": "Richard Gerver",
@@ -188,8 +201,9 @@
             "text": "So I’ve had a little idea for #homeschooling; #ChildrenAssemble Write a 60 second story, about 100 words, read it, film it, post it! #STORY60 Let’s tell the world our stories (parents, carers, teachers, need to see yours too)! Here’s mine for starters. @uksla @BBCNews",
             "link": {
                 "home": "tweets/tweets-richard-gerver.html",
-                "tweets": "tweets-richard-gerver.html"
-            }
+                "direct": "tweets-richard-gerver.html"
+            },
+            "id": "6"
         },
         {
             "heading": "Sky News",
@@ -197,8 +211,9 @@
             "text": "It's really sad if children aren't able to get hold of the books they want. Children's author Tom Percival tells Sky News how parents can get hold of books for their children in lockdown after some shops have restricted the sale of them Down pointing backhand index. Latest news: https://trib.al/mDaEpPY",
             "link": {
                 "home": "tweets/tweets-sky-news.html",
-                "tweets": "tweets-sky-news.html"
-            }
+                "direct": "tweets-sky-news.html"
+            },
+            "id": "7"
         },
         {
             "heading": "SLS UK",
@@ -206,8 +221,9 @@
             "text": "Do you want to read books, record videos & share them online with your students? This thread should help!Down pointing backhand index. Please note: some policies haven’t been updated for 2021 yet so please check the full guidelines before sharing videos.",
             "link": {
                 "home": "tweets/tweets-sls-uk.html",
-                "tweets": "tweets-sls-uk.html"
-            }
+                "direct": "tweets-sls-uk.html"
+            },
+            "id": "8"
         },
         {
             "heading": "Sue Giles",
@@ -215,8 +231,9 @@
             "text": "With national literacy levels ridiculously low, surely government should mandate that ALL schools should have a school library? How can government expect a child to achieve high grades with a low reading ability? How can they access the curriculum?",
             "link": {
                 "home": "tweets/tweets-sue-giles.html",
-                "tweets": "tweets-sue-giles.html"
-            }
+                "direct": "tweets-sue-giles.html"
+            },
+            "id": "9"
         },
         {
             "heading": "The FOSIL Group",
@@ -224,8 +241,9 @@
             "text": "The *IFLA School Library Manifesto* states that the school library is integral to the educational process. That it is not is a serious problem, and says as much about the prevailing educational process as it does about school librarianship. Addressing this remains my resolution.",
             "link": {
                 "home": "tweets/tweets-the-fosil-group.html",
-                "tweets": "tweets-the-fosil-group.html"
-            }
+                "direct": "tweets-the-fosil-group.html"
+            },
+            "id": "10"
         },
         {
             "heading": "The Serendipitous",
@@ -233,8 +251,9 @@
             "text": "A Term Like No Other, reflections on running a school library after lockdown 2020 #GreatSchoolLibraries #cilipsslg #sla #schoollibraries #schoollibrarians @AccessitLib @Sarahinthelib @dimac4 #backtoschool #lockdown2020",
             "link": {
                 "home": "tweets/tweets-the-serendipitous.html",
-                "tweets": "tweets-the-serendipitous.html"
-            }
+                "direct": "tweets-the-serendipitous.html"
+            },
+            "id": "11"
         },
         {
             "heading": "West Dunbartonshire",
@@ -242,8 +261,9 @@
             "text": "Because #schoollibraries are about more than books. Supporting local talent, encouraging creativity & ambition, & follow up literacy lessons on songwriting and poetry. This is why #LibrariesMatter @WDCEducation @GreatSchLibs @CILIPSLG @SLIC1991",
             "link": {
                 "home": "tweets/tweets-west-dunbartonshire.html",
-                "tweets": "tweets-west-dunbartonshire.html"
-            }
+                "direct": "tweets-west-dunbartonshire.html"
+            },
+            "id": "12"
         }
     ],
     "tips": [
@@ -253,8 +273,9 @@
             "text": "A sneak peek of our new sustainable space in downtown San Francisco! #mysavorlife http://t.co/c7W98dzU",
             "link": {
                 "home": "tips/tips-share-harmonious-living.html",
-                "tips": "tips-share-harmonious-living.html"
-            }
+                "direct": "tips-share-harmonious-living.html"
+            },
+            "id": "1"
         },
         {
             "heading": "Break Radio Check",
@@ -262,8 +283,9 @@
             "text": "If you can read this LIKE and SHARE. Think no one loves you because they don't like or comment on your posts? That is probably not the case. A better explanation is they are not seeing your posts because Facebook's edge ranking by default shows popular posts and posts from people you interact. Copy and paste this to your wall and encourage people to interact with you! Also encourage people to visit your profile and select Get Notifications mark you as a Close Friend so they will receive a notification when you post! The same applies to Facebook pages!",
             "link": {
                 "home": "tips/tips-break-radio-check.html",
-                "tips": "tips-break-radio-check.html"
-            }
+                "direct": "tips-break-radio-check.html"
+            },
+            "id": "2"
         },
         {
             "heading": "Get to the point",
@@ -271,8 +293,9 @@
             "text": "Visual content is a useful vehicle for your messaging. Market Domination Media took a meta approach to explaining why infographics work by creating an infographic. Note that the text is minimal and gets straight to the point, stressing facts over long descriptions.",
             "link": {
                 "home": "tips/tips-get-to-the-point.html",
-                "tips": "tips-get-to-the-point.html"
-            }
+                "direct": "tips-get-to-the-point.html"
+            },
+            "id": "3"
         },
         {
             "heading": "Know your audience",
@@ -280,8 +303,9 @@
             "text": "You need to speak their language, but it doesn’t mean settling for jargon that can clash with creative phrasing. Typically, an informal, conversational approach works best when you’re creating content. Other content writing suggestions include: focus on actionable content that someone can use in their lives or jobs right away; write in first-person or second-person; be careful with humor, which can fall flat for the reader; Use profanity rarely because it can throw off someone who may wonder why the content includes those words; don’t be so creative that a reader struggles to detect your main point; avoid starting sentences with vague words like this or that; link to other websites, newsletters, and blogs because the links provide added value to visitors and help establish your credibility; identify potential keywords that you should consider by using Google’s Keyword Planner and soovle, which provide examples of what keyword phrases people use when they search.",
             "link": {
                 "home": "tips/tips-know-your-audience.html",
-                "tips": "tips-know-your-audience.html"
-            }
+                "direct": "tips-know-your-audience.html"
+            },
+            "id": "4"
         },
         {
             "heading": "Remember that length depends on the context",
@@ -289,8 +313,9 @@
             "text": "It’s easy to stick to some content length rules and preferences. For example, you will want to maximize the 35 characters you get on each line of a Google ad. With social media, you might improve engagement by stopping well short of the maximum character limits. It gets tougher with website pages, articles, and blog posts. I understand that short pieces (let’s say anything under 500 words) are easier to consume for online readers. But longer content can draw in people as well. Visuals in the core content and within the site architecture can support your text. Odds are that your agency or company will have policies that control length. But there should always be exceptions. If you don’t write enough, you disappoint someone by not devoting sufficient attention to a topic. If you provide too many details, you might overwhelm a reader who might miss your primary ideas. Editors and writers should agree on whether the article is a suitable length. You can discard information that doesn’t quite fit. But in the content writing and editing process, you might identify opportunities to use some portions for future content (with additions or modifications). From a search engine optimization perspective, longer content is always best. A website, for example, can get by with shorter pieces if it becomes authoritative through its age, the number of pages, inbound links, and more. However, extended content often helps generate high rankings for targeted keyword phrases and similar words.",
             "link": {
                 "home": "tips/tips-remember-that-length.html",
-                "tips": "tips-remember-that-length.html"
-            }
+                "direct": "tips-remember-that-length.html"
+            },
+            "id": "5"
         },
         {
             "heading": "Think smart",
@@ -298,8 +323,9 @@
             "text": "Headline writing involves many challenges – tone, length, etc. This headline from Business Insider appears to be straightforward – good use of a numeral, direct, etc. But the word smarter caught my attention and elevated the post’s value in my mind.",
             "link": {
                 "home": "tips/tips-think-smart.html",
-                "tips": "tips-think-smart.html"
-            }
+                "direct": "tips-think-smart.html"
+            },
+            "id": "6"
         },
         {
             "heading": "Understand fair use",
@@ -307,8 +333,9 @@
             "text": "As a content writer, you may occasionally use other content. It’s not always enough to simply use quotation marks and cite the source. Fair use depends on several factors, including whether your content is used for commercial purposes and its potential impact on the market value of the copyrighted work. I mostly worry about the length of the original source. If I quoted 100 words from a 250-word blog, I think that would be too much. A lawyer would have the best advice, but I would limit the quote to 25 words in that case. Books are a little easier. If you quote 300 words from a 150-page book, I believe you would be fine. Poems and song lyrics are a danger zone because they’re often short. I’ve cited as little as possible from them. It’s always best to get legal counsel before publishing the final content.",
             "link": {
                 "home": "tips/tips-understand-fair-use.html",
-                "tips": "tips-understand-fair-use.html"
-            }
+                "direct": "tips-understand-fair-use.html"
+            },
+            "id": "7"
         }
     ]
 }

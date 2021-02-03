@@ -4,7 +4,10 @@
 // update articles on homepage
 class Articles {
 
-    constructor() {
+    constructor(data) {
+
+        this.dataFromServer = data;
+
         this.currentNewsIndex = 1;
         this.newsClass = 'article-news-id';
         this.news = document.getElementById(this.newsClass);
@@ -18,11 +21,16 @@ class Articles {
         this.currentTipsIndex = 1;
 
         this.activeButtonClass = 'article__button--active';
+        this.subheadingClass = 'article__subheading';
+        this.textClass = 'article__text';
+        this.buttonClass = 'article__button';
+        this.navigationClass = 'article__navigation';
+        this.readMoreClass = 'article__read-more';
     }
-    
+
     // add news to the page
     updateNews(value) {
-        var serverData = dataFromServer.news;
+        var serverData = this.dataFromServer.news;
 
         // add first news
         this.addArticle(this.news, this.currentNewsIndex - 1, serverData);
@@ -33,7 +41,7 @@ class Articles {
 
     // add tweets to the page
     updateTweets(value) {
-        var serverData = dataFromServer.tweets;
+        var serverData = this.dataFromServer.tweets;
 
         // add first tweet
         this.addArticle(this.tweets, this.currentTweetsIndex - 1, serverData);
@@ -44,7 +52,7 @@ class Articles {
 
     // add tips to the page
     updateTips(value) {
-        var serverData = dataFromServer.tips;
+        var serverData = this.dataFromServer.tips;
 
         // add first tip
         this.addArticle(this.tips, this.currentTipsIndex - 1, serverData);
@@ -57,8 +65,8 @@ class Articles {
     addArticle(article, index, dataServer) {
 
         // get elements from dom
-        var heading = article.getElementsByClassName('article__subheading')[0];
-        var text = article.getElementsByClassName('article__text')[0];
+        var heading = article.getElementsByClassName(this.subheadingClass)[0];
+        var text = article.getElementsByClassName(this.textClass)[0];
 
         // update article on page
         var articleServer = dataServer[index];
@@ -82,11 +90,9 @@ class Articles {
         text.append(readMore);
     }
 
-    
-
     // update buttons on page for given article
     updateArticleButtons(article, dataServer) {
-        var buttons = article.getElementsByClassName('article__button');
+        var buttons = article.getElementsByClassName(this.buttonClass);
         var buttonLeft = buttons[0];
         var buttonRight = buttons[1];
         var numberOfArticles = dataServer.length;
@@ -97,8 +103,10 @@ class Articles {
             buttonRight.classList.add(this.activeButtonClass);
         }
 
-        buttonLeft.addEventListener('click', this.articleButtonClicked);
-        buttonRight.addEventListener('click', this.articleButtonClicked);
+        // pass this pointer to event handler function because when function is called, 
+        // this pointer is assigned to event target instead of object
+        buttonLeft.addEventListener('click', this.articleButtonClicked.bind(this));
+        buttonRight.addEventListener('click', this.articleButtonClicked.bind(this));
     }
 
     // when article button is clicked
@@ -108,7 +116,7 @@ class Articles {
         var target = e.target;
 
         // if arrow is clicked, target is parent element
-        if (target.classList.contains('article__navigation')) target = target.parentElement;
+        if (target.classList.contains(this.navigationClass)) target = target.parentElement;
 
         // exit from function if button is not active
         if (!target.classList.contains(this.activeButtonClass)) return;
@@ -175,7 +183,7 @@ class Articles {
 
                 info.index = this.currentNewsIndex;
                 info.articleToAdd = this.news;
-                info.serverData = dataFromServer.news;
+                info.serverData = this.dataFromServer.news;
                 break;
 
             case this.tweetsClass:
@@ -184,7 +192,7 @@ class Articles {
 
                 info.index = this.currentTweetsIndex;
                 info.articleToAdd = this.tweets;
-                info.serverData = dataFromServer.tweets;
+                info.serverData = this.dataFromServer.tweets;
                 break;
 
             case this.tipsClass:
@@ -193,7 +201,7 @@ class Articles {
 
                 info.index = this.currentTipsIndex;
                 info.articleToAdd = this.tips;
-                info.serverData = dataFromServer.tips;
+                info.serverData = this.dataFromServer.tips;
                 break;
         }
 
@@ -208,7 +216,7 @@ class Articles {
 
         link.href = path;
         link.textContent = 'Read More';
-        link.classList.add('article__read-more');
+        link.classList.add(this.readMoreClass);
 
         return link;
     }

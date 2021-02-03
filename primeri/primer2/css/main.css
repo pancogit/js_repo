@@ -354,7 +354,7 @@ a {
 
 /* redirect */
 .redirect {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
   font-weight: bold;
