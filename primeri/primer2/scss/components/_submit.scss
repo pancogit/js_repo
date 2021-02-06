@@ -29,6 +29,11 @@
     &__email {
 
     }
+    
+    &__error {
+        font-weight: bold;
+        color: colors.$submit_error_color;
+    }
 
     &__heading {
         margin-top: 0;
@@ -46,18 +51,15 @@
         // remove outline when input is in focus
         outline: none;
 
-        // remove any borders
-        @include mixins.set_borders($top-style: solid,
-                                    $top-width: variables.$submit_input_border_width,
-                                    $top-color: colors.$submit_input_border_color,
-                                    
-                                    $bottom-style: none,
-                                    
-                                    $left-style: solid,
-                                    $left-width: variables.$submit_input_border_width,
-                                    $left-color: colors.$submit_input_border_color,
-                                    
-                                    $right-style: none);
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$submit_input_border_width,
+                                    $color: colors.$submit_input_border_color);
+
+        // element modifier for input errors
+        &--error {
+            border-color: colors.$submit_input_border_color_error;
+        }
 
         // add style for placeholder
         &::placeholder {

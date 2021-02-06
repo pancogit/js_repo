@@ -71,8 +71,10 @@ $submit_button_color: white;
 $submit_heading_color: #1e330a;
 $submit_input_background_color: #50901c;
 $submit_input_color: #d1ffae;
-$submit_input_border_color: rgb(24 90 24 / 36%);
+$submit_input_border_color: #50901c;
+$submit_input_border_color_error: #9a0606;
 $submit_input_placeholder_color: white;
+$submit_error_color: #9a0606;
 
 // article-block
 $article_block_heading_color: #716f6f;
@@ -114,3 +116,11 @@ $articles_heading_color: #413f3f;
 // article-page
 $article_page_heading_color: #413f3f;
 $article_page_text_color: #615e5e;
+
+// mobile-menu
+$mobile_menu_background_color: #66a91d;
+$mobile_menu_close_link_color: white;
+$mobile_menu_navigation_link_color: white;
+$mobile_menu_submenu_link_color: white;
+$mobile_menu_submenu_link_background_color_hover: white;
+$mobile_menu_submenu_link_color_hover: #66a91d;

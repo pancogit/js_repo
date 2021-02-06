@@ -104,7 +104,7 @@ $submit_button_border_radius: 0.3rem;
 $submit_heading_font_size: 0.95rem;
 $submit_heading_letter_spacing: 0.05rem;
 $submit_input_padding: 0.6rem 1rem;
-$submit_input_border_width: 0.4rem;
+$submit_input_border_width: 0.15rem;
 
 // article-block
 $article_block_heading_margin_top: 0.3rem;
@@ -204,3 +204,12 @@ $article_page_heading_margin_bottom: 2rem;
 $article_page_heading_font_size: 1.6rem;
 $article_page_text_line_height: 1.4rem;
 $article_page_text_font_size: 0.95rem;
+
+// mobile-menu
+$mobile_menu_right: 30%;
+$mobile_menu_close_link_margin: 1rem;
+$mobile_menu_close_link_margin_right: 0.8rem;
+$mobile_menu_close_link_font_size: 1.5rem;
+$mobile_menu_navigation_link_padding: 1rem;
+$mobile_menu_submenu_link_padding: 1rem;
+$mobile_menu_submenu_link_padding_left: 2rem;

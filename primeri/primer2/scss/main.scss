@@ -24,6 +24,9 @@
 @use 'layout/articles';
 @use 'layout/article-page';
 
+// mobile menu
+@use 'components/mobile-menu';
+
 // utilities
 @use 'utilities/colors';
 @use 'utilities/variables';
