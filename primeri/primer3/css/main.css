@@ -8,9 +8,99 @@ a {
   text-decoration: none;
 }
 
-/* button */
+/* page */
+.page {
+  min-width: 20rem;
+}
+.page__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
 /* logo */
+.logo__legal {
+  color: #0f8600;
+}
+.logo__link {
+  display: inline-block;
+  text-align: center;
+}
+.logo__text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.logo__trump {
+  color: #065397;
+}
+
+/* menu */
+.menu--margin {
+  margin-right: 1rem;
+}
+.menu__item {
+  border-right-style: solid;
+  border-right-width: 0.1rem;
+  border-right-color: #6d6d64;
+}
+.menu__link {
+  display: inline-block;
+  padding: 0.1rem 0.8rem;
+  color: #6d6d64;
+}
+.menu__link:hover {
+  color: #52524c;
+}
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* login */
+/* search */
+/* navigation */
+/* commercial */
+/* card */
+/* button */
+/* news */
+/* lawyer */
+/* articles */
+/* ad */
+.ad__image {
+  max-width: 100%;
+  height: auto;
+}
+/* social */
 /* header */
+.header__info {
+  margin: 0;
+  padding: 1rem;
+  background-color: #849573;
+  color: white;
+}
+.header__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* footer */
 /* home */
 /* utility helper classes */

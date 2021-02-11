@@ -1,0 +1,18 @@
+/* page */
+
+@use '../utilities/variables';
+
+.page {
+    // set minimum width for page
+    min-width: variables.$page_min_width;
+
+    &__content {
+        padding-left: variables.$page_content_padding;
+        padding-right: variables.$page_content_padding;
+
+        // set maximum width for page content and center on page with auto margins
+        max-width: variables.$page_content_max_width;
+        
+        margin: 0 auto;
+    }
+}

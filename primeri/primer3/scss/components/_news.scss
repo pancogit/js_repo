@@ -1,11 +1,15 @@
-/* home */ 
+/* news */
 
 @use '../utilities/colors';
 @use '../utilities/variables';
 
-.home {
+.news {
+    
+    &__about {
 
-    &__aside {
+    }
+
+    &__category {
 
     }
 
@@ -13,15 +17,23 @@
 
     }
 
+    &__date {
+
+    }
+
     &__heading {
 
     }
 
-    &__news {
+    &__icon {
 
     }
 
-    &__subheading {
+    &__info {
+
+    }
+
+    &__text {
         
     }
 }

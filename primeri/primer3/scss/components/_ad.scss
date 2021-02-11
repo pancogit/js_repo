@@ -1,0 +1,17 @@
+/* ad */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.ad {
+    
+    &__image {
+        // spread image to maximum width, but keep good propotions with auto height
+        max-width: variables.$ad_image_width;
+        height: auto;
+    }
+
+    &__link {
+        
+    }
+}

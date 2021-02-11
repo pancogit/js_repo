@@ -4,8 +4,20 @@
 @use 'base/reset';
 
 // components
-@use 'components/button';
+@use 'components/page';
 @use 'components/logo';
+@use 'components/menu';
+@use 'components/login';
+@use 'components/search';
+@use 'components/navigation';
+@use 'components/commercial';
+@use 'components/card';
+@use 'components/button';
+@use 'components/news';
+@use 'components/lawyer';
+@use 'components/articles';
+@use 'components/ad';
+@use 'components/social';
 
 // layout
 @use 'layout/header';

@@ -1,0 +1,38 @@
+/* menu */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.menu {
+
+    // block modifier
+    &--margin {
+        margin-right: variables.$menu_margin;
+    }
+
+    &__item {
+        // set right border
+        @include mixins.set_borders($right-style: solid,
+                                    $right-width: variables.$menu_item_border_width,
+                                    $right-color: colors.$menu_item_border_color);
+    }
+
+    &__link {
+        display: inline-block;
+        padding: variables.$menu_link_padding;
+        color: colors.$menu_link_color;
+
+        &:hover {
+            color: colors.$menu_link_color_hover;
+        }
+    }
+
+    &__list {
+        // reset list
+        @include mixins.reset_list;
+
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+    }
+}

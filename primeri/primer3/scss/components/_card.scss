@@ -1,27 +1,31 @@
-/* home */ 
+/* card */
 
 @use '../utilities/colors';
 @use '../utilities/variables';
 
-.home {
-
-    &__aside {
-
-    }
-
-    &__content {
-
-    }
+.card {
 
     &__heading {
 
     }
 
-    &__news {
+    &__image {
 
     }
 
-    &__subheading {
+    &__left {
+
+    }
+
+    &__link {
+
+    }
+
+    &__right {
+
+    }
+
+    &__text {
         
     }
 }

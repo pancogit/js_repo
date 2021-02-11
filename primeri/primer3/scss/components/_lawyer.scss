@@ -1,11 +1,11 @@
-/* footer */ 
+/* lawyer */
 
 @use '../utilities/colors';
 @use '../utilities/variables';
 
-.footer {
-
-    &__copyright {
+.lawyer {
+    
+    &__content {
 
     }
 
@@ -13,22 +13,23 @@
 
     }
 
-    &__link {
+    &__option {
 
     }
 
-    &__links {
+    &__pointer {
 
     }
 
-    &__list {
+    &__search {
 
-        &--parts {
-
-        }
     }
 
-    &__list-part {
+    &__select {
+
+    }
+
+    &__submit {
         
     }
 }

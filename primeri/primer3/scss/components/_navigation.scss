@@ -1,27 +1,27 @@
-/* home */ 
+/* navigation */
 
 @use '../utilities/colors';
 @use '../utilities/variables';
 
-.home {
+.navigation {
 
-    &__aside {
-
-    }
-
-    &__content {
+    &__item {
 
     }
 
-    &__heading {
+    &__link {
 
     }
 
-    &__news {
+    &__list {
 
     }
 
-    &__subheading {
+    &__plus {
+
+    }
+
+    &__text {
         
     }
 }
