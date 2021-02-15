@@ -2,26 +2,108 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .navigation {
 
-    &__item {
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+        // hide navigation when hamburger menu is shown
+        display: none;
 
+        // use fixed positioning for hamburger menu navigation and spread box to full screen width and height
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // set z-index for positioned box stacking
+        z-index: variables.$navigation_z_index;
+
+        background-color: colors.$navigation_mobile_background_color;
+    }
+
+    &__item {
+        // set flexbox container and spread flex items in column
+        @include mixins.set_flexbox_container($flex_direction: column);
     }
 
     &__link {
+        // set flexbox container to align links vertically
+        @include mixins.set_flexbox_container($align_items: center);
 
+        // grow flex item to full width (height column)
+        @include mixins.set_flex_item($flex: variables.$navigation_link_flex);
+
+        // set right border
+        @include mixins.set_borders($right-style: solid,
+                                    $right-width: variables.$navigation_link_border_width,
+                                    $right-color: colors.$navigation_link_border_color);
+
+        padding: variables.$navigation_link_padding;
+        color: colors.$navigation_link_color;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+            border-right: none;
+            color: colors.$navigation_link_mobile_color;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background-color: colors.$navigation_link_background_color_hover;
+
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+                background-color: colors.$navigation_link_mobile_hover_background_color;
+                color: colors.$navigation_link_mobile_hover_color;
+            }
+        }
     }
 
     &__list {
+        // reset list
+        @include mixins.reset_list;
 
+        // set flexbox container
+        @include mixins.set_flexbox_container();
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+            // change flex direction to column for mobile navigation
+            flex-direction: column;
+        }
     }
 
     &__plus {
-
+        margin-left: variables.$navigation_plus_margin_left;
+        color: colors.$navigation_plus_color;
     }
 
     &__text {
         
+    }
+
+    &__close {
+        // hide by default
+        display: none;
+
+        margin: variables.$navigation_close_margin;
+        text-align: right;
+
+        // show for mobile
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+            display: block;
+        }    
+    }
+
+    &__close-link {
+        display: inline-block;
+        color: colors.$navigation_close_link_color;
+
+        &:hover {
+            color: colors.$navigation_close_link_color_hover;
+        }
+    }
+
+    &__close-icon {
+        font-size: variables.$navigation_close_icon_font_size;
     }
 }

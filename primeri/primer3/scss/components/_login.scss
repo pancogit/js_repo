@@ -2,18 +2,52 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .login {
+
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: nowrap);
+
+    &--margin {
+        margin-left: variables.$login_margin;
+        margin-right: variables.$login_margin;
+    }
+
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$login_breakpoint) {
+        margin-right: 0;
+        margin-bottom: variables.$login_margin_bottom;
+    }
 
     &__icon {
 
     }
 
     &__link {
-
+        padding: variables.$login_link_padding;
+        background-color: colors.$login_link_background_color;
+        color: colors.$login_link_color;
     }
 
     &__text {
-        
+        // set flexbox container to align items vertically
+        @include mixins.set_flexbox_container($flex_wrap: nowrap, $align_items: center);
+
+        padding: variables.$login_text_padding;
+
+        // set borders
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$login_text_border_width,
+                                    $top-color: colors.$login_text_border_color,
+                                    
+                                    $bottom-style: solid,
+                                    $bottom-width: variables.$login_text_border_width,
+                                    $bottom-color: colors.$login_text_border_color,
+                                    
+                                    $right-style: solid,
+                                    $right-width: variables.$login_text_border_width,
+                                    $right-color: colors.$login_text_border_color);
+
+        color: colors.$login_text_color;
     }
 }

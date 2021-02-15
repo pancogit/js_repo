@@ -24,10 +24,38 @@ $menu_item_border_width: 0.1rem;
 $menu_link_padding: 0.1rem 0.8rem;
 
 // login
+$login_margin: 1.2rem;
+$login_breakpoint: 34rem;
+$login_margin_bottom: 1rem;
+$login_link_padding: 0.4rem 0.8rem;
+$login_text_padding: 0.35rem 0.8rem;
+$login_text_border_width: 0.1rem;
 
 // search
+$search_flex: 100%;
+$search_button_padding: 0.4rem 0.5rem;
+$search_icon_font_size: 1.2rem;
+$search_input_padding: 0.5rem;
+$search_input_border_width: 0.12rem;
 
 // navigation
+$navigation_z_index: 1000;
+$navigation_link_padding: 1rem 0.7rem;
+$navigation_link_border_width: 0.1rem;
+$navigation_link_flex: 1;
+$navigation_plus_margin_left: 0.3rem;
+$navigation_close_margin: 1rem;
+$navigation_close_icon_font_size: 1.4rem;
+
+// dropdown
+$dropdown_link_padding: 1rem 0.7rem;
+$dropdown_link_border_width: 0.1rem;
+$dropdown_link_mobile_padding_left: 2rem;
+
+// hamburger
+$hamburger_breakpoint: 49rem;
+$hamburger_link_font_size: 1.2rem;
+$hamburger_link_margin: 0.5rem;
 
 // commercial
 
@@ -47,7 +75,20 @@ $ad_image_width: 100%;
 // social
 
 // header
-$header_info_padding: 1rem;
+$header_info_padding: 0.8rem 1rem;
+$header_info_breakpoint: 46rem;
+$header_info_flex: 100%;
+$header_info_margin_top: 1rem;
+$header_links_margin_bottom: 2.5rem;
+$header_logo_margin_right: 2rem;
+$header_top_padding: 1rem;
+$header_search_breakpoint: 54rem;
+$header_search_flex: 100%;
+$header_search_margin_top: 2rem;
+$header_navigation_border_width: 0.1rem;
+$header_call_margin: 0.5rem;
+$header_call_breakpoint: 31rem;
+$header_call_flex: 100%;
 
 // footer
 

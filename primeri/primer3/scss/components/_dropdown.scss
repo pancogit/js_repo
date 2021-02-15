@@ -2,18 +2,80 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .dropdown {
+
+    &:hover {
+        .dropdown__list {
+            display: block;
+        }
+    }
 
     &__item {
 
     }
 
     &__link {
+        display: block;
+        padding: variables.$dropdown_link_padding;
+        color: colors.$dropdown_link_color;
 
+        // set borders
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$dropdown_link_border_width,
+                                    $bottom-color: colors.$dropdown_link_border_color,
+                                    
+                                    $left-style: solid,
+                                    $left-width: variables.$dropdown_link_border_width,
+                                    $left-color: colors.$dropdown_link_border_color,
+                                    
+                                    $right-style: solid,
+                                    $right-width: variables.$dropdown_link_border_width,
+                                    $right-color: colors.$dropdown_link_border_color);
+
+        // for mobile
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+            padding-left: variables.$dropdown_link_mobile_padding_left;
+            background-color: colors.$dropdown_link_mobile_background_color;
+            color: colors.$dropdown_link_mobile_color;
+            font-weight: bold;
+            border: none;
+        }
+
+        &:hover {
+            background-color: colors.$dropdown_link_background_color;
+
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+                background-color: colors.$dropdown_link_mobile_background_color;
+                color: colors.$dropdown_link_mobile_color_hover;
+            }
+        }
     }
 
     &__list {
-        
+        // hide dropdown list by default
+        display: none;
+
+        // reset list
+        @include mixins.reset_list;
+
+        position: absolute;
+        background-color: colors.$dropdown_list_background_color;
+
+        // set top border
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$dropdown_link_border_width,
+                                    $top-color: colors.$dropdown_link_border_color);
+
+        // remove positioning for mobile
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
+            position: unset;
+            border-top: none;
+        }
+    }
+
+    &__wrapper {
+
     }
 }

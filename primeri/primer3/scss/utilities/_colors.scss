@@ -15,10 +15,40 @@ $menu_link_color: #6d6d64;
 $menu_link_color_hover: #52524c;
 
 // login
+$login_link_background_color: #4aa93f;
+$login_link_color: white;
+$login_text_border_color: #b7b2b2;
+$login_text_color: #565656;
 
 // search
+$search_button_background_color: #4aa93f;
+$search_button_color: white;
+$search_input_border_color: #b7b2b2;
 
 // navigation
+$navigation_mobile_background_color: white;
+$navigation_link_border_color: #3a3a3a;
+$navigation_link_color: white;
+$navigation_link_background_color_hover: #272727;
+$navigation_link_mobile_color: #015597;
+$navigation_link_mobile_hover_background_color: white;
+$navigation_link_mobile_hover_color: #00355f;
+$navigation_plus_color: #888a88;
+$navigation_close_link_color: #015597;
+$navigation_close_link_color_hover: #00355f;
+
+// dropdown
+$dropdown_link_color: white;
+$dropdown_link_background_color: #272727;
+$dropdown_list_background_color: #484846;
+$dropdown_link_border_color: #3a3a3a;
+$dropdown_link_mobile_background_color: white;
+$dropdown_link_mobile_color: #015597;
+$dropdown_link_mobile_color_hover: #00355f;
+
+// hamburger
+$hamburger_link_color: white;
+$hamburger_link_color_hover: silver;
 
 // commercial
 
@@ -39,6 +69,8 @@ $menu_link_color_hover: #52524c;
 // header
 $header_info_background_color: #849573;
 $header_info_color: white;
+$header_navigation_background_color: #484846;
+$header_navigation_border_color: #3a3a3a;
 
 // footer
 
