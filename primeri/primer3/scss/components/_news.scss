@@ -2,11 +2,28 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .news {
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+    + .news {
+        // set top border for every news except first
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$news_border_width,
+                                    $top-color: colors.$news_border_color);
+
+        padding-top: variables.$news_padding_top;
+    }
+
+    // for last news block for one scope, set bottom margin
+    &:last-of-type {
+        margin-bottom: variables.$news_margin_bottom;
+    }
     
     &__about {
-
+        color: colors.$news_about_color;
     }
 
     &__category {
@@ -14,26 +31,49 @@
     }
 
     &__content {
+        // set flex item properties
+        @include mixins.set_flex_item($flex: variables.$news_content_flex);
 
+        margin-right: variables.$news_content_margin_right;
+
+        // for smaller screens spread content to full width and remove right margin
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$news_content_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$news_content_full_flex);
+
+            margin-right: 0;
+        }
     }
 
     &__date {
-
+        margin-bottom: variables.$news_date_margin_bottom;
+        font-weight: bold;
     }
 
     &__heading {
-
+        margin-top: 0;
+        margin-bottom: variables.$news_heading_margin_bottom;
+        color: colors.$news_heading_color;
     }
 
     &__icon {
-
+        margin-right: variables.$news_icon_margin_right;
     }
 
     &__info {
+        // set flex item properties, don't grow, don't shrink and set fixed flex basis
+        @include mixins.set_flex_item($flex: variables.$news_info_flex);
 
+        text-align: center;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$news_info_breakpoint) {
+            margin-bottom: variables.$news_info_margin_bottom;
+            text-align: left;
+        }
     }
 
     &__text {
-        
+        margin-top: 0;
+        color: colors.$news_text_color;
+        font-size: variables.$news_text_font_size;
     }
 }

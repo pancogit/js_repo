@@ -2,14 +2,66 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .commercial {
 
-    &__image {
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: wrap);
 
+    &__image {
+        // spread images with the same widths using flex basis
+        @include mixins.set_flex_item($flex: variables.$commercial_image_flex);
+
+        // set flexbox container to column and align items on main axis
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: flex-end);
+
+        margin-right: variables.$commercial_image_margin;
+        margin-bottom: variables.$commercial_image_margin;
+
+        // fix height for background images
+        height: variables.$commercial_image_height;
+
+        background-repeat: no-repeat;
+        background-position: center;
+
+        // spread image to full width, but keep good proportion ratio
+        background-size: cover;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$commercial_image_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$commercial_image_flex_breakpoint);
+        }
+
+        // remove right margin for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+            margin-right: 0;
+        }
+
+        // element modifiers for background images
+        &--corporate {
+            background-image: url(variables.$commercial_image_corporate_path);
+        }
+
+        &--civil {
+            background-image: url(variables.$commercial_image_civil_path);
+        }
+
+        &--criminal {
+            background-image: url(variables.$commercial_image_criminal_path);
+        }
+
+        &--family {
+            background-image: url(variables.$commercial_image_family_path);
+        }
     }
 
     &__text {
-        
+        padding: variables.$commercial_text_padding;
+        margin-bottom: variables.$commercial_text_margin_bottom;
+        text-align: center;
+        font-weight: bold;
+        font-size: variables.$commercial_text_font_size;
+        color: colors.$commercial_text_color;
+        background-color: colors.$commercial_text_background_color;
     }
 }

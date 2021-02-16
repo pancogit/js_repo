@@ -2,11 +2,30 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .card {
+    // set flexbox container
+    @include mixins.set_flexbox_container();
+
+    padding: variables.$card_padding;
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$card_border_width,
+                                $color: colors.$card_border_color);
+
+    &__button {
+        // push button to the bottom via flex item auto margins
+        margin-top: auto;
+    }
 
     &__heading {
-
+        margin-top: 0;
+        margin-bottom: variables.$card_heading_margin_bottom;
+        font-size: variables.$card_heading_font_size;
+        line-height: variables.$card_heading_line_height;
+        color: colors.$card_heading_color;
     }
 
     &__image {
@@ -14,18 +33,22 @@
     }
 
     &__left {
-
+        margin-right: variables.$card_left_margin_right;
     }
 
     &__link {
-
+        display: inline-block;
     }
 
     &__right {
-
+        // set flexbox container to push button to the bottom
+        @include mixins.set_flexbox_container($flex_direction: column);
     }
 
     &__text {
-        
+        margin-top: 0;
+        margin-bottom: variables.$card_text_margin_bottom;
+        font-size: variables.$card_text_font_size;
+        color: colors.$card_text_color;
     }
 }

@@ -2,19 +2,54 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .home {
+    padding: variables.$home_padding;
 
     &__aside {
+        // set flex item properties
+        @include mixins.set_flex_item($flex: variables.$home_aside_flex);
 
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+            margin-top: variables.$home_aside_margin_top;
+        }
+    }
+
+    &__articles {
+        margin-bottom: variables.$home_articles_margin_bottom;
     }
 
     &__content {
+        // set flex item properties
+        @include mixins.set_flex_item($flex: variables.$home_content_flex);
 
+        margin-right: variables.$home_content_margin_right;
+
+        // spread content to full width via flex item properties
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$home_content_full_flex);
+
+            margin-right: 0;
+        }
+    }
+
+    &__cards {
+        @include mixins.set_grid_container($grid_template_columns: repeat(auto-fit, minmax(variables.$home_cards_min_width, 
+                                                                                           variables.$home_cards_max_width)),
+                                           $row_gap: variables.$home_cards_row_gap, 
+                                           $column_gap: variables.$home_cards_column_gap);
     }
 
     &__heading {
+        margin-top: 0;
+        font-weight: normal;
+        font-size: variables.$home_heading_font_size;
+        line-height: variables.$home_heading_line_height;
+    }
 
+    &__lawyer {
+        margin-bottom: variables.$home_laywer_margin_bottom;
     }
 
     &__news {
@@ -22,6 +57,13 @@
     }
 
     &__subheading {
-        
+        margin-bottom: variables.$home_subheading_margin_bottom;
+        font-weight: normal;
+        font-size: variables.$home_subheading_font_size;
+    }
+
+    &__wrapper {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
     }
 }

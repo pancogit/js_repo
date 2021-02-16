@@ -6,10 +6,6 @@
 
 .header {
 
-    &__cards {
-
-    }
-
     &__info {
         // set flexbox container
         @include mixins.set_flexbox_container($flex_wrap: wrap);

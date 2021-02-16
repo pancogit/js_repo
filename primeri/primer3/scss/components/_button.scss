@@ -4,5 +4,13 @@
 @use '../utilities/variables';
 
 .button {
-    
+    display: inline-block;
+    padding: 0.4rem 0.7rem;
+    color: white;
+    background-color: #48aa3f;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #298422;
+    }
 }

@@ -5,13 +5,18 @@
 
 .ad {
     
+    // block modifier for margin
+    &--margin {
+        margin-bottom: variables.$ad_margin_bottom;
+    }
+
     &__image {
-        // spread image to maximum width, but keep good propotions with auto height
-        max-width: variables.$ad_image_width;
+        // spread image to full width, but keep good propotions with auto height
+        width: variables.$ad_image_width;
         height: auto;
     }
 
     &__link {
-        
+        display: block;
     }
 }
