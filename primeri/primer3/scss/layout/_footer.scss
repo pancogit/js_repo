@@ -2,33 +2,142 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .footer {
 
-    &__copyright {
+    background-color: colors.$footer_background_color;
 
+    &__copyright {
+        margin-bottom: variables.$footer_copyright_margin_bottom;
+        padding: variables.$footer_copyright_padding;
+        background-color: colors.$footer_copyright_background_color;
+        color: colors.$footer_copyright_color;
+        font-size: variables.$footer_copyright_font_size;
     }
 
     &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$footer_heading_margin_bottom;
+        padding-bottom: variables.$footer_heading_padding_bottom;
+        font-size: variables.$footer_heading_font_size;
 
+        // set bottom border
+        @include mixins.set_borders($bottom-style: dotted,
+                                    $bottom-width: variables.$footer_heading_border_width,
+                                    $bottom-color: colors.$footer_heading_border_color);
     }
 
     &__link {
+        // spread links to full width
+        display: block;
 
+        padding-bottom: variables.$footer_link_padding_bottom;
+        font-size: variables.$footer_link_font_size;
+        color: colors.$footer_link_color;
+
+        &:hover {
+            color: colors.$footer_link_color_hover;
+            text-decoration: underline;
+        }
     }
 
     &__links {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
 
+        margin-top: variables.$footer_links_margin_top;
+        margin-bottom: variables.$footer_links_margin_bottom;
     }
 
     &__list {
 
-        &--parts {
+        &--links {
+            // set flex item properties
+            @include mixins.set_flex_item($flex: variables.$footer_list_links_flex);
 
+            margin-right: variables.$footer_list_links_margin_right;
+
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint) {
+                margin-bottom: variables.$footer_list_links_margin_bottom;
+            }
+
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint_small) {
+                // spread to full width
+                @include mixins.set_flex_item($flex: variables.$footer_list_links_full_flex);
+
+                margin-right: 0;
+            }
+        }
+
+        &--services {
+            margin-right: variables.$footer_list_services_margin_right;
+
+            // set higher flex
+            @include mixins.set_flex_item($flex: variables.$footer_list_services_flex);
+
+            // set flexbox container
+            @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint) {
+                // spread to full width
+                @include mixins.set_flex_item($flex: variables.$footer_list_services_full_flex);
+
+                margin-right: 0;
+
+                // change order of flex item, push to the end
+                order: variables.$footer_list_services_order;
+            }
+
+            // change order to default value
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint_small) {
+                margin-bottom: variables.$footer_list_services_margin_bottom;
+                order: 0;
+            }
+        }
+
+        &--connect {
+            // set flex item properties
+            @include mixins.set_flex_item($flex: variables.$footer_list_connect_flex);
         }
     }
 
     &__list-part {
-        
+        // set flex item properties
+        @include mixins.set_flex_item($flex: variables.$footer_list_part_flex);
+
+        // set margins for all parts except first
+        + .footer__list-part {
+            margin-left: variables.$footer_list_part_margin;
+            margin-top: variables.$footer_list_part_margin;
+
+            // remove margins
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint_small) {
+                margin: 0;
+            }
+        }
+
+        // spread to full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_list_links_breakpoint_small) {
+            @include mixins.set_flex_item($flex: variables.$footer_list_part_full_flex);
+        }
+    }
+
+    &__track {
+        height: variables.$footer_track_height;
+
+        // set background image properties
+        background-repeat: repeat;
+        background-size: contain;  // use full size with good proportions
+
+        // element modifier for top background image
+        &--top {
+            background-image: url(variables.$footer_track_top_background_image_path);
+        }
+
+        // element modifier for bottom background image
+        &--bottom {
+            background-image: url(variables.$footer_track_bottom_background_image_path);
+        }
     }
 }

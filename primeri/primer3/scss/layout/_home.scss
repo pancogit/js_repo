@@ -10,7 +10,8 @@
     &__aside {
         // set flex item properties
         @include mixins.set_flex_item($flex: variables.$home_aside_flex);
-
+        
+        // one column layout
         @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
             margin-top: variables.$home_aside_margin_top;
         }
@@ -46,6 +47,12 @@
         font-weight: normal;
         font-size: variables.$home_heading_font_size;
         line-height: variables.$home_heading_line_height;
+
+        // for one column layout set smaller font and line height
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+            font-size: variables.$home_heading_font_size_small;
+            line-height: variables.$home_heading_line_height_small;
+        }
     }
 
     &__lawyer {
@@ -60,6 +67,11 @@
         margin-bottom: variables.$home_subheading_margin_bottom;
         font-weight: normal;
         font-size: variables.$home_subheading_font_size;
+
+        // for one column layout set smaller font
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+            font-size: variables.$home_subheading_font_size_small;
+        }
     }
 
     &__wrapper {

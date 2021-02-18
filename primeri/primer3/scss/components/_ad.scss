@@ -2,9 +2,15 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .ad {
     
+    // for one column layout hide ads
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_content_breakpoint) {
+        display: none;
+    }
+
     // block modifier for margin
     &--margin {
         margin-bottom: variables.$ad_margin_bottom;
