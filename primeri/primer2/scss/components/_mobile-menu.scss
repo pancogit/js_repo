@@ -14,6 +14,9 @@
     right: variables.$mobile_menu_right;
     background-color: colors.$mobile_menu_background_color;
 
+    // for mobile menu use overflow because menu content can be too large for screen to fit
+    overflow: auto;
+
     &__close {
         display: block;
         text-align: right;

@@ -1,0 +1,1002 @@
+{
+    "bussiness_listing": [
+        {
+            "image": {
+                "path": "../images/corporate-laws.jpg",
+                "info": "corporate services card"
+            },
+            "heading": "Corporate Services",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        },
+        {
+            "image": {
+                "path": "../images/taxation-services.jpg",
+                "info": "taxation services card"
+            },
+            "heading": "Taxation Services",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        },
+        {
+            "image": {
+                "path": "../images/labour-law.jpg",
+                "info": "labour law card"
+            },
+            "heading": "Labour Law Compliances",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        },
+        {
+            "image": {
+                "path": "../images/india-entry.jpg",
+                "info": "india entry card"
+            },
+            "heading": "India Entry Strategy",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        },
+        {
+            "image": {
+                "path": "../images/civil-laws.jpg",
+                "info": "nri services card"
+            },
+            "heading": "NRI Services",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        },
+        {
+            "image": {
+                "path": "../images/corporate-finance.jpg",
+                "info": "corporate finance card"
+            },
+            "heading": "Corporate Finance",
+            "text": "Get reference for the professionals who specialize in the inbound...",
+            "link": "index.html"
+        }
+    ],
+    "latest_news": [
+        {
+            "heading": "Law Society 2015",
+            "text": "Lorem ipsum is simply text of the printing and typesetting industry. Lorem ipsum has been the industry's standard text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.",
+            "date": "10 August 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Law Society 2015",
+            "text": "Lorem ipsum is simply text of the printing and typesetting industry. Lorem ipsum has been the industry's standard text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.",
+            "date": "10 August 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Relief as EU deems UK data protection laws \"adequate\"",
+            "text": "UK data protection law - reformed in 2015 to align with the EU General Data Protection Regulation - is sufficiently stringent to allow exchanges of personal data with the EU to continue, the European Commission has said in a long-awaited decision. A draft \"adequacy\" ruling announced today was welcomed by the government, which described it as \"logical\". The decision has been a nearly year in the making: the UK formally provided the commission with explanatory material in March 2015. Following the end of the Brexit transition period, exchanges of personal data with the EU have been allowed by a bridging agreement due to expire in June.",
+            "date": "28 July 2015",
+            "category": "News"
+        },
+        {
+            "heading": "\"Tremendous growth opportunities\": US firm acquires London practice",
+            "text": "US firm Armstrong Teasdale has acquired a London practice with 50 lawyers and staff, citing the \"tremendous growth opportunities\" in the UK capital. The St Louis-based firm acquired Kerman & Co, a commercial firm with offices in London and Dublin, on 5 February. Armstrong Teasdale now has 340 lawyers globally and will assume Kerman & Co.'s existing office space on the Strand. The announcement is a welcome vote of confidence in London as a legal centre following the UK's departure from the EU. Armstrong Teasdale's managing partner David Braswell said the firm is \"now in a position to take advantage of tremendous growth opportunities in London\".",
+            "date": "25 July 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Burford pushes to reinstate dividend following \"record\" year",
+            "text": "Litigation funder Burford Capital is keen to reinstate its dividend to shareholders following \"the best year in its history for portfolio performance\". However, new business took a hit in 2015 and profit after tax is down. In a business update on its 2015 activities, Burford reported \"record levels of realized gain and more cash from successes than ever before\". It added that its portfolio of ongoing matters is larger than it has ever been. \"Burford suspended its dividend in early 2015 due to uncertainty around the pandemic, but given the year's performance and Burford's strong liquidity position, the board will recommend that shareholders approve at the annual general meeting a full resumption of the dividend at its previous annual level of 12.5 US cents per share, with a record date in June 2015,\" Burford said.",
+            "date": "22 July 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Gig economy: Uber drivers are workers, Supreme Court finds",
+            "text": "The Supreme Court has ruled that Uber drivers are workers and are thus entitled to holiday pay and the national minimum wage, in a ruling with \"huge implications\" for the gig economy. In a judgment handed down this morning, six justices unanimously dismissed Uber's appeal against a 2015 Court of Appeal ruling. The company argued that drivers are independent contractors who work under contracts made with customers. In Uber BV and others v Aslam and others, the Supreme Court disagreed, finding there was no factual basis for asserting that Uber London acted merely as an agent for drivers. Instead, it found that Uber London contracts with passengers and engages drivers to carry out bookings for it. It added that the service performed by drivers and offered to passengers through the Uber app is very tightly defined and controlled by Uber.",
+            "date": "12 July 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Sunak urged to act ahead of March stamp duty cliff-edge",
+            "text": "The government has been urged to take urgent action to help the thousands of people waiting anxiously on their property purchase. The stamp duty land tax holiday deadline is set to end on 31 March but around 100,000 ongoing transactions remain at risk of not completing in time. Practitioners now fear that some purchasers who miss the deadline may seek to withdraw offers, plunging the property market into chaos overnight. Ahead of the budget on 3 March, the Law Society said this was an opportunity for chancellor Rishi Sunak to stop transactions collapsing at this cliff-edge. \"It has become increasingly clear that the abrupt end of the holiday on 31 March combined with a bottleneck in the market could cause significant disruption,\" said president of the Law Society David Greene.",
+            "date": "20 June 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Crime contract extension could delay legal aid review benefits",
+            "text": "The Law Society has warned that any benefits arising from the independent review into criminal legal aid could be \"some way off\" after the Legal Aid Agency announced that its crime contracts will be extended for a further 12 months. Crime contracts currently held by criminal legal aid providers will be extended automatically until 31 March 2015. Existing providers will also be offered a further extension until 30 September 2015. However, the Law Society is worried that any benefits from the independent review, which is due to report by the end of the year, are now \"some way off\". Society president David Greene said: \"Hard-pressed practitioners are keen to see the review's findings implemented as quickly as possible after its conclusion at the end of this year but today's announcement will leave them concerned at how long a delay they may face before finally seeing the much needed changes which CLAR must bring about. There is a grave danger that when those changes come it will be too little too late.\" The LAA announcement suggests that the extension will avoid adding \"further pressure during an already challenging period\" but I must put it bluntly - the urgent need in the sector is for more money. Otherwise, we'll see more firms closing their doors.",
+            "date": "18 June 2015",
+            "category": "News"
+        },
+        {
+            "heading": "\"Supercourt\" unveiled for Manchester alongside host of new Nightingale sites",
+            "text": "Fourteen new \"Nightingale courts\" are to be set up as part of a £113m initiative to convert hotels and event spaces to tackle a backlog of nearly 500,000 cases. The new programme will bring the number of emergency courtrooms to 60 by the end of March. Walls in Manchester Crown Court will be knocked down to create a \"super court\", large enough to house all parties involved in gang murder trials. A courtroom will also be opened at the Hilton in Deansgate. Liverpool, Birmingham, Wolverhampton, Chichester and Croydon are among those to receive extra courtrooms. A courtroom will also be opened in London's Barbican performing arts centre with two additional hearing spaces. The sites will hear mostly non-custodial Crown Court cases, with the total number of Nightingale courtrooms set up across the country to enable more socially distanced trials increasing to 60 by the end of March 2015. Justice secretary Robert Buckland said the move will provide a \"shot in the arm for the justice system\".",
+            "date": "16 June 2015",
+            "category": "News"
+        },
+        {
+            "heading": "Eversheds repays staff whose hours were cut",
+            "text": "Solicitors at Eversheds Sutherland whose salaries were cut as a result of the pandemic will be reimbursed next month after the international firm reported it was performing \"strongly against its budget\". In June 2015, Eversheds Sutherland introduced a flexible working scheme which reduced the earnings and working patterns of some lawyers by up to a fifth. However, the firm will repay the reductions in March \"in appreciation for the support shown for the scheme\". Staff who signed up to the scheme but did not work reduced hours because they remained busy will also receive a one-off payment \"in recognition of the very positive impact those teams have had on the firm's financial performance\". Chief executive Lee Ranson said: \"A key driver for the creation of the flex scheme was a desire to take collective action for the benefit of all - an extraordinary measure in extraordinary times. Despite the challenges of the last year, the firm has performed strongly against budget and it is therefore right that we make these payments in appreciation for the support shown for the scheme.\" Eversheds Sutherland has also repaid the furlough money it received from the government at the height of lockdown, and year-end bonuses will be handed out as normal.",
+            "date": "13 June 2015",
+            "category": "News"
+        }
+    ],
+    "articles": [
+        {
+            "heading": "Useful Articles",
+            "links": [
+                {
+                    "text": "Union Budget 2014-15",
+                    "link": "index.html"
+                },
+                {
+                    "text": "UNION BUDGET 2011-2012",
+                    "link": "index.html"
+                },
+                {
+                    "text": "HIGHLIGHTS OF UNION BUDGET 2010-11",
+                    "link": "index.html"
+                },
+                {
+                    "text": "Interim Foreign Trade Policy (2009-10)",
+                    "link": "index.html"
+                },
+                {
+                    "text": "Key Highlights - RBI Monetary Policy Statement 2010-2011",
+                    "link": "index.html"
+                },
+                {
+                    "text": "Detai - RBI Monetary Policy Statement 2010-2011",
+                    "link": "index.html"
+                }
+            ]
+        },
+        {
+            "heading": "Court Judgements",
+            "links": [
+                {
+                    "text": "Legal Rights of Second Marriage",
+                    "link": "index.html"
+                },
+                {
+                    "text": "First Information Report",
+                    "link": "index.html"
+                },
+                {
+                    "text": "Human Rights",
+                    "link": "index.html"
+                },
+                {
+                    "text": "Will - Codicils and Succession",
+                    "link": "index.html"
+                }
+            ]
+        }
+    ],
+    "lawyers": {
+        "categories": [
+            {
+                "name": "Admiralty Law",
+                "value": "admiralty",
+                "states": [
+                    {
+                        "name": "Alaska",
+                        "value": "alaska",
+                        "cities": [
+                            {
+                                "name": "Anchorage", 
+                                "value": "anchorage"
+                            },
+                            {
+                                "name": "Juneau", 
+                                "value": "juneau"
+                            },
+                            {
+                                "name": "Fairbanks", 
+                                "value": "fairbanks"
+                            },
+                            {
+                                "name": "Badger", 
+                                "value": "badger"
+                            },
+                            {
+                                "name": "Lakes", 
+                                "value": "lakes"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "California",
+                        "value": "california",
+                        "cities": [ 
+                            {
+                                "name": "Los Angeles", 
+                                "value": "los-angeles"
+                            },
+                            {
+                                "name": "San Diego", 
+                                "value": "san-diego"
+                            },
+                            {
+                                "name": "San Jose", 
+                                "value": "san-jose"
+                            },
+                            {
+                                "name": "San Francisco", 
+                                "value": "san-francisco"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hawaii",
+                        "value": "hawaii",
+                        "cities": [
+                            {
+                                "name": "Urban Honolulu", 
+                                "value": "urban-honolulu"
+                            },
+                            {
+                                "name": "East Honolulu", 
+                                "value": "east-honolulu"
+                            },
+                            {
+                                "name": "Pearl City", 
+                                "value": "pearl-city"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Illinois",
+                        "value": "illinois",
+                        "cities": [
+                            {
+                                "name": "Chicago", 
+                                "value": "chicago"
+                            },
+                            {
+                                "name": "Aurora", 
+                                "value": "aurora"
+                            },
+                            {
+                                "name": "Joliet", 
+                                "value": "joliet"
+                            },
+                            {
+                                "name": "Naperville", 
+                                "value": "naperville"
+                            },
+                            {
+                                "name": "Rockford", 
+                                "value": "rockford"
+                            },
+                            {
+                                "name": "Springfield", 
+                                "value": "springfield"
+                            },
+                            {
+                                "name": "Peoria", 
+                                "value": "peoria"
+                            },
+                            {
+                                "name": "Elgin", 
+                                "value": "elgin"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Indiana",
+                        "value": "indiana",
+                        "cities": [
+                            {
+                                "name": "Indianapolis", 
+                                "value": "indianapolis"
+                            },
+                            {
+                                "name": "Fort Wayne", 
+                                "value": "fort-wayne"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Bankruptcy Law",
+                "value": "bankruptcy",
+                "states": [
+                    {
+                        "name": "Alabama",
+                        "value": "alabama",
+                        "cities": [
+                            {
+                                "name": "Birmingham", 
+                                "value": "birmingham"
+                            },
+                            {
+                                "name": "Montgomery", 
+                                "value": "montgomery"
+                            },
+                            {
+                                "name": "Huntsville", 
+                                "value": "huntsville"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Arizona",
+                        "value": "arizona",
+                        "cities": [
+                            {
+                                "name": "Phoenix", 
+                                "value": "phoenix"
+                            },
+                            {
+                                "name": "Tucson", 
+                                "value": "tucson"
+                            },
+                            {
+                                "name": "Mesa", 
+                                "value": "mesa"
+                            },
+                            {
+                                "name": "Chandler", 
+                                "value": "chandler"
+                            },
+                            {
+                                "name": "Scottsdale", 
+                                "value": "scottsdale"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Kansas",
+                        "value": "kansas",
+                        "cities": [
+                            {
+                                "name": "Wichita", 
+                                "value": "wichita"
+                            },
+                            {
+                                "name": "Overland Park", 
+                                "value": "overland-park"
+                            },
+                            {
+                                "name": "Kansas City", 
+                                "value": "kansas-city"
+                            },
+                            {
+                                "name": "Olathe", 
+                                "value": "olathe"
+                            },
+                            {
+                                "name": "Topeka", 
+                                "value": "topeka"
+                            },
+                            {
+                                "name": "Lawrence", 
+                                "value": "lawrence"
+                            },
+                            {
+                                "name": "Shawnee", 
+                                "value": "shawnee"
+                            },
+                            {
+                                "name": "Manhattan", 
+                                "value": "manhattan"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Louisiana",
+                        "value": "louisiana",
+                        "cities": [
+                            {
+                                "name": "New Orleans", 
+                                "value": "new-orleans"
+                            },
+                            {
+                                "name": "Baton Rouge", 
+                                "value": "baton-rouge"
+                            },
+                            {
+                                "name": "Shreveport", 
+                                "value": "shreveport"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Business (Corporate) Law",
+                "value": "business",
+                "states": [
+                    {
+                        "name": "Florida",
+                        "value": "florida",
+                        "cities": [
+                            {
+                                "name": "Jacksonville", 
+                                "value": "jacksonville"
+                            },
+                            {
+                                "name": "Miami", 
+                                "value": "miami"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Georgia",
+                        "value": "georgia",
+                        "cities": [
+                            {
+                                "name": "Atlanta", 
+                                "value": "atlanta"
+                            },
+                            {
+                                "name": "Columbus", 
+                                "value": "columbus"
+                            },
+                            {
+                                "name": "Savannah", 
+                                "value": "savannah"
+                            },
+                            {
+                                "name": "Warner Robins", 
+                                "value": "warner-robins"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Massachusetts",
+                        "value": "massachusetts",
+                        "cities": [
+                            {
+                                "name": "Boston", 
+                                "value": "boston"
+                            },
+                            {
+                                "name": "Worcester", 
+                                "value": "worcester"
+                            },
+                            {
+                                "name": "Springfield", 
+                                "value": "springfield"
+                            },
+                            {
+                                "name": "Cambridge", 
+                                "value": "cambridge"
+                            },
+                            {
+                                "name": "New Bedford", 
+                                "value": "new-bedford"
+                            },
+                            {
+                                "name": "Quincy", 
+                                "value": "quincy"
+                            },
+                            {
+                                "name": "Newton", 
+                                "value": "newton"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Michigan",
+                        "value": "michigan",
+                        "cities": [
+                            {
+                                "name": "Detroit", 
+                                "value": "detroit"
+                            },
+                            {
+                                "name": "Warren city", 
+                                "value": "warren-city"
+                            },
+                            {
+                                "name": "Sterling Heights", 
+                                "value": "sterling-heights"
+                            },
+                            {
+                                "name": "Lansing city", 
+                                "value": "lansing-city"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Washington",
+                        "value": "washington",
+                        "cities": [
+                            {
+                                "name": "Seattle", 
+                                "value": "seattle"
+                            },
+                            {
+                                "name": "Spokane", 
+                                "value": "spokane"
+                            },
+                            {
+                                "name": "Vancouver", 
+                                "value": "vancouver"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "West Virginia",
+                        "value": "west-virginia",
+                        "cities": [
+                            {
+                                "name": "Charleston", 
+                                "value": "charleston"
+                            },
+                            {
+                                "name": "Huntington", 
+                                "value": "huntington"
+                            },
+                            {
+                                "name": "Morgantown", 
+                                "value": "morgantown"
+                            },
+                            {
+                                "name": "Parkersburg", 
+                                "value": "parkersburg"
+                            },
+                            {
+                                "name": "Wheeling", 
+                                "value": "wheeling"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Civil Rights Law",
+                "value": "civil",
+                "states": [
+                    {
+                        "name": "Minnesota",
+                        "value": "minnesota",
+                        "cities": [
+                            {
+                                "name": "Minneapolis", 
+                                "value": "minneapolis"
+                            },
+                            {
+                                "name": "St. Paul", 
+                                "value": "st-paul"
+                            },
+                            {
+                                "name": "Rochester", 
+                                "value": "rochester"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mississippi",
+                        "value": "mississippi",
+                        "cities": [
+                            {
+                                "name": "Jackson", 
+                                "value": "jackson"
+                            },
+                            {
+                                "name": "Gulfport", 
+                                "value": "gulfport"
+                            },
+                            {
+                                "name": "Southaven", 
+                                "value": "southaven"
+                            },
+                            {
+                                "name": "Hattiesburg", 
+                                "value": "hattiesburg"
+                            },
+                            {
+                                "name": "Tupelo", 
+                                "value": "tupelo"
+                            },
+                            {
+                                "name": "Meridian", 
+                                "value": "meridian"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Missouri",
+                        "value": "missouri",
+                        "cities": [
+                            {
+                                "name": "Kansas City", 
+                                "value": "kansas-city"
+                            },
+                            {
+                                "name": "Blue Springs", 
+                                "value": "blue-springs"
+                            },
+                            {
+                                "name": "Florissant", 
+                                "value": "florissant"
+                            },
+                            {
+                                "name": "Joplin", 
+                                "value": "joplin"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Criminal Law",
+                "value": "criminal",
+                "states": [
+                    {
+                        "name": "Nebraska",
+                        "value": "nebraska",
+                        "cities": [
+                            {
+                                "name": "Omaha", 
+                                "value": "omaha"
+                            },
+                            {
+                                "name": "Bellevue", 
+                                "value": "bellevue"
+                            },
+                            {
+                                "name": "Kearney", 
+                                "value": "kearney"
+                            },
+                            {
+                                "name": "Fremont", 
+                                "value": "fremont"
+                            },
+                            {
+                                "name": "Hastings", 
+                                "value": "hastings"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nevada",
+                        "value": "nevada",
+                        "cities": [
+                            {
+                                "name": "Las Vegas", 
+                                "value": "las-vegas"
+                            },
+                            {
+                                "name": "Henderson", 
+                                "value": "henderson"
+                            },
+                            {
+                                "name": "Reno", 
+                                "value": "reno"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "New Jersey",
+                        "value": "new-jersey",
+                        "cities": [
+                            {
+                                "name": "Newark", 
+                                "value": "newark"
+                            },
+                            {
+                                "name": "Jersey City", 
+                                "value": "jersey-city"
+                            },
+                            {
+                                "name": "Paterson", 
+                                "value": "paterson"
+                            },
+                            {
+                                "name": "Elizabeth", 
+                                "value": "elizabeth"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "New Mexico",
+                        "value": "new-mexico",
+                        "cities": [
+                            {
+                                "name": "Albuquerque", 
+                                "value": "albuquerque"
+                            },
+                            {
+                                "name": "Las Cruces", 
+                                "value": "las-cruces"
+                            },
+                            {
+                                "name": "Rio Rancho", 
+                                "value": "rio-rancho"
+                            },
+                            {
+                                "name": "Farmington", 
+                                "value": "farmington"
+                            },
+                            {
+                                "name": "South Valley", 
+                                "value": "south-valley"
+                            },
+                            {
+                                "name": "Clovis", 
+                                "value": "clovis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Entertainment Law",
+                "value": "entertainment",
+                "states": [
+                    {
+                        "name": "New York",
+                        "value": "new-york",
+                        "cities": [
+                            {
+                                "name": "New York", 
+                                "value": "new-york"
+                            },
+                            {
+                                "name": "Hempstead", 
+                                "value": "hempstead"
+                            },
+                            {
+                                "name": "Oyster Bay", 
+                                "value": "oyster-bay"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "North Carolina",
+                        "value": "north-carolina",
+                        "cities": [
+                            {
+                                "name": "Belmont", 
+                                "value": "belmont"
+                            },
+                            {
+                                "name": "Brevard", 
+                                "value": "brevard"
+                            },
+                            {
+                                "name": "Kannapolis", 
+                                "value": "kannapolis"
+                            },
+                            {
+                                "name": "Laurinburg", 
+                                "value": "laurinburg"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "North Dakota",
+                        "value": "north-dakota",
+                        "cities": [
+                            {
+                                "name": "Fargo", 
+                                "value": "fargo"
+                            },
+                            {
+                                "name": "Bismarck", 
+                                "value": "bismarck"
+                            },
+                            {
+                                "name": "Minot", 
+                                "value": "minot"
+                            },
+                            {
+                                "name": "West Fargo", 
+                                "value": "west-fargo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Oklahoma",
+                        "value": "oklahoma",
+                        "cities": [
+                            {
+                                "name": "Oklahoma City", 
+                                "value": "oklahoma-city"
+                            },
+                            {
+                                "name": "Tulsa", 
+                                "value": "tulsa"
+                            },
+                            {
+                                "name": "Norman", 
+                                "value": "norman"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Environmental Law",
+                "value": "environmental",
+                "states": [
+                    {
+                        "name": "Oregon",
+                        "value": "oregon",
+                        "cities": [
+                            {
+                                "name": "Portland", 
+                                "value": "portland"
+                            },
+                            {
+                                "name": "Salem", 
+                                "value": "salem"
+                            },
+                            {
+                                "name": "Eugene", 
+                                "value": "eugene"
+                            },
+                            {
+                                "name": "Gresham", 
+                                "value": "gresham"
+                            },
+                            {
+                                "name": "Hillsboro", 
+                                "value": "hillsboro"
+                            },
+                            {
+                                "name": "Medford", 
+                                "value": "medford"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pennsylvania",
+                        "value": "pennsylvania",
+                        "cities": [
+                            {
+                                "name": "Philadelphia", 
+                                "value": "philadelphia"
+                            },
+                            {
+                                "name": "Pittsburgh", 
+                                "value": "pittsburgh"
+                            },
+                            {
+                                "name": "Allentown", 
+                                "value": "allentown"
+                            },
+                            {
+                                "name": "Upper Darby", 
+                                "value": "upper-darby"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Family Law",
+                "value": "family",
+                "states": [
+                    {
+                        "name": "Puerto Rico",
+                        "value": "puerto-rico",
+                        "cities": [
+                            {
+                                "name": "San Juan", 
+                                "value": "san-juan"
+                            },
+                            {
+                                "name": "Carolina", 
+                                "value": "carolina"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "South Carolina",
+                        "value": "south-carolina",
+                        "cities": [
+                            {
+                                "name": "Charleston", 
+                                "value": "charleston"
+                            },
+                            {
+                                "name": "North Charleston", 
+                                "value": "north-charleston"
+                            },
+                            {
+                                "name": "Greenville", 
+                                "value": "greenville"
+                            },
+                            {
+                                "name": "Summerville", 
+                                "value": "summerville"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "South Dakota",
+                        "value": "south-dakota",
+                        "cities": [
+                            {
+                                "name": "Rapid City", 
+                                "value": "rapid-city"
+                            },
+                            {
+                                "name": "Aberdeen", 
+                                "value": "aberdeen"
+                            },
+                            {
+                                "name": "Brookings", 
+                                "value": "brookings"
+                            },
+                            {
+                                "name": "Watertown", 
+                                "value": "watertown"
+                            },
+                            {
+                                "name": "Mitchell", 
+                                "value": "mitchell"
+                            },
+                            {
+                                "name": "Yankton", 
+                                "value": "yankton"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Texas",
+                        "value": "texas",
+                        "cities": [
+                            {
+                                "name": "Houston", 
+                                "value": "houston"
+                            },
+                            {
+                                "name": "San Antonio", 
+                                "value": "san-antonio"
+                            },
+                            {
+                                "name": "Dallas", 
+                                "value": "dallas"
+                            },
+                            {
+                                "name": "Austin", 
+                                "value": "austin"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Virginia",
+                        "value": "virginia",
+                        "cities": [
+                            {
+                                "name": "Virginia Beach", 
+                                "value": "virginia-beach"
+                            },
+                            {
+                                "name": "Norfolk", 
+                                "value": "norfolk"
+                            },
+                            {
+                                "name": "Arlington", 
+                                "value": "arlington"
+                            },
+                            {
+                                "name": "Richmond", 
+                                "value": "richmond"
+                            },
+                            {
+                                "name": "Hampton", 
+                                "value": "hampton"
+                            },
+                            {
+                                "name": "Suffolk", 
+                                "value": "suffolk"
+                            },
+                            {
+                                "name": "Dale City", 
+                                "value": "dale-city"
+                            },
+                            {
+                                "name": "Reston", 
+                                "value": "reston"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

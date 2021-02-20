@@ -27,6 +27,9 @@
         z-index: variables.$navigation_z_index;
 
         background-color: colors.$navigation_background_color_small;
+
+        // set overflow for mobile menu to see all content
+        overflow: auto;
     }
 
     // set navigation for hamburger menu for smallest screens

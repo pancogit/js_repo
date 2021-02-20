@@ -839,6 +839,7 @@ a {
   left: 0;
   right: 30%;
   background-color: #66a91d;
+  overflow: auto;
 }
 .mobile-menu__close {
   display: block;

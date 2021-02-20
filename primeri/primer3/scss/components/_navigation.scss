@@ -21,6 +21,9 @@
         z-index: variables.$navigation_z_index;
 
         background-color: colors.$navigation_mobile_background_color;
+
+        // set overflow for mobile menu to in case where content is too large
+        overflow: auto;
     }
 
     &__item {
