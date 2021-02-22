@@ -117,6 +117,22 @@
             "category": "News"
         }
     ],
+    "adLinks": [
+        {
+            "link": "index.html",
+            "image": {
+                "path": "../images/promoting-success.jpg",
+                "info": "promoting success ad picture"
+            }
+        },
+        {
+            "link": "index.html",
+            "image": {
+                "path": "../images/property-law-fouth-edition.jpg",
+                "info": "property law ad picture"
+            }
+        }
+    ],
     "articles": [
         {
             "heading": "Useful Articles",

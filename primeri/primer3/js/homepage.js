@@ -3,18 +3,20 @@
 // import classes from javascript modules
 import { FetchData } from './fetch-data.js';
 import { LoadData } from './load-data.js';
-
+import { News } from './news.js';
 
 // javascript for homepage
-(function home() {
+var fetch = new FetchData();
 
-    var fetch = new FetchData();
+// after data is fetched from server, load all data on page
+fetch.fetchDataFromServer().then(loadData);
 
-    fetch.fetchDataFromServer().then(loadData);
+function loadData(value) {
+    var data = fetch.data;
 
-    function loadData(value) {
-        var loading = new LoadData(fetch.data);
-        loading.loadDataOnPage();
-    }
+    var loading = new LoadData(data);
+    loading.loadDataOnPage();
 
-}());
+    var news = new News(data);
+    news.loadNews();
+}
