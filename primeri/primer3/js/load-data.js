@@ -3,22 +3,25 @@
 
 export class LoadData {
 
-    constructor(serverData) {
+    constructor(serverData, newsObject, lawyerObject) {
         this.data = serverData;
         this.cardImageSize = 70;
         this.cardsClass = 'home__cards';
         this.cards = document.getElementsByClassName(this.cardsClass).item(0);
-        this.newsClass = 'home__news';
-        this.news = document.getElementsByClassName(this.newsClass).item(0);
+        this.newsObject = newsObject;
+        this.news = this.newsObject.newsWrapper;
+        this.lawyerObject = lawyerObject;
         this.asideClass = 'home__aside';
         this.aside = document.getElementsByClassName(this.asideClass).item(0);
     }
 
-    // load server data on page
+    // load server data on page if data is loaded properly
     loadDataOnPage() {
-        this.loadBussinessListing();
-        this.loadNews();
-        this.loadAside();
+        if (this.data) {
+            this.loadBussinessListing();
+            this.loadNews();
+            this.loadAside();
+        }
     }
 
     // load busssiness listing cards on page
@@ -88,51 +91,13 @@ export class LoadData {
 
         // add just two news on page initially, but later they can be appended to page when view all button is clicked
         for (let i = 0; i < minNumberOfNews; i++) {
-            let news = this.createNewsHTML(this.data.latest_news[i]);
+            let news = this.newsObject.createNewsHTML(this.data.latest_news[i]);
             this.news.append(news);
         }
 
         // add view all button to page
         var viewAll = this.createViewAllHTML();
         this.news.append(viewAll);
-    }
-
-    // create HTML for news
-    createNewsHTML(element) {
-        var news = document.createElement('article');
-        var content = document.createElement('div');
-        var info = document.createElement('div');
-        var heading = document.createElement('h3');
-        var text = document.createElement('p');
-        var date = document.createElement('div');
-        var about = document.createElement('div');
-        var icon = document.createElement('i');
-        var category = document.createElement('span');
-
-        news.classList.add('news');
-        content.classList.add('news__content');
-        info.classList.add('news__info');
-        heading.classList.add('news__heading');
-        heading.textContent = element.heading;
-        text.classList.add('news__text');
-        text.textContent = element.text;
-        date.classList.add('news__date');
-        date.textContent = element.date;
-        about.classList.add('news__about');
-        icon.classList.add('fas', 'fa-broadcast-tower', 'news__icon');
-        category.classList.add('news__category');
-        category.textContent = element.category;
-
-        news.append(content);
-        news.append(info);
-        content.append(heading);
-        content.append(text);
-        info.append(date);
-        info.append(about);
-        about.append(icon);
-        about.append(category);
-
-        return news;
     }
 
     // create view all button
@@ -159,7 +124,7 @@ export class LoadData {
         var propertyLawAd = this.createAdHTML(this.data.adLinks[1]);
 
         // create lawyer box
-        var lawyerBox = this.createLawyerHTML(this.data.lawyers);
+        var lawyerBox = this.lawyerObject.createLawyerHTML(this.data.lawyers);
 
         // add aside elements to the page
         this.aside.append(lawyerBox);
@@ -229,84 +194,5 @@ export class LoadData {
         link.append(image);
 
         return ad;
-    }
-
-    // create lawyer box
-    createLawyerHTML(element) {
-        var lawyer = document.createElement('div');
-        var heading = document.createElement('div');
-        var content = document.createElement('form');
-        var category = document.createElement('select');
-        var state = document.createElement('select');
-        var city = document.createElement('select');
-        var button = document.createElement('button');
-        var pointer = document.createElement('i');
-        var search = document.createElement('span');
-
-        lawyer.classList.add('lawyer', 'home__lawyer');
-        heading.classList.add('lawyer__heading');
-        heading.textContent = 'Find a Lawyer';
-        content.classList.add('lawyer__content');
-        content.method = 'get';
-        category.classList.add('lawyer__select');
-        category.name = 'category';
-        state.classList.add('lawyer__select');
-        state.name = 'state';
-        city.classList.add('lawyer__select');
-        city.name = 'city';
-        button.classList.add('lawyer__submit');
-        pointer.classList.add('fas', 'fa-hand-pointer', 'lawyer__pointer');
-        search.classList.add('lawyer__search');
-        search.textContent = 'Search';
-
-        // add first select option for categories
-        var optionClass = 'lawyer__option';
-        var categoryOptionFirst = this.createFirstOptionHTML(optionClass, 'Select Category');
-
-        category.append(categoryOptionFirst);
-
-        var categoriesObject = element.categories;
-
-        // add categories from server
-        categoriesObject.forEach(function iterate(value) {
-            let option = document.createElement('option');
-
-            option.classList.add(optionClass);
-            option.textContent = value.name;
-            option.value = value.value;
-
-            category.append(option);
-        });
-
-        // add first options for state and city
-        var stateOptionFirst = this.createFirstOptionHTML(optionClass, 'Select State');
-        var cityOptionFirst = this.createFirstOptionHTML(optionClass, 'Select City');
-
-        state.append(stateOptionFirst);
-        city.append(cityOptionFirst);
-        
-        lawyer.append(heading);
-        lawyer.append(content);
-        content.append(category);
-        content.append(state);
-        content.append(city);
-        content.append(button);
-        button.append(pointer);
-        button.append(search);
-
-        return lawyer;
-    }
-
-    // create first option for select list
-    createFirstOptionHTML(optionClass, optionText) {
-        var optionFirst = document.createElement('option');
-
-        optionFirst.classList.add(optionClass);
-        optionFirst.value = 'select';
-        optionFirst.selected = 'selected';
-        optionFirst.disabled = 'disabled';
-        optionFirst.textContent = optionText;
-
-        return optionFirst;
     }
 }
