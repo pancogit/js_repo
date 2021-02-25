@@ -5,6 +5,7 @@ import { FetchData } from './fetch-data.js';
 import { LoadData } from './load-data.js';
 import { News } from './news.js';
 import { Laywer } from './lawyer.js';
+import { Navigation } from './navigation.js';
 
 // javascript for homepage
 var fetch = new FetchData();
@@ -18,8 +19,10 @@ function loadData(value) {
     var news = new News(data.latest_news);
     var lawyer = new Laywer(data.lawyers);
     var loading = new LoadData(data, news, lawyer);
+    var navigation = new Navigation();
 
     loading.loadDataOnPage();
     news.loadNews();
     lawyer.updateLawyerInfo();
+    navigation.mobileNavigation();
 }

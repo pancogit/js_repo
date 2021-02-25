@@ -138,16 +138,21 @@ a {
 /* navigation */
 @media only screen and (max-width: 49rem) {
   .navigation {
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -63rem;
+    right: 63rem;
     z-index: 1000;
     background-color: white;
     overflow: auto;
+    transition-property: left, right;
+    transition-duration: 0.7s;
   }
+}
+.navigation__move-in {
+  left: 0;
+  right: 0;
 }
 .navigation__item {
   display: flex;
@@ -219,9 +224,6 @@ a {
 }
 
 /* dropdown */
-.dropdown:hover .dropdown__list {
-  display: block;
-}
 .dropdown__link {
   display: block;
   padding: 1rem 0.7rem;

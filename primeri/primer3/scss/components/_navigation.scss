@@ -7,15 +7,14 @@
 .navigation {
 
     @include mixins.media_screen_breakpoint($breakpoint: variables.$hamburger_breakpoint) {
-        // hide navigation when hamburger menu is shown
-        display: none;
-
         // use fixed positioning for hamburger menu navigation and spread box to full screen width and height
         position: fixed;
         top: 0;
         bottom: 0;
-        left: 0;
-        right: 0;
+
+        // by default, move mobile navigation out of view with pair of positive/negative positions
+        left: - variables.$navigation_right;
+        right: variables.$navigation_right;
 
         // set z-index for positioned box stacking
         z-index: variables.$navigation_z_index;
@@ -24,6 +23,16 @@
 
         // set overflow for mobile menu to in case where content is too large
         overflow: auto;
+
+        // set transition for mobile navigation for left and right positioning
+        transition-property: left, right;
+        transition-duration: variables.$navigation_transition_duration;
+    }
+
+    // move in mobile navigation with positioning
+    &__move-in {
+        left: 0;
+        right: 0;
     }
 
     &__item {
