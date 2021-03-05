@@ -1,0 +1,59 @@
+/* arrows */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.arrows {
+
+    // set flexbox
+    @include mixins.set_flexbox_container($display: inline-flex);
+
+    // change default link for gray modifier
+    &--gray {
+        .arrows__link {
+            background-color: colors.$arrows_link_gray_background_color;
+            color: colors.$arrows_link_gray_color;
+
+            &--active {
+                background-color: colors.$arrows_link_active_background_color;
+                color: colors.$arrows_link_active_color;
+            }
+        }
+    }
+
+    &__link {
+        // center icon vertically with flexbox
+        @include mixins.set_flexbox_container($display: flex, $justify_content: center, $align_items: center);
+
+        width: variables.$arrows_link_width;
+        height: variables.$arrows_link_height;
+        background-color: colors.$arrows_link_background_color;
+        color: colors.$arrows_link_color;
+
+        // disable pointer cursor for inactive link
+        cursor: auto;
+
+        &--active {
+            background-color: colors.$arrows_link_active_background_color;
+            color: colors.$arrows_link_active_color;
+
+            // enable pointer cursor for active link
+            cursor: pointer;
+
+            &:hover {
+                background-color: colors.$arrows_link_active_hover_background_color;
+            }
+        }
+
+        // set smaller links for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            width: variables.$arrows_link_width_small;
+            height: variables.$arrows_link_height_small;
+        }
+    }
+
+    &__icon {
+        font-size: variables.$arrows_icon_font_size;
+    }
+}

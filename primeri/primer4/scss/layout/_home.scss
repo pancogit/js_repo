@@ -1,1 +1,75 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+
+    &__ads {
+
+    }
+
+    &__categories {
+
+    }
+
+    &__click {
+
+    }
+
+    &__click-text {
+
+    }
+
+    &__courses {
+
+    }
+
+    &__courses-content {
+
+    }
+
+    &__dish {
+
+    }
+
+    &__dishes {
+
+    }
+
+    &__heading {
+
+        &--orange {
+
+        }
+    }
+
+    &__last-recipes {
+
+    }
+    
+    &__navigation {
+
+    }
+
+    &__recipes {
+
+    }
+
+    &__right {
+
+    }
+
+    &__subheading {
+
+    }
+
+    &__top-recipes {
+
+    }
+
+    &__track {
+        
+    }
+}

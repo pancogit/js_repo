@@ -1,1 +1,52 @@
 /* footer */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.footer {
+
+    &__arrow {
+
+    }
+
+    &__content {
+        background-color: colors.$footer_content_background_color;
+    }
+
+    &__copyright {
+
+    }
+
+    &__heading {
+
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+
+    }
+
+    &__list {
+
+    }
+
+    &__lists {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__newsletter {
+
+    }
+
+    &__text {
+        
+    }
+}

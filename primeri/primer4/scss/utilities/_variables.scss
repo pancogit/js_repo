@@ -3,6 +3,7 @@
 
 // reset 
 $body_font_family: 'Times New Roman', Times, serif;
+$body_background_image_path: url("../images/home-texture.jpg");
 
 // media screen
 $media_screen_small: 20rem;
@@ -10,11 +11,67 @@ $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// page
+$page_min_width: 20rem;
+$page_content_padding: 1rem;
+$page_content_max_width: 80rem;
+
+// search
+$search_margin_top: 2rem;
+$search_margin_right: 3rem;
+$search_button_padding: 0 0.7rem;
+$search_icon_font_size: 0.7rem;
+$search_recipe_padding: 0.6rem 0.9rem;
+$search_recipe_placeholder_font_size: 0.75rem;
+
+// arrows
+$arrows_link_width: 3.8rem;
+$arrows_link_height: 2.6rem;
+$arrows_link_width_small: 3rem;
+$arrows_link_height_small: 2.13rem;
+$arrows_icon_font_size: 0.7rem;
+
+// navigation
+
+// dropdown
+
+// last-recipes
+
+// categories
+
+// recipes
+
+// ads
+
+// top
 
 // logo
 
-// header 
+// subscribe
+
+// header
+$header_arrows_margin_bottom: 1rem;
+$header_content_height: 30rem;
+$header_content_height_small: 22rem;
+$header_content_height_smallest: 17rem;
+$header_content_background_image_path: url("../images/header/burritos.jpg");
+$header_heading_font_size: 1rem;
+$header_heading_letter_spacing: 0.15rem;
+$header_headings_padding: 1.5rem;
+$header_headings_margin_left: -1rem;
+$header_headings_margin_right: -1rem;
+$header_headings_width: 12rem;
+$header_headings_breakpoint: 40rem;
+$header_headings_flex: 1;
+$header_search_margin_right: -1rem;
+$header_search_flex: 100%;
+$header_form_margin_bottom: 1rem;
+$header_subheading_font_size: 4rem;
+$header_subheading_letter_spacing: -0.3rem;
+$header_subheading_line_height: 3.1rem;
+$header_subheading_font_size_small: 2.6rem;
+$header_subheading_letter_spacing_small: -0.1rem;
+$header_subheading_breakpoint: 27rem;
 
 // footer
 

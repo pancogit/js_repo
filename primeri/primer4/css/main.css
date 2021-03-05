@@ -2,16 +2,212 @@
 body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  background-image: url("../images/home-texture.jpg");
+  background-repeat: repeat;
 }
 
 a {
   text-decoration: none;
 }
 
-/* button */
+/* page */
+.page {
+  min-width: 20rem;
+}
+.page__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* search */
+.search {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+.search__button {
+  padding: 0 0.7rem;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+.search__icon {
+  font-size: 0.7rem;
+  color: #736d6d;
+}
+.search__recipe {
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  border: none;
+}
+.search__recipe::placeholder {
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #41403c;
+}
+
+/* arrows */
+.arrows {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+.arrows--gray .arrows__link {
+  background-color: #d6cfbd;
+  color: white;
+}
+.arrows--gray .arrows__link--active {
+  background-color: #ee9610;
+  color: white;
+}
+.arrows__link {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 3.8rem;
+  height: 2.6rem;
+  background-color: white;
+  color: #a2a0a0;
+  cursor: auto;
+}
+.arrows__link--active {
+  background-color: #ee9610;
+  color: white;
+  cursor: pointer;
+}
+.arrows__link--active:hover {
+  background-color: #f7a221;
+}
+@media only screen and (max-width: 40rem) {
+  .arrows__link {
+    width: 3rem;
+    height: 2.13rem;
+  }
+}
+.arrows__icon {
+  font-size: 0.7rem;
+}
+
+/* navigation */
+/* dropdown */
+/* last-recipes */
+/* categories */
+/* recipes */
+/* ads */
+/* top */
 /* logo */
+/* subscribe */
 /* header */
+.header {
+  background-color: #e1d7cb;
+}
+.header__arrows {
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 40rem) {
+  .header__arrows {
+    margin-bottom: 1rem;
+  }
+}
+.header__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 30rem;
+  background-image: url("../images/header/burritos.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 40rem) {
+  .header__content {
+    height: 22rem;
+  }
+}
+@media only screen and (max-width: 27rem) {
+  .header__content {
+    height: 17rem;
+  }
+}
+.header__heading {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+}
+.header__headings {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-left: -1rem;
+  width: 12rem;
+  background-color: rgba(193, 120, 9, 0.85);
+  color: white;
+}
+@media only screen and (max-width: 40rem) {
+  .header__headings {
+    flex: 1;
+    margin-right: -1rem;
+  }
+}
+.header__search {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: -1rem;
+}
+@media only screen and (max-width: 40rem) {
+  .header__search {
+    flex: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+@media only screen and (max-width: 40rem) {
+  .header__search {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 27rem) {
+  .header__search {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 40rem) {
+  .header__form {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 27rem) {
+  .header__form {
+    margin-right: 0;
+  }
+}
+.header__subheading {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: -0.3rem;
+  line-height: 3.1rem;
+}
+@media only screen and (max-width: 27rem) {
+  .header__subheading {
+    font-size: 2.6rem;
+    letter-spacing: -0.1rem;
+  }
+}
+
 /* footer */
+.footer__content {
+  background-color: #e2dcce;
+}
 /* home */
 /* utility helper classes */
 .show {

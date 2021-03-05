@@ -1,0 +1,39 @@
+/* search */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.search {
+
+    // set flexbox
+    @include mixins.set_flexbox_container();
+
+    margin-top: variables.$search_margin_top;
+    margin-right: variables.$search_margin_right;
+
+    &__button {
+        padding: variables.$search_button_padding;
+        outline: none;
+        border: none;
+        background-color: colors.$search_button_background_color;
+    }
+
+    &__icon {
+        font-size: variables.$search_icon_font_size;
+        color: colors.$search_icon_color;
+    }
+
+    &__recipe {
+        padding: variables.$search_recipe_padding;
+        outline: none;
+        border: none;
+
+        &::placeholder {
+            font-weight: bold;
+            font-size: variables.$search_recipe_placeholder_font_size;
+            text-transform: uppercase;
+            color: colors.$search_recipe_placeholder_color;
+        }
+    }
+}
