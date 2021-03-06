@@ -32,14 +32,46 @@ $arrows_link_height_small: 2.13rem;
 $arrows_icon_font_size: 0.7rem;
 
 // navigation
+$navigation_item_margin_bottom: 0.1rem;
+$navigation_link_font_size: 0.9rem;
 
 // dropdown
+$dropdown_icon_margin_right: 0.4rem;
+$dropdown_icon_font_size: 0.6rem;
+$dropdown_list_padding_left: 1rem;
 
 // last-recipes
+$last_recipes_arrows_margin: 0.8rem;
+$last_recipes_content_minimum_width: 12rem;
+$last_recipes_content_maximum_width: 1fr;
+$last_recipes_content_gap: 1rem;
+$last_recipes_heading_margin_top: 0.35rem;
+$last_recipes_image_width: 100%;
+$last_recipes_slides_margin_top: 1rem;
+$last_recipes_text_padding: 1rem;
+$last_recipes_track_flex: 1;
+$last_recipes_track_height: 0.3rem;
 
 // categories
+$categories_arrow_font_size: 0.55rem;
+$categories_item_margin_bottom: 0.5rem;
+$categories_name_margin_left: 0.6rem;
+$categories_name_margin_right: 0.35rem;
 
 // recipes
+$recipes_card_margin_bottom: 1.5rem;
+$recipes_card_border_width: 0.3rem;
+$recipes_heading_margin_bottom: 0.4rem;
+$recipes_heading_font_size: 1.3rem;
+$recipes_image_breakpoint: 27rem;
+$recipes_image_width: 100%;
+$recipes_ingredients_margin_bottom: 0.5rem;
+$recipes_ingredients_font_size: 0.9rem;
+$recipes_ingredients_line_height: 1.2rem;
+$recipes_more_font_size: 0.9rem;
+$recipes_picture_margin_right: 0.8rem;
+$recipes_picture_margin_bottom: 0.5rem;
+$recipes_text_line_height: 1.3rem;
 
 // ads
 
@@ -76,3 +108,41 @@ $header_subheading_breakpoint: 27rem;
 // footer
 
 // home
+$home_click_padding: 1rem;
+$home_click_text_font_size: 0.95rem;
+$home_click_text_margin_right: 0.5rem;
+$home_courses_flex: 1;
+$home_courses_negative_margin: -1rem;
+$home_courses_content_flex: 1 0 auto;
+$home_courses_content_padding: 3rem 3.5rem;
+$home_courses_content_padding_small: 2rem 1rem;
+$home_dish_line_height: 1.4rem;
+$home_heading_font_size: 2rem;
+$home_heading_font_size_small: 1.5rem;
+$home_navigation_padding_right: 1rem;
+$home_navigation_padding_top: 4rem;
+$home_navigation_width: 13rem;
+$home_navigation_width_small: 100%;
+$home_navigation_order_small: 1;
+$home_navigation_padding_top_small: 2rem;
+$home_navigation_padding_bottom_small: 2rem;
+$home_right_font_size: 0.55rem;
+$home_subheading_margin_bottom: 0.5rem;
+$home_subheading_font_size: 1.4rem;
+$home_subheading_font_size_small: 1.3rem;
+$home_track_height: 2.5rem;
+$home_last_recipes_padding_top: 3rem;
+$home_recipes_margin_top: 3rem;
+$home_recipes_margin_bottom: 2rem;
+$home_top_recipes_flex: 2.5;
+$home_top_recipes_margin: 0 3rem;
+$home_top_recipes_margin_medium: 2rem 0;
+$home_top_recipes_breakpoint: 58rem;
+$home_top_recipes_flex_full: 100%;
+$home_top_recipes_order: 1;
+$home_categories_flex: 1;
+$home_categories_margin_right: 3rem;
+$home_ads_flex: 1;
+$home_ads_breakpoint: 33rem;
+$home_ads_flex_full: 100%;
+$home_ads_order: 2;

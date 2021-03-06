@@ -1,16 +1,27 @@
 /* navigation */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .navigation {
 
     &__item {
-
+        margin-bottom: variables.$navigation_item_margin_bottom;
     }
 
     &__link {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: variables.$navigation_link_font_size;
+        color: colors.$navigation_link_color;
 
+        &:hover {
+            color: colors.$navigation_link_color_hover;
+        }
     }
 
     &__list {
-        
+        @include mixins.reset_list;
     }
 }

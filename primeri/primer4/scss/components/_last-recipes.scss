@@ -1,36 +1,67 @@
 /* last-recipes */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .last-recipes {
+
+    &__arrows {
+        margin-left: variables.$last_recipes_arrows_margin;
+        margin-right: variables.$last_recipes_arrows_margin;
+    }
 
     &__card {
 
         &--active {
+            // change color for active card, also don't change color when hovered
+            .last-recipes__date, .last-recipes__heading, .last-recipes__heading:hover {
+                color: colors.$last_recipes_card_active_color;
+            }
 
+            // disable cursor for active card
+            .last-recipes__link, .last-recipes__image-link {
+                cursor: auto;
+            }
         }
     }
 
     &__content {
-
+        // set css responsive grid layout for recipes
+        @include mixins.set_grid_container($grid_template_columns: 
+                                                repeat(auto-fit, minmax(variables.$last_recipes_content_minimum_width, 
+                                                                        variables.$last_recipes_content_maximum_width)),
+                                           $gap: variables.$last_recipes_content_gap);
     }
 
     &__date {
-
+        text-transform: uppercase;
+        color: colors.$last_recipes_date_color;
+        font-weight: bold;
+        
     }
 
     &__heading {
+        margin-top: variables.$last_recipes_heading_margin_top;
+        margin-bottom: 0;
+        color: colors.$last_recipes_heading_color;
 
+        &:hover {
+            color: colors.$last_recipes_heading_color_hover;
+        }
     }
 
     &__image {
-
+        // responsive image
+        width: variables.$last_recipes_image_width;
     }
 
     &__image-link {
-
+        display: block;
     }
 
     &__link {
-
+        display: inline-block;
     }
 
     &__picture {
@@ -38,14 +69,22 @@
     }
 
     &__slides {
+        // set flexbox
+        @include mixins.set_flexbox_container($align_items: center);
 
+        margin-top: variables.$last_recipes_slides_margin_top;
     }
 
     &__text {
-
+        padding-top: variables.$last_recipes_text_padding;
+        padding-bottom: variables.$last_recipes_text_padding;
     }
 
     &__track {
-        
+        // grow flex items to fill remaining space
+        @include mixins.set_flex_item($flex: variables.$last_recipes_track_flex);
+
+        height: variables.$last_recipes_track_height;
+        background-color: colors.$last_recipes_track_background_color;
     }
 }

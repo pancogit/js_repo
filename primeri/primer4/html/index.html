@@ -52,8 +52,8 @@
 
         <main class="home">
             <div class="page__content">
-                <div class="home__navigation">
-                    <nav class="navigation">
+                <div class="home__header">
+                    <nav class="navigation home__navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item">
                                 <a href="index.html" class="navigation__link">Home</a>
@@ -63,48 +63,78 @@
                             </li>
                             <li class="navigation__item dropdown">
                                 <a href="index.html" class="navigation__link">Top 10</a>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__item dropdown">
-                                        <a href="index.html" class="dropdown__link">New Recipes</a>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Baked Goods</a>
+                                <ul class="dropdown__list navigation__list">
+                                    <li class="dropdown__item navigation__item">
+                                        <a href="index.html" class="dropdown__link navigation__link">
+                                            <i class="fas fa-chevron-right dropdown__icon"></i>
+                                            <span class="dropdown__text">New Recipes</span>
+                                        </a>
+                                        <ul class="dropdown__list navigation__list">
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Baked Goods</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Breakfast</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <i class="fas fa-chevron-right dropdown__icon"></i>
+                                                    <span class="dropdown__text">Breakfast</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Cakes</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Cakes</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Calzone Recipes</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Calzone Recipes</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Casseroles</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Casseroles</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Chocolate</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Chocolate</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Crockpot</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Crockpot</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Desserts</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Desserts</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Ethnic</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Ethnic</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Fruits, grains/veggies</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Fruits, grains/veggies</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Gourmet Sandwiches</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Gourmet Sandwiches</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Holiday Foods</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Holiday Foods</span>
+                                                </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="index.html" class="dropdown__link">Italian</a>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Italian</span>
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>
@@ -121,7 +151,8 @@
 
                     <div class="home__courses">
                         <div class="home__courses-content">
-                            <h2 class="home__heading home__heading--orange">Big-Deal Dishes:</h2>
+                            <h2 class="home__heading home__heading--orange home__heading--margin-bottom">Big-Deal
+                                Dishes:</h2>
                             <h3 class="home__subheading">15 standout courses for any main dish menu</h3>
                             <div class="home__dishes">
                                 <a href="index.html" class="home__dish">Grilled Entrees,</a>
@@ -237,14 +268,15 @@
                                 <div class="last-recipes__text">
                                     <span class="last-recipes__date">july 17, 2012</span>
                                     <a href="index.html" class="last-recipes__link">
-                                        <h3 class="last-recipes__heading">Coconut Millet Bowl with Berbere Spiced Squash</h3>
+                                        <h3 class="last-recipes__heading">Coconut Millet Bowl with Berbere Spiced Squash
+                                        </h3>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="last-recipes__slides">
                             <div class="last-recipes__track"></div>
-                            <div class="arrows arrows--gray">
+                            <div class="arrows arrows--gray last-recipes__arrows">
                                 <a href="index.html" class="arrows__link">
                                     <i class="fas fa-chevron-left arrows__icon"></i>
                                 </a>
@@ -262,7 +294,7 @@
                         <h2 class="home__heading">Categories:</h2>
                         <ul class="categories">
                             <li class="categories__item">
-                                <a href="index.html" class="categories__link">
+                                <a href="index.html" class="categories__link categories__link--active">
                                     <i class="fas fa-chevron-right categories__arrow"></i>
                                     <span class="categories__name">Baked Goods</span>
                                     <span class="categories__count">(33)</span>
@@ -360,8 +392,8 @@
                         <div class="recipes__card recipes__card--active">
                             <div class="recipes__picture">
                                 <a href="index.html" class="recipes__image-link">
-                                    <img src="../images/baked-goods/pumpkin-bread.jpg" alt="pumpkin bread" width="220"
-                                        class="recipes__image" />
+                                    <img src="../images/baked-goods/pumpkin-bread.jpg" alt="pumpkin bread" width="250"
+                                        height="188" class="recipes__image" />
                                 </a>
                             </div>
                             <div class="recipes__content">
@@ -383,7 +415,7 @@
                             <div class="recipes__picture">
                                 <a href="index.html" class="recipes__image-link">
                                     <img src="../images/baked-goods/peanut-butter-cookie.jpg" alt="peanut butter cookie"
-                                        width="220" class="recipes__image" />
+                                        width="250" height="188" class="recipes__image" />
                                 </a>
                             </div>
                             <div class="recipes__content">
@@ -406,7 +438,9 @@
                                 </p>
                             </div>
                         </div>
-                        <a href="index.html" class="recipes__more">More Recipes</a>
+                        <div class="recipes__button">
+                            <a href="index.html" class="recipes__more">More Recipes</a>
+                        </div>
                     </div>
 
                     <div class="home__ads ads">
