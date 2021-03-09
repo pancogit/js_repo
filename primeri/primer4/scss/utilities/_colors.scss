@@ -25,6 +25,9 @@ $navigation_link_color_hover: #e98b08;
 $dropdown_link_color: #534c3c;
 $dropdown_link_color_hover: #24211a;
 
+// borders
+$borders_background_color: #d7d0be;
+
 // last-recipes
 $last_recipes_card_active_color: #8c867a;
 $last_recipes_date_color: #4a4333;
@@ -47,12 +50,20 @@ $recipes_more_color: #8c867a;
 $recipes_text_color: #5d5c57;
 
 // ads
+$ads_headings_color: #2b2923;
 
 // top
+$top_background_color: white;
+$top_icon_color: #837f74;
+$top_icon_color_hover: white;
 
 // logo
+$logo_link_color: #757064;
 
 // subscribe
+$subscribe_button_color: #655c49;
+$subscribe_email_background_color: #ece9e0;
+$subscribe_email_border_color: #c5c0b5;
 
 // header
 $header_background_color: #e1d7cb;
@@ -61,6 +72,10 @@ $header_headings_color: white;
 
 // footer
 $footer_content_background_color: #e2dcce;
+$footer_copyright_color: #675d5d;
+$footer_heading_color: #544b3c;
+$footer_link_color: #3f3828;
+$footer_link_color_active: #8c8678;
 
 // home
 $home_click_background_color: white;

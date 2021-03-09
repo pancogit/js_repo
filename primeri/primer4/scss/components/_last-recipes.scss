@@ -58,6 +58,9 @@
 
     &__image-link {
         display: block;
+
+        // for active cards, use relative positioning as container for borders
+        position: relative;
     }
 
     &__link {

@@ -40,6 +40,10 @@ $dropdown_icon_margin_right: 0.4rem;
 $dropdown_icon_font_size: 0.6rem;
 $dropdown_list_padding_left: 1rem;
 
+// borders
+$borders_size: 1.2rem;
+$borders_size_small: $borders_size / 2;
+
 // last-recipes
 $last_recipes_arrows_margin: 0.8rem;
 $last_recipes_content_minimum_width: 12rem;
@@ -69,17 +73,46 @@ $recipes_ingredients_margin_bottom: 0.5rem;
 $recipes_ingredients_font_size: 0.9rem;
 $recipes_ingredients_line_height: 1.2rem;
 $recipes_more_font_size: 0.9rem;
+$recipes_more_margin_top: -0.5rem;
+$recipes_more_margin_bottom: 1rem;
 $recipes_picture_margin_right: 0.8rem;
 $recipes_picture_margin_bottom: 0.5rem;
 $recipes_text_line_height: 1.3rem;
 
 // ads
+$ads_heading_font_size: 1.7rem;
+$ads_heading_line_height: 1.6rem;
+$ads_image_padding: 1.5rem;
+$ads_image_height: 9rem;
+$ads_image_margin_top: 1rem;
+$ads_image_path_fast_food: url("../images/aside/fast-food-2.jpg");
+$ads_image_path_sushi: url("../images/aside/sushi-tai-2.jpg");
+$ads_image_path_weight_loss: url("../images/aside/weight-loss-2.jpg");
+$ads_subheading_margin_top: -0.1rem;
+$ads_subheading_font_size: 1.4rem;
 
 // top
+$top_padding: 0.3rem 0.8rem;
+$top_padding_medium: 0.2rem 0.6rem;
+$top_right: 0.5rem;
+$top_bottom: 3rem;
+$top_border_radius: 50%;
+$top_transition_time: 0.35s;
+$top_icon_font_size: 3rem;
+$top_icon_font_size_medium: 2.5rem;
+$top_icon_font_size_small: 2rem;
 
 // logo
+$logo_link_font_size: 2rem;
+$logo_link_line_height: 1.55rem;
+$logo_link_letter_spacing: -0.2rem;
 
 // subscribe
+$subscribe_button_font_size: 0.8rem;
+$subscribe_email_margin_bottom: 0.7rem;
+$subscribe_email_padding: 0.5rem 0.8rem;
+$subscribe_email_border_width: 0.1rem;
+$subscribe_email_border_radius: 0.2rem;
 
 // header
 $header_arrows_margin_bottom: 1rem;
@@ -106,6 +139,31 @@ $header_subheading_letter_spacing_small: -0.1rem;
 $header_subheading_breakpoint: 27rem;
 
 // footer
+$footer_arrow_margin_right: 0.65rem;
+$footer_arrow_font_size: 0.55rem;
+$footer_content_padding: 2rem 2.7rem;
+$footer_content_padding_medium: 1rem;
+$footer_copyright_margin_top: 0.2rem;
+$footer_copyright_margin_left: 1rem;
+$footer_copyright_font_size: 0.75rem;
+$footer_heading_margin_bottom: 0.6rem;
+$footer_heading_font_size: 1.5rem;
+$footer_item_margin_bottom: 0.5rem;
+$footer_list_flex: 1;
+$footer_list_margin_left: 2rem;
+$footer_lists_flex: 2.5;
+$footer_lists_margin: 0 4rem;
+$footer_lists_flex_medium: 60%;
+$footer_lists_flex_small: 100%;
+$footer_lists_margin_right: 1rem;
+$footer_lists_margin_bottom: 2rem;
+$footer_lists_breakpoint_medium: 54rem;
+$footer_lists_breakpoint_small: 36rem;
+$footer_logo_flex: 1;
+$footer_logo_flex_medium: 100%;
+$footer_logo_margin_bottom: 2rem;
+$footer_newsletter_flex: 1;
+$footer_newsletter_flex_medium: 30%;
 
 // home
 $home_click_padding: 1rem;

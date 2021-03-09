@@ -1,8 +1,47 @@
 /* top */
 
-.top {
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
+.top {
+    display: inline-block;
+    padding: variables.$top_padding;
+    position: fixed;
+    right: variables.$top_right;
+    bottom: variables.$top_bottom;
+    border-radius: variables.$top_border_radius;
+    background-color: colors.$top_background_color;
+
+    // hide with opacity and use small transition
+    transition: opacity variables.$top_transition_time;
+    opacity: 0;
+
+    // two column layout
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_top_recipes_breakpoint) {
+        padding: variables.$top_padding_medium;
+    }
+
+    &:hover {
+        background-color: colors.$top_icon_color;
+
+        .top__icon {
+            color: colors.$top_icon_color_hover;
+        }
+    }
+    
     &__icon {
-        
+        font-size: variables.$top_icon_font_size;
+        color: colors.$top_icon_color;
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_top_recipes_breakpoint) {
+            font-size: variables.$top_icon_font_size_medium;
+        }
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_ads_breakpoint) {
+            font-size: variables.$top_icon_font_size_small;
+        }
     }
 }

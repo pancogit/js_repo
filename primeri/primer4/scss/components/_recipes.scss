@@ -47,6 +47,9 @@
 
     &__image-link {
         display: block;
+
+        // for active cards, use relative positioning as container for borders
+        position: relative;
     }
 
     &__ingredients {
@@ -65,6 +68,11 @@
         @include mixins.media_screen_breakpoint($breakpoint: variables.$recipes_image_breakpoint) {
             text-align: left;
         }
+
+        &--margin {
+            margin-top: variables.$recipes_more_margin_top;
+            margin-bottom: variables.$recipes_more_margin_bottom;
+        }
     }
 
     &__more {
@@ -77,6 +85,10 @@
 
         &:hover {
             text-decoration: none;
+        }
+
+        &--capitalize {
+            text-transform: capitalize;
         }
     }
 

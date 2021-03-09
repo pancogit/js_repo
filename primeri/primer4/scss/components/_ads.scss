@@ -1,35 +1,58 @@
 /* ads */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .ads {
 
     &__heading {
-
+        margin: 0;
+        font-size: variables.$ads_heading_font_size;
+        line-height: variables.$ads_heading_line_height;
     }
 
     &__headings {
-
+        text-transform: uppercase;
+        color: colors.$ads_headings_color;
     }
 
     &__image {
+        display: block;
+        padding: variables.$ads_image_padding;
+        height: variables.$ads_image_height;
+        background-size: cover;
+        background-position-x: right;
+        background-position-y: bottom;
+
+        // for active cards, use relative positioning as container for borders
+        position: relative;
+
+        // set top margin for all except first one
+        + .ads__image {
+            margin-top: variables.$ads_image_margin_top;
+        }
 
         &--active {
-
+            
         }
 
         &--fast-food {
-
+            background-image: variables.$ads_image_path_fast_food;
         }
 
         &--sushi {
-
+            background-image: variables.$ads_image_path_sushi;
         }
 
         &--weight-loss {
-
+            background-image: variables.$ads_image_path_weight_loss;
         }
     }
 
     &__subheading {
-        
+        margin-top: variables.$ads_subheading_margin_top;
+        margin-bottom: 0;
+        font-size: variables.$ads_subheading_font_size;
     }
 }
