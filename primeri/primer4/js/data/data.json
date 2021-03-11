@@ -1,0 +1,1802 @@
+{
+    "courses": {
+        "heading": "Big-Deal Dishes:",
+        "subheading": "15 standout courses for any main dish menu",
+        "dishes": [
+            {
+                "link": "index.html",
+                "name": "Grilled Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Burritos"
+            },
+            {
+                "link": "index.html",
+                "name": "Tacos"
+            },
+            {
+                "link": "index.html",
+                "name": "Salads"
+            },
+            {
+                "link": "index.html",
+                "name": "Grains"
+            },
+            {
+                "link": "index.html",
+                "name": "Legumes"
+            },
+            {
+                "link": "index.html",
+                "name": "Egg Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Diary Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Chicken Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Sausage"
+            },
+            {
+                "link": "index.html",
+                "name": "Lamb Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Pork Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Seafood Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Turkey Entrees"
+            },
+            {
+                "link": "index.html",
+                "name": "Beef"
+            }
+        ]
+    },
+    "ads": [
+        {
+            "link": "index.html",
+            "backgroundImagePath": "../images/aside/weight-loss-2.jpg",
+            "heading": "Weight Loss Ideas",
+            "subheading": null
+        },
+        {
+            "link": "index.html",
+            "backgroundImagePath": "../images/aside/fast-food-2.jpg",
+            "heading": "Fast Food",
+            "subheading": "Yes or No?"
+        },
+        {
+            "link": "index.html",
+            "backgroundImagePath": "../images/aside/sushi-tai-2.jpg",
+            "heading": "Taste of Asia",
+            "subheading": "Sushi, Thai ..."
+        }
+    ],
+    "recipes": {
+        "categories": [
+            {
+                "link": "index.html",
+                "name": "Baked Goods",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/peanut-butter-cookie.jpg",
+                            "text": "peanut butter cookie"
+                        },
+                        "heading": "Peanut Butter Cookie",
+                        "ingredients": "yield: 8 servings, natural peanut butter, ground flaxseed, brown sugar and cane sugar, coconut oil, vanilla extract, sea salt",
+                        "text": "First, make your flax egg. Combine the flax and water and set it aside for 5 minutes to thicken. Then, whisk together the wet ingredients and the dry ingredients in separate bowls. Fold the dry ingredients into the wet ingredients and stir until everything is well combined. The dough will be very thick! Next, it's time to chill. Pop the cookie dough in the fridge for 30 minutes, and preheat the oven to 350. When the dough is chilled, you can bake! Use a 2-tablespoon cookie scoop to portion out the dough and roll it into balls. Press the dough balls down gently with your hands before using a fork to give them the signature peanut butter cookie criss cross pattern. Bake the cookies on a parchment-lined baking sheet for 12 minutes. They will still be fragile at this point, so allow them to rest for 10 minutes on the baking sheet before transferring them to a wire rack to cool completely.",
+                        "rating": "18",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/perfect-oatmeal-cookies.jpg",
+                            "text": "perfect oatmeal cookies"
+                        },
+                        "heading": "Perfect Oatmeal Cookies",
+                        "ingredients": "yield: 5 servings, all-purpose flour and whole rolled oats, baking powder and baking soda, brown sugar, sea salt, cinnamon and vanilla extract, coconut oil or melted butter, 1 large egg + an extra egg yolk, raisins, walnuts",
+                        "text": "In separate bowls, whisk together the dry and wet ingredients. Pour the wet ingredients into the bowl with the dry ingredients and mix until just combined. Fold in the oats, raisins, and walnuts. The mixture will be thick! Let the dough rest for 20 minutes. Then, roll it into balls. Bake the balls at 350 degrees for 10-11 minutes, until nicely golden brown. When you take the cookies out of the oven, they should look slightly under-baked. Don't worry, though leave them on the hot baking sheets for 5 minutes out of the oven, and they'll be delectably soft and chewy. After 5 minutes, transfer the cookies to a wire rack to cool completely, and enjoy!",
+                        "rating": "22",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "12"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/lemon-cookies.jpg",
+                            "text": "lemon cookies"
+                        },
+                        "heading": "Lemon Cookies",
+                        "ingredients": "yield: 10 servings, all-purpose flour, cornmeal and poppyseeds, baking soda, sea salt, sugar, butter and olive oil, lemon juice and orange and lemon zest, an egg",
+                        "text": "In a medium bowl, whisk together the flour, cornmeal, poppy seeds, baking soda, and salt. In a stand mixer fitted with the paddle attachment, cream together the butter, sugar, and zests on medium speed until well combined. Add the oil, egg, and lemon juice. Continue mixing until pale and evenly combined, about 1 minute, scraping down the sides as needed. Add the dry ingredients to the creamed ingredients, mixing on low speed until just combined. The dough will be somewhat dense. Using a 1/4-cup sized cookie scoop, scoop the dough onto the prepared baking sheet (note: these cookies will spread, so leave some room in between each one), and sprinkle the tops with sugar. Bake for 12 to 13 minutes. The cookies will seem like they need a minute longer, but take them out anyways. Let cool on the pan for 1 minute before transferring to a cooling rack to cool completely.",
+                        "rating": "5",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "5"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/pistachio-oat-squares.jpg",
+                            "text": "pistachio oat squares"
+                        },
+                        "heading": "Pistachio Oat Squares",
+                        "ingredients": "yield: 4 servings, 1 cup raw shelled pistachios, 1 cup rolled oats, 1/2 teaspoon sea salt, 1/4 cup maple syrup, 2 tablespoons olive oil, 1/3 cup unsweetened coconut flakes, handful of chopped pistachios",
+                        "text": "In a food processor with the S blade attached, process the pistachios, oats, and salt for about 30 seconds, until a meal starts to form. Drizzle in the maple syrup and olive oil while the motor is still running and the meal begins to come together into a crumbly, almost-wet dough. Press the dough evenly into the pan and cover it with coconut flakes and remaining pistachios. Bake for 10 to 12 minutes until the coconut is nice and golden brown and the dough is cooked through. You want the squares to still be a little soft - don't overbake these. Carefully lift the cooled dough out of the pan by holding two sides of the parchment paper. Cut it into squares. Drizzle a little maple syrup over the top for extra sweetness, if you like. Store the squares in a sealed container for up to a week.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/lemon-shortbread-cookies.jpg",
+                            "text": "lemon shortbread cookies"
+                        },
+                        "heading": "Lemon Shortbread Cookies",
+                        "ingredients": "yield: 2 servings, all-purpose flour, butter, sugar, lemon juice and zest, fresh thyme, sea salt",
+                        "text": "First, make the dough. Cream the butter in the bowl of an electric mixer. Add the sugar and beat until fluffy, followed by the lemon juice, zest, and thyme. Mix again. Then, add the flour and salt and mix until just combined. Turn the dough out onto a floured surface and flatten it into a 1 inch disk. If it's sticky, wrap it up and chill it for 15 to 30 minutes, or until it's firm, but still pliable. Next, roll out the dough and cut out the cookies. My favorite part! Aim for the dough to be about 1/4 inch thick. Then, use cookie cutters to cut out any shapes you like. Like in my sugar cookie recipe, I recommend starting at the edges of the dough and working inwards, puzzling together the cutters to cut out as many cookies as you can. Transfer the cut-outs to parchment-lined baking sheets, and re-roll the scraps to make more cookies. Then, bake! Transfer the cookies to a 350 degrees preheated oven, and bake until the edges are starting to turn light brown. Transfer them to a wire cooling rack to cool completely.",
+                        "rating": "21",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "15"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/healthy-banana-bread.jpg",
+                            "text": "healthy banana bread"
+                        },
+                        "heading": "Healthy Banana Bread",
+                        "ingredients": "yield: 1 serving, 2 very ripe bananas, 1/2 cup coconut sugar, 3/4 cup almond milk, 1/3 cup extra-virgin olive oil, 1 teaspoon vanilla extract, 1 teaspoon apple cider vinegar, 1 1/2 cups whole wheat pastry flour, 1/2 cup almond flour, 2 teaspoons baking powder, 1/4 teaspoon baking soda, 1/2 teaspoon sea salt, 1/2 teaspoon cinnamon, 1/4 teaspoon nutmeg, 1/2 cup chopped walnuts, 1 1/2 tablespoon rolled oats",
+                        "text": "In a large bowl, combine the mashed bananas with the sugar, almond milk, olive oil, vanilla, and apple cider vinegar and whisk until combined. In a medium bowl combine the flours, baking powder, baking soda, salt, cinnamon, and nutmeg. Add the dry ingredients to the bowl with the wet ingredients and stir until just combined, then fold in the walnuts. Pour into the prepared pan and sprinkle with the chopped walnuts and oats. Bake for 42 to 50 minutes, or until a toothpick inserted in the middle comes out clean.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/baked-goods/pumpkin-bread.jpg",
+                            "text": "pumpkin bread"
+                        },
+                        "heading": "Pumpkin Bread",
+                        "ingredients": "yield: 3 servings, whole wheat pastry flour, cinnamon, nutmeg, and allspice, extra-virgin olive oil, almond milk, pumpkin puree",
+                        "text": "First, whisk together the wet and dry ingredients in separate bowls. Don't skip this step by mixing everything together at once! It's essential to avoid over-mixing the batter, which makes any quick bread gummy and dense. Then, add the wet ingredients to the dry ingredients and mix until just combined. Pour the batter into a prepared loaf pan and bake at 350 degrees for 45-50 minutes, until the top springs back to the touch or a toothpick inserted into the center comes out clean. Allow the loaf to cool completely before slicing and serving. Then, enjoy!",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "27"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Breakfast",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/baked-oatmeal.jpg",
+                            "text": "baked oatmeal"
+                        },
+                        "heading": "Baked Oatmeal",
+                        "ingredients": "yield: 4 servings, almonds, hemp seeds, and coconut flakes, coconut oil, strawberry and banana layer, blueberries",
+                        "text": "In a small bowl, combine the flaxseed and warm water and set aside to thicken for about 5 minutes. Reserve 2 tablespoons of the almonds, hemp seeds and coconut flakes and set aside. In a large bowl combine the oats, the remaining almonds, hemp seeds and coconut flakes, and the baking powder, cinnamon, brown sugar and salt. In a medium bowl, combine the almond milk, maple syrup and coconut oil and whisk to combine. Stir in the flaxseed mixture and blend until smooth. Pour the wet ingredients into the bowl of dry ingredients and stir to combine. Layer the bananas and strawberries in the baking dish and spread the oat mixture on top. Sprinkle with the blueberries and the reserved almonds, hemp seeds and coconut flakes. Bake for 40-50 minutes or until the top is crisp and the middle is set. I find it easiest to wedge a knife in and make sure the middle has thickened nicely. Remove and let cool for 15 minutes before serving.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "19"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/breakfast-panzanella.jpg",
+                            "text": "breakfast panzanella"
+                        },
+                        "heading": "Breakfast Panzanella",
+                        "ingredients": "yield: 5 servings, leftover Panzanella about 1 cup per person, 1 to 2 fried eggs per person, sliced fresh basil",
+                        "text": "First, take the leftover panzanella out of the fridge. Transfer about 1 cup to each plate and let it come to room temp while you make the eggs and pour your coffee. Fry the eggs and top them onto the plates with the panzanella. Add freshly sliced basil and pinches of salt and pepper. Enjoy!",
+                        "rating": "20",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "25"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/butternut-squash-breakfast-hash.jpg",
+                            "text": "butternut squash breakfast hash"
+                        },
+                        "heading": "Butternut Squash Breakfast Hash",
+                        "ingredients": "yield: 3 servings, 2 cups cubed butternut squash, 1 tablespoon extra-virgin olive oil, 1/3 cup chopped scallions, 1 small zucchini, 1 1/2 cups chopped broccolini, 2 tablespoons minced fresh rosemary, 1 teaspoon balsamic or sherry vinegar, 1 garlic clove, 3 kale leaves, 3 to 4 fried eggs, sea salt and freshly ground black pepper",
+                        "text": "Toss the butternut squash with a drizzle of olive oil and a few pinches of salt and pepper. Roast until golden brown, 25 to 30 minutes. Heat the olive oil in a large skillet over medium heat. Add the scallions, zucchini, broccolini, rosemary, and a few pinches of salt and pepper. Cook for 5 to 8 minutes, or until lightly golden brown. Add the vinegar or lemon juice, garlic, roasted butternut squash, kale, another pinch of salt and pepper, and a pinch of smoked paprika, if using. Saute until everything is golden brown, about 5 minutes more, stirring occasionally. Season to taste. Garnish with sliced radishes, if using, and top with the fried eggs.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "17"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/strawberry-banana-smoothie.jpg",
+                            "text": "strawberry banana smoothie"
+                        },
+                        "heading": "Strawberry Banana Smoothie",
+                        "ingredients": "yield: 1 serving, 1 1/2 cup raspberries, 1 cup strawberries, 1/2 frozen banana, 1 cup almond milk, 1 tablespoon honey, 1 1/2 cups ice, handful of mint",
+                        "text": "Combine the raspberries, strawberries, banana, almond milk, honey or maple, basil, if using, and ice in a blender. Blend until smooth. Taste. If it's too tart for you, add another 1/2 cup or so of almond milk and another tablespoon of honey or maple.",
+                        "rating": "21",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "10"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/creamy-avocado-smoothie.jpg",
+                            "text": "creamy avocado smoothie"
+                        },
+                        "heading": "Creamy Avocado Smoothie",
+                        "ingredients": "yield: 2 servings, avocado, frozen banana, frozen pineapple, spinach, lime juice and zest, maple syrup, coconut milk, protein powder",
+                        "text": "Combine the pineapple, spinach, avocado, banana, coconut milk, lime juice, maple syrup, salt, ice, and protein powder, if using, in a blender. Blend until creamy. Taste and adjust the sweetness to your liking. If you prefer a sweeter smoothie, add more maple syrup. If the consistency is too thick, add more coconut milk, and blend again.",
+                        "rating": "18",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "3"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/easiest-chia-pudding.jpg",
+                            "text": "easiest chia pudding"
+                        },
+                        "heading": "Easiest Chia Pudding",
+                        "ingredients": "yield: 1 serving, 1/4 cup chia seeds, 1 1/2 cups cashew milk, 1 tablespoon maple syrup, 1/4 teaspoon cinnamon, pinch of sea salt, 1/2 tablespoon Meyer lemon juice, lemon zest, seasonal fruit",
+                        "text": "In a large jar or bowl, stir together the chia seeds, milk, maple syrup, cinnamon, salt, lemon juice, and lemon zest, if using. Chill covered for 30 minutes, then stir again, incorporating the chia seeds that have sunk to the bottom. Chill for about 6 hours, or overnight, until the chia pudding is thick. If it gets too thick, stir in a little more milk to reach your desired consistency. To serve, scoop chia pudding into bowls and top with fruit, nuts, and maple syrup, as desired.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "27"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/tamago-kake-gohan.jpg",
+                            "text": "tamago kake gohan"
+                        },
+                        "heading": "Tamago Kake Gohan",
+                        "ingredients": "yield: 3 servings, extra-virgin olive oil, 2 to 3 cups very hot cooked brown rice, 2 eggs, splashes of tamari, 1 scallions, sesame seeds",
+                        "text": "Scoop the cooked brown rice among two bowls. While the rice is piping hot, add 1 egg per bowl along with splashes of tamari, and stir vigorously so that the egg gently cooks as it coats the rice, making the rice a creamy consistency. Top each bowl with scallions, sesame seeds, and desired additional toppings. Serve with tamari on the side, for seasoning.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/blueberry-muffins.jpg",
+                            "text": "blueberry muffins"
+                        },
+                        "heading": "Blueberry Muffins",
+                        "ingredients": "yield: 5 servings, whole wheat pastry flour and almond flour, extra-virgin olive oil, cane sugar, vanilla and cinnamon, blueberries",
+                        "text": "In a medium bowl, combine the flours, baking powder, cinnamon, and salt. In a large bowl, vigorously whisk together the almond milk, olive oil, eggs, sugar, vanilla, and lemon oil, if using. Dust the blueberries with 1/2 teaspoon flour and toss to lightly coat them. This will prevent them from sinking to the bottom of the muffin cups. Pour the dry ingredients into the bowl of wet ingredients and stir to combine. Gently fold in the blueberries. Use a 1/3-cup measuring cup to scoop the batter into the muffin cups. Bake for 17 minutes or until the muffin tops spring back to the touch.",
+                        "rating": "19",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/gluten-free-pancakes.jpg",
+                            "text": "gluten free pancakes"
+                        },
+                        "heading": "Gluten Free Pancakes",
+                        "ingredients": "yield: 2 servings, tapioca starch, baking powder, almond milk, maple syrup, eggs, vanilla extract",
+                        "text": "In a medium bowl, whisk together the flours, tapioca starch, baking powder, and salt. Whisk in the milk, maple syrup, egg yolks, and vanilla. Let the batter sit for 5 minutes. Meanwhile, in a clean bowl, whip the egg whites to soft peaks. Fold them into the batter, being careful not to deflate it too much. Heat a non-stick skillet over medium-low heat. Add a dab of butter or a drizzle of olive oil to the pan and pour in 1/3 cup of the batter. Cook until a few bubbles appear on the surface, about 1 1/2 to 2 minutes, then flip the pancakes over and continue cooking for another 1 1/2 to 2 minutes or until set. Watch the pancakes closely to make sure they don't burn, adjusting the heat and the cooking time as needed. Repeat with the remaining batter, adding a dab of butter or more oil each time. Serve the pancakes with maple syrup, fruit, and/or yogurt for serving.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "september",
+                            "day": "13"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/avocado-tomatillo-breakfast-tacos.jpg",
+                            "text": "avocado tomatillo breakfast tacos"
+                        },
+                        "heading": "Avocado Tomatillo Breakfast Tacos",
+                        "ingredients": "yield: 5 servings, 5 cups fresh spinach, 3 large eggs, extra-virgin olive oil, sea salt, black pepper, 4 to tortillas, 1/2 avocado, roasted tomatillo salsa, microgreens, sliced serrano peppers, lime wedges",
+                        "text": "Brush a medium nonstick stick skillet lightly with olive oil and bring to medium heat. Add the spinach and pinches of salt and pepper and saute until the spinach is wilted. Work in batches, if necessary. Wipe out the skillet and scramble the eggs. Brush the skillet lightly with olive oil and bring to medium heat. Add the eggs, let them cook for a few seconds, and then stir and scramble the eggs until just set. Assemble the tacos with the eggs, spinach, avocado slices, and scoops of tomatillo salsa. Top with the microgreens and sliced serranos and serve with lime wedges, if desired.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "december",
+                            "day": "5"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/brussels-sprout-salad-avocado-toast.jpg",
+                            "text": "brussels sprout salad avocado toast"
+                        },
+                        "heading": "Brussels Sprout Salad Avocado Toast",
+                        "ingredients": "yield: 2 servings, 1/2 tablespoon extra-virgin olive oil, 1 tablespoon lemon juice, 1 tablespoon orange juice, 1/2 teaspoon Dijon mustard, 1/2 garlic clove, 2 heaping cups shredded Brussels sprouts, 1/4 cup chopped scallions, 2 tablespoons dried cranberries, 2 tablespoons toasted pine nuts, 4 slices of bread, 1 ripe avocado, sea salt and ground black pepper",
+                        "text": "In a medium bowl, whisk together the olive oil, lemon juice, orange juice, Dijon mustard, garlic and a few pinches of salt and pepper. Add the shredded Brussels sprouts and scallions and toss to coat. Let sit for 10 minutes, then add the cranberries and pine nuts and toss to incorporate. Season to taste. Slice the avocado in half and remove the pit. With the avocado still in its shell, use a paring knife to slice each half into cubes. Squeeze some lemon juice and a pinch of salt on both halves. Use a spoon to scoop the avocado out of the shells and onto the toasts, then smash down with the back of a fork. Top toasts with the Brussels sprout salad and serve.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "may",
+                            "day": "15"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/breakfast/almost-raw-carrot-cake-bliss-balls.jpg",
+                            "text": "almost raw carrot cake bliss balls"
+                        },
+                        "heading": "Almost-Raw Carrot Cake Bliss Balls",
+                        "ingredients": "yield: 4 servings, 1 cup raw hulled sunflower seeds, 1 cup unsweetened shredded coconut, 1/2 teaspoon cinnamon, 1/2 teaspoon sea salt, 12 soft Medjool dates, 2/3 cup chopped carrots, 2 teaspoons maple syrup",
+                        "text": "In a food processor, combine the sunflower seeds, 1 cup shredded coconut, cinnamon and salt and pulse until it becomes a fine meal. Add the dates and carrots and pulse until the mixture combines and sticks together. Taste and add more maple syrup if you would like your bites sweeter. If the mixture is too dry, add more maple syrup; if it's too moist, add more coconut and/or let the mix chill in the fridge for 20 minutes to firm up. Use a tablespoon to scoop the mixture, then use your hands to roll it into approximately 1-inch balls. Roll in the remaining coconut to coat the outside, if desired. Store in the fridge in an air-tight container for up to 5 days.",
+                        "rating": "16",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "25"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Cakes",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/millet-cakes-with-carrots-and-spinach.jpg",
+                            "text": "millet cakes with carrots and spinach"
+                        },
+                        "heading": "Millet Cakes with Carrots & Spinach",
+                        "ingredients": "yield: 2 servings, 1 cup millet, 2 cups water, salt and pepper, 3 teaspoons olive oil, 1 shallot, 6 cups baby spinach, 2 carrots, 2 garlic cloves, 2 teaspoons curry powder, 1/4 cup plain yogurt, 1 large egg, 2 tablespoons minced cilantro, any sauce",
+                        "text": "Combine the millet, water, and 1/2 teaspoon salt in medium saucepan and bring to a simmer over medium heat. Reduce heat to low, cover, and simmer until grains are tender and liquid is absorbed, 15 to 20 minutes. Turn off the heat, let millet sit, covered, for 10 minutes; transfer to a large bowl. Heat 1 tablespoon oil in 12-inch nonstick skillet over medium heat until shimmering. Add the shallot and cook until softened, about 3 minutes. Stir in the spinach and carrots and cook until the spinach wilts, about 2 minutes. Stir in the garlic, curry powder, 1/2 teaspoon salt, and 1/4 teaspoon pepper and cook until fragrant, about 30 seconds. Transfer the mixture to the bowl with millet. Add the yogurt, egg, (or flax + almond milk) and cilantro into the millet mixture and fold until well combined. Use a 1/3 cup measuring cup to scoop the mixture, then form into a 1/2-inch-thick cake, and place on prepared sheet. Repeat. Refrigerate cakes until chilled and firm, about 30 minutes. Drizzle the cakes with olive oil and bake 25-30 minutes or until the edges are crispy and cakes are cooked through.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/sesame-ginger-chickpea-cakes.jpg",
+                            "text": "sesame ginger chickpea cakes"
+                        },
+                        "heading": "Sesame-Ginger Chickpea Cakes",
+                        "ingredients": "yield: 3 servings, 3 tablespoons extra-virgin olive oil, 1 shallot, 1 tablespoon soy sauce, 1 garlic clove, 1 cup cooked chickpeas, 2 scallions, 1/2 tablespoon grated fresh ginger, 1 teaspoon sesame oil, 2 eggs, 1/2 teaspoon dried coriander, 1/4 cup chopped cilantro, 1 cup panko breadcrumbs, sesame seeds, sea salt and fresh black pepper",
+                        "text": "Heat 1 tablespoon of the olive oil in a small pan. Add the shallots and cook for a few minutes on medium heat until translucent. Turn off the heat and add the soy sauce and garlic. Stir together in the hot pan for another minute. Set aside. n a medium bowl, combine the chickpeas, scallions, ginger, sesame oil, eggs, coriander, cilantro, and cooked shallots. Form into small or medium sized patties (6 medium, or 8 small). I find it easiest to try to pack them into a ball and then gently press down to flatten. They will fall apart easily, so just try to pat them together as best as you can. Place them in the fridge while you mix the sauce together, at least 15-30 minutes. Make the yogurt sauce: In a small bowl, stir together the yogurt, olive oil, agave, onion, garlic, lime juice, mustard seeds, cilantro, and a pinch of salt. Taste and adjust seasonings. Chill until ready to serve. Spread the panko on a plate or flat surface and mix in a few pinches of salt, pepper, and sesame seeds. Roll each patty in the panko mix, covering liberally, and set each aside. Heat the remaining 2 tablespoons of olive oil in a large skillet (be sure the bottom of your skillet is completely coated with the oil so your cakes don't come out dry). When the oil is very hot, add the patties. Cook for 1-2 minutes on each side, or until golden brown. Serve with the yogurt sauce.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "24"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/apple-cake.jpg",
+                            "text": "apple cake"
+                        },
+                        "heading": "Apple Cake",
+                        "ingredients": "yield: 4 servings, apples, dark brown sugar, eggs, oil, vanilla, cinnamon, and nutmeg, salt, all-purpose flour, baking powder and baking soda, walnuts",
+                        "text": "In a large bowl, whisk the brown sugar and eggs until pale and foamy, about 1 minute. Add the oil, vanilla, cinnamon, nutmeg, salt, and whiskey and espresso powder, if using. Whisk until smooth and emulsified. Add the flour, baking powder, and baking soda and whisk until well-combined and smooth. Use a rubber spatula to fold in the apples and 1/4 cup of the nuts. Pour the batter into the prepared pan and use an offset spatula to gently smooth the top, making sure the apples are well dispersed and go all the way to the edges of the pan. Tap the pan gently on the counter to release any air bubbles. Sprinkle the remaining cup of nuts over the cake. Bake until puffed and golden, and a tester inserted into the center comes out clean, 30 to 40 minutes. There may be a bit of moisture on the tester from the apples. Set the pan on a rack to cool for about 15 minutes. Run a thin knife around the edge and carefully turn the cake out onto a cooling rack. Then invert it again so that it's puffy side up, if desired. Store the cake, wrapped tightly, at room temperature or in the fridge for up to two days.",
+                        "rating": "16",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "12"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/best-carrot-cake.jpg",
+                            "text": "best carrot cake"
+                        },
+                        "heading": "Best Carrot Cake",
+                        "ingredients": "yield: 2 servings, lots of carrots, whole wheat pastry flour, maple syrup, applesauce, coconut oil",
+                        "text": "In a large bowl, whisk together the flour, baking powder, baking soda, cinnamon, nutmeg and salt. In a medium bowl, whisk the eggs and then whisk in the applesauce, maple syrup, almond milk, coconut oil, and vanilla. Stir in the carrots. Pour the wet ingredients into the bowl of dry ingredients and stir until just combined. Pour the batter into the baking dish and bake for 35 to 38 minutes, or until a toothpick inserted comes out clean. Let the cake cool completely before frosting. Make the frosting: In a large bowl, beat the cream cheese and butter with an electric mixer until smooth. Add the vanilla and powdered sugar and mix until smooth.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "19"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/almond-peach-cake.jpg",
+                            "text": "almond peach cake"
+                        },
+                        "heading": "Almond Peach Cake",
+                        "ingredients": "yield: 5 servings, 2 ripe peaches, 1 cup whole grain spelt flour, 1/2 all-purpose flour, 1/4 cup masa harina corn flour, 1/4 cup stone ground polenta, 1 teaspoon baking powder, 1/2 teaspoon baking soda, 1/4 teaspoon salt, 1/2 teaspoon cinnamon, 3/4 cup almond milk, 1/2 cup maple syrup, 1/4 cup applesauce, 1/2 cup coconut oil, brown sugar, 1/4 raw sliced almonds",
+                        "text": "Thinly slice your peaches and set aside. Combine the dry ingredients. In a separate bowl whisk together the wet ingredients. Stir the dry into the wet, don't over mix. Pour batter into prepared pan(s) and place peaches, brown sugar, and sliced almonds on top. Bake for 30-40 minutes or until a toothpick comes out clean.",
+                        "rating": "19",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "18"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/cakes/strawberry-shortcake.jpg",
+                            "text": "strawberry shortcake"
+                        },
+                        "heading": "Strawberry Shortcake",
+                        "ingredients": "yield: 3 servings, all-purpose flour, cornmeal, sugar, baking powder, sea salt, coconut oil, lemon juice and zest, eggs, almond milk, whipped cream or coconut cream",
+                        "text": "In a medium bowl, whisk together the flour, cornmeal, sugar, baking powder, and salt. Using your hands, work the coconut oil in until the mixture resembles coarse sand. Add the lemon zest, lemon juice, eggs, and milk and mix until just combined. The dough will be more moist and pliable than traditional biscuit dough. Turn the dough out onto a lightly floured piece of parchment paper and pat into a 1/2-inch-thick rectangle. Fold the dough into thirds and pat or roll again until 1-inch thick. Freeze for 20 minutes. Preheat the oven to 400F and line a baking sheet with parchment paper. Remove the dough from the freezer and use a 2 1/2-inch round biscuit cutter to cut out 3 to 4 biscuits. Re-roll the scraps as necessary to cut out 8 1-inch thick biscuits. Place the biscuits on the baking sheet. If desired, brush the tops of the biscuits with a little almond milk and sprinkle with coarse sugar. Bake 16 to 18 minutes or until golden brown around the edges. Assemble the strawberry shortcakes with the biscuits, strawberries, cream, and mint, if desired.",
+                        "rating": "24",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "16"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Calzone Recipes",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/easy-calzone.jpg",
+                            "text": "easy calzone"
+                        },
+                        "heading": "Easy Calzone",
+                        "ingredients": "yield: 4 servings, mozzarella cheese, salami meat, canadian bacon, mushrooms, bell peppers, pepperoncini, spinach, red pizza sauce, little marinara",
+                        "text": "Divide pre-made pizza dough into equal portions and roll into a circle. On one half of the dough, spread all of your selected ingredients. Fold over and tightly crimp the edges. Cut air vents, brush with oil and sprinkle on parmesan. Bake at 475F for about 15 minutes or until golden brown.",
+                        "rating": "19",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "4"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/best-ever-calzones.jpg",
+                            "text": "best ever calzones"
+                        },
+                        "heading": "Best-Ever Calzones",
+                        "ingredients": "yield: 3 servings, cooking spray, 1 3/4 lb. pizza dough, all-purpose flour, 1 c. pizza sauce, 1 c. ricotta, 1/2 c. pepperoni, 1 c. shredded mozzarella, extra-virgin olive oil, salt",
+                        "text": "Preheat oven to 500 degrees and grease two large baking sheets with cooking spray. Divide pizza dough into 4 pieces. On a lightly floured surface, roll one piece of dough out into an 8 inch circle, about 1/2 inch thick. Spoon pizza sauce in middle of dough, then dot with ricotta and top with pepperoni and mozzarella. Gently fold dough in half, dampen seams with water and pinch together, then crimp edges all around. Repeat with remaining dough. Transfer to prepared baking sheets. Brush tops with oil and sprinkle with salt. Using kitchen scissors or a sharp knife, slit tops in 2 to 3 spots to create steam vents. Bake until tops are golden and filling is bubbling, 20 minutes, brushing with more oil halfway through. Let cool 5 minutes before cutting open.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "19"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/easy-homemade-calzone.jpg",
+                            "text": "easy homemade calzone"
+                        },
+                        "heading": "Easy Homemade Calzone",
+                        "ingredients": "yield: 5 servings, 1 pound pizza dough, 1/2 cup pizza sauce, 1/2 cup yellow onion, 1/2 cup green bell pepper, 1/2 cup sliced pepperoni, 1 cup mozzarella cheese, 1 tablespoon olive oil",
+                        "text": "Divide pizza dough into 4 equal parts and roll each dough ball into a 1/4 inch thick circle. On half of each dough circle, add equal parts sauce, yellow onion, green bell pepper, and sliced pepperoni. Make sure to leave a little room around the edges so you can crimp the calzone shut. Sprinkle the toppings with equal parts shredded cheese. Then fold the other half of the dough over the toppings and crimp the edges. Cut 2-3 air vents into the top of the calzone and place it on to the prepared baking sheet. Brush with olive oil and bake for about 15 minutes or until the dough is fully cooked and the calzone is golden brown. Serve with warmed pizza sauce for dipping.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "13"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/incredible-homemade-calzone.jpg",
+                            "text": "incredible homemade calzone"
+                        },
+                        "heading": "Incredible Homemade Calzone",
+                        "ingredients": "yield: 4 servings, 1 recipe pizza dough, 8 ounces sweet italian sausage, 1 green bell pepper, 1/2 red onion, 24 slices pepperoni, 1 cup mozzarella cheese, 3/4 cup ricotta cheese, 1/2 cup sliced olives, 1 egg + 1 tablespoon water, 1 1/2 tablespoons parmesan cheese, italian seasoning, salt and pepper",
+                        "text": "In a medium skillet, cook the sausage over medium-high heat until brown, using a wooden spoon to break it into crumbles. Add the peppers and onions and continue to cook until tender. Season with salt and pepper and then remove from pan and onto a paper towel lined plate to drain. Section off 1/4 of the pizza dough. Flour work surface and roll it out into a 8-9 inch circle. Place on a piece of parchment paper. Spread about 3 tablespoons ricotta cheese onto half of the circle, leaving a 1 inch border. Spoon on 1/4 of the sausage filling over the ricotta, sprinkle with a little cheese, layer on the pepperoni, more cheese, and some sliced olives. Fold over the pizza dough so the curved edges line up and make a semicircle. Pinch the edges together to seal. Repeat with remaining dough. Cut 3 slits into the top of each calzone to allow steam to escape. Brush the egg wash all over the dough. Sprinkle with Parmesan cheese and Italian seasoning. With the parchment paper underneath, transfer each Calzone to the stone in the oven (I like to use a pizza peel or plate) OR place on a large baking sheet, cut off any parchment that hangs over and then into the oven. Bake for 12-14 minutes or until golden brown. Rest 10 minutes. Cut in half and serve with marinara sauce for dipping.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "24"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/real-italian-calzones.jpg",
+                            "text": "real italian calzones"
+                        },
+                        "heading": "Real Italian Calzones",
+                        "ingredients": "yield: 2 servings, 1 (.25 ounce) package active dry yeast, 1 cup warm water, 1 tablespoon olive oil, 1 teaspoon white sugar, 1 teaspoon salt, 2 1/2 cups all-purpose flour, 1 teaspoon olive oil, 1/2 cup ricotta cheese, 1 1/2 cups shredded cheddar cheese, 1/2 cup diced pepperoni, 1/2 cup sliced fresh mushrooms, 1 tablespoon dried basil leaves, 1 egg",
+                        "text": "To Make Dough: In a small bowl, dissolve yeast in water. Add the oil, sugar and salt; mix in 1 cup of the flour until smooth. Gradually stir in the rest of the flour, until dough is smooth and workable. Knead dough on a lightly floured surface for about 5 minutes, or until it is elastic. Lay dough in a bowl containing 1 teaspoon olive oil, then flip the dough, cover and let rise for 40 minutes, or until almost doubled. To Make Filling: While dough is rising, combine the ricotta cheese, Cheddar cheese, pepperoni, mushrooms and basil leaves in a large bowl. Mix well, cover bowl and refrigerate to chill. Preheat oven to 190 degrees C. When dough is ready, punch it down and separate it into 2 equal parts. Roll parts out into thin circles on a lightly floured surface. Fill each circle with 1/2 of the cheese/meat filling and fold over, securing edges by folding in and pressing with a fork. Brush the top of each calzone with egg and place on a lightly greased cookie sheet. Bake at 190 degrees C for 30 minutes.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "14"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/calzone-recipe.jpg",
+                            "text": "calzone recipe"
+                        },
+                        "heading": "Calzone Recipe",
+                        "ingredients": "yield: 5 servings, 1 pound pizza dough, 8 ounces italian sausage, 3/4 cup bell peppers, 1/2 cup pepperoni, 1 cup pizza sauce, 8 ounce package cheese, 1 egg, 1 tablespoon parsley, cooking spray",
+                        "text": "Coat a sheet pan with cooking spray. Divide the pizza dough into 3 or 4 pieces, depending on the size you want your calzones. Roll the dough into 1/4 inch thick ovals or rectangles. Place the sausage in a pan and cook according to package directions. Use a spatula to break up the cooked sausage into bite sized pieces. Add the bell peppers to the pan and cook for 3-4 minutes or until softened. Spread 2 teaspoons of pizza sauce onto one side of each piece of dough. Top with 1/4 cup cheese. Divide the sausage and pepper mixture evenly on top of the sauce. Top with pepperoni and an additional 1/4 cup of cheese. Fold the dough over and pinch to seal the edges. Use a sharp knife to cut 2-3 slits into the top of each calzone. Brush each calzone with the beaten egg. Place the calzones on the sheet pan. Bake for 15-17 minutes or until golden brown. Top with parsley, then serve immediately with remaining pizza sauce for dipping.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "december",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/loaded-calzones.jpg",
+                            "text": "loaded calzones"
+                        },
+                        "heading": "Loaded Calzones",
+                        "ingredients": "yield: 3 servings, 1/2 lb bulk italian pork sausage, 1 cup marinara sauce, 1/2 cup bite-size thinly sliced pepperoni, 1/4 cup shredded fresh basil leaves, 1 can pizza crust, 1 1/2 cups shredded mozzarella cheese",
+                        "text": "Spray cookie sheet with cooking spray. In 10-inch skillet, cook sausage over medium heat, stirring frequently, until no longer pink; drain. Stir in 1/2 cup of the marinara sauce, the pepperoni and basil. Set aside. Unroll dough. Cut dough in half crosswise; cut each section in half lengthwise. On cookie sheet, press or roll each dough portion into 7x5-inch rectangle. Spoon sausage mixture and cheese on one side of each rectangle. Fold dough over filling; press edges firmly with fork to seal. Bake 15 to 17 minutes or until golden brown. Heat remaining 1/2 cup marinara sauce; serve with warm calzones.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "18"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/calzone-recipes/quick-pepperoni-calzones.jpg",
+                            "text": "quick pepperoni calzones"
+                        },
+                        "heading": "Quick Pepperoni Calzones",
+                        "ingredients": "yield: 4 servings, 1 cup chopped pepperoni, 1/2 cup pasta sauce with meat, 1/4 cup shredded mozzarella cheese, 1 loaf frozen bread dough, 1 to 2 tablespoons milk, 1 tablespoon parmesan cheese, 1/2 teaspoon italian seasoning",
+                        "text": "In a small bowl, mix pepperoni, pasta sauce and mozzarella cheese. On a lightly floured surface, divide dough into four portions. Roll each into a 6-in. circle; top each with a scant 1/3 cup pepperoni mixture. Fold dough over filling; pinch edges to seal. Place on a greased baking sheet. Brush milk over tops; sprinkle with Parmesan cheese and, if desired, Italian seasoning. Bake until golden brown, 20-25 minutes.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Casseroles",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/casseroles/sweet-potato-casserole.jpg",
+                            "text": "sweet potato casserole"
+                        },
+                        "heading": "Sweet Potato Casserole",
+                        "ingredients": "yield: 2 servings, sweet potatoes, pecans and walnuts, old fashioned oats, ginger, fresh rosemary, sage, and dried thyme, garlic, pure maple syrup",
+                        "text": "Use a fork to poke a few holes into the sweet potatoes. Place on the baking sheet and roast until very tender, about 60 minutes. Make the crumble topping: In a food processor, place the oats, pecans, walnuts, garlic, maple syrup, olive oil, thyme, rosemary, and salt and pulse until just combined. Remove and set aside. Scoop the cooked sweet potato flesh out of the skins and place in a food processor. Add the olive oil, almond milk, ginger, salt, and several grinds of pepper and process to combine. Spread the mixture into the baking dish. Sprinkle with the crumble topping, additional nuts, and sage. Drizzle with olive oil and bake 20 minutes or until the topping is browned and crisp.",
+                        "rating": "19",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "27"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/casseroles/butternut-squash-casserole.jpg",
+                            "text": "butternut squash casserole"
+                        },
+                        "heading": "Butternut Squash Casserole",
+                        "ingredients": "yield: 3 servings, butternut squash, sourdough bread, white wine, leeks, celery, garlic, pearl onions, fresh sage, rosemary, and parsley, dried cranberries",
+                        "text": "Place the butternut squash cubes on the pan and toss with a drizzle of olive oil and generous pinches of salt and freshly ground black pepper. Roast 25 minutes or until tender. Reduce the oven heat to 350 degrees F and lightly grease or spray a 7.5x10-inch (or similar) pan with olive oil. In a large skillet, heat 1 tablespoon of olive oil over medium heat. Add the leeks, celery, and generous pinches of salt and pepper and cook until translucent, about 5 to 7 minutes. Add the garlic, chopped sage, and rosemary and stir. Add the wine, stir, and cook for 30 seconds. Stir in the bread, then 1 cup of the broth, and gently toss until the bread cubes are evenly coated. Transfer to a baking dish and drizzle on the remaining 1/2 cup of broth, especially over areas that may seem dry. Evenly distribute the butternut squash, pearl onions, and sage leaves through the spaces between the bread. Drizzle 1 tablespoon of olive oil on top along with a few more pinches of salt and pepper. Bake for 20 to 25 minutes or until the bread is golden brown on top. Sprinkle on the cranberries and chopped parsley, and serve.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "11"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/casseroles/crispy-zucchini-casserole.jpg",
+                            "text": "crispy zucchini casserole"
+                        },
+                        "heading": "Crispy Zucchini Casserole",
+                        "ingredients": "yield: 4 servings, fresh zucchini, yellow onion, basil pesto, marinara sauce, panko bread crumbs and parmesan cheese",
+                        "text": "In a large bowl, toss the zucchini and onions with the pesto. Layer the baking dish with the marinara sauce, followed by the zucchini mixture. Spread the zucchini into one even layer. Sprinkle the top with the panko, Parmesan, a drizzle of olive oil, and pinches of red pepper flakes. Bake until the zucchini is tender (but not mushy) and the top is crispy and lightly browned - about 25 minutes. I like to turn my broiler on for the last few minutes to help the topping become browned and crisp. Remove from oven and let it cool 20 minutes before slicing.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/casseroles/green-bean-casserole.jpg",
+                            "text": "green bean casserole"
+                        },
+                        "heading": "Green Bean Casserole",
+                        "ingredients": "yield: 2 servings, 2 medium yellow onions, 4 teaspoons extra-virgin olive oil, 1/2 cup all-purpose flour, 2 tablespoons panko breadcrumbs, 1/2 teaspoon salt, 1 1/2 pounds green beans, 16 ounces cremini mushrooms, 2 tablespoons tamari, 4 garlic cloves, 2 tablespoons fresh thyme leaves, 3 cups unsweetened almond milk, 1 1/2 teaspoons dijon mustard, 1/2 cup parmesan cheese, 1/4 teaspoon freshly ground black pepper",
+                        "text": "In a large bowl, toss the onions with the oil, flour, panko, and salt. Spread evenly onto the baking sheets and bake for 25 to 35 minutes, tossing every 10 minutes (rotating the pans in the oven as necessary), until lightly browned and crispy. Remove from the oven and lower the oven temperature to 400 degrees F. Prepare the filling: Bring a large pot of salted water to a boil and set a large bowl of ice water nearby. Drop the green beans into the boiling water and blanch for 4 minutes. Drain, and immediately immerse in the ice water to stop the cooking process. Drain, and transfer to a towel to dry. Heat the olive oil in a large skillet, add the mushrooms, and cook until soft, 8 to 10 minutes. Stir in the tamari, garlic, and thyme. Sprinkle the flour over the mushrooms and stir again. Add the almond milk and mustard and stir to combine. Simmer until thickened, whisking often, for 20 minutes. Stir in the Parmesan cheese and pepper. Spread 1/3 of the sauce into the baking dish. Layer with green beans and top with the remaining sauce. Sprinkle the onions on top and bake, covered, for 10 minutes. Uncover and bake 10 more minutes. If the onions start to brown too much, cover the dish for the remainder of the baking time. Garnish with sprinkles of panko and Parmesan, if desired.",
+                        "rating": "8",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "1"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/casseroles/healthy-breakfast-casserole.jpg",
+                            "text": "healthy breakfast casserole"
+                        },
+                        "heading": "Healthy Breakfast Casserole",
+                        "ingredients": "yield: 4 servings, 2 sweet potatoes, 10 to 12 ounces mixed mushrooms, 1 bunch asparagus, extra-virgin olive oil, 12 large eggs, 1/2 cup almond milk, 1 garlic clove, sea salt, black pepper, 4 ounces crumbled feta cheese, 1 bunch scallions, 1 cup frozen peas, microgreens",
+                        "text": "On one baking sheet spread the sweet potatoes, on the other baking sheet spread the mushrooms and asparagus. Drizzle with olive oil and sprinkle with pinches of salt and pepper and toss to coat. Roast the sweet potatoes for 30 minutes. Place the baking sheet with the mushrooms and asparagus in the oven to roast during the final 10 minutes. In a medium bowl, whisk together the eggs, milk, garlic, salt, and black pepper. Reduce the oven temperature to 350 degrees F. Lightly spray a 9x13-inch  baking dish with nonstick spray. Place all the sweet potatoes evenly in the bottom of the baking dish. Add half of the vegetables from the second baking sheet and spread out evenly. Sprinkle with the feta cheese, scallions, and peas. Pour the egg mixture evenly over the vegetables. Add the remaining mushrooms and asparagus. Bake for 40 to 45 minutes or until the eggs are set and the edges are lightly golden brown. Let the casserole sit for 10 minutes before slicing. Garnish slices with microgreens and season with additional salt and pepper, if desired.",
+                        "rating": "18",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "29"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Chocolate",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/chocolate-zucchini-bread.jpg",
+                            "text": "chocolate zucchini bread"
+                        },
+                        "heading": "Chocolate Zucchini Bread",
+                        "ingredients": "yield: 4 servings, flour, baking powder and baking soda, cinnamon and nutmeg, sea salt, maple syrup, eggs, almond milk, coconut oil, vanilla, zucchini, chocolate chips",
+                        "text": "In a medium bowl, combine the flour, cocoa powder, baking powder, baking soda, salt, cinnamon, and nutmeg. In a large bowl, whisk together the eggs, almond milk, coconut oil, maple syrup, and vanilla. Stir in the zucchini. Add the dry ingredients to the bowl and stir until just combined. Don't overmix. Fold in the chocolate chips. Pour the batter into the loaf pans. Sprinkle with more chocolate chips and bake for 45 to 50 minutes, or until a toothpick inserted comes out clean and the tops spring back to the touch. Remove from the oven and cool completely.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "16"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/healthy-chocolate.jpg",
+                            "text": "healthy chocolate"
+                        },
+                        "heading": "Healthy Chocolate",
+                        "ingredients": "yield: 1 serving, raw cacao powder, maca powder, almond milk, maple syrup, coconut oil, cinnamon, little salt",
+                        "text": "In a blender, mix the almond milk, cacao powder, maca, maple syrup, coconut oil, cinnamon and salt. (You can also whisk this together by hand). Transfer to a small saucepan and warm over medium heat. Taste and adjust the sweetness if desired. If it's too thick, add a little more almond milk. erve with coconut whip and shaved dark chocolate, both optional.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/vegan-chocolate-cake.jpg",
+                            "text": "vegan chocolate cake"
+                        },
+                        "heading": "Vegan Chocolate Cake",
+                        "ingredients": "yield: 5 servings, 1 large sweet potato, 1/4 cup plus 2 tablespoons semisweet chocolate chips, 2 tablespoons unsweetened cocoa powder, 1 tablespoon melted coconut oil, sea salt, 3/4 cups all-purpose flour, 1/2 cup whole wheat flour, 1/2 cup unsweetened cocoa powder, 1 teaspoons baking soda, 1/4 teaspoon cinnamon, 1 cup almond milk, 3/4 cups maple syrup, 1/4 cup extra-virgin olive oil, 1 teaspoons apple cider vinegar, 1 teaspoons vanilla extract",
+                        "text": "Use a fork to poke a few holes into the sweet potato. Place on a baking sheet or on a piece of foil and roast until very tender, about 60 minutes. Let the potatoes cool slightly, then measure 3/4 cups of the soft flesh. In a (small) food processor, puree the sweet potato, chocolate chips, cocoa powder, coconut oil, and salt. The heat of the sweet potato will melt the chocolate. Make the cake. Reduce the oven heat to 350 degrees F and grease an 8x8 baking pan. In a large bowl, stir together the flours, cocoa powder, baking soda, salt, and cinnamon. To the same bowl, add the almond milk, maple syrup, olive oil, apple cider vinegar, and vanilla. Stir until combined. Pour the batter into the prepared cake pan and bake for 25 to 30 minutes, or until the top of the cake springs back when pressed or a toothpick inserted in the center comes out clean. Place the pan on cooling racks and cool for 10 minutes. Gently loosen the sides of each cake with a knife. Remove the cakes from the pan and place back on the racks to cool completely. Frost the cake and serve!",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "18"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/chocolate-pudding-pops.jpg",
+                            "text": "chocolate pudding pops"
+                        },
+                        "heading": "Chocolate Pudding Pops",
+                        "ingredients": "yield: 3 servings, 2 medium ripe avocados, 1/4 cup chocolate chips, 3 tablespoons cacao powder, 3 tablespoons maple syrup, 3 tablespoons almond butter, 1 teaspoon pure vanilla extract, 2 cups almond milk, sea salt, crushed nuts",
+                        "text": "Scoop the avocados into a blender along with the melted chocolate chips, cacao powder, maple syrup, almond butter, vanilla, almond milk, and sea salt. Blend until smooth. Pour into ice pop molds and freeze overnight, or for at least 9 hours. To remove the pops, let them sit at room temperature for a few minutes until the pops are loose enough to pull out. Optional topping: Melt the additional chocolate chips together with the coconut oil. Drizzle on the pops and sprinkle the crushed nuts on top. Alternatively, you can enjoy this as pudding in non-pop form. After you blend the mixture, scoop it into a bowl, or individual bowls, and chill in the fridge for at least 4 hours.",
+                        "rating": "18",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "4"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/peanut-butter-chocolate-chip-cookie-bars.jpg",
+                            "text": "peanut butter chocolate chip cookie bars"
+                        },
+                        "heading": "Peanut Butter Chocolate Chip Cookie Bars",
+                        "ingredients": "yield: 1 serving, 1/2 cup plus 2 tablespoons creamy peanut butter, 1/4, cup plus 1 tablespoon melted coconut oil, 1/4 cup plus 1 tablespoon maple syrup, 2 teaspoons vanilla extract, sea salt, 2 1/2 cups almond flour, 2 1/2 tablespoons maca powder, 1 cup chocolate chips, 1 1/2 cups walnuts, 2 tablespoons cacao powder, 10 soft medjool dates, 2 tablespoons water",
+                        "text": "In a large bowl, stir together the peanut butter, coconut oil, maple syrup, vanilla, and salt until combined. Add the almond flour and maca and stir to combine (the mixture will be thick). Fold in the chocolate chips and press into the pan. Place in the freezer so that it firms up a bit while making the next layer. In a small food processor, pulse the walnuts, cacao powder, and sea salt until the walnuts are well chopped. Add the dates and pulse to combine, adding 2 tablespoons water if the blade gets stuck. Process until smooth, then spread onto the cookie layer. Sprinkle with sea salt if desired. Freeze for 30 minutes (this will help them firm up, making them easier to cut). Remove and slice into bars. Store remaining bars in the fridge. Finished bars can also be frozen. Let each bar thaw for about 15 minutes at room temperature.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "18"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/cranberry-and-pistachio-chocolate-bark.jpg",
+                            "text": "cranberry and pistachio chocolate bark"
+                        },
+                        "heading": "Cranberry and Pistachio Chocolate Bark",
+                        "ingredients": "yield: 5 servings, baking chocolate, 2 teaspoons coconut oil, 2 teaspoons maple syrup, 3 tablespoons crushed pistachios, 3 tablespoons crushed pecans, 3 tablespoons toasted coconut flakes, 3 tablespoons dried cranberries, sea salt",
+                        "text": "Over a double boiler on the stove (or a saucepan filled with a few inches of gently boiling water with a glass bowl on top), melt the chocolate, coconut oil and maple syrup together - stirring until smooth. Line a baking sheet with parchment paper and pour the chocolate. Smooth it out to about 1/4 inches thick. Top chocolate with nuts, coconut flakes, dried cranberries and a few pinches of coarse sea salt. Place baking sheet in the freezer for a few hours to set. Store remaining bark in the fridge or freezer. Break bark into pieces and enjoy!",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "23"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/dark-chocolate-olive-oil-cake.jpg",
+                            "text": "dark chocolate olive oil cake"
+                        },
+                        "heading": "Dark Chocolate Olive Oil Cake",
+                        "ingredients": "yield: 3 servings, 3/4 extra-virgin olive oil, 1/2 cup cocoa powder, 1/2 cup boiling water, 1 tablespoon pure vanilla extract, 1 1/3 all-purpose flour, 1/2 teaspoon baking soda, sea salt, 1 cup super fine sugar, 3 large eggs, 1/2 cup heavy cream, 1/2 teaspoon ground cardamom, 1 teaspoon dried rose petals, 1/2 cup chopped unsalted pistachios",
+                        "text": "Sift the cocoa into a medium bowl and whisk in the boiling water until smooth. Whisk in the vanilla, then set aside to cool slightly. In a separate large bowl, combine the flour, baking soda, and salt. In the bowl of a stand mixer fitted with the paddle attachment, beat together the sugar, olive oil, and eggs until you have a light, fluffy cream, about 3 minutes. Turn the speed on the mixer down and pour in the cocoa and vanilla mixture. Slowly add the our mixture until it is evenly incorporated, stopping the mixer and scraping down the bowl as necessary. Pour the batter into the prepared pan and sprinkle with flaky salt. Bake for 30 to 35 minutes, or until the sides are set and the top of the cake still looks slightly moist. A cake tester inserted into the center should come out clean or with just a few crumbs on it. Let cool in the pan on a wire rack for 10 minutes. While the cake is baking, in a chilled metal or glass bowl using a hand mixer, beat the cream on medium speed until soft peaks form, about 4 minutes. Add the cardamom and beat until stiff peaks form, about 1 to 2 minutes more. Cover and refrigerate until ready to serve. Run a knife around the edge of the cake and release the sides of the pan. Transfer the cake to a serving plate or cake stand. Sprinkle with more flaky salt. Serve each slice with a dollop of the cardamom cream and a sprinkling of rose petals, pistachios, and flaky salt.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "8"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/chocolate-almond-breeze-smoothie.jpg",
+                            "text": "chocolate almond breeze smoothie"
+                        },
+                        "heading": "Chocolate Almond Breeze Smoothie",
+                        "ingredients": "yield: 1 serving, 1/2 cup + 2 tablespoons Chocolate Almond Breeze, almond milk, 1/4 cup creamy almond butter, 1 frozen banana, handful of ice, 1/4 teaspoon ground cinnamon, coconut cream",
+                        "text": "Blend all ingredients together, taste and adjust to your liking (more banana, more almond milk, more almond butter, etc). You can make it as light or as rich and thick as you prefer. Top with a scoop of coconut cream and a dusting of cinnamon or cocoa. Coconut cream: open a can of full fat coconut milk in the freezer overnight, spoon the thick part off the top & stir it until smooth.",
+                        "rating": "13",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "19"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/chocolate-cupcakes-and-avocado-icing.jpg",
+                            "text": "chocolate cupcakes and avocado icing"
+                        },
+                        "heading": "Chocolate Cupcakes and Avocado Icing",
+                        "ingredients": "yield: 4 serving, 1 1/4 cups spelt flour, 3/4 cup agave syrup, 1/2 cup unsweetened cocoa powder, 1 teaspoon baking soda, salt, 1 cup almond milk, 1 teaspoon vanilla extract, 3 tablespoons coconut oil, 1 teaspoon apple cider vinegar, 1/2 teaspoon cinnamon, 2 very ripe avocados, 1/4 cup chopped baking chocolate, 1/4 cup unsweetened cocoa powder, 1/4 cup agave, 1 teaspoon vanilla, 1/4 cup almond milk",
+                        "text": "Make the cupcakes: Mix the wet ingredients, mix the dry ingredients, mix together and bake for 15-18 minutes at 325 degrees. These are best if you under bake them slightly (since there's not very much oil in the recipe). Make the frosting: Melt the baking chocolate in the microwave (careful not to burn it). Let it cool slightly. In a food processor mix all ingredients together. Taste and adjust. Let chill in the fridge for at least 15 or so minutes.",
+                        "rating": "9",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/best-homemade-brownies.jpg",
+                            "text": "best homemade brownies"
+                        },
+                        "heading": "Best Homemade Brownies",
+                        "ingredients": "yield: 5 servings, 1 1/2 cups granulated sugar, 3/4 cup all-purpose flour, 2/3 cup cocoa powder, 1/2 cup powdered sugar, 1/2 cup dark chocolate chips, sea salt, 2 large eggs, 1/2 cup canola oil, 2 tablespoons water, 1/2 teaspoon vanilla",
+                        "text": "In a medium bowl, combine the sugar, flour, cocoa powder, powdered sugar, chocolate chips, and salt. In a large bowl, whisk together the eggs, olive oil, water, and vanilla. Sprinkle the dry mix over the wet mix and stir until just combined. Pour the batter into the prepared pan (it'll be thick - that's ok) and use a spatula to smooth the top. Bake for 40 to 48 minutes, or until a toothpick comes out with only a few crumbs attached (note: it's better to pull the brownies out early than to leave them in too long). Cool completely before slicing. Store in an airtight container at room temperature for up to 3 days. These also freeze well! ",
+                        "rating": "16",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/chocolate/vegan-brownies.jpg",
+                            "text": "vegan brownies"
+                        },
+                        "heading": "Vegan Brownies",
+                        "ingredients": "yield: 4 servings, 2 tablespoons ground flaxseed, 5 tablespoons water, 1 cup all-purpose flour, 3/4 cup granulated sugar, 3/4 cup powdered sugar, 2/3 cup cocoa powder, 1 teaspoon baking powder, sea salt, 1/2 cup vegan dark chocolate chips, 1/2 cup melted coconut oil, 1 teaspoon vanilla extract",
+                        "text": "In a small bowl, stir together the flaxseed and water and set aside for 5 minutes to thicken. In a medium bowl, combine the flour, sugars, cocoa powder, baking powder, salt, and chocolate chips. In a large bowl, whisk together the oil, vanilla, and the flaxseed mixture. Pour the dry ingredients into the bowl of wet ingredients and use a spatula to fold the mixture together, until moistened. It will be extremely dry and crumbly but will come together in the next step where it'll be pressed into the pan. This mixture is very different from traditional brownies where a wet batter is pourable. Transfer the crumbly mixture to the prepared pan and use your fingertips to press it into an even layer. Sprinkle the reserved chocolate chips on top and gently press into the dough. Sprinkle with flaky sea salt, if using. Bake for 25 minutes, or until a toothpick inserted in the center comes out with just a few crumbs. Cool on a wire rack for at least 45 minutes before slicing and serving.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "4"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Crockpot",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/crockpot/slow-cooker-spinach-and-parmesan-meatballs.jpg",
+                            "text": "slow cooker spinach and parmesan meatballs"
+                        },
+                        "heading": "Slow Cooker Spinach and Parmesan Meatballs",
+                        "ingredients": "yield: 2 servings, 1 jar marinara, 3 tbsp. grated parmesan, 3 tbsp. panko breadcrumbs, 1/3 cup chopped fresh flat-leaf parsley, 2 cloves garlic, salt, ground black pepper, 1/2 lb. sweet italian sausage, 1/2 lb. ground beef, 1/2 cup baby spinach",
+                        "text": "Pour marinara into a 5- or 6- quart slow cooker. Line a rimmed baking sheet with aluminum foil. Heat oven to broil with oven rack 4 inches from heat. Toss together Parmesan, panko, parsley, and garlic in a bowl. Season with salt and pepper. Add sausage, beef, and spinach; gently mix to combine. Shape into 20 balls (about 1 1/4 inches); place on prepared baking sheet. Broil until lightly browned, 2 to 3 minutes. Place meatballs in marinara in slow cooker. Cook, covered, until meatballs are cooked through, 3 to 4 hours on high or 5 to 6 hours on low. Serve with Parsley-Garlic Bread and additional Parmesan alongside.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "20"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/crockpot/gingery-slow-cooker-chicken-with-cabbage-slaw.jpg",
+                            "text": "gingery slow cooker chicken with cabbage slaw"
+                        },
+                        "heading": "Gingery Slow Cooker Chicken with Cabbage Slaw",
+                        "ingredients": "yield: 3 servings, 1/4 cup apricot jam, 2 tbsp. ketchup, 1/4 cup soy sauce, 2 tbsp. grated fresh ginger, 2 lb. boneless, skinless chicken thighs, 4 cloves garlic, 1 medium onion, 1 small red jalapeno pepper, 1/4 cup unseasoned rice vinegar, salt, ground black pepper, 1 cup long-grain white rice, 1/4 small red cabbage, 2 scallions, 1 tbsp. chopped fresh cilantro, 1 tbsp. olive oil, toasted sesame seeds",
+                        "text": "Combine apricot jam, ketchup, soy sauce, and ginger in a 5- to 6-quart slow cooker. Add chicken, garlic, onion, and jalapeno; toss to coat. Cook, covered, until chicken is cooked through, 3 1/2 to 4 1/2 hours on high or 5 1/2 to 6 1/2 hours on low. Transfer chicken to a plate and shred using two forks; return to slow cooker. Stir in 2 tablespoons rice vinegar. Season with salt and pepper. Twenty-five minutes before serving, cook rice according to package directions. Toss together cabbage, scallions, cilantro, oil, and remaining 2 tablespoons rice vinegar in a bowl. Season with salt. Serve chicken and sauce over rice topped with slaw, cilantro, and sesame seeds.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "26"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/crockpot/slow-cooker-meatballs.jpg",
+                            "text": "slow cooker meatballs"
+                        },
+                        "heading": "Slow Cooker Meatballs",
+                        "ingredients": "yield: 5 servings, 1/2 cup panko bread crumbs, 2 oz. parmesan cheese, 1 cup chopped fresh flat-leaf parsley leaves, 1 cup milk, 1 large egg, 7 clove garlic, 2 lb. 85-percent lean ground beef, 1/2 lb. italian sauage, canola oil, 1 medium sweet onion, 2 tbsp. olive oil, 2 tsp. italian seasoning, 1/4 tsp. red pepper flakes, 1 can crushed tomatoes, 1 can diced tomatoes, 1 can tomato sauce, 2 tsp. sugar, 1 small bunch fresh basil",
+                        "text": "Preheat oven to 425 degrees F. Combine panko, Parmesan, parsley, milk, egg, and 3 garlic cloves in a bowl; let stand 10 minutes. Add beef and sausage; gently combine using your hands. Shape into 36 (1- to 1 1/2-inch) balls. Line a rimmed baking sheet with foil and lightly grease with canola oil. Place meatballs on baking sheet and bake until browned, 15 minutes. Drain well. Combine onion, olive oil, Italian seasoning, red pepper, and remaining 4 garlic cloves in a microwave-safe bowl. Microwave, stirring once, until onion is tender, 3 to 4 minutes. Combine onion mixture, crushed tomatoes, diced tomatoes, tomato sauce, and sugar in the bowl of a 6-quart slow cooker. Gently stir meatballs into sauce. Cover and cook on low, until the flavors are combined, 8 to 9 hours. Stir in basil.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "8"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/crockpot/slow-cooker-chicken-tortilla-soup.jpg",
+                            "text": "slow cooker chicken tortilla soup"
+                        },
+                        "heading": "Slow Cooker Chicken Tortilla Soup",
+                        "ingredients": "yield: 3 servings, 1 1/4 lb. chicken thighs, 1 small onion, 1/2 red bell pepper, 1 garlic clove, 2 cup chicken stock, 1 can can diced tomatoes, 1 can tomato sauce, 1 can chopped green chiles, 1 tsp. chili powder, 1 tsp. dried oregano, 3/4 tsp. ground cumin, salt, ground black pepper, 2 yellow squash, 3 oz. green beans, 1 tbsp. fresh lime juice, 2 1/2 tbsp. chopped fresh cilantro, sliced jalapenos, sour cream, and tortilla chips",
+                        "text": "Combine chicken, onion, bell pepper, garlic, stock, diced tomatoes, tomato sauce, chiles, chili powder, oregano, and cumin in a 4-quart slow cooker. Season with salt and pepper. Cook, covered, until chicken is cooked through on low 7 to 8 hours or on high 3 to 4 hours. Add squash and green beans and cook, covered, for 30 minutes. Remove chicken, discard bones and shred meat; return to slow cooker. Stir in lime juice and cilantro. Serve topped with cilantro, jalapenos, and sour cream, with tortilla chips alongside.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "19"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Desserts",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/desserts/pear-crisp.jpg",
+                            "text": "pear crisp"
+                        },
+                        "heading": "Pear Crisp",
+                        "ingredients": "yield: 2 servings, 2 ripe pears, 3 tablespoons whole rolled oats, 3 tablespoons chopped walnuts, 2 tablespoonds almond milk, 3 tablespoons brown sugar, 1/4 teaspoon cinnamon, small grating of fresh nutmeg, salt, 1 1/2 tablespoons hardened coconut oil",
+                        "text": "In a small bowl, mix together the oats, flour, walnuts, brown sugar, cinnamon, nutmeg, and salt. Use your fingers or the back of a fork to crumble in the hardened coconut oil until it's incorporated but still crumbly. Grease the bottom of a 6 inch skillet (or similar sized ramekin) with coconut oil. Add the pears and sprinkle the crumble on top. Bake for about 20 minutes or until the topping is golden brown and the pears are soft but not mushy. Serve warm or at room temperature with vanilla ice cream.",
+                        "rating": "8",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "1"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/desserts/easy-peach-cobbler.jpg",
+                            "text": "easy peach cobbler"
+                        },
+                        "heading": "Easy Peach Cobbler",
+                        "ingredients": "yield: 3 servings, 6 large or 7 medium peaches, 1 1/2 teaspoons fresh lemon juice, 3/4 cup all purpose flour, 1/4 cup cane sugar, 1/4 teaspoon cinnamon, 1/4 teaspoon baking soda, salt, 1/4 cup melted coconut oil, 1 teaspoon vanilla extract, vanilla ice cream",
+                        "text": "Layer the peaches into the bottom of the baking dish and drizzle the lemon juice over the peaches. In a medium bowl, mix the flour, sugar, cinnamon, baking soda, and salt. Add the coconut oil and vanilla and combine until the mixture forms a crumbly dough. Sprinkle over the peaches and bake for 30 minutes, or until the mixture is just lightly browned on top and the peaches are juicy. Serve warm with vanilla ice cream.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "12"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/desserts/summer-strawberry-crumble.jpg",
+                            "text": "summer strawberry crumble"
+                        },
+                        "heading": "Summer Strawberry Crumble",
+                        "ingredients": "yield: 4 servings, 2 1/2 cups chopped strawberries, 1/2 teaspoon balsamic vinegar, 1/3 cup whole rolled oats, 1/3 cup chopped pistachios, 1/4 cup almond flour, 1/4 cup brown coconut sugar, 1/2 teaspoon cinnamon, salt, 1 tablespoon hardened coconut oil, 1 tablespoon water, ice cream",
+                        "text": "In the bowl of a food processor, pulse the oats, pistachios, flour, coconut sugar, cinnamon and salt until just combined. Add the coconut oil and pulse again. Add the water and pulse again. The mixture should be crumbly. In a medium bowl, combine the strawberries with the balsamic vinegar. Divide the strawberries between the ramekins or mini-skillets. Top with the crumble. Bake 15 minutes or until the fruit is bubbly and the topping is lightly browned. Remove from the oven and let cool for 10 minutes. Serve with scoops of vanilla ice cream. Alternatively, this can be served unbaked. Sprinkle the pistachio crumble over the fresh strawberries and top with a dollop of yogurt, if desired.",
+                        "rating": "20",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "23"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/desserts/cherry-clafoutis.jpg",
+                            "text": "cherry clafoutis"
+                        },
+                        "heading": "Cherry Clafoutis",
+                        "ingredients": "yield: 3 servings, 3 eggs, 1 cup whole milk, 1/2 cup whole milk greek yogurt, 1/3 cup granulated sugar, 1/2 cup all-purpose flour, salt, 1/4 teaspoon vanilla extract, 1/4 teaspoon almond extract, 1/4 cup melted butter, zest of 1/2 lemon, 1 cup pitted sweet cherries, powdered sugar, toasted sliced raw almonds",
+                        "text": "In a medium bowl, combine the eggs, milk, yogurt, granulated sugar, flour, salt, vanilla, and almond extract. Whisk until just mixed. Add the melted butter and lemon zest and stir until thoroughly combined. Cover with plastic wrap and let sit for 30 minutes. Preheat the oven to 350 degrees F and grease eight 6-ounce ramekins. Divide the batter among the ramekins. Spread a layer of cherries on top of the batter. Bake for 30 to 35 minutes until lightly golden brown and barely set in the middle. Let sit for 10 minutes before serving. To serve, dust with powdered sugar and sprinkle with almonds.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "11"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/desserts/raspberry-vegan-cheesecake.jpg",
+                            "text": "raspberry vegan cheesecake"
+                        },
+                        "heading": "Raspberry Vegan Cheesecake",
+                        "ingredients": "yield: 5 servings, 1 cup walnuts, 3 soft Medjool dates, 1/2 tablespoon coconut oil, sea salt, 1 1/2 cup raw cashews, 1/2 cup full fat coconut milk, 1/4 cup + 2 tablespoons maple syrup, 1/4 cup fresh lemon juice plus 1 tablespoon zest, 2 teaspoons pure vanilla extract, 1 package plain vegan cream cheese, 1/4 cup lemon juice, 1 bag frozen raspberries, 2 tablespoons chia seeds",
+                        "text": "In a food processor, pulse the walnuts, dates, coconut oil and salt together until crumbly. Line an 8x4 inch loaf pan with parchment paper allowing 1 inch of overhang on each side. Press the crust into the bottom of the pan. Freeze for at least 15 minutes or as long as it takes to get the next layer ready. In a high-powered blender, blend the cashews, coconut milk, maple syrup, lemon juice, zest, vanilla and salt until completely creamy (about 1 minute). Pour the filling over the crust and smooth until even. Freeze until this layer is completely firm, at least 2 hours. (Alternatively, use a regular blender and blend the ingredients from Cheesecake Option 2, above) In the blender, combine the raspberries, lemon juice, maple syrup and chia seeds. Blend until smooth. Pour the raspberry mixture on top of the frozen cheesecake layer and smooth until even. Freeze for 4 hours or overnight. When ready to serve, remove the cake from the freezer and let it thaw for at least 20 minutes. Using the sides of the parchment paper, carefully lift the cheesecake out of the pan. Use a sharp chef's knife to slice it into 8 to 10 slices. Let the individual slices thaw for an additional 15 to 20 minutes, until fully thawed so that the middle layer is creamy and the raspberry layer is less icy. Re-freeze any remaining slices.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "18"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Ethnic",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/instant-pot-mulligatawny.jpg",
+                            "text": "instant pot mulligatawny"
+                        },
+                        "heading": "Instant Pot Mulligatawny",
+                        "ingredients": "yield: 5 servings, 3 tablespoons ghee, 1/2 teaspoon whole cumin seeds, 1/2 teaspoon whole coriander seeds, 1/2 teaspoon whole mustard seeds, 1 onion, 3 garlic cloves, 1 teaspoon grated ginger, 1 serrano chili, 1 tablespoon yellow curry powder, 1 carrot, 1 yam, 1 green apple, 4 cups vegetable or chicken broth, 1/2 cup red lentils, sea salt, 1 tomato, 15 ounces coconut milk, 1/4 cup fresh parsley, 1/4 cup fresh cilantro- leaves, 1-3 teaspoons fresh lemon juice",
+                        "text": "Turn instant pot on saute function.  Add ghee and cumin, mustard, coriander seeds.  Saute 2 minutes. Add onion, garlic, ginger, the slit serrano chili, and curry powder.  Saute 3 more minutes. Add carrot, yam, apple, broth, red lentils, sea salt, tomato, and coconut milk.  Stir and scrape any bits stuck on the bottom.   Set the instant pot to medium pressure for 10 minutes. Release the pressure.  Stir in parsley, cilantro and lemon juice. Serve with yogurt and naan bread  or basmati rice.",
+                        "rating": "18",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/vegetable-paella.jpg",
+                            "text": "vegetable paella"
+                        },
+                        "heading": "Vegetable Paella",
+                        "ingredients": "yield: 3 servings, 1/4 cup extra virgin olive oil, 1 onion, 1 leek, 2 garlic cloves, 2 small carrots, 2 cups mushrooms, salt, 1/4 cup tomato sauce, 1/2 sheet of  nori seaweed, 1/4 tsp saffron, 1 cup round short-grain rice, 2 - 3 cups vegetable broth, 1 cup artichoke hearts, 1 cup frozen green peas, lemon juice, 1-2 fresh rosemary sprigs",
+                        "text": "Set a large cast-iron pan to medium heat, pour a generous amount of olive oil and once hot, add the finely chopped onion and leek.  Once these have softened, add the chopped garlic and mix well. Cook for 2-3 minutes. Add the carrots to the center of the pan.  Once the carrots are a little golden on the sides, add the chopped mushrooms, saute for 3-4 minutes. Add tomato sauce (or tomato paste), softened nori seaweed and crushed saffron(use your fingers).  Mix well until all ingredients are coated. Cook for a few minutes then add the rice, saute 1 minute. Pour in 2 3/4 cups of the warm broth and the artichoke hearts and give a stir. Shake the pan a bit to ensure the rice and vegetables are evenly spread. You can also gently mix with a spoon. The tradition says to not stir it anymore after adding the liquid, so this is a good time to taste the broth and adjust with salt and a little lemon juice. You can add one or two rosemary sprigs to give it a little extra flavor. Increase heat, bring to a simmer then lower heat and simmer gently on low uncovered for another 15 mins or until the rice is al dente. Taste the rice. If it's still a little hard, add some water (always hot) or broth until cooked through.  Add the peas to the top of the paella and cook until the rice has absorbed all the liquid. Keep in mind some rice ( like arborio) requires more liquid to cook all the way through. Turn off the heat, cover with a lid, foil or newspaper and let it rest for 5-10 mins. Serve immediately. Sprinkle with chopped fresh parsley, and serve with a slice of lemon on the side.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "may",
+                            "day": "10"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/coconut-millet-bowl-with-berbere-spiced-squash.jpg",
+                            "text": "coconut millet bowl with berbere spiced squash"
+                        },
+                        "heading": "Coconut Millet Bowl with Berbere Spiced Squash",
+                        "ingredients": "yield: 3 servings, 2 tablespoons Berbere spice, 2 tablespoons avocado oil, 2 tablespoons water, 1 1/2 lb kabocha squash 3/4 inch slices, 15 oz can chickpeas, 2 large shallots, 1 cup millet, 1 cup coconut milk, 1 tablespoon coconut oil, 1/4 teaspoon turmeric, salt, 1/2 cup coconut cream, 1/4 cup lime juice, zest of one lime, 1 teaspoon honey, 1/2 cup cucumber chunks, 1 teaspoon grated fresh ginger, 1/2 cup fresh cilantro, 1/4 cup fresh mint leaves, 3 cups fresh spinach",
+                        "text": "Mix together berbere, oil and water in a bowl set aside to hydrate for 10 minutes. Reserve 1/2 cup of the thick cream part of the coconut milk and set aside. Bring the remaining coconut milk, water, turmeric and salt to a simmer in a sauce pan.  Add coconut oil and millet bring to a gentle boil and then turn down to lowest simmer leave covered for 15 minutes.  Without lifting the lid. Leave covered (no peaking!) turn off heat and let sit at least 10 minutes more. Place prepared squash, shallots and chickpeas on sheet pan with parchment.  Liberally spread berbere paste with a brush.  Sprinkle with salt and place in the oven for 30 minutes or until everything is cooked and roasty. Blend together the reserved coconut cream, lime juice & zest, salt, honey, cucumber, and fresh ginger until smooth.  Add in cilantro and mint and blend just another few seconds, enough to break up the herbs but still keeping pieces and flecks. Assemble the bowls with the veggies on top of the warm millet.  Add fresh spinach and drizzle with the sauce. Top with toasted coconut.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "17"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/savory-leek-and-kale-galette.jpg",
+                            "text": "savory leek and kale galette"
+                        },
+                        "heading": "Savory Leek and Kale Galette",
+                        "ingredients": "yield: 5 servings, 1 1/4 all purpose flour, 1/4 cup rye or wheat flour, 1 teaspoon sugar, salt, 10 tablespoons unsalted butter, 7 tablespoons ice water, 1 teaspoon vinegar, 1 bunch kale, 2 cloves garlic, 3 medium leeks, 2 tablespoons olive oil, 1 tablespoon fresh sage, 2 tablespoons fresh parsley, 2 eggs, 1 teaspoon anchovy paste, 1 tablespoon dijon mustard, 1 tablespoon lemon juice, black pepper, 1 cup cheese, 1/2 cup mascarpone",
+                        "text": "Pulse flours, sugar, and salt in food processor to mix. Add chilled butter pieces.  Pulse 3-4 times until butter is still the size of pinto beans.  Dump mixture out into a bowl.  Place the bowl in the fridge for about 15 minutes to get it cold. Remove from fridge.  Add vinegar and the ice water.  Gently, carefully mix the dough just until it seems well distributed.  It will be very craggy and may have dry flour bits. Dump the dough onto a piece of parchment or plastic wrap.  Form dough together, as best as you can, into about a 4 x 4-inch square.  Wrap up and place in the fridge for 45 minutes. Roll out into a rectangle approximately 5 x 11.  Fold the pastry in thirds widthwise, like a business letter, resulting in 3 layers of dough. Turn the short end toward you and repeat step 6 two more times. After the third turn fold the dough in half.  Refrigerate for one hour or up to 3 days. Rest the dough for 20 minutes at room temperature before rolling out. Set oven to 425 degrees.  If using a pizza stone or cast iron pan, place in the oven now while preheating. Saute kale, garlic and leeks in olive oil with the 1/4 teaspoon of salt over medium heat for about 8 minutes.  Turn off heat and cover with a lid for 5-10 more minutes until tender.  Add sage and parsley.  Set aside. Meanwhile in another bowl combine eggs, anchovy paste, dijon, lemon juice, salt, and black pepper. Roll out dough on a piece of parchment to 1/8 of an inch thick and in an approximate 14 inch circle. Trim the edges of the dough with a sharp knife to allow them to puff up. Spread mascarpone cheese on the rolled out circle, all but the outer 2 inches. Lay filling and grated gruyere cheese on top of the mascarpone. Whisk together egg wash.  Brush the outside 2 inches of dough with the wash. Fold the outer 2 inches of dough in over the filling, overlapping dough every 2-3 inches gently pinching just enough to secure. Pour the seasoned beaten egg mixture evenly over the filling. Brush top of the crust with egg wash. Carefully transfer, lifting the parchment and galette onto the stone, cast iron or baking sheet.  Sliding onto a pizza peel or cutting board can help with the transfer. Bake 10 minutes then turn oven down to 375 and bake another 25-35 minutes until puffed and the crust is golden.  Cool 20 minutes before cutting.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "27"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/eggplant-chickpea-tagine.jpg",
+                            "text": "eggplant chickpea tagine"
+                        },
+                        "heading": "Eggplant Chickpea Tagine",
+                        "ingredients": "yield: 4 servings, 1 extra-large eggplant, salt, bowl of water, 2-4 tablespoons olive oil, 1 onion, 6-8 garlic cloves, 1 cup celery, 1 red bell pepper, 1 teaspoon cumin, 1 teaspoon coriander, 1/4 teaspoon cinnamon, 14-ounce can diced or crushed tomatoes, 1/3 cup raisins, 1/2 teaspoon pepper, 1 can chickpeas, 1 cup veggie broth",
+                        "text": "Quarter the eggplant, and cut into large chunks (1 1/2 inches at widest part). Place in a big bowl, cover with cool water just to enough to cover,  and stir in the salt. Place a plate over top to keep the eggplant submerged 20 minutes. Drain and pat dry. (Don't rinse.) Preheat the oven to 375F. In a large dutch oven, or ovenproof skillet, over medium-high heat, heat 2 tablespoons oil. Working in 2 batches, brown two sides of the eggplant, until golden, then set these aside. No need to cook through. Add more oil to the same pan, and the onion and saute 2-3 minutes, stirring. Add the garlic, celery and red pepper and lower heat, cook until tender about 5 minutes. Lower heat to low. Add the spices, canned tomatoes (and juices),  raisins, salt, pepper, chickpeas and veggie broth. Bring to simmer, stirring. Nestle in the eggplant and give the pan a good shake so the stew levels. It should be like a stew-like. If it seems dry, add a little water. Drizzle with a little olive oil, cover tightly and place in the warm oven. Bake 20-25 minutes or until eggplant is tender and cooked through. While it's baking make the couscous. Remove the lid, taste adding more salt to taste, keeping in mind the couscous will soak up some of the salt. If you feel the stew needs more flavor overall, add a little more ras el hanout, a 1/2 teaspoon at a time, tasting as you go. If it seems watery, bake uncovered for a few minutes. If dry, add a little water. To serve, Sprinkle with optional  Aleppo chili flakes and fresh Parsley. I like adding an additional drizzle of olive oil, or a dollop of yogurt, up to you.",
+                        "rating": "7",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "14"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/tomato-artichoke-soup-with-fennel-and-tarragon.jpg",
+                            "text": "tomato artichoke soup with fennel and tarragon"
+                        },
+                        "heading": "Tomato Artichoke Soup with Fennel and Tarragon",
+                        "ingredients": "yield: 3 servings, 2 tablespoons olive oil, 1 yellow onion, 3 cloves garlic, 1 fennel bulb, 28 oz can crushed tomatoes, 4 cups vegetable broth, 16 oz can artichoke hearts, 2 heaping tablespoons fresh tarragon, sea salt, 1/4 teaspoon ground black pepper, 2 tablespoons balsamic vinegar, 2 tablespoons pure maple syrup",
+                        "text": "In a soup pot, saute onion, fennel bulb and garlic in olive oil for 10 minutes over medium heat until soft. Add crushed tomatoes, vegetable broth, artichokes, tarragon, salt, pepper, balsamic and maple syrup. Cook until heated through.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "27"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/ethnic/miso-mushroom-bowl.jpg",
+                            "text": "miso mushroom bowl"
+                        },
+                        "heading": "Miso Mushroom Bowl",
+                        "ingredients": "yield: 2 servings, 1 cup short-grain brown rice, 4 large portobello mushrooms, 2 tablespoons olive oil, salt and pepper, 2 cups shredded cabbage, 1 cup matchstick carrots, 1 cup shredded daikon, 1 avocado, 1 cup edamame, 4 cups baby spinach, scallions, sprouts, sesame seeds, 3 tablespoons sesame oil, 3 tablespoons rice vinegar, 3 tablespoons maple syrup, 2 tablespoons miso, 2 tablespoons soy sauce, 2 tablespoons water, 1 small garlic clove, 2 teaspoons ginger, salt, cayenne",
+                        "text": "Heat oil in a large skillet over medium heat, season the oil with salt and pepper and sear the mushrooms in 2 batches, browning each side. Set aside. While the mushrooms are browning, prep the remaining veggies. Feel free to warm the edamame in the rice water. Make the dressing, place everything in a blender and blend until smooth. Divide warm rice among bowls. (Shallow wide bowls work best here.) Top with a handful of baby spinach. Divide and arrange edamame, cabbage, carrots, daikon, avocado, and mushrooms. Top with scallions, sprouts, sesame seeds. Drizzle with Dressing.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "may",
+                            "day": "11"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Fruits, grains/veggies",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/3-layer-fruit-smoothie.jpg",
+                            "text": "3 layer fruit smoothie"
+                        },
+                        "heading": "3-Layer Fruit Smoothie",
+                        "ingredients": "yield: 1 serving, 1/2 cup Almond Breeze almondmilk Vanilla, 1/4 cup plus 2 tablespoons almond butter, 1/2 frozen banana, 1 tablespoon cocoa powder, 2 soft Medjool dates, handful of ice, 1 teaspoon pure vanilla extract, 1 cup frozen strawberries, 1 cup frozen raspberries, chocolate chips",
+                        "text": "Make the bottom layer: Combine the almond milk, almond butter, banana, cocoa powder, and dates in a blender. Blend until smooth and the dates are fully pureed. Add the ice and pulse. Pour into 3 glasses (or 4 smaller glasses) and freeze for 30 minutes. Make the middle layer: Combine the almond milk, bananas, dates, and vanilla in a blender and blend until smooth. Add the ice and pulse. Layer this onto the smoothies and freeze for another 30 minutes. Make the top layer: Combine the strawberries, raspberries, and almond milk in a blender and blend until smooth. This layer will be very thick. Remove the glasses from the freezer and spoon the last layer onto the smoothies. Sprinkle with chocolate chips, if desired. The bottom two layers, since they are not completely frozen, should thaw to a drinkable (spoonable) consistency in 5 to 10 minutes. Serve and enjoy.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "december",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/festive-fruit-salad-with-lemon-and-ginger.jpg",
+                            "text": "festive fruit salad with lemon and ginger"
+                        },
+                        "heading": "Festive Fruit Salad with Lemon and Ginger",
+                        "ingredients": "yield: 3 servings, 1/2 honeydew, 1/3 seedless watermelon, 2 cups sliced strawberries, 1 cup mini mozzarella balls, 1 cup cherries, 1 loose-packed cup mint and basil leaves, 1/2 cup blueberries, 1/2 cup raspberries, 2 tablespoons extra-virgin olive oil, 1 tablespoon fresh lemon juice, 1 tablespoon white wine vinegar, 1 teaspoon minced ginger, 1/2 clove of garlic, 1/4 teaspoon maple syrup, salt, ground black pepper",
+                        "text": "In a small jar, shake together the olive oil, lemon juice, vinegar, ginger, garlic, maple syrup, salt and pepper. Assemble the fruit, cheese and and herbs on a platter. Drizzle the dressing over, gently toss, and serve!",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "20"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/whole-oat-porridge.jpg",
+                            "text": "whole oat porridge"
+                        },
+                        "heading": "Whole Oat Porridge",
+                        "ingredients": "yield: 1 serving, 1 cup whole oat groats, 4 cups additional filtered water, sea salt",
+                        "text": "Drain and rinse the oat groats and transfer them to a blender. Add 4 cups fresh water salt and pulse until the grains are coarsely ground. Pour into a medium pot and bring to a boil over high heat, whisking frequently. Cover the pot, reduce the heat to low, and simmer for 30 minutes, stirring occasionally to prevent sticking, until the grains are soft and the porridge is creamy. Serve hot, with desired toppings.",
+                        "rating": "9",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "7"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/forbidden-black-rice.jpg",
+                            "text": "forbidden black rice"
+                        },
+                        "heading": "Forbidden Black Rice",
+                        "ingredients": "yield: 2 servings, 1 cup uncooked forbidden black rice, 1 3/4 cups water, 1 teaspoon extra-virgin olive oil",
+                        "text": "Combine the rice, water, and olive oil in a medium pot and bring to a boil. Cover, reduce the heat to low, and simmer for 30 minutes. Remove from the heat and let it sit, covered, for 10 more minutes. Fluff with a fork.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "16"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/roasted-radishes.jpg",
+                            "text": "roasted radishes"
+                        },
+                        "heading": "Roasted Radishes",
+                        "ingredients": "yield: 3 servings, 9 to 12 medium red radishes, extra-virgin olive oil, sea salt and freshly ground black pepper, lemon juice",
+                        "text": "Slice the radishes in half and place them in a roasting dish (or on a baking sheet with parchment paper). Toss with drizzles of olive oil and pinches of salt and pepper and place cut-side down. Roast 10 to 15 minutes or until they reach your desired doneness. I like my radishes to have a bit of a crunchy bite. If you prefer softer radishes, roast them longer. Serve with squeezes of lemon and season to taste. These are also wonderful with dollops of radish green pesto or tossed into this radish salad.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "september",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/summer-fruit-salad.jpg",
+                            "text": "summer fruit salad"
+                        },
+                        "heading": "Summer Fruit Salad",
+                        "ingredients": "yield: 2 servings, 1 tablespoon lemon juice, 1 tablespoon lime juice, 1 teaspoon maple syrup, 1/2 teaspoon grated ginger, sea salt, 10 strawberries, 2 peaches, 1/2 cup cherries, 1/2 cup blueberries, 1/2 cup raspberries, 1/4 cup fresh basil, 1/4 cup fresh mint",
+                        "text": "In a medium bowl, whisk together the lemon juice, lime juice, maple syrup, ginger, and salt. In a large bowl, toss together the strawberries, peaches, cherries, blueberries, raspberries, basil, and mint. Drizzle the dressing on top and toss to coat. Garnish with basil and mint and serve.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/best-green-smoothie.jpg",
+                            "text": "best green smoothie"
+                        },
+                        "heading": "Best Green Smoothie",
+                        "ingredients": "yield: 1 serving, 1 frozen banana, 2 cups fresh baby spinach, 1/4 cup fresh mint, 2 tablespoons almond butter, 2 ice cubes, 1/4 teaspoon good vanilla extract, 3/4 cup almond breeze almondmilk cashewmilk",
+                        "text": "In a blender, combine the banana, spinach, mint leaves, almond butter, ice, vanilla and cashew milk. Blend until smooth. Add more cashew milk as needed for desired consistency. Pour into glasses and serve.",
+                        "rating": "13",
+                        "date": {
+                            "year": "2012",
+                            "month": "december",
+                            "day": "10"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/fajita-veggies.jpg",
+                            "text": "fajita veggies"
+                        },
+                        "heading": "Fajita Veggies",
+                        "ingredients": "yield: 4 servings, 3 multi-colored peppers, 3 portobello mushrooms, 1 red onion, 2 tablespoons avocado oil, 2 garlic cloves, 1/2 teaspoon chili powder, 1/2 teaspoon cumin, sea salt, balsamic vinegar, 2 limes, freshly ground black pepper, 8 corn tortillas, guacamole, jalapenos, diced tomatoes, cilantro, tomatillo salsa",
+                        "text": "Arrange the peppers on a tray and the mushrooms and onion wedges on a separate rimmed plate. In a small bowl, whisk together the avocado oil, garlic, chili powder, cumin, salt, and several grinds of pepper. Drizzle 1 scant tablespoon of the mixture over the peppers and toss to coat. Drizzle the remaining marinade over the mushrooms and onions. Drizzle the mushrooms with a splash of balsamic vinegar and use your hands to coat the mushrooms on both sides. Grill the peppers in the cast-iron pan for 8 to 10 minutes, tossing occasionally, until charred and soft. Be careful not to overfill the pan or the veggies won't char on the edges - cook them in 2 batches, if necessary. Grill the mushrooms and onion wedges directly on the grill for about 4 minutes about per side. Remove everything from the grill, using a potholder to remove the cast-iron pan. Squeeze the juice of 1/2 lime over the peppers and season with salt, pepper, and more chili powder, to taste. Slice the mushrooms into strips and place on a serving dish. Transfer the onions and the peppers to a serving skillet or large platter. Serve with the tortillas, guacamole, jalapenos, tomatoes, cilantro, salsa, and remaining lime wedges for serving.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/rice-bowl.jpg",
+                            "text": "rice bowl"
+                        },
+                        "heading": "Rice Bowl",
+                        "ingredients": "yield: 2 servings, 2 handfuls snap peas, 1 to 2 cups cooked short grain white rice, 2 cups shredded green cabbage, 1 small carrot, 1/2 cucumber, 1 small ripe ataulfo mango, 1/2 cup cooked black beans, 2 tablespoons pickled ginger, 1/4 cup thinly sliced fresh basil, 1/4 cup toasted peanuts, sesame seeds, 1/2 avocado, 2 tablespoons tamari, 2 tablespoons rice vinegar, 2 tablespoons lime juice, 2 garlic cloves, 2 teaspoons cane sugar, 1/2 teaspoon sriracha",
+                        "text": "In a small bowl, whisk together the tamari, vinegar, lime juice, garlic, cane sugar, and sriracha. Bring a small pot of salted water to a boil and place a bowl of ice water nearby. Blanch the snap peas by placing them in the boiling water for 1 1/2 minutes, then scoop them into the ice water to stop the cooking process. Once cooled, drain, pat dry, and chop. Assemble the bowls with the rice, shredded cabbage, carrot, cucumber, mango, black beans, pickled ginger, and basil. Top with the toasted peanuts, sesame seeds, and avocado, if using. Drizzle bowls with half the dressing and serve the rest on the side along with tamari and sriracha, if desired.",
+                        "rating": "16",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "8"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/fruits-grains-veggies/rosemary-roasted-veggies.jpg",
+                            "text": "rosemary roasted veggies"
+                        },
+                        "heading": "Rosemary Roasted Veggies",
+                        "ingredients": "yield: 3 servings, 2 cups butternut squash, 2 cups cauliflower florettes, 6-8 cipollini onions, olive oil, balsamic vinegar, 2 cloves chopped garlic, 2 tablespoons chopped rosemary, salt, pepper, maple syrup, 1/4 cup toasted pine nuts, 1/4 cup chopped parsley",
+                        "text": "Place butternut squash, cauliflower and cipollini onions on a large baking sheet. Drizzle lightly with olive oil, balsamic vinegar, and toss with chopped garlic, chopped rosemary and a few generous pinches of salt and pepper. Roast for 30-45 minutes or until the veggies are golden brown and tender. Check halfway through and give them a toss so they cook evenly on all sides. Remove veggies from the oven, drizzle with some more olive oil and a little maple syrup (or skip the maple and toss with a handful of dried cranberries). Toss with pine nuts and parsley. Taste and adjust seasonings. Add additional salt and pepper as needed, and serve.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "19"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Gourment Sandwiches",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/gourmet-sandwiches/caprese-sandwich.jpg",
+                            "text": "caprese sandwich"
+                        },
+                        "heading": "Caprese Sandwich",
+                        "ingredients": "yield: 2 servings, 4 focaccia squares, handful of arugula, 1 fresh mozzarella ball, 2 tomatoes, 1/3 cup roasted cherry tomatoes, pickled onion, basil leaves, extra-virgin olive oil, sea salt, ground black pepper",
+                        "text": "Assemble the sandwiches on the focaccia with the arugula, mozzarella, and tomato slices. Add the roasted tomatoes and a few pickled onions, if desired. Top with basil leaves, a drizzle of olive oil, and season with salt and pepper.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "20"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/gourmet-sandwiches/avocado-sandwich.jpg",
+                            "text": "avocado sandwich"
+                        },
+                        "heading": "Avocado Sandwich",
+                        "ingredients": "yield: 1 serving, 1 1/2 cups edamame, 1/4 cup cilantro, 3 tablespoons fresh lemon juice, 1 tablespoon chopped scallions, 1/2 small garlic clove, 2 tablespoons olive oil, 1 to 3 tablespoons water, sea salt, 8 slices bread, cucumber, 1 small avocado, pickled onions, 2 cups of arugula",
+                        "text": "Place the edamame, cilantro, lemon juice, scallions, garlic, and sea salt into the bowl of a food processor. Pulse until chopped. Add the olive oil and blend until smooth. Add up to 3 tablespoons of water to create a smooth, spreadable consistency. Season to taste and chill until ready to use. The filling can be in advance and stored in the fridge for 3 to 4 days. Spread the edamame sandwich filling on 4 slices of bread. Top with the cucumber and avocado slices, pickled onions, arugula and the remaining bread slices.",
+                        "rating": "19",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "11"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/gourmet-sandwiches/chickpea-salad-sandwich.jpg",
+                            "text": "chickpea salad sandwich"
+                        },
+                        "heading": "Chickpea Salad Sandwich",
+                        "ingredients": "yield: 2 servings, 1 1/2 cups cooked chickpeas, 2 tablespoons tahini, 1 teaspoon dijon mustard, 1/2 garlic clove, 1 teaspoon capers, 1 green onion, 2 tablespoons chopped cilantro, 2 tablespoons fresh lemon juice, sea salt, ground black pepper, handful of thin green beans, 1 soft baguette, 10 olives, 1 red onion, regular mayo, 1/4 cucumber, 1 radish, 6 to 8 fresh basil leaves",
+                        "text": "In a food processor, combine the chickpeas, tahini, Dijon mustard, garlic, capers, green onions, cilantro, lemon juice, and pinches of salt and pepper. Pulse until combined, but do not puree. Season to taste. Blanch the green beans. Bring a small pot of salted water to a boil and place a bowl of ice water nearby. Drop the green beans into the boiling water for 1 minutes, then scoop into the ice water to stop the cooking process. Once cool, drain, pat dry, and chop into 1-inch pieces. Assemble the sandwiches: Spread the chickpea salad on one side of the baguette. Press the chopped green beans into the chickpea salad and top with the olives and red onion slices. Spread of layer of mayo on the other half of the baguette and top with the sliced cucumbers, radishes, and basil. Season with salt and pepper, to taste. Press together, slice, and enjoy!",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "23"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/gourmet-sandwiches/banh-mi-sandwich.jpg",
+                            "text": "banh mi sandwich"
+                        },
+                        "heading": "Banh Mi Sandwich",
+                        "ingredients": "yield: 3 servings, 1 package extra firm tofu, extra-virgin olive oil, 4 baguette pieces, regular mayo, cilantro, sriracha, 1 small daikon, 2 small carrots, 1/2 small cucumber, 1/2 jalapeno, 1/4 cup white wine vinegar, 1/4 cup rice vinegar, sugar, salt, 2 tablespoons tamari, 1/2 lime + a little zest, 1 garlic clove, 1/2 teaspoon minced ginger, ground black pepper",
+                        "text": "Place the daikon, carrots, cucumbers, and jalapenos in a medium jar with the white wine vinegar, rice vinegar, sugar, and salt. If the liquids don't cover the veggies, add about 2 tablespoons water and more vinegar if necessary. Let chill for at least an hour, or store in the fridge for up to a week. Drain the tofu and slice it into 1/2-inch slices. Place it on a towel and gently pat dry to remove excess water. In a small bowl, whisk together the olive oil, tamari, lime juice and zest, garlic, ginger, and pepper. Place the tofu in a shallow pan and pour the marinade on top. Flip the tofu to fully coat it, adding more tamari if necessary. Let the tofu marinate for at least 15 minutes. Heat a nonstick skillet to medium-high heat. Add a little oil to the pan and place the tofu pieces with enough space between each so that they're not too crowded, working in batches if necessary. Without moving the tofu slices around too much, let them cook for a few minutes per side until they're deeply golden brown and caramelized around the edges. Remove from heat and season to taste. Assemble sandwiches with the baguette, mayo, tofu slices, pickled veggies, and cilantro, and serve with sriracha.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "may",
+                            "day": "18"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/gourmet-sandwiches/tomato-basil-and-artichoke-picnic-sandwich.jpg",
+                            "text": "tomato basil and artichoke picnic sandwich"
+                        },
+                        "heading": "Tomato, Basil and Artichoke Picnic Sandwich",
+                        "ingredients": "yield: 2 servings, 1 1/2 cups edamame, 1/4 cup basil, 3 tablespoons fresh lemon juice, 1 tablespoon chopped scallions, 1/2 small garlic clove, 2 tablespoons olive oil, 1 to 3 tablespoons water, sea salt, 1 large baguette, handful of baby salad greens, 2-3 medium tomatoes, 10 basil leaves, 10 jarred roasted artichokes, pine nuts",
+                        "text": "Place the edamame, basil, lemon juice, scallions, garlic, and sea salt into the bowl of a food processor. Pulse until chopped. Add the olive oil and blend until smooth. Add up to 3 tablespoons of water to create a smooth, spreadable consistency. Season to taste and chill until ready to use. The filling can be in advance and stored in the fridge for 3 to 4 days. Slice one large baguette in half and assemble with the basil-edamame spread, greens, tomatoes, basil, artichokes and pine nuts. Close the baguette, wrap it in foil and place in the fridge until you're ready to divide into servings. Slice into 4 individual servings and either wrap them to go or enjoy!",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Holiday Foods",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/avocado-and-pomegranate-crostini.jpg",
+                            "text": "avocado and pomegranate crostini"
+                        },
+                        "heading": "Avocado and Pomegranate Crostini",
+                        "ingredients": "yield: 4 servings, 1 baguette, olive oil, 1 large avocado, juice of 1 lime, 2 tablespoons chopped chives, salt and pepper, 1/4 cup feta cheese, 2 tablespoons pomegranate seeds, honey",
+                        "text": "Brush baguette sliced with olive oil and a few pinches of salt. Toast until golden brown around the edges. Mix together avocado cubes, lime juice, chives, salt and pepper. Stir in feta and pomegranate seeds. Taste & adjust seasonings - adding more salt and/or lime juice to your liking. Spoon onto toasted crostini pieces, drizzle with a little bit of honey (optional) and serve.",
+                        "rating": "7",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "26"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/parmigiano-and-fig-grilled-cheese.jpg",
+                            "text": "parmigiano and fig grilled cheese"
+                        },
+                        "heading": "Parmigiano and Fig Grilled Cheese",
+                        "ingredients": "yield: 2 servings, sourdough bread slices, grated fresh parmesan cheese, fig jam, a few sprigs of arugula, olive oil, balsamic vinegar",
+                        "text": "Assemble sandwiches with cheese fig spread and (optional) a drizzle of balsamic vinegar. Heat oil in a pan or grill pan. Grill for a few minutes per side, pressing sandwiches down with the back side of a spatula. Or for a panini press effect (without the press), weigh them down by placing a heavier pan on top.",
+                        "rating": "13",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "13"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/butternut-baked-eggs.jpg",
+                            "text": "butternut baked eggs"
+                        },
+                        "heading": "Butternut Baked Eggs",
+                        "ingredients": "yield: 3 servings, 1 cup cubed butternut squash, extra-virgin olive oil, 6 large eggs, 1/4 cup almond milk, 1 garlic clove, 1 medium leek, 2 tablespoons chopped fresh herbs, balsamic vinegar, sea salt and freshly ground black pepper",
+                        "text": "Toss the butternut squash cubes with a drizzle of olive oil and a few pinches of salt and pepper. Roast until the squash is tender, about 20 minutes. Whisk together the eggs, almond milk, and minced garlic and set aside. Heat a 1 teaspoon of olive oil in an 8-inch cast-iron skillet over medium heat. Add the leeks and a pinch of salt and pepper and saute until soft, about 1 minute. Stir in the herbs and roasted butternut squash and cook for another minute. Add the balsamic vinegar and stir so that nothing is sticking to the bottom of the pan. Add the egg mixture and spread in an even layer. Transfer the skillet to the oven and bake for 20 to 25 minutes, or until the eggs are set and the edges are golden brown.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/holiday-cocktail-and-cookie-swap.jpg",
+                            "text": "holiday cocktail and cookie swap"
+                        },
+                        "heading": "Holiday Cocktail and Cookie Swap",
+                        "ingredients": "yield: 2 servings, 1 cup margarine, 1 1/2 cups powdered sugar, 1/4 cup almond milk, 1 teaspoon vanilla, 1/2 teaspoon almond extract, 2 1/2 cups flour, 1 teaspoon baking soda, 1/2 teaspoon baking powder",
+                        "text": "With an electric mixer, beat margarine until creamy. Mix in powdered sugar until creamy, and then add almond milk, vanilla and almond extract. Combine flour, baking soda and baking powder. Gradually add dry ingredients to wet ingredients until blended. Spoon dough onto a sheet of plastic wrap. Wrap dough and refrigerate at least two hours. Pre-heat oven to 350 degrees. Divide dough in half. On a floured surface, roll each half to 1/4 inch thickness. Use cookie cutters to cut into desired shapes. Bake 7 to 8 minutes. Let cool and frost (optional).",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "5"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/butternut-squash-soup.jpg",
+                            "text": "butternut squash soup"
+                        },
+                        "heading": "Butternut Squash Soup",
+                        "ingredients": "yield: 6 servings, 2 tablespoons extra-virgin olive oil, 1 large yellow onion, sea salt, 1 butternut squash, 3 garlic cloves, 1 tablespoon chopped fresh sage, 1/2 tablespoon minced fresh rosemary, 1 teaspoon grated fresh ginger, 3 to 4 cups vegetable broth, freshly ground black pepper, chopped parsley, toasted pepitas, crusty bread",
+                        "text": "Heat the oil in a large pot over medium heat. Add the onion, salt, and several grinds of fresh pepper and saute until soft, 5 to 8 minutes. Add the squash and cook until it begins to soften, stirring occasionally, for 8 to 10 minutes. Add the garlic, sage, rosemary, and ginger. Stir and cook 30 seconds to 1 minute, until fragrant, then add 3 cups of the broth. Bring to a boil, cover, and reduce heat to a simmer. Cook until the squash is tender, 20 to 30 minutes. Let cool slightly and pour the soup into a blender, working in batches if necessary, and blend until smooth. If your soup is too thick, add up to 1 cup more broth and blend. Season to taste and serve with parsley, pepitas, and crusty bread.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "21"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/minty-millet-and-pomegranate-salad.jpg",
+                            "text": "minty millet and pomegranate salad"
+                        },
+                        "heading": "Minty Millet and Pomegranate Salad",
+                        "ingredients": "yield: 4 servings, 2 cups cooked millet, 1 bulb fennel, 1 cup chickpeas, 1/4 cup red cabbage, 1/4 cup scallions, 1/3 cup pomegranate seeds, 1/3 cup toasted pistachios, handfuls of baby salad greens, handful of mint leaves, 2 tablespoon olive oil, 2 tablespoon tahini, 3 tablespoons fresh squeezed lemon, 3 tablespoons fresh squeezed orange, 1-2 teaspoon maple syrup, salt and pepper",
+                        "text": "Whisk together the dressing ingredients, taste and adjust seasonings. Set aside. Optional step: toss your chickpeas in a small skillet w/ a little olive oil, salt and pepper until browned. Toss together all salad ingredients with enough dressing to coat (you don't have to use it all). Taste and adjust seasonings.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "11"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/holiday-foods/curried-chickpea-salad-sliders.jpg",
+                            "text": "curried chickpea salad sliders"
+                        },
+                        "heading": "Curried Chickpea Salad Sliders",
+                        "ingredients": "yield: 5 servings, 1 1/2 cups cooked chickpeas, 1 small avocado, 1 tablespoon tahini, 1/4 teaspoon minced garlic, 1/4 cup diced red onion, 1/2 cup chopped cilantro leaves, 1/4 cup hemp seeds, 1/2 teaspoon curry powder, juice of 1 small lemon, sea salt and freshly ground black pepper, 8 mini slider buns, onion, lettuce, tomato, herbs",
+                        "text": "In a medium bowl, combine the chickpeas, avocado, tahini, garlic, curry powder, lemon, and generous pinches of salt and pepper. Mash with a potato masher or a large fork until all ingredients are cohesive. Stir in the onion, cilantro, and hemp seeds (or walnuts). Season to taste. Chill until ready to use. Assemble sandwiches whatever fixings you like.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "jun",
+                            "day": "19"
+                        }
+                    }
+                ]
+            },
+            {
+                "link": "index.html",
+                "name": "Italian",
+                "recipes": [
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/italian-chopped-salad.jpg",
+                            "text": "italian chopped salad"
+                        },
+                        "heading": "Italian Chopped Salad",
+                        "ingredients": "yield: 6 servings, 1/4 cup extra-virgin olive oil, 1 1/2 tablespoons lemon juice, 1 tablespoons red wine vinegar, 1/2 shallot, 1 garlic clove, 1 tablespoon dried oregano, sea salt, freshly ground black pepper, 1 small head iceberg lettuce, 1 head radicchio, 1/2 small red onion, 1 pint cherry tomatoes, 1 can chickpeas, 4 ounces fresh pearl mozzarella, 4 ounces provolone cheese, 5 pepperoncini",
+                        "text": "Make the dressing. In a small bowl, whisk together the olive oil, lemon juice, vinegar, shallot, garlic, oregano, salt, and pepper, and set aside. Cut the iceberg lettuce in half through the core, then cut out the core. Slice the lettuce lengthwise into 1/4-inch strips. Repeat with the radicchio. In a large bowl, combine the lettuce, radicchio, tomatoes, chickpeas, mozzarella, provolone, and pepperoncini. Drizzle with the dressing and toss gently to coat. Season with salt and pepper and toss again. Sprinkle with extra oregano, and serve.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/orecchiette-with-broccoli-rabe.jpg",
+                            "text": "orecchiette with broccoli rabe"
+                        },
+                        "heading": "Orecchiette with Broccoli Rabe",
+                        "ingredients": "yield: 4 servings, 3 italian sausages, extra-virgin olive oil, 1 1/2 bunches broccoli rabe, 8 ounces dry orecchiette pasta, 4 garlic cloves, 1/4 cup dry white wine, 1/3 cup grated parmesan cheese, 1 tablespoon lemon juice, 1/2 teaspoon red pepper flakes, sea salt and freshly ground black pepper, 2 caramelized onions, 8 oil-packed sun-dried tomatoes, 1/3 cup pine nuts",
+                        "text": "Break the sausages into small pieces. Heat a cast-iron skillet to medium, brush with 1/2 teaspoon of olive oil and cook 1 to 2 minutes or until well-browned. Remove and set aside. Trim 1/2 inch off the ends of the broccoli rabe. Prepare a large pot of salted boiling water. Drop the broccoli rabe into the boiling water and boil for 2 minutes. Scoop out the broccoli rabe, reserving the boiling water. Drain and place onto a clean kitchen towel. Pat dry and chop into 1-inch pieces. Bring the pot of water back to a boil, add more salt, and cook the pasta according to package directions or until al dente. Reserve 1/2 cup of the starchy pasta water. When the pasta has about a minute left, heat 1 tablespoon of olive oil in a large skillet over medium heat. Add the garlic and broccoli rabe and cook for 30 seconds. Add the wine, cook for 30 seconds, then use a slotted spoon to scoop the pasta directly from the pasta pot into the skillet. Add the reserved pasta water, cheese, lemon juice, zest, red pepper flakes, 1/2 teaspoon salt, and freshly ground pepper and stir to combine. Stir in the cooked sausage, caramelized onions, sun-dried tomatoes, and top with the pine nuts. Season to taste and serve.",
+                        "rating": "13",
+                        "date": {
+                            "year": "2012",
+                            "month": "march",
+                            "day": "25"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/cast-iron-skillet-pizza.jpg",
+                            "text": "cast iron skillet pizza"
+                        },
+                        "heading": "Cast Iron Skillet Pizza",
+                        "ingredients": "yield: 2 servings, 1 ounce italian sausage, 14 ounces homemade pizza dough, extra-virgin olive oil, 1/2 cup grated mozzarella cheese, 2 tablespoons chopped red onion, 7-ounce can artichoke hearts, 1/3 cup roasted red peppers and roasted tomatoes, dollops of pesto, basil leaves, red pepper flakes",
+                        "text": "Cut the plant-based sausage into small pieces. In a small cast-iron skillet over medium heat, cook the sausage pieces until browned, 1 to 2 minutes. Press the pizza dough into a dry 10-inch cast iron skillet, pressing a thicker rim of dough around the edge to shape the pizza crust. Prick the stretched dough all over with a fork. Heat the skillet on the stove for 2 minutes over medium heat. This helps the bottom of the crust become crispy. Remove from the heat and assemble the pizza. Brush the crust with olive oil. Spread a thin layer of cashew cream onto the dough as a base for the toppings, or sprinkle on the grated mozzarella cheese. Top with the red onion, artichokes, red peppers and/or tomatoes, and the sausage pieces. Bake for 10 to 12 minutes, or until the crust is lightly golden brown and cooked through. Top with dollops of pesto, a drizzle of olive oil, fresh basil, and red pepper flakes.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "3"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/creamy-pasta-pomodoro.jpg",
+                            "text": "creamy pasta pomodoro"
+                        },
+                        "heading": "Creamy Pasta Pomodoro",
+                        "ingredients": "yield: 4 servings, 1 tablespoon extra-virgin olive oil, 3 tablespoons finely minced shallot, 1 large garlic clove, sea salt, black pepper, 1 14-ounce can chopped tomatoes, 1 teaspoon balsamic vinegar, 1/8 teaspoon cane sugar, dried oregano, crushed red pepper flakes, tomato marinara, 1/4 cup raw cashews, 1/2 tablespoon tomato paste, 1/4 cup water, 10 ounces rigatoni, 2 medium zucchini, 2 tablespoons fresh thyme leaves, 2 14-ounce cans cherry tomatoes, 6 cups spinach",
+                        "text": "Make the marinara sauce: Heat the olive oil in a small pot over low heat. Add the shallot, garlic, salt, and a few grinds of black pepper and cook for 3 minutes, stirring often. Add the tomatoes and their juices, balsamic vinegar, cane sugar, oregano, and red pepper flakes. Cover and simmer over low heat for 20 minutes, stirring occasionally. Make the creamy sauce: Add the marinara to a blender with the cashews, tomato paste, salt, and 1/4 cup of water. Blend until smooth. Set aside until ready to use. Before serving, stir in 1/4 cup hot pasta cooking water to loosen it up so that it'll nicely coat the pasta. Cook the pasta in a large pot of salted boiling water according to package directions or until al dente. While the pasta cooks, heat generous drizzles of olive oil in a nonstick skillet over medium heat. Add the zucchini, thyme, and generous pinches of salt and pepper. Sautee, stirring occasionally, until lightly browned, about 3 minutes. Add the tomatoes, reduce the heat to low, and cook for 2 to 3 more minutes or until heated through. Add the spinach and gently toss until wilted. Season to taste with more salt and pepper. Scoop the pasta into individual bowls, add scoops of the creamy sauce, and toss to coat. Distribute the vegetables among the bowls and top with parsley and or basil. Season to taste and serve.",
+                        "rating": "12",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "10"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/spaghetti-bolognese.jpg",
+                            "text": "spaghetti bolognese"
+                        },
+                        "heading": "Spaghetti Bolognese",
+                        "ingredients": "yield: 3 servings, 2 tablespoons extra-virgin olive oil, 1/2 yellow onion, 1 medium carrot, 4 cups chopped cremini mushrooms, 1 tablespoon chopped rosemary, 1/2 cup walnuts, 2 garlic cloves, 1 tablespoon balsamic vinegar, 1 tablespoon tamari, 1 14-ounce can fire roasted diced tomatoes, 1 1/2 cups cooked brown or green lentils, 1 tablespoon tomato paste, 1 teaspoon dried sage, 1 cup halved cherry tomatoes, 8 ounces spaghetti, 1 cup sliced fresh basil, 1/2 cup toasted pine nuts, red pepper flakes, shaved pecorino cheese, sea salt and freshly ground black pepper",
+                        "text": "Heat the oil in a large skillet over medium heat. Add the onion and carrot and pinches of salt and pepper and cook until they begin to soften, about 3 minutes. Add the mushrooms, another pinch of salt, and cook until soft, stirring only occasionally, about 8 more minutes. Stir in the rosemary. Push everything to one side of the pan to make room for the walnuts. Add the crushed walnuts and toast them for about 30 seconds, then stir everything together. Stir in the garlic, then add the balsamic vinegar and tamari and stir to incorporate. Add the tomatoes, lentils, tomato paste, sage and fresh cherry tomatoes, and stir. Reduce the heat and simmer for 20 to 30 minutes until the sauce thickens. Season to taste. Bring a large pot of salted water to a boil. Prepare the pasta according to the instructions on the package, cooking until al dente. Drain and add the pasta to the pan with the sauce. Serve with fresh basil, pine nuts, pinches of red pepper flakes and pecorino cheese, if desired.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "17"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/creamy-polenta.jpg",
+                            "text": "creamy polenta"
+                        },
+                        "heading": "Creamy Polenta",
+                        "ingredients": "yield: 4 servings, 1 cup stone-ground polenta, 4 cups water, 2 tablespoons extra-virgin olive oil, sea salt",
+                        "text": "In a blender, pulse the dry polenta to make the granules less coarse. This gives the polenta a creamy texture and helps it cook faster. Remove from the blender and run your hands through the dry polenta to make sure there aren't any lumps. In a medium pot, bring 3 cups of water to a high simmer. Slowly whisk in the polenta. Add 1 more cup of water and simmer for 15 minutes, stirring frequently. If your polenta is very thick, whisk in the remaining 1/2 cup water. The polenta should be creamy. Turn off the heat and whisk in the olive oil and sea salt. Cover and let stand for 5 minutes. Season to taste and serve hot.",
+                        "rating": "11",
+                        "date": {
+                            "year": "2012",
+                            "month": "february",
+                            "day": "2"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/pattypan-squash-panzanella.jpg",
+                            "text": "pattypan squash panzanella"
+                        },
+                        "heading": "Pattypan Squash Panzanella",
+                        "ingredients": "yield: 3 servings, 5-6 small pattypan squash, olive oil, 1 1/2 cup cherry tomatoes, 1 small cucumber, 1/2 clove garlic, sherry vinegar, 1/2 cup mini mozzarella balls, 4-5 slices stale sourdough bread, 1/4 cup toasted pine nuts, handful of torn fresh basil leaves, sea salt and freshly ground black pepper",
+                        "text": "Heat a grill pan to medium. Toss the squash pieces with a drizzle of olive oil, and a few pinches of salt and pepper. Place the squash onto the grill pan and grill each side until the squash is tender and char marks form (about 2 minutes per side). Place the cherry tomatoes and cucumbers in a large bowl and toss with a drizzle of olive oil, the minced garlic, a drizzle of sherry vinegar, and a few pinches of salt and pepper. Toss again. When the squash is done, add it to the bowl along with mozzarella, bread, pine nuts, and basil. Add more olive oil, sherry vinegar, salt and pepper as needed. Let the salad sit at room temp for about 15 minutes so that the bread has the chance to soak up the flavorful juices.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "july",
+                            "day": "22"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/tortellini-soup.jpg",
+                            "text": "tortellini soup"
+                        },
+                        "heading": "Tortellini Soup",
+                        "ingredients": "yield: 4 servings, 2 tablespoons extra-virgin olive oil, 1 medium yellow onion, 2 medium carrots, 1 fennel bulb, sea salt, black pepper, 2 teaspoons balsamic vinegar, 2 garlic cloves, 1 can can diced tomatoes, 3 1/2 cups vegetable broth, 1 tablespoon fresh thyme leaves, 1/2 teaspoon red pepper flakes, 9 to 12 ounces cheese tortellini, 5 cups torn kale, dollops of kale pesto, 1/2 cup chopped fresh parsley",
+                        "text": "Heat the oil in a large pot over medium heat. Add the onion, carrots, fennel, salt, and a few grinds of black pepper and cook, stirring, until the vegetables begin to soften, about 8 minutes. Add the balsamic vinegar, garlic, tomatoes, broth, thyme, and red pepper flakes. Cover and simmer for 30 minutes, or until the vegetables are tender. Meanwhile, cook the tortellini in a pot of salted boiling water according to the package directions. Add the tortellini and the kale to the soup and simmer for 2 more minutes. Season to taste with salt and a few generous grinds of pepper. Serve in bowls with scoops of the kale pesto and sprinkle with fresh parsley.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "12"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/quinoa-risotto.jpg",
+                            "text": "quinoa risotto"
+                        },
+                        "heading": "Quinoa Risotto",
+                        "ingredients": "yield: 5 servings, 3 to 4 cups roasted broccoli and brussels sprouts, 2 cups cooked white beans, 1 to 2 garlic cloves, 1 tablespoon fresh lemon juice, nutritional yeast, extra virgin olive oil, 2 1/2 cups vegetable stock, 4 to 5 shallots, 2 teaspoons minced fresh thyme leaves, 1 cup quinoa, salt and pepper, 1/2 cup chopped fresh flat-leaf parsley",
+                        "text": "Roast the broccoli and Brussels sprouts. In a blender, puree the white beans with the garlic, lemon juice, nutritional yeast, 2 teaspoons of the olive oil and 1/3 cup of the vegetable stock. As soon as you have a smooth and creamy puree, stop the blender. Set the bean puree aside. Heat the remaining 1 tablespoon of olive oil in a braiser or medium-sized soup pot over medium heat. Add the shallots, and saute until transluscent, about 4 minutes. Add the fresh thyme and stir until fragrant, about 1 minute. Add the rinsed quinoa to the pot and stir to coat in the oil, herbs, and shallots. Then, add the remaining 2 cups of vegetable stock to the pot and stir. Bring to a boil, then simmer until the quinoa has absorbed almost all of the liquid, about 13 to 15 minutes. Scrape the white bean puree into the pot and stir to combine. The quinoa should have a creamy consistency without seeming dry. If it seems dry, add a good splash of vegetable stock. Season the risotto with salt and pepper. Add half of the parsley to the pot and stir to mix throughout. Divide the quinoa risotto among 4 bowls. Top all portions of risotto with the roasted vegetables and remaining parsley. Drizzle a bit of olive oil over the top if you like.",
+                        "rating": "17",
+                        "date": {
+                            "year": "2012",
+                            "month": "december",
+                            "day": "5"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/easy-pasta-salad.jpg",
+                            "text": "easy pasta salad"
+                        },
+                        "heading": "Easy Pasta Salad",
+                        "ingredients": "yield: 6 servings, 3 cups uncooked fusilli pasta, 2 heaping cups halved cherry tomatoes, 1 1/2 cups cooked chickpeas, 2 cups arugula, 1 cup cucumbers, 1 cup crumbled feta cheese, 1 cup basil leaves, 1/2 cup minced parsley, 1/2 cup chopped mint, 1/4 cup toasted pine nuts, 1/4 cup extra-virgin olive oil, 3 tablespoons lemon juice, 1 teaspoon dijon mustard, 3 garlic cloves, dried italian seasoning, 1/4 teaspoon red pepper flakes, sea salt",
+                        "text": "Bring a large pot of salted water to a boil. Prepare the pasta according to the package directions. Meanwhile, make the dressing. In a small bowl, whisk together the olive oil, lemon juice, mustard, garlic, red pepper flakes, and salt. Drain the pasta, toss it with a little olive oil (so that it doesn't stick together) and let it cool to room temp. Transfer to a large bowl with the tomatoes, chickpeas, arugula, cucumbers, feta cheese, basil, parsley, mint, and pine nuts. Pour the dressing and toss to coat. Season to taste with more lemon, salt, pepper, and/or a drizzle of olive oil, if desired, and serve.",
+                        "rating": "14",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "19"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/flatbread-pizza.jpg",
+                            "text": "flatbread pizza"
+                        },
+                        "heading": "Flatbread Pizza",
+                        "ingredients": "yield: 3 servings, 1 cup cooked white beans, 3 canned artichokes, 1 tablespoon lemon juice, sea salt, 1/2 garlic clove, extra-virgin olive oil, 1/2 cup pepitas, 2 cups loose-packed spinach, 1 flatpizza crust, 1 cup white cheddar cheese, 1/2 cup finely chopped parsley, handful of mint leaves, handful of microgreens, red pepper flakes",
+                        "text": "Make the Creamy Artichoke Spread: In a food processor, combine the beans, artichokes, lemon juice, salt, garlic, and olive oil and puree until creamy. Scoop the mixture out of the food processor and set aside. Make the Spinach Pesto: In the food processor, combine the pepitas, garlic, salt, lemon juice, and spinach. Pulse until the pepitas are well chopped. Drizzle in the olive oil and pulse until combined. Place the flatpizza crust on a baking sheet. Spread a layer of the artichoke spread over the crust (you likely won't use it all). Lay the spinach leaves on top, then top with 3/4 cup of the cheese, the artichokes, and the remaining 1/4 cup cheese. Bake for 10 to 14 minutes or until the cheese is bubbling. Remove from the oven and top with dollops of pesto and sprinkle with the parsley, mint leaves, microgreens, and red pepper flakes, if desired. Slice and serve.",
+                        "rating": "16",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "1"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/easy-baked-ziti.jpg",
+                            "text": "easy baked ziti"
+                        },
+                        "heading": "Easy Baked Ziti",
+                        "ingredients": "yield: 8 servings, 4 cups marinara sauce, 2 cups ricotta cheese, 2 garlic cloves, 1 tablespoon lemon zest, 1 teaspoon oregano, 1/4 teaspoon red pepper flakes, sea salt, ground black pepper, 1 pound ziti pasta, extra-virgin olive oil, 1 pound fresh spinach, 1 1/2 cups smoked mozzarella cheese, 1/4 cup cheese, chopped fresh parsley",
+                        "text": "Spread 1/2 cup marinara in the bottom of a 9x13-inch baking dish. In a medium bowl, combine the ricotta cheese, garlic, lemon zest, oregano, red pepper flakes, 1/2 teaspoon salt, and several grinds of fresh pepper. In a large pot of salted boiling water, cook the pasta according to package directions and drain. Return the pot back to the stove. Over low heat, drizzle the bottom of the pot with a little olive oil and add the spinach. Toss and saute 1 to 2 minutes until just wilted, working in batches if necessary. Turn off the heat, remove the spinach from the pot, and gently squeeze out some of the excess water. Coarsely chop it and set aside. Add the pasta back to the pot along with the remaining marinara, most of the chopped spinach, 1/4 teaspoon sea salt, and more fresh pepper and toss until combined. Add half the pasta to the baking dish, top with dollops of the ricotta, the remaining spinach, and scoop the remaining pasta on top. Top with the mozzarella and pecorino cheese. Drizzle with olive oil and bake until the cheese is browned, 16 to 22 minutes. Garnish with fresh basil or parsley.",
+                        "rating": "13",
+                        "date": {
+                            "year": "2012",
+                            "month": "january",
+                            "day": "20"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/spaghetti-aglio-e-olio.jpg",
+                            "text": "spaghetti aglio e olio"
+                        },
+                        "heading": "Spaghetti Aglio e Olio",
+                        "ingredients": "yield: 4 servings, 12 ounces spaghetti, 1 cup pasta water, 1/4 cup extra-virgin olive oil, 4 garlic cloves, 1/2 teaspoon red pepper flakes, 1 large bunch lacinato kale, sea salt, freshly ground black pepper, 1 teaspoon lemon zest, 1 teaspoon lemon juice, 1/3 cup chopped parsley, parmesan",
+                        "text": "Prepare the pasta according to the package directions, in a pot of salted boiling water.  Reserve 1 cup of the pasta cooking water before draining the pasta. Heat the oil in a large skillet over medium heat. Add the garlic and red pepper flakes. Stir and cook 30 seconds to 1 minute, until the garlic is lightly browned around the edges. Add the kale, salt, and several grinds of pepper and cook, tossing with tongs, until the kale is wilted, up to 1 minute. Add the spaghetti and toss to combine. Add 1/2 cup pasta water, lemon juice, lemon zest, and toss. If the pasta is seeming too dry, add the remaining 1/2 cup pasta water to create a light sauce. Season to taste. Garnish with parsley and serve with parmesan.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "april",
+                            "day": "4"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/rosemary-focaccia-bread.jpg",
+                            "text": "rosemary focaccia bread"
+                        },
+                        "heading": "Rosemary Focaccia Bread",
+                        "ingredients": "yield: 10 servings, 1 3/4 cups warm water, 1 package active dry yeast, 1 tablespoon cane sugar, 3 1/2 cups all-purpose flour, 1 1/2 cups whole wheat flour, sea salt, 1/2 cup extra-virgin olive oil, 1 bulb roasted garlic, 2 tablespoons chopped rosemary, 1/2 teaspoon red pepper flakes",
+                        "text": "In a medium bowl, stir together the water, yeast, and sugar. Set aside for 5 minutes, until the yeast is foamy. In the bowl of a stand mixer fitted with a dough hook attachment, place the flours, salt, 1/4 cup of the olive oil, and the yeast mixture and mix on medium speed until the dough forms a ball around the hook, 5 to 6 minutes. Transfer the dough to a lightly floured surface and knead several times, sprinkling with more flour, as needed, and form into a ball. Brush a large bowl with olive oil, and place the dough inside. Cover with plastic wrap and set aside to rise until doubled in size, 40 to 50 minutes. Coat a 10 x 15-inch rimmed baking sheet with the remaining 1/4 cup olive oil. Punch the dough down, transfer to a lightly floured surface, and knead several times. Place the dough in the pan and press to spread it out to the pan's edges. Flip the dough over and spread it to the edges again. Make indentations with your fingers, every few inches apart, all over the dough. Cover the baking sheet with plastic wrap and allow the dough to rise until it has doubled in size, about 40 minutes. Preheat the oven to 425F. Remove the plastic wrap. Cut the roasted garlic cloves in half and push them into the surface of the dough. Sprinkle with the rosemary, and red pepper flakes, and bake for 20 minutes, until golden brown.",
+                        "rating": "10",
+                        "date": {
+                            "year": "2012",
+                            "month": "october",
+                            "day": "14"
+                        }
+                    },
+                    {
+                        "link": "index.html",
+                        "image": {
+                            "url": "../images/italian/easy-macaroni-salad.jpg",
+                            "text": "easy macaroni salad"
+                        },
+                        "heading": "Easy Macaroni Salad",
+                        "ingredients": "yield: 6 servings, 1/2 cup mayo, 1 tablespoon dijon mustard, 2 tablespoons lemon juice, 1 garlic clove, sea salt, freshly ground black pepper, 8 ounces dry elbow macaroni, 1/2 cup diced red onion, 1/2 red bell pepper, 2 celery ribs, 1 cup frozen peas, 2 tablespoons capers, 1/4 cup chopped fresh dill, 1/4 cup chopped parsley",
+                        "text": "In a large bowl, whisk together the mayo, mustard, lemon juice, garlic, salt, and freshly ground black pepper. Cook the macaroni in a pot of salted boiling water until just past al dente. Drain and rinse under cold water. Add the macaroni to the bowl along with the red onion, red pepper, celery, peas, capers, dill, and parsley. Stir to combine and season to taste with more salt and pepper.",
+                        "rating": "15",
+                        "date": {
+                            "year": "2012",
+                            "month": "november",
+                            "day": "23"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

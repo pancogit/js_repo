@@ -179,6 +179,7 @@ a {
   gap: 1rem;
 }
 .last-recipes__date {
+  display: block;
   text-transform: uppercase;
   color: #4a4333;
   font-weight: bold;
@@ -261,7 +262,10 @@ a {
 .recipes__card--active .recipes__heading, .recipes__card--active .recipes__ingredients {
   color: #8c867a;
 }
-.recipes__card--active .recipes__image-link {
+.recipes__card--active .recipes__heading:hover {
+  color: #8c867a;
+}
+.recipes__card--active .recipes__image-link, .recipes__card--active .recipes__link {
   cursor: auto;
 }
 .recipes__heading {
@@ -269,6 +273,9 @@ a {
   margin-bottom: 0.4rem;
   font-size: 1.3rem;
   color: #d07e00;
+}
+.recipes__heading:hover {
+  color: #e98b08;
 }
 @media only screen and (max-width: 27rem) {
   .recipes__image {
@@ -288,6 +295,9 @@ a {
   font-weight: bold;
   font-size: 0.9rem;
   line-height: 1.2rem;
+}
+.recipes__link {
+  display: inline-block;
 }
 .recipes__button {
   text-align: right;

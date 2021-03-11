@@ -35,10 +35,10 @@
     }
 
     &__date {
+        display: block;
         text-transform: uppercase;
         color: colors.$last_recipes_date_color;
         font-weight: bold;
-        
     }
 
     &__heading {

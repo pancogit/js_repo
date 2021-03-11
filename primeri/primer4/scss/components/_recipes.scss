@@ -20,7 +20,11 @@
                 color: colors.$recipes_card_border_color_active;
             }
 
-            .recipes__image-link {
+            .recipes__heading:hover {
+                color: colors.$recipes_card_border_color_active;
+            }
+
+            .recipes__image-link, .recipes__link {
                 cursor: auto;
             }
         }
@@ -35,6 +39,10 @@
         margin-bottom: variables.$recipes_heading_margin_bottom;
         font-size: variables.$recipes_heading_font_size;
         color: colors.$recipes_heading_color;
+
+        &:hover {
+            color: colors.$recipes_heading_color_hover;
+        }
     }
 
     &__image {
@@ -60,6 +68,10 @@
         font-weight: bold;
         font-size: variables.$recipes_ingredients_font_size;
         line-height: variables.$recipes_ingredients_line_height;
+    }
+
+    &__link {
+        display: inline-block;
     }
 
     &__button {
