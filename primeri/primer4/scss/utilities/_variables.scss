@@ -64,7 +64,9 @@ $categories_name_margin_right: 0.35rem;
 
 // recipes
 $recipes_card_margin_bottom: 1.5rem;
+$recipes_card_padding_bottom: 1rem;
 $recipes_card_border_width: 0.3rem;
+$recipes_card_width: 100%;
 $recipes_heading_margin_bottom: 0.4rem;
 $recipes_heading_font_size: 1.3rem;
 $recipes_image_breakpoint: 27rem;
@@ -73,11 +75,10 @@ $recipes_ingredients_margin_bottom: 0.5rem;
 $recipes_ingredients_font_size: 0.9rem;
 $recipes_ingredients_line_height: 1.2rem;
 $recipes_more_font_size: 0.9rem;
-$recipes_more_margin_top: -0.5rem;
-$recipes_more_margin_bottom: 1rem;
 $recipes_picture_margin_right: 0.8rem;
 $recipes_picture_margin_bottom: 0.5rem;
 $recipes_text_line_height: 1.3rem;
+$recipes_text_margin_bottom: 0.5rem;
 
 // ads
 $ads_heading_font_size: 1.7rem;

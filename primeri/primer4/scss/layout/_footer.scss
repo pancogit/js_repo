@@ -62,6 +62,9 @@
             color: colors.$footer_link_color_active;
             cursor: auto;
 
+            // disable clicking on active link
+            pointer-events: none;
+
             // don't underline active link when hovered
             &:hover {
                 .footer__text {

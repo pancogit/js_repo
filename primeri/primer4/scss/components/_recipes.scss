@@ -8,6 +8,11 @@
 
     &__card {
         margin-bottom: variables.$recipes_card_margin_bottom;
+        padding-bottom: variables.$recipes_card_padding_bottom;
+
+        // float recipes card to the left and set full width to skip clearing floats
+        float: left;
+        width: variables.$recipes_card_width;
 
         // set bottom border
         @include mixins.set_borders($bottom-style: solid,
@@ -16,11 +21,11 @@
 
         // disable active cards
         &--active {
-            .recipes__heading, .recipes__ingredients {
+            .recipes__link, .recipes__ingredients {
                 color: colors.$recipes_card_border_color_active;
             }
 
-            .recipes__heading:hover {
+            .recipes__link:hover {
                 color: colors.$recipes_card_border_color_active;
             }
 
@@ -38,11 +43,6 @@
         margin-top: 0;
         margin-bottom: variables.$recipes_heading_margin_bottom;
         font-size: variables.$recipes_heading_font_size;
-        color: colors.$recipes_heading_color;
-
-        &:hover {
-            color: colors.$recipes_heading_color_hover;
-        }
     }
 
     &__image {
@@ -71,19 +71,23 @@
     }
 
     &__link {
-        display: inline-block;
+        display: inline;
+
+        color: colors.$recipes_link_color;
+
+        &:hover {
+            color: colors.$recipes_link_color_hover;
+        }
     }
 
     &__button {
         text-align: right;
 
+        // clear floats from upper cards
+        clear: left;
+
         @include mixins.media_screen_breakpoint($breakpoint: variables.$recipes_image_breakpoint) {
             text-align: left;
-        }
-
-        &--margin {
-            margin-top: variables.$recipes_more_margin_top;
-            margin-bottom: variables.$recipes_more_margin_bottom;
         }
     }
 
@@ -120,6 +124,7 @@
 
     &__text {
         margin-top: 0;
+        margin-bottom: variables.$recipes_text_margin_bottom;
         line-height: variables.$recipes_text_line_height;
         color: colors.$recipes_text_color;
     }

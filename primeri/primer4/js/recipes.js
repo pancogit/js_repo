@@ -15,6 +15,7 @@ export class Recipes {
         this.recipesLinkClass = 'recipes__link';
         this.recipesPictureClass = 'recipes__picture';
         this.recipesImageLinkClass = 'recipes__image-link';
+        this.recipesButtonClass = 'recipes__button';
 
         // create template for borders and use them for current active recipe
         // use the same borders for every active recipe, just detach them and
@@ -26,6 +27,8 @@ export class Recipes {
 
         this.readMoreText = 'Read More';
         this.showLessText = 'Show Less';
+        this.moreRecipesText = 'More Recipes';
+        this.lessRecipesText = 'Less Recipes';
     }
 
     // remove recipes from page
@@ -33,8 +36,9 @@ export class Recipes {
         var cards = this.recipes.getElementsByClassName(this.recipesCardClass);
         var numberOfCards = cards.length;
         var button = this.recipes.lastElementChild;
+        var isButton = button.classList.contains(this.recipesButtonClass);
 
-        this.recipes.removeChild(button);
+        if (isButton) this.recipes.removeChild(button);
 
         for (let i = 0; i < numberOfCards; i++) this.recipes.removeChild(cards[0]);
     }
@@ -102,8 +106,8 @@ export class Recipes {
         var content = document.createElement('div');
         var imageLink = document.createElement('a');
         var image = document.createElement('img');
-        var link = document.createElement('a');
         var heading = document.createElement('h3');
+        var link = document.createElement('a');
         var ingredients = document.createElement('p');
         var text = document.createElement('p');
         var readMore = this.createButtonHTML(recipes.link, indexOfCategory, true);
@@ -119,10 +123,10 @@ export class Recipes {
         image.height = 188;
         image.src = recipes.image.url;
         image.alt = recipes.image.text;
+        heading.classList.add(this.recipesHeadingClass);
         link.classList.add(this.recipesLinkClass);
         link.href = recipes.link;
-        heading.classList.add(this.recipesHeadingClass);
-        heading.textContent = recipes.heading;
+        link.textContent = recipes.heading;
         ingredients.classList.add('recipes__ingredients');
         ingredients.textContent = recipes.ingredients;
         text.classList.add(this.recipesTextClass);
@@ -138,8 +142,8 @@ export class Recipes {
         card.append(content);
         picture.append(imageLink);
         imageLink.append(image);
-        link.append(heading);
-        content.append(link);
+        heading.append(link);
+        content.append(heading);
         content.append(ingredients);
         content.append(text);
 
@@ -173,14 +177,13 @@ export class Recipes {
         var readMore = document.createElement('div');
         var readMoreLink = document.createElement('a');
 
-        readMore.classList.add('recipes__button');
+        readMore.classList.add(this.recipesButtonClass);
         readMoreLink.classList.add('recipes__more');
         readMoreLink.href = linkString;
-        readMoreLink.textContent = this.readMoreText;
+        readMoreLink.textContent = smallButton ? this.readMoreText : this.moreRecipesText;
 
         // for small button also add event listener to expand whole text
         if (smallButton) {
-            readMore.classList.add('recipes__button--margin');
             readMoreLink.classList.add('recipes__more--capitalize');
 
             // send this pointer and additional arguments via functional binding
@@ -237,20 +240,20 @@ export class Recipes {
         var target = event.target;
         var targetWrapper = target.parentElement;
         var recipesContainer = targetWrapper.parentElement;
-        var isReadMore = target.textContent.includes(this.readMoreText);
-        var isShowLess = target.textContent.includes(this.showLessText);
+        var isMoreRecipes = target.textContent.includes(this.moreRecipesText);
+        var isLessRecipes = target.textContent.includes(this.lessRecipesText);
 
-        if (isReadMore) {
+        if (isMoreRecipes) {
             this.updateRecipes(categoryIndex, false);
-            target.textContent = this.showLessText;
+            target.textContent = this.lessRecipesText;
 
             // move button to the end of recipe list
             recipesContainer.removeChild(targetWrapper);
             recipesContainer.append(targetWrapper);
         }
-        else if (isShowLess) {
+        else if (isLessRecipes) {
             this.removeNewRecipes(recipesContainer);
-            target.textContent = this.readMoreText;
+            target.textContent = this.moreRecipesText;
         }
     }
 
