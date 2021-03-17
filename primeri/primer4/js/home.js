@@ -7,6 +7,8 @@ import { Categories } from './categories.js';
 import { Recipes } from './recipes.js';
 import { Ads } from './ads.js';
 import { LastRecipes } from './last-recipes.js'
+import { Courses } from './courses.js';
+import { Dropdown } from './dropdown.js';
 
 var fetch = new Fetch();
 
@@ -21,10 +23,14 @@ function dataFetched(value) {
     var categories = new Categories(categoriesData, recipes);
     var ads = new Ads(value.data.ads);
     var lastRecipes = new LastRecipes(categoriesData);
+    var courses = new Courses(value.data.courses);
+    var dropdown = new Dropdown(categoriesData);
 
     categories.addCategories();
     ads.addAds();
     lastRecipes.add();
+    courses.addCourses();
+    dropdown.addRecipes();
 }
 
 function errorHandler(reason) {
