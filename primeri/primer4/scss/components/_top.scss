@@ -8,6 +8,7 @@
     display: inline-block;
     padding: variables.$top_padding;
     position: fixed;
+    z-index: variables.$top_z_index;
     right: variables.$top_right;
     bottom: variables.$top_bottom;
     border-radius: variables.$top_border_radius;
@@ -23,11 +24,7 @@
     }
 
     &:hover {
-        background-color: colors.$top_icon_color;
-
-        .top__icon {
-            color: colors.$top_icon_color_hover;
-        }
+        background-color: colors.$top_background_color_hover;
     }
     
     &__icon {

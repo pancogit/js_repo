@@ -6,18 +6,25 @@
 
 .search {
 
-    // set flexbox
-    @include mixins.set_flexbox_container();
+    &__form {
+        // set flexbox
+        @include mixins.set_flexbox_container();
 
-    margin-top: variables.$search_margin_top;
-    margin-right: variables.$search_margin_right;
+        margin-top: variables.$search_form_margin_top;
+        margin-right: variables.$search_form_margin_right;
+    }
 
     &__button {
-        padding: variables.$search_button_padding;
+        padding-top: variables.$search_button_padding_top;
+        padding-bottom: variables.$search_button_padding_top;
+        padding-left: variables.$search_button_padding_left;
+        padding-right: variables.$search_button_padding_left;
+        width: variables.$search_button_width;
         outline: none;
         border: none;
         background-color: colors.$search_button_background_color;
         cursor: pointer;
+        box-sizing: content-box;
     }
 
     &__icon {
@@ -26,9 +33,14 @@
     }
 
     &__recipe {
-        padding: variables.$search_recipe_padding;
+        padding-top: variables.$search_recipe_padding_top;
+        padding-bottom: variables.$search_recipe_padding_top;
+        padding-left: variables.$search_recipe_padding_left;
+        padding-right: variables.$search_recipe_padding_left;
+        width: variables.$search_recipes_width;
         outline: none;
         border: none;
+        box-sizing: content-box;
 
         &::placeholder {
             font-weight: bold;
@@ -36,5 +48,75 @@
             text-transform: uppercase;
             color: colors.$search_recipe_placeholder_color;
         }
+    }
+
+    &__container {
+        // set absolute positioning with high stacking z-index
+        position: absolute;
+        z-index: variables.$search_container_z_index;
+
+        padding-bottom: variables.$search_container_padding_bottom;
+        box-sizing: border-box;
+
+        // align width of container with search inputs
+        width: variables.$search_recipes_width + variables.$search_button_width + 
+               2 * variables.$search_recipe_padding_left + 2 * variables.$search_button_padding_left;
+        
+        border-bottom-left-radius: variables.$search_container_border_radius;
+        border-bottom-right-radius: variables.$search_container_border_radius;
+        background-color: colors.$search_container_background_color;
+
+        // counteract bottom margin with negative top margin for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            margin-top: - variables.$header_form_margin_bottom;
+        }
+    }
+
+    &__category {
+        margin: 0;
+        font-size: variables.$search_category_font_size;
+        font-weight: normal;
+        color: colors.$search_category_color;
+    }
+
+    &__image {
+        margin: variables.$search_image_margin;
+        border-radius: variables.$search_image_border_radius;
+    }
+
+    &__link {
+        // set flexbox
+        @include mixins.set_flexbox_container($align_items: center);
+
+        &:hover {
+            background-color: colors.$search_link_hover_background_color;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-size: variables.$search_name_font_size;
+        color: colors.$search_name_color;
+    }
+
+    &__result {
+
+    }
+
+    &__text {
+        margin-right: variables.$search_text_margin_right;
+        padding: variables.$search_text_padding;
+
+        // break long words into multiple lines to skip overflow
+        word-break: break-word;
+    }
+
+    &__no-results {
+        display: block;
+        margin-top: variables.$search_no_results_margin;
+        margin-bottom: variables.$search_no_results_margin;
+        text-align: center;
+        font-size: variables.$search_no_results_font_size;
+        color: colors.$search_no_results_color;
     }
 }

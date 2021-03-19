@@ -41,6 +41,26 @@
                                     $color: colors.$subscribe_email_border_color);
 
         border-radius: variables.$subscribe_email_border_radius;
+
+        // block modifier for errors
+        &--error {
+            background-color: colors.$subscribe_email_error_background_color;
+            color: colors.$subscribe_email_error_color;
+
+            &::placeholder {
+                color: colors.$subscribe_email_error_color;
+            }
+
+            &:-moz-placeholder {
+                color: colors.$subscribe_email_error_color;
+                opacity: variables.$subscribe_email_moz_placeholder_opacity;
+            }
+
+            &::-moz-placeholder {
+                color: colors.$subscribe_email_error_color;
+                opacity: variables.$subscribe_email_moz_placeholder_opacity;
+            }
+        }
     }
 
 }

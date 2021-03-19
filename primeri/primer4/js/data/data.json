@@ -1798,5 +1798,12 @@
                 ]
             }
         ]
-    }
+    },
+    "slides": [
+       "../images/header/burritos.jpg",
+       "../images/header/crunchy-winter-vegetable-salad.jpg",
+       "../images/header/pumpkin-pad-thai.jpg",
+       "../images/header/tacos.jpg",
+       "../images/header/yams.jpg"
+    ]
 }

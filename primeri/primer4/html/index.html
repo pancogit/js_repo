@@ -32,12 +32,51 @@
                     <h2 class="header__subheading">Tasty Book</h2>
                 </div>
                 <div class="header__search">
-                    <form method="get" class="search header__form">
-                        <input type="search" placeholder="Search Recipe" name="recipe" class="search__recipe" />
-                        <button class="search__button">
-                            <i class="fas fa-search search__icon"></i>
-                        </button>
-                    </form>
+                    <div class="search">
+                        <form method="get" class="search__form header__form">
+                            <input type="search" placeholder="Search Recipe" name="recipe" class="search__recipe"
+                                autocomplete="off" />
+                            <button class="search__button">
+                                <i class="fas fa-search search__icon"></i>
+                            </button>
+                        </form>
+                        <div class="search__container">
+                            <div class="search__result">
+                                <h2 class="search__no-results">No results for your search</h2>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/breakfast/butternut-squash-breakfast-hash.jpg"
+                                        alt="butternut squash breakfast hash" width="50" height="37"
+                                        class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Butternut Squash Breakfast Hash</h2>
+                                        <h3 class="search__category">Breakfast</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/casseroles/green-bean-casserole.jpg" alt="green bean casserole"
+                                        width="50" height="37" class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Green Bean Casserole</h2>
+                                        <h3 class="search__category">Casseroles</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/italian/cast-iron-skillet-pizza.jpg"
+                                        alt="cast iron skillet pizza" width="50" height="37" class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Cast Iron Skillet Pizza</h2>
+                                        <h3 class="search__category">Italian</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="arrows header__arrows">
                         <a href="index.html" class="arrows__link">
                             <i class="fas fa-chevron-left arrows__icon"></i>

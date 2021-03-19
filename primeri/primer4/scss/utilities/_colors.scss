@@ -7,6 +7,11 @@
 $search_button_background_color: white;
 $search_icon_color: #736d6d;
 $search_recipe_placeholder_color: #41403c;
+$search_link_hover_background_color: #d8cfcf;
+$search_container_background_color: #afafaf;
+$search_category_color: #402d2d;
+$search_name_color: black;
+$search_no_results_color: black;
 
 // arrows
 $arrows_link_background_color: white;
@@ -54,9 +59,9 @@ $recipes_text_color: #5d5c57;
 $ads_headings_color: #2b2923;
 
 // top
-$top_background_color: white;
-$top_icon_color: #837f74;
-$top_icon_color_hover: white;
+$top_background_color: #4e4e4e;
+$top_background_color_hover: #838282;
+$top_icon_color: white;
 
 // logo
 $logo_link_color: #757064;
@@ -65,6 +70,8 @@ $logo_link_color: #757064;
 $subscribe_button_color: #655c49;
 $subscribe_email_background_color: #ece9e0;
 $subscribe_email_border_color: #c5c0b5;
+$subscribe_email_error_background_color: #d07e00;
+$subscribe_email_error_color: black;
 
 // header
 $header_background_color: #e1d7cb;

@@ -17,12 +17,27 @@ $page_content_padding: 1rem;
 $page_content_max_width: 80rem;
 
 // search
-$search_margin_top: 2rem;
-$search_margin_right: 3rem;
-$search_button_padding: 0 0.7rem;
+$search_form_margin_top: 2rem;
+$search_form_margin_right: 3rem;
+$search_button_padding_top: 0;
+$search_button_padding_left: 0.7rem;
+$search_button_width: 0.7rem;
 $search_icon_font_size: 0.7rem;
-$search_recipe_padding: 0.6rem 0.9rem;
+$search_recipe_padding_top: 0.6rem;
+$search_recipe_padding_left: 0.9rem;
 $search_recipe_placeholder_font_size: 0.75rem;
+$search_recipes_width: 10.55rem;
+$search_container_z_index: 5000;
+$search_container_padding_bottom: 0.5rem;
+$search_container_border_radius: 0.5rem;
+$search_category_font_size: 0.9rem;
+$search_image_margin: 0.7rem;
+$search_image_border_radius: 0.6rem;
+$search_name_font_size: 1rem;
+$search_text_margin_right: 0.3rem;
+$search_text_padding: 0.4rem 0;
+$search_no_results_margin: 0.5rem;
+$search_no_results_font_size: 1rem;
 
 // arrows
 $arrows_link_width: 3.8rem;
@@ -99,6 +114,7 @@ $top_right: 0.5rem;
 $top_bottom: 3rem;
 $top_border_radius: 50%;
 $top_transition_time: 0.35s;
+$top_z_index: 10000;
 $top_icon_font_size: 3rem;
 $top_icon_font_size_medium: 2.5rem;
 $top_icon_font_size_small: 2rem;
@@ -114,6 +130,7 @@ $subscribe_email_margin_bottom: 0.7rem;
 $subscribe_email_padding: 0.5rem 0.8rem;
 $subscribe_email_border_width: 0.1rem;
 $subscribe_email_border_radius: 0.2rem;
+$subscribe_email_moz_placeholder_opacity: 1;
 
 // header
 $header_arrows_margin_bottom: 1rem;

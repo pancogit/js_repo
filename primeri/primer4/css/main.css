@@ -23,33 +23,94 @@ a {
 }
 
 /* search */
-.search {
+.search__form {
   display: flex;
   flex-wrap: nowrap;
   margin-top: 2rem;
   margin-right: 3rem;
 }
 .search__button {
-  padding: 0 0.7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  width: 0.7rem;
   outline: none;
   border: none;
   background-color: white;
   cursor: pointer;
+  box-sizing: content-box;
 }
 .search__icon {
   font-size: 0.7rem;
   color: #736d6d;
 }
 .search__recipe {
-  padding: 0.6rem 0.9rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  width: 10.55rem;
   outline: none;
   border: none;
+  box-sizing: content-box;
 }
 .search__recipe::placeholder {
   font-weight: bold;
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #41403c;
+}
+.search__container {
+  position: absolute;
+  z-index: 5000;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+  width: 14.45rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: #afafaf;
+}
+@media only screen and (max-width: 40rem) {
+  .search__container {
+    margin-top: -1rem;
+  }
+}
+.search__category {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #402d2d;
+}
+.search__image {
+  margin: 0.7rem;
+  border-radius: 0.6rem;
+}
+.search__link {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.search__link:hover {
+  background-color: #d8cfcf;
+}
+.search__name {
+  margin: 0;
+  font-size: 1rem;
+  color: black;
+}
+.search__text {
+  margin-right: 0.3rem;
+  padding: 0.4rem 0;
+  word-break: break-word;
+}
+.search__no-results {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
 }
 
 /* arrows */
@@ -385,10 +446,11 @@ a {
   display: inline-block;
   padding: 0.3rem 0.8rem;
   position: fixed;
+  z-index: 10000;
   right: 0.5rem;
   bottom: 3rem;
   border-radius: 50%;
-  background-color: white;
+  background-color: #4e4e4e;
   transition: opacity 0.35s;
   opacity: 0;
 }
@@ -398,14 +460,11 @@ a {
   }
 }
 .top:hover {
-  background-color: #837f74;
-}
-.top:hover .top__icon {
-  color: white;
+  background-color: #838282;
 }
 .top__icon {
   font-size: 3rem;
-  color: #837f74;
+  color: white;
 }
 @media only screen and (max-width: 58rem) {
   .top__icon {
@@ -462,6 +521,21 @@ a {
   border-width: 0.1rem;
   border-color: #c5c0b5;
   border-radius: 0.2rem;
+}
+.subscribe__email--error {
+  background-color: #d07e00;
+  color: black;
+}
+.subscribe__email--error::placeholder {
+  color: black;
+}
+.subscribe__email--error:-moz-placeholder {
+  color: black;
+  opacity: 1;
+}
+.subscribe__email--error::-moz-placeholder {
+  color: black;
+  opacity: 1;
 }
 
 /* header */
