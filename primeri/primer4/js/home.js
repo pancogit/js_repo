@@ -11,6 +11,8 @@ import { Courses } from './courses.js';
 import { Dropdown } from './dropdown.js';
 import { Header }  from './header.js';
 import { Subscribe } from './subscribe.js';
+import { Search } from './search.js';
+import { Top } from './top.js';
 
 var fetch = new Fetch();
 
@@ -29,6 +31,8 @@ function dataFetched(value) {
     var dropdown = new Dropdown(categoriesData);
     var header = new Header(value.data.slides);
     var subscribe = new Subscribe();
+    var search = new Search(categoriesData);
+    var top = new Top();
 
     categories.addCategories();
     ads.addAds();
@@ -37,6 +41,8 @@ function dataFetched(value) {
     dropdown.addRecipes();
     header.addSlides();
     subscribe.addEvents();
+    search.addEvents();
+    top.addEvent();
 }
 
 function errorHandler(reason) {

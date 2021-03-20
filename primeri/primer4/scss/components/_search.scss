@@ -51,6 +51,9 @@
     }
 
     &__container {
+        // hide search container by default
+        display: none;
+
         // set absolute positioning with high stacking z-index
         position: absolute;
         z-index: variables.$search_container_z_index;
