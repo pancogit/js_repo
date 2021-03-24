@@ -1,1 +1,81 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+
+    // set flexbox
+    @include mixins.set_flexbox_container();
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$home_border_width,
+                                $color: colors.$home_border_color);
+
+    &__area {
+
+    }
+
+    &__aside {
+        // don't grow or shrink, just fix flex basis to constant
+        @include mixins.set_flex_item($flex: variables.$home_aside_flex);
+    }
+
+    &__col-1 {
+
+    }
+
+    &__col-2 {
+        
+    }
+
+    &__col-3 {
+        
+    }
+
+    &__content {
+
+    }
+
+    &__date {
+
+    }
+
+    &__email {
+
+    }
+
+    &__heading {
+
+    }
+
+    &__input {
+
+    }
+
+    &__label {
+
+    }
+
+    &__phone {
+
+    }
+
+    &__question {
+
+    }
+
+    &__radio {
+
+    }
+
+    &__row {
+
+    }
+
+    &__wrapper {
+        @include mixins.set_flex_item($flex: variables.$home_wrapper_flex);
+    }
+}

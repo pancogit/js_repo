@@ -1,0 +1,39 @@
+/* page */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.page {
+    padding: variables.$page_padding;
+    min-width: variables.$page_min_width;
+    max-width: variables.$page_content_flex + 2 * variables.$page_aside_flex;
+
+    &--center {
+        margin: variables.$page_center_modifier_margin;
+    }
+
+    &__center {
+        // set flexbox
+        @include mixins.set_flexbox_container();
+
+        padding: variables.$page_center_padding;
+        background-color: colors.$page_center_background_color;
+        border-radius: variables.$page_center_border_radius;
+    }
+
+    &__aside {
+        @include mixins.set_flex_item($flex: variables.$page_aside_flex);
+
+        // set flexbox to align circle vertically on center
+        @include mixins.set_flexbox_container($flex_direction: column, 
+                                              $justify_content: center, 
+                                              $align_items: center);
+    }
+
+    &__content {
+        @include mixins.set_flex_item($flex: variables.$page_content_flex);
+
+        background-color: colors.$page_content_background_color;
+    }
+}

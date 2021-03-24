@@ -94,7 +94,7 @@ Pharmacy
 ------------
 
 - Date Filled
-- Prescription RX Number  - Type (New, Refill)  - Prescription Scanned (Yes, No -> radio buttons)
+- Prescription RX Number  - Type (New, Refill)  - Prescription Scanned (Yes, No)
 - Prescribed Drug   - Strength (mg)
 - Directions
 - Quantity Prescribed  - Quantity Ingested/Applied
@@ -123,7 +123,7 @@ Questionaire
 Current info
 ------------
 
-- What concerns do you currently havewith your oral health or smile? (Jaw joint pain,
+- What concerns do you currently have with your oral health or smile? (Jaw joint pain,
 Clenching or grinding of teeth, Discolored teeth, Missing teeth, Spaces in between teeth,
 Overbite, Underbite, Old crowns, Speech problems, Tooth sensitivity to cold,
 Difficulty chewing, Bad breath, Other and input -> checkboxes)

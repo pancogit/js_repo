@@ -1,0 +1,38 @@
+/* navigation */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.navigation {
+
+    &__heading {
+        background-color: colors.$navigation_heading_background_color;
+    }
+
+    &__icon {
+
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        
+        &--active {
+
+        }
+    }
+
+    &__list {
+
+    }
+
+    &__progress {
+
+    }
+
+    &__text {
+        
+    }
+}

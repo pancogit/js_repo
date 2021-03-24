@@ -1,1 +1,73 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$home_border_width,
+                                $color: colors.$home_border_color);
+    border-bottom: none;
+
+    background-color: colors.$header_background_color;
+    color: colors.$header_color;
+
+    &__age {
+
+    }
+
+    &__birthday {
+
+    }
+
+    &__center {
+
+    }
+
+    &__date {
+
+    }
+
+    &__heading {
+
+    }
+
+    &__hours-mins {
+
+    }
+
+    &__icon {
+
+    }
+
+    &__info {
+
+    }
+
+    &__link {
+
+    }
+
+    &__period {
+
+    }
+
+    &__status {
+
+    }
+
+    &__time {
+
+    }
+
+    &__user {
+
+    }
+
+    &__wifi {
+        
+    }
+}

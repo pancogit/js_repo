@@ -1,10 +1,12 @@
 /* reset */
 
+@use '../utilities/colors';
 @use '../utilities/variables';
 
 body {
     margin: 0;
     font-family: variables.$body_font_family;
+    background-color: colors.$body_background_color;
 }
 
 a {

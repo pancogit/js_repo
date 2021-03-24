@@ -2,17 +2,94 @@
 body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  background-color: #0ea1ff;
 }
 
 a {
   text-decoration: none;
 }
 
-/* button */
-/* logo */
+/* page */
+.page {
+  padding: 0 1rem;
+  min-width: 20rem;
+  max-width: 110rem;
+}
+.page--center {
+  margin: 10rem auto;
+}
+.page__center {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 3rem 0;
+  background-color: #f5f5f5;
+  border-radius: 6rem;
+}
+.page__aside {
+  flex: 15rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page__content {
+  flex: 80rem;
+  background-color: white;
+}
+
+/* circle */
+.circle {
+  width: 4rem;
+  height: 4rem;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #e4e9ec;
+  border-radius: 50%;
+}
+.circle--small {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* wifi */
+/* battery */
+/* navigation */
+.navigation__heading {
+  background-color: #f3f3f3;
+}
+/* choice */
+/* list */
+/* numbers */
+/* checkbox */
+/* measure */
+/* calculation */
+/* pharmacy */
+/* score */
 /* header */
-/* footer */
+.header {
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color: #e4e8ea;
+  border-bottom: none;
+  background-color: #10adfc;
+  color: white;
+}
 /* home */
+.home {
+  display: flex;
+  flex-wrap: nowrap;
+  border-style: solid;
+  border-width: 0.15rem;
+  border-color: #e4e8ea;
+}
+.home__aside {
+  flex: 0 0 20rem;
+}
+.home__wrapper {
+  flex: 1;
+}
+
 /* utility helper classes */
 .show {
   display: block;
