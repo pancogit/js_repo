@@ -2,30 +2,98 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .navigation {
 
     &__heading {
+        margin: 0;
+        padding: variables.$navigation_heading_padding;
         background-color: colors.$navigation_heading_background_color;
+        color: colors.$navigation_heading_color;
+        text-transform: uppercase;
+        font-size: variables.$navigation_heading_font_size;
+        text-align: center;
+
+        // set borders
+        @include mixins.set_borders($bottom_style: solid,
+                                    $bottom_width: variables.$home_border_width,
+                                    $bottom_color: colors.$home_border_color);
     }
 
-    &__icon {
-
-    }
-
-    &__item {
-
-    }
-
-    &__link {
-        
-        &--active {
-
+    &__menu {
+        // remove bottom border for last navigation item on page
+        &:last-child .navigation__item:last-child {
+            border-bottom: none;
         }
     }
 
-    &__list {
+    &__icon {
+        font-size: variables.$navigation_icon_font_size;
+        color: colors.$navigation_icon_color;
+    }
 
+    &__link {
+        // set flexbox and spread flex items
+        @include mixins.set_flexbox_container($justify_content: space-between);
+
+        padding: variables.$navigation_link_padding;
+
+        // set left border
+        @include mixins.set_borders($left_style: solid,
+                                    $left_width: variables.$navigation_link_border_width,
+                                    $left_color: transparent);
+
+        &:hover {
+            border-left-color: colors.$navigation_link_hover_border_color;
+            background-color: colors.$navigation_link_hover_background_color;
+
+            .navigation__icon {
+                border-radius: variables.$navigation_icon_border_radius;
+                background-color: colors.$navigation_icon_background_color;
+            }
+        }
+
+        &--active {
+            background-color: colors.$navigation_link_active_background_color;
+
+            .navigation__text {
+                color: colors.$navigation_text_active_color;
+                font-weight: bold;
+            }
+
+            .navigation__icon {
+                border-radius: variables.$navigation_icon_border_radius;
+                background-color: colors.$navigation_icon_background_color;
+            }
+        }
+
+        &--ok, &--active {
+            .navigation__icon {
+                color: colors.$navigation_icon_ok_color;
+            }
+        }
+
+        &--warning {
+            .navigation__icon {
+                color: colors.$navigation_icon_warning_color;
+            }
+        }
+    }
+
+    &__item {
+        .navigation__link--active {
+            border-left-color: colors.$navigation_link_active_border_color;
+        }
+
+        // set bottom border
+        @include mixins.set_borders($bottom_style: solid,
+                                    $bottom_width: variables.$home_border_width,
+                                    $bottom_color: colors.$home_border_color);
+    }
+
+    &__list {
+        @include mixins.reset_list;
     }
 
     &__progress {
@@ -33,6 +101,9 @@
     }
 
     &__text {
-        
+        // set flexbox and align text vertically
+        @include mixins.set_flexbox_container($align_items: center);
+
+        color: colors.$navigation_text_color;
     }
 }

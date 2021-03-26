@@ -2,7 +2,7 @@
 
 
 // reset 
-$body_font_family: 'Times New Roman', Times, serif;
+$body_font_family: Arial, Helvetica, sans-serif;
 
 // media screen
 $media_screen_small: 20rem;
@@ -26,10 +26,30 @@ $circle_border_width: 0.2rem;
 $circle_border_radius: 50%;
 
 // wifi
+$wifi_icon_font_size: 0.8rem;
+$wifi_text_margin: 0.35rem;
 
 // battery
+$battery_full_wh: 100%;
+$battery_content_padding: 0.05rem;
+$battery_content_width: 80%;
+$battery_content_border_radius: 0.25rem;
+$battery_content_border_width: 0.15rem;
+$battery_triangle_border_width: 0.2rem;
+$battery_level_border_radius: 0.1rem;
+$battery_crop_width: 0.08rem;
+$battery_wrapper_margin_left: 0.35rem;
+$battery_wrapper_width: 2.2rem;
+$battery_wrapper_height: 0.5rem;
 
 // navigation
+$navigation_heading_padding: 0.6rem;
+$navigation_heading_font_size: 0.7rem;
+$navigation_icon_font_size: 1.8rem;
+$navigation_icon_border_radius: 50%;
+$navigation_link_padding: 1.1rem 0.8rem;
+$navigation_link_border_width: 0.2rem;
+
 
 // choice
 
@@ -46,8 +66,35 @@ $circle_border_radius: 50%;
 // pharmacy
 
 // score
+$score_padding: 0.6rem 0.7rem;
+$score_border_width: 0.15rem;
+$score_button_padding: 0.6rem 1rem;
+$score_button_border_radius: 0.35rem;
+$score_button_border_width: 0.12rem;
+$score_icon_margin_right: 0.6rem;
+$score_icon_margin: 0.6rem;
+$score_icon_font_size: 1.1rem;
+$score_content_flex: 1;
+$score_content_margin: 10%;
+$score_level_width: 75%;
+$score_level_height: 100%;
+$score_level_border_radius: 0.5rem;
+$score_percentage_font_size: 0.75rem;
+$score_progress_margin_top: 0.6rem;
+$score_progress_height: 0.4rem;
+$score_progress_border_radius: 0.5rem;
+$score_text_font_size: 0.9rem;
 
 // header
+$header_padding: 0.5rem;
+$header_font_size: 0.95rem;
+$header_birthday_margin: 0 0.75rem;
+$header_center_margin: 3rem;
+$header_heading_margin_top: 0.7rem;
+$header_heading_margin_bottom: 0.5rem;
+$header_heading_font_size: 1.7rem;
+$header_link_margin_right: 0.15rem;
+$header_user_margin: 0.4rem;
 
 // home
 $home_border_width: 0.15rem;

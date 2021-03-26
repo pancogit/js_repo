@@ -1,17 +1,48 @@
 /* battery */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .battery {
 
-    &__cap {
+    background-color: colors.$battery_background_color;
 
+    &__cap {
+        // set flexbox
+        @include mixins.set_flexbox_container();
+
+        // positioning container for battery cap
+        position: relative;
+
+        margin-left: variables.$battery_content_padding;
     }
 
     &__content {
+        padding: variables.$battery_content_padding;
+        width: variables.$battery_content_width;
+        height: variables.$battery_full_wh;
 
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$battery_content_border_width,
+                                    $color: colors.$battery_content_border_color);
+
+        border-radius: variables.$battery_content_border_radius;
     }
 
     &__level {
+        // change battery level with width
+        width: variables.$battery_full_wh;
 
+        height: variables.$battery_full_wh;
+        border-radius: variables.$battery_level_border_radius;
+        background-color: colors.$battery_level_background_color;
+
+        // block modifier for low battery level
+        &--low {
+            background-color: colors.$battery_level_low_background_color;
+        }
     }
 
     &__status {
@@ -19,14 +50,37 @@
     }
 
     &__triangle {
-
+        // make triangle with borders and zero size
+        @include mixins.set_borders($top_style: solid,
+                                    $top_width: variables.$battery_triangle_border_width,
+                                    $top_color: transparent,
+                                    
+                                    $bottom_style: solid,
+                                    $bottom_width: variables.$battery_triangle_border_width,
+                                    $bottom_color: transparent,
+                                    
+                                    // for triangle
+                                    $left_style: solid,
+                                    $left_width: variables.$battery_triangle_border_width,
+                                    $left_color: colors.$battery_triangle_color);
     }
 
-    &__white {
+    &__crop {
+        // crop cap with positioning to the right side of container
+        position: absolute;
+        right: 0;
 
+        width: variables.$battery_crop_width;
+        height: 2 * variables.$battery_triangle_border_width;
+        background-color: colors.$battery_background_color;
     }
 
     &__wrapper {
-        
+        // set flexbox
+        @include mixins.set_flexbox_container($align_items: center);
+
+        margin-left: variables.$battery_wrapper_margin_left;
+        width: variables.$battery_wrapper_width;
+        height: variables.$battery_wrapper_height;
     }
 }

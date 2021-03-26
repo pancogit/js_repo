@@ -15,12 +15,17 @@
                                 $color: colors.$home_border_color);
 
     &__area {
-
+        
     }
 
     &__aside {
         // don't grow or shrink, just fix flex basis to constant
         @include mixins.set_flex_item($flex: variables.$home_aside_flex);
+
+        // set borders
+        @include mixins.set_borders($right_style: solid,
+                                    $right_width: variables.$home_border_width,
+                                    $right_color: colors.$home_border_color);
     }
 
     &__col-1 {

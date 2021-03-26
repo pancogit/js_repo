@@ -12,11 +12,33 @@ $page_content_background_color: white;
 $circle_border_color: #e4e9ec;
 
 // wifi
+$wifi_link_color: white;
+
+// header
+$header_background_color: #10adfc;
+$header_color: white;
+$header_link_color: white;
 
 // battery
+$battery_background_color: $header_background_color;   // compatible with header
+$battery_content_border_color: #67d4ff;
+$battery_level_background_color: white;
+$battery_level_low_background_color: #ca0f0f;
+$battery_triangle_color: #67d4ff;
 
 // navigation
 $navigation_heading_background_color: #f3f3f3;
+$navigation_heading_color: #626a77;
+$navigation_icon_color: #d8d8d8;
+$navigation_icon_ok_color: #1fb5fc;
+$navigation_icon_warning_color: #e81111;
+$navigation_icon_background_color: white;
+$navigation_link_hover_border_color: #8adaff;
+$navigation_link_hover_background_color: #f4fcff;
+$navigation_link_active_background_color: #f4fcff;
+$navigation_link_active_border_color: #2cb3f1;
+$navigation_text_active_color: #2cb3f1;
+$navigation_text_color: #5a5f6e;
 
 // choice
 
@@ -33,10 +55,22 @@ $navigation_heading_background_color: #f3f3f3;
 // pharmacy
 
 // score
-
-// header
-$header_background_color: #10adfc;
-$header_color: white;
+$score_border_color: #e4e8ea;
+$score_button_back_border_color: #dadbe2;
+$score_button_back_background_color: #fafbfd;
+$score_button_back_hover_background_color: #e5e7ec;
+$score_icon_back_color: #d0d0d4;
+$score_icon_back_hover_color: #aaaaaf;
+$score_text_back_color: #424956;
+$score_next_border_color: #4ec58f;
+$score_next_background_color: #17dd7e;
+$score_icon_next_color: #f0fffa;
+$score_text_next_color: #f0fffa;
+$score_next_hover_border_color: #11b666;
+$score_next_hover_background_color: #13c770;
+$score_level_background_color: #1fb5ff;
+$score_percentage_color: #6f7484;
+$score_progress_background_color: #e1e3ea;
 
 // home
 $home_border_color: #e4e8ea;
