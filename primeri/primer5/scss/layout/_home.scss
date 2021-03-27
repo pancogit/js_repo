@@ -15,7 +15,13 @@
                                 $color: colors.$home_border_color);
 
     &__area {
-        
+        height: variables.$home_area_height;
+        font-size: variables.$home_area_font_size;
+
+        // don't resize text area
+        resize: none;
+
+        font-family: variables.$body_font_family;
     }
 
     &__aside {
@@ -28,59 +34,128 @@
                                     $right_color: colors.$home_border_color);
     }
 
-    &__col-1 {
+    &__col-1, &__col-2, &__col-3 {
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+    }
 
+    &__col-1 {
+        // spread flex item to full width
+        @include mixins.set_flex_item($flex: variables.$home_col_1_flex);
     }
 
     &__col-2 {
-        
+        // flex item takes half width
+        @include mixins.set_flex_item($flex: variables.$home_col_2_flex);
+
+        // create gap between columns
+        + .home__col-2 {
+            margin-left: variables.$home_col_2_margin_left;
+        }
+
+        &--block {
+            display: block;
+        }
     }
 
     &__col-3 {
-        
+        // flex item takes one third width
+        @include mixins.set_flex_item($flex: variables.$home_col_3_flex);
+
+        // create gap between columns
+        + .home__col-3 {
+            margin-left: variables.$home_col_3_margin_left;
+        }
+    }
+
+    &__col-wrapper {
+        @include mixins.set_flexbox_container();
+
+        &--center {
+            @include mixins.set_flex_item($flex: variables.$home_col_wrapper_flex);
+
+            align-items: center;
+        }
     }
 
     &__content {
-
+        padding: variables.$home_content_padding;
+        color: colors.$home_content_color;
     }
 
     &__date {
+        font-family: variables.$body_font_family;
+        outline: none;
+        font-size: variables.$home_date_font_size;
+        color: colors.$home_content_color;
+    }
 
+    &__date, &__input, &__phone, &__email, &__area {
+        padding: variables.$home_input_padding;
+        outline: none;
+        color: colors.$home_content_color;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$home_border_width,
+                                    $color: colors.$home_border_color);
+
+        border-radius: variables.$home_date_border_radius;
     }
 
     &__email {
-
+        font-size: variables.$home_date_font_size;
     }
 
     &__heading {
-
+        margin-top: 0;
+        color: colors.$home_heading_color;
+        font-weight: normal;
     }
 
     &__input {
-
+        font-size: variables.$home_date_font_size;
     }
 
     &__label {
-
+        margin-right: variables.$home_label_margin_right;
     }
 
     &__phone {
-
+        font-size: variables.$home_date_font_size;
     }
 
     &__question {
-
+        margin-bottom: variables.$home_question_margin_bottom;
+        font-weight: bold;
+        font-size: variables.$home_question_font_size;
+        text-transform: uppercase;
+        color: colors.$home_question_color;
     }
 
     &__radio {
-
+        margin-left: 0;
+        margin-right: variables.$home_radio_margin_right;
     }
 
     &__row {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
 
+        margin-bottom: variables.$home_row_margin_bottom;
     }
 
     &__wrapper {
         @include mixins.set_flex_item($flex: variables.$home_wrapper_flex);
+
+        // set flexbox by column to push score to the bottom
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+    }
+
+    &__error-border {
+        border-color: colors.$home_error_color;
+    }
+
+    &__error-text {
+        color: colors.$home_error_color;
     }
 }

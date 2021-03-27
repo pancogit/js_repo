@@ -1,17 +1,46 @@
 /* measure */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .measure {
+    display: inline-block;
+    margin-right: variables.$measure_margin_right;
 
     &__icon {
 
     }
 
     &__number {
-
+        display: inline-block;
+        margin: variables.$measure_number_margin;
     }
 
     &__sign {
+        padding: variables.$measure_sign_padding;
+        cursor: pointer;
+        outline: none;
+        background-color: colors.$measure_sign_background_color;
+        color: colors.$measure_sign_color;
 
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$measure_sign_border_width,
+                                    $color: colors.$measure_sign_border_color);
+
+        border-radius: variables.$measure_sign_border_radius;
+
+        &:hover {
+            background-color: colors.$measure_sign_hover_background_color;
+            border-color: colors.$measure_sign_hover_border_color;
+        }
+
+        &--disabled, &--disabled:hover {
+            cursor: auto;
+            background-color: colors.$measure_disabled_background_color;
+            border-color: colors.$measure_disabled_border_color;
+        }
     }
 
     &__unit {

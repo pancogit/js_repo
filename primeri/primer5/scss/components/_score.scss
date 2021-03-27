@@ -14,8 +14,8 @@
     // block modifier for top border
     &--top-border {
         @include mixins.set_borders($top_style: solid,
-                                    $top_width: variables.$score_border_width,
-                                    $top_color: colors.$score_border_color);
+                                    $top_width: variables.$home_border_width,
+                                    $top_color: colors.$home_border_color);
     }
 
     &__button {

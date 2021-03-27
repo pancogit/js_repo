@@ -25,6 +25,10 @@ $circle_dimension_small: 1rem;
 $circle_border_width: 0.2rem;
 $circle_border_radius: 50%;
 
+// address
+$address_zip_padding: 1rem;
+$address_zip_font_size: 1rem;
+
 // wifi
 $wifi_icon_font_size: 0.8rem;
 $wifi_text_margin: 0.35rem;
@@ -52,22 +56,42 @@ $navigation_link_border_width: 0.2rem;
 
 
 // choice
+$choice_answer_flex: 1;
+$choice_answer_padding: 1rem;
 
 // list
+$list_padding: 1rem;
+$list_font_size: 1rem;
 
 // numbers
+$numbers_box_flex: 1;
+$numbers_box_padding: 1rem;
 
 // checkbox
+$checkbox_input_margin_right: 0.35rem;
+$checkbox_row_margin_bottom: 0.5rem;
+$checkbox_row_other_margin_top: 1rem;
+$checkbox_row_other_area_flex: 100%;
 
 // measure
+$measure_margin_right: 2rem;
+$measure_number_margin: 0 0.2rem;
+$measure_sign_padding: 0.3rem 0.8rem;
+$measure_sign_border_width: 0.1rem;
+$measure_sign_border_radius: 0.25rem;
 
 // calculation
+$calculation_content_padding: 1rem;
+$calculation_content_border_radius: 0.3rem;
 
 // pharmacy
+$pharmacy_quantity_padding: 1rem;
+$pharmacy_quantity_flex: 1;
+$pharmacy_quantity_margin_right: 0.5rem;
+$pharmacy_license_font_size: 1rem;
 
 // score
-$score_padding: 0.6rem 0.7rem;
-$score_border_width: 0.15rem;
+$score_padding: 0.73rem 0.7rem;
 $score_button_padding: 0.6rem 1rem;
 $score_button_border_radius: 0.35rem;
 $score_button_border_width: 0.12rem;
@@ -97,6 +121,23 @@ $header_link_margin_right: 0.15rem;
 $header_user_margin: 0.4rem;
 
 // home
-$home_border_width: 0.15rem;
+$home_border_width: 0.1rem;
 $home_aside_flex: 0 0 20rem;
 $home_wrapper_flex: 1;
+$home_date_border_radius: 0.35rem;
+$home_area_height: 3.5rem;
+$home_area_font_size: 1rem;
+$home_col_1_flex: 100%;
+$home_col_2_flex: 40%;
+$home_col_2_margin_left: 2rem;
+$home_col_3_flex: 30%;
+$home_col_3_margin_left: 2rem;
+$home_col_wrapper_flex: 1;
+$home_content_padding: 3rem;
+$home_date_font_size: 1rem;
+$home_input_padding: 1rem;
+$home_label_margin_right: 1rem;
+$home_question_margin_bottom: 0.8rem;
+$home_question_font_size: 0.8rem;
+$home_radio_margin_right: 0.5rem;
+$home_row_margin_bottom: 1.5rem;

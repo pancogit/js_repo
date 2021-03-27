@@ -1,5 +1,39 @@
 /* calculation */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+
 .calculation {
     
+    &__content {
+        display: inline-block;
+        padding: variables.$calculation_content_padding;
+        color: colors.$calculation_content_color;
+        border-radius: variables.$calculation_content_border_radius;
+
+        // block modifiers for content
+        &--deficit {
+            background-color: colors.$calculation_content_color_deficit;
+        }
+
+        &--normal {
+            background-color: colors.$calculation_content_color_normal;
+        }
+
+        &--excessive {
+            background-color: colors.$calculation_content_color_excessive;
+        }
+
+        &--obesity-1st {
+            background-color: colors.$calculation_content_color_obesity_1st;
+        }
+
+        &--obesity-2nd {
+            background-color: colors.$calculation_content_color_obesity_2nd;
+        }
+
+        &--obesity-3rd {
+            background-color: colors.$calculation_content_color_obesity_3rd;
+        }
+    }
 }

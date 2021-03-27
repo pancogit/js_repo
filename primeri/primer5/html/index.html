@@ -196,6 +196,7 @@
                                     <div class="home__question">Last dental exam</div>
                                     <input type="date" class="home__date" />
                                 </div>
+                                <div class="home__col-2"></div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-2">
@@ -211,14 +212,14 @@
                                         <option class="list__option" selected="selected" disabled="disabled">Please
                                             select
                                             days</option>
-                                        <option class="list__option">4 Months</option>
-                                        <option class="list__option">3 Months</option>
-                                        <option class="list__option">2 Months</option>
-                                        <option class="list__option">25 Days</option>
-                                        <option class="list__option">20 Days</option>
-                                        <option class="list__option">15 Days</option>
-                                        <option class="list__option">10 Days</option>
                                         <option class="list__option">5 Days</option>
+                                        <option class="list__option">10 Days</option>
+                                        <option class="list__option">15 Days</option>
+                                        <option class="list__option">20 Days</option>
+                                        <option class="list__option">25 Days</option>
+                                        <option class="list__option">2 Months</option>
+                                        <option class="list__option">3 Months</option>
+                                        <option class="list__option">4 Months</option>
                                     </select>
                                 </div>
                             </div>
@@ -229,9 +230,9 @@
                                         <option class="list__option" selected="selected" disabled="disabled">Please
                                             select
                                             times</option>
-                                        <option class="list__option">3 Times a Day</option>
-                                        <option class="list__option">3 Times a Day</option>
                                         <option class="list__option">Once a Day</option>
+                                        <option class="list__option">2 Times a Day</option>
+                                        <option class="list__option">3 Times a Day</option>
                                         <option class="list__option">I don't brush</option>
                                     </select>
                                 </div>
@@ -241,12 +242,12 @@
                                         <option class="list__option" selected="selected" disabled="disabled">Please
                                             select
                                             days</option>
-                                        <option class="list__option">10 Days</option>
-                                        <option class="list__option">7 Days</option>
-                                        <option class="list__option">5 Days</option>
-                                        <option class="list__option">3 Days</option>
-                                        <option class="list__option">2 Days</option>
                                         <option class="list__option">1 Day</option>
+                                        <option class="list__option">2 Days</option>
+                                        <option class="list__option">3 Days</option>
+                                        <option class="list__option">5 Days</option>
+                                        <option class="list__option">7 Days</option>
+                                        <option class="list__option">10 Days</option>
                                     </select>
                                 </div>
                             </div>
@@ -256,7 +257,7 @@
                                     <div class="numbers">
                                         <span class="numbers__box">1</span>
                                         <span class="numbers__box">2</span>
-                                        <span class="numbers__box">3</span>
+                                        <span class="numbers__box numbers__box--active">3</span>
                                         <span class="numbers__box">4</span>
                                         <span class="numbers__box">5</span>
                                         <span class="numbers__box">6</span>
@@ -290,10 +291,13 @@
                             <div class="home__row">
                                 <div class="home__col-1">
                                     <div class="home__question">Do you live in house or apartment?</div>
-                                    <input type="radio" name="house-apartment" class="home__radio" id="house-id" />
-                                    <label for="house-id" class="home__label">House</label>
-                                    <input type="radio" name="house-apartment" class="home__radio" id="apartment-id" />
-                                    <label for="apartment-id" class="home__label">Apartment</label>
+                                    <div class="home__col-wrapper">
+                                        <input type="radio" name="house-apartment" class="home__radio" id="house-id" />
+                                        <label for="house-id" class="home__label">House</label>
+                                        <input type="radio" name="house-apartment" class="home__radio"
+                                            id="apartment-id" />
+                                        <label for="apartment-id" class="home__label">Apartment</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
@@ -353,11 +357,11 @@
                                         <option class="list__option" selected="selected" disabled="disabled">Please
                                             select
                                             number</option>
-                                        <option class="list__option">5</option>
-                                        <option class="list__option">4</option>
-                                        <option class="list__option">3</option>
-                                        <option class="list__option">2</option>
                                         <option class="list__option">1</option>
+                                        <option class="list__option">2</option>
+                                        <option class="list__option">3</option>
+                                        <option class="list__option">4</option>
+                                        <option class="list__option">5</option>
                                     </select>
                                 </div>
                             </div>
@@ -562,7 +566,7 @@
                         <div class="home__content">
                             <h2 class="home__heading">Height & weight</h2>
                             <div class="home__row">
-                                <div class="home__col-2">
+                                <div class="home__col-2 home__col-2--block">
                                     <div class="home__question">Enter Height</div>
                                     <div class="measure">
                                         <button class="measure__sign">
@@ -602,13 +606,17 @@
                             <div class="home__row">
                                 <div class="home__col-1">
                                     <div class="home__question">Your BMI</div>
-                                    <div class="calculation">24.82</div>
+                                    <div class="calculation">
+                                        <span class="calculation__content calculation__content--normal">24.82</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
                                     <div class="home__question">Your Weight Status</div>
-                                    <div class="calculation">Normal Weight</div>
+                                    <div class="calculation">
+                                        <span class="calculation__content calculation__content--normal">Normal Weight</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -620,6 +628,7 @@
                                     <div class="home__question">Date Filled</div>
                                     <input type="date" class="home__date">
                                 </div>
+                                <div class="home__col-2"></div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-3">
@@ -628,11 +637,14 @@
                                 </div>
                                 <div class="home__col-3">
                                     <div class="home__question">Type</div>
-                                    <input type="radio" name="prescription-type" class="home__radio" id="type-new-id">
-                                    <label for="type-new-id" class="home__label">New</label>
-                                    <input type="radio" name="prescription-type" class="home__radio"
-                                        id="type-refill-id">
-                                    <label for="type-refill-id" class="home__label">Refill</label>
+                                    <div class="home__col-wrapper home__col-wrapper--center">
+                                        <input type="radio" name="prescription-type" class="home__radio"
+                                            id="type-new-id">
+                                        <label for="type-new-id" class="home__label">New</label>
+                                        <input type="radio" name="prescription-type" class="home__radio"
+                                            id="type-refill-id">
+                                        <label for="type-refill-id" class="home__label">Refill</label>
+                                    </div>
                                 </div>
                                 <div class="home__col-3">
                                     <div class="home__question">Prescription Scanned</div>
@@ -649,8 +661,10 @@
                                 </div>
                                 <div class="home__col-2">
                                     <div class="home__question">Strength</div>
-                                    <input type="number" class="pharmacy__strength" />
-                                    <span class="pharmacy__unit">mg</span>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__strength" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
@@ -662,25 +676,33 @@
                             <div class="home__row">
                                 <div class="home__col-2">
                                     <div class="home__question">Quantity Prescribed</div>
-                                    <input type="number" class="pharmacy__quantity" />
-                                    <span class="pharmacy__unit">mg</span>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
                                 </div>
                                 <div class="home__col-2">
                                     <div class="home__question">Quantity Ingested/Applied</div>
-                                    <input type="number" class="pharmacy__quantity" />
-                                    <span class="pharmacy__unit">mg</span>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-2">
                                     <div class="home__question">Quantity Dispensed</div>
-                                    <input type="number" class="pharmacy__quantity" />
-                                    <span class="pharmacy__unit">mg</span>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
                                 </div>
                                 <div class="home__col-2">
                                     <div class="home__question">Quantity Returned</div>
-                                    <input type="number" class="pharmacy__quantity" />
-                                    <span class="pharmacy__unit">mg</span>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
@@ -760,7 +782,7 @@
                                             <input type="checkbox" class="checkbox__input" id="teeth-other-id">
                                             <label for="teeth-other-id" class="checkbox__label">Other</label>
                                         </div>
-                                        <div class="checkbox__row">
+                                        <div class="checkbox__row checkbox__row--other">
                                             <textarea class="home__area"></textarea>
                                         </div>
                                     </div>
@@ -944,7 +966,7 @@
                                             <input type="checkbox" class="checkbox__input" id="medication-other-id">
                                             <label for="medication-other-id" class="checkbox__label">Other</label>
                                         </div>
-                                        <div class="checkbox__row">
+                                        <div class="checkbox__row checkbox__row--other">
                                             <textarea class="home__area"></textarea>
                                         </div>
                                     </div>
@@ -1014,7 +1036,7 @@
                                             <input type="checkbox" class="checkbox__input" id="conditions-other-id">
                                             <label for="conditions-other-id" class="checkbox__label">Other</label>
                                         </div>
-                                        <div class="checkbox__row">
+                                        <div class="checkbox__row checkbox__row--other">
                                             <textarea class="home__area"></textarea>
                                         </div>
                                     </div>

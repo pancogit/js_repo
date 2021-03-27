@@ -1,11 +1,58 @@
 /* choice */
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
 .choice {
 
+    // set flexbox
+    @include mixins.set_flexbox_container();
+
     &__answer {
+        // spread flex items
+        @include mixins.set_flex_item($flex: variables.$choice_answer_flex);
+
+        padding: variables.$choice_answer_padding;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+
+        &:first-child {
+            // set borders
+            @include mixins.set_borders($style: solid,
+                                        $width: variables.$home_border_width,
+                                        $color: colors.$home_border_color);
+            border-right: none;
+            border-top-left-radius: variables.$home_date_border_radius;
+            border-bottom-left-radius: variables.$home_date_border_radius;
+        }
+
+        &:last-child {
+            // set borders
+            @include mixins.set_borders($style: solid,
+                                        $width: variables.$home_border_width,
+                                        $color: colors.$home_border_color);
+
+            border-top-right-radius: variables.$home_date_border_radius;
+            border-bottom-right-radius: variables.$home_date_border_radius;
+        }
 
         &--active {
-            
+            background-color: colors.$choice_answer_active_background_color;
+            color: colors.$choice_answer_active_color;
+
+            // when first element is active, then highlight left border of second element
+            &:first-child {
+                + .choice__answer {
+                    border-left-color: colors.$choice_answer_border_color;
+                }
+            }
         }
+    }
+
+    // for higher precendence
+    .choice__answer--active {
+        border-color: colors.$choice_answer_border_color;
     }
 }
