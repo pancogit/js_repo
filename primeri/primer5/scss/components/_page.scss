@@ -11,6 +11,16 @@
 
     &--center {
         margin: variables.$page_center_modifier_margin;
+
+        // for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            margin: variables.$page_center_modifier_margin_medium;
+        }
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__center {
@@ -20,6 +30,15 @@
         padding: variables.$page_center_padding;
         background-color: colors.$page_center_background_color;
         border-radius: variables.$page_center_border_radius;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            padding: variables.$page_center_padding_medium;
+            border-radius: unset;
+        }
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            padding: 0;
+        }
     }
 
     &__aside {
@@ -29,6 +48,15 @@
         @include mixins.set_flexbox_container($flex_direction: column, 
                                               $justify_content: center, 
                                               $align_items: center);
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$page_aside_flex_medium);
+        }
+
+        // hide aside part
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            display: none;
+        }
     }
 
     &__content {

@@ -1,0 +1,88 @@
+// home
+
+@use '../variables';
+
+
+// two column layout
+@mixin home_col_2 {
+
+    // flex item takes half width
+    @include set_flex_item($flex: variables.$home_col_2_flex);
+
+    // create gap between columns
+    + .home__col-2 {
+        margin-left: variables.$home_col_2_margin_left;
+        margin-top: 0;
+    }
+
+    &--block {
+        display: block;
+    }
+}
+
+// two column layout to one column layout
+@mixin home_col_2_to_1 {
+
+    // spread flex items to full width
+    @include set_flex_item($flex: variables.$home_col_1_flex);
+
+    // create gap between columns
+    + .home__col-2 {
+        margin-left: 0;
+        margin-top: variables.$home_col_2_margin_top;
+    }
+}
+
+// three column layout
+@mixin home_col_3 {
+
+    // flex item takes one third width
+    @include set_flex_item($flex: variables.$home_col_3_flex);
+    
+    // create gap between columns
+    // even flex items and odd flex items
+    + .home__col-3:nth-of-type(2n), + .home__col-3:nth-of-type(2n + 1) {
+        margin-top: 0;
+        margin-left: variables.$home_col_3_margin_left;
+
+        // flex item takes one third width
+        @include set_flex_item($flex: variables.$home_col_3_flex);
+    }
+}
+
+// three column layout to two column layout
+@mixin home_col_3_to_2 {
+
+    // even flex items
+    + .home__col-3:nth-of-type(2n) {
+        // create gap between columns
+        margin-top: 0;
+        margin-left: variables.$home_col_3_margin_left;
+
+        // flex item takes one third width
+        @include set_flex_item($flex: variables.$home_col_3_flex);
+    }
+
+    + .home__col-3:last-child {
+        // create gap between columns
+        margin-left: 0;
+        margin-top: variables.$home_col_3_margin_top;
+
+        // spread last flex item to full width
+        @include set_flex_item($flex: variables.$home_col_3_flex_full);
+    }
+}
+
+// three column layout to one column layout
+@mixin home_col_3_to_1 {
+
+    // even flex items
+    + .home__col-3:nth-of-type(2n) {
+        // create gap between columns
+        margin-left: 0;
+        margin-top: variables.$home_col_3_margin_top;
+
+        // spread second flex item to full width
+        @include set_flex_item($flex: variables.$home_col_3_flex_full);
+    }
+}

@@ -9,44 +9,58 @@
     // set flexbox
     @include mixins.set_flexbox_container();
 
+    // spread flex items in column
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+        flex-direction: column;
+    }
+
+    // spread flex items in row
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+        flex-direction: row;
+    }
+
+    // spread flex items in column
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        flex-direction: column;
+    }
+
     &__box {
-        @include mixins.set_flex_item($flex: variables.$numbers_box_flex);
 
-        padding: variables.$numbers_box_padding;
-        cursor: pointer;
-        text-align: center;
-        font-weight: bold;
+        @include mixins.numbers_box_style;
 
-        // set borders
-        @include mixins.set_borders($style: solid,
-                                    $width: variables.$home_border_width,
-                                    $color: colors.$home_border_color);
-        border-right: none;
-
-        &:last-child {
-            // set right border for last element
-            @include mixins.set_borders($right_style: solid,
-                                        $right_width: variables.$home_border_width,
-                                        $right_color: colors.$home_border_color);
-
-            border-top-right-radius: variables.$home_date_border_radius;
-            border-bottom-right-radius: variables.$home_date_border_radius;
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+            @include mixins.numbers_box_column_style;
         }
 
-        &:first-child {
-            border-top-left-radius: variables.$home_date_border_radius;
-            border-bottom-left-radius: variables.$home_date_border_radius;
+        // spread flex items in row
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.numbers_box_style;
+        }
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            @include mixins.numbers_box_column_style;
         }
     }
 
     .numbers__box--active {
-        background-color: colors.$choice_answer_active_background_color;
-        color: colors.$choice_answer_active_color;
-        border-color: colors.$choice_answer_border_color;
 
-        // when some number is active, highlight left border of next number to wrap all sides of box
-        + .numbers__box {
-            border-left-color: colors.$choice_answer_border_color;
+        @include mixins.numbers_box_active_style;
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+            @include mixins.numbers_box_active_column_style;
+        }
+
+        // spread flex items in row
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.numbers_box_active_style;
+        }
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            @include mixins.numbers_box_active_column_style;
         }
     }
 }

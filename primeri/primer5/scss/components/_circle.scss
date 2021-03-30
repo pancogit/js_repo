@@ -15,6 +15,11 @@
 
     border-radius: variables.$circle_border_radius;
 
+    // hide circle
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+        display: none;
+    }
+
     &--small {
         width: variables.$circle_dimension_small;
         height: variables.$circle_dimension_small;

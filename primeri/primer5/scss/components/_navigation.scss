@@ -22,9 +22,16 @@
     }
 
     &__menu {
-        // remove bottom border for last navigation item on page
         &:last-child .navigation__item:last-child {
+            // remove bottom border for last navigation item on page
             border-bottom: none;
+
+            // show bottom border for one column layout
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+                @include mixins.set_borders($bottom_style: solid,
+                                            $bottom_width: variables.$home_border_width,
+                                            $bottom_color: colors.$home_border_color);
+            }
         }
     }
 

@@ -21,6 +21,14 @@
     background-color: colors.$header_background_color;
     color: colors.$header_color;
 
+    // remove borders when there are no paddings and center flex items
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        border: none;
+        padding: variables.$header_padding_small;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__age {
 
     }
@@ -36,6 +44,16 @@
         margin-left: variables.$header_center_margin;
         margin-right: variables.$header_center_margin;
         text-align: center;
+        
+        // spread flex item to full width and push them to the end with flex order
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$header_center_flex_full);
+
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: variables.$header_center_margin_top;
+            order: variables.$header_center_order;
+        }
     }
 
     &__date {
@@ -60,6 +78,15 @@
 
     &__info {
         text-align: right;
+
+        // spread flex item to full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$header_center_flex_full);
+
+            margin-top: variables.$header_info_margin_top;
+            margin-bottom: variables.$header_center_margin_top / 2;
+            text-align: center;
+        }
     }
 
     &__link {
@@ -74,6 +101,11 @@
     &__status {
         // set flexbox
         @include mixins.set_flexbox_container($justify_content: flex-end, $align_items: center);
+
+        // center flex items
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            justify-content: center;
+        }
     }
 
     &__time {

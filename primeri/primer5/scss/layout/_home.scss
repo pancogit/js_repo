@@ -14,6 +14,17 @@
                                 $width: variables.$home_border_width,
                                 $color: colors.$home_border_color);
 
+
+    // one column layout
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+        flex-wrap: wrap;
+    }
+
+    // remove borders when there are no paddings
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        border: none;
+    }
+
     &__area {
         height: variables.$home_area_height;
         font-size: variables.$home_area_font_size;
@@ -32,6 +43,13 @@
         @include mixins.set_borders($right_style: solid,
                                     $right_width: variables.$home_border_width,
                                     $right_color: colors.$home_border_color);
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$home_aside_flex_full);
+            
+            border-right: none;
+        }
     }
 
     &__col-1, &__col-2, &__col-3 {
@@ -44,26 +62,65 @@
     }
 
     &__col-2 {
-        // flex item takes half width
-        @include mixins.set_flex_item($flex: variables.$home_col_2_flex);
+        @include mixins.home_col_2;
 
-        // create gap between columns
-        + .home__col-2 {
-            margin-left: variables.$home_col_2_margin_left;
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_large) {
+            @include mixins.home_col_2_to_1;
         }
 
-        &--block {
-            display: block;
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.home_col_2;
+        }
+
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_medium) {
+            @include mixins.home_col_2_to_1;
+        }
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            @include mixins.home_col_2;
+        }
+
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_middle) {
+            @include mixins.home_col_2_to_1;
         }
     }
 
     &__col-3 {
-        // flex item takes one third width
-        @include mixins.set_flex_item($flex: variables.$home_col_3_flex);
+        @include mixins.home_col_3;
 
-        // create gap between columns
-        + .home__col-3 {
-            margin-left: variables.$home_col_3_margin_left;
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_large) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_medium) {
+            @include mixins.home_col_3_to_1;
+        }
+
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_big) {
+            @include mixins.home_col_3_to_1;
+        }
+
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
+            @include mixins.home_col_3_to_1;
         }
     }
 
@@ -80,6 +137,10 @@
     &__content {
         padding: variables.$home_content_padding;
         color: colors.$home_content_color;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            padding: variables.$home_content_padding_small;
+        }
     }
 
     &__date {
@@ -108,6 +169,7 @@
 
     &__heading {
         margin-top: 0;
+        margin-bottom: variables.$home_heading_margin_bottom;
         color: colors.$home_heading_color;
         font-weight: normal;
     }

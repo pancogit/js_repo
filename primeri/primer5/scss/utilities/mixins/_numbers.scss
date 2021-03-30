@@ -1,0 +1,100 @@
+// numbers
+
+
+@use '../colors';
+@use '../variables';
+
+
+// normal styling for numbers box
+@mixin numbers_box_style {
+
+    @include set_flex_item($flex: variables.$numbers_box_flex);
+
+    padding: variables.$numbers_box_padding;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+
+    // set borders
+    @include set_borders($style: solid,
+                         $width: variables.$home_border_width,
+                         $color: colors.$home_border_color);
+    border-right: none;
+
+    &:last-child {
+        // set right border for last element
+        @include set_borders($right_style: solid,
+                             $right_width: variables.$home_border_width,
+                             $right_color: colors.$home_border_color);
+
+        border-top-right-radius: variables.$home_date_border_radius;
+        border-bottom-right-radius: variables.$home_date_border_radius;
+        border-bottom-left-radius: unset;
+    }
+
+    &:first-child {
+        border-top-left-radius: variables.$home_date_border_radius;
+        border-bottom-left-radius: variables.$home_date_border_radius;
+        border-top-right-radius: unset;
+    }
+}
+
+// column styling for numbers box
+@mixin numbers_box_column_style {
+
+    // set right border for column elements and remove bottom border
+    @include set_borders($right_style: solid,
+                         $right_width: variables.$home_border_width,
+                         $right_color: colors.$home_border_color);
+    border-bottom: none;
+
+    &:last-child {
+        border-bottom-left-radius: variables.$home_date_border_radius;
+        border-bottom-right-radius: variables.$home_date_border_radius;
+        border-top-right-radius: unset;
+
+        // set bottom border for last column element
+        @include set_borders($bottom_style: solid,
+                             $bottom_width: variables.$home_border_width,
+                             $bottom_color: colors.$home_border_color);
+    }
+
+    &:first-child {
+        border-top-left-radius: variables.$home_date_border_radius;
+        border-top-right-radius: variables.$home_date_border_radius;
+        border-bottom-left-radius: unset;
+    }
+}
+
+// normal styling for active box
+@mixin numbers_box_active_style {
+    background-color: colors.$choice_answer_active_background_color;
+    color: colors.$choice_answer_active_color;
+    border-color: colors.$choice_answer_border_color;
+
+    // when some number is active, highlight left border of next number to wrap all sides of box
+    + .numbers__box {
+        border-left-color: colors.$choice_answer_border_color;
+        border-top-color: colors.$home_border_color;
+    }
+
+    // for more selected options (if it's true), style also top border
+    + .numbers__box--active {
+        border-top-color: colors.$choice_answer_border_color;
+    }
+}
+
+// column styling for active box
+@mixin numbers_box_active_column_style {
+
+    // when some number is active, highlight top border of next number to wrap all sides of box
+    + .numbers__box {
+        border-top-color: colors.$choice_answer_border_color;
+        border-left-color: colors.$home_border_color;
+    }
+
+    // for more selected options (if it's true), style also left border
+    + .numbers__box--active {
+        border-left-color: colors.$choice_answer_border_color;
+    }
+}
