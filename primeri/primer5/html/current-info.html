@@ -32,7 +32,7 @@
             <div class="page__content">
                 <header class="header">
                     <div class="wifi header__wifi">
-                        <a href="index.html" class="wifi__link">
+                        <a href="current-info.html" class="wifi__link">
                             <i class="fas fa-signal wifi__icon"></i>
                             <span class="wifi__text">Fast Notes EDA</span>
                             <i class="fas fa-wifi wifi__icon"></i>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="header__info">
                         <div class="battery header__status">
-                            <a href="index.html" class="header__link">
+                            <a href="current-info.html" class="header__link">
                                 <i class="fab fa-bluetooth-b header__icon"></i>
                             </a>
                             <span class="battery__status">100%</span>
@@ -77,7 +77,7 @@
                                     <h2 class="navigation__heading">Demographics</h2>
                                     <ul class="navigation__list">
                                         <li class="navigation__item">
-                                            <a class="navigation__link navigation__link--ok navigation__link--active">
+                                            <a href="index.html" class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Home address</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -154,7 +154,7 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="current-info.html" class="navigation__link">
+                                            <a class="navigation__link navigation__link--active">
                                                 <span class="navigation__text">Current info</span>
                                                 <span class="navigation__progress">
                                                     <i class="far fa-circle navigation__icon"></i>
@@ -189,52 +189,102 @@
                     </aside>
 
                     <div class="home__wrapper">
-                        <div class="home__content address">
-                            <h2 class="home__heading">Home address</h2>
+                        <div class="home__content">
+                            <h2 class="home__heading">Current info</h2>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Do you live in house or apartment?</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="radio" name="house-apartment" class="home__radio" id="house-id" />
-                                        <label for="house-id" class="home__label">House</label>
-                                        <input type="radio" name="house-apartment" class="home__radio"
-                                            id="apartment-id" />
-                                        <label for="apartment-id" class="home__label">Apartment</label>
+                                    <div class="home__question">What concerns do you currently have with your oral
+                                        health or smile?</div>
+                                    <div class="checkbox">
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-jaw-joint-pain-id">
+                                            <label for="teeth-jaw-joint-pain-id" class="checkbox__label">Jaw joint
+                                                pain</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-grinding-id">
+                                            <label for="teeth-grinding-id" class="checkbox__label">Clenching or grinding
+                                                of teeth</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-discolored-id">
+                                            <label for="teeth-discolored-id" class="checkbox__label">Discolored
+                                                teeth</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-missing-id">
+                                            <label for="teeth-missing-id" class="checkbox__label">Missing teeth</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-spaces-id">
+                                            <label for="teeth-spaces-id" class="checkbox__label">Spaces in between
+                                                teeth</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-overbite-id">
+                                            <label for="teeth-overbite-id" class="checkbox__label">Overbite</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-underbite-id">
+                                            <label for="teeth-underbite-id" class="checkbox__label">Underbite</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-crowns-id">
+                                            <label for="teeth-crowns-id" class="checkbox__label">Old crowns</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-speech-id">
+                                            <label for="teeth-speech-id" class="checkbox__label">Speech problems</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-sensitivity-id">
+                                            <label for="teeth-sensitivity-id" class="checkbox__label">Tooth sensitivity
+                                                to cold</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-chewing-id">
+                                            <label for="teeth-chewing-id" class="checkbox__label">Difficulty
+                                                chewing</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-breath-id">
+                                            <label for="teeth-breath-id" class="checkbox__label">Bad breath</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="teeth-other-id">
+                                            <label for="teeth-other-id" class="checkbox__label">Other</label>
+                                        </div>
+                                        <div class="checkbox__row checkbox__row--other">
+                                            <textarea class="home__area"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Country</div>
-                                    <input type="text" class="home__input" />
+                                    <div class="home__question">Have you whitened your teeth in the past?</div>
+                                    <div class="choice">
+                                        <div class="choice__answer choice__answer--active">No</div>
+                                        <div class="choice__answer">Yes</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">City</div>
-                                    <input type="text" class="home__input" />
+                                    <div class="home__question">Have you ever had orthodontic treatment?</div>
+                                    <div class="choice">
+                                        <div class="choice__answer choice__answer--active">No</div>
+                                        <div class="choice__answer">Yes</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Address 1</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Address 2</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">State</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">ZIP Code</div>
-                                    <input type="number" class="address__zip" />
+                                    <div class="home__question">Have you ever had gum tissue treatment?</div>
+                                    <div class="choice">
+                                        <div class="choice__answer choice__answer--active">No</div>
+                                        <div class="choice__answer">Yes</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

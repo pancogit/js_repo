@@ -53,6 +53,23 @@
                     color: colors.$score_icon_back_hover_color;
                 }
             }
+
+            // disabled back button
+            &-disabled {
+                cursor: auto;
+
+                .score__text, .score__icon {
+                    color: colors.$score_button_back_disabled_color;
+                }
+
+                &:hover {
+                    background-color: colors.$score_button_back_background_color;
+
+                    .score__icon {
+                        color: colors.$score_button_back_disabled_color;
+                    }
+                }
+            }
         }
 
         &--next {

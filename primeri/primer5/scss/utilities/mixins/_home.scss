@@ -14,10 +14,6 @@
         margin-left: variables.$home_col_2_margin_left;
         margin-top: 0;
     }
-
-    &--block {
-        display: block;
-    }
 }
 
 // two column layout to one column layout
@@ -84,5 +80,23 @@
 
         // spread second flex item to full width
         @include set_flex_item($flex: variables.$home_col_3_flex_full);
+    }
+}
+
+// two column layout for home height
+@mixin home_height_2 {
+    flex-direction: row;
+
+    .measure:last-child {
+        margin-top: 0;
+    }
+}
+
+// one column layout for home height
+@mixin home_height_1 {
+    flex-direction: column;
+
+    .measure:last-child {
+        margin-top: variables.$home_height_measure_margin_top;
     }
 }

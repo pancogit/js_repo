@@ -32,7 +32,7 @@
             <div class="page__content">
                 <header class="header">
                     <div class="wifi header__wifi">
-                        <a href="index.html" class="wifi__link">
+                        <a href="allergies.html" class="wifi__link">
                             <i class="fas fa-signal wifi__icon"></i>
                             <span class="wifi__text">Fast Notes EDA</span>
                             <i class="fas fa-wifi wifi__icon"></i>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="header__info">
                         <div class="battery header__status">
-                            <a href="index.html" class="header__link">
+                            <a href="allergies.html" class="header__link">
                                 <i class="fab fa-bluetooth-b header__icon"></i>
                             </a>
                             <span class="battery__status">100%</span>
@@ -77,7 +77,7 @@
                                     <h2 class="navigation__heading">Demographics</h2>
                                     <ul class="navigation__list">
                                         <li class="navigation__item">
-                                            <a class="navigation__link navigation__link--ok navigation__link--active">
+                                            <a href="index.html" class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Home address</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -167,7 +167,7 @@
                                     <h2 class="navigation__heading">Medical History</h2>
                                     <ul class="navigation__list">
                                         <li class="navigation__item">
-                                            <a href="allergies.html" class="navigation__link navigation__link--warning">
+                                            <a class="navigation__link navigation__link--active navigation__link--warning">
                                                 <span class="navigation__text">Allergies</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -189,52 +189,159 @@
                     </aside>
 
                     <div class="home__wrapper">
-                        <div class="home__content address">
-                            <h2 class="home__heading">Home address</h2>
+                        <div class="home__content">
+                            <h2 class="home__heading">Allergies</h2>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Do you live in house or apartment?</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="radio" name="house-apartment" class="home__radio" id="house-id" />
-                                        <label for="house-id" class="home__label">House</label>
-                                        <input type="radio" name="house-apartment" class="home__radio"
-                                            id="apartment-id" />
-                                        <label for="apartment-id" class="home__label">Apartment</label>
+                                    <div class="home__question">Do you have a written policy on food allergies and
+                                        intolerances?</div>
+                                    <div class="choice">
+                                        <div class="choice__answer choice__answer--active">No</div>
+                                        <div class="choice__answer">Yes</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Country</div>
-                                    <input type="text" class="home__input" />
+                                    <div class="home__question">Have all kitchen staff received food allergen awareness
+                                        training?</div>
+                                    <div class="choice">
+                                        <div class="choice__answer choice__answer--active">No</div>
+                                        <div class="choice__answer">Yes</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">City</div>
-                                    <input type="text" class="home__input" />
+                                    <div class="home__question">Food Allergies</div>
+                                    <div class="checkbox">
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-peanuts-id">
+                                            <label for="food-peanuts-id" class="checkbox__label">Peanuts</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-nuts-id">
+                                            <label for="food-nuts-id" class="checkbox__label">Nuts (almonds, walnuts,
+                                                etc)</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-sesame-id">
+                                            <label for="food-sesame-id" class="checkbox__label">Sesame seeds</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-fish-id">
+                                            <label for="food-fish-id" class="checkbox__label">Fish</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-eggs-id">
+                                            <label for="food-eggs-id" class="checkbox__label">Eggs</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-milk-id">
+                                            <label for="food-milk-id" class="checkbox__label">Milk</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-soya-id">
+                                            <label for="food-soya-id" class="checkbox__label">Soya</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-lupin-id">
+                                            <label for="food-lupin-id" class="checkbox__label">Lupin</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-celery-id">
+                                            <label for="food-celery-id" class="checkbox__label">Celery</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-crustaceans-id">
+                                            <label for="food-crustaceans-id" class="checkbox__label">Crustaceans</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-mulluscs-id">
+                                            <label for="food-mulluscs-id" class="checkbox__label">Mulluscs</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-mustard-id">
+                                            <label for="food-mustard-id" class="checkbox__label">Mustard</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-cereals-id">
+                                            <label for="food-cereals-id" class="checkbox__label">Cereals</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="food-sulphur-id">
+                                            <label for="food-sulphur-id" class="checkbox__label">Sulphur dioxide</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Address 1</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Address 2</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">State</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">ZIP Code</div>
-                                    <input type="number" class="address__zip" />
+                                    <div class="home__question">Medication Allergies</div>
+                                    <div class="checkbox">
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-none-id">
+                                            <label for="medication-none-id" class="checkbox__label">None known</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-amoxil-id">
+                                            <label for="medication-amoxil-id"
+                                                class="checkbox__label">Amoxil/Ampicillin</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-aspirin-id">
+                                            <label for="medication-aspirin-id" class="checkbox__label">Aspirin</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input"
+                                                id="medication-cephalosporins-id">
+                                            <label for="medication-cephalosporins-id"
+                                                class="checkbox__label">Cephalosporins</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-codeine-id">
+                                            <label for="medication-codeine-id" class="checkbox__label">Codeine</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input"
+                                                id="medication-erythromycin-id">
+                                            <label for="medication-erythromycin-id"
+                                                class="checkbox__label">Erythromycin</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-nsaid-id">
+                                            <label for="medication-nsaid-id" class="checkbox__label">NSAIDs</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input"
+                                                id="medication-penicillin-id">
+                                            <label for="medication-penicillin-id"
+                                                class="checkbox__label">Penicillin</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input"
+                                                id="medication-quinolones-id">
+                                            <label for="medication-quinolones-id"
+                                                class="checkbox__label">Quinolones</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-sulfa-id">
+                                            <label for="medication-sulfa-id" class="checkbox__label">Sulfa</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input"
+                                                id="medication-tetracyclines-id">
+                                            <label for="medication-tetracyclines-id"
+                                                class="checkbox__label">Tetracyclines</label>
+                                        </div>
+                                        <div class="checkbox__row">
+                                            <input type="checkbox" class="checkbox__input" id="medication-other-id">
+                                            <label for="medication-other-id" class="checkbox__label">Other</label>
+                                        </div>
+                                        <div class="checkbox__row checkbox__row--other">
+                                            <textarea class="home__area"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

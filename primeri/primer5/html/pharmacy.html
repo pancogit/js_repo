@@ -32,7 +32,7 @@
             <div class="page__content">
                 <header class="header">
                     <div class="wifi header__wifi">
-                        <a href="index.html" class="wifi__link">
+                        <a href="pharmacy.html" class="wifi__link">
                             <i class="fas fa-signal wifi__icon"></i>
                             <span class="wifi__text">Fast Notes EDA</span>
                             <i class="fas fa-wifi wifi__icon"></i>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="header__info">
                         <div class="battery header__status">
-                            <a href="index.html" class="header__link">
+                            <a href="pharmacy.html" class="header__link">
                                 <i class="fab fa-bluetooth-b header__icon"></i>
                             </a>
                             <span class="battery__status">100%</span>
@@ -77,7 +77,7 @@
                                     <h2 class="navigation__heading">Demographics</h2>
                                     <ul class="navigation__list">
                                         <li class="navigation__item">
-                                            <a class="navigation__link navigation__link--ok navigation__link--active">
+                                            <a href="index.html" class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Home address</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -133,7 +133,7 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="pharmacy.html" class="navigation__link navigation__link--ok">
+                                            <a class="navigation__link navigation__link--ok navigation__link--active">
                                                 <span class="navigation__text">Pharmacy</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -189,52 +189,98 @@
                     </aside>
 
                     <div class="home__wrapper">
-                        <div class="home__content address">
-                            <h2 class="home__heading">Home address</h2>
+                        <div class="home__content pharmacy">
+                            <h2 class="home__heading">Pharmacy</h2>
                             <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Do you live in house or apartment?</div>
+                                <div class="home__col-2">
+                                    <div class="home__question">Date Filled</div>
+                                    <input type="date" class="home__date">
+                                </div>
+                                <div class="home__col-2"></div>
+                            </div>
+                            <div class="home__row">
+                                <div class="home__col-3">
+                                    <div class="home__question">Prescription RX Number</div>
+                                    <input type="number" class="pharmacy__rx" />
+                                </div>
+                                <div class="home__col-3">
+                                    <div class="home__question">Type</div>
+                                    <div class="home__col-wrapper home__col-wrapper--center">
+                                        <input type="radio" name="prescription-type" class="home__radio"
+                                            id="type-new-id">
+                                        <label for="type-new-id" class="home__label">New</label>
+                                        <input type="radio" name="prescription-type" class="home__radio"
+                                            id="type-refill-id">
+                                        <label for="type-refill-id" class="home__label">Refill</label>
+                                    </div>
+                                </div>
+                                <div class="home__col-3">
+                                    <div class="home__question">Prescription Scanned</div>
+                                    <div class="choice">
+                                        <div class="choice__answer">No</div>
+                                        <div class="choice__answer choice__answer--active">Yes</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home__row">
+                                <div class="home__col-2">
+                                    <div class="home__question">Prescribed Drug</div>
+                                    <input type="text" class="home__input" />
+                                </div>
+                                <div class="home__col-2">
+                                    <div class="home__question">Strength</div>
                                     <div class="home__col-wrapper">
-                                        <input type="radio" name="house-apartment" class="home__radio" id="house-id" />
-                                        <label for="house-id" class="home__label">House</label>
-                                        <input type="radio" name="house-apartment" class="home__radio"
-                                            id="apartment-id" />
-                                        <label for="apartment-id" class="home__label">Apartment</label>
+                                        <input type="number" class="pharmacy__strength" />
+                                        <span class="pharmacy__unit">mg</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-1">
-                                    <div class="home__question">Country</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">City</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Address 1</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Address 2</div>
-                                    <input type="text" class="home__input" />
+                                    <div class="home__question">Directions</div>
+                                    <textarea class="home__area"></textarea>
                                 </div>
                             </div>
                             <div class="home__row">
                                 <div class="home__col-2">
-                                    <div class="home__question">State</div>
+                                    <div class="home__question">Quantity Prescribed</div>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
+                                </div>
+                                <div class="home__col-2">
+                                    <div class="home__question">Quantity Ingested/Applied</div>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home__row">
+                                <div class="home__col-2">
+                                    <div class="home__question">Quantity Dispensed</div>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
+                                </div>
+                                <div class="home__col-2">
+                                    <div class="home__question">Quantity Returned</div>
+                                    <div class="home__col-wrapper">
+                                        <input type="number" class="pharmacy__quantity" />
+                                        <span class="pharmacy__unit">mg</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home__row">
+                                <div class="home__col-2">
+                                    <div class="home__question">Pharmacist Name</div>
                                     <input type="text" class="home__input" />
                                 </div>
                                 <div class="home__col-2">
-                                    <div class="home__question">ZIP Code</div>
-                                    <input type="number" class="address__zip" />
+                                    <div class="home__question">Pharmacist License No.</div>
+                                    <input type="number" class="pharmacy__license" />
                                 </div>
                             </div>
                         </div>

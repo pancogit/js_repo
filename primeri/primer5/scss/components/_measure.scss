@@ -5,8 +5,13 @@
 @use '../utilities/mixins/mixins';
 
 .measure {
-    display: inline-block;
     margin-right: variables.$measure_margin_right;
+
+    // style measure elements in grid, to align measures in new lines
+    @include mixins.set_grid_container($display: 'inline-grid', 
+                                       $grid_template_columns: variables.$measure_grid_template_columns,
+                                       $align_items: center,
+                                       $align-content: flex-start);
 
     &__icon {
 
@@ -15,6 +20,7 @@
     &__number {
         display: inline-block;
         margin: variables.$measure_number_margin;
+        text-align: center;
     }
 
     &__sign {
@@ -44,6 +50,6 @@
     }
 
     &__unit {
-        
+        margin-left: variables.$measure_unit_margin_left;
     }
 }
