@@ -25,6 +25,8 @@ export class Header {
         // refresh time every 30 seconds
         // bind this pointer to async function
         setInterval(this.setTime.bind(this), 30 * 1000);
+
+        this.disableHeaderLinks();
     }
 
     initUser() {
@@ -151,5 +153,17 @@ export class Header {
             minutes: minutes,
             period: period
         }
+    }
+
+    disableHeaderLinks() {
+        var wifiLink = document.querySelector('.wifi__link');
+        var headerLink = document.querySelector('.header__link');
+
+        wifiLink.addEventListener('click', this.disableLink.bind(this));
+        headerLink.addEventListener('click', this.disableLink.bind(this));
+    }
+
+    disableLink(event) {
+        event.preventDefault();
     }
 }

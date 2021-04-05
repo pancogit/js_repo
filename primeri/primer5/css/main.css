@@ -637,7 +637,7 @@ a {
   font-size: 1.1rem;
 }
 .score__level {
-  width: 75%;
+  width: 0%;
   height: 100%;
   border-radius: 0.5rem;
   background-color: #1fb5ff;
