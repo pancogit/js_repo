@@ -15,6 +15,8 @@ import { Questionnaire } from './pages/questionnaire.js';
 import { CurrentInfo } from './pages/current-info.js';
 import { Allergies } from './pages/allergies.js';
 import { MedicalCondition } from './pages/medical-condition.js';
+import { IconClasses } from './icon-classes.js';
+import { Validation } from './validation.js';
 
 export class Navigation {
 
@@ -26,15 +28,15 @@ export class Navigation {
         this.buttonClass = 'score__button';
         this.buttonTextClass = 'score__text';
         this.iconClass = 'navigation__icon';
-        this.checkCircleClasses = ['fas', 'fa-check-circle'];
-        this.circleClasses = ['far', 'fa-circle'];
-        this.exclamationClasses = ['fas', 'fa-exclamation-circle'];
-        this.linkOkClass = 'navigation__link--ok';
-        this.warningClass = 'navigation__link--warning';
+
+        // classes for icons
+        this.iconClasses = new IconClasses();
+
         this.textClass = 'navigation__text';
         this.homeWrapper = document.querySelector('.home__wrapper');
         this.links = document.querySelectorAll('.navigation .navigation__link');
         this.currentLink = this.links[0];
+        this.previousLink = 0;
 
         let buttonsDOM = document.querySelectorAll('.' + this.buttonClass);
 
@@ -51,11 +53,14 @@ export class Navigation {
         // cache HTML pages in array of objects (link, page)
         this.pages = [];
 
-        // object for score update
-        this.score = new Score();
-
         // container for all pages
         this.pagesContainer = new PagesContainer();
+
+        // object for score updates
+        this.score = new Score(this.pagesContainer);
+
+        // call page validation
+        this.validation = new Validation(this.pagesContainer);
     }
 
     addEventListeners() {
@@ -93,7 +98,7 @@ export class Navigation {
         this.buttons.next.button.addEventListener('click', this.buttonIsClicked.bind(this));
     }
 
-    linkIsClicked(event) {
+    async linkIsClicked(event) {
         event.preventDefault();
 
         var target = event.target;
@@ -108,16 +113,18 @@ export class Navigation {
         // don't fetch page if it's already there
         if (linkIsAlreadyActive) return;
 
-        var previousLink = this.currentLink;
+        this.previousLink = this.currentLink;
 
         // update current link
         this.currentLink = target;
 
-        this.changePage(link);
-        this.validatePage(previousLink);
+        // wait until page is changed before validation to avoid blinking
+        await this.changePage(link);
+        this.validation.validatePage(this.previousLink);
+        this.score.updateScore();
     }
 
-    changePage(link) {
+    async changePage(link) {
         let cachedPageIndex = this.getIndexOfCurrentPageInCache();
         let pageAlreadyInCache = cachedPageIndex !== -1;
 
@@ -126,8 +133,8 @@ export class Navigation {
         // if page is cached, don't fetch it again
         if (pageAlreadyInCache) this.updatePageFromCache(cachedPageIndex);
         else {
-            // fetch linked page via fetch api
-            fetch(link).then(this.pageIsFetched.bind(this))
+            // fetch linked page via fetch api and wait until fetch is finished
+            await fetch(link).then(this.pageIsFetched.bind(this))
                 .then(this.pageText.bind(this))
                 .catch(this.handleErrors.bind(this));
         }
@@ -250,30 +257,34 @@ export class Navigation {
         if (nextButtonClicked) this.nextButtonIsClicked(target);
     }
 
-    backButtonIsClicked(target) {
+    async backButtonIsClicked(target) {
         var backButtonDisabled = target.classList.contains(this.disabledBackButtonClass);
 
         if (!backButtonDisabled) {
-            let previousLink = this.currentLink;
+            this.previousLink = this.currentLink;
 
             // update current link and change page
+            // wait for page to change (asynchronous call) and then validate
             this.currentLink = this.links[this.findCurrentLinkIndex() - 1];
-            this.changePage(this.currentLink.href);
-            this.validatePage(previousLink);
+            await this.changePage(this.currentLink.href);
+            this.validation.validatePage(this.previousLink);
+            this.score.updateScore();
         }
     }
 
-    nextButtonIsClicked(target) {
+    async nextButtonIsClicked(target) {
         var nextButtonText = target.querySelector('.' + this.buttonTextClass);
         var nextButtonFinished = nextButtonText.textContent === this.buttons.next.finishText;
 
         if (!nextButtonFinished) {
-            let previousLink = this.currentLink;
+            this.previousLink = this.currentLink;
 
             // update current link
+            // wait for page to change (asynchronous call) and then validate
             this.currentLink = this.links[this.findCurrentLinkIndex() + 1];
-            this.changePage(this.currentLink.href);
-            this.validatePage(previousLink);
+            await this.changePage(this.currentLink.href);
+            this.validation.validatePage(this.previousLink);
+            this.score.updateScore();
         }
     }
 
@@ -293,83 +304,16 @@ export class Navigation {
     resetIcons() {
         this.links.forEach(function iterate(link, key, parent) {
             let icon = link.querySelector('.' + this.iconClass);
-            icon.classList.remove(...this.checkCircleClasses);
-            icon.classList.remove(...this.exclamationClasses);
-            icon.classList.add(...this.circleClasses);
+            icon.classList.remove(...this.iconClasses.checkCircleClasses);
+            icon.classList.remove(...this.iconClasses.exclamationClasses);
+            icon.classList.add(...this.iconClasses.circleClasses);
 
-            link.classList.remove(this.linkOkClass);
-            link.classList.remove(this.warningClass);
+            link.classList.remove(this.iconClasses.linkOkClass);
+            link.classList.remove(this.iconClasses.warningClass);
             link.classList.remove(this.activeLinkClass);
         }, this);
 
         // add active link to the first link
         this.links[0].classList.add(this.activeLinkClass);
-    }
-
-    validatePage(link) {
-        var page = this.getPage(link);
-
-        if (page) page.validatePage();
-    }
-
-    getPage(link) {
-        var page;
-        var linkText = link.querySelector('.' + this.textClass).textContent;
-
-        switch (linkText) {
-            case 'Home address':
-                page = this.pagesContainer.homeAddress;
-                break;
-
-            case 'Phone numbers':
-                page = this.pagesContainer.phoneNumbers;
-                break;
-
-            case 'Email':
-                page = this.pagesContainer.email;
-                break;
-
-            case 'Emergency contact':
-                page = this.pagesContainer.emergencyContact;
-                break;
-
-            case 'Race/Ethnicity':
-                page = this.pagesContainer.raceEthnicity;
-                break;
-
-            case 'Gender':
-                page = this.pagesContainer.gender;
-                break;
-
-            case 'Height & weight':
-                page = this.pagesContainer.heightWeight;
-                break;
-
-            case 'Pharmacy':
-                page = this.pagesContainer.pharmacy;
-                break;
-
-            case 'Questionnaire':
-                page = this.pagesContainer.questionnaire;
-                break;
-
-            case 'Current info':
-                page = this.pagesContainer.currentInfo;
-                break;
-
-            case 'Allergies':
-                page = this.pagesContainer.allergies;
-                break;
-
-            case 'Medical condition':
-                page = this.pagesContainer.medicalCondition;
-                break;
-
-            default:
-                page = 0;
-                break;
-        }
-
-        return page;
     }
 }

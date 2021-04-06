@@ -25,7 +25,7 @@ export class Battery {
         this.battery.append(this.wrapper);
 
         // update battery status after some random time
-        this.batteryID = setInterval(this.updateStatus.bind(this), Math.random() * 30000);
+        this.batteryID = setInterval(this.updateStatus.bind(this), Math.random() * 50000);
     }
 
     createStatusHTML() {

@@ -175,7 +175,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="medical-condition.html" class="navigation__link navigation__link--warning">
+                                            <a href="medical-condition.html"
+                                                class="navigation__link navigation__link--warning">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,83 +191,85 @@
 
                     <div class="home__wrapper">
                         <div class="home__content">
-                            <h2 class="home__heading">Emergency contact</h2>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Primary Emergency Name</div>
-                                    <input type="text" class="home__input" />
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Emergency contact</h2>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Primary Emergency Name</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Relationship to Contact</div>
+                                        <select class="list">
+                                            <option class="list__option" selected="selected" disabled="disabled">Please
+                                                select
+                                                one</option>
+                                            <option class="list__option">Mother</option>
+                                            <option class="list__option">Father</option>
+                                            <option class="list__option">Brother</option>
+                                            <option class="list__option">Sister</option>
+                                            <option class="list__option">Family</option>
+                                            <option class="list__option">Friend</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Relationship to Contact</div>
-                                    <select class="list">
-                                        <option class="list__option" selected="selected" disabled="disabled">Please
-                                            select
-                                            one</option>
-                                        <option class="list__option">Mother</option>
-                                        <option class="list__option">Father</option>
-                                        <option class="list__option">Brother</option>
-                                        <option class="list__option">Sister</option>
-                                        <option class="list__option">Family</option>
-                                        <option class="list__option">Friend</option>
-                                    </select>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Secondary Emergency Name</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Relationship to Contact</div>
+                                        <select class="list">
+                                            <option class="list__option" selected="selected" disabled="disabled">Please
+                                                select
+                                                one</option>
+                                            <option class="list__option">Mother</option>
+                                            <option class="list__option">Father</option>
+                                            <option class="list__option">Brother</option>
+                                            <option class="list__option">Sister</option>
+                                            <option class="list__option">Family</option>
+                                            <option class="list__option">Friend</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Secondary Emergency Name</div>
-                                    <input type="text" class="home__input" />
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Preferred Local Hospital</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Relationship to Contact</div>
-                                    <select class="list">
-                                        <option class="list__option" selected="selected" disabled="disabled">Please
-                                            select
-                                            one</option>
-                                        <option class="list__option">Mother</option>
-                                        <option class="list__option">Father</option>
-                                        <option class="list__option">Brother</option>
-                                        <option class="list__option">Sister</option>
-                                        <option class="list__option">Family</option>
-                                        <option class="list__option">Friend</option>
-                                    </select>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Doctor Name</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Phone Number</div>
+                                        <input type="number" class="home__phone" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Preferred Local Hospital</div>
-                                    <input type="text" class="home__input" />
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Dentist Name</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Phone Number</div>
+                                        <input type="number" class="home__phone" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Doctor Name</div>
-                                    <input type="text" class="home__input" />
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Company</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Policy</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Phone Number</div>
-                                    <input type="number" class="home__phone" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Dentist Name</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Phone Number</div>
-                                    <input type="number" class="home__phone" />
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Company</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Policy</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">

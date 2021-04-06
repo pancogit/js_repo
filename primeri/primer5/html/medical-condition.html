@@ -101,7 +101,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="emergency-contact.html" class="navigation__link navigation__link--ok">
+                                            <a href="emergency-contact.html"
+                                                class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Emergency contact</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -175,7 +176,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a class="navigation__link navigation__link--warning navigation__link--active">
+                                            <a
+                                                class="navigation__link navigation__link--warning navigation__link--active">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,92 +192,104 @@
 
                     <div class="home__wrapper">
                         <div class="home__content">
-                            <h2 class="home__heading">Medical condition</h2>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Health Conditions</div>
-                                    <div class="checkbox">
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-none-id">
-                                            <label for="conditions-none-id" class="checkbox__label">None known</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-arthritis-id">
-                                            <label for="conditions-arthritis-id"
-                                                class="checkbox__label">Arthritis</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-asthma-id">
-                                            <label for="conditions-asthma-id" class="checkbox__label">Asthma</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-cancer-id">
-                                            <label for="conditions-cancer-id" class="checkbox__label">Cancer</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-diabetes-id">
-                                            <label for="conditions-diabetes-id" class="checkbox__label">Diabetes</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-glaucoma-id">
-                                            <label for="conditions-glaucoma-id" class="checkbox__label">Glaucoma</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-heart-id">
-                                            <label for="conditions-heart-id" class="checkbox__label">Heart
-                                                condition</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-pressure-id">
-                                            <label for="conditions-pressure-id" class="checkbox__label">High blood
-                                                pressure</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input"
-                                                id="conditions-cholesterol-id">
-                                            <label for="conditions-cholesterol-id" class="checkbox__label">High
-                                                cholesterol</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input"
-                                                id="conditions-osteoporosis-id">
-                                            <label for="conditions-osteoporosis-id"
-                                                class="checkbox__label">Osteoporosis</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-thyroid-id">
-                                            <label for="conditions-thyroid-id" class="checkbox__label">Thyroid
-                                                Disease</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="conditions-other-id">
-                                            <label for="conditions-other-id" class="checkbox__label">Other</label>
-                                        </div>
-                                        <div class="checkbox__row checkbox__row--other">
-                                            <textarea class="home__area"></textarea>
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Medical condition</h2>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Health Conditions</div>
+                                        <div class="checkbox">
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input" id="conditions-none-id">
+                                                <label for="conditions-none-id" class="checkbox__label">None
+                                                    known</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-arthritis-id">
+                                                <label for="conditions-arthritis-id"
+                                                    class="checkbox__label">Arthritis</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-asthma-id">
+                                                <label for="conditions-asthma-id" class="checkbox__label">Asthma</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-cancer-id">
+                                                <label for="conditions-cancer-id" class="checkbox__label">Cancer</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-diabetes-id">
+                                                <label for="conditions-diabetes-id"
+                                                    class="checkbox__label">Diabetes</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-glaucoma-id">
+                                                <label for="conditions-glaucoma-id"
+                                                    class="checkbox__label">Glaucoma</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input" id="conditions-heart-id">
+                                                <label for="conditions-heart-id" class="checkbox__label">Heart
+                                                    condition</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-pressure-id">
+                                                <label for="conditions-pressure-id" class="checkbox__label">High blood
+                                                    pressure</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-cholesterol-id">
+                                                <label for="conditions-cholesterol-id" class="checkbox__label">High
+                                                    cholesterol</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-osteoporosis-id">
+                                                <label for="conditions-osteoporosis-id"
+                                                    class="checkbox__label">Osteoporosis</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="conditions-thyroid-id">
+                                                <label for="conditions-thyroid-id" class="checkbox__label">Thyroid
+                                                    Disease</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input" id="conditions-other-id">
+                                                <label for="conditions-other-id" class="checkbox__label">Other</label>
+                                            </div>
+                                            <div class="checkbox__row checkbox__row--other">
+                                                <textarea class="home__area"></textarea>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Do you wear glasses or contacts?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer choice__answer--active">No</div>
-                                        <div class="choice__answer">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Do you wear glasses or contacts?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer choice__answer--active">No</div>
+                                            <div class="choice__answer">Yes</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Are you presently under medical care for a medical
-                                        health problem?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer choice__answer--active">No</div>
-                                        <div class="choice__answer">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Are you presently under medical care for a medical
+                                            health problem?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer choice__answer--active">No</div>
+                                            <div class="choice__answer">Yes</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">

@@ -101,7 +101,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="emergency-contact.html" class="navigation__link navigation__link--ok">
+                                            <a href="emergency-contact.html"
+                                                class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Emergency contact</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -175,7 +176,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="medical-condition.html" class="navigation__link navigation__link--warning">
+                                            <a href="medical-condition.html"
+                                                class="navigation__link navigation__link--warning">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,99 +192,101 @@
 
                     <div class="home__wrapper">
                         <div class="home__content pharmacy">
-                            <h2 class="home__heading">Pharmacy</h2>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Date Filled</div>
-                                    <input type="date" class="home__date">
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Pharmacy</h2>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Date Filled</div>
+                                        <input type="date" class="home__date">
+                                    </div>
+                                    <div class="home__col-2"></div>
                                 </div>
-                                <div class="home__col-2"></div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-3">
-                                    <div class="home__question">Prescription RX Number</div>
-                                    <input type="number" class="pharmacy__rx" />
-                                </div>
-                                <div class="home__col-3">
-                                    <div class="home__question">Type</div>
-                                    <div class="home__col-wrapper home__col-wrapper--center">
-                                        <input type="radio" name="prescription-type" class="home__radio"
-                                            id="type-new-id">
-                                        <label for="type-new-id" class="home__label">New</label>
-                                        <input type="radio" name="prescription-type" class="home__radio"
-                                            id="type-refill-id">
-                                        <label for="type-refill-id" class="home__label">Refill</label>
+                                <div class="home__row">
+                                    <div class="home__col-3">
+                                        <div class="home__question">Prescription RX Number</div>
+                                        <input type="number" class="pharmacy__rx" />
+                                    </div>
+                                    <div class="home__col-3">
+                                        <div class="home__question">Type</div>
+                                        <div class="home__col-wrapper home__col-wrapper--center">
+                                            <input type="radio" name="prescription-type" class="home__radio"
+                                                id="type-new-id">
+                                            <label for="type-new-id" class="home__label">New</label>
+                                            <input type="radio" name="prescription-type" class="home__radio"
+                                                id="type-refill-id">
+                                            <label for="type-refill-id" class="home__label">Refill</label>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-3">
+                                        <div class="home__question">Prescription Scanned</div>
+                                        <div class="choice">
+                                            <div class="choice__answer">No</div>
+                                            <div class="choice__answer choice__answer--active">Yes</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="home__col-3">
-                                    <div class="home__question">Prescription Scanned</div>
-                                    <div class="choice">
-                                        <div class="choice__answer">No</div>
-                                        <div class="choice__answer choice__answer--active">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Prescribed Drug</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Strength</div>
+                                        <div class="home__col-wrapper">
+                                            <input type="number" class="pharmacy__strength" />
+                                            <span class="pharmacy__unit">mg</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Prescribed Drug</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Strength</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="number" class="pharmacy__strength" />
-                                        <span class="pharmacy__unit">mg</span>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Directions</div>
+                                        <textarea class="home__area"></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Directions</div>
-                                    <textarea class="home__area"></textarea>
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Quantity Prescribed</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="number" class="pharmacy__quantity" />
-                                        <span class="pharmacy__unit">mg</span>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Quantity Prescribed</div>
+                                        <div class="home__col-wrapper">
+                                            <input type="number" class="pharmacy__quantity" />
+                                            <span class="pharmacy__unit">mg</span>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Quantity Ingested/Applied</div>
+                                        <div class="home__col-wrapper">
+                                            <input type="number" class="pharmacy__quantity" />
+                                            <span class="pharmacy__unit">mg</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Quantity Ingested/Applied</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="number" class="pharmacy__quantity" />
-                                        <span class="pharmacy__unit">mg</span>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Quantity Dispensed</div>
+                                        <div class="home__col-wrapper">
+                                            <input type="number" class="pharmacy__quantity" />
+                                            <span class="pharmacy__unit">mg</span>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Quantity Returned</div>
+                                        <div class="home__col-wrapper">
+                                            <input type="number" class="pharmacy__quantity" />
+                                            <span class="pharmacy__unit">mg</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Quantity Dispensed</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="number" class="pharmacy__quantity" />
-                                        <span class="pharmacy__unit">mg</span>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Pharmacist Name</div>
+                                        <input type="text" class="home__input" />
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Pharmacist License No.</div>
+                                        <input type="number" class="pharmacy__license" />
                                     </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Quantity Returned</div>
-                                    <div class="home__col-wrapper">
-                                        <input type="number" class="pharmacy__quantity" />
-                                        <span class="pharmacy__unit">mg</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Pharmacist Name</div>
-                                    <input type="text" class="home__input" />
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Pharmacist License No.</div>
-                                    <input type="number" class="pharmacy__license" />
-                                </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">

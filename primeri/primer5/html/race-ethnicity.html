@@ -101,7 +101,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="emergency-contact.html" class="navigation__link navigation__link--ok">
+                                            <a href="emergency-contact.html"
+                                                class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Emergency contact</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -175,7 +176,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="medical-condition.html" class="navigation__link navigation__link--warning">
+                                            <a href="medical-condition.html"
+                                                class="navigation__link navigation__link--warning">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,51 +192,59 @@
 
                     <div class="home__wrapper">
                         <div class="home__content">
-                            <h2 class="home__heading">Race/Ethnicity</h2>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Are you Hispanic or Latino?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer choice__answer--active">No</div>
-                                        <div class="choice__answer">Yes</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Please indicate your ethnicity</div>
-                                    <div class="checkbox">
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input"
-                                                id="ethnicity-american-indian-id" />
-                                            <label for="ethnicity-american-indian-id" class="checkbox__label">American
-                                                Indian or
-                                                Alaska Native</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="ethnicity-asian-id" />
-                                            <label for="ethnicity-asian-id" class="checkbox__label">Asian</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input"
-                                                id="ethnicity-black-american-id" />
-                                            <label for="ethnicity-black-american-id" class="checkbox__label">Black or
-                                                African
-                                                American</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="ethnicity-hawaiian-id" />
-                                            <label for="ethnicity-hawaiian-id" class="checkbox__label">Nativa Hawaiian
-                                                or Other
-                                                Pacific Islander</label>
-                                        </div>
-                                        <div class="checkbox__row">
-                                            <input type="checkbox" class="checkbox__input" id="ethnicity-white-id" />
-                                            <label for="ethnicity-white-id" class="checkbox__label">White</label>
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Race/Ethnicity</h2>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Are you Hispanic or Latino?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer choice__answer--active">No</div>
+                                            <div class="choice__answer">Yes</div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Please indicate your ethnicity</div>
+                                        <div class="checkbox">
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="ethnicity-american-indian-id" />
+                                                <label for="ethnicity-american-indian-id"
+                                                    class="checkbox__label">American
+                                                    Indian or
+                                                    Alaska Native</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="ethnicity-asian-id" />
+                                                <label for="ethnicity-asian-id" class="checkbox__label">Asian</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="ethnicity-black-american-id" />
+                                                <label for="ethnicity-black-american-id" class="checkbox__label">Black
+                                                    or
+                                                    African
+                                                    American</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="ethnicity-hawaiian-id" />
+                                                <label for="ethnicity-hawaiian-id" class="checkbox__label">Nativa
+                                                    Hawaiian
+                                                    or Other
+                                                    Pacific Islander</label>
+                                            </div>
+                                            <div class="checkbox__row">
+                                                <input type="checkbox" class="checkbox__input"
+                                                    id="ethnicity-white-id" />
+                                                <label for="ethnicity-white-id" class="checkbox__label">White</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">

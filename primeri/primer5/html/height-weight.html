@@ -101,7 +101,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="emergency-contact.html" class="navigation__link navigation__link--ok">
+                                            <a href="emergency-contact.html"
+                                                class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Emergency contact</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -175,7 +176,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="medical-condition.html" class="navigation__link navigation__link--warning">
+                                            <a href="medical-condition.html"
+                                                class="navigation__link navigation__link--warning">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,64 +192,66 @@
 
                     <div class="home__wrapper">
                         <div class="home__content">
-                            <h2 class="home__heading">Height & weight</h2>
-                            <div class="home__row">
-                                <div class="home__col-2 home__col-2--height-weight">
-                                    <div class="home__question">Enter Height</div>
-                                    <div class="home__height">
-                                        <div class="measure">
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Height & weight</h2>
+                                <div class="home__row">
+                                    <div class="home__col-2 home__col-2--height-weight">
+                                        <div class="home__question">Enter Height</div>
+                                        <div class="home__height">
+                                            <div class="measure">
+                                                <button class="measure__sign">
+                                                    <i class="fas fa-minus measure__icon"></i>
+                                                </button>
+                                                <span class="measure__number">5</span>
+                                                <button class="measure__sign">
+                                                    <i class="fas fa-plus measure__icon"></i>
+                                                </button>
+                                                <span class="measure__unit">feet</span>
+                                            </div>
+                                            <div class="measure">
+                                                <button class="measure__sign">
+                                                    <i class="fas fa-minus measure__icon"></i>
+                                                </button>
+                                                <span class="measure__number">10</span>
+                                                <button class="measure__sign">
+                                                    <i class="fas fa-plus measure__icon"></i>
+                                                </button>
+                                                <span class="measure__unit">inches</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-2 home__col-2--height-weight">
+                                        <div class="home__question">Enter Weight</div>
+                                        <div class="measure home__weight">
                                             <button class="measure__sign">
                                                 <i class="fas fa-minus measure__icon"></i>
                                             </button>
-                                            <span class="measure__number">5</span>
+                                            <span class="measure__number">173</span>
                                             <button class="measure__sign">
                                                 <i class="fas fa-plus measure__icon"></i>
                                             </button>
-                                            <span class="measure__unit">feet</span>
-                                        </div>
-                                        <div class="measure">
-                                            <button class="measure__sign">
-                                                <i class="fas fa-minus measure__icon"></i>
-                                            </button>
-                                            <span class="measure__number">10</span>
-                                            <button class="measure__sign">
-                                                <i class="fas fa-plus measure__icon"></i>
-                                            </button>
-                                            <span class="measure__unit">inches</span>
+                                            <span class="measure__unit">pounds</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="home__col-2 home__col-2--height-weight">
-                                    <div class="home__question">Enter Weight</div>
-                                    <div class="measure home__weight">
-                                        <button class="measure__sign">
-                                            <i class="fas fa-minus measure__icon"></i>
-                                        </button>
-                                        <span class="measure__number">173</span>
-                                        <button class="measure__sign">
-                                            <i class="fas fa-plus measure__icon"></i>
-                                        </button>
-                                        <span class="measure__unit">pounds</span>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Your BMI</div>
+                                        <div class="calculation">
+                                            <span class="calculation__content calculation__content--normal">24.82</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Your BMI</div>
-                                    <div class="calculation">
-                                        <span class="calculation__content calculation__content--normal">24.82</span>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">Your Weight Status</div>
+                                        <div class="calculation">
+                                            <span class="calculation__content calculation__content--normal">Normal
+                                                Weight</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">Your Weight Status</div>
-                                    <div class="calculation">
-                                        <span class="calculation__content calculation__content--normal">Normal
-                                            Weight</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">

@@ -101,7 +101,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="emergency-contact.html" class="navigation__link navigation__link--ok">
+                                            <a href="emergency-contact.html"
+                                                class="navigation__link navigation__link--ok">
                                                 <span class="navigation__text">Emergency contact</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-check-circle navigation__icon"></i>
@@ -175,7 +176,8 @@
                                             </a>
                                         </li>
                                         <li class="navigation__item">
-                                            <a href="medical-condition.html" class="navigation__link navigation__link--warning">
+                                            <a href="medical-condition.html"
+                                                class="navigation__link navigation__link--warning">
                                                 <span class="navigation__text">Medical condition</span>
                                                 <span class="navigation__progress">
                                                     <i class="fas fa-exclamation-circle navigation__icon"></i>
@@ -190,100 +192,102 @@
 
                     <div class="home__wrapper">
                         <div class="home__content">
-                            <h2 class="home__heading">Dental questionnaire</h2>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Last dental exam</div>
-                                    <input type="date" class="home__date" />
+                            <form class="home__form" novalidate="novalidate">
+                                <h2 class="home__heading">Dental questionnaire</h2>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Last dental exam</div>
+                                        <input type="date" class="home__date" />
+                                    </div>
+                                    <div class="home__col-2"></div>
                                 </div>
-                                <div class="home__col-2"></div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Are you in dental pain?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer">No</div>
-                                        <div class="choice__answer choice__answer--active">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Are you in dental pain?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer">No</div>
+                                            <div class="choice__answer choice__answer--active">Yes</div>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">For how long?</div>
+                                        <select class="list">
+                                            <option class="list__option" selected="selected" disabled="disabled">Please
+                                                select
+                                                days</option>
+                                            <option class="list__option">5 Days</option>
+                                            <option class="list__option">10 Days</option>
+                                            <option class="list__option">15 Days</option>
+                                            <option class="list__option">20 Days</option>
+                                            <option class="list__option">25 Days</option>
+                                            <option class="list__option">2 Months</option>
+                                            <option class="list__option">3 Months</option>
+                                            <option class="list__option">4 Months</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">For how long?</div>
-                                    <select class="list">
-                                        <option class="list__option" selected="selected" disabled="disabled">Please
-                                            select
-                                            days</option>
-                                        <option class="list__option">5 Days</option>
-                                        <option class="list__option">10 Days</option>
-                                        <option class="list__option">15 Days</option>
-                                        <option class="list__option">20 Days</option>
-                                        <option class="list__option">25 Days</option>
-                                        <option class="list__option">2 Months</option>
-                                        <option class="list__option">3 Months</option>
-                                        <option class="list__option">4 Months</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">How often do you brush?</div>
-                                    <select class="list">
-                                        <option class="list__option" selected="selected" disabled="disabled">Please
-                                            select
-                                            times</option>
-                                        <option class="list__option">Once a Day</option>
-                                        <option class="list__option">2 Times a Day</option>
-                                        <option class="list__option">3 Times a Day</option>
-                                        <option class="list__option">I don't brush</option>
-                                    </select>
-                                </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">How often do you floss?</div>
-                                    <select class="list">
-                                        <option class="list__option" selected="selected" disabled="disabled">Please
-                                            select
-                                            days</option>
-                                        <option class="list__option">1 Day</option>
-                                        <option class="list__option">2 Days</option>
-                                        <option class="list__option">3 Days</option>
-                                        <option class="list__option">5 Days</option>
-                                        <option class="list__option">7 Days</option>
-                                        <option class="list__option">10 Days</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-1">
-                                    <div class="home__question">How would you rate your smile?</div>
-                                    <div class="numbers">
-                                        <span class="numbers__box">1</span>
-                                        <span class="numbers__box">2</span>
-                                        <span class="numbers__box numbers__box--active">3</span>
-                                        <span class="numbers__box">4</span>
-                                        <span class="numbers__box">5</span>
-                                        <span class="numbers__box">6</span>
-                                        <span class="numbers__box">7</span>
-                                        <span class="numbers__box">8</span>
-                                        <span class="numbers__box">9</span>
-                                        <span class="numbers__box">10</span>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">How often do you brush?</div>
+                                        <select class="list">
+                                            <option class="list__option" selected="selected" disabled="disabled">Please
+                                                select
+                                                times</option>
+                                            <option class="list__option">Once a Day</option>
+                                            <option class="list__option">2 Times a Day</option>
+                                            <option class="list__option">3 Times a Day</option>
+                                            <option class="list__option">I don't brush</option>
+                                        </select>
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">How often do you floss?</div>
+                                        <select class="list">
+                                            <option class="list__option" selected="selected" disabled="disabled">Please
+                                                select
+                                                days</option>
+                                            <option class="list__option">1 Day</option>
+                                            <option class="list__option">2 Days</option>
+                                            <option class="list__option">3 Days</option>
+                                            <option class="list__option">5 Days</option>
+                                            <option class="list__option">7 Days</option>
+                                            <option class="list__option">10 Days</option>
+                                        </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="home__row">
-                                <div class="home__col-2">
-                                    <div class="home__question">Would you like whiter teeth?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer">No</div>
-                                        <div class="choice__answer choice__answer--active">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-1">
+                                        <div class="home__question">How would you rate your smile?</div>
+                                        <div class="numbers">
+                                            <span class="numbers__box">1</span>
+                                            <span class="numbers__box">2</span>
+                                            <span class="numbers__box numbers__box--active">3</span>
+                                            <span class="numbers__box">4</span>
+                                            <span class="numbers__box">5</span>
+                                            <span class="numbers__box">6</span>
+                                            <span class="numbers__box">7</span>
+                                            <span class="numbers__box">8</span>
+                                            <span class="numbers__box">9</span>
+                                            <span class="numbers__box">10</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="home__col-2">
-                                    <div class="home__question">Would you like?</div>
-                                    <div class="choice">
-                                        <div class="choice__answer">No</div>
-                                        <div class="choice__answer choice__answer--active">Yes</div>
+                                <div class="home__row">
+                                    <div class="home__col-2">
+                                        <div class="home__question">Would you like whiter teeth?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer">No</div>
+                                            <div class="choice__answer choice__answer--active">Yes</div>
+                                        </div>
+                                    </div>
+                                    <div class="home__col-2">
+                                        <div class="home__question">Would you like?</div>
+                                        <div class="choice">
+                                            <div class="choice__answer">No</div>
+                                            <div class="choice__answer choice__answer--active">Yes</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div class="score score--top-border">
