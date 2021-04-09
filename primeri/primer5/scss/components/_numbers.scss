@@ -20,7 +20,7 @@
     }
 
     // spread flex items in column
-    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
         flex-direction: column;
     }
 
@@ -39,7 +39,7 @@
         }
 
         // spread flex items in column
-        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
             @include mixins.numbers_box_column_style;
         }
     }
@@ -59,7 +59,7 @@
         }
 
         // spread flex items in column
-        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
             @include mixins.numbers_box_active_column_style;
         }
     }

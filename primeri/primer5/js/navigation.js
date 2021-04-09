@@ -4,17 +4,6 @@
 import { Score } from './score.js';
 import { PagesContainer } from './pages/pages-container.js';
 import { HomeAddress } from './pages/home-address.js';
-import { PhoneNumbers } from './pages/phone-numbers.js';
-import { Email } from './pages/email.js';
-import { EmergencyContact } from './pages/emergency-contact.js';
-import { RaceEthnicity } from './pages/race-ethnicity.js';
-import { Gender } from './pages/gender.js';
-import { HeightWeight } from './pages/height-weight.js';
-import { Pharmacy } from './pages/pharmacy.js';
-import { Questionnaire } from './pages/questionnaire.js';
-import { CurrentInfo } from './pages/current-info.js';
-import { Allergies } from './pages/allergies.js';
-import { MedicalCondition } from './pages/medical-condition.js';
 import { IconClasses } from './icon-classes.js';
 import { Validation } from './validation.js';
 
@@ -28,10 +17,6 @@ export class Navigation {
         this.buttonClass = 'score__button';
         this.buttonTextClass = 'score__text';
         this.iconClass = 'navigation__icon';
-
-        // classes for icons
-        this.iconClasses = new IconClasses();
-
         this.textClass = 'navigation__text';
         this.homeWrapper = document.querySelector('.home__wrapper');
         this.links = document.querySelectorAll('.navigation .navigation__link');
@@ -165,6 +150,9 @@ export class Navigation {
             link: this.currentLink,
             page: pageContent
         });
+
+        // cache page in page container
+        this.validation.getSetPage(this.currentLink, true, pageContent);
     }
 
     removeOldContentAddNew(newContent) {
@@ -304,12 +292,12 @@ export class Navigation {
     resetIcons() {
         this.links.forEach(function iterate(link, key, parent) {
             let icon = link.querySelector('.' + this.iconClass);
-            icon.classList.remove(...this.iconClasses.checkCircleClasses);
-            icon.classList.remove(...this.iconClasses.exclamationClasses);
-            icon.classList.add(...this.iconClasses.circleClasses);
+            icon.classList.remove(...IconClasses.checkCircleClasses);
+            icon.classList.remove(...IconClasses.exclamationClasses);
+            icon.classList.add(...IconClasses.circleClasses);
 
-            link.classList.remove(this.iconClasses.linkOkClass);
-            link.classList.remove(this.iconClasses.warningClass);
+            link.classList.remove(IconClasses.linkOkClass);
+            link.classList.remove(IconClasses.warningClass);
             link.classList.remove(this.activeLinkClass);
         }, this);
 

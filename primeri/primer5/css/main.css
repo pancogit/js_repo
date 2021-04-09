@@ -309,7 +309,7 @@ a {
     flex-direction: row;
   }
 }
-@media only screen and (max-width: 36rem) {
+@media only screen and (max-width: 43rem) {
   .numbers {
     flex-direction: column;
   }
@@ -385,7 +385,7 @@ a {
     border-top-right-radius: unset;
   }
 }
-@media only screen and (max-width: 36rem) {
+@media only screen and (max-width: 43rem) {
   .numbers__box {
     border-right-style: solid;
     border-right-width: 0.1rem;
@@ -441,7 +441,7 @@ a {
     border-top-color: #4ca9d5;
   }
 }
-@media only screen and (max-width: 36rem) {
+@media only screen and (max-width: 43rem) {
   .numbers .numbers__box--active + .numbers__box {
     border-top-color: #4ca9d5;
     border-left-color: #e4e8ea;
@@ -549,6 +549,12 @@ a {
   flex: 1;
   margin-right: 0.5rem;
 }
+.pharmacy__unit {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 /* score */
 .score {
   display: flex;

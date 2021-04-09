@@ -74,46 +74,20 @@ export class HomeAddress extends Page {
     validatePage() {
         super.validatePage();
 
-        this.validateButtons(this.houseApartment.house, this.houseApartment.apartment);
-        this.validateInputElement(this.country);
-        this.validateInputElement(this.city);
-        this.validateInputElement(this.address1);
-        this.validateInputElement(this.address2);
-        this.validateInputElement(this.state);
-        this.validateInputElement(this.zip, true);
+        this.pageValidation.validateRadioButtons(this.houseApartment, 
+                                                 this.houseApartment.house, 
+                                                 this.houseApartment.apartment);
+                                                 
+        this.pageValidation.validateInput(this.country);
+        this.pageValidation.validateInput(this.city);
+        this.pageValidation.validateInput(this.address1);
+        this.pageValidation.validateInput(this.address2);
+        this.pageValidation.validateInput(this.state);
+        this.pageValidation.validateZipCode(this.zip);
 
         this.isPageValid();
         this.updatePageIcon();
         this.updateNumberOfValidElements();
-    }
-
-    validateButtons(...buttons) {
-        var isValid = this.validateRadioButtons(...buttons);
-
-        if (isValid)
-            this.houseApartment.question.classList.remove(this.textErrorClass);
-        else
-            this.houseApartment.question.classList.add(this.textErrorClass);
-
-        // update valid flag
-        this.houseApartment.isValid = isValid;
-    }
-
-    validateInputElement(inputElement, validateZip = false) {
-        var isValid = validateZip ? this.validateZipCode(inputElement.input) :
-            this.validateInput(inputElement.input);
-
-        if (isValid) {
-            inputElement.input.classList.remove(this.borderErrorClass);
-            inputElement.question.classList.remove(this.textErrorClass);
-        }
-        else {
-            inputElement.input.classList.add(this.borderErrorClass);
-            inputElement.question.classList.add(this.textErrorClass);
-        }
-
-        // update valid flag
-        inputElement.isValid = isValid;
     }
 
     // update valid flag for whole page
@@ -122,15 +96,17 @@ export class HomeAddress extends Page {
 
         this.pageValid =
             this.houseApartment.isValid &&
-            this.country.isValid        &&
-            this.city.isValid           &&
-            this.address1.isValid       &&
-            this.address2.isValid       &&
-            this.state.isValid          &&
+            this.country.isValid &&
+            this.city.isValid &&
+            this.address1.isValid &&
+            this.address2.isValid &&
+            this.state.isValid &&
             this.zip.isValid;
     }
 
     updateNumberOfValidElements() {
+        super.updateNumberOfValidElements();
+
         this.numberOfElements.valid = 0;
 
         if (this.houseApartment.isValid) this.numberOfElements.valid++;

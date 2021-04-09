@@ -30,6 +30,7 @@
     }
 
     &__unit {
-        
+        // vertically align flex items with flexbox
+        @include mixins.set_flexbox_container($align_items: center);
     }
 }

@@ -2,6 +2,7 @@
 
 
 import { IconClasses } from '../icon-classes.js';
+import { PageValidation } from './page-validation.js';
 
 export class Page {
 
@@ -17,8 +18,8 @@ export class Page {
         this.borderErrorClass = 'home__error-border';
         this.textErrorClass = 'home__error-text';
 
-        // classes for icons
-        this.iconClasses = new IconClasses();
+        // validation utilities
+        this.pageValidation = new PageValidation();
     }
 
     initPage() {
@@ -37,60 +38,27 @@ export class Page {
 
     }
 
-    validateInput(inputElement) {
-        var text = inputElement.value;
-        var spaces = /^\s*$/;
-        var inputWithSpaces = text.match(spaces);
-        var maximumCharactersReached = text.length > 40;
-
-        // if input is filled with spaces or it's empty or if maximum number of
-        // characters are reached, return false, otherwise return true
-        if (inputWithSpaces || maximumCharactersReached) return false;
-        else return true;
-    }
-
-    // zip code must be 5 digits
-    validateZipCode(inputElement) {
-        var text = inputElement.value;
-        var fiveDigits = /^\d{5}$/;
-        var maximumFiveDigits = text.match(fiveDigits);
-
-        return maximumFiveDigits;
-    }
-
-    validateRadioButtons(...radioButtons) {
-        var anyButtonChecked = false;
-
-        for (let i = 0; i < radioButtons.length; i++)
-            if (radioButtons[i].checked) {
-                anyButtonChecked = true;
-                break;
-            }
-        
-        return anyButtonChecked;
-    }
-
     // update page icon for page validity
     updatePageIcon() {
-        var pageIsAlreadyValid = this.iconContainsClasses(...this.iconClasses.checkCircleClasses);
-        var pageIsAlreadyNotValid = this.iconContainsClasses(...this.iconClasses.exclamationClasses);
+        var pageIsAlreadyValid = this.iconContainsClasses(...IconClasses.checkCircleClasses);
+        var pageIsAlreadyNotValid = this.iconContainsClasses(...IconClasses.exclamationClasses);
 
         // basic circles are not used anymore
-        this.icon.classList.remove(...this.iconClasses.circleClasses);
+        this.icon.classList.remove(...IconClasses.circleClasses);
 
         if (this.pageValid && !pageIsAlreadyValid) {
             // first remove clases before adding new ones
-            this.icon.classList.remove(...this.iconClasses.exclamationClasses);
-            this.icon.classList.add(...this.iconClasses.checkCircleClasses);
-            this.link.classList.remove(this.iconClasses.warningClass);
-            this.link.classList.add(this.iconClasses.linkOkClass);
+            this.icon.classList.remove(...IconClasses.exclamationClasses);
+            this.icon.classList.add(...IconClasses.checkCircleClasses);
+            this.link.classList.remove(IconClasses.warningClass);
+            this.link.classList.add(IconClasses.linkOkClass);
             
         }
         else if (!this.pageValid && !pageIsAlreadyNotValid) {
-            this.icon.classList.remove(...this.iconClasses.checkCircleClasses);
-            this.icon.classList.add(...this.iconClasses.exclamationClasses);
-            this.link.classList.remove(this.iconClasses.linkOkClass);
-            this.link.classList.add(this.iconClasses.warningClass);
+            this.icon.classList.remove(...IconClasses.checkCircleClasses);
+            this.icon.classList.add(...IconClasses.exclamationClasses);
+            this.link.classList.remove(IconClasses.linkOkClass);
+            this.link.classList.add(IconClasses.warningClass);
         }
     }
 
@@ -104,5 +72,31 @@ export class Page {
             }
 
         return containsClasses;
+    }
+
+    // create new list as list from parameter
+    copyListHTML(listElement) {
+        var list = document.createElement('select');
+        var defaultOption = document.createElement('option');
+        var listOptionClass = 'list__option';
+
+        list.classList.add('list');
+        defaultOption.classList.add(listOptionClass);
+        defaultOption.selected = true;
+        defaultOption.disabled = true;
+        defaultOption.textContent = listElement[0].value;
+
+        list.append(defaultOption);
+
+        // copy elements from previous list
+        for (let i = 1; i < listElement.length; i++) {
+            let option = document.createElement('option');
+
+            option.classList.add(listOptionClass);
+            option.textContent = listElement[i].textContent;
+            list.append(option);
+        }
+
+        return list;
     }
 }

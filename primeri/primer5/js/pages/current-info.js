@@ -15,5 +15,18 @@ export class CurrentInfo extends Page {
 
     validatePage() {
         super.validatePage();
+
+        this.isPageValid();
+        this.updatePageIcon();
+        this.updateNumberOfValidElements();
+    }
+
+    // update valid flag for whole page
+    isPageValid() {
+        super.isPageValid();
+    }
+
+    updateNumberOfValidElements() {
+        super.updateNumberOfValidElements();
     }
 }

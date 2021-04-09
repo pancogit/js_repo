@@ -31,32 +31,38 @@ export class Score {
     getNumberOfValidElements() {
         var validElements = 0;
 
-        if (this.pagesContainer.homeAddress)
-            validElements += this.pagesContainer.homeAddress.numberOfElements.valid;
-        if (this.pagesContainer.phoneNumbers)
-            validElements += this.pagesContainer.phoneNumbers.numberOfElements.valid;
-        if (this.pagesContainer.email)
-            validElements += this.pagesContainer.email.numberOfElements.valid;
-        if (this.pagesContainer.emergencyContact)
-            validElements += this.pagesContainer.emergencyContact.numberOfElements.valid;
-        if (this.pagesContainer.raceEthnicity)
-            validElements += this.pagesContainer.raceEthnicity.numberOfElements.valid;
-        if (this.pagesContainer.gender)
-            validElements += this.pagesContainer.gender.numberOfElements.valid;
-        if (this.pagesContainer.heightWeight)
-            validElements += this.pagesContainer.heightWeight.numberOfElements.valid;
-        if (this.pagesContainer.pharmacy)
-            validElements += this.pagesContainer.pharmacy.numberOfElements.valid;
-        if (this.pagesContainer.questionnaire)
-            validElements += this.pagesContainer.questionnaire.numberOfElements.valid;
-        if (this.pagesContainer.currentInfo)
-            validElements += this.pagesContainer.currentInfo.numberOfElements.valid;
-        if (this.pagesContainer.allergies)
-            validElements += this.pagesContainer.allergies.numberOfElements.valid;
-        if (this.pagesContainer.medicalCondition)
-            validElements += this.pagesContainer.medicalCondition.numberOfElements.valid;
+        var homeAddressValidElements        = this.elementsExists(this.pagesContainer.homeAddress);
+        var phoneNumbersValidElements       = this.elementsExists(this.pagesContainer.phoneNumbers);
+        var emailValidElements              = this.elementsExists(this.pagesContainer.email);
+        var emergencyContactValidElements   = this.elementsExists(this.pagesContainer.emergencyContact);
+        var raceEthnicityValidElements      = this.elementsExists(this.pagesContainer.raceEthnicity);
+        var genderValidElements             = this.elementsExists(this.pagesContainer.gender);
+        var heightWeightValidElements       = this.elementsExists(this.pagesContainer.heightWeight);
+        var pharmacyValidElements           = this.elementsExists(this.pagesContainer.pharmacy);
+        var questionnaireValidElements      = this.elementsExists(this.pagesContainer.questionnaire);
+        var currentInfoValidElements        = this.elementsExists(this.pagesContainer.currentInfo);
+        var allergiesValidElements          = this.elementsExists(this.pagesContainer.allergies);
+        var medicalConditionValidElements   = this.elementsExists(this.pagesContainer.medicalCondition);
+
+        if (homeAddressValidElements)       validElements += homeAddressValidElements;
+        if (phoneNumbersValidElements)      validElements += phoneNumbersValidElements;
+        if (emailValidElements)             validElements += emailValidElements;
+        if (emergencyContactValidElements)  validElements += emergencyContactValidElements;
+        if (raceEthnicityValidElements)     validElements += raceEthnicityValidElements;
+        if (genderValidElements)            validElements += genderValidElements;
+        if (heightWeightValidElements)      validElements += heightWeightValidElements;
+        if (pharmacyValidElements)          validElements += pharmacyValidElements;
+        if (questionnaireValidElements)     validElements += questionnaireValidElements;
+        if (currentInfoValidElements)       validElements += currentInfoValidElements;
+        if (allergiesValidElements)         validElements += allergiesValidElements;
+        if (medicalConditionValidElements)  validElements += medicalConditionValidElements;
 
         return validElements;
+    }
+
+    // get number of valid elements if they exists
+    elementsExists(element) {
+        return element ? (element.numberOfElements ? element.numberOfElements.valid : 0) : 0;
     }
 
     // update score results on page
