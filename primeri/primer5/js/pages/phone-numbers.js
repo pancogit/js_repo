@@ -41,6 +41,8 @@ export class PhoneNumbers extends Page {
         }
 
         this.removeStaticMobilePhones(questions);
+
+        this.numberOfElements.all = 3;
     }
 
     // remove static mobile phones list 
@@ -58,24 +60,8 @@ export class PhoneNumbers extends Page {
         this.homePhone.input.value = '';
         this.workPhone.input.value = '';
 
-        // init list to default question name and add event listener to the list
-        this.initList();
-    }
-
-    initList() {
-        var list = this.mobilePhones.input;
-        var listIsSelected = list.value !== this.mobilePhones.defaultMessage;
-        
-        // remove list and create new
-        if (listIsSelected) {
-            let homeColumn = list.parentElement;
-            let newList = this.copyListHTML(list);
-
-            homeColumn.removeChild(list);
-            homeColumn.appendChild(newList);
-
-            this.mobilePhones.input = newList;
-        }
+        // init list if list is not selected
+        this.initList(this.mobilePhones);
 
         // add event listener to the list
         this.mobilePhones.input.addEventListener('change', this.listIsChanged.bind(this));
@@ -161,9 +147,11 @@ export class PhoneNumbers extends Page {
         this.pageValidation.validatePhoneNumber(this.workPhone);
         this.validateMobilePhones();
 
-        this.isPageValid();
+        this.isPageValid(this.homePhone.isValid,
+                         this.workPhone.isValid,
+                         this.mobilePhones.isValid);
+
         this.updatePageIcon();
-        this.updateNumberOfValidElements();
     }
 
     // if mobile phones are not valid, then list is also not valid
@@ -197,25 +185,5 @@ export class PhoneNumbers extends Page {
         }
 
         return phonesValid;
-    }
-
-    // update valid flag for whole page
-    isPageValid() {
-        super.isPageValid();
-
-        this.pageValid =
-            this.homePhone.isValid &&
-            this.workPhone.isValid &&
-            this.mobilePhones.isValid;
-    }
-
-    updateNumberOfValidElements() {
-        super.updateNumberOfValidElements();
-
-        this.numberOfElements.valid = 0;
-
-        if (this.homePhone.isValid) this.numberOfElements.valid++;
-        if (this.workPhone.isValid) this.numberOfElements.valid++;
-        if (this.mobilePhones.isValid) this.numberOfElements.valid++;
     }
 }

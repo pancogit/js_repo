@@ -77,7 +77,7 @@ export class HomeAddress extends Page {
         this.pageValidation.validateRadioButtons(this.houseApartment, 
                                                  this.houseApartment.house, 
                                                  this.houseApartment.apartment);
-                                                 
+
         this.pageValidation.validateInput(this.country);
         this.pageValidation.validateInput(this.city);
         this.pageValidation.validateInput(this.address1);
@@ -85,36 +85,14 @@ export class HomeAddress extends Page {
         this.pageValidation.validateInput(this.state);
         this.pageValidation.validateZipCode(this.zip);
 
-        this.isPageValid();
+        this.isPageValid(this.houseApartment.isValid,
+                         this.country.isValid,
+                         this.city.isValid,
+                         this.address1.isValid,
+                         this.address2.isValid,
+                         this.state.isValid,
+                         this.zip.isValid);
+                         
         this.updatePageIcon();
-        this.updateNumberOfValidElements();
-    }
-
-    // update valid flag for whole page
-    isPageValid() {
-        super.isPageValid();
-
-        this.pageValid =
-            this.houseApartment.isValid &&
-            this.country.isValid &&
-            this.city.isValid &&
-            this.address1.isValid &&
-            this.address2.isValid &&
-            this.state.isValid &&
-            this.zip.isValid;
-    }
-
-    updateNumberOfValidElements() {
-        super.updateNumberOfValidElements();
-
-        this.numberOfElements.valid = 0;
-
-        if (this.houseApartment.isValid) this.numberOfElements.valid++;
-        if (this.country.isValid) this.numberOfElements.valid++;
-        if (this.city.isValid) this.numberOfElements.valid++;
-        if (this.address1.isValid) this.numberOfElements.valid++;
-        if (this.address2.isValid) this.numberOfElements.valid++;
-        if (this.state.isValid) this.numberOfElements.valid++;
-        if (this.zip.isValid) this.numberOfElements.valid++;
     }
 }

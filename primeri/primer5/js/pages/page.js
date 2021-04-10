@@ -17,6 +17,7 @@ export class Page {
         }
         this.borderErrorClass = 'home__error-border';
         this.textErrorClass = 'home__error-text';
+        this.choiceActiveClass = 'choice__answer--active';
 
         // validation utilities
         this.pageValidation = new PageValidation();
@@ -30,12 +31,19 @@ export class Page {
 
     }
 
-    isPageValid() {
+    isPageValid(...validFlags) {
+        this.numberOfElements.valid = 0;
+        this.pageValid = true;
 
-    }
+        // page is not valid if there are no elements
+        if (!validFlags.length) this.pageValid = false;
 
-    updateNumberOfValidElements() {
+        // page is valid only if all valid flags are true
+        validFlags.forEach(function iterate(value, index, array) {
+            this.pageValid &&= value;
 
+            if (value) this.numberOfElements.valid++;
+        }, this);
     }
 
     // update page icon for page validity
@@ -98,5 +106,86 @@ export class Page {
         }
 
         return list;
+    }
+
+    // remove existing list and create new one
+    initList(listWrapper) {
+        var list = listWrapper.input;
+        var listIsSelected = list.value !== listWrapper.defaultMessage;
+        
+        // remove list and create new
+        if (listIsSelected) {
+            let homeColumn = list.parentElement;
+            let newList = this.copyListHTML(list);
+
+            homeColumn.removeChild(list);
+            homeColumn.appendChild(newList);
+
+            listWrapper.input = newList;
+        }
+    }
+
+    // init choice box and add event listeners for choices
+    initChoice(choiceWrapper) {
+        choiceWrapper.choices.forEach(function iterate(value, index, array) {
+            value.classList.remove(this.choiceActiveClass);
+
+            // send this pointer to the event handler via bind
+            value.addEventListener('click', this.updateChoice.bind(this, choiceWrapper.choices));
+        }, this);
+    }
+
+    updateChoice(choices, event) {
+        var target = event.target;
+        var targetAlreadyActive = target.classList.contains(this.choiceActiveClass);
+
+        // don't do anything if the same choice is clicked
+        if (targetAlreadyActive) return;
+
+        // remove active choice and then update current choice
+        choices.forEach(function iterate(value, index, array) {
+            value.classList.remove(this.choiceActiveClass);
+        }, this);
+
+        target.classList.add(this.choiceActiveClass);
+    }
+
+    initCheckbox(checkboxWrapper) {
+        // uncheck all checkboxes
+        checkboxWrapper.checkboxes.forEach(function iterate(value, index, array) {
+            value.checked = false;
+
+            let label = value.nextElementSibling;
+
+            // for Other label, add event listeners to the checkbox
+            // label is linked to the checkbox and there is no need to double event listener
+            if (label.textContent === 'Other') 
+                value.addEventListener('click', this.checkboxOtherIsClicked.bind(this));
+        }, this);
+    }
+
+    checkboxOtherIsClicked(event) {
+        var checkbox = event.target;
+        var otherIsChecked = checkbox.checked;
+        var checkboxWrapper = checkbox.parentElement.parentElement;
+
+        // add textarea for Other checkbox
+        if (otherIsChecked) checkboxWrapper.append(this.createTextAreaForOtherCheckbox());
+
+        // remove textarea for Other checkbox
+        else checkboxWrapper.removeChild(checkboxWrapper.lastElementChild);
+    }
+
+    createTextAreaForOtherCheckbox() {
+        var checkboxRow = document.createElement('div');
+        var textarea = document.createElement('textarea');
+
+        checkboxRow.classList.add('checkbox__row', 'checkbox__row--other');
+        textarea.classList.add('home__area');
+        textarea.maxLength = "60";  // limit text length within textarea
+
+        checkboxRow.append(textarea);
+
+        return checkboxRow;
     }
 }

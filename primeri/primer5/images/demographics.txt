@@ -79,6 +79,10 @@ Height & weight
         1 feet = 12 inches
         703 * 173 / (5 * 12 + 10) ^ 2 = 24.8202040816 ~ 24.82
 
+    feet range: 0 - 7
+    inches range: 0 - 11 (12 is not included because 12 inches = 1 feet)
+    pounds range: 0 - 500 (227 kg)
+
     < 18.5 body mass deficit
     18.5 - 24.9 normal body mass
     25.0 - 29.9 excessive body mass (pre-obesity)

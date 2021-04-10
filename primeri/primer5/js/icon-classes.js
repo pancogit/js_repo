@@ -8,4 +8,5 @@ export class IconClasses {
     static exclamationClasses = ['fas', 'fa-exclamation-circle'];
     static linkOkClass = 'navigation__link--ok';
     static warningClass = 'navigation__link--warning';
+    
 }
