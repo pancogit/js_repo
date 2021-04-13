@@ -144,4 +144,21 @@ export class PageValidation {
             return true;
         }
     }
+
+    validateHeight(inputElement) {
+        var heightFeet = inputElement.feet.object.number.value;
+        var heightInches = inputElement.inches.object.number.value;
+
+        // it's valid only if it's not zero in total 
+        var isValid = heightFeet || heightInches;
+
+        this.addOrRemoveTextErrors(inputElement, isValid);
+    }
+
+    validateWeight(inputElement) {
+        var weight = inputElement.pounds.object.number.value;
+        var isValid = weight ? true : false;
+
+        this.addOrRemoveTextErrors(inputElement, isValid);
+    }
 }

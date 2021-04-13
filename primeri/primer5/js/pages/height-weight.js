@@ -2,6 +2,7 @@
 
 
 import { Page } from './page.js';
+import { BMI } from './bmi.js';
 
 export class HeightWeight extends Page {
 
@@ -12,6 +13,17 @@ export class HeightWeight extends Page {
         let calculations = this.page.querySelectorAll('.calculation__content');
         this.measureSignClass = 'measure__sign';
         this.measureSignDisabledClass = 'measure__sign--disabled';
+        this.clickEvent = 'click';
+        this.mouseDownEvent = 'mousedown';
+        this.mouseUpEvent = 'mouseup';
+        this.mouseLeaveEvent = 'mouseleave';
+        this.timeoutTimeMs = 1000;
+        this.intervalTimeMs = 50;
+
+        // timeout is used to wait for hold time before start changing value and 
+        // interval is used to change value fast while mouse button is hold 
+        this.timeoutID = 0;
+        this.intervalID = 0;
 
         let heightMeasures = questions[0].nextElementSibling.querySelectorAll('.measure');
 
@@ -49,9 +61,12 @@ export class HeightWeight extends Page {
 
             weightStatus: {
                 element: calculations[1],
-                value: calculations[1].textContent
+                value: calculations[1].textContent,
             }
         }
+
+        // body mass and weight status updates
+        this.bmi = new BMI(this.height, this.weight);
 
         this.numberOfElements.all = 2;
     }
@@ -93,8 +108,19 @@ export class HeightWeight extends Page {
         element.number.value = 0;
 
         // add event listeners to minus and plus buttons
-        element.minus.addEventListener('click', this.minusPlusClicked.bind(this));
-        element.plus.addEventListener('click', this.minusPlusClicked.bind(this));
+        // when element is clicked, change value immediately
+        element.minus.addEventListener(this.clickEvent, this.minusPlusClicked.bind(this));
+        element.plus.addEventListener(this.clickEvent, this.minusPlusClicked.bind(this));
+
+        // when click on element is hold enough with mousedown event, then change value fast
+        // in short intervals (it's used as shorthand than clicking most of time) until click
+        // is released with mouseup event or mouseleave event
+        element.minus.addEventListener(this.mouseDownEvent, this.minusPlusHold.bind(this));
+        element.minus.addEventListener(this.mouseUpEvent, this.minusPlusHold.bind(this));
+        element.minus.addEventListener(this.mouseLeaveEvent, this.minusPlusHold.bind(this));
+        element.plus.addEventListener(this.mouseDownEvent, this.minusPlusHold.bind(this));
+        element.plus.addEventListener(this.mouseUpEvent, this.minusPlusHold.bind(this));
+        element.plus.addEventListener(this.mouseLeaveEvent, this.minusPlusHold.bind(this));
     }
 
     minusPlusClicked(event) {
@@ -114,6 +140,8 @@ export class HeightWeight extends Page {
         this.detectButton(button, this.height.feet);
         this.detectButton(button, this.height.inches);
         this.detectButton(button, this.weight.pounds);
+
+        this.bmi.updateBMIandWeightStatus();
     }
 
     // detect which button was clicked and do action
@@ -136,7 +164,7 @@ export class HeightWeight extends Page {
 
         // disable minus button if zero is reached
         if (!number.value) buttonClicked.classList.add(this.measureSignDisabledClass);
-        
+
         // if plus button is disabled, enable them
         else {
             let plusButton = buttonWrapper.object.plus;
@@ -159,10 +187,38 @@ export class HeightWeight extends Page {
             buttonClicked.classList.add(this.measureSignDisabledClass);
     }
 
+    // button is hold, after some time set timer interval to increment or decrement value fast
+    // or if button is released, clear current timeout and timer interval for hold event
+    minusPlusHold(event) {
+        var buttonReleased = (event.type === this.mouseUpEvent) || (event.type === this.mouseLeaveEvent);
+
+        if (buttonReleased) {
+            clearTimeout(this.timeoutID);
+            clearInterval(this.intervalID);
+        }
+
+        // button is pressed
+        // bind this pointer to the handler function to not lose object and event object as argument
+        else if (event.type === this.mouseDownEvent)
+            this.timeoutID = setTimeout(this.timeoutExpires.bind(this, event), this.timeoutTimeMs);
+    }
+
+    // when button is hold enough, then set interval to fire fast changing of value
+    timeoutExpires(event) {
+        this.intervalID = setInterval(this.intervalExpires.bind(this, event), this.intervalTimeMs);
+    }
+
+    intervalExpires(event) {
+        this.minusPlusClicked(event);
+    }
+
     validatePage() {
         super.validatePage();
 
-        this.isPageValid();
+        this.pageValidation.validateHeight(this.height);
+        this.pageValidation.validateWeight(this.weight);
+
+        this.isPageValid(this.height.isValid, this.weight.isValid);
         this.updatePageIcon();
     }
 }

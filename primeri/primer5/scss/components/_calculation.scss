@@ -2,14 +2,19 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .calculation {
     
+    // spread content to full width in column
+    @include mixins.set_flexbox_container($flex_direction: column);
+
     &__content {
         display: inline-block;
         padding: variables.$calculation_content_padding;
         color: colors.$calculation_content_color;
         border-radius: variables.$calculation_content_border_radius;
+        text-align: center;
 
         // block modifiers for content
         &--deficit {

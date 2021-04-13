@@ -507,11 +507,17 @@ a {
 }
 
 /* calculation */
+.calculation {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
 .calculation__content {
   display: inline-block;
   padding: 1rem;
   color: white;
   border-radius: 0.3rem;
+  text-align: center;
 }
 .calculation__content--deficit {
   background-color: #d60b0b;
@@ -523,7 +529,7 @@ a {
   background-color: #d46208;
 }
 .calculation__content--obesity-1st {
-  background-color: #9ead06;
+  background-color: #8e9a0d;
 }
 .calculation__content--obesity-2nd {
   background-color: #6d7705;
