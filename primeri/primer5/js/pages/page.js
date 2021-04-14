@@ -18,6 +18,7 @@ export class Page {
         this.borderErrorClass = 'home__error-border';
         this.textErrorClass = 'home__error-text';
         this.choiceActiveClass = 'choice__answer--active';
+        this.numbersActiveClass = 'numbers__box--active';
 
         // validation utilities
         this.pageValidation = new PageValidation();
@@ -126,28 +127,33 @@ export class Page {
     }
 
     // init choice box and add event listeners for choices
-    initChoice(choiceWrapper) {
+    initChoice(choiceWrapper, activeClass) {
         choiceWrapper.choices.forEach(function iterate(value, index, array) {
-            value.classList.remove(this.choiceActiveClass);
+            // if active class is given as argument of function, use them
+            value.classList.remove(activeClass ? activeClass : this.choiceActiveClass);
 
             // send this pointer to the event handler via bind
-            value.addEventListener('click', this.updateChoice.bind(this, choiceWrapper.choices));
+            value.addEventListener('click', this.updateChoice.bind(this, choiceWrapper.choices, activeClass));
         }, this);
     }
 
-    updateChoice(choices, event) {
+    updateChoice(choices, activeClass, event) {
         var target = event.target;
-        var targetAlreadyActive = target.classList.contains(this.choiceActiveClass);
+
+        // if active class is given as argument of function, use them
+        var elementActiveClass = activeClass ? activeClass : this.choiceActiveClass;
+
+        var targetAlreadyActive = target.classList.contains(elementActiveClass);
 
         // don't do anything if the same choice is clicked
         if (targetAlreadyActive) return;
 
         // remove active choice and then update current choice
         choices.forEach(function iterate(value, index, array) {
-            value.classList.remove(this.choiceActiveClass);
+            value.classList.remove(elementActiveClass);
         }, this);
 
-        target.classList.add(this.choiceActiveClass);
+        target.classList.add(elementActiveClass);
     }
 
     initCheckbox(checkboxWrapper) {
@@ -187,5 +193,10 @@ export class Page {
         checkboxRow.append(textarea);
 
         return checkboxRow;
+    }
+
+    // for numbers use choices with given numbers class
+    initNumbers(numbersWrapper) {
+        this.initChoice(numbersWrapper, this.numbersActiveClass);
     }
 }

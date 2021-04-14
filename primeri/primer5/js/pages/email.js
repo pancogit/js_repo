@@ -43,7 +43,7 @@ export class Email extends Page {
         super.validatePage();
 
         this.pageValidation.validateEmail(this.email);
-        this.pageValidation.validateEmail(this.emailConfirm);
+        this.pageValidation.validateEmail(this.emailConfirm, true, this.email);
         this.pageValidation.validateEmail(this.emailAlternate);
 
         this.isPageValid(this.email.isValid,
