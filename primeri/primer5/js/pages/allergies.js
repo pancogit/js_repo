@@ -56,6 +56,17 @@ export class Allergies extends Page {
         this.initChoice(this.training);
         this.initCheckbox(this.food);
         this.initCheckbox(this.medication);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.policy.question.classList.remove(this.textErrorClass);
+        this.training.question.classList.remove(this.textErrorClass);
+        this.food.question.classList.remove(this.textErrorClass);
+        this.medication.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -72,5 +83,20 @@ export class Allergies extends Page {
                          this.medication.isValid);
 
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var policyFood = this.getActiveText(this.policy, this.choiceActiveClass);
+        var training = this.getActiveText(this.training, this.choiceActiveClass);
+        var foodAllergies = this.getTextFromSelectedCheckboxes(this.food);
+        var medicationAllergies = this.getTextFromSelectedCheckboxes(this.medication);
+
+        this.formData.set('allergies policy', policyFood);
+        this.formData.set('allergies food allergen training', training);
+        this.formData.set('allergies food list', foodAllergies);
+        this.formData.set('allergies medication list', medicationAllergies);
     }
 }

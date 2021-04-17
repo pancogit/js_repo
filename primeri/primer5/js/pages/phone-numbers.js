@@ -42,6 +42,10 @@ export class PhoneNumbers extends Page {
 
         this.removeStaticMobilePhones(questions);
 
+        // bound function listIsChanged() used to remove event listener because 
+        // the same function must be referenced
+        this.listIsChangedBound = this.listIsChanged.bind(this);
+
         this.numberOfElements.all = 3;
     }
 
@@ -64,7 +68,24 @@ export class PhoneNumbers extends Page {
         this.initList(this.mobilePhones);
 
         // add event listener to the list
-        this.mobilePhones.input.addEventListener('change', this.listIsChanged.bind(this));
+        // when Finish button is clicked, init is called again and remove previous event listener
+        this.mobilePhones.input.removeEventListener('change', this.listIsChangedBound);
+        this.mobilePhones.input.addEventListener('change', this.listIsChangedBound);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.homePhone.question.classList.remove(this.textErrorClass);
+        this.homePhone.input.classList.remove(this.borderErrorClass);
+        this.workPhone.question.classList.remove(this.textErrorClass);
+        this.workPhone.input.classList.remove(this.borderErrorClass);
+        this.mobilePhones.question.classList.remove(this.textErrorClass);
+        this.mobilePhones.input.classList.remove(this.borderErrorClass);
+
+        this.removeMobilePhonesFromPage(-this.mobilePhones.phones.length);
     }
 
     // create new mobile phone numbers or delete some when list is changed
@@ -185,5 +206,36 @@ export class PhoneNumbers extends Page {
         }
 
         return phonesValid;
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        // if default message is shown, then set empty string, otherwise set number of mobile phones
+        var mobilePhonesString = this.mobilePhones.input.value === this.mobilePhones.defaultMessage ? '' : 
+                                 this.mobilePhones.input.value;
+
+        this.formData.set('phone numbers number of mobile phones', mobilePhonesString);
+        this.formData.set('phone numbers home phone', this.homePhone.input.value);
+        this.formData.set('phone numbers work phone', this.workPhone.input.value);
+
+        this.updateMobilePhonesFormData();
+    }
+
+    // for each mobile phone on page set form data and delete previous keys if exists
+    updateMobilePhonesFormData() {
+        var maxNumberOfMobilePhones = this.mobilePhones.input.querySelectorAll('.list__option').length - 1;
+
+        // delete previous keys
+        for (let i = 1; i <= maxNumberOfMobilePhones; i++) 
+            this.formData.delete('phone numbers mobile phone ' + i);
+
+        // add new keys for each mobile phone
+        this.mobilePhones.phones.forEach(function iterate(value, index, array) {
+            let phoneNumber = value.querySelector('.home__phone').value;
+
+            this.formData.set('phone numbers mobile phone ' + (index + 1), phoneNumber);
+        }, this);
     }
 }

@@ -56,6 +56,17 @@ export class CurrentInfo extends Page {
         this.initChoice(this.whitened);
         this.initChoice(this.orthodontic);
         this.initChoice(this.gumTissue);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.concerns.question.classList.remove(this.textErrorClass);
+        this.whitened.question.classList.remove(this.textErrorClass);
+        this.orthodontic.question.classList.remove(this.textErrorClass);
+        this.gumTissue.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -72,5 +83,20 @@ export class CurrentInfo extends Page {
                          this.gumTissue.isValid);
                          
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var smileConcerns = this.getTextFromSelectedCheckboxes(this.concerns);
+        var whitenedTeeth = this.getActiveText(this.whitened, this.choiceActiveClass);
+        var orthodonticTreatment = this.getActiveText(this.orthodontic, this.choiceActiveClass);
+        var gumTissueTreatment = this.getActiveText(this.gumTissue, this.choiceActiveClass);
+
+        this.formData.set('current info smile concerns', smileConcerns);
+        this.formData.set('current info whitened teeth', whitenedTeeth);
+        this.formData.set('current info orthodontic treatment', orthodonticTreatment);
+        this.formData.set('current info gum tissue treatment', gumTissueTreatment);
     }
 }

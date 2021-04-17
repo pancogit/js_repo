@@ -19,17 +19,33 @@ export class Page {
         this.textErrorClass = 'home__error-text';
         this.choiceActiveClass = 'choice__answer--active';
         this.numbersActiveClass = 'numbers__box--active';
+        this.checkboxRowOtherClass = 'checkbox__row--other';
 
         // validation utilities
         this.pageValidation = new PageValidation();
+
+        // form data for form submission
+        this.formData = new FormData();
+
+        // bound function used to add / remove the same event listener with the same reference
+        this.checkboxOtherIsClickedBound = this.checkboxOtherIsClicked.bind(this);
     }
 
     initPage() {
         
     }
 
+    removeErrorsFromPage() {
+        
+    }
+
     validatePage() {
 
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        
     }
 
     isPageValid(...validFlags) {
@@ -163,11 +179,26 @@ export class Page {
 
             let label = value.nextElementSibling;
 
-            // for Other label, add event listeners to the checkbox
+            // for Other label, add event listeners to the checkbox, but previous remove event listener
             // label is linked to the checkbox and there is no need to double event listener
-            if (label.textContent === 'Other') 
-                value.addEventListener('click', this.checkboxOtherIsClicked.bind(this));
+            if (label.textContent === 'Other') {
+                value.removeEventListener('click', this.checkboxOtherIsClickedBound);
+                value.addEventListener('click', this.checkboxOtherIsClickedBound);
+                this.removeOtherTextarea(value);
+            }
         }, this);
+    }
+
+    // remove textarea for Other checkbox if exists
+    removeOtherTextarea(otherCheckbox) {
+        var otherTextarea = otherCheckbox.parentElement.nextElementSibling;
+        var hasTextarea = otherTextarea ? otherTextarea.classList.contains(this.checkboxRowOtherClass) : false;
+
+        if (hasTextarea) {
+            let checkboxContainer = otherTextarea.parentElement;
+
+            checkboxContainer.removeChild(otherTextarea);
+        }
     }
 
     checkboxOtherIsClicked(event) {
@@ -186,7 +217,7 @@ export class Page {
         var checkboxRow = document.createElement('div');
         var textarea = document.createElement('textarea');
 
-        checkboxRow.classList.add('checkbox__row', 'checkbox__row--other');
+        checkboxRow.classList.add('checkbox__row', this.checkboxRowOtherClass);
         textarea.classList.add('home__area');
         textarea.maxLength = "60";  // limit text length within textarea
 
@@ -198,5 +229,56 @@ export class Page {
     // for numbers use choices with given numbers class
     initNumbers(numbersWrapper) {
         this.initChoice(numbersWrapper, this.numbersActiveClass);
+    }
+
+    // get text for active element for choice or numbers with given active class
+    getActiveText(inputElement, activeClass) {
+        var activeElementFound, activeText;
+
+        for (let i = 0; i < inputElement.choices.length; i++) {
+            activeElementFound = inputElement.choices[i].classList.contains(activeClass);
+
+            if (activeElementFound) {
+                activeText = inputElement.choices[i].textContent.toLowerCase();
+                break;
+            }
+        }
+
+        // if there is no active element, return empty string
+        return activeText ? activeText : '';
+    }
+
+    getTextFromSelectedCheckboxes(inputElement) {
+        var checkboxesString = '';
+        var newLines = /\n/g;
+        var extraSpaces = /\s{2,}/g;  // more than one spaces
+
+        inputElement.checkboxes.forEach(function iterate(value, index, array) {
+            if (value.checked) {
+                let checkboxString = value.nextElementSibling.textContent.toLowerCase();
+
+                // remove new lines first and then replace more than one whitespaces with single whitespace
+                let checkboxStringTrimmed = checkboxString.replace(newLines, ' ').replace(extraSpaces, ' ');
+
+                checkboxesString += checkboxStringTrimmed;
+
+                // for other checkbox, add text from other textarea
+                if (checkboxStringTrimmed === 'other') {
+                    let otherTextareaString = value.parentElement.nextElementSibling.firstElementChild.value;
+
+                    // add textarea text only if it's not empty or filled with whitespaces only
+                    // also remove new lines and trim whitespaces and extra spaces from textarea
+                    if (!otherTextareaString.match(/^\s*$/g)) {
+                        otherTextareaString = otherTextareaString.replace(newLines, ' ').replace(extraSpaces, ' ').trim();
+                        checkboxesString += ' (' + otherTextareaString + ')';
+                    }
+                }
+
+                checkboxesString += ', ';
+            }
+        }, this);
+
+        // remove last comma and space
+        return checkboxesString.slice(0, checkboxesString.length - 2);
     }
 }

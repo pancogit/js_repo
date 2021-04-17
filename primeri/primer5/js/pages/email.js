@@ -37,6 +37,19 @@ export class Email extends Page {
         this.email.input.value = '';
         this.emailConfirm.input.value = '';
         this.emailAlternate.input.value = '';
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.email.question.classList.remove(this.textErrorClass);
+        this.email.input.classList.remove(this.borderErrorClass);
+        this.emailConfirm.question.classList.remove(this.textErrorClass);
+        this.emailConfirm.input.classList.remove(this.borderErrorClass);
+        this.emailAlternate.question.classList.remove(this.textErrorClass);
+        this.emailAlternate.input.classList.remove(this.borderErrorClass);
     }
 
     validatePage() {
@@ -51,5 +64,14 @@ export class Email extends Page {
                          this.emailAlternate.isValid);
 
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        this.formData.set('email primary e-mail', this.email.input.value);
+        this.formData.set('email confirm e-mail', this.emailConfirm.input.value);
+        this.formData.set('email alternate e-mail', this.emailAlternate.input.value);
     }
 }

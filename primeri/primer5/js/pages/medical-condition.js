@@ -46,6 +46,16 @@ export class MedicalCondition extends Page {
         this.initCheckbox(this.conditions);
         this.initChoice(this.glasses);
         this.initChoice(this.care);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.conditions.question.classList.remove(this.textErrorClass);
+        this.glasses.question.classList.remove(this.textErrorClass);
+        this.care.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -60,5 +70,18 @@ export class MedicalCondition extends Page {
                          this.care.isValid);
 
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var health = this.getTextFromSelectedCheckboxes(this.conditions);
+        var glasses = this.getActiveText(this.glasses, this.choiceActiveClass);
+        var care = this.getActiveText(this.care, this.choiceActiveClass);
+
+        this.formData.set('medical condition health', health);
+        this.formData.set('medical condition glasses or contacts', glasses);
+        this.formData.set('medical condition under care', care);
     }
 }

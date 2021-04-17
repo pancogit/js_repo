@@ -6,6 +6,7 @@ import { PagesContainer } from './pages/pages-container.js';
 import { HomeAddress } from './pages/home-address.js';
 import { IconClasses } from './icon-classes.js';
 import { Validation } from './validation.js';
+import { Submit } from './submit.js';
 
 export class Navigation {
 
@@ -46,6 +47,9 @@ export class Navigation {
 
         // call page validation
         this.validation = new Validation(this.pagesContainer);
+
+        // submit results
+        this.submit = new Submit(this.score, this.pagesContainer, this);
     }
 
     addEventListeners() {
@@ -274,6 +278,14 @@ export class Navigation {
             this.validation.validatePage(this.previousLink);
             this.score.updateScore();
         }
+
+        // it's last page and finish button is pressed
+        // validate last page and then try to submit
+        else {
+            this.validation.validatePage(this.currentLink);
+            this.score.updateScore();
+            this.submit.tryToSubmit();
+        }
     }
 
     findCurrentLinkIndex() {
@@ -303,5 +315,11 @@ export class Navigation {
 
         // add active link to the first link
         this.links[0].classList.add(this.activeLinkClass);
+    }
+
+    // when Finish button is clicked, then show first page again
+    async showFirstPage() {
+        this.currentLink = this.links[0];
+        await this.changePage(this.currentLink.href);
     }
 }

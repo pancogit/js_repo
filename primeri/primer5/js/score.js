@@ -10,6 +10,7 @@ export class Score {
         this.pagesContainer = pages;
         this.numberOfElements = 61;
         this.completeText = '% Complete';
+        this.currentScore = 0;
     }
 
     addEventListeners() {
@@ -69,5 +70,8 @@ export class Score {
     updateOnPage(score) {
         this.percentage.textContent = score + this.completeText;
         this.level.style.width = score + '%';
+
+        // save score results
+        this.currentScore = score;
     }
 }

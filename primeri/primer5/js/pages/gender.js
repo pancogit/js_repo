@@ -26,6 +26,13 @@ export class Gender extends Page {
         super.initPage();
 
         this.initCheckbox(this.gender);
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.gender.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -35,5 +42,14 @@ export class Gender extends Page {
 
         this.isPageValid(this.gender.isValid);
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var genderString = this.getTextFromSelectedCheckboxes(this.gender);
+
+        this.formData.set('gender identity', genderString);
     }
 }

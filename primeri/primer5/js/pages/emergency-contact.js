@@ -100,6 +100,35 @@ export class EmergencyContact extends Page {
 
         this.initList(this.primaryNameRelation);
         this.initList(this.secondaryNameRelation);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.primaryName.question.classList.remove(this.textErrorClass);
+        this.primaryName.input.classList.remove(this.borderErrorClass);
+        this.primaryNameRelation.question.classList.remove(this.textErrorClass);
+        this.primaryNameRelation.input.classList.remove(this.borderErrorClass);
+        this.secondaryName.question.classList.remove(this.textErrorClass);
+        this.secondaryName.input.classList.remove(this.borderErrorClass);
+        this.secondaryNameRelation.question.classList.remove(this.textErrorClass);
+        this.secondaryNameRelation.input.classList.remove(this.borderErrorClass);
+        this.hospital.question.classList.remove(this.textErrorClass);
+        this.hospital.input.classList.remove(this.borderErrorClass);
+        this.doctor.question.classList.remove(this.textErrorClass);
+        this.doctor.input.classList.remove(this.borderErrorClass);
+        this.doctorPhone.question.classList.remove(this.textErrorClass);
+        this.doctorPhone.input.classList.remove(this.borderErrorClass);
+        this.dentist.question.classList.remove(this.textErrorClass);
+        this.dentist.input.classList.remove(this.borderErrorClass);
+        this.dentistPhone.question.classList.remove(this.textErrorClass);
+        this.dentistPhone.input.classList.remove(this.borderErrorClass);
+        this.company.question.classList.remove(this.textErrorClass);
+        this.company.input.classList.remove(this.borderErrorClass);
+        this.policy.question.classList.remove(this.textErrorClass);
+        this.policy.input.classList.remove(this.borderErrorClass);
     }
 
     validatePage() {
@@ -130,5 +159,27 @@ export class EmergencyContact extends Page {
                          this.policy.isValid);
 
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var primaryNameRelationString = this.primaryNameRelation.input.value === this.primaryNameRelation.defaultMessage? '' : 
+                                        this.primaryNameRelation.input.value;
+        var secondaryNameRelationString = this.secondaryNameRelation.input.value === this.secondaryNameRelation.defaultMessage? '' : 
+                                          this.secondaryNameRelation.input.value;
+
+        this.formData.set('emergency contact primary emergency name', this.primaryName.input.value);
+        this.formData.set('emergency contact primary emergency name relation', primaryNameRelationString);
+        this.formData.set('emergency contact secondary emergency name', this.secondaryName.input.value);
+        this.formData.set('emergency contact secondary emergency name relation', secondaryNameRelationString);
+        this.formData.set('emergency contact hospital', this.hospital.input.value);
+        this.formData.set('emergency contact doctor name', this.doctor.input.value);
+        this.formData.set('emergency contact doctor phone number', this.doctorPhone.input.value);
+        this.formData.set('emergency contact dentist name', this.dentist.input.value);
+        this.formData.set('emergency contact dentist phone number', this.dentistPhone.input.value);
+        this.formData.set('emergency contact company', this.company.input.value);
+        this.formData.set('emergency contact policy', this.policy.input.value);
     }
 }

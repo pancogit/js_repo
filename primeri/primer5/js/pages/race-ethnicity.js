@@ -36,6 +36,15 @@ export class RaceEthnicity extends Page {
 
         this.initChoice(this.race);
         this.initCheckbox(this.ethnicity);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.race.question.classList.remove(this.textErrorClass);
+        this.ethnicity.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -46,5 +55,16 @@ export class RaceEthnicity extends Page {
 
         this.isPageValid(this.race.isValid, this.ethnicity.isValid);
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var raceString = this.getActiveText(this.race, this.choiceActiveClass);
+        var ethnicityString = this.getTextFromSelectedCheckboxes(this.ethnicity);
+
+        this.formData.set('race ethnicity hispanic/latino', raceString);
+        this.formData.set('race ethnicity list', ethnicityString);
     }
 }

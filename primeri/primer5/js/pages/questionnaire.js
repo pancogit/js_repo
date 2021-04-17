@@ -94,6 +94,25 @@ export class Questionnaire extends Page {
         this.initNumbers(this.smile);
         this.initChoice(this.whiter);
         this.initChoice(this.like);
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.lastExam.question.classList.remove(this.textErrorClass);
+        this.lastExam.input.classList.remove(this.borderErrorClass);
+        this.pain.question.classList.remove(this.textErrorClass);
+        this.howLong.question.classList.remove(this.textErrorClass);
+        this.howLong.input.classList.remove(this.borderErrorClass);
+        this.brush.question.classList.remove(this.textErrorClass);
+        this.brush.input.classList.remove(this.borderErrorClass);
+        this.floss.question.classList.remove(this.textErrorClass);
+        this.floss.input.classList.remove(this.borderErrorClass);
+        this.smile.question.classList.remove(this.textErrorClass);
+        this.whiter.question.classList.remove(this.textErrorClass);
+        this.like.question.classList.remove(this.textErrorClass);
     }
 
     validatePage() {
@@ -109,14 +128,39 @@ export class Questionnaire extends Page {
         this.pageValidation.validateChoice(this.like);
 
         this.isPageValid(this.lastExam.isValid,
-                         this.pain.isValid,
-                         this.howLong.isValid,
-                         this.brush.isValid,
-                         this.floss.isValid,
-                         this.smile.isValid,
-                         this.whiter.isValid,
-                         this.like.isValid);
+            this.pain.isValid,
+            this.howLong.isValid,
+            this.brush.isValid,
+            this.floss.isValid,
+            this.smile.isValid,
+            this.whiter.isValid,
+            this.like.isValid);
 
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        var dentalPain = this.getActiveText(this.pain, this.choiceActiveClass);
+        var howLongString = this.howLong.input.value === this.howLong.defaultMessage ? '' :
+                            this.howLong.input.value;
+        var brushString = this.brush.input.value === this.brush.defaultMessage ? '' :
+                          this.brush.input.value;
+        var flossString = this.floss.input.value === this.floss.defaultMessage ? '' :
+                          this.floss.input.value;
+        var smileRate = this.getActiveText(this.smile, this.numbersActiveClass);
+        var whiterTeeth = this.getActiveText(this.whiter, this.choiceActiveClass);
+        var likeTeeth = this.getActiveText(this.like, this.choiceActiveClass);
+
+        this.formData.set('questionnaire last dental exam', this.lastExam.input.value);
+        this.formData.set('questionnaire dental pain', dentalPain);
+        this.formData.set('questionnaire how long dental pain', howLongString);
+        this.formData.set('questionnaire brush', brushString);
+        this.formData.set('questionnaire floss', flossString);
+        this.formData.set('questionnaire smile rate', smileRate);
+        this.formData.set('questionnaire like whiter teeth', whiterTeeth);
+        this.formData.set('questionnaire like teeth', likeTeeth);
     }
 }

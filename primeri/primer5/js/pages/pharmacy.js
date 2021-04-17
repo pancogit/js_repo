@@ -113,6 +113,36 @@ export class Pharmacy extends Page {
         this.pharmacistLicense.input.value = '';
 
         this.initChoice(this.scanned);
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.date.question.classList.remove(this.textErrorClass);
+        this.date.input.classList.remove(this.borderErrorClass);
+        this.prescriptionNumber.question.classList.remove(this.textErrorClass);
+        this.prescriptionNumber.input.classList.remove(this.borderErrorClass);
+        this.type.question.classList.remove(this.textErrorClass);
+        this.scanned.question.classList.remove(this.textErrorClass);
+        this.drug.question.classList.remove(this.textErrorClass);
+        this.drug.input.classList.remove(this.borderErrorClass);
+        this.strength.question.classList.remove(this.textErrorClass);
+        this.strength.input.classList.remove(this.borderErrorClass);
+        this.directions.question.classList.remove(this.textErrorClass);
+        this.directions.input.classList.remove(this.borderErrorClass);
+        this.quantityPrescribed.question.classList.remove(this.textErrorClass);
+        this.quantityPrescribed.input.classList.remove(this.borderErrorClass);
+        this.quantityIngested.question.classList.remove(this.textErrorClass);
+        this.quantityIngested.input.classList.remove(this.borderErrorClass);
+        this.quantityDispensed.question.classList.remove(this.textErrorClass);
+        this.quantityDispensed.input.classList.remove(this.borderErrorClass);
+        this.quantityReturned.question.classList.remove(this.textErrorClass);
+        this.quantityReturned.input.classList.remove(this.borderErrorClass);
+        this.pharmacistName.question.classList.remove(this.textErrorClass);
+        this.pharmacistName.input.classList.remove(this.borderErrorClass);
+        this.pharmacistLicense.question.classList.remove(this.textErrorClass);
+        this.pharmacistLicense.input.classList.remove(this.borderErrorClass);
     }
 
     validatePage() {
@@ -147,5 +177,35 @@ export class Pharmacy extends Page {
                          this.pharmacistLicense.isValid);
                          
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        if (this.type) {
+            let newRefillString = this.type.new.checked ? 'new' : 
+                                  this.type.refill.checked ? 'refill' : '';
+
+            this.formData.set('pharmacy type', newRefillString);
+        }
+
+        let scanned = this.getActiveText(this.scanned, 'choice__answer--active');
+
+        // replace new lines with space, then remove more than one whitespaces
+        let directionsString = this.directions.input.value.replace(/\n/g, ' ').replace(/\s{2,}/g, ' ').trim();
+
+        this.formData.set('pharmacy date filled', this.date.input.value);
+        this.formData.set('pharmacy prescription rx number', this.prescriptionNumber.input.value);
+        this.formData.set('pharmacy prescription scanned', scanned);
+        this.formData.set('pharmacy drug', this.drug.input.value);
+        this.formData.set('pharmacy strength', this.strength.input.value);
+        this.formData.set('pharmacy directions', directionsString);
+        this.formData.set('pharmacy quantity prescribed', this.quantityPrescribed.input.value);
+        this.formData.set('pharmacy quantity ingested', this.quantityIngested.input.value);
+        this.formData.set('pharmacy quantity dispensed', this.quantityDispensed.input.value);
+        this.formData.set('pharmacy quantity returned', this.quantityReturned.input.value);
+        this.formData.set('pharmacy pharmacist name', this.pharmacistName.input.value);
+        this.formData.set('pharmacy pharmacist license number', this.pharmacistLicense.input.value);
     }
 }

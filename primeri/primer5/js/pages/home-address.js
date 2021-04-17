@@ -68,6 +68,26 @@ export class HomeAddress extends Page {
         this.address2.input.value = '';
         this.state.input.value = '';
         this.zip.input.value = '';
+
+        this.removeErrorsFromPage();
+    }
+
+    removeErrorsFromPage() {
+        super.removeErrorsFromPage();
+
+        this.houseApartment.question.classList.remove(this.textErrorClass);
+        this.country.question.classList.remove(this.textErrorClass);
+        this.country.input.classList.remove(this.borderErrorClass);
+        this.city.question.classList.remove(this.textErrorClass);
+        this.city.input.classList.remove(this.borderErrorClass);
+        this.address1.question.classList.remove(this.textErrorClass);
+        this.address1.input.classList.remove(this.borderErrorClass);
+        this.address2.question.classList.remove(this.textErrorClass);
+        this.address2.input.classList.remove(this.borderErrorClass);
+        this.state.question.classList.remove(this.textErrorClass);
+        this.state.input.classList.remove(this.borderErrorClass);
+        this.zip.question.classList.remove(this.textErrorClass);
+        this.zip.input.classList.remove(this.borderErrorClass);
     }
 
     // page validation
@@ -94,5 +114,26 @@ export class HomeAddress extends Page {
                          this.zip.isValid);
                          
         this.updatePageIcon();
+    }
+
+    // update form data for form submission
+    updateFormData() {
+        super.updateFormData();
+
+        if (this.houseApartment) {
+            // set house or apartment string or empty string if no one is checked
+            let houseApartmentString = this.houseApartment.house.checked ? 'house' : 
+                                       this.houseApartment.apartment.checked ? 'apartment' : '';
+
+            // set new form data key if it's not exist or update existing one
+            this.formData.set('home address house/apartment', houseApartmentString);
+        }
+        
+        this.formData.set('home address country', this.country.input.value);
+        this.formData.set('home address city', this.city.input.value);
+        this.formData.set('home address address 1', this.address1.input.value);
+        this.formData.set('home address address 2', this.address2.input.value);
+        this.formData.set('home address state', this.state.input.value);
+        this.formData.set('home address zip', this.zip.input.value);
     }
 }
