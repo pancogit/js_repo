@@ -149,7 +149,7 @@ export class Page {
             value.classList.remove(activeClass ? activeClass : this.choiceActiveClass);
 
             // send this pointer to the event handler via bind
-            value.addEventListener('click', this.updateChoice.bind(this, choiceWrapper.choices, activeClass));
+            value.onclick = this.updateChoice.bind(this, choiceWrapper.choices, activeClass);
         }, this);
     }
 
