@@ -1,0 +1,52 @@
+/* search */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.search {
+
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: nowrap);
+
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$login_breakpoint) {
+        // spread flex item to full width with flex properties
+        @include mixins.set_flex_item($flex: variables.$search_flex);
+        
+        justify-content: center;
+    }
+
+    &__button {
+        padding: variables.$search_button_padding;
+        border: none;
+        background-color: colors.$search_button_background_color;
+        color: colors.$search_button_color;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__icon {
+        font-size: variables.$search_icon_font_size;
+    }
+
+    &__input {
+        padding-left: variables.$search_input_padding;
+        padding-right: variables.$search_input_padding;
+        outline: none;
+
+        // set borders
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$search_input_border_width,
+                                    $top-color: colors.$search_input_border_color,
+                                    
+                                    $bottom-style: solid,
+                                    $bottom-width: variables.$search_input_border_width,
+                                    $bottom-color: colors.$search_input_border_color,
+                                    
+                                    $left-style: solid,
+                                    $left-width: variables.$search_input_border_width,
+                                    $left-color: colors.$search_input_border_color,
+                                    
+                                    $right-style: none);
+    }
+}

@@ -1,1 +1,119 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    background-color: colors.$header_background_color;
+
+    &__arrows {
+        // align arrows from header to the right
+        justify-content: flex-end;
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            margin-bottom: variables.$header_arrows_margin_bottom;
+        }
+    }
+
+    &__content {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+
+        height: variables.$header_content_height;
+        background-image: variables.$header_content_background_image_path;
+
+        // spread background image to full width and height but keep proportions
+        background-size: cover;
+        background-position: center;
+
+        // set smaller height one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            height: variables.$header_content_height_small;
+        }
+
+        // set smallest height for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            height: variables.$header_content_height_smallest;
+        }
+    }
+
+    &__heading {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: variables.$header_heading_font_size;
+        letter-spacing: variables.$header_heading_letter_spacing;
+    }
+
+    &__headings {
+        // align items with flexbox
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: center);
+
+        padding: variables.$header_headings_padding;
+        margin-left: variables.$header_headings_margin_left;
+        width: variables.$header_headings_width;
+        background-color: colors.$header_headings_background_color;
+        color: colors.$header_headings_color;
+
+        // grow flex item to full width for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$header_headings_flex);
+
+            margin-right: variables.$header_headings_margin_right;
+        }
+    }
+
+    &__search {
+        // align items with flexbox
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+
+        margin-right: variables.$header_search_margin_right;
+
+        // spread flex item to full width, change direction and align flex items for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$header_search_flex);
+
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            margin-right: 0;
+        }
+
+        // center flex items for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            margin-bottom: variables.$header_form_margin_bottom;
+        }
+
+        // small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            margin-right: 0;
+        }
+    }
+
+    &__subheading {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: variables.$header_subheading_font_size;
+        letter-spacing: variables.$header_subheading_letter_spacing;
+        line-height: variables.$header_subheading_line_height;
+
+        // set smaller font and larger letter spacing for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            font-size: variables.$header_subheading_font_size_small;
+            letter-spacing: variables.$header_subheading_letter_spacing_small;
+        }
+    }
+}

@@ -1,1 +1,19 @@
 /* logo */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.logo {
+
+    // use minimum size for content
+    width: min-content;
+
+    &__link {
+        display: inline-block;
+        font-size: variables.$logo_link_font_size;
+        text-transform: uppercase;
+        line-height: variables.$logo_link_line_height;
+        letter-spacing: variables.$logo_link_letter_spacing;
+        color: colors.$logo_link_color;
+    }
+}

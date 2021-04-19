@@ -1,0 +1,161 @@
+/* weather */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.weather {
+
+    // set flexbox container to column to align flex items
+    @include mixins.set_flexbox_container($flex_direction: column);
+
+    &__button {
+        padding: variables.$weather_button_padding;
+        outline: none;
+        background-color: colors.$weather_button_background_color;
+        cursor: pointer;
+
+        // for first and last child set rounded borders
+        &:first-child {
+            border-top-left-radius: variables.$weather_button_border_radius;
+            border-bottom-left-radius: variables.$weather_button_border_radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: variables.$weather_button_border_radius;
+            border-bottom-right-radius: variables.$weather_button_border_radius;
+        }
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$weather_button_border_width,
+                                    $color: colors.$weather_button_border_color);
+
+        // remove left border from every button except first
+        + .weather__button {
+            border-left: 0;
+        }
+
+        &--active {
+            // add linear gradient for active button
+            background: colors.$weather_button_gradient_background_fallback;
+            background: colors.$weather_button_gradient_background;
+        }
+    }
+
+    &__degrees {
+        margin-bottom: variables.$weather_select_margin_bottom;
+
+        // set flexbox container
+        @include mixins.set_flexbox_container();
+    }
+
+    &__form {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+    }
+
+    &__info {
+        // set small padding to not collapse with margins
+        padding: variables.$weather_info_padding;
+        text-align: center;
+    }
+
+    &__location {
+        margin-top: variables.$weather_location_margin_top;
+        margin-bottom: variables.$weather_location_margin_bottom;
+        font-size: variables.$weather_location_font_size;
+        color: colors.$weather_location_color;
+    }
+
+    &__message {
+        color: colors.$weather_message_color;
+        font-size: variables.$weather_message_font_size;
+    }
+
+    &__option {
+        font-size: variables.$weather_option_font_size;
+    }
+
+    &__place {
+        margin: 0;
+
+        // for smaller screens, set smaller font size
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$weather_place_breakpoint) {
+            font-size: variables.$weather_place_font_size_small;
+        }
+    }
+
+    &__select {
+        padding: variables.$weather_select_padding;
+        margin-bottom: variables.$weather_select_margin_bottom;
+        margin-right: variables.$weather_select_margin_right;
+        border-radius: variables.$weather_select_border_radius;
+        border-color: colors.$weather_select_border_color;
+        border-width: variables.$weather_select_border_width;
+        outline: none;
+    }
+
+    &__track {
+        // set negative margins to resize to outer box
+        margin-left: variables.$weather_track_negative_margin;
+        margin-right: variables.$weather_track_negative_margin;
+
+        // push flex item to the bottom with auto margins
+        margin-top: auto;
+
+        padding: variables.$weather_track_padding;
+        color: colors.$weather_track_color;
+        background-color: colors.$weather_track_background_color;
+        text-align: center;
+        font-size: variables.$weather_track_font_size;
+
+        // set bottom border radius to align with outer rounded box
+        border-bottom-left-radius: variables.$weather_track_border_radius;
+        border-bottom-right-radius: variables.$weather_track_border_radius;
+    }
+
+    &__data {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+
+        margin: variables.$weather_data_margin;
+    }
+
+    &__picture {
+        margin-right: variables.$weather_picture_margin_right;
+    }
+
+    &__cf-degree {
+        // set flexbox container to align number and degree
+        @include mixins.set_flexbox_container($align_items: center);
+    }
+
+    &__image {
+        margin-right: variables.$weather_image_margin_right;
+    }
+
+    &__degree {
+        margin-right: variables.$weather_degree_margin_right;
+        font-weight: bold;
+        font-size: variables.$weather_degree_font_size;
+    }
+
+    &__cf {
+        // move degree up
+        margin-bottom: variables.$weather_cf_margin_bottom;
+    }
+
+    &__numbers {
+        padding-top: variables.$weather_numbers_padding_top;
+        text-align: left;
+    }
+
+    &__paragraph {
+        margin-top: 0;
+        margin-bottom: variables.$weather_paragraph_margin_bottom;
+    }
+
+    &__number {
+
+    }
+}

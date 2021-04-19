@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="sr-RS">
+<html lang="en">
 
 <head>
     <title>Primer 4</title>
@@ -11,22 +11,609 @@
     <!-- for responsive web design (mobile devices) -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
+    <!-- fontawesome icons -->
+    <link href="../../../libraries/font-awesome/fontawesome-free-5.15.1-web/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+
     <!-- css styles -->
-    <link href="../css/main.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" type="image/png" href="../../../icon/favicon.png" />
 </head>
 
 <body>
 
-    <header>
-    </header>
+    <div class="page">
+        <header class="header">
+            <div class="page__content header__content">
+                <div class="header__headings">
+                    <h1 class="header__heading">Cooking Recipes</h1>
+                    <h2 class="header__subheading">Tasty Book</h2>
+                </div>
+                <div class="header__search">
+                    <div class="search">
+                        <form method="get" class="search__form header__form">
+                            <input type="search" placeholder="Search Recipe" name="recipe" class="search__recipe"
+                                autocomplete="off" />
+                            <button class="search__button">
+                                <i class="fas fa-search search__icon"></i>
+                            </button>
+                        </form>
+                        <div class="search__container">
+                            <div class="search__result">
+                                <h2 class="search__no-results">No results for your search</h2>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/breakfast/butternut-squash-breakfast-hash.jpg"
+                                        alt="butternut squash breakfast hash" width="50" height="37"
+                                        class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Butternut Squash Breakfast Hash</h2>
+                                        <h3 class="search__category">Breakfast</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/casseroles/green-bean-casserole.jpg" alt="green bean casserole"
+                                        width="50" height="37" class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Green Bean Casserole</h2>
+                                        <h3 class="search__category">Casseroles</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="search__result">
+                                <a href="index.html" class="search__link">
+                                    <img src="../images/italian/cast-iron-skillet-pizza.jpg"
+                                        alt="cast iron skillet pizza" width="50" height="37" class="search__image">
+                                    <div class="search__text">
+                                        <h2 class="search__name">Cast Iron Skillet Pizza</h2>
+                                        <h3 class="search__category">Italian</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrows header__arrows">
+                        <a href="index.html" class="arrows__link">
+                            <i class="fas fa-chevron-left arrows__icon"></i>
+                        </a>
+                        <a href="index.html" class="arrows__link arrows__link--active">
+                            <i class="fas fa-chevron-right arrows__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <main>
-    </main>
+        <main class="home">
+            <div class="page__content">
+                <div class="home__header">
+                    <nav class="navigation home__navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Home</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">News</a>
+                            </li>
+                            <li class="navigation__item dropdown">
+                                <a href="index.html" class="navigation__link" id="top-10-link-id">Top 10</a>
+                                <ul class="dropdown__list navigation__list" id="top-10-list-id">
+                                    <li class="dropdown__item navigation__item">
+                                        <a href="index.html" class="dropdown__link navigation__link"
+                                            id="dropdown-new-recipes-id">
+                                            <span class="dropdown__text">New Recipes</span>
+                                        </a>
+                                        <ul class="dropdown__list navigation__list">
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Baked Goods</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <i class="fas fa-chevron-right dropdown__icon"></i>
+                                                    <span class="dropdown__text">Breakfast</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Cakes</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Calzone Recipes</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Casseroles</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Chocolate</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Crockpot</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Desserts</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Ethnic</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Fruits, grains/veggies</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Gourmet Sandwiches</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Holiday Foods</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item navigation__item">
+                                                <a href="index.html" class="dropdown__link navigation__link">
+                                                    <span class="dropdown__text">Italian</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Post Recipe</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-    <footer>
-    </footer>
+                    <div class="home__courses">
+                        <div class="home__courses-content">
+                            <h2 class="home__heading home__heading--orange home__heading--margin-bottom">Big-Deal
+                                Dishes:</h2>
+                            <h3 class="home__subheading">15 standout courses for any main dish menu</h3>
+                            <div class="home__dishes">
+                                <a href="index.html" class="home__dish">Grilled Entrees,</a>
+                                <a href="index.html" class="home__dish">Burritos,</a>
+                                <a href="index.html" class="home__dish">Tacos,</a>
+                                <a href="index.html" class="home__dish">Salads,</a>
+                                <a href="index.html" class="home__dish">Grains,</a>
+                                <a href="index.html" class="home__dish">Legumes,</a>
+                                <a href="index.html" class="home__dish">Egg Entrees,</a>
+                                <a href="index.html" class="home__dish">Diary Entrees,</a>
+                                <a href="index.html" class="home__dish">Chicken Entrees,</a>
+                                <a href="index.html" class="home__dish">Sausage,</a>
+                                <a href="index.html" class="home__dish">Lamb Entrees,</a>
+                                <a href="index.html" class="home__dish">Pork Entrees,</a>
+                                <a href="index.html" class="home__dish">Seafood Entrees,</a>
+                                <a href="index.html" class="home__dish">Turkey Entrees,</a>
+                                <a href="index.html" class="home__dish">Beef</a>
+                            </div>
+                        </div>
+                        <div class="home__track">
+                            <a href="index.html" class="home__click">
+                                <span class="home__click-text">Click Here</span>
+                                <i class="fas fa-chevron-right home__right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="../js/menu.js"></script>
+                <div class="home__last-recipes">
+                    <h2 class="home__heading">Last Added Recipes:</h2>
+                    <div class="last-recipes">
+                        <div class="last-recipes__content">
+                            <div class="last-recipes__card last-recipes__card--active">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/calzone-recipes/calzone-recipe.jpg" alt="calzone recipe"
+                                            width="150" class="last-recipes__image" />
+                                        <div class="borders">
+                                            <div class="borders__top"></div>
+                                            <div class="borders__bottom"></div>
+                                            <div class="borders__left"></div>
+                                            <div class="borders__right"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">december 21, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">Calzone Recipe</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="last-recipes__card">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/fruits-grains-veggies/best-green-smoothie.jpg"
+                                            alt="best green smoothie" width="150" class="last-recipes__image" />
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">december 10, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">Best Green Smoothie</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="last-recipes__card">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/breakfast/avocado-tomatillo-breakfast-tacos.jpg"
+                                            alt="avocado tomatillo breakfast tacos" width="150"
+                                            class="last-recipes__image" />
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">december 5, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">Avocado Tomatillo Breakfast Tacos</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="last-recipes__card">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/italian/quinoa-risotto.jpg" alt="quinoa risotto" width="150"
+                                            class="last-recipes__image" />
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">december 5, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">Quinoa Risotto</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="last-recipes__card">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/fruits-grains-veggies/3-layer-fruit-smoothie.jpg"
+                                            alt="3 layer fruit smoothie" width="150" class="last-recipes__image" />
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">december 2, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">3-Layer Fruit Smoothie</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="last-recipes__card">
+                                <div class="last-recipes__picture">
+                                    <a href="index.html" class="last-recipes__image-link">
+                                        <img src="../images/italian/easy-macaroni-salad.jpg" alt="easy macaroni salad"
+                                            width="150" class="last-recipes__image" />
+                                    </a>
+                                </div>
+                                <div class="last-recipes__text">
+                                    <span class="last-recipes__date">november 23, 2012</span>
+                                    <a href="index.html" class="last-recipes__link">
+                                        <h3 class="last-recipes__heading">Easy Macaroni Salad</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-recipes__slides">
+                            <div class="last-recipes__track"></div>
+                            <div class="arrows arrows--gray last-recipes__arrows">
+                                <a href="index.html" class="arrows__link">
+                                    <i class="fas fa-chevron-left arrows__icon"></i>
+                                </a>
+                                <a href="index.html" class="arrows__link arrows__link--active">
+                                    <i class="fas fa-chevron-right arrows__icon"></i>
+                                </a>
+                            </div>
+                            <div class="last-recipes__track"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__recipes">
+                    <div class="home__categories">
+                        <h2 class="home__heading">Categories:</h2>
+                        <ul class="categories">
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link categories__link--active">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Baked Goods</span>
+                                    <span class="categories__count">(7)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Breakfast</span>
+                                    <span class="categories__count">(12)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Cakes</span>
+                                    <span class="categories__count">(6)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Calzone Recipes</span>
+                                    <span class="categories__count">(8)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Casseroles</span>
+                                    <span class="categories__count">(5)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Chocolate</span>
+                                    <span class="categories__count">(11)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Crockpot</span>
+                                    <span class="categories__count">(4)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Desserts</span>
+                                    <span class="categories__count">(5)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Ethnic</span>
+                                    <span class="categories__count">(7)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Fruits, grains/veggies</span>
+                                    <span class="categories__count">(10)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Gourment Sandwiches</span>
+                                    <span class="categories__count">(5)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Holiday Foods</span>
+                                    <span class="categories__count">(7)</span>
+                                </a>
+                            </li>
+                            <li class="categories__item">
+                                <a href="index.html" class="categories__link">
+                                    <i class="fas fa-chevron-right categories__arrow"></i>
+                                    <span class="categories__name">Italian</span>
+                                    <span class="categories__count">(15)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="home__top-recipes recipes">
+                        <h2 class="home__heading">Top 10 Recipes:</h2>
+                        <div class="recipes__card recipes__card--active">
+                            <div class="recipes__picture">
+                                <a href="index.html" class="recipes__image-link">
+                                    <img src="../images/baked-goods/peanut-butter-cookie.jpg" alt="peanut butter cookie"
+                                        width="250" height="188" class="recipes__image" />
+                                    <div class="borders">
+                                        <div class="borders__top"></div>
+                                        <div class="borders__bottom"></div>
+                                        <div class="borders__left"></div>
+                                        <div class="borders__right"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recipes__content">
+                                <h3 class="recipes__heading">
+                                    <a href="index.html" class="recipes__link">Peanut Butter Cookie</a>
+                                </h3>
+                                <p class="recipes__ingredients">yield: 8 servings, natural peanut butter, ground
+                                    flaxseed, brown sugar and cane sugar, coconut oil, vanilla extract, sea salt
+                                </p>
+                                <p class="recipes__text">First, make your flax egg. Combine the flax and water and set
+                                    it aside for 5 minutes to thicken. Then, whisk together the wet ingredients and the
+                                    dry ingredients in separate bowls. Fold the dry ingredients into the wet ingredients
+                                    and stir until everything is well combined. The dough will ...
+                                </p>
+                                <div class="recipes__button">
+                                    <a href="index.html" class="recipes__more recipes__more--capitalize">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card">
+                            <div class="recipes__picture">
+                                <a href="index.html" class="recipes__image-link">
+                                    <img src="../images/baked-goods/perfect-oatmeal-cookies.jpg"
+                                        alt="perfect oatmeal cookies" width="250" height="188" class="recipes__image">
+                                </a>
+                            </div>
+                            <div class="recipes__content">
+                                <h3 class="recipes__heading">
+                                    <a href="index.html" class="recipes__link">Perfect Oatmeal Cookies</a>
+                                </h3>
+                                <p class="recipes__ingredients">yield: 5 servings, all-purpose flour and whole rolled
+                                    oats, baking powder and baking soda, brown sugar, sea salt, cinnamon and vanilla
+                                    extract, coconut oil or melted butter, 1 large egg + an extra egg yolk, raisins,
+                                    walnuts
+                                </p>
+                                <p class="recipes__text">In separate bowls, whisk together the dry and wet ingredients.
+                                    Pour the wet ingredients into the bowl with the dry ingredients and mix until just
+                                    combined. Fold in the oats, raisins, and walnuts. The mixture will be thick! Let the
+                                    dough rest for 20 minutes. Then, roll it into balls. ...
+                                </p>
+                                <div class="recipes__button">
+                                    <a href="index.html" class="recipes__more recipes__more--capitalize">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__button">
+                            <a href="index.html" class="recipes__more">More Recipes</a>
+                        </div>
+                    </div>
+
+                    <div class="home__ads ads">
+                        <a href="index.html" class="ads__image ads__image--weight-loss ads__image--active">
+                            <div class="ads__headings">
+                                <h2 class="ads__heading">Weight Loss Ideas</h2>
+                            </div>
+                            <div class="borders borders--small">
+                                <div class="borders__top"></div>
+                                <div class="borders__bottom"></div>
+                                <div class="borders__left"></div>
+                                <div class="borders__right"></div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="ads__image ads__image--fast-food">
+                            <div class="ads__headings">
+                                <h2 class="ads__heading">Fast Food</h2>
+                                <h3 class="ads__subheading">Yes or No?</h3>
+                            </div>
+                        </a>
+                        <a href="index.html" class="ads__image ads__image--sushi">
+                            <div class="ads__headings">
+                                <h2 class="ads__heading">Taste of Asia</h2>
+                                <h3 class="ads__subheading">Sushi, Thai ...</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="index.html" class="top">
+                    <i class="fas fa-chevron-up top__icon"></i>
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="page__content footer__content">
+                <div class="footer__logo">
+                    <div class="logo">
+                        <a href="index.html" class="logo__link">Tasty Book</a>
+                    </div>
+                    <div class="footer__copyright">&copy; 2013 Privacy Policy</div>
+                </div>
+
+                <div class="footer__lists">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link footer__link--active">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Recipes</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Speciality Cakes and Desserts</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Techniques</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Products and History</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Trend Videos</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Products</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Shop</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Offers</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Cookbooks & Magazines</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html" class="footer__link">
+                                <i class="fas fa-chevron-right footer__arrow"></i>
+                                <span class="footer__text">Downloads & Games</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__newsletter">
+                    <h2 class="footer__heading">Newsletter:</h2>
+                    <form method="post" action="https://www.example.com" class="subscribe">
+                        <input type="email" name="email" placeholder="Enter your email" class="subscribe__email" />
+                        <button class="subscribe__button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/home.js" type="module"></script>
+
 </body>
 
 </html>

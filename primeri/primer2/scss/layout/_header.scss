@@ -1,1 +1,125 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    &__bottom {
+        
+        // change background color for smallest screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_small) {
+            background-color: colors.$header_bottom_background_color;
+        }
+    }
+
+    &__icon {
+        font-size: variables.$header_icon_font_size;
+    }
+
+    &__language {
+        margin-top: variables.$header_language_margin_top;
+        font-size: variables.$header_language_font_size;
+        font-style: italic;
+        color: colors.$header_language_color;
+
+        // set left margin when screen gets smaller
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+            margin-left: variables.$header_language_margin_left;
+        }
+
+        // remove left margin for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_navigation_breakpoint) {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding-top: variables.$header_link_padding_top;
+        padding-bottom: variables.$header_link_padding_top;
+        padding-left: variables.$header_link_padding_left;
+        text-transform: uppercase;
+        color: colors.$header_link_color;
+
+        // change color for smallest screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_small) {
+            color: colors.$header_link_color_small;
+        }
+    }
+
+    &__register {
+        font-size: variables.$header_register_font_size;
+        font-weight: bold;
+    }
+
+    &__login {
+        // align text to the right when screen gets smaller
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+            text-align: right;
+        }
+    }
+
+    &__navigation {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+        padding-top: variables.$header_navigation_padding_top;
+
+        // change display for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_navigation_breakpoint) {
+            display: block;
+        }
+    }
+
+    &__nav {
+        // set flex item properties
+        @include mixins.set_flex_item($flex: variables.$header_nav_flex);
+
+        margin-left: variables.$header_nav_margin_left;
+        margin-right: variables.$header_nav_margin_right;
+
+        // hide navigation when screen gets smaller
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        margin-top: variables.$header_hamburger_margin_top;
+        margin-left: variables.$header_hamburger_margin_left;
+    }
+
+    &__menu {
+        
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+
+            // set flex item properties and flexbox container when screen gets smaller
+            @include mixins.set_flex_item($flex: variables.$header_menu_flex);
+            @include mixins.set_flexbox_container($justify_content: space-between);
+        }
+    }
+
+    &__submenu {
+        // set flexbox container
+        @include mixins.set_flexbox_container($justify_content: space-between);
+
+        // reset submenu display when screen gets smaller
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+            display: block;
+        }
+    }
+
+    &__submenu-list {
+        // hide submenu when screen gets smaller
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+            display: none;
+        }
+    }
+
+    &__top {
+        background: colors.$header_top_background;
+        background: colors.$header_top_background_gradient;
+    }
+}

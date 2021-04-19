@@ -1,0 +1,33 @@
+/* redirect */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.redirect {
+
+    // set flexbox container to not wrap text and arrow
+    // align items on cross axis
+    // set container as inlinesss
+    @include mixins.set_flexbox_container($display: inline-flex, $align_items: center);
+
+    font-weight: bold;
+    font-size: variables.$redirect_font_size;
+    color: colors.$redirect_color;
+
+    &:hover {
+
+        // when link is hovered, underline just text, not arrow
+        .redirect__text {
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        margin-right: variables.$redirect_text_margin_right;
+    }
+
+    &__arrow {
+        font-size: variables.$redirect_arrow_font_size;
+    }
+}

@@ -1,0 +1,29 @@
+/* navigation */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.navigation {
+    
+    // reset list
+    @include mixins.reset_list;
+
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        padding: variables.$navigation_link_padding;
+        font-size: variables.$navigation_link_font_size;
+        color: colors.$navigation_color;
+
+        &:hover {
+            color: colors.$navigation_color_hover;
+        }
+    }
+}

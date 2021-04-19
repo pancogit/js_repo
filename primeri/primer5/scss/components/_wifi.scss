@@ -1,0 +1,24 @@
+/* wifi */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.wifi {
+
+    &__icon {
+        font-size: variables.$wifi_icon_font_size;
+    }
+
+    &__link {
+        // set flexbox and center flex items vertically
+        @include mixins.set_flexbox_container($align_items: center);
+
+        color: colors.$wifi_link_color;
+    }
+
+    &__text {
+        margin-left: variables.$wifi_text_margin;
+        margin-right: variables.$wifi_text_margin;
+    }
+}

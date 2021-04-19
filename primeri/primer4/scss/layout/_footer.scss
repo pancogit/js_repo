@@ -1,1 +1,138 @@
 /* footer */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.footer {
+
+    &__arrow {
+        margin-right: variables.$footer_arrow_margin_right;
+        font-size: variables.$footer_arrow_font_size;
+    }
+
+    &__content {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+        padding: variables.$footer_content_padding;
+        background-color: colors.$footer_content_background_color;
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_lists_breakpoint_medium) {
+            padding-left: variables.$footer_content_padding_medium;
+            padding-right: variables.$footer_content_padding_medium;
+        }
+    }
+
+    &__copyright {
+        margin-top: variables.$footer_copyright_margin_top;
+        margin-left: variables.$footer_copyright_margin_left;
+        font-size: variables.$footer_copyright_font_size;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: colors.$footer_copyright_color;
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$footer_heading_margin_bottom;
+        font-size: variables.$footer_heading_font_size;
+        text-transform: uppercase;
+        color: colors.$footer_heading_color;
+    }
+
+    &__item {
+        margin-bottom: variables.$footer_item_margin_bottom;
+    }
+
+    &__link {
+        // align vertically with flexbox
+        @include mixins.set_flexbox_container($display: inline-flex, $align_items: center);
+
+        color: colors.$footer_link_color;
+
+        &:hover {
+            .footer__text {
+                text-decoration: underline;
+            }
+        }
+
+        &--active {
+            color: colors.$footer_link_color_active;
+            cursor: auto;
+
+            // disable clicking on active link
+            pointer-events: none;
+
+            // don't underline active link when hovered
+            &:hover {
+                .footer__text {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__list {
+        @include mixins.set_flex_item($flex: variables.$footer_list_flex);
+        @include mixins.reset_list;
+
+        // set left margin for all except first
+        + .footer__list {
+            margin-left: variables.$footer_list_margin_left;
+        }
+    }
+
+    &__lists {
+        @include mixins.set_flex_item($flex: variables.$footer_lists_flex);
+
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+        margin: variables.$footer_lists_margin;
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_lists_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$footer_lists_flex_medium);
+
+            margin-left: 0;
+            margin-right: variables.$footer_lists_margin_right;
+        }
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_lists_breakpoint_small) {
+            @include mixins.set_flex_item($flex: variables.$footer_lists_flex_small);
+
+            margin-right: 0;
+            margin-bottom: variables.$footer_lists_margin_bottom;
+        }
+    }
+
+    &__logo {
+        @include mixins.set_flex_item($flex: variables.$footer_logo_flex);
+
+        // set flexbox
+        @include mixins.set_flexbox_container();
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_lists_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$footer_logo_flex_medium);
+
+            margin-bottom: variables.$footer_logo_margin_bottom;
+        }
+    }
+
+    &__newsletter {
+        @include mixins.set_flex_item($flex: variables.$footer_newsletter_flex);
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_lists_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$footer_newsletter_flex_medium);
+        }
+    }
+
+    &__text {
+        
+    }
+}

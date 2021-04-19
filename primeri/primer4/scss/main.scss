@@ -1,19 +1,31 @@
 // include all sass files
 
-// utilities
-@use 'utilities/colors';
-@use 'utilities/variables';
-@use 'utilities/functions';
-@use 'utilities/mixins/mixins';
-
 // base 
 @use 'base/reset';
 
 // components
-@use 'components/button';
+@use 'components/page';
+@use 'components/search';
+@use 'components/arrows';
+@use 'components/navigation';
+@use 'components/dropdown';
+@use 'components/borders';
+@use 'components/last-recipes';
+@use 'components/categories';
+@use 'components/recipes';
+@use 'components/ads';
+@use 'components/top';
 @use 'components/logo';
+@use 'components/subscribe';
 
 // layout
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/home';
+
+// utilities
+@use 'utilities/colors';
+@use 'utilities/variables';
+@use 'utilities/functions';
+@use 'utilities/mixins/mixins';
+@use 'utilities/utils';

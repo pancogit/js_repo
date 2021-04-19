@@ -1,0 +1,33 @@
+/* dropdown */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.dropdown {
+
+    &__icon {
+        margin-right: variables.$dropdown_icon_margin_right;
+        font-size: variables.$dropdown_icon_font_size;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        color: colors.$dropdown_link_color;
+
+        &:hover {
+            color: colors.$dropdown_link_color_hover;
+        }
+    }
+
+    &__list {
+        display: none;
+        padding-left: variables.$dropdown_list_padding_left;
+    }
+
+    &__text {
+
+    }
+}

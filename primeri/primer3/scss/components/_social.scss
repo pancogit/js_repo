@@ -1,0 +1,26 @@
+/* social */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.social {
+
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+    &__icon {
+        font-size: variables.$social_icon_font_size;
+    }
+
+    &__link {
+        display: inline-block;
+        margin-right: variables.$social_link_margin_right;
+        margin-bottom: variables.$social_link_margin_bottom;
+        color: colors.$social_link_color;
+
+        &:hover {
+            color: colors.$social_link_color_hover;
+        }
+    }
+}

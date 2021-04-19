@@ -1,0 +1,66 @@
+/* numbers */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.numbers {
+
+    // set flexbox
+    @include mixins.set_flexbox_container();
+
+    // spread flex items in column
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+        flex-direction: column;
+    }
+
+    // spread flex items in row
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+        flex-direction: row;
+    }
+
+    // spread flex items in column
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
+        flex-direction: column;
+    }
+
+    &__box {
+
+        @include mixins.numbers_box_style;
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+            @include mixins.numbers_box_column_style;
+        }
+
+        // spread flex items in row
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.numbers_box_style;
+        }
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
+            @include mixins.numbers_box_column_style;
+        }
+    }
+
+    .numbers__box--active {
+
+        @include mixins.numbers_box_active_style;
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+            @include mixins.numbers_box_active_column_style;
+        }
+
+        // spread flex items in row
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.numbers_box_active_style;
+        }
+
+        // spread flex items in column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
+            @include mixins.numbers_box_active_column_style;
+        }
+    }
+}

@@ -1,19 +1,35 @@
 // include all sass files
 
-// utilities
-@use 'utilities/colors';
-@use 'utilities/variables';
-@use 'utilities/functions';
-@use 'utilities/mixins/mixins';
-
 // base 
 @use 'base/reset';
 
 // components
-@use 'components/button';
+@use 'components/wrapper';
 @use 'components/logo';
+@use 'components/navigation';
+@use 'components/hamburger';
+@use 'components/submenu';
+@use 'components/slides';
+@use 'components/card';
+@use 'components/article';
+@use 'components/redirect';
+@use 'components/social';
+@use 'components/submit';
+@use 'components/article-block';
 
 // layout
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/home';
+@use 'layout/articles';
+@use 'layout/article-page';
+
+// mobile menu
+@use 'components/mobile-menu';
+
+// utilities
+@use 'utilities/colors';
+@use 'utilities/variables';
+@use 'utilities/functions';
+@use 'utilities/mixins/mixins';
+@use 'utilities/utils';

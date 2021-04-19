@@ -1,0 +1,8 @@
+// list
+
+// reset html list, remove bullets, paddings, margins
+@mixin reset_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

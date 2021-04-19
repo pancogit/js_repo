@@ -1,12 +1,114 @@
 // colors
 
+// reset
+$body_background_color: black;
+
+// page
 
 // button 
 
 // logo
+$logo_link_color: white;
+
+// login
+$login_box_shadow: 0px 1px 4px 0px #5f4c4c;
+$login_content_border_color: #c7c7c7;
+$login_user_background_color: #a2a1a1;
+$login_logout_color: #026701;
+$login_logout_color_hover: green;
+$login_name_color: black;
+
+// navigation
+$navigation_link_color: #026701;
+$navigation_link_color_hover: black;
+$navigation_link_color_small: white;
+$navigation_background_color_small: #717171;
+$navigation_close_link_color: white;
+$navigation_close_link_color_hover: black;
+
+// dropdown
+$dropdown_item_background_color: #026701;
+$dropdown_item_background_color_hover: white;
+$dropdown_link_color: white;
+$dropdown_link_color_hover: #026701;
+$dropdown_link_color_hover_small: black;
+
+// hamburger
+$hamburger_link_color: #026701;
+$hamburger_link_color_hover: black;
+
+// card
+$card_background_color: white;
+$card_background_color_hover: rgb(255 255 255 / 0.75);
+$card_info_color: black;
+
+// badge
+$badge_background_color: white;
+$badge_header_border_color: #dadada;
+
+// weather
+$weather_button_background_color: white;
+$weather_button_border_color: silver;
+$weather_button_gradient_background_fallback: rgb(157,157,157);
+$weather_button_gradient_background: linear-gradient(180deg, 
+                                                   rgba(157,157,157,1) 0%, 
+                                                   rgba(193,192,192,1) 20%, 
+                                                   rgba(230,230,230,1) 100%);
+$weather_location_color: #679800;
+$weather_message_color: #5d5d5d;
+$weather_select_border_color: silver;
+$weather_track_color: white;
+$weather_track_background_color: #85c008;
+
+// article
+$article_date_color: #5d5d5d;
+$article_link_color: #187317;
+
+// comment
+$comment_cancel_color: #026701;
+$comment_cancel_color_hover: black;
+$comment_date_color: #737373;
+$comment_input_border_color: #cecdcd;
+$comment_input_border_color_hover: green;
+$comment_input_border_color_error: red;
+$comment_input_placeholder_color: rgb(167, 164, 164);
+$comment_link_color: #026701;
+$comment_submit_background_color: #026701;
+$comment_submit_background_color_hover: #6f9b0f;
+$comment_submit_color: white;
+$comment_message_color_error: red;
+$comment_like_link_already_liked_color: #737373;
+$comment_person_list_background_color: black;
+$comment_person_list_empty_color: #737373;
+$comment_person_name_color: white;
+
+// social
+$social_circle_background_color: white;
+$social_circle_background_color_hover: black;
+$social_icon_color: black;
+$social_icon_color_hover: white;
+
+// subscribe
+$subscribe_submit_background_color: #026701;
+$subscribe_submit_background_color_hover: green;
+$subscribe_submit_color: white;
+$subscribe_email_border_color: white;
+$subscribe_email_error_border_color: red;
+$subscribe_email_good_border_color: #0c9e0b;
+$subscribe_message_good_color: white;
 
 // header 
+$header_top_background_color: #026701;
+$header_link_color: white;
+$header_link_color_hover: silver;
+$header_circle_background_color: #5c5c5c;
+$header_bottom_background_color: white;
 
 // footer
+$footer_color: white;
+$footer_link: white;
 
 // home
+$home_event_color: #046359;
+$home_events_box_shadow: 0px 2px 3px #424242;
+$home_news_background_color: rgba(255, 255, 255, 0.8);

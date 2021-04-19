@@ -1,0 +1,72 @@
+/* slides */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.slides {
+
+    // set height of slides
+    height: variables.$slides_height;
+
+    // spread background image for slides with good proportions
+    background-image: variables.$slides_background_image;
+    background-repeat: no-repeat;
+    background-size: cover;    // keep good proportions
+
+    // change height of slides when layout of cards is changed
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+        height: variables.$slides_height_smaller;
+    }
+
+    // set smaller height for medium screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_medium) {
+        height: variables.$slides_height_medium;
+    }
+
+    // hide slides for smallest screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_small) {
+        display: none;
+    }
+
+    &__content {
+        // spread content to full height
+        height: variables.$slides_content_height;
+
+        // set flexbox container to horizontally spread and vertically center flex items
+        @include mixins.set_flexbox_container($justify_content: space-between, $align_items: center);
+    }
+
+    &__control {
+        padding: variables.$slides_control_padding;
+        background-color: colors.$slides_control_background_color;
+        border-radius: variables.$slides_control_border_radius;
+
+        &:hover {
+            background-color: colors.$slides_control_background_color_hover;
+        }
+
+        // for medium screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_medium) {
+            padding: variables.$slides_control_padding_medium;
+        }
+        
+        &--left {
+
+        }
+
+        &--right {
+
+        }
+    }
+
+    &__icon {
+        font-size: variables.$slides_icon_font_size;
+        color: colors.$slides_control_color;
+
+        // for medium screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$slides_breakpoint_medium) {
+            font-size: variables.$slides_icon_font_size_medium;
+        }
+    }
+}

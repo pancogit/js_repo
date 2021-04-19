@@ -1,1 +1,28 @@
 /* logo */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.logo {
+
+    text-align: center;
+
+    &--margins {
+        margin-top: variables.$logo_margins_margin_top;
+        margin-bottom: variables.$logo_margins_margin_bottom;
+
+        // reset margins for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_navigation_breakpoint) {
+            margin: auto;
+        }
+    }
+
+    &__image {
+
+    }
+    
+    &__link {
+        display: inline-block;
+    }
+}

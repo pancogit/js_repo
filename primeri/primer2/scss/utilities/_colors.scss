@@ -1,12 +1,126 @@
 // colors
 
 
-// button 
+// wrapper
 
-// logo
+// logo 
+
+// navigation
+$navigation_color: #808080;
+$navigation_color_hover: #615e5e;
+
+// hamburger
+$hamburger_icon_color: #676767;
+$hamburger_icon_color_hover: #464242;
+
+// submenu
+$submenu_link_color: #5e5d5d;
+$submenu_link_color_hover: #757575;
+
+// slides
+$slides_control_background_color: rgb(0 0 0 / 70%);
+$slides_control_background_color_hover: rgb(0 0 0 / 80%);
+$slides_control_color: white;
+
+// card
+$card_background_color: white;
+$card_box_shadow: 0px 4px 5px 0px silver;
+$card_button_background_color: #8ec33b;
+$card_button_background_color_hover: #7cad2e;
+$card_button_color: white;
+$card_button_border_color: #8bb273;
+$card_title_l1_color: #7b7272;
+$card_title_l2_color: #4e4d4d;
+
+// article
+$article_button_background_color: white;
+$article_button_border_color: rgb(255 255 255 / 30%);
+$article_button_active_background_color: #8ec33b;
+$article_button_border_top_color: rgb(94 136 28 / 10%);
+$article_navigation_color_over: #31690b;
+$article_active_background_color: #82b335;
+$article_buttons_background_color: #efefef;
+$article_heading_color: #413f3f;
+$article_navigation_color: #a1ce83;
+$article_read_more_color: #008800;
+$article_subheading_color: #716f6f;
+$article_text_color: #615e5e;
+
+// redirect
+$redirect_color: #555353;
+
+// social
+$social_icon_color: white;
+$social_circle_background_color: black;
+$social_circle_background_color_pinterest: #ab4e23;
+$social_circle_background_color_pinterest_hover: #c25c2d;
+$social_circle_background_color_twitter: #54bf98;
+$social_circle_background_color_twitter_hover: #60d1a8;
+$social_circle_background_color_facebook: #1e706d;
+$social_circle_background_color_facebook_hover: #288a86;
+$social_circle_background_color_amazon: #c34923;
+$social_circle_background_color_amazon_hover: #d8542c;
+$social_circle_background_color_linkedin: #51a6a2;
+$social_circle_background_color_linkedin_hover: #61bdb8;
+$social_circle_background_color_google: #263519;
+$social_circle_background_color_google_hover: #2f3f21;
+
+// submit
+$submit_button_background_color: #3e6319;
+$submit_button_color: white;
+$submit_heading_color: #1e330a;
+$submit_input_background_color: #50901c;
+$submit_input_color: #d1ffae;
+$submit_input_border_color: #50901c;
+$submit_input_border_color_error: #9a0606;
+$submit_input_placeholder_color: white;
+$submit_error_color: #9a0606;
+
+// article-block
+$article_block_heading_color: #716f6f;
+$article_block_read_more_color: #008800;
+$article_block_text_color: #615e5e;
 
 // header 
+$header_top_background: rgb(255,255,255);
+$header_top_background_gradient: linear-gradient(180deg,
+                                               rgba(255,255,255,1) 0%, 
+                                               rgba(253,253,253,1) 82%, 
+                                               rgba(246,247,246,1) 92%, 
+                                               rgba(241,243,241,1) 98%, 
+                                               rgba(241,240,241,1) 100%);
+$header_language_color: #8d8c8c;
+$header_link_color: #5f5f5f;
+$header_link_color_small: white;
+$header_bottom_background_color: #66a91d;
 
 // footer
+$footer_copy_background_color: rgb(51 113 20 / 80%);
+$footer_copyright_color: white;
+$footer_heading_color: white;
+$footer_join_color: #1e330a;
+$footer_link_color: #a2c785;
+$footer_terms_color: #a2c785;
+$footer_lists_background_color: rgb(65 127 16 / 80%);
+$footer_top_background: rgb(26,47,6);
+$footer_top_background_gradient: linear-gradient(180deg, rgba(26,47,6,0.95) 0%, rgba(96,175,21,0.8) 82%);
+$footer_top_border_color: #247b24;
+$footer_trademark_color: white;
 
 // home
+$home_articles_border_top_color: #dadada;
+
+// articles
+$articles_heading_color: #413f3f;
+
+// article-page
+$article_page_heading_color: #413f3f;
+$article_page_text_color: #615e5e;
+
+// mobile-menu
+$mobile_menu_background_color: #66a91d;
+$mobile_menu_close_link_color: white;
+$mobile_menu_navigation_link_color: white;
+$mobile_menu_submenu_link_color: white;
+$mobile_menu_submenu_link_background_color_hover: white;
+$mobile_menu_submenu_link_color_hover: #66a91d;

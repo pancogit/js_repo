@@ -1,0 +1,90 @@
+/* mobile menu */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.mobile-menu {
+
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: variables.$mobile_menu_right;
+    background-color: colors.$mobile_menu_background_color;
+
+    // for mobile menu use overflow because menu content can be too large for screen to fit
+    overflow: auto;
+
+    &__close {
+        display: block;
+        text-align: right;
+    }
+
+    &__close-link {
+        display: inline-block;
+        margin: variables.$mobile_menu_close_link_margin;
+        margin-right: variables.$mobile_menu_close_link_margin_right;
+        color: colors.$mobile_menu_close_link_color;
+        font-size: variables.$mobile_menu_close_link_font_size;
+    }
+
+    &__close-icon {
+
+    }
+
+    &__navigation {
+        @include mixins.reset_list;
+    }
+
+    &__navigation-item {
+
+    }
+
+    &__navigation-link {
+        // set flexbox container to spread dropdown icon
+        @include mixins.set_flexbox_container($justify_content: space-between);
+
+        padding: variables.$mobile_menu_navigation_link_padding;
+        color: colors.$mobile_menu_navigation_link_color;
+        font-weight: bold;
+    }
+
+    &__navigation-text {
+
+    }
+
+    &__navigation-dropdown {
+
+    }
+
+    &__submenu {
+        @include mixins.reset_list;
+
+        // hide by default
+        display: none;
+
+        // show submenu only if it's active
+        &--active {
+            display: block;
+        }
+    }
+
+    &__submenu-item {
+
+    }
+
+    &__submenu-link {
+        display: block;
+        padding: variables.$mobile_menu_submenu_link_padding;
+        padding-left: variables.$mobile_menu_submenu_link_padding_left;
+        color: colors.$mobile_menu_submenu_link_color;
+        font-weight: bold;
+
+        &:hover {
+            background-color: colors.$mobile_menu_submenu_link_background_color_hover;
+            color: colors.$mobile_menu_submenu_link_color_hover;
+        }
+    }
+}

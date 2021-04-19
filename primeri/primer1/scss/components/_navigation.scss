@@ -1,0 +1,112 @@
+/* navigation */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.navigation {
+
+    // set navigation for hamburger menu
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+
+        // set new styles for hamburger menu
+        // for hamburger menu, don't use flexbox, use simple block
+        display: block;
+
+        // hide navigation when hamburger menu is shown
+        // when navigation is clicked and shown, then display will be block
+        display: none;
+
+        // set fixed position for hamburger menu, to stretch across the screen
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        // set z-index for content stacking
+        z-index: variables.$navigation_z_index;
+
+        background-color: colors.$navigation_background_color_small;
+
+        // set overflow for mobile menu to see all content
+        overflow: auto;
+    }
+
+    // set navigation for hamburger menu for smallest screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint_small) {
+        right: 0;
+    }
+
+    // set flexbox
+    @include mixins.set_flexbox_container($justify_content: space-between);
+
+    &__close {
+        display: none;
+        text-align: right;
+
+        // show close button for hamburger menu
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            display: block;
+        }
+    }
+
+    &__close-link {
+        display: inline-block;
+        margin: variables.$navigation_close_link_margin;
+        color: colors.$navigation_close_link_color;
+        font-size: variables.$navigation_close_link_font_size;
+
+        &:hover {
+            color: colors.$navigation_close_link_color_hover;
+        }
+    }
+
+    &__close-times {
+
+    }
+
+    &__icon {
+
+    }
+
+    &__item {
+        // set flexbox container to align menu items vertically
+        @include mixins.set_flexbox_container($flex_direction: column);
+    }
+
+    &__link {
+        // set flexbox container to align menu items vertically
+        @include mixins.set_flexbox_container($align_items: center);
+
+        // expand item to full height
+        @include mixins.set_flex_item($flex: variables.$navigation_link_flex);
+
+        padding: variables.$navigation_link_padding;
+        text-transform: uppercase;
+        color: colors.$navigation_link_color;
+        font-size: variables.$navigation_link_font_size;
+        font-weight: bold;
+
+        &:hover {
+            color: colors.$navigation_link_color_hover;
+        }
+
+        // set navigation for hamburger menu
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            color: colors.$navigation_link_color_small;
+        }
+    }
+
+    &__list {
+        // reset list
+        @include mixins.reset_list;
+
+        // set flexbox
+        @include mixins.set_flexbox_container();
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            // set new styles for hamburger menu
+            display: block;
+        }
+    }
+}

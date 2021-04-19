@@ -1,0 +1,31 @@
+/* articles */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.articles {
+
+    padding-top: variables.$articles_padding_top;
+    padding-bottom: variables.$articles_padding_bottom;
+
+    &__content {
+        margin-bottom: variables.$articles_content_margin_bottom;
+
+        // use css grid layout for articles
+        // use responsive css grid layout with given minimum article size
+        @include mixins.set_grid_container(
+            $grid_template_columns: repeat(auto-fit, minmax(variables.$articles_content_grid_min_width, 
+                                                            variables.$articles_content_grid_max_width)),
+            $gap: variables.$articles_content_gap
+        );
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$articles_heading_margin_bottom;
+        font-weight: normal;
+        font-size: variables.$articles_heading_font_size;
+        color: colors.$articles_heading_color;
+    }
+}

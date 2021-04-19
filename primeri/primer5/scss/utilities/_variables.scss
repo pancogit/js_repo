@@ -1,18 +1,193 @@
 // variables 
 
 
+// reset 
+$body_font_family: Arial, Helvetica, sans-serif;
+
 // media screen
 $media_screen_small: 20rem;
 $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// page
+$page_padding: 0 1rem;
+$page_min_width: 20rem;
+$page_center_modifier_margin: 10rem auto;
+$page_center_modifier_margin_medium: 5rem auto;
+$page_center_padding: 3rem 0;
+$page_center_padding_medium: 1.5rem 0;
+$page_center_border_radius: 6rem;
+$page_aside_flex: 15rem;
+$page_aside_flex_medium: 5rem;
+$page_aside_breakpoint: 36rem;
+$page_content_flex: 80rem;
 
-// logo
+// circle
+$circle_dimension: 4rem;
+$circle_dimension_small: 1rem;
+$circle_border_width: 0.2rem;
+$circle_border_radius: 50%;
+$circle_breakpoint: 51rem;
 
-// header 
+// address
+$address_zip_padding: 1rem;
+$address_zip_font_size: 1rem;
 
-// footer
+// wifi
+$wifi_icon_font_size: 0.8rem;
+$wifi_text_margin: 0.35rem;
+
+// battery
+$battery_full_wh: 100%;
+$battery_content_padding: 0.05rem;
+$battery_content_width: 80%;
+$battery_content_border_radius: 0.25rem;
+$battery_content_border_width: 0.15rem;
+$battery_triangle_border_width: 0.2rem;
+$battery_level_border_radius: 0.1rem;
+$battery_crop_width: 0.08rem;
+$battery_wrapper_margin_left: 0.35rem;
+$battery_wrapper_width: 2.2rem;
+$battery_wrapper_height: 0.5rem;
+
+// navigation
+$navigation_heading_padding: 0.6rem;
+$navigation_heading_font_size: 0.7rem;
+$navigation_icon_font_size: 1.8rem;
+$navigation_icon_border_radius: 50%;
+$navigation_link_padding: 1.1rem 0.8rem;
+$navigation_link_border_width: 0.2rem;
+
+
+// choice
+$choice_answer_flex: 1;
+$choice_answer_padding: 1rem;
+
+// list
+$list_padding: 1rem;
+$list_font_size: 1rem;
+
+// numbers
+$numbers_box_flex: 1;
+$numbers_box_padding: 1rem;
+$numbers_breakpoint_large: 77rem;
+
+// checkbox
+$checkbox_input_margin_right: 0.35rem;
+$checkbox_row_margin_bottom: 0.5rem;
+$checkbox_row_other_margin_top: 1rem;
+$checkbox_row_other_area_flex: 100%;
+
+// measure
+$measure_grid_template_columns: min-content 2.6rem min-content 1fr;
+$measure_margin_right: 2rem;
+$measure_number_margin: 0 0.4rem;
+$measure_sign_padding: 0.3rem 0.8rem;
+$measure_sign_border_width: 0.1rem;
+$measure_sign_border_radius: 0.25rem;
+$measure_unit_margin_left: 0.8rem;
+
+// calculation
+$calculation_content_padding: 1rem;
+$calculation_content_border_radius: 0.3rem;
+
+// pharmacy
+$pharmacy_quantity_padding: 1rem;
+$pharmacy_quantity_flex: 1;
+$pharmacy_quantity_margin_right: 0.5rem;
+$pharmacy_license_font_size: 1rem;
+
+// score
+$score_padding: 0.73rem 0.7rem;
+$score_padding_small: 0.73rem 1rem;
+$score_button_padding: 0.6rem 1rem;
+$score_button_border_radius: 0.35rem;
+$score_button_border_width: 0.12rem;
+$score_icon_margin_right: 0.6rem;
+$score_icon_margin: 0.6rem;
+$score_icon_font_size: 1.1rem;
+$score_content_flex: 1;
+$score_content_margin: 10%;
+$score_content_margin_small: 7%;
+$score_level_width: 0%;
+$score_level_height: 100%;
+$score_level_border_radius: 0.5rem;
+$score_percentage_font_size: 0.75rem;
+$score_progress_margin_top: 0.6rem;
+$score_progress_height: 0.4rem;
+$score_progress_border_radius: 0.5rem;
+$score_text_font_size: 0.9rem;
+
+// submit
+$submit_z_index: 10000;
+$submit_window_width: 20rem;
+$submit_window_height: 12rem;
+$submit_window_border_radius: 0.25rem;
+$submit_heading_padding: 0.5rem 1rem;
+$submit_heading_font_size: 1.1rem;
+$submit_text_flex: 1;
+$submit_text_padding: 1rem;
+$submit_text_font_size: 1.1rem;
+$submit_footer_padding: 0.5rem 1rem;
+$submit_button_padding: 0.3rem 0.7rem;
+$submit_button_font_size: 0.95rem;
+$submit_button_border_width: 0.1rem;
+$submit_button_border_radius: 0.2rem;
+
+// header
+$header_padding: 0.5rem;
+$header_padding_small: 1rem;
+$header_font_size: 0.95rem;
+$header_birthday_margin: 0 0.75rem;
+$header_center_margin: 3rem;
+$header_center_margin_top: 1rem;
+$header_center_flex_full: 100%;
+$header_center_order: 1;
+$header_heading_margin_top: 0.7rem;
+$header_heading_margin_bottom: 0.5rem;
+$header_heading_font_size: 1.7rem;
+$header_link_margin_right: 0.15rem;
+$header_user_margin: 0.4rem;
+$header_info_margin_top: 1.5rem;
 
 // home
+$home_breakpoint: 62rem;
+$home_border_width: 0.1rem;
+$home_aside_flex: 0 0 20rem;
+$home_aside_flex_full: 100%;
+$home_wrapper_flex: 1;
+$home_date_border_radius: 0.35rem;
+$home_area_height: 3.5rem;
+$home_area_font_size: 1rem;
+$home_col_1_flex: 100%;
+$home_col_2_flex: 40%;
+$home_col_2_margin_left: 2rem;
+$home_col_2_margin_top: 1.5rem;
+$home_col_2_breakpoint_large: 88rem;
+$home_col_2_breakpoint_medium: 59rem;
+$home_col_2_breakpoint_middle: 47rem;
+$home_col_3_flex: 30%;
+$home_col_3_flex_full: 100%;
+$home_col_3_margin_left: 2rem;
+$home_col_3_margin_top: 1.5rem;
+$home_col_3_breakpoint_large: 103rem;
+$home_col_3_breakpoint_medium: 81.5rem;
+$home_col_3_breakpoint_big: 54rem;
+$home_col_3_breakpoint_small: 43rem;
+$home_col_wrapper_flex: 1;
+$home_content_padding: 3rem;
+$home_content_padding_small: 3rem 1rem 1rem;
+$home_date_font_size: 1rem;
+$home_input_padding: 1rem;
+$home_label_margin_right: 1rem;
+$home_question_margin_bottom: 0.8rem;
+$home_question_font_size: 0.8rem;
+$home_question_line_height: 1.1rem;
+$home_radio_margin_right: 0.5rem;
+$home_row_margin_bottom: 1.5rem;
+$home_heading_margin_bottom: 1.8rem;
+$home_weight_flex: 1;
+$home_height_measure_margin_top: 0.7rem;
+$home_height_breakpoint_large: 106rem;
+$home_height_breakpoint_small: 30rem;

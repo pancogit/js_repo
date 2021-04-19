@@ -1,19 +1,32 @@
 // include all sass files
 
+// base 
+@use 'base/reset';
+
+// components
+@use 'components/page';
+@use 'components/circle';
+@use 'components/wifi';
+@use 'components/battery';
+@use 'components/navigation';
+@use 'components/choice';
+@use 'components/list';
+@use 'components/numbers';
+@use 'components/checkbox';
+@use 'components/measure';
+@use 'components/calculation';
+@use 'components/pharmacy';
+@use 'components/score';
+@use 'components/address';
+@use 'components/submit';
+
+// layout
+@use 'layout/header';
+@use 'layout/home';
+
 // utilities
 @use 'utilities/colors';
 @use 'utilities/variables';
 @use 'utilities/functions';
 @use 'utilities/mixins/mixins';
-
-// base 
-@use 'base/reset';
-
-// components
-@use 'components/button';
-@use 'components/logo';
-
-// layout
-@use 'layout/header';
-@use 'layout/footer';
-@use 'layout/home';
+@use 'utilities/utils';

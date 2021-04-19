@@ -1,0 +1,131 @@
+/* recipes */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.recipes {
+
+    &__card {
+        margin-bottom: variables.$recipes_card_margin_bottom;
+        padding-bottom: variables.$recipes_card_padding_bottom;
+
+        // float recipes card to the left and set full width to skip clearing floats
+        float: left;
+        width: variables.$recipes_card_width;
+
+        // set bottom border
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$recipes_card_border_width,
+                                    $bottom-color: colors.$recipes_card_border_color);
+
+        // disable active cards
+        &--active {
+            .recipes__link, .recipes__ingredients {
+                color: colors.$recipes_card_border_color_active;
+            }
+
+            .recipes__link:hover {
+                color: colors.$recipes_card_border_color_active;
+            }
+
+            .recipes__image-link, .recipes__link {
+                cursor: auto;
+            }
+        }
+    }
+
+    &__content {
+
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$recipes_heading_margin_bottom;
+        font-size: variables.$recipes_heading_font_size;
+    }
+
+    &__image {
+        // responsive image
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$recipes_image_breakpoint) {
+            width: variables.$recipes_image_width;
+            height: auto;
+        }
+    }
+
+    &__image-link {
+        display: block;
+
+        // for active cards, use relative positioning as container for borders
+        position: relative;
+    }
+
+    &__ingredients {
+        margin-top: 0;
+        margin-bottom: variables.$recipes_ingredients_margin_bottom;
+        color: colors.$recipes_ingredients_color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: variables.$recipes_ingredients_font_size;
+        line-height: variables.$recipes_ingredients_line_height;
+    }
+
+    &__link {
+        display: inline;
+
+        color: colors.$recipes_link_color;
+
+        &:hover {
+            color: colors.$recipes_link_color_hover;
+        }
+    }
+
+    &__button {
+        text-align: right;
+
+        // clear floats from upper cards
+        clear: left;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$recipes_image_breakpoint) {
+            text-align: left;
+        }
+    }
+
+    &__more {
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: variables.$recipes_more_font_size;
+        color: colors.$recipes_more_color;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--capitalize {
+            text-transform: capitalize;
+        }
+    }
+
+    &__picture {
+        margin-right: variables.$recipes_picture_margin_right;
+
+        // float picture wrapper to the left to allow text to wrap around
+        float: left;
+
+        // remove floats and right margin and set bottom margin
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$recipes_image_breakpoint) {
+            float: none;
+            margin-right: 0;
+            margin-bottom: variables.$recipes_picture_margin_bottom;
+        }
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: variables.$recipes_text_margin_bottom;
+        line-height: variables.$recipes_text_line_height;
+        color: colors.$recipes_text_color;
+    }
+}

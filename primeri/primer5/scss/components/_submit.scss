@@ -1,0 +1,97 @@
+// submit
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.submit {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: variables.$submit_z_index;
+    background-color: colors.$submit_background_color;
+
+    // set flexbox container to center window on both axis
+    @include mixins.set_flexbox_container($justify_content: center, $align_items: center);
+
+    &__window {
+        // set flexbox container to spread flex items to full height
+        @include mixins.set_flexbox_container($flex_direction: column);
+
+        width: variables.$submit_window_width;
+        height: variables.$submit_window_height;
+        background-color: colors.$submit_window_background_color;
+        border-radius: variables.$submit_window_border_radius;
+    }
+
+    &__heading {
+        margin: 0;
+        padding: variables.$submit_heading_padding;
+        background-color: colors.$submit_heading_background_color;
+        color: colors.$submit_heading_color;
+        border-top-left-radius: variables.$submit_window_border_radius;
+        border-top-right-radius: variables.$submit_window_border_radius;
+        text-align: center;
+        font-size: variables.$submit_heading_font_size;
+    }
+
+    &__text {
+        // grow flex item to the remaining space
+        @include mixins.set_flex_item($flex: variables.$submit_text_flex);
+
+        // set flexbox container
+        @include mixins.set_flexbox_container($justify_content: center, $align_items: center);
+
+        padding: variables.$submit_text_padding;
+        font-size: variables.$submit_text_font_size;
+        font-weight: bold;
+        color: colors.$submit_text_color;
+        text-align: center;
+    }
+
+    &__footer {
+        // spread flex items with flexbox
+        @include mixins.set_flexbox_container($justify_content: space-between);
+
+        padding: variables.$submit_footer_padding;
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        padding: variables.$submit_button_padding;
+        font-weight: bold;
+        font-size: variables.$submit_button_font_size;
+        cursor: pointer;
+        outline: none;
+
+        @include mixins.set_borders($style: solid, $width: variables.$submit_button_border_width);
+        border-radius: variables.$submit_button_border_radius;
+
+        &--submit {
+            background-color: colors.$submit_button_submit_background_color;
+            border-color: colors.$submit_button_submit_border_color;
+            color: colors.$submit_button_submit_color;
+
+            &:hover {
+                background-color: colors.$submit_button_submit_background_color_hover;
+                border-color: colors.$submit_button_submit_border_color_hover;
+            }
+        }
+
+        &--close {
+            background-color: colors.$submit_button_close_background_color;
+            border-color: colors.$submit_button_close_border_color;
+            color: colors.$submit_button_close_color;
+
+            &:hover {
+                background-color: colors.$submit_button_close_background_color_hover;
+                border-color: colors.$submit_button_close_border_color_hover;
+            }
+        }
+    }
+}

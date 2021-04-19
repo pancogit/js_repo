@@ -1,1 +1,271 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+
+    // set flexbox
+    @include mixins.set_flexbox_container();
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$home_border_width,
+                                $color: colors.$home_border_color);
+
+
+    // one column layout
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+        flex-wrap: wrap;
+    }
+
+    // remove borders when there are no paddings
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        border: none;
+    }
+
+    &__area {
+        height: variables.$home_area_height;
+        font-size: variables.$home_area_font_size;
+
+        // don't resize text area
+        resize: none;
+
+        font-family: variables.$body_font_family;
+    }
+
+    &__aside {
+        // don't grow or shrink, just fix flex basis to constant
+        @include mixins.set_flex_item($flex: variables.$home_aside_flex);
+
+        // set borders
+        @include mixins.set_borders($right_style: solid,
+                                    $right_width: variables.$home_border_width,
+                                    $right_color: colors.$home_border_color);
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$home_aside_flex_full);
+            
+            border-right: none;
+        }
+    }
+
+    &__col-1, &__col-2, &__col-3 {
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+    }
+
+    &__col-1 {
+        // spread flex item to full width
+        @include mixins.set_flex_item($flex: variables.$home_col_1_flex);
+    }
+
+    &__col-2 {
+        @include mixins.home_col_2;
+
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_large) {
+            @include mixins.home_col_2_to_1;
+        }
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.home_col_2;
+        }
+
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_medium) {
+            @include mixins.home_col_2_to_1;
+        }
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            @include mixins.home_col_2;
+        }
+
+        // spread two columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_middle) {
+            @include mixins.home_col_2_to_1;
+        }
+
+        // block modifier for height and weight
+        &--height-weight {
+            // spread two columns to one column layout
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+                @include mixins.home_col_2_to_1;
+            }
+        }
+    }
+
+    &__col-3 {
+        @include mixins.home_col_3;
+
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_large) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_medium) {
+            @include mixins.home_col_3_to_1;
+        }
+
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_breakpoint) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_big) {
+            @include mixins.home_col_3_to_1;
+        }
+
+        // spread three columns to two columns layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+            @include mixins.home_col_3_to_2;
+        }
+
+        // spread three columns to one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_3_breakpoint_small) {
+            @include mixins.home_col_3_to_1;
+        }
+    }
+
+    &__col-wrapper {
+        @include mixins.set_flexbox_container();
+
+        &--center {
+            @include mixins.set_flex_item($flex: variables.$home_col_wrapper_flex);
+
+            align-items: center;
+        }
+    }
+
+    &__height {
+        // two columns
+        @include mixins.set_flexbox_container();
+
+        // one column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_height_breakpoint_large) {
+            @include mixins.home_height_1;
+        }
+
+        // two columns
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_large) {
+            @include mixins.home_height_2;
+        }
+
+        // one column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$numbers_breakpoint_large) {
+            @include mixins.home_height_1;
+        }
+
+        // two columns
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_medium) {
+            @include mixins.home_height_2;
+        }
+
+        // one column
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_height_breakpoint_small) {
+            @include mixins.home_height_1;
+        }
+    }
+
+    &__weight {
+        // grow flex item to remaining height of flex column
+        @include mixins.set_flex_item($flex: variables.$home_weight_flex);
+    }
+
+    &__content {
+        padding: variables.$home_content_padding;
+        color: colors.$home_content_color;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            padding: variables.$home_content_padding_small;
+        }
+    }
+
+    &__form {
+        
+    }
+
+    &__date {
+        font-family: variables.$body_font_family;
+        outline: none;
+        font-size: variables.$home_date_font_size;
+        color: colors.$home_content_color;
+    }
+
+    &__date, &__input, &__phone, &__email, &__area {
+        padding: variables.$home_input_padding;
+        outline: none;
+        color: colors.$home_content_color;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$home_border_width,
+                                    $color: colors.$home_border_color);
+
+        border-radius: variables.$home_date_border_radius;
+    }
+
+    &__email {
+        font-size: variables.$home_date_font_size;
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$home_heading_margin_bottom;
+        color: colors.$home_heading_color;
+        font-weight: normal;
+    }
+
+    &__input {
+        font-size: variables.$home_date_font_size;
+    }
+
+    &__label {
+        margin-right: variables.$home_label_margin_right;
+    }
+
+    &__phone {
+        font-size: variables.$home_date_font_size;
+    }
+
+    &__question {
+        margin-bottom: variables.$home_question_margin_bottom;
+        font-weight: bold;
+        font-size: variables.$home_question_font_size;
+        text-transform: uppercase;
+        line-height: variables.$home_question_line_height;
+        color: colors.$home_question_color;
+    }
+
+    &__radio {
+        margin-left: 0;
+        margin-right: variables.$home_radio_margin_right;
+    }
+
+    &__row {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+        margin-bottom: variables.$home_row_margin_bottom;
+    }
+
+    &__wrapper {
+        @include mixins.set_flex_item($flex: variables.$home_wrapper_flex);
+
+        // set flexbox by column to push score to the bottom
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+    }
+
+    &__error-border {
+        border-color: colors.$home_error_color;
+    }
+
+    &__error-text {
+        color: colors.$home_error_color;
+    }
+}

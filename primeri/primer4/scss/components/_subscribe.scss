@@ -1,0 +1,66 @@
+/* subscribe */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.subscribe {
+
+    // set flexbox to column
+    @include mixins.set_flexbox_container($flex_direction: column);
+
+    &__button {
+        // move flex item to the right
+        @include mixins.set_flex_item($align_self: flex-end);
+
+        padding: 0;
+        outline: none;
+        border: none;
+        background-color: unset;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: variables.$subscribe_button_font_size;
+        color: colors.$subscribe_button_color;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__email {
+        margin-bottom: variables.$subscribe_email_margin_bottom;
+        padding: variables.$subscribe_email_padding;
+        outline: none;
+        background-color: colors.$subscribe_email_background_color;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$subscribe_email_border_width,
+                                    $color: colors.$subscribe_email_border_color);
+
+        border-radius: variables.$subscribe_email_border_radius;
+
+        // block modifier for errors
+        &--error {
+            background-color: colors.$subscribe_email_error_background_color;
+            color: colors.$subscribe_email_error_color;
+
+            &::placeholder {
+                color: colors.$subscribe_email_error_color;
+            }
+
+            &:-moz-placeholder {
+                color: colors.$subscribe_email_error_color;
+                opacity: variables.$subscribe_email_moz_placeholder_opacity;
+            }
+
+            &::-moz-placeholder {
+                color: colors.$subscribe_email_error_color;
+                opacity: variables.$subscribe_email_moz_placeholder_opacity;
+            }
+        }
+    }
+
+}

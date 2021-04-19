@@ -1,0 +1,50 @@
+/* categories */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.categories {
+
+    @include mixins.reset_list;
+
+    &__arrow {
+        font-size: variables.$categories_arrow_font_size;
+    }
+
+    &__count {
+
+    }
+
+    &__item {
+        margin-bottom: variables.$categories_item_margin_bottom;
+    }
+
+    &__link {
+        // center flex items on cross axis
+        @include mixins.set_flexbox_container($display: inline-flex, $align_items: center);
+
+        color: colors.$categories_link_color;
+
+        &:hover {
+            color: colors.$categories_link_color_hover;
+        }
+
+        &--active {
+            // disable cursor and change color for active link
+            cursor: auto;
+            color: colors.$categories_link_active_color;
+
+            // don't change color for active link when hovered
+            &:hover {
+                color: colors.$categories_link_active_color_hover;
+            }
+        }
+    }
+
+    &__name {
+        margin-left: variables.$categories_name_margin_left;
+        margin-right: variables.$categories_name_margin_right;
+        font-weight: bold;
+    }
+}

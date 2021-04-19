@@ -1,1 +1,89 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+
+    // url is relative to the html page, not to the final css file
+    background-image: url(variables.$home_background_image);
+
+    // stretch image to full width and height, but keep good proportions
+    background-size: cover;
+
+    &__badges {
+        // set flexbox container for badges
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+    }
+
+    &__cards {
+        margin-bottom: variables.$home_cards_margin_bottom;
+
+        // set css grid layout for cards container
+        // set fixed space for cards and some gap between cards
+        // align grid items on main axis to spread across whole line width
+        @include mixins.set_grid_container($grid_template_columns: repeat(auto-fit, variables.$home_cards_width), 
+                                           $gap: variables.$home_cards_gap, 
+                                           $justify_content: space-between);
+
+        // for smallest screen, change css grid layout a bit to look better
+        // set everything on center
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_cards_breakpoint) {
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        padding-top: variables.$home_content_padding;
+        padding-bottom: variables.$home_content_padding;
+    }
+
+    &__event {
+        color: colors.$home_event_color;
+    }
+
+    &__events {
+        margin-bottom: variables.$home_events_margin_bottom;
+        border-radius: variables.$home_events_border_radius;
+
+        // url is relative to the html page, not to the final css files
+        background-image: url(variables.$home_events_background_image);
+
+        // stretch image to full width and height, but keep good proportions
+        background-size: cover;
+
+        // center background image both horizontally and vertically
+        background-position: center;
+
+        // set height for background image
+        height: variables.$home_events_height;
+
+        // positioning container for news
+        position: relative;
+
+        box-shadow: colors.$home_events_box_shadow;
+    }
+
+    &__heading {
+        margin-top: 0;
+    }
+
+    &__news {
+        padding: variables.$home_news_padding;
+        padding-bottom: variables.$home_news_padding_bottom;
+
+        // set absolute position for news, align to the bottom
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // set transparent window
+        background-color: colors.$home_news_background_color;
+
+        // set the same border radius as outer element
+        border-bottom-left-radius: variables.$home_news_border_radius;
+        border-bottom-right-radius: variables.$home_news_border_radius;
+    }
+}

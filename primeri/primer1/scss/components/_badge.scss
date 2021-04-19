@@ -1,0 +1,111 @@
+/* badge */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.badge {
+
+    background-color: colors.$badge_background_color;
+    box-shadow: colors.$home_events_box_shadow;
+    border-radius: variables.$home_events_border_radius;
+
+    // set flexbox container to spread flex items to full height
+    @include mixins.set_flexbox_container($flex_direction: column);
+
+    &--weather {
+        // set flex item properties for badge
+        // set fixed flex base
+        @include mixins.set_flex_item($flex: variables.$badge_weather_flex);
+
+        margin-right: variables.$badge_weather_margin_right;
+
+        // change layout to two columns (don't set flex basis to 50% because of margins)
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$bagde_weather_flex_medium);
+
+            margin-bottom: variables.$badge_weather_margin_bottom;
+        }
+
+        // change layout to one column, full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_small) {
+            @include mixins.set_flex_item($flex: variables.$badge_weather_flex_full);
+
+            margin-right: 0;
+        }
+    }
+
+    &--articles {
+        // set flex item properties for badge
+        @include mixins.set_flex_item($flex: variables.$badge_articles_flex);
+
+        margin-right: variables.$badge_articles_margin_right;
+
+        // change layout to two columns
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$badge_articles_flex_medium);
+
+            margin-right: 0;
+            margin-bottom: variables.$badge_articles_margin_bottom;
+        }
+
+        // change layout to one column, full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$badge_weather_breakpoint_small) {
+            @include mixins.set_flex_item($flex: variables.$badge_weather_flex_full);
+        }
+    }
+
+    &--comments {
+        // set flex item properties for badge
+        @include mixins.set_flex_item($flex: variables.$badge_comments_flex);
+    }
+
+    &__content {
+        // spread flex item to full height
+        @include mixins.set_flex_item($flex: variables.$badge_content_flex);
+
+        // set flexbox container to spread flex items to full height
+        @include mixins.set_flexbox_container($flex_direction: column);
+
+        &--articles {
+            // add very small padding to now overlap inner box with outer border radius
+            padding: variables.$badge_content_padding_small;
+        }
+
+        &--comments {
+            // add very small padding to now overlap inner box with outer border radius
+            padding: variables.$badge_content_padding_small;
+        }
+    }
+
+    &__wrapper {
+        padding: variables.$badge_wrapper_padding;
+
+        &--overflow {
+            // set limited height and overflow scrolling 
+            // (auto overflow doesn't use horizontal scroll and looks better than scroll)
+            height: variables.$badge_wrapper_height;
+            overflow: auto;
+        }
+
+        &--weather {
+            padding-bottom: 0;
+            
+            // spread flex item to full height
+            @include mixins.set_flex_item($flex: variables.$badge_wrapper_weather_flex);
+        }
+    }
+
+    &__header {
+        padding: variables.$badge_header_padding;
+
+        // set bottom border
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$badge_header_border_width,
+                                    $bottom-color: colors.$badge_header_border_color);
+    }
+
+    &__heading {
+        margin: 0;
+    }
+}

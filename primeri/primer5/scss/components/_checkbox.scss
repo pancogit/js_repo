@@ -1,0 +1,33 @@
+/* checkbox */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.checkbox {
+
+    &__input {
+        margin-left: 0;
+        margin-right: variables.$checkbox_input_margin_right;
+        outline: none;
+    }
+
+    &__label {
+
+    }
+
+    &__row {
+        margin-bottom: variables.$checkbox_row_margin_bottom;
+
+        &--other {
+            // set flexbox
+            @include mixins.set_flexbox_container();
+
+            margin-top: variables.$checkbox_row_other_margin_top;
+
+            .home__area {
+                @include mixins.set_flex_item($flex: variables.$checkbox_row_other_area_flex);
+            }
+        }
+    }
+}

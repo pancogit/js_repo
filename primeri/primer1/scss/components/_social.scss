@@ -1,0 +1,57 @@
+/* social */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.social {
+
+    // if there are much social icons, then wrapping icons into new lines will cause icons to not line up
+    // with css grid this problem is solved
+    // set size of grid cell as size of social icon circle (including paddings, etc.)
+    @include mixins.set_grid_container($grid_template_columns: repeat(auto-fit, variables.$social_column_width), 
+                                       $row_gap: variables.$social_row_gap,
+                                       $column_gap: variables.$social_column_gap,
+                                       $justify_content: right);
+
+    // for one column layout align text to the left
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+        justify-content: left;
+    }
+
+    &--margin {
+        margin-bottom: variables.$social_margin_bottom;
+    }
+
+    &__circle {
+        // set flexbox container to center icons inside them
+        @include mixins.set_flexbox_container($justify_content: center, 
+                                              $align_items: center);
+
+        // set fixed width for circle
+        width: variables.$social_circle_width;
+
+        padding: variables.$social_circle_padding;
+        background-color: colors.$social_circle_background_color;
+        border-radius: variables.$social_circle_border_radius;
+    }
+
+    &__icon {
+        color: colors.$social_icon_color;
+        font-size: variables.$social_icon_font_size;
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:hover {
+            .social__circle {
+                background-color: colors.$social_circle_background_color_hover;
+            }
+
+            .social__icon {
+                color: colors.$social_icon_color_hover;
+            }
+        }
+    }
+}

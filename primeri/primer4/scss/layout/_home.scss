@@ -1,1 +1,193 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+
+    &__ads {
+        @include mixins.set_flex_item($flex: variables.$home_ads_flex);
+
+        // spread to full width and push flex item to the end
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_ads_breakpoint) {
+            flex: variables.$home_ads_flex_full;
+            order: variables.$home_ads_order;
+        }
+    }
+
+    &__categories {
+        @include mixins.set_flex_item($flex: variables.$home_categories_flex);
+
+        // two column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_top_recipes_breakpoint) {
+            margin-right: variables.$home_categories_margin_right;
+        }
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_ads_breakpoint) {
+            margin-right: 0;
+        }
+    }
+
+    &__click {
+        // set flexbox to center flex items on both axis
+        @include mixins.set_flexbox_container($justify_content: center, $align_items: center);
+
+        padding: variables.$home_click_padding;
+        background-color: colors.$home_click_background_color;
+        color: colors.$home_click_color;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:hover {
+            background-color: colors.$home_click_background_color_hover;
+            color: colors.$home_click_color_hover;
+        }
+    }
+
+    &__click-text {
+        font-size: variables.$home_click_text_font_size;
+        margin-right: variables.$home_click_text_margin_right;
+    }
+
+    &__courses {
+        // set flexbox to column to spread flex items to the edges of container top-bottom
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: space-between);
+
+        @include mixins.set_flex_item($flex: variables.$home_courses_flex);
+
+        margin-right: variables.$home_courses_negative_margin;
+        background-color: colors.$home_courses_background_color;
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            margin-left: variables.$home_courses_negative_margin;
+        }
+    }
+
+    &__courses-content {
+        // set flexbox to center flex items vertically
+        @include mixins.set_flexbox_container($flex_direction: column, $justify_content: center);
+
+        // when dropdown navigation is opened, then grow flex item to full height to stay on center
+        @include mixins.set_flex_item($flex: variables.$home_courses_content_flex);
+
+        padding: variables.$home_courses_content_padding;
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            padding: variables.$home_courses_content_padding_small;
+        }
+    }
+
+    &__dish {
+        line-height: variables.$home_dish_line_height;
+        color: colors.$home_dish_color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__dishes {
+
+    }
+
+    &__header {
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+    }
+
+    &__heading {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: variables.$home_heading_font_size;
+        color: colors.$home_heading_color;
+
+        &--orange {
+            color: colors.$home_heading_color_orange;
+        }
+
+        &--margin-bottom {
+            margin-bottom: 0;
+        }
+
+        // set smaller font for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            font-size: variables.$home_heading_font_size_small;
+        }
+    }
+
+    &__last-recipes {
+        padding-top: variables.$home_last_recipes_padding_top;
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            padding-top: 0;
+        }
+    }
+    
+    &__navigation {
+        padding-right: variables.$home_navigation_padding_right;
+        padding-top: variables.$home_navigation_padding_top;
+        width: variables.$home_navigation_width;
+
+        // set full width and push flex item to the end for one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            width: variables.$home_navigation_width_small;
+            order: variables.$home_navigation_order_small;
+        }
+
+        // one column layout
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_headings_breakpoint) {
+            padding-top: variables.$home_navigation_padding_top_small;
+            padding-bottom: variables.$home_navigation_padding_bottom_small;
+        }
+    }
+
+    &__recipes {
+        margin-top: variables.$home_recipes_margin_top;
+        margin-bottom: variables.$home_recipes_margin_bottom;
+
+        // set flexbox
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+    }
+
+    &__right {
+        font-size: variables.$home_right_font_size;
+    }
+
+    &__subheading {
+        margin-top: 0;
+        margin-bottom: variables.$home_subheading_margin_bottom;
+        color: colors.$home_subheading_color;
+        font-size: variables.$home_subheading_font_size;
+
+        // set smaller font for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_subheading_breakpoint) {
+            font-size: variables.$home_subheading_font_size_small;
+        }
+    }
+
+    &__top-recipes {
+        @include mixins.set_flex_item($flex: variables.$home_top_recipes_flex);
+
+        margin: variables.$home_top_recipes_margin;
+
+        // spread to full width and push flex item to the end
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_top_recipes_breakpoint) {
+            flex: variables.$home_top_recipes_flex_full;
+            order: variables.$home_top_recipes_order;
+            margin: variables.$home_top_recipes_margin_medium;
+        }
+    }
+
+    &__track {
+        // set flexbox to align item to the right
+        @include mixins.set_flexbox_container($justify_content: flex-end);
+
+        height: variables.$home_track_height;
+        background-color: colors.$home_track_background_color;
+    }
+}

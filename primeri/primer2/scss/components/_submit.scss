@@ -1,0 +1,78 @@
+/* submit */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.submit {
+
+    &--margin-bottom {
+        margin-bottom: variables.$submit_margin_bottom
+    }
+
+    &__button {
+        padding: variables.$submit_button_padding;
+        background-color: colors.$submit_button_background_color;
+        color: colors.$submit_button_color;
+        font-weight: bold;
+        font-size: variables.$submit_button_font_size;
+        outline: none;
+        cursor: pointer;
+
+        // remove borders
+        @include mixins.set_borders($style: none);
+
+        border-top-right-radius: variables.$submit_button_border_radius;
+        border-bottom-right-radius: variables.$submit_button_border_radius;
+    }
+
+    &__email {
+
+    }
+    
+    &__error {
+        font-weight: bold;
+        color: colors.$submit_error_color;
+    }
+
+    &__heading {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: variables.$submit_heading_font_size;
+        color: colors.$submit_heading_color;
+        letter-spacing: variables.$submit_heading_letter_spacing;
+    }
+
+    &__input {
+        padding: variables.$submit_input_padding;
+        background-color: colors.$submit_input_background_color;
+        color: colors.$submit_input_color;
+
+        // remove outline when input is in focus
+        outline: none;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$submit_input_border_width,
+                                    $color: colors.$submit_input_border_color);
+
+        // element modifier for input errors
+        &--error {
+            border-color: colors.$submit_input_border_color_error;
+        }
+
+        // add style for placeholder
+        &::placeholder {
+            color: colors.$submit_input_placeholder_color;
+        }
+    }
+
+    &__inputs {
+        // set flexbox container to not wrap inputs
+        @include mixins.set_flexbox_container();
+    }
+
+    &__zip {
+        
+    }
+}

@@ -1,0 +1,22 @@
+/* checkbox */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.address {
+
+    &__zip {
+        padding: variables.$address_zip_padding;
+        font-size: variables.$address_zip_font_size;
+        outline: none;
+        color: colors.$home_content_color;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$home_border_width,
+                                    $color: colors.$home_border_color);
+
+        border-radius: variables.$home_date_border_radius;
+    }
+}

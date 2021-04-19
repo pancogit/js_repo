@@ -1,0 +1,36 @@
+/* pharmacy */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.pharmacy {
+
+    &__rx, &__strength, &__quantity, &__license {
+        padding: variables.$pharmacy_quantity_padding;
+        outline: none;
+        color: colors.$home_content_color;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$home_border_width,
+                                    $color: colors.$home_border_color);
+
+        border-radius: variables.$home_date_border_radius;
+    }
+
+    &__license, &__quantity, &__rx, &__strength {
+        font-size: variables.$pharmacy_license_font_size;
+    }
+
+    &__strength, &__quantity {
+        @include mixins.set_flex_item($flex: variables.$pharmacy_quantity_flex);
+
+        margin-right: variables.$pharmacy_quantity_margin_right;
+    }
+
+    &__unit {
+        // vertically align flex items with flexbox
+        @include mixins.set_flexbox_container($align_items: center);
+    }
+}

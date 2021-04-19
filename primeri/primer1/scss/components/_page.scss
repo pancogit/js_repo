@@ -1,0 +1,23 @@
+/* page */
+
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.page {
+
+    // set minimum width for page
+    min-width: variables.$page_min_width;
+
+    &__content {
+        padding: variables.$page_content_padding;
+
+        // set smaller padding for smaller screens
+        @include mixins.media_screen($medium: true) {
+            padding: variables.$page_content_padding_small;
+        }
+
+        // center content on page and set maximum width
+        margin: 0 auto;
+        max-width: variables.$page_content_max_width;
+    }
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="sr-RS">
+<html lang="en">
 
 <head>
     <title>Primer 3</title>
@@ -11,22 +11,570 @@
     <!-- for responsive web design (mobile devices) -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
+    <!-- font awesome icons -->
+    <link href="../../../libraries/font-awesome/fontawesome-free-5.15.1-web/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+
     <!-- css styles -->
-    <link href="../css/main.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" type="image/png" href="../../../icon/favicon.png" />
 </head>
 
 <body>
 
-    <header>
-    </header>
+    <div class="page">
+        <header class="header">
+            <div class="page__content header__top">
+                <div class="logo header__logo">
+                    <a href="index.html" class="logo__link">
+                        <img src="../images/logo.jpg" alt="logo image" width="100" height="86" class="logo__image" />
+                        <div class="logo__text">
+                            <span class="logo__trump">Trump</span>
+                            <span class="logo__legal">Legal</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__search">
+                    <div class="header__links">
+                        <nav class="menu menu--margin">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Home</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">About Us</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <p class="header__info">
+                            <span class="header__call">Call at: + 91 - 123457956</span>
+                            <span class="header__email">Email: info@trumplegal.com</span>
+                        </p>
+                    </div>
+                    <div class="header__login">
+                        <div class="login">
+                            <a href="index.html" class="login__link">
+                                <i class="fas fa-user login__icon"></i>
+                            </a>
+                            <span class="login__text">Register</span>
+                        </div>
+                        <div class="login login--margin">
+                            <a href="index.html" class="login__link">
+                                <i class="fas fa-wrench login__icon"></i>
+                            </a>
+                            <span class="login__text">Login</span>
+                        </div>
+                        <form method="GET" class="search">
+                            <input type="search" name="search-input" placeholder="Search Keywords"
+                                class="search__input" />
+                            <button class="search__button">
+                                <i class="fas fa-search search__icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="header__navigation">
+                <div class="page__content">
+                    <nav class="navigation">
+                        <div class="navigation__close">
+                            <a href="index.html" class="navigation__close-link">
+                                <i class="far fa-times-circle navigation__close-icon"></i>
+                            </a>
+                        </div>
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Corporate Services</a>
+                            </li>
+                            <li class="navigation__item dropdown">
+                                <a href="index.html" class="navigation__link">
+                                    <span class="navigation__text">
+                                        Legal Process Outsourcing
+                                        <span class="navigation__plus">+</span>
+                                    </span>
+                                </a>
+                                <div class="dropdown__wrapper">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Virtual Employee</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Legal IT Group</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Cerebra LPO</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Quislex</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Alcor</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Morae Global</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Goldman Law Group</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">India Entry Strategy</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">NRI</a>
+                            </li>
+                            <li class="navigation__item dropdown">
+                                <a href="index.html" class="navigation__link">
+                                    <span class="navigation__text">
+                                        Compliance Framework
+                                        <span class="navigation__plus">+</span>
+                                    </span>
+                                </a>
+                                <div class="dropdown__wrapper">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Policies and Procedures</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Training and Education</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Communication</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Monitoring</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Auditing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navigation__item dropdown">
+                                <a href="index.html" class="navigation__link">
+                                    <span class="navigation__text">
+                                        Finance & Taxation
+                                        <span class="navigation__plus">+</span>
+                                    </span>
+                                </a>
+                                <div class="dropdown__wrapper">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Finance Purchases</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Taxation Property</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Finance Wealth</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__link">Taxation of Earnings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="index.html" class="navigation__link">Dispute Resolution & Litigation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="hamburger">
+                        <a href="index.html" class="hamburger__link">
+                            <i class="fas fa-bars hamburger__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <main>
-    </main>
+        <main class="home">
+            <div class="page__content home__wrapper">
+                <div class="home__content">
+                    <h1 class="home__heading">Trump Legal-One Stop Junction for All Legal
+                        & Professional Services/Solutions
+                    </h1>
+                    <div class="commercial">
+                        <div class="commercial__image commercial__image--corporate">
+                            <p class="commercial__text">Corporate Laws</p>
+                        </div>
+                        <div class="commercial__image commercial__image--civil">
+                            <p class="commercial__text">Civil Laws</p>
+                        </div>
+                        <div class="commercial__image commercial__image--criminal">
+                            <p class="commercial__text">Criminal Laws</p>
+                        </div>
+                        <div class="commercial__image commercial__image--family">
+                            <p class="commercial__text">Family Laws</p>
+                        </div>
+                    </div>
+                    <h2 class="home__subheading">Bussiness Listing</h2>
+                    <div class="home__cards">
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/corporate-laws.jpg" alt="corporate services card" width="70"
+                                        height="70" class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">Corporate Services</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/taxation-services.jpg" alt="taxation services card" width="70"
+                                        height="70" class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">Taxation Services</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/labour-law.jpg" alt="labour law card" width="70" height="70"
+                                        class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">Labour Law Compliances</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/india-entry.jpg" alt="india entry card" width="70" height="70"
+                                        class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">India Entry Strategy</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/civil-laws.jpg" alt="nri services card" width="70" height="70"
+                                        class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">NRI Services</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__left">
+                                <a href="index.html" class="card__link">
+                                    <img src="../images/corporate-finance.jpg" alt="corporate finance card" width="70"
+                                        height="70" class="card__image" />
+                                </a>
+                            </div>
+                            <div class="card__right">
+                                <h3 class="card__heading">Corporate Finance</h3>
+                                <p class="card__text">Get reference for the professionals who specialize in the inbound
+                                    ...</p>
+                                <div class="card__button">
+                                    <a href="index.html" class="button">More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="home__subheading">Latest News from the Law Society</h2>
+                    <div class="home__news">
+                        <article class="news">
+                            <div class="news__content">
+                                <h3 class="news__heading">Law Society 2015</h3>
+                                <p class="news__text">Lorem ipsum is simply text of the printing and typesetting
+                                    industry.
+                                    Lorem ipsum has been the industry's standard text ever since the 1500s, when an
+                                    unknown printer took a gallery of type and scrambled it to make a type specimen
+                                    book.
+                                </p>
+                            </div>
+                            <div class="news__info">
+                                <div class="news__date">10 August 2015</div>
+                                <div class="news__about">
+                                    <i class="fas fa-broadcast-tower news__icon"></i>
+                                    <span class="news__category">News</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news">
+                            <div class="news__content">
+                                <h3 class="news__heading">Law Society 2015</h3>
+                                <p class="news__text">Lorem ipsum is simply text of the printing and typesetting
+                                    industry.
+                                    Lorem ipsum has been the industry's standard text ever since the 1500s, when an
+                                    unknown printer took a gallery of type and scrambled it to make a type specimen
+                                    book.
+                                </p>
+                            </div>
+                            <div class="news__info">
+                                <div class="news__date">10 August 2015</div>
+                                <div class="news__about">
+                                    <i class="fas fa-broadcast-tower news__icon"></i>
+                                    <span class="news__category">News</span>
+                                </div>
+                            </div>
+                        </article>
+                        <a href="index.html" class="button">View All...</a>
+                    </div>
+                </div>
+                <aside class="home__aside">
+                    <div class="lawyer home__lawyer">
+                        <div class="lawyer__heading">Find a Lawyer</div>
+                        <form method="get" class="lawyer__content">
+                            <!-- class="lawyer__select--error" or class="lawyer__select--good" -->
+                            <select name="category" class="lawyer__select">
+                                <option value="select" selected="selected" disabled="disabled" class="lawyer__option">
+                                    Select Category</option>
+                                <option value="admiralty" class="lawyer__option">Admiralty Law</option>
+                                <option value="bankruptcy" class="lawyer__option">Bankruptcy Law</option>
+                                <option value="business" class="lawyer__option">Business (Corporate) Law</option>
+                                <option value="civil" class="lawyer__option">Civil Rights Law</option>
+                                <option value="criminal" class="lawyer__option">Criminal Law</option>
+                                <option value="entertainment" class="lawyer__option">Entertainment Law</option>
+                                <option value="environmental" class="lawyer__option">Environmental Law</option>
+                                <option value="family" class="lawyer__option">Family Law</option>
+                            </select>
+                            <select name="state" class="lawyer__select">
+                                <option value="select" selected="selected" disabled="disabled" class="lawyer__option">
+                                    Select State</option>
+                                <option value="alabama" class="lawyer__option">Alabama</option>
+                                <option value="alaska" class="lawyer__option">Alaska</option>
+                                <option value="arizona" class="lawyer__option">Arizona</option>
+                                <option value="california" class="lawyer__option">California</option>
+                                <option value="colorado" class="lawyer__option">Colorado</option>
+                                <option value="florida" class="lawyer__option">Florida</option>
+                                <option value="georgia" class="lawyer__option">Georgia</option>
+                                <option value="hawaii" class="lawyer__option">Hawaii</option>
+                                <option value="illinois" class="lawyer__option">Illinois</option>
+                                <option value="indiana" class="lawyer__option">Indiana</option>
+                                <option value="kansas" class="lawyer__option">Kansas</option>
+                                <option value="louisiana" class="lawyer__option">Louisiana</option>
+                                <option value="massachusetts" class="lawyer__option">Massachusetts</option>
+                                <option value="michigan" class="lawyer__option">Michigan</option>
+                                <option value="minnesota" class="lawyer__option">Minnesota</option>
+                                <option value="mississippi" class="lawyer__option">Mississippi</option>
+                                <option value="missouri" class="lawyer__option">Missouri</option>
+                                <option value="nebraska" class="lawyer__option">Nebraska</option>
+                                <option value="nevada" class="lawyer__option">Nevada</option>
+                                <option value="new-jersey" class="lawyer__option">New Jersey</option>
+                                <option value="new-mexico" class="lawyer__option">New Mexico</option>
+                                <option value="new-york" class="lawyer__option">New York</option>
+                                <option value="north-carolina" class="lawyer__option">North Carolina</option>
+                                <option value="north-dakota" class="lawyer__option">North Dakota</option>
+                                <option value="oklahoma" class="lawyer__option">Oklahoma</option>
+                                <option value="oregon" class="lawyer__option">Oregon</option>
+                                <option value="pennsylvania" class="lawyer__option">Pennsylvania</option>
+                                <option value="puerto-rico" class="lawyer__option">Puerto Rico</option>
+                                <option value="south-carolina" class="lawyer__option">South Carolina</option>
+                                <option value="south-dakota" class="lawyer__option">South Dakota</option>
+                                <option value="texas" class="lawyer__option">Texas</option>
+                                <option value="virginia" class="lawyer__option">Virginia</option>
+                                <option value="washington" class="lawyer__option">Washington</option>
+                                <option value="west-virginia" class="lawyer__option">West Virginia</option>
+                            </select>
+                            <select name="city" class="lawyer__select">
+                                <option value="select" selected="selected" disabled="disabled" class="lawyer__option">
+                                    Select City</option>
+                                <option value="birmingham" class="lawyer__option">Birmingham</option>
+                                <option value="anchorage" class="lawyer__option">Anchorage</option>
+                                <option value="phoenix" class="lawyer__option">Phoenix</option>
+                                <option value="los-angeles" class="lawyer__option">Los Angeles</option>
+                                <option value="denver" class="lawyer__option">Denver</option>
+                                <option value="jacksonville" class="lawyer__option">Jacksonville</option>
+                                <option value="atlanta" class="lawyer__option">Atlanta</option>
+                                <option value="urban-honolulu" class="lawyer__option">Urban Honolulu</option>
+                                <option value="chicago" class="lawyer__option">Chicago</option>
+                                <option value="indianapolis" class="lawyer__option">Indianapolis</option>
+                                <option value="wichita" class="lawyer__option">Wichita</option>
+                                <option value="new-orleans" class="lawyer__option">New Orleans</option>
+                                <option value="boston" class="lawyer__option">Boston</option>
+                                <option value="detroit" class="lawyer__option">Detroit</option>
+                                <option value="minneapolis" class="lawyer__option">Minneapolis</option>
+                                <option value="jackson" class="lawyer__option">Jackson</option>
+                                <option value="kansas-city" class="lawyer__option">Kansas City</option>
+                                <option value="omaha" class="lawyer__option">Omaha</option>
+                                <option value="las-vegas" class="lawyer__option">Las Vegas</option>
+                                <option value="newark" class="lawyer__option">Newark</option>
+                                <option value="albuquerque" class="lawyer__option">Albuquerque</option>
+                                <option value="new-york" class="lawyer__option">New York</option>
+                                <option value="charlotte" class="lawyer__option">Charlotte</option>
+                                <option value="fargo" class="lawyer__option">Fargo</option>
+                                <option value="oklahoma-city" class="lawyer__option">Oklahoma City</option>
+                                <option value="portland" class="lawyer__option">Portland</option>
+                                <option value="philadelphia" class="lawyer__option">Philadelphia</option>
+                                <option value="san-juan" class="lawyer__option">San Juan</option>
+                                <option value="charleston" class="lawyer__option">Charleston</option>
+                                <option value="sioux-falls" class="lawyer__option">Sioux Falls</option>
+                                <option value="houston" class="lawyer__option">Houston</option>
+                                <option value="virginia-beach" class="lawyer__option">Virginia Beach</option>
+                                <option value="seattle" class="lawyer__option">Seattle</option>
+                                <option value="huntington" class="lawyer__option">Huntington</option>
+                            </select>
+                            <!-- <div class="lawyer__error">Please select category</div> -->
+                            <button class="lawyer__submit">
+                                <i class="fas fa-hand-pointer lawyer__pointer"></i>
+                                <span class="lawyer__search">Search</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="articles home__articles">
+                        <div class="articles__heading">Useful Articles</div>
+                        <ul class="articles__list">
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Union Budget 2014-15</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">UNION BUDGET 2011-2012</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">HIGHLIGHTS OF UNION BUDGET 2010-11</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Interim Foreign Trade Policy (2009-10)</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Key Highlights - RBI Monetary Policy
+                                    Statement 2010-2011</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Detai - RBI Monetary Policy Statement
+                                    2010-2011</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ad ad--margin">
+                        <a href="index.html" class="ad__link">
+                            <img src="../images/promoting-success.jpg" alt="promoting success ad picture"
+                                class="ad__image" />
+                        </a>
+                    </div>
+                    <div class="articles home__articles">
+                        <div class="articles__heading">Court Judgements</div>
+                        <ul class="articles__list">
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Legal Rights of Second Marriage</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">First Information Report</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Human Rights</a>
+                            </li>
+                            <li class="articles__item">
+                                <a href="index.html" class="articles__link">Will - Codicils and Succession</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ad">
+                        <a href="index.html" class="ad__link">
+                            <img src="../images/property-law-fouth-edition.jpg" alt="property law ad picture"
+                                class="ad__image" />
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </main>
 
-    <footer>
-    </footer>
+        <footer class="footer">
+            <div class="footer__track footer__track--top"></div>
+            <div class="page__content">
+                <div class="footer__links">
+                    <div class="footer__list footer__list--links">
+                        <h3 class="footer__heading">Quick Links</h3>
+                        <a href="index.html" class="footer__link">Home</a>
+                        <a href="index.html" class="footer__link">About Us</a>
+                        <a href="index.html" class="footer__link">Contact Us</a>
+                        <a href="index.html" class="footer__link">Terms & Conditions</a>
+                        <a href="index.html" class="footer__link">Privacy Policy</a>
+                        <a href="index.html" class="footer__link">Disclaimer</a>
+                    </div>
+                    <div class="footer__list footer__list--services">
+                        <div class="footer__list-part">
+                            <h3 class="footer__heading">Services</h3>
+                            <a href="index.html" class="footer__link">Corporate and Commercial Laws</a>
+                            <a href="index.html" class="footer__link">Legal/Business Process Outsourcing</a>
+                            <a href="index.html" class="footer__link">Providing Compliance Framework</a>
+                            <a href="index.html" class="footer__link">Dispute Resolution & Litigation Support</a>
+                            <a href="index.html" class="footer__link">Company Law Matterns</a>
+                            <a href="index.html" class="footer__link">Joint Ventures, Foreign Collaborations &
+                                Mergers & Acquisitions</a>
+                            <a href="index.html" class="footer__link">Antitrust Laws & Consumer Protection</a>
+                        </div>
+                        <div class="footer__list-part">
+                            <a href="index.html" class="footer__link">Education, Aviation</a>
+                            <a href="index.html" class="footer__link">Capital, Securities and IPOs</a>
+                            <a href="index.html" class="footer__link">Banking, Finance and Insurance</a>
+                            <a href="index.html" class="footer__link">Bankruptcy and Insolvency</a>
+                            <a href="index.html" class="footer__link">Intellectual Property Rights</a>
+                            <a href="index.html" class="footer__link">Infrastructure, Real Estate Environmental
+                                Laws</a>
+                            <a href="index.html" class="footer__link">Labour and Employment Laws</a>
+                        </div>
+                    </div>
+                    <div class="footer__list footer__list--connect">
+                        <h3 class="footer__heading">Quick Connect</h3>
+                        <div class="social">
+                            <a href="https://www.facebook.com" class="social__link" target="_blank">
+                                <i class="fab fa-facebook-square social__icon"></i>
+                            </a>
+                            <a href="https://www.twitter.com" class="social__link" target="_blank">
+                                <i class="fab fa-twitter-square social__icon"></i>
+                            </a>
+                            <a href="https://www.linkedin.com" class="social__link" target="_blank">
+                                <i class="fab fa-linkedin social__icon"></i>
+                            </a>
+                            <a href="https://www.pinterest.com" class="social__link" target="_blank">
+                                <i class="fab fa-pinterest-square social__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">&copy; copyright 2015, Trump Legal Terms of Use</div>
+            </div>
+            <div class="footer__track footer__track--bottom"></div>
+        </footer>
+    </div>
 
-    <script src="../js/menu.js"></script>
+    <script src="../js/homepage.js" type="module"></script>
+
 </body>
 
 </html>

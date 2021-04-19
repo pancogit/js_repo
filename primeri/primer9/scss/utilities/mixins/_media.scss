@@ -8,6 +8,7 @@
 @mixin media_screen($small: false, $medium: false, $large: false, $huge: false) {
     @if $small {
         @media only screen and (max-width: variables.$media_screen_small) {
+            // place there css content when mixin is called with {}
             @content;
         }
     } 

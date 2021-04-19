@@ -1,0 +1,23 @@
+/* list */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.list {
+    padding: variables.$list_padding;
+    outline: none;
+    font-size: variables.$list_font_size;
+    color: colors.$home_content_color;
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$home_border_width,
+                                $color: colors.$home_border_color);
+
+    border-radius: variables.$home_date_border_radius;
+
+    &__option {
+        color: colors.$home_content_color;
+    }
+}

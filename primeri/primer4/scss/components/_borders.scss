@@ -1,0 +1,50 @@
+/* borders */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.borders {
+
+    &--small {
+        .borders__top, .borders__bottom {
+            height: variables.$borders_size_small;
+        }
+
+        .borders__left, .borders__right {
+            width: variables.$borders_size_small;
+        }
+    }
+
+    &__top, &__bottom, &__left, &__right {
+        background-color: colors.$borders_background_color;
+        position: absolute;
+    }
+
+    &__top, &__bottom {
+        height: variables.$borders_size;
+        left: 0;
+        right: 0;
+    }
+
+    &__left, &__right {
+        width: variables.$borders_size;
+        top: 0;
+        bottom: 0;
+    }
+
+    &__top {
+        top: 0;
+    }
+
+    &__bottom {
+        bottom: 0;
+    }
+
+    &__left {
+        left: 0;
+    }
+
+    &__right {
+        right: 0;
+    }
+}

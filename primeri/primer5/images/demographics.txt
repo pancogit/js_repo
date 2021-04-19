@@ -1,0 +1,169 @@
+------------------------------
+Demographics
+------------------------------
+
+Home address
+------------
+
+- Do you live in house or apartment? (house, apartment -> radio buttons)
+- Country
+- City
+- Address 1
+- Address 2
+- State  - ZIP Code (5 digits)
+
+------------------------------
+
+Phone numbers
+------------
+
+- Home Phone
+- Work Phone
+- How many mobile phones do you have? (list 1..5)
+    - Mobile Phone 1
+    ...
+    - Mobile Phone N
+
+------------------------------
+
+Email
+------------
+
+- Primary e-mail
+- Confirm your primary e-mail
+- Alternate e-mail
+
+------------------------------
+
+Emergency contact
+------------
+
+Primary Emergency Contact
+- Name  - Relationship to Contact (Mother, Father, Brother, Sister, Family, Friend -> list)
+
+Secondary Emergency Contact
+- Name  - Relationship to Contact
+
+- Preferred Local Hospital
+- Doctor Name   - Phone Number
+- Dentist Name   - Phone Number
+- Company  - Policy
+
+------------------------------
+
+Race/Ethnicity
+------------
+
+- Are you Hispanic or Latino? (Yes, No)
+- Please indicate your ethnicity. (American Indian or Alaska Native, Asian, 
+Black or African American, Nativa Hawaiian or Other Pacific Islander, White -> check buttons)
+
+------------------------------
+
+Gender
+------------
+
+Gender Identity: (Male/Man, Female/Woman, TransMale/TransMan, TransFemale/TransWoman, 
+Genderqueer/Gender nonconforming -> check buttons)
+
+------------------------------
+
+Height & weight
+------------
+
+- Enter Height    - 5 +  feet    - 10 + inches   (minus, plus buttons)
+- Enter Weight    - 173 +  pounds  (minus, plus buttons)
+- Your BMI       24.82 (calculation)
+    metric formula BMI = weight (kg) / height(m) ^ 2
+    imperial formula BMI = 703 x weight (pounds) / height(inches) ^ 2
+        1 feet = 12 inches
+        703 * 173 / (5 * 12 + 10) ^ 2 = 24.8202040816 ~ 24.82
+
+    feet range: 0 - 7
+    inches range: 0 - 11 (12 is not included because 12 inches = 1 feet)
+    pounds range: 0 - 500 (227 kg)
+
+    < 18.5 body mass deficit
+    18.5 - 24.9 normal body mass
+    25.0 - 29.9 excessive body mass (pre-obesity)
+    30.0 - 34.9 obesity 1st degree
+    35.0 - 39.9 obesity 2nd degree
+    >= 40.0 obesity 3rd degree
+
+- Your Weight Status   Normal Weight (calculation)
+
+------------------------------
+
+Pharmacy
+------------
+
+- Date Filled
+- Prescription RX Number  - Type (New, Refill)  - Prescription Scanned (Yes, No)
+- Prescribed Drug   - Strength (mg)
+- Directions
+- Quantity Prescribed  - Quantity Ingested/Applied
+- Quantity Dispensed  - Quantity Returned
+- Pharmacist Name   - Pharmacist License No.
+
+------------------------------
+
+
+
+------------------------------
+Dental History
+------------------------------
+
+Questionaire
+------------
+
+- Last dental exam (09/10/2017)
+- Are you in dental pain? (No, Yes) - For how long? (10 Days, ...)
+- How often do you brush? (...) - How often do you floss? (10 Days, ...)
+- How would you rate your smile? (1, 2, 3, ..., 10)
+- Would you like whiter teeth? (No, Yes) - Would you like? (No, Yes)
+
+------------------------------
+
+Current info
+------------
+
+- What concerns do you currently have with your oral health or smile? (Jaw joint pain,
+Clenching or grinding of teeth, Discolored teeth, Missing teeth, Spaces in between teeth,
+Overbite, Underbite, Old crowns, Speech problems, Tooth sensitivity to cold,
+Difficulty chewing, Bad breath, Other and input -> checkboxes)
+- Have you whitened your teeth in the past? (Yes, No)
+- Have you ever had orthodontic treatment? (Yes, No)
+- Have you ever had gum tissue treatment? (Yes, No)
+
+------------------------------
+
+
+
+------------------------------
+Medical History
+------------------------------
+
+Allergies
+------------
+
+- Do you have a written policy on food allergies and intolerances? (Yes, No)
+- Have all kitchen staff received food allergen awareness training? (Yes, No)
+
+- Food Allergies: (Peanuts, Nuts (almonds, walnuts, etc), Sesame seeds, Fish, Eggs, Milk, Soya,
+Lupin, Celery, Crustaceans, Mulluscs, Mustard, Cereals, Sulphur dioxide -> checkboxes)
+
+- Medication Allergies: (None known, Amoxil/Ampicillin, Aspirin, Cephalosporins, Codeine,
+Erythromycin, NSAIDs, Penicillin, Quinolones, Sulfa, Tetracyclines, Others and then input -> checkboxes)
+
+------------------------------
+
+Medical condition
+------------
+
+- Health Conditions: (None known, Arthritis, Asthma, Cancer, Diabetes, Glaucoma, Heart condition,
+High blood pressure, High cholesterol, Osteoporosis, Thyroid Disease, Others and then input -> check boxes)
+
+- Do you wear glasses or contacts? (Yes, No)
+- Are you presently under medical care for a medical health problem? (Yes, No)
+
+------------------------------

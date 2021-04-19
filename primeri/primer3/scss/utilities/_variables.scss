@@ -1,18 +1,206 @@
 // variables 
 
 
+// reset 
+$body_font_family: 'Times New Roman', Times, serif;
+
 // media screen
 $media_screen_small: 20rem;
 $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// page
+$page_min_width: 20rem;
+$page_content_max_width: 80rem;
+$page_content_padding: 1rem;
 
 // logo
+$logo_text_font_size: 1.2rem;
 
-// header 
+// menu
+$menu_margin: 1rem;
+$menu_item_border_width: 0.1rem;
+$menu_link_padding: 0.1rem 0.8rem;
+
+// login
+$login_margin: 1.2rem;
+$login_breakpoint: 34rem;
+$login_margin_bottom: 1rem;
+$login_link_padding: 0.4rem 0.8rem;
+$login_text_padding: 0.35rem 0.8rem;
+$login_text_border_width: 0.1rem;
+
+// search
+$search_flex: 100%;
+$search_button_padding: 0.4rem 0.5rem;
+$search_icon_font_size: 1.2rem;
+$search_input_padding: 0.5rem;
+$search_input_border_width: 0.12rem;
+
+// navigation
+$navigation_z_index: 1000;
+$navigation_link_padding: 1rem 0.7rem;
+$navigation_link_border_width: 0.1rem;
+$navigation_link_flex: 1;
+$navigation_plus_margin_left: 0.3rem;
+$navigation_close_margin: 1rem;
+$navigation_close_icon_font_size: 1.4rem;
+$navigation_transition_duration: 0.7s;
+$navigation_right: 63rem;
+
+// dropdown
+$dropdown_link_padding: 1rem 0.7rem;
+$dropdown_link_border_width: 0.1rem;
+$dropdown_link_mobile_padding_left: 2rem;
+
+// hamburger
+$hamburger_breakpoint: 49rem;
+$hamburger_link_font_size: 1.2rem;
+$hamburger_link_margin: 0.5rem;
+
+// commercial
+$commercial_image_flex: 1 1 9rem;
+$commercial_image_full_flex: 100%;
+$commercial_image_margin: 0.3rem;
+$commercial_image_height: 20rem;
+$commercial_image_breakpoint: 59rem;
+$commercial_image_breakpoint_small: 35.5rem;
+$commercial_image_flex_breakpoint: 1 1 16rem;
+$commercial_image_corporate_path: "../images/corporate-laws.jpg";
+$commercial_image_civil_path: "../images/civil-laws.jpg";
+$commercial_image_criminal_path: "../images/criminal-laws.jpg";
+$commercial_image_family_path: "../images/family-laws.jpg";
+$commercial_text_padding: 0.7rem;
+$commercial_text_margin_bottom: 5.2rem;
+$commercial_text_font_size: 1.2rem;
+
+// card
+$card_padding: 0.4rem;
+$card_border_width: 0.1rem;
+$card_heading_margin_bottom: 0.3rem;
+$card_heading_font_size: 1.1rem;
+$card_heading_line_height: 1.5rem;
+$card_left_margin_right: 0.7rem;
+$card_text_margin_bottom: 1.2rem;
+$card_text_font_size: 0.9rem;
+
+// button
+
+// news
+$news_border_width: 0.1rem;
+$news_padding_top: 0.9rem;
+$news_margin_bottom: 1rem;
+$news_content_flex: 1;
+$news_content_full_flex: 100%;
+$news_content_margin_right: 3rem;
+$news_content_breakpoint: 43rem;
+$news_date_margin_bottom: 1rem;
+$news_heading_margin_bottom: 0.7rem;
+$news_icon_margin_right: 0.6rem;
+$news_info_flex: 0 0 10rem;
+$news_info_breakpoint: 43rem;
+$news_info_margin_bottom: 0.9rem;
+$news_text_font_size: 0.9rem;
+
+// lawyer
+$lawyer_content_padding: 0.6rem;
+$lawyer_content_border_width: 0.1rem;
+$lawyer_heading_padding: 0.5rem 0.6rem;
+$lawyer_pointer_margin_right: 0.3rem;
+$lawyer_select_margin_bottom: 0.6rem;
+$lawyer_select_padding: 0.2rem;
+$lawyer_select_width: 100%;
+$lawyer_select_border_radius: 0.2rem;
+$lawyer_select_border_width: 0.12rem;
+$lawyer_submit_padding: 0.4rem 0.65rem;
+$lawyer_submit_font_size: 1rem;
+$lawyer_error_margin_bottom: 0.6rem;
+$lawyer_error_font_size: 1.2rem;
+
+// articles
+$articles_heading_padding: 0.5rem 0.6rem;
+$articles_item_margin: 0.5rem;
+$articles_item_border_width: 0.1rem;
+$articles_item_image_path: "../images/play3.png";
+$articles_list_padding: 1rem;
+$articles_list_padding_left: 2rem;
+$articles_list_border_width: 0.1rem;
+
+// ad
+$ad_image_width: 100%;
+$ad_margin_bottom: 1rem;
+
+// social
+$social_icon_font_size: 2.4rem;
+$social_link_margin_right: 0.4rem;
+$social_link_margin_bottom: 0.1rem;
+
+// header
+$header_info_padding: 0.8rem 1rem;
+$header_info_breakpoint: 46rem;
+$header_info_flex: 100%;
+$header_info_margin_top: 1rem;
+$header_links_margin_bottom: 2.5rem;
+$header_logo_margin_right: 2rem;
+$header_top_padding: 1rem;
+$header_search_breakpoint: 54rem;
+$header_search_flex: 100%;
+$header_search_margin_top: 2rem;
+$header_navigation_border_width: 0.1rem;
+$header_call_margin: 0.5rem;
+$header_call_breakpoint: 31rem;
+$header_call_flex: 100%;
 
 // footer
+$footer_copyright_margin_bottom: 0.5rem;
+$footer_copyright_padding: 0.6rem 1.3rem;
+$footer_copyright_font_size: 0.83rem;
+$footer_heading_margin_bottom: 0.7rem;
+$footer_heading_padding_bottom: 0.5rem;
+$footer_heading_font_size: 1.25rem;
+$footer_heading_border_width: 0.2rem;
+$footer_link_padding_bottom: 0.3rem;
+$footer_link_font_size: 0.9rem;
+$footer_links_margin_top: 1.7rem;
+$footer_links_margin_bottom: 1.5rem;
+$footer_list_links_flex: 1;
+$footer_list_links_full_flex: 100%;
+$footer_list_links_margin_right: 2.8rem;
+$footer_list_links_breakpoint: 49rem;
+$footer_list_links_breakpoint_small: 26rem;
+$footer_list_links_margin_bottom: 1rem;
+$footer_list_services_margin_right: 2.8rem;
+$footer_list_services_flex: 2;
+$footer_list_services_full_flex: 100%;
+$footer_list_services_order: 1;
+$footer_list_services_margin_bottom: 1rem;
+$footer_list_connect_flex: 1;
+$footer_list_part_flex: 1;
+$footer_list_part_full_flex: 100%;
+$footer_list_part_margin: 2.8rem;
+$footer_track_height: 0.25rem;
+$footer_track_top_background_image_path: "../images/track-top.png";
+$footer_track_bottom_background_image_path: "../images/track-bottom.png";
 
 // home
+$home_padding: 2rem 0;
+$home_aside_flex: 1;
+$home_aside_margin_top: 2rem;
+$home_articles_margin_bottom: 1rem;
+$home_content_flex: 3;
+$home_content_breakpoint: 49rem;
+$home_content_full_flex: 100%;
+$home_content_margin_right: 2rem;
+$home_cards_min_width: 15rem;
+$home_cards_max_width: 1fr;
+$home_cards_row_gap: 1.2rem;
+$home_cards_column_gap: 0.6rem;
+$home_heading_font_size: 2.2rem;
+$home_heading_font_size_small: 1.7rem;
+$home_heading_line_height: 2.7rem;
+$home_heading_line_height_small: 2.2rem;
+$home_subheading_margin_bottom: 2rem;
+$home_subheading_font_size: 1.6rem;
+$home_subheading_font_size_small: 1.4rem;
+$home_laywer_margin_bottom: 1rem;

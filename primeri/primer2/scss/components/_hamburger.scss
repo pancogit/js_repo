@@ -1,0 +1,50 @@
+/* hamburger */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.hamburger {
+
+    // hide by default
+    display: none;
+
+    // show hamburger menu when screen gets smaller
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$header_nav_breakpoint) {
+        display: block;
+    }
+
+    &__icon {
+        font-size: variables.$hamburger_icon_font_size;
+        color: colors.$hamburger_icon_color;
+
+        &:hover {
+            color: colors.$hamburger_icon_color_hover;
+        }
+
+        // hide by default
+        &--open {
+            display: none;
+        }
+
+        &--close {
+            
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        // when hamburger menu is hovered, show another icon
+        &:hover {
+
+            .hamburger__icon--open {
+                display: inline-block;
+            }
+
+            .hamburger__icon--close {
+                display: none;
+            }
+        }
+    }
+}

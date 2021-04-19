@@ -1,18 +1,215 @@
 // variables 
 
 
+// reset 
+$body_font_family: Arial, Helvetica, sans-serif;
+
 // media screen
 $media_screen_small: 20rem;
 $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// wrapper
+$wrapper_min_width: 20rem;
+$wrapper_content_max_width: 80rem;
+$wrapper_content_padding: 1rem;
 
-// logo
+// logo 
+$logo_margins_margin_top: 1rem;
+$logo_margins_margin_bottom: -10rem;
+
+// navigation
+$navigation_link_padding: 1.5rem 2rem;
+$navigation_link_font_size: 1.2rem;
+
+// hamburger
+$hamburger_icon_font_size: 1.3rem;
+
+// submenu
+$submenu_active_margin_left: 14.5rem;
+$submenu_link_padding: 1rem;
+$submenu_link_font_size: 0.75rem;
+
+// slides
+$slides_height: 60rem;
+$slides_height_smaller: 40rem;
+$slides_height_medium: 30rem;
+$slides_breakpoint_medium: 43rem;
+$slides_breakpoint_small: 33rem;
+$slides_background_image: url("../images/tree_1.jpg");
+$slides_content_height: 100%;
+$slides_control_padding: 1.3rem 1.8rem;
+$slides_control_padding_medium: 1rem 1.5rem;
+$slides_control_border_radius: 0.4rem;
+$slides_icon_font_size: 2.3rem;
+$slides_icon_font_size_medium: 2rem;
+
+// card
+$card_padding: 1.2rem;
+$card_margin_left: 1.5rem;
+$card_margin_bottom: 1.5rem;
+$card_breakpoint: 24rem;
+$card_flex: 1;
+$card_flex_basis: 0 1 22rem;
+$card_button_padding: 0.5rem 1.5rem;
+$card_button_border_width: 0.12rem;
+$card_button_border_radius: 0.3rem;
+$card_button_transition_time: 0.5s;
+$card_heading_margin_bottom: 3rem;
+$card_heading_margin_bottom_small: 1.5rem;
+$card_info_margin_right: 0.7rem;
+$card_media_margin_top: -2.5rem;
+$card_media_margin_right: -2rem;
+$card_right_font_size: 0.7rem;
+$card_text_margin_right: 1rem;
+$card_text_margin_top: 1.2rem;
+$card_text_order: 1;
+$card_title_margin_bottom: 0.1rem;
+$card_title_l1_font_size: 0.95rem;
+$card_title_l2_font_size: 1.4rem;
+
+// article
+$article_button_padding: 0.5rem 0.7rem;
+$article_button_border_radius: 0.25rem;
+$article_button_border_top-width: 0.3rem;
+$article_button_margin_left: 0.12rem;
+$article_buttons_padding: 0.3rem;
+$article_buttons_margin_right: 1.4rem;
+$article_buttons_border_radius: 0.25rem;
+$article_heading_font_size: 1.6rem;
+$article_subheading_margin_top: 0.3rem;
+$article_subheading_margin_bottom: 1.5rem;
+$article_subheading_font_size: 1rem;
+$article_text_line_height: 1.4rem;
+$article_text_font_size: 0.95rem;
+
+// redirect
+$redirect_font_size: 0.9rem;
+$redirect_text_margin_right: 0.65rem;
+$redirect_arrow_font_size: 0.7rem;
+
+// social
+$social_icon_font_size: 1.2rem;
+$social_link_margin: 0.2rem;
+$social_circle_width: 1.5rem;
+$social_circle_padding: 0.35rem;
+$social_circle_border_radius: 50%;
+
+// submit
+$submit_margin_bottom: 2.5rem;
+$submit_button_padding: 0.85rem;
+$submit_button_font_size: 0.9rem;
+$submit_button_border_radius: 0.3rem;
+$submit_heading_font_size: 0.95rem;
+$submit_heading_letter_spacing: 0.05rem;
+$submit_input_padding: 0.6rem 1rem;
+$submit_input_border_width: 0.15rem;
+
+// article-block
+$article_block_heading_margin_top: 0.3rem;
+$article_block_heading_margin_bottom: 1.5rem;
+$article_block_heading_font_size: 1rem;
+$article_block_text_line_height: 1.4rem;
+$article_block_text_font_size: 0.95rem;
 
 // header 
+$header_nav_flex: 1;
+$header_nav_margin_left: 1rem;
+$header_nav_margin_right: 1.5rem;
+$header_nav_breakpoint: 70rem;
+$header_navigation_padding_top: 1.5rem;
+$header_navigation_breakpoint: 35rem;
+$header_language_font_size: 1.1rem;
+$header_language_margin_top: 1.5rem;
+$header_language_margin_left: 3rem;
+$header_language_flex: 1;
+$header_hamburger_margin_top: 1.5rem;
+$header_hamburger_margin_left: 2rem;
+$header_menu_flex: 1;
+$header_link_padding_top: 1rem;
+$header_link_padding_left: 1.4rem;
+$header_register_font_size: 0.75rem;
+$header_icon_font_size: 1.2rem;
 
 // footer
+$footer_background_image: url("../images/green.jpg");
+$footer_copy_padding_top: 1.2rem;
+$footer_copy_padding_bottom: 2rem;
+$footer_copyright_font_size: 0.7rem;
+$footer_forms_breakpoint: 41rem;
+$footer_forms_flex: 100%;
+$footer_forms_margin_top: 3rem;
+$footer_heading_font_size: 0.9rem;
+$footer_item_margin_bottom: 0.5rem;
+$footer_join_margin_right: 0.7rem;
+$footer_join_font_size: 0.9rem;
+$footer_join_letter_spacing: 0.05rem;
+$footer_link_font_size: 0.9rem;
+$footer_link_font_size_small: 0.7rem;
+$footer_social_breakpoint: 53rem;
+$footer_terms_margin_left: 0.7rem;
+$footer_terms_font_size: 0.7rem;
+$footer_terms_breakpoint: 32rem;
+$footer_terms_flex: 100%;
+$footer_terms_margin_top: 0.3rem;
+$footer_links_grid_min_width: 8rem;
+$footer_links_grid_max_width: 1fr;
+$footer_links_grid_gap: 1.5rem;
+$footer_links_flex: 1;
+$footer_list_margin_bottom: 2rem;
+$footer_lists_padding_top: 1.5rem;
+$footer_lists_padding_bottom: 3.5rem;
+$footer_lists_padding_bottom_small: 2rem;
+$footer_logo_margin_bottom: 0.8rem;
+$footer_savor_font_size: 1rem;
+$footer_savor_letter_spacing: 0.2rem;
+$footer_social_flex: 100%;
+$footer_tm_margin_left: 0.2rem;
+$footer_tm_font_size: 0.65rem;
+$footer_top_border_width: 0.2rem;
+$footer_top_content_padding: 1rem;
+$footer_trademark_margin_left: 1.8rem;
+$footer_trademark_breakpoint: 23rem;
+$footer_trademark_margin_left_small: 1rem;
 
 // home
+$home_padding_bottom: 3rem;
+$home_cards_margin_top: -12.5rem;
+$home_cards_breakpoint: 60rem;
+$home_cards_padding_top: 1.5rem;
+$home_articles_grid_min_width: 18rem;
+$home_articles_grid_max_width: 1fr;
+$home_articles_grid_gap: 2rem;
+$home_articles_margin_top: 3rem;
+$home_articles_margin_top_medium: 1.5rem;
+$home_articles_padding_top_medium: 2rem;
+$home_articles_border_top_width: 0.15rem;
+
+// articles
+$articles_padding_top: 2.7rem;
+$articles_padding_bottom: 3rem;
+$articles_content_grid_min_width: 18rem;
+$articles_content_grid_max_width: 1fr;
+$articles_content_gap: 2rem;
+$articles_content_margin_bottom: 1rem;
+$articles_heading_margin_bottom: 2rem;
+$articles_heading_font_size: 1.6rem;
+
+// article-page
+$article_page_padding_top: 2.7rem;
+$article_page_padding_bottom: 3rem;
+$article_page_content_margin_bottom: 1rem;
+$article_page_heading_margin_bottom: 2rem;
+$article_page_heading_font_size: 1.6rem;
+$article_page_text_line_height: 1.4rem;
+$article_page_text_font_size: 0.95rem;
+
+// mobile-menu
+$mobile_menu_right: 30%;
+$mobile_menu_close_link_margin: 1rem;
+$mobile_menu_close_link_margin_right: 0.8rem;
+$mobile_menu_close_link_font_size: 1.5rem;
+$mobile_menu_navigation_link_padding: 1rem;
+$mobile_menu_submenu_link_padding: 1rem;
+$mobile_menu_submenu_link_padding_left: 2rem;

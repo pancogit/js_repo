@@ -1,12 +1,111 @@
 // colors
 
 
-// button 
+// reset
+
+// page
 
 // logo
+$logo_legal_color: #0f8600;
+$logo_trump_color: #065397;
 
-// header 
+// menu
+$menu_item_border_color: #6d6d64;
+$menu_link_color: #6d6d64;
+$menu_link_color_hover: #52524c;
+
+// login
+$login_link_background_color: #4aa93f;
+$login_link_color: white;
+$login_text_border_color: #b7b2b2;
+$login_text_color: #565656;
+
+// search
+$search_button_background_color: #4aa93f;
+$search_button_color: white;
+$search_input_border_color: #b7b2b2;
+
+// navigation
+$navigation_mobile_background_color: white;
+$navigation_link_border_color: #3a3a3a;
+$navigation_link_color: white;
+$navigation_link_background_color_hover: #272727;
+$navigation_link_mobile_color: #015597;
+$navigation_link_mobile_hover_background_color: white;
+$navigation_link_mobile_hover_color: #00355f;
+$navigation_plus_color: #888a88;
+$navigation_close_link_color: #015597;
+$navigation_close_link_color_hover: #00355f;
+
+// dropdown
+$dropdown_link_color: white;
+$dropdown_link_background_color: #272727;
+$dropdown_list_background_color: #484846;
+$dropdown_link_border_color: #3a3a3a;
+$dropdown_link_mobile_background_color: white;
+$dropdown_link_mobile_color: #015597;
+$dropdown_link_mobile_color_hover: #00355f;
+
+// hamburger
+$hamburger_link_color: white;
+$hamburger_link_color_hover: silver;
+
+// commercial
+$commercial_text_color: #494d4c;
+$commercial_text_background_color: rgb(255 255 255 / 85%);
+
+// card
+$card_border_color: #dadada;
+$card_heading_color: #494948;
+$card_text_color: #656464;
+
+// button
+
+// news
+$news_border_color: #dadada;
+$news_about_color: #4a6129;
+$news_heading_color: #4a6129;
+$news_text_color: #656464;
+
+// lawyer
+$lawyer_content_background_color: #e9eee7;
+$lawyer_content_border_color: #c7c7c7;
+$lawyer_heading_color: white;
+$lawyer_heading_background_color: #00559e;
+$lawyer_select_color: #656464;
+$lawyer_select_border_color_error: red;
+$lawyer_select_border_color_good: green;
+$lawyer_submit_background_color: #48aa3f;
+$lawyer_submit_background_color_hover: #298422;
+$lawyer_submit_color: white;
+$lawyer_error_color: red;
+
+// articles
+$articles_heading_background_color: #464a49;
+$articles_heading_color: white;
+$articles_item_border_color: #e4e4e4;
+$articles_link_color: #656464;
+$articles_link_color_hover: #383737;
+$articles_list_border_color: #c7c7c7;
+
+// ad
+
+// social
+$social_link_color: #686565;
+$social_link_color_hover: #332f2f;
+
+// header
+$header_info_background_color: #849573;
+$header_info_color: white;
+$header_navigation_background_color: #484846;
+$header_navigation_border_color: #3a3a3a;
 
 // footer
+$footer_background_color: #e7e7e7;
+$footer_copyright_background_color: #c9c9c9;
+$footer_copyright_color: #404040;
+$footer_heading_border_color: #d3d3d3;
+$footer_link_color: #5d5654;
+$footer_link_color_hover: #1d1d1d;
 
 // home

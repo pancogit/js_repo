@@ -1,0 +1,31 @@
+/* hamburger */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.hamburger {
+
+    // hide by default
+    display: none;
+
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+        display: block;
+    }
+
+    &__icon {
+
+    }
+
+    &__link {
+        display: inline-block;
+        margin: variables.$hamburger_link_margin;
+        padding: variables.$hamburger_link_padding;
+        color: colors.$hamburger_link_color;
+        font-size: variables.$hamburger_link_font_size;
+
+        &:hover {
+            color: colors.$hamburger_link_color_hover;
+        }
+    }
+}

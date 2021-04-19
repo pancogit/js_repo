@@ -1,0 +1,27 @@
+/* circle */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.circle {
+    width: variables.$circle_dimension;
+    height: variables.$circle_dimension;
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$circle_border_width,
+                                $color: colors.$circle_border_color);
+
+    border-radius: variables.$circle_border_radius;
+
+    // hide circle
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$circle_breakpoint) {
+        display: none;
+    }
+
+    &--small {
+        width: variables.$circle_dimension_small;
+        height: variables.$circle_dimension_small;
+    }
+}

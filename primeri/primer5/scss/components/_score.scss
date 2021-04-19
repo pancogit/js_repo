@@ -1,0 +1,139 @@
+/* score */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.score {
+
+    // set flexbox
+    @include mixins.set_flexbox_container($align_items: center);
+
+    padding: variables.$score_padding;
+
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        padding: variables.$score_padding_small;
+    }
+
+    // block modifier for top border
+    &--top-border {
+        @include mixins.set_borders($top_style: solid,
+                                    $top_width: variables.$home_border_width,
+                                    $top_color: colors.$home_border_color);
+    }
+
+    &__button {
+        // set flexbox and center flex items vertically
+        @include mixins.set_flexbox_container($align_items: center);
+
+        padding: variables.$score_button_padding;
+        outline: none;
+        border-radius: variables.$score_button_border_radius;
+        cursor: pointer;
+        
+        @include mixins.set_borders($style: solid, $width: variables.$score_button_border_width);
+
+        &--back {
+            border-color: colors.$score_button_back_border_color;
+            background-color: colors.$score_button_back_background_color;
+
+            .score__icon {
+                margin-right: variables.$score_icon_margin;
+                color: colors.$score_icon_back_color;
+            }
+
+            .score__text {
+                color: colors.$score_text_back_color;
+            }
+
+            &:hover {
+                background-color: colors.$score_button_back_hover_background_color;
+
+                .score__icon {
+                    color: colors.$score_icon_back_hover_color;
+                }
+            }
+
+            // disabled back button
+            &-disabled {
+                cursor: auto;
+
+                .score__text, .score__icon {
+                    color: colors.$score_button_back_disabled_color;
+                }
+
+                &:hover {
+                    background-color: colors.$score_button_back_background_color;
+
+                    .score__icon {
+                        color: colors.$score_button_back_disabled_color;
+                    }
+                }
+            }
+        }
+
+        &--next {
+            border-color: colors.$score_next_border_color;
+            background-color: colors.$score_next_background_color;
+
+            .score__icon {
+                margin-left: variables.$score_icon_margin;
+                color: colors.$score_icon_next_color;
+            }
+
+            .score__text {
+                color: colors.$score_text_next_color;
+            }
+
+            &:hover {
+                border-color: colors.$score_next_hover_border_color;
+                background-color: colors.$score_next_hover_background_color;
+            }
+        }
+    }
+
+    &__content {
+        @include mixins.set_flex_item($flex: variables.$score_content_flex);
+
+        margin-left: variables.$score_content_margin;
+        margin-right: variables.$score_content_margin;
+        text-align: center;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            margin-left: variables.$score_content_margin_small;
+            margin-right: variables.$score_content_margin_small;
+        }
+    }
+
+    &__icon {
+        font-size: variables.$score_icon_font_size;
+    }
+
+    &__level {
+        // change width of box to change percentage
+        width: variables.$score_level_width;
+
+        height: variables.$score_level_height;
+        border-radius: variables.$score_level_border_radius;
+        background-color: colors.$score_level_background_color;
+    }
+
+    &__percentage {
+        text-transform: uppercase;
+        font-size: variables.$score_percentage_font_size;
+        font-weight: bold;
+        color: colors.$score_percentage_color;
+    }
+
+    &__progress {
+        margin-top: variables.$score_progress_margin_top;
+        height: variables.$score_progress_height;
+        background-color: colors.$score_progress_background_color;
+        border-radius: variables.$score_progress_border_radius;
+    }
+
+    &__text {
+        font-weight: bold;
+        font-size: variables.$score_text_font_size;
+    }
+}

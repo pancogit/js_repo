@@ -1,1 +1,29 @@
 /* logo */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.logo {
+
+    &__image {
+
+    }
+
+    &__legal {
+        color: colors.$logo_legal_color;
+    }
+
+    &__link {
+        display: inline-block;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: variables.$logo_text_font_size;
+        font-weight: bold;
+    }
+
+    &__trump {
+        color: colors.$logo_trump_color;
+    }
+}

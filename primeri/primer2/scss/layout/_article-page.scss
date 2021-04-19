@@ -1,0 +1,42 @@
+/* article-page */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.article-page {
+
+    padding-top: variables.$article_page_padding_top;
+    padding-bottom: variables.$article_page_padding_bottom;
+    
+    &__content {
+        margin-bottom: variables.$article_page_content_margin_bottom;
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: variables.$article_page_heading_margin_bottom;
+        font-weight: normal;
+        font-size: variables.$article_page_heading_font_size;
+        color: colors.$article_page_heading_color;
+    }
+
+    &__text {
+        margin-top: 0;
+        line-height: variables.$article_page_text_line_height;
+        font-size: variables.$article_page_text_font_size;
+        color: colors.$article_page_text_color;
+    }
+
+    &__uppercase {
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+
+    }
+
+    &__quotes {
+        
+    }
+}

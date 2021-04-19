@@ -1,1 +1,107 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    &__info {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap);
+
+        margin: 0;
+        padding: variables.$header_info_padding;
+        background-color: colors.$header_info_background_color;
+        color: colors.$header_info_color;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_info_breakpoint) {
+            // spread flex item to full width
+            @include mixins.set_flex_item($flex: variables.$header_info_flex);
+
+            margin-top: variables.$header_info_margin_top;
+        }
+    }
+
+    &__call {
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_call_breakpoint) {
+            // for small screens grow flex item to full width
+            @include mixins.set_flex_item($flex: variables.$header_call_flex);
+
+            margin-bottom: variables.$header_call_margin;
+        }
+
+        // insert generated content
+        &::after {
+            content: "|";
+            margin-left: variables.$header_call_margin;
+            margin-right: variables.$header_call_margin;
+
+            // remove generated content for small screens
+            @include mixins.media_screen_breakpoint($breakpoint: variables.$header_call_breakpoint) {
+                content: "";
+                margin: 0;
+            }
+        }
+    }
+
+    &__email {
+
+    }
+
+    &__links {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between, $align_items: center);
+
+        margin-bottom: variables.$header_links_margin_bottom;
+    }
+
+    &__login {
+        // set flexbox container and align content on main axis to the right
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: flex-end, $align_items: center);
+
+        // center flex items on main axis
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$login_breakpoint) {
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        margin-right: variables.$header_logo_margin_right;
+
+        // center logo on page with flexbox item auto margins
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_search_breakpoint) {
+            margin: auto;
+        }
+    }
+
+    &__navigation {
+        background-color: colors.$header_navigation_background_color;
+
+        // set top and bottom border
+        @include mixins.set_borders($top-style: solid,
+                                    $top-width: variables.$header_navigation_border_width,
+                                    $top-color: colors.$header_navigation_border_color,
+                                    
+                                    $bottom-style: solid,
+                                    $bottom-width: variables.$header_navigation_border_width,
+                                    $bottom-color: colors.$header_navigation_border_color);
+    }
+
+    &__search {
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$header_search_breakpoint) {
+            // spread flex item to full width
+            @include mixins.set_flex_item($flex: variables.$header_search_flex);
+
+            margin-top: variables.$header_search_margin_top;
+        }
+    }
+
+    &__top {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between, $align_items: center);
+
+        padding-top: variables.$header_top_padding;
+        padding-bottom: variables.$header_top_padding;
+    }
+}

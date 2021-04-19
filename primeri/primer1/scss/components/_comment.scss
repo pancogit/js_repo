@@ -1,0 +1,219 @@
+/* comment */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.comment {
+
+    // set flexbox container to spread comment input to full width
+    @include mixins.set_flexbox_container($flex_direction: column);
+
+    &__box {
+        margin-bottom: variables.$comment_margin_bottom;
+
+        // set flexbox container
+        @include mixins.set_flexbox_container();
+
+        // element modifier for comment box
+        // set one level of nesting for better readability and looks better
+        // there is one post, and all replies to that post
+        // if there is reply on reply, that will be on the same level of nesting as original reply
+        &--reply {
+            margin-left: variables.$comment_box_margin_left;
+        }
+    }
+
+    &__left {
+        margin-right: variables.$comment_left_margin_right;
+    }
+
+    &__controls {
+        // hide by default
+        display: none;
+
+        margin-bottom: variables.$comment_controls_margin_bottom;
+    }
+
+    &__cancel {
+        color: colors.$comment_cancel_color;
+        font-weight: bold;
+
+        &:hover {
+            color: colors.$comment_cancel_color_hover;
+        }
+    }
+
+    &__count {
+        
+    }
+
+    &__date {
+        color: colors.$comment_date_color;
+        font-size: variables.$comment_date_font_size;
+    }
+
+    &__dot {
+        color: colors.$comment_date_color;
+    }
+
+    &__footer {
+        margin-top: variables.$comment_footer_margin_top;
+        margin-bottom: variables.$comment_footer_margin_bottom;
+        line-height: variables.$comment_footer_line_height;
+    }
+
+    &__header {
+        margin-top: variables.$comment_header_margin_top;
+        margin-bottom: variables.$comment_header_margin_bottom;
+    }
+
+    &__image {
+
+    }
+
+    &__info {
+
+    }
+
+    &__input {
+        padding: variables.$comment_input_padding;
+        margin-bottom: variables.$comment_input_margin_bottom;
+
+        // don't resize comment input
+        resize: none;
+
+        // disable flex shrinking to set height of flex item via flex basis
+        // don't grow, don't shrink, just set flex basis as height
+        @include mixins.set_flex_item($flex: variables.$comment_input_flex);
+
+        // change font for comments
+        font-family: variables.$comment_input_font_family;
+        font-size: variables.$comment_input_font_size;
+
+        outline: none;
+
+        @include mixins.set_borders($color: colors.$comment_input_border_color,
+                                    $width: variables.$comment_input_border_width,
+                                    $style: solid);
+        border-radius: variables.$comment_input_border_radius;
+
+        &:focus {
+            border-color: colors.$comment_input_border_color_hover;
+        }
+
+        // change style of placeholder
+        &::placeholder {
+            color: colors.$comment_input_placeholder_color;
+            font-size: variables.$comment_input_placeholder_font_size;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: colors.$comment_link_color;
+
+        &--small {
+            font-size: variables.$comment_link_font_size_small;
+        }
+    }
+
+    // comment input error
+    // comment input focus has higher cascade than simple class
+    // because of that, make higher cascade with nested class
+    .comment__input--error {
+        border-color: colors.$comment_input_border_color_error;
+    }
+
+    // comment message
+    &__message {
+        margin-top: variables.$comment_message_margin_top;
+        font-size: variables.$comment_message_font_size;
+
+        &--error {
+            color: colors.$comment_message_color_error;
+        }
+    }
+
+    &__like {
+
+    }
+
+    &__reply-link {
+
+    }
+
+    &__like-link {
+
+        // if comment is already liked, close pointer cursor and change color of link
+        &--already-liked {
+            cursor: auto;
+            color: colors.$comment_like_link_already_liked_color;
+        }
+    }
+
+    // relative positioning used for positioning container for dynamicaly inserted person list box
+    &__person-wrapper {
+        display: inline-block;
+        position: relative; 
+    }
+
+    &__person-list {
+        // set flexbox container
+        @include mixins.set_flexbox_container($flex-direction: column);
+
+        padding: variables.$comment_person_list_padding;
+
+        // spread person list to full person wrapper width
+        position: absolute;
+        right: variables.$comment_person_list_right;
+        left: 0;
+        z-index: variables.$comment_person_list_z_index;
+
+        background-color: colors.$comment_person_list_background_color;
+        border-radius: variables.$comment_person_list_border_radius;
+    }
+
+    &__person-name {
+        color: colors.$comment_person_name_color;
+        font-size: variables.$comment_person_name_font_size;
+    }
+
+    &__person-link {
+
+        // close pointer cursor and change color of link for empty person list
+        &--empty-list {
+            cursor: auto;
+            color: colors.$comment_person_list_empty_color;
+        }
+    }
+
+    &__liked {
+        color: colors.$comment_date_color;
+        font-size: variables.$comment_liked_font_size;
+    }
+
+    &__submit {
+        padding: variables.$comment_submit_padding;
+        margin-right: variables.$comment_submit_margin_right;
+        background-color: colors.$comment_submit_background_color;
+        color: colors.$comment_submit_color;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: colors.$comment_submit_background_color_hover;
+        }
+    }
+
+    &__text {
+        margin: variables.$comment_text_margin;
+        line-height: variables.$comment_text_line_height;
+    }
+
+    &__user {
+        font-weight: bold;
+    }
+}

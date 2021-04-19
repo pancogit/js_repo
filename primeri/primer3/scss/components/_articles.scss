@@ -1,0 +1,59 @@
+/* articles */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.articles {
+    
+    &__heading {
+        padding: variables.$articles_heading_padding;
+        background-color: colors.$articles_heading_background_color;
+        color: colors.$articles_heading_color;
+        font-weight: bold;
+    }
+
+    &__item {
+        margin-bottom: variables.$articles_item_margin;
+        padding-bottom: variables.$articles_item_margin;
+
+        // set image as bullet for list items
+        list-style-image: url(variables.$articles_item_image_path);
+
+        // set bottom border
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$articles_item_border_width,
+                                    $bottom-color: colors.$articles_item_border_color);
+    }
+
+    &__link {
+        // spread link to full width
+        display: block;
+
+        color: colors.$articles_link_color;
+
+        &:hover {
+            color: colors.$articles_link_color_hover;
+        }
+    }
+    
+    &__list {
+        margin: 0;
+        padding: variables.$articles_list_padding;
+        padding-left: variables.$articles_list_padding_left;
+        list-style-type: none;
+
+        // set borders
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$articles_list_border_width,
+                                    $bottom-color: colors.$articles_list_border_color,
+                                    
+                                    $left-style: solid,
+                                    $left-width: variables.$articles_list_border_width,
+                                    $left-color: colors.$articles_list_border_color,
+                                    
+                                    $right-style: solid,
+                                    $right-width: variables.$articles_list_border_width,
+                                    $right-color: colors.$articles_list_border_color);
+    }
+}

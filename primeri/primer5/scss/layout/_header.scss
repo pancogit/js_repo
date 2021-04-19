@@ -1,1 +1,124 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+
+    // set flexbox
+    @include mixins.set_flexbox_container($flex_wrap: wrap, $justify_content: space-between);
+
+    padding: variables.$header_padding;
+
+    // set borders
+    @include mixins.set_borders($style: solid,
+                                $width: variables.$home_border_width,
+                                $color: colors.$home_border_color);
+    border-bottom: none;
+    font-size: variables.$header_font_size;
+
+    background-color: colors.$header_background_color;
+    color: colors.$header_color;
+
+    // remove borders when there are no paddings and center flex items
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+        border: none;
+        padding: variables.$header_padding_small;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__age {
+
+    }
+
+    &__birthday {
+        &::after {
+            content: "|";
+            margin: variables.$header_birthday_margin;
+        }
+    }
+
+    &__center {
+        margin-left: variables.$header_center_margin;
+        margin-right: variables.$header_center_margin;
+        text-align: center;
+        
+        // spread flex item to full width and push them to the end with flex order
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$home_col_2_breakpoint_medium) {
+            @include mixins.set_flex_item($flex: variables.$header_center_flex_full);
+
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: variables.$header_center_margin_top;
+            order: variables.$header_center_order;
+        }
+    }
+
+    &__date {
+        // set flexbox
+        @include mixins.set_flexbox_container();
+    }
+
+    &__heading {
+        margin-top: variables.$header_heading_margin_top;
+        margin-bottom: variables.$header_heading_margin_bottom;
+        font-weight: normal;
+        font-size: variables.$header_heading_font_size;
+    }
+
+    &__hours-mins {
+
+    }
+
+    &__icon {
+
+    }
+
+    &__info {
+        text-align: right;
+
+        // spread flex item to full width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            @include mixins.set_flex_item($flex: variables.$header_center_flex_full);
+
+            margin-top: variables.$header_info_margin_top;
+            margin-bottom: variables.$header_center_margin_top / 2;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        margin-right: variables.$header_link_margin_right;
+        color: colors.$header_link_color;
+    }
+
+    &__period {
+
+    }
+
+    &__status {
+        // set flexbox
+        @include mixins.set_flexbox_container($justify_content: flex-end, $align_items: center);
+
+        // center flex items
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$page_aside_breakpoint) {
+            justify-content: center;
+        }
+    }
+
+    &__time {
+        
+    }
+
+    &__user {
+        margin-top: variables.$header_user_margin;
+        margin-bottom: variables.$header_user_margin;
+        font-weight: bold;
+    }
+
+    &__wifi {
+        
+    }
+}

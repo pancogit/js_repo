@@ -1,0 +1,87 @@
+/* subscribe */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.subscribe {
+    // set flexbox container
+    @include mixins.set_flexbox_container($flex_direction: column);
+
+    &__email {
+        margin-bottom: variables.$subscribe_email_margin_bottom;
+        padding: variables.$subscribe_email_padding;
+        outline: none;
+        
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$subscribe_email_border_width,
+                                    $color: colors.$subscribe_email_border_color);
+
+        // for one column layout change width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+            width: variables.$subscribe_email_width_small;
+        }
+
+        // element modifier for email
+        // correct input
+        &--good {
+            border-color: colors.$subscribe_email_good_border_color;
+        }
+
+        // input error
+        &--error {
+            border-color: colors.$subscribe_email_error_border_color;
+        }
+    }
+
+    &__message {
+        margin-top: variables.$subscribe_message_margin_top;
+
+        &--error {
+            // the same color as email border color
+            color: colors.$subscribe_email_error_border_color;;
+        }
+
+        &--good {
+            color: colors.$subscribe_message_good_color;
+            font-size: variables.$subscribe_message_good_font_size;
+        }
+    }
+
+    &__heading {
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: variables.$subscribe_heading_letter_spacing;
+    }
+
+    &__submit {
+        padding: variables.$subscribe_submit_padding;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: variables.$subscribe_submit_font_size;
+        letter-spacing: variables.$subscribe_submit_letter_spacing;
+        outline: none;
+        background-color: colors.$subscribe_submit_background_color;
+        color: colors.$subscribe_submit_color;
+        cursor: pointer;
+
+        // set borders
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$subscribe_email_border_width,
+                                    $color: colors.$subscribe_submit_background_color);
+
+        &:hover {
+            background-color: colors.$subscribe_submit_background_color_hover;
+            border-color: colors.$subscribe_submit_background_color_hover;
+        }
+
+        // change box to be content box, because email is content box, to match both width
+        box-sizing: content-box;
+
+        // one column layout change width
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$footer_content_breakpoint) {
+            width: variables.$subscribe_submit_width_small;
+        }
+    }
+}

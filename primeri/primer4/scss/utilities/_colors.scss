@@ -1,12 +1,98 @@
 // colors
 
 
-// button 
+// page
+
+// search
+$search_button_background_color: white;
+$search_icon_color: #736d6d;
+$search_recipe_placeholder_color: #41403c;
+$search_link_hover_background_color: #d8cfcf;
+$search_container_background_color: #afafaf;
+$search_category_color: #402d2d;
+$search_name_color: black;
+$search_no_results_color: black;
+
+// arrows
+$arrows_link_background_color: white;
+$arrows_link_color: #a2a0a0;
+$arrows_link_active_background_color: #ee9610;
+$arrows_link_active_color: white;
+$arrows_link_active_hover_background_color: #f7a221;
+$arrows_link_gray_background_color: #d6cfbd;
+$arrows_link_gray_color: white;
+
+// navigation
+$navigation_link_color: #ca7c0c;
+$navigation_link_color_hover: #e98b08;
+
+// dropdown
+$dropdown_link_color: #534c3c;
+$dropdown_link_color_hover: #24211a;
+
+// borders
+$borders_background_color: #d7d0be;
+
+// last-recipes
+$last_recipes_card_active_color: #8c867a;
+$last_recipes_date_color: #4a4333;
+$last_recipes_heading_color: #d07e00;
+$last_recipes_heading_color_hover: #e98b08;
+$last_recipes_track_background_color: #e0daca;
+
+// categories
+$categories_link_color: #d07e00;
+$categories_link_color_hover: #e98b08;
+$categories_link_active_color: #8c867a;
+$categories_link_active_color_hover: #8c867a;
+
+// recipes
+$recipes_card_border_color: #e0daca;
+$recipes_card_border_color_active: #8c867a;
+$recipes_link_color: #d07e00;
+$recipes_link_color_hover: #e98b08;
+$recipes_ingredients_color: #2f2c27;
+$recipes_more_color: #8c867a;
+$recipes_text_color: #5d5c57;
+
+// ads
+$ads_headings_color: #2b2923;
+
+// top
+$top_background_color: #4e4e4e;
+$top_background_color_hover: #838282;
+$top_icon_color: white;
 
 // logo
+$logo_link_color: #757064;
 
-// header 
+// subscribe
+$subscribe_button_color: #655c49;
+$subscribe_email_background_color: #ece9e0;
+$subscribe_email_border_color: #c5c0b5;
+$subscribe_email_error_background_color: #d07e00;
+$subscribe_email_error_color: black;
+
+// header
+$header_background_color: #e1d7cb;
+$header_headings_background_color: rgb(193 120 9 / 85%);
+$header_headings_color: white;
 
 // footer
+$footer_content_background_color: #e2dcce;
+$footer_copyright_color: #675d5d;
+$footer_heading_color: #544b3c;
+$footer_link_color: #3f3828;
+$footer_link_color_active: #8c8678;
 
 // home
+$home_click_background_color: white;
+$home_click_color: #7e7f78;
+$home_click_background_color_hover: #e2dcce;
+$home_click_color_hover: black;
+$home_courses_background_color: white;
+$home_dish_color: #474842;
+$home_heading_color: #504a3d;
+$home_heading_color_orange: #d07e00;
+$home_subheading_color: #4a473e;
+$home_track_background_color: #e2dcce;

@@ -1,0 +1,79 @@
+/* social */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.social {
+
+    &__icon {
+        font-size: variables.$social_icon_font_size;
+        color: colors.$social_icon_color;
+
+        // align flex item on both axis
+        margin: auto;
+    }
+
+    &__link {
+        margin: variables.$social_link_margin;
+        display: inline-block;
+    }
+
+    &__circle {
+        // set flexbox container to align flex items on both axis
+        @include mixins.set_flexbox_container();
+
+        width: variables.$social_circle_width;
+        padding: variables.$social_circle_padding;
+        background-color: colors.$social_circle_background_color;
+        border-radius: variables.$social_circle_border_radius;
+
+        &--pinterest {
+            background-color: colors.$social_circle_background_color_pinterest;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_pinterest_hover;
+            }
+        }
+
+        &--twitter {
+            background-color: colors.$social_circle_background_color_twitter;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_twitter_hover;
+            }
+        }
+
+        &--facebook {
+            background-color: colors.$social_circle_background_color_facebook;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_facebook_hover;
+            }
+        }
+
+        &--amazon {
+            background-color: colors.$social_circle_background_color_amazon;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_amazon_hover;
+            }
+        }
+
+        &--linkedin {
+            background-color: colors.$social_circle_background_color_linkedin;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_linkedin_hover;
+            }
+        }
+
+        &--google {
+            background-color: colors.$social_circle_background_color_google;
+
+            &:hover {
+                background-color: colors.$social_circle_background_color_google_hover;
+            }
+        }
+    }
+}

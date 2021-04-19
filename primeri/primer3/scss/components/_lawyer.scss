@@ -1,0 +1,89 @@
+/* lawyer */
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.lawyer {
+    
+    &__content {
+        padding: variables.$lawyer_content_padding;
+        background-color: colors.$lawyer_content_background_color;
+
+        // set borders
+        @include mixins.set_borders($bottom-style: solid,
+                                    $bottom-width: variables.$lawyer_content_border_width,
+                                    $bottom-color: colors.$lawyer_content_border_color,
+                                    
+                                    $left-style: solid,
+                                    $left-width: variables.$lawyer_content_border_width,
+                                    $left-color: colors.$lawyer_content_border_color,
+                                    
+                                    $right-style: solid,
+                                    $right-width: variables.$lawyer_content_border_width,
+                                    $right-color: colors.$lawyer_content_border_color);
+    }
+
+    &__heading {
+        padding: variables.$lawyer_heading_padding;
+        font-weight: bold;
+        color: colors.$lawyer_heading_color;
+        background-color: colors.$lawyer_heading_background_color;
+    }
+
+    &__option {
+
+    }
+
+    &__pointer {
+        margin-right: variables.$lawyer_pointer_margin_right;
+    }
+
+    &__search {
+
+    }
+
+    &__select {
+        margin-bottom: variables.$lawyer_select_margin_bottom;
+        padding: variables.$lawyer_select_padding;
+        border-radius: variables.$lawyer_select_border_radius;
+        border-width: variables.$lawyer_select_border_width;
+
+        // spread form select to full width
+        width: variables.$lawyer_select_width;
+
+        outline: none;
+        color: colors.$lawyer_select_color;
+
+        // element modifier for error
+        &--error {
+            border-color: colors.$lawyer_select_border_color_error;
+        }
+
+        // element modifier for good selection
+        &--good {
+            border-color: colors.$lawyer_select_border_color_good;
+        }
+    }
+
+    // error message
+    &__error {
+        margin-bottom: variables.$lawyer_error_margin_bottom;
+        font-size: variables.$lawyer_error_font_size;
+        color: colors.$lawyer_error_color;
+    }
+
+    &__submit {
+        padding: variables.$lawyer_submit_padding;
+        background-color: colors.$lawyer_submit_background_color;
+        font-size: variables.$lawyer_submit_font_size;
+        color: colors.$lawyer_submit_color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: colors.$lawyer_submit_background_color_hover;
+        }
+    }
+}
