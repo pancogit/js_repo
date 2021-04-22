@@ -11,6 +11,14 @@
     <!-- for responsive web design (mobile devices) -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
+    <!-- css bootstrap -->
+    <link href="../../../libraries/bootstrap/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" type="text/css"
+        rel="stylesheet" />
+
+    <!-- font awesome icons -->
+    <link href="../../../libraries/font-awesome/fontawesome-free-5.15.1-web/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+
     <!-- css styles -->
     <link href="../css/main.css" type="text/css" rel="stylesheet" />
 
@@ -20,15 +28,282 @@
 
 <body>
 
-    <header>
-    </header>
+    <div class="page">
+        <header class="header container-fluid">
+            <div class="row">
+                <div class="hamburger page__aside">
+                    <button class="hamburger__button">
+                        <i class="fas fa-arrow-left hamburger__icon"></i>
+                        <!-- <i class="fas fa-arrow-right hamburger__icon"></i> -->
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="header__search col-auto">
+                            <div class="row">
+                                <div class="search col-8">
+                                    <a href="index.html" class="search__link">
+                                        <i class="fas fa-times-circle search__icon"></i>
+                                    </a>
+                                </div>
+                                <span class="header__sort col-2">
+                                    <a href="index.html" class="header__link">
+                                        <!-- <i class="fas fa-square header__icon"></i> -->
+                                        <i class="fas fa-th-large header__icon"></i>
+                                        <!-- <i class="fas fa-th header__icon"></i> -->
+                                    </a>
+                                </span>
+                                <span class="header__sort col-2">
+                                    <a href="index.html" class="header__link">
+                                        <i class="fas fa-sort-alpha-down header__icon"></i>
+                                        <!-- <i class="fas fa-sort-alpha-up header__icon"></i> -->
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="index.html" class="header__link">
+                                <i class="fas fa-expand-alt header__icon"></i>
+                                <!-- <i class="fas fa-compress-alt header__icon"></i> -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <main>
-    </main>
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="navigation page__aside">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="index.html" class="navigation__link row">
+                                <i class="fas fa-folder navigation__icon col-auto"></i>
+                                <span class="navigation__text col">ballons</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="index.html" class="navigation__link row">
+                                <i class="fas fa-folder navigation__icon col-auto"></i>
+                                <span class="navigation__text col">files</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="index.html" class="navigation__link row">
+                                <i class="fas fa-folder-minus navigation__icon col-auto"></i>
+                                <span class="navigation__text col">galleries</span>
+                                <span class="navigation__expand col-auto">
+                                    <i class="fas fa-minus navigation__sign"></i>
+                                </span>
+                            </a>
+                            <ul class="navigation__submenu navigation__submenu--expanded">
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">cars</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">cityscape</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">forests</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">hiking</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">mountains</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="index.html" class="navigation__link row">
+                                <i class="fas fa-folder-plus navigation__icon col-auto"></i>
+                                <span class="navigation__text col">samples</span>
+                                <span class="navigation__expand col-auto">
+                                    <i class="fas fa-plus navigation__sign"></i>
+                                </span>
+                            </a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">music</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">pictures</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">videos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="index.html" class="navigation__link row">
+                                <i class="fas fa-folder-plus navigation__icon col-auto"></i>
+                                <span class="navigation__text col">tests</span>
+                                <span class="navigation__expand col-auto">
+                                    <i class="fas fa-plus navigation__sign"></i>
+                                </span>
+                            </a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">competency</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">disc</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">jung</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">personality</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">team-role</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="index.html" class="navigation__link row">
+                                        <i class="fas fa-folder navigation__icon col-auto"></i>
+                                        <span class="navigation__text col">work-values</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
 
-    <footer>
-    </footer>
+                <main class="home col">
+                    <div class="main__properties row justify-content-between">
+                        <div class="breadcrumbs col-auto">
+                            <div class="row">
+                                <span class="breadcrumbs__home col-auto">
+                                    <a href="index.html" class="breadcrumbs__main">
+                                        <i class="fas fa-home breadcrumbs__icon"></i>
+                                    </a>
+                                </span>
+                                <span class="breadcrumbs__item col-auto">
+                                    <a href="index.html" class="breadcrumbs__link breadcrumbs__link--active">ballons</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="main__size col-auto">55 images 11.88MB</div>
+                    </div>
 
+                    <div class="main__search matches row">
+                        <span class="matches__number col-auto">32</span>
+                        <span class="matches__text col-auto">matches found for</span>
+                        <span class="matches__search col-auto">landscape</span>
+                        <a href="index.html" class="matches__link col-auto">
+                            <i class="fas fa-times matches__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="main__content">
+                        <div class="images row">
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Air Ballon Festival.jpg"
+                                        alt="air ballon festival image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Air Balloon Ride.jpg" alt="air ballon ride image"
+                                        class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Best Air Balloon Rides Cappadocia Turkey.jpg"
+                                        alt="best air balloon rides cappadocia turkey image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Cruse Destinations Air.jpg"
+                                        alt="cruse destinations air image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Desert Air Ride.jpg" alt="desert air ride image"
+                                        class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Educa Puzzle Air Ballons.jpg"
+                                        alt="educa puzzle air ballons image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Ottawa Air Balloon Ride.jpeg"
+                                        alt="ottawa air balloon ride image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/South Tyrol Air Baloon Rides.jpg"
+                                        alt="south tyrol air baloon rides image" class="images__picture" />
+                                </a>
+                            </div>
+                            <div class="col-auto py-2">
+                                <a href="index.html" class="images__link">
+                                    <img src="../js/data/ballons/Wild Ballon Ride.jpg" alt="wild nallon ride image"
+                                        class="images__picture" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="../../../libraries/jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- homepage javascript -->
     <script src="../js/menu.js"></script>
 </body>
 

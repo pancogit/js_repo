@@ -1,0 +1,48 @@
+How to Turn Plastic Waste From Your Recycle Bin Into Profit
+
+People will recycle if they can make money doing so. In places where cash is offered 
+for cans and bottles, metal and glass recycling has been a great success. Sadly, the 
+incentives have been weaker for recycling plastic.
+
+But now, several technologies have matured that allow people to recycle waste plastic 
+directly by 3D-printing it into valuable products, at a fraction of their normal cost. 
+People are using their own recycled plastic to make decorations and gifts, home and garden 
+products, accessories and shoes, toys and games, sporting goods and gadgets from millions 
+of free designs.
+
+This approach is called distributed recycling and additive manufacturing, or DRAM for short.
+
+As a professor of materials engineering at the forefront of this technology, I can explain—and 
+offer some ideas for what you can do to take advantage of this trend.
+
+The DRAM method starts with plastic waste—everything from used packaging to broken products.
+
+The first step is to sort and wash the plastic with soap and water or even run it through the 
+dishwasher. Next, the plastic needs to be ground into particles. For small amounts, a cross-cut 
+paper/CD shredder works fine. For larger amounts, open-source plans for an industrial waste plastic 
+granulator are available online.
+
+Next you have a few choices. You can convert the particles into 3D printer filament using a recyclebot, 
+a device that turns ground plastic into the spaghetti-like filaments used by most low-cost 3D printers.
+
+Filament made with a 3D-printable recyclebot is incredibly cheap, costing less than a nickel per 
+pound as compared to commercial filament, which costs about US$10 per pound or more.
+
+The second approach is newer: You can skip the step of making filament and use fused particle fabrication 
+to directly 3D-print granulated waste plastic into products. This approach is most amenable to large products 
+on larger printers, like the commercial open source GigabotX printer, but can also be used on desktop printers.
+
+Granulated plastic waste can also be directly printed with a syringe printer, although this is less 
+popular because print volume is limited by the need to reloading the syringe.
+
+My research group, along with dozens of labs and companies throughout the world, has developed a wide 
+array of open source products that enable DRAM, including shredders, recyclebots and both fused filament 
+and fused particle 3D printers.
+
+These devices have been shown to work not only with the two most popular 3D printing plastics, ABS and PLA, 
+but also a long list of plastics you likely use every day, including PET water bottles. It is now possible 
+to convert any plastic waste with a recycling symbol on it into valuable products.
+
+Furthermore, an “ecoprinting” initiative in Australia has demonstrated DRAM can work in isolated communities 
+with no recycling and no power by using solar-powered systems. This makes DRAM applicable anywhere humans 
+live, waste plastic is abundant and the Sun shines – which is just about everywhere.
