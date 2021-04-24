@@ -1,7 +1,7 @@
 // variables 
 
 
-// reset 
+// base 
 $body_font_family: 'Times New Roman', Times, serif;
 
 // media screen
@@ -10,12 +10,34 @@ $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// page
+$page_aside_width: 18rem;
 
-// logo
+// hamburger
+$hamburger_button_padding: 0.2rem 0.5rem;
+$hamburger_button_margin_left: -0.75rem;
+$hamburger_button_border_radius: 0.2rem;
+$hamburger_icon_font_size: 0.9rem;
 
-// header 
+// search
+$search_border_width: 0.15rem;
+$search_height: 2.2rem;
+$search_border_radius: 0.2rem;
+$search_icon_font_size: 0.8rem;
+
+// navigation
+
+// breadcrumbs
+
+// matches
+
+// header
+$header_border_width: 0.1rem;
+$header_icon_font_size: 1.1rem;
+$header_search_width: 24rem;
 
 // footer
+$footer_height: 3rem;
 
 // home
+$home_content_margin: -0.75rem;

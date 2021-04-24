@@ -1,1 +1,31 @@
 /* header */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.header {
+    @include mixins.set_borders($bottom_style: solid, 
+                                $bottom_width: variables.$header_border_width, 
+                                $bottom_color: colors.$header_border_color);
+
+    &__icon {
+        font-size: variables.$header_icon_font_size;
+    }
+
+    &__link {
+        color: colors.$header_link_color;
+
+        &:hover {
+            color: colors.$header_link_color_hover;
+        }
+    }
+
+    &__search {
+        width: variables.$header_search_width;
+    }
+
+    &__sort {
+        
+    }
+}

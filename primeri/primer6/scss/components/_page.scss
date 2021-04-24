@@ -1,0 +1,10 @@
+// page
+
+@use '../utilities/variables';
+
+.page {
+
+    &__aside {
+        width: variables.$page_aside_width;
+    }
+}

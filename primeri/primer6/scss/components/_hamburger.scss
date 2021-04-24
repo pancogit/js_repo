@@ -1,0 +1,29 @@
+// hamburger
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.hamburger {
+
+    &__button {
+        padding: variables.$hamburger_button_padding;
+        margin-left: variables.$hamburger_button_margin_left;
+        background-color: colors.$hamburger_button_background_color;
+        color: colors.$hamburger_button_color;
+        border: none;
+        border-top-right-radius: variables.$hamburger_button_border_radius;
+        border-bottom-right-radius: variables.$hamburger_button_border_radius;
+
+        &:hover {
+            background-color: colors.$hamburger_button_background_color_hover;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__icon {
+        font-size: variables.$hamburger_icon_font_size;
+    }
+}

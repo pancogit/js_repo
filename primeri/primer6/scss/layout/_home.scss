@@ -1,1 +1,28 @@
 /* home */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.home {
+    
+    &__content {
+        margin: 0 variables.$home_content_margin;
+        background-color: colors.$home_content_background_color;
+    }
+
+    &__properties {
+        background-color: colors.$navigation_background_color;
+    }
+
+    &__search {
+        @include mixins.set_borders($color: colors.$header_border_color, 
+                                    $width: variables.$header_border_width, 
+                                    $top_style: solid,
+                                    $left_style: solid);
+    }
+
+    &__size {
+        
+    }
+}

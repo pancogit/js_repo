@@ -1,0 +1,36 @@
+// search
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.search {
+    @include mixins.set_borders($style: solid, $width: variables.$search_border_width, $color: colors.$search_border_color);
+
+    height: variables.$search_height;
+    border-radius: variables.$search_border_radius;
+    background-color: colors.$search_background_color;
+    outline: none;
+
+    &--active {
+        border-color: colors.$search_border_color_active;
+    }
+
+    &__box {
+        padding-right: 0;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: colors.$search_box_color;
+    }
+
+    &__icon {
+        cursor: pointer;
+        color: colors.$search_icon_color;
+        font-size: variables.$search_icon_font_size;
+
+        &:hover {
+            color: colors.$search_icon_color_hover;
+        }
+    }
+}

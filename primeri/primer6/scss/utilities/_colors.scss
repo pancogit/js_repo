@@ -1,12 +1,37 @@
 // colors
 
 
-// button 
+// base
+$body_background_color: #222b32;
 
-// logo
+// page
 
-// header 
+// hamburger
+$hamburger_button_background_color: #318b58;
+$hamburger_button_background_color_hover: #2b7a4e;
+$hamburger_button_color: white;
+
+// search
+$search_border_color: #a7b596;
+$search_border_color_active: #79a645;
+$search_background_color: #374750;
+$search_box_color: white;
+$search_icon_color: white;
+$search_icon_color_hover: #cacacb;
+
+// navigation
+$navigation_background_color: #303e45;
+
+// breadcrumbs
+
+// matches
+
+// header
+$header_border_color: #585858;
+$header_link_color: white;
+$header_link_color_hover: #dcdcdc;
 
 // footer
 
 // home
+$home_content_background_color: white;
