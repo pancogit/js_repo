@@ -2,8 +2,16 @@
 
 @use '../utilities/colors';
 @use '../utilities/variables';
+@use '../utilities/mixins/mixins';
 
 .hamburger {
+
+    // set fixed position for small screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+        position: fixed;
+        top: variables.$hamburger_top_position;
+        z-index: variables.$navigation_z_index;
+    }
 
     &__button {
         padding: variables.$hamburger_button_padding;

@@ -9,10 +9,20 @@ a {
   text-decoration: none;
 }
 
+.page {
+  min-width: 20rem;
+}
 .page__aside {
   width: 18rem;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .hamburger {
+    position: fixed;
+    top: 25%;
+    z-index: 10000;
+  }
+}
 .hamburger__button {
   padding: 0.2rem 0.5rem;
   margin-left: -0.75rem;
@@ -63,6 +73,155 @@ a {
 .navigation {
   background-color: #303e45;
 }
+@media only screen and (max-width: 767.98px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right-style: solid;
+    border-right-width: 0.1rem;
+    border-right-color: #585858;
+  }
+}
+.navigation__exit {
+  display: none;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+@media only screen and (max-width: 767.98px) {
+  .navigation__exit {
+    display: block;
+  }
+}
+.navigation__close {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+}
+.navigation__close:hover {
+  color: #dadada;
+}
+.navigation__expand {
+  padding: 0.3rem 0.55rem;
+  margin-top: -0.3rem;
+  margin-bottom: -0.3rem;
+  background-color: #191d23;
+}
+.navigation__icon {
+  padding-right: 0.6rem;
+  font-size: 1.2rem;
+}
+.navigation__link {
+  display: block;
+  color: white;
+}
+.navigation__link:hover, .navigation__link--active {
+  background-color: #191d23;
+  color: white;
+}
+.navigation__link:hover .navigation__icon, .navigation__link:hover .navigation__expand, .navigation__link--active .navigation__icon, .navigation__link--active .navigation__expand {
+  color: #1e8650;
+}
+.navigation__link:hover .navigation__box, .navigation__link--active .navigation__box {
+  border-left-color: #1e8650;
+}
+.navigation__link:hover .navigation__text, .navigation__link--active .navigation__text {
+  color: #dcdcdc;
+}
+.navigation__link--active {
+  pointer-events: none;
+}
+.navigation__box {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  border-left-style: solid;
+  border-left-width: 0.2rem;
+  border-left-color: #303e45;
+}
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 0.7rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.navigation__list > .navigation__item > .navigation__submenu .navigation__box {
+  padding-left: 1.8rem;
+}
+.navigation__submenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+.navigation__submenu--expanded {
+  display: block;
+}
+.breadcrumbs {
+  padding-left: 1rem;
+}
+.breadcrumbs__home {
+  padding-right: 0;
+}
+.breadcrumbs__item {
+  padding: 0;
+}
+.breadcrumbs__item::before {
+  content: "/";
+  padding-left: 0.5rem;
+  padding-right: 0.25rem;
+  color: white;
+}
+.breadcrumbs__link {
+  padding: 0.3rem 0.5rem;
+  color: white;
+  background-color: #191d23;
+  border-radius: 0.15rem;
+}
+.breadcrumbs__link--active {
+  pointer-events: none;
+}
+.breadcrumbs__link:hover {
+  color: #dcdcdc;
+}
+.breadcrumbs__main {
+  color: white;
+}
+.breadcrumbs__main:hover {
+  color: #dcdcdc;
+}
+
+.matches__close {
+  padding-left: 0;
+}
+.matches__icon {
+  font-size: 1.35rem;
+  color: white;
+  cursor: pointer;
+}
+.matches__icon:hover {
+  color: #dcdcdc;
+}
+.matches__search {
+  margin-right: 0.2rem;
+  word-break: break-word;
+}
+.matches__number, .matches__search {
+  padding: 0.1rem 0.55rem;
+  color: white;
+  background-color: #77a645;
+  border-radius: 0.15rem;
+}
+.matches__text {
+  padding: 0;
+  color: white;
+}
+
 /* header */
 .header {
   border-bottom-style: solid;
@@ -95,14 +254,27 @@ a {
   background-color: white;
 }
 .home__properties {
+  gap: 1rem;
+  padding: 0.55rem 0;
   background-color: #303e45;
 }
 .home__search {
+  padding: 0.55rem 1rem;
   border-width: 0.1rem;
   border-color: #585858;
   border-top-style: solid;
   border-left-style: solid;
 }
+.home__size {
+  margin-top: -0.1rem;
+  margin-bottom: 0.1rem;
+  margin-right: 1rem;
+  padding: 0.1rem 0.4rem;
+  background-color: #191d23;
+  border-radius: 0.15rem;
+  color: white;
+}
+
 /* utility helper classes */
 .show {
   display: block;

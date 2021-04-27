@@ -11,9 +11,11 @@ $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
 // page
+$page_min_width: 20rem;
 $page_aside_width: 18rem;
 
 // hamburger
+$hamburger_top_position: 25%;
 $hamburger_button_padding: 0.2rem 0.5rem;
 $hamburger_button_margin_left: -0.75rem;
 $hamburger_button_border_radius: 0.2rem;
@@ -26,10 +28,32 @@ $search_border_radius: 0.2rem;
 $search_icon_font_size: 0.8rem;
 
 // navigation
+$navigation_breakpoint: 767.98px;
+$navigation_z_index: 10000;
+$navigation_box_padding_top: 0.3rem;
+$navigation_box_padding_left: 0.5rem;
+$navigation_box_border_width: 0.2rem;
+$navigation_box_nested_padding_left: 1.8rem;
+$navigation_expand_padding: 0.3rem 0.55rem;
+$navigation_icon_padding_right: 0.6rem;
+$navigation_icon_font_size: 1.2rem;
+$navigation_list_margin_top: 0.7rem;
+$navigation_list_margin_left: -0.75rem;
+$navigation_exit_margin_top: 0.5rem;
+$navigation_close_font_size: 1.4rem;
 
 // breadcrumbs
+$breadcrumbs_padding_left: 1rem;
+$breadcrumbs_item_padding_left: 0.5rem;
+$breadcrumbs_item_padding_right: 0.25rem;
+$breadcrumbs_link_padding: 0.3rem 0.5rem;
+$breadcrumbs_link_border_radius: 0.15rem;
 
 // matches
+$matches_icon_font_size: 1.35rem;
+$matches_search_margin_right: 0.2rem;
+$matches_search_padding: 0.1rem 0.55rem;
+$matches_search_border_radius: 0.15rem;
 
 // header
 $header_border_width: 0.1rem;
@@ -41,3 +65,11 @@ $footer_height: 3rem;
 
 // home
 $home_content_margin: -0.75rem;
+$home_properties_padding: 0.55rem 0;
+$home_properties_gap: 1rem;
+$home_size_margin_top: -0.1rem;
+$home_size_margin_bottom: 0.1rem;
+$home_size_margin_right: 1rem;
+$home_size_padding: 0.1rem 0.4rem;
+$home_size_border_radius: 0.15rem;
+$home_search_padding: 0.55rem 1rem;

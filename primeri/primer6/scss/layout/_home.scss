@@ -12,10 +12,16 @@
     }
 
     &__properties {
+        // set gap between rows and columns for flexbox container
+        gap: variables.$home_properties_gap;
+
+        padding: variables.$home_properties_padding;
         background-color: colors.$navigation_background_color;
     }
 
     &__search {
+        padding: variables.$home_search_padding;
+
         @include mixins.set_borders($color: colors.$header_border_color, 
                                     $width: variables.$header_border_width, 
                                     $top_style: solid,
@@ -23,6 +29,12 @@
     }
 
     &__size {
-        
+        margin-top: variables.$home_size_margin_top;
+        margin-bottom: variables.$home_size_margin_bottom;
+        margin-right: variables.$home_size_margin_right;
+        padding: variables.$home_size_padding;
+        background-color: colors.$navigation_link_background_color;
+        border-radius: variables.$home_size_border_radius;
+        color: colors.$home_size_color;
     }
 }

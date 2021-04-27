@@ -1,28 +1,40 @@
 // matches
 
+@use '../utilities/colors';
+@use '../utilities/variables';
+
 .matches {
 
     &__close {
-
+        padding-left: 0;
     }
 
     &__icon {
+        font-size: variables.$matches_icon_font_size;
+        color: colors.$matches_icon_color;
+        cursor: pointer;
 
-    }
-
-    &__link {
-
-    }
-
-    &__number {
-
+        &:hover {
+            color: colors.$matches_icon_color_hover;
+        }
     }
 
     &__search {
+        margin-right: variables.$matches_search_margin_right;
 
+        // break long word to multiply lines
+        word-break: break-word;
+    }
+
+    &__number, &__search {
+        padding: variables.$matches_search_padding;
+        color: colors.$matches_search_color;
+        background-color: colors.$matches_search_background_color;
+        border-radius: variables.$matches_search_border_radius;
     }
 
     &__text {
-        
+        padding: 0;
+        color: colors.$matches_text_color;
     }
 }

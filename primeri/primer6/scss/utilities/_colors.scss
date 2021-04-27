@@ -21,10 +21,23 @@ $search_icon_color_hover: #cacacb;
 
 // navigation
 $navigation_background_color: #303e45;
+$navigation_link_background_color: #191d23;
+$navigation_link_color: white;
+$navigation_icon_color: #1e8650;
+$navigation_text_color: #dcdcdc;
+$navigation_close_color: white;
+$navigation_close_color_hover: #dadada;
 
 // breadcrumbs
+$breadcrumbs_link_color: white;
+$breadcrumbs_link_color_hover: #dcdcdc;
 
 // matches
+$matches_icon_color: white;
+$matches_icon_color_hover: #dcdcdc;
+$matches_search_color: white;
+$matches_search_background_color: #77a645;
+$matches_text_color: white;
 
 // header
 $header_border_color: #585858;
@@ -35,3 +48,4 @@ $header_link_color_hover: #dcdcdc;
 
 // home
 $home_content_background_color: white;
+$home_size_color: white;

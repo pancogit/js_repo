@@ -3,6 +3,7 @@
 @use '../utilities/variables';
 
 .page {
+    min-width: variables.$page_min_width;
 
     &__aside {
         width: variables.$page_aside_width;
