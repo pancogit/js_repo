@@ -222,6 +222,51 @@ a {
   color: white;
 }
 
+.properties__entry:hover {
+  color: #dcdcdc;
+  background-color: #313131;
+}
+.properties__entry:hover > .properties__image > .properties__icon {
+  color: #1e8650;
+}
+.properties__entry:hover .properties__window {
+  display: block;
+}
+.properties__icon {
+  font-size: 1rem;
+}
+.properties__image {
+  width: 2.5rem;
+  padding: 0.3rem 0.5rem;
+  border-right-style: solid;
+  border-right-width: 0.1rem;
+  border-right-color: gray;
+}
+.properties__right {
+  padding: 0.3rem 0.5rem;
+}
+.properties__right--divider {
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+  border-bottom-color: gray;
+}
+.properties__text--open {
+  font-weight: bold;
+  color: #1e8650;
+}
+.properties__window {
+  width: 17rem;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+}
+.properties__window .properties__window {
+  display: none;
+  position: absolute;
+}
+
 /* header */
 .header {
   border-bottom-style: solid;
