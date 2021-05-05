@@ -56,11 +56,37 @@ $matches_search_padding: 0.1rem 0.55rem;
 $matches_search_border_radius: 0.15rem;
 
 // properties
+$properties_z_index: 50000;
 $properties_window_border_width: 0.1rem;
 $properties_image_padding: 0.3rem 0.5rem;
 $properties_icon_font_size: 1rem;
 $properties_image_width: 2.5rem;
 $properties_window_width: 17rem;
+
+// window
+$window_z_index: 50000;
+$window_button_padding: 0 0.2rem;
+$window_button_width: 4rem;
+$window_button_height: 1.5rem;
+$window_button_font_size: 0.8rem;
+$window_button_border_radius: 0.2rem;
+$window_button_margin_left: 0.5rem;
+$window_close_margin_bottom: 0.8rem;
+$window_close_padding: 0.15rem;
+$window_close_width: 2.5rem;
+$window_close_font_size: 0.8rem;
+$window_close_border_radius: 0.2rem;
+$window_content_padding: 0.5rem;
+$window_container_max_height: 20rem;
+$window_footer_margin_top: 1.2rem;
+$window_input_padding: 0.1rem 0.4rem;
+$window_input_width: 100%;
+$window_property_line_height: 1.2rem;
+$window_title_padding: 0.2rem 0;
+$window_wrapper_border_width: 0.1rem;
+$window_wrapper_width: 19rem;
+$window_wrapper_padding: 0.4rem;
+$window_wrapper_border_radius: 0.5rem;
 
 // header
 $header_border_width: 0.1rem;

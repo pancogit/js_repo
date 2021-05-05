@@ -343,7 +343,7 @@
 
         <footer class="footer"></footer>
 
-        <div class="properties">
+        <div class="properties d-none">
             <div class="properties__window container m-0">
                 <div class="properties__entry row">
                     <span class="properties__image col-auto">
@@ -361,13 +361,20 @@
                 </div>
                 <div class="properties__entry row">
                     <span class="properties__image col-auto"></span>
-                    <div class="properties__right properties__right--divider col">
+                    <div class="properties__right col">
                         <span class="properties__text">Copy</span>
+                    </div>
+                </div>
+                <div class="properties__entry row properties__entry--disabled">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right properties__right--divider col">
+                        <span class="properties__text">Paste</span>
                     </div>
                 </div>
                 <div class="properties__entry row">
                     <span class="properties__image col-auto"></span>
-                    <div class="properties__right properties__right--divider col d-flex justify-content-between align-items-center">
+                    <div
+                        class="properties__right properties__right--divider col d-flex justify-content-between align-items-center">
                         <span class="properties__text">Create</span>
                         <span class="properties__expand">
                             <i class="fas fa-caret-right properties__more"></i>
@@ -408,6 +415,74 @@
                     <span class="properties__image col-auto"></span>
                     <div class="properties__right col">
                         <span class="properties__text">Info</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Rename</span>
+                    <!-- <span class="window__title">File Name</span>
+                    <span class="window__title">Folder Name</span> -->
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <input type="text" class="window__input" />
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Delete</span>
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <div class="window__text">Are you sure you want to delete?</div>
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">Yes</button>
+                        <button class="window__button">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Info</span>
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <div class="window__container container">
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Type of file:</span>
+                            <span class="window__info col-8">Text Document (.txt)</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Path:</span>
+                            <a href="http://127.0.0.1/js_repo/primeri/primer6/js/data/files/Mind-Bending%20Pictures%20of%20the%20Moon.txt"
+                                class="window__info window__link col-8"
+                                target="_blank">http://127.0.0.1/js_repo/primeri/primer6/js/data/files/Mind-Bending
+                                Pictures of the Moon.txt</a>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Size:</span>
+                            <span class="window__info col-8">990B</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Created:</span>
+                            <span class="window__info col-8">Wednesday, April 21, 2021, 20:52:25</span>
+                        </div>
+                    </div>
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">OK</button>
                     </div>
                 </div>
             </div>

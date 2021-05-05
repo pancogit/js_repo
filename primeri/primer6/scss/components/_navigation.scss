@@ -127,6 +127,9 @@
     }
 
     &__text {
-
+        padding-right: variables.$navigation_icon_padding_right;
+        
+        // break long words if text overflows
+        word-break: break-all;
     }
 }

@@ -5,6 +5,8 @@
 @use '../utilities/mixins/mixins';
 
 .properties {
+    position: absolute;
+    z-index: variables.$properties_z_index;
 
     &__entry {
 
@@ -24,6 +26,18 @@
             // show nested window when entry is hovered
             .properties__window {
                 display: block;
+            }
+        }
+
+        // for disabled entry (paste item)
+        &--disabled {
+            .properties__text {
+                color: colors.$properties_text_disabled_color;
+            }
+
+            // set different background color for disabled entry
+            &:hover {
+                background-color: colors.$properties_entry_disabled_background_color;
             }
         }
     }
@@ -60,6 +74,9 @@
     }
 
     &__text {
+        // set default mouse cursor for text
+        // don't change cursor style for text
+        cursor: default;
 
         // set bold font for open option
         &--open {
