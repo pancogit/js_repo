@@ -88,6 +88,29 @@ $window_wrapper_width: 19rem;
 $window_wrapper_padding: 0.4rem;
 $window_wrapper_border_radius: 0.5rem;
 
+// files
+$files_gap: 0.5rem;
+$files_picture_small_width: 1.5rem;
+$files_picture_medium_width: 4rem;
+$files_picture_large_width: 8rem;
+$files_name_width_small: 10rem;
+$files_link_gap: 0.5rem;
+$files_link_border_radius: 0.3rem;
+$files_link_padding_small: 0.2rem;
+$files_link_padding_top: 0.15rem;
+$files_link_padding_left: 1rem;
+$files_link_border_width: 0.15rem;
+$files_link_small_width: $files_picture_small_width + 
+                         2 * $files_link_padding_small + 
+                         2 * $files_link_border_width +
+                         $files_name_width_small;
+$files_link_medium_width: $files_picture_medium_width + 
+                          2 * $files_link_padding_left + 
+                          2 * $files_link_border_width;
+$files_link_large_width: $files_picture_large_width + 
+                          2 * $files_link_padding_left + 
+                          2 * $files_link_border_width;
+
 // header
 $header_border_width: 0.1rem;
 $header_icon_font_size: 1.1rem;
