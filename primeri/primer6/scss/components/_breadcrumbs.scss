@@ -31,6 +31,9 @@
         background-color: colors.$navigation_link_background_color;
         border-radius: variables.$breadcrumbs_link_border_radius;
 
+        // break long words if text overflows
+        word-break: break-all;
+
         &--active {
             pointer-events: none;
         }
@@ -42,6 +45,10 @@
 
     &__main {
         color: colors.$breadcrumbs_link_color;
+
+        &--active {
+            pointer-events: none;
+        }
 
         &:hover {
             color: colors.$breadcrumbs_link_color_hover;

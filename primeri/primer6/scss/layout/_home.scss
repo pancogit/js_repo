@@ -9,6 +9,46 @@
     &__content {
         margin: 0 variables.$home_content_margin;
         background-color: colors.$home_content_background_color;
+
+        // dark mode for content
+        &--dark {
+            background-color: colors.$home_content_background_color_dark;
+        }
+
+        // night mode for content
+        &--night {
+            background-color: colors.$home_content_background_color_night;
+
+            // change background for night mode
+            .files__link:hover {
+                background-color: colors.$files_link_hover_background_color_night;
+                border-color: colors.$files_link_hover_border_color_night;
+            }
+        }
+
+        // grouped colors for dark and night mode
+        &--dark, &--night {
+
+            .files__name {
+                color: colors.$files_name_color_dark;
+            }
+
+            .files__link:hover .files__name {
+                color: colors.$files_name_hover_color_dark;
+            }
+
+            // also change some icon colors
+            .files__icon {
+
+                &--video {
+                    color: colors.$files_icon_video_color_dark;
+                }
+
+                &--text {
+                    color: colors.$files_icon_text_color_dark;
+                }
+            }
+        }
     }
 
     &__properties {
@@ -16,16 +56,17 @@
         gap: variables.$home_properties_gap;
 
         padding: variables.$home_properties_padding;
+        min-height: variables.$home_properties_height;
         background-color: colors.$navigation_background_color;
     }
 
     &__search {
         padding: variables.$home_search_padding;
+        min-height: variables.$home_search_height;
 
-        @include mixins.set_borders($color: colors.$header_border_color, 
-                                    $width: variables.$header_border_width, 
-                                    $top_style: solid,
-                                    $left_style: solid);
+        @include mixins.set_borders($style: solid,
+                                    $color: colors.$header_border_color, 
+                                    $width: variables.$header_border_width);
     }
 
     &__size {
@@ -36,5 +77,8 @@
         background-color: colors.$navigation_link_background_color;
         border-radius: variables.$home_size_border_radius;
         color: colors.$home_size_color;
+
+        // break long words if text overflows
+        word-break: break-all;
     }
 }

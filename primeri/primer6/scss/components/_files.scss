@@ -25,7 +25,8 @@
             width: variables.$files_link_small_width;
         }
 
-        .files__picture {
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
             width: variables.$files_picture_small_width;
             height: variables.$files_picture_small_width;
         }
@@ -34,6 +35,11 @@
             margin: unset;
             width: variables.$files_name_width_small;
             text-align: left;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_small_width;
         }
     }
 
@@ -64,9 +70,15 @@
             width: variables.$files_link_medium_width;
         }
 
-        .files__picture {
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
             width: variables.$files_picture_medium_width;
             height: variables.$files_picture_medium_width;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_medium_width;
         }
     }
 
@@ -78,9 +90,15 @@
             width: variables.$files_link_large_width;
         }
 
-        .files__picture {
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
             width: variables.$files_picture_large_width;
             height: variables.$files_picture_large_width;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_large_width;
         }
     }
 
@@ -118,5 +136,27 @@
 
     &__picture {
         
+    }
+
+    &__icon {
+        // don't shrink icon, use size as it is
+        flex-shrink: 0;
+
+        // element modifiers for colors
+        &--audio {
+            color: colors.$files_icon_audio_color;
+        }
+
+        &--video {
+            color: colors.$files_icon_video_color;
+        }
+
+        &--text {
+            color: colors.$files_icon_text_color;
+        }
+
+        &--folder {
+            color: colors.$files_icon_folder_color;
+        }
     }
 }
