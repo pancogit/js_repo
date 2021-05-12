@@ -111,6 +111,21 @@ $files_link_large_width: $files_picture_large_width +
                           2 * $files_link_padding_left + 
                           2 * $files_link_border_width;
 
+// preview
+$preview_z_index: 60000;
+$preview_arrow_font_size: 2.5rem;
+$preview_arrow_translate: 0.5rem;
+$preview_close_font_size: 1.8rem;
+$preview_close_font_size_small: 1.5rem;
+$preview_close_scale: 0.8;
+$preview_close_margin: 1rem;
+$preview_close_transition: 0.4s;
+$preview_close_breakpoint: 575.98px;
+$preview_media_margin: 0 1.5rem;
+$preview_media_margin_hover: 0 0.1rem;
+$preview_picture_max_width: 100%;
+$preview_picture_min_width: 5rem;
+
 // header
 $header_border_width: 0.1rem;
 $header_icon_font_size: 1.1rem;
@@ -126,7 +141,6 @@ $home_properties_gap: 1rem;
 $home_properties_height: 2.8rem;
 $home_size_margin_top: -0.1rem;
 $home_size_margin_bottom: 0.1rem;
-$home_size_margin_right: 1rem;
 $home_size_padding: 0.1rem 0.4rem;
 $home_size_border_radius: 0.15rem;
 $home_search_height: 3rem;

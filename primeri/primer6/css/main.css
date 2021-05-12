@@ -502,6 +502,67 @@ a {
   color: #1e8650;
 }
 
+.preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60000;
+  background-color: black;
+  overflow-y: auto;
+}
+.preview__arrow {
+  font-size: 2.5rem;
+}
+.preview__arrow--left:hover {
+  transform: translateX(-0.5rem);
+}
+.preview__arrow--right:hover {
+  transform: translateX(0.5rem);
+}
+.preview__close {
+  font-size: 1.8rem;
+}
+.preview__close:hover {
+  transform: scale(0.8);
+}
+.preview__close, .preview__arrow {
+  margin: 1rem;
+  cursor: pointer;
+  color: #dadada;
+  transition: 0.4s;
+}
+.preview__close:hover, .preview__arrow:hover {
+  color: #8a5d5d;
+}
+@media only screen and (max-width: 575.98px) {
+  .preview__close, .preview__arrow {
+    font-size: 1.5rem;
+  }
+}
+.preview__media {
+  margin: 0 1.5rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .preview__media {
+    margin: 0 0.1rem;
+  }
+}
+.preview__picture, .preview__audio, .preview__video {
+  max-width: 100%;
+  min-width: 5rem;
+}
+.preview__text {
+  font-family: cursive;
+  color: #a5a5a5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.preview__top {
+  text-align: right;
+}
+
 /* header */
 .header {
   border-bottom-style: solid;
@@ -571,7 +632,6 @@ a {
 .home__size {
   margin-top: -0.1rem;
   margin-bottom: 0.1rem;
-  margin-right: 1rem;
   padding: 0.1rem 0.4rem;
   background-color: #191d23;
   border-radius: 0.15rem;
