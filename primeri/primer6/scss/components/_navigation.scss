@@ -6,6 +6,7 @@
 
 .navigation {
     background-color: colors.$navigation_background_color;
+    transition: variables.$navigation_transition;
 
     // set positioned navigation
     @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
@@ -21,6 +22,12 @@
         @include mixins.set_borders($right_style: solid,
                                     $right_color: colors.$header_border_color, 
                                     $right_width: variables.$header_border_width);
+    }
+
+    // hide navigation with negative translation
+    &--hide {
+        transform: translateX(- variables.$page_aside_width);
+        margin-right: - variables.$page_aside_width;
     }
 
     &__exit {

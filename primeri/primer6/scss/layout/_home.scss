@@ -57,12 +57,12 @@
 
         padding: variables.$home_properties_padding;
         min-height: variables.$home_properties_height;
-        background-color: colors.$navigation_background_color;
     }
 
     &__search {
         padding: variables.$home_search_padding;
         min-height: variables.$home_search_height;
+        background-color: colors.$body_background_color;
 
         @include mixins.set_borders($style: solid,
                                     $color: colors.$header_border_color, 

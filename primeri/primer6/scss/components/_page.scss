@@ -1,5 +1,6 @@
 // page
 
+@use '../utilities/colors';
 @use '../utilities/variables';
 
 .page {
@@ -7,5 +8,9 @@
 
     &__aside {
         width: variables.$page_aside_width;
+    }
+
+    &__content {
+        background-color: colors.$navigation_background_color;
     }
 }

@@ -1,0 +1,2362 @@
+{
+    "home": {
+        "name": "home",
+        "info": {
+            "type": "File folder",
+            "path": "/js_repo/primeri/primer6/html/",
+            "size": {
+                "value": "17.4",
+                "unit": "MB"
+            },
+            "created": "Friday, January 08, 2021, 16:54:12"
+        },
+        "contains": {
+            "files": "165",
+            "folders": "19"
+        },
+        "folders": [
+            {
+                "name": "ballons",
+                "info": {
+                    "type": "File folder",
+                    "path": "/js_repo/primeri/primer6/html/ballons/",
+                    "size": {
+                        "value": "475",
+                        "unit": "KB"
+                    },
+                    "created": "Saturday, May 08, 2021, 17:50:58"
+                },
+                "contains": {
+                    "files": "9",
+                    "folders": "0"
+                },
+                "folders": [],
+                "files": [
+                    {
+                        "name": "Air Ballon Festival.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Air Ballon Festival.jpg",
+                            "size": {
+                                "value": "82.1",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:37:44"
+                        }
+                    },
+                    {
+                        "name": "Air Balloon Ride.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Air Balloon Ride.jpg",
+                            "size": {
+                                "value": "29.8",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:33:18"
+                        }
+                    },
+                    {
+                        "name": "Best Air Balloon Rides Cappadocia Turkey.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Best Air Balloon Rides Cappadocia Turkey.jpg",
+                            "size": {
+                                "value": "58.3",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:35:57"
+                        }
+                    },
+                    {
+                        "name": "Cruse Destinations Air.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Cruse Destinations Air.jpg",
+                            "size": {
+                                "value": "61.4",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:38:21"
+                        }
+                    },
+                    {
+                        "name": "Desert Air Ride.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Desert Air Ride.jpg",
+                            "size": {
+                                "value": "49.5",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:38:42"
+                        }
+                    },
+                    {
+                        "name": "Educa Puzzle Air Ballons.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Educa Puzzle Air Ballons.jpg",
+                            "size": {
+                                "value": "84.9",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:36:57"
+                        }
+                    },
+                    {
+                        "name": "Ottawa Air Balloon Ride.jpeg",
+                        "info": {
+                            "type": "JPEG image (.jpeg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Ottawa Air Balloon Ride.jpeg",
+                            "size": {
+                                "value": "25.4",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:34:24"
+                        }
+                    },
+                    {
+                        "name": "South Tyrol Air Baloon Rides.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/South Tyrol Air Baloon Rides.jpg",
+                            "size": {
+                                "value": "42.2",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:35:27"
+                        }
+                    },
+                    {
+                        "name": "Wild Ballon Ride.jpg",
+                        "info": {
+                            "type": "JPEG image (.jpg)",
+                            "path": "/js_repo/primeri/primer6/js/data/ballons/Wild Ballon Ride.jpg",
+                            "size": {
+                                "value": "41.1",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:36:22"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "files",
+                "info": {
+                    "type": "File folder",
+                    "path": "/js_repo/primeri/primer6/html/files/",
+                    "size": {
+                        "value": "36.9",
+                        "unit": "KB"
+                    },
+                    "created": "Saturday, May 08, 2021, 17:51:10"
+                },
+                "contains": {
+                    "files": "20",
+                    "folders": "0"
+                },
+                "folders": [],
+                "files": [
+                    {
+                        "name": "9 Eco Deals For Earth Day.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/9 Eco Deals For Earth Day.txt",
+                            "size": {
+                                "value": "731",
+                                "unit": "B"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:58"
+                        }
+                    },
+                    {
+                        "name": "16% Drop in Peanut Allergies.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/16% Drop in Peanut Allergies.txt",
+                            "size": {
+                                "value": "1.99",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:26"
+                        }
+                    },
+                    {
+                        "name": "After Massive Wildfires, DroneSeed is Replanting Forests.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/After Massive Wildfires, DroneSeed is Replanting Forests.txt",
+                            "size": {
+                                "value": "2.14",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:27"
+                        }
+                    },
+                    {
+                        "name": "An Avocado a Day May Keep Your Gut.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/An Avocado a Day May Keep Your Gut.txt",
+                            "size": {
+                                "value": "3.09",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:49"
+                        }
+                    },
+                    {
+                        "name": "Archaeologists Discover.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Archaeologists Discover.txt",
+                            "size": {
+                                "value": "1.65",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:25"
+                        }
+                    },
+                    {
+                        "name": "Art Historians Discover Place.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Art Historians Discover Place.txt",
+                            "size": {
+                                "value": "1.90",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:24"
+                        }
+                    },
+                    {
+                        "name": "Biodegradable Food Wrap Created From Algae.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Biodegradable Food Wrap Created From Algae.txt",
+                            "size": {
+                                "value": "1.16",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:23"
+                        }
+                    },
+                    {
+                        "name": "Caltech Uses Existing Underwater Cables.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Caltech Uses Existing Underwater Cables.txt",
+                            "size": {
+                                "value": "3.26",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:24"
+                        }
+                    },
+                    {
+                        "name": "Daimler Trucks is Now Accepting Orders.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Daimler Trucks is Now Accepting Orders.txt",
+                            "size": {
+                                "value": "1.00",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:23"
+                        }
+                    },
+                    {
+                        "name": "Down the Rabbit Hole.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Down the Rabbit Hole.txt",
+                            "size": {
+                                "value": "2.16",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:49"
+                        }
+                    },
+                    {
+                        "name": "How to Turn Plastic Waste From Your Recycle Bin Into Profit.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/How to Turn Plastic Waste From Your Recycle Bin Into Profit.txt",
+                            "size": {
+                                "value": "3.06",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:56"
+                        }
+                    },
+                    {
+                        "name": "It’s Time to Watch the Biggest Meteor.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/It’s Time to Watch the Biggest Meteor.txt",
+                            "size": {
+                                "value": "1.05",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:23"
+                        }
+                    },
+                    {
+                        "name": "Mind-Bending Pictures of the Moon.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Mind-Bending Pictures of the Moon.txt",
+                            "size": {
+                                "value": "990",
+                                "unit": "B"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:25"
+                        }
+                    },
+                    {
+                        "name": "Nothing Restores a River or Local Economy Like Removing a Dam.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Nothing Restores a River or Local Economy Like Removing a Dam.txt",
+                            "size": {
+                                "value": "2.32",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:57"
+                        }
+                    },
+                    {
+                        "name": "Spectacular Super Pink Moon.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Spectacular Super Pink Moon.txt",
+                            "size": {
+                                "value": "1.14",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:13"
+                        }
+                    },
+                    {
+                        "name": "Stuck At Home on Earth Day.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Stuck At Home on Earth Day.txt",
+                            "size": {
+                                "value": "2.63",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:26"
+                        }
+                    },
+                    {
+                        "name": "They Counted Endangered Rhinos.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/They Counted Endangered Rhinos.txt",
+                            "size": {
+                                "value": "1.20",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:24"
+                        }
+                    },
+                    {
+                        "name": "To Help Protect Your Heart.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/To Help Protect Your Heart.txt",
+                            "size": {
+                                "value": "1.81",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:22"
+                        }
+                    },
+                    {
+                        "name": "Villagers Went Without Streetlights.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Villagers Went Without Streetlights.txt",
+                            "size": {
+                                "value": "2.12",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:26"
+                        }
+                    },
+                    {
+                        "name": "Walmart Commits to Helping Save Pollinators.txt",
+                        "info": {
+                            "type": "Text Document (.txt)",
+                            "path": "/js_repo/primeri/primer6/js/data/files/Walmart Commits to Helping Save Pollinators.txt",
+                            "size": {
+                                "value": "1.45",
+                                "unit": "KB"
+                            },
+                            "created": "Wednesday, April 21, 2021, 20:52:23"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "galleries",
+                "info": {
+                    "type": "File folder",
+                    "path": "/js_repo/primeri/primer6/html/galleries/",
+                    "size": {
+                        "value": "4.54",
+                        "unit": "MB"
+                    },
+                    "created": "Saturday, May 08, 2021, 17:51:16"
+                },
+                "contains": {
+                    "files": "57",
+                    "folders": "5"
+                },
+                "folders": [
+                    {
+                        "name": "cars",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/galleries/cars",
+                            "size": {
+                                "value": "977",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:51:22"
+                        },
+                        "contains": {
+                            "files": "10",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Audi A6.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Audi A6.jpg",
+                                    "size": {
+                                        "value": "75.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:28:14"
+                                }
+                            },
+                            {
+                                "name": "Dacia Sandero Stepway.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Dacia Sandero Stepway.jpg",
+                                    "size": {
+                                        "value": "112",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:24:45"
+                                }
+                            },
+                            {
+                                "name": "Hyundai Sonata Hero.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Hyundai Sonata Hero.jpg",
+                                    "size": {
+                                        "value": "123",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:16:16"
+                                }
+                            },
+                            {
+                                "name": "Mercedes AMG GT S.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Mercedes AMG GT S.jpg",
+                                    "size": {
+                                        "value": "62.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:18:37"
+                                }
+                            },
+                            {
+                                "name": "Peugeot 3008.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Peugeot 3008.jpg",
+                                    "size": {
+                                        "value": "84.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:21:40"
+                                }
+                            },
+                            {
+                                "name": "Tesla Roadster Hero.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Tesla Roadster Hero.jpg",
+                                    "size": {
+                                        "value": "52.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:19:10"
+                                }
+                            },
+                            {
+                                "name": "Toyota Hilux Special Edition 2019.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Toyota Hilux Special Edition 2019.jpg",
+                                    "size": {
+                                        "value": "55.1",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:29:05"
+                                }
+                            },
+                            {
+                                "name": "Transpo G70 TA.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Transpo G70 TA.jpg",
+                                    "size": {
+                                        "value": "39.3",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:15:50"
+                                }
+                            },
+                            {
+                                "name": "Volkswagen Europe.png",
+                                "info": {
+                                    "type": "PNG image (.png)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Volkswagen Europe.png",
+                                    "size": {
+                                        "value": "283",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:20:57"
+                                }
+                            },
+                            {
+                                "name": "Volvo XC60 Hero.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Volvo XC60 Hero.jpg",
+                                    "size": {
+                                        "value": "88.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 18:26:14"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "cityscape",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/galleries/cityscape",
+                            "size": {
+                                "value": "1.03",
+                                "unit": "MB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:51:25"
+                        },
+                        "contains": {
+                            "files": "15",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Dubai.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Dubai.jpg",
+                                    "size": {
+                                        "value": "47.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:31:56"
+                                }
+                            },
+                            {
+                                "name": "Golden Gate Bridge, California.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Golden Gate Bridge, California.jpg",
+                                    "size": {
+                                        "value": "61.1",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:43:05"
+                                }
+                            },
+                            {
+                                "name": "Guaynabo City, Puerto Rico.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Guaynabo City, Puerto Rico.jpg",
+                                    "size": {
+                                        "value": "73.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:36:46"
+                                }
+                            },
+                            {
+                                "name": "Madrid Doma Neboskreb.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Madrid Doma Neboskreb.jpg",
+                                    "size": {
+                                        "value": "57.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:34:05"
+                                }
+                            },
+                            {
+                                "name": "Madrid.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Madrid.jpg",
+                                    "size": {
+                                        "value": "58.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:33:14"
+                                }
+                            },
+                            {
+                                "name": "Miami Cityscape at Night.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Miami Cityscape at Night.jpg",
+                                    "size": {
+                                        "value": "93.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:27:50"
+                                }
+                            },
+                            {
+                                "name": "Miami, Florida.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Miami, Florida.jpg",
+                                    "size": {
+                                        "value": "44.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:29:21"
+                                }
+                            },
+                            {
+                                "name": "Netherlands Aerial View.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Netherlands Aerial View.jpg",
+                                    "size": {
+                                        "value": "93.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:38:15"
+                                }
+                            },
+                            {
+                                "name": "Netherlands.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Netherlands.jpg",
+                                    "size": {
+                                        "value": "90.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:37:49"
+                                }
+                            },
+                            {
+                                "name": "New York.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/New York.jpg",
+                                    "size": {
+                                        "value": "75.7",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:29:53"
+                                }
+                            },
+                            {
+                                "name": "San Juan.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/San Juan.jpg",
+                                    "size": {
+                                        "value": "78.4",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:34:58"
+                                }
+                            },
+                            {
+                                "name": "Santurce, San Juan, Puerto Rico.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Santurce, San Juan, Puerto Rico.jpg",
+                                    "size": {
+                                        "value": "61.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:36:02"
+                                }
+                            },
+                            {
+                                "name": "Sao Paulo, Brasil.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Sao Paulo, Brasil.jpg",
+                                    "size": {
+                                        "value": "91.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:38:53"
+                                }
+                            },
+                            {
+                                "name": "Scientists.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Scientists.jpg",
+                                    "size": {
+                                        "value": "74.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:19:52"
+                                }
+                            },
+                            {
+                                "name": "The Caliverse.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/The Caliverse.jpg",
+                                    "size": {
+                                        "value": "57.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:20:14"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "forests",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/galleries/forests",
+                            "size": {
+                                "value": "1.08",
+                                "unit": "MB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:51:30"
+                        },
+                        "contains": {
+                            "files": "11",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Forest Habitat.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Forest Habitat.jpg",
+                                    "size": {
+                                        "value": "100",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:45:46"
+                                }
+                            },
+                            {
+                                "name": "Forest Nature.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Forest Nature.jpg",
+                                    "size": {
+                                        "value": "84.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:44:41"
+                                }
+                            },
+                            {
+                                "name": "Healthy Forest.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Healthy Forest.jpg",
+                                    "size": {
+                                        "value": "101",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:49:45"
+                                }
+                            },
+                            {
+                                "name": "Ireland Trails.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ireland Trails.jpg",
+                                    "size": {
+                                        "value": "110",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:50:29"
+                                }
+                            },
+                            {
+                                "name": "Ireland.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ireland.jpg",
+                                    "size": {
+                                        "value": "97.6",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:49:57"
+                                }
+                            },
+                            {
+                                "name": "Oak Forest.png",
+                                "info": {
+                                    "type": "PNG image (.png)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Oak Forest.png",
+                                    "size": {
+                                        "value": "90.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:45:58"
+                                }
+                            },
+                            {
+                                "name": "Sunlight Forest.png",
+                                "info": {
+                                    "type": "PNG image (.png)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Sunlight Forest.png",
+                                    "size": {
+                                        "value": "113",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:47:35"
+                                }
+                            },
+                            {
+                                "name": "Sustainable Forestry.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Sustainable Forestry.jpg",
+                                    "size": {
+                                        "value": "90.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:45:24"
+                                }
+                            },
+                            {
+                                "name": "Tara.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Tara.jpg",
+                                    "size": {
+                                        "value": "124",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:44:24"
+                                }
+                            },
+                            {
+                                "name": "Ukraine.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ukraine.jpg",
+                                    "size": {
+                                        "value": "95.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:49:09"
+                                }
+                            },
+                            {
+                                "name": "Wildlife Forest.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Wildlife Forest.jpg",
+                                    "size": {
+                                        "value": "104",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:46:19"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "hiking",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/galleries/hiking",
+                            "size": {
+                                "value": "636",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:51:35"
+                        },
+                        "contains": {
+                            "files": "10",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Alishan.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Alishan.jpg",
+                                    "size": {
+                                        "value": "98.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:17:33"
+                                }
+                            },
+                            {
+                                "name": "Alps.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Alps.jpg",
+                                    "size": {
+                                        "value": "71.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:55:17"
+                                }
+                            },
+                            {
+                                "name": "Appalachian Trail.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Appalachian Trail.jpg",
+                                    "size": {
+                                        "value": "59.9",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:57:39"
+                                }
+                            },
+                            {
+                                "name": "Backpacking.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Backpacking.jpg",
+                                    "size": {
+                                        "value": "47.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:58:06"
+                                }
+                            },
+                            {
+                                "name": "Brown Mountain.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Brown Mountain.jpg",
+                                    "size": {
+                                        "value": "55.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:57:20"
+                                }
+                            },
+                            {
+                                "name": "French Italian Alps Walking Hiking Tour.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/French Italian Alps Walking Hiking Tour.jpg",
+                                    "size": {
+                                        "value": "70.9",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:54:59"
+                                }
+                            },
+                            {
+                                "name": "Hiking, Trekking, Mountaineering.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Hiking, Trekking, Mountaineering.jpg",
+                                    "size": {
+                                        "value": "55.2",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:56:19"
+                                }
+                            },
+                            {
+                                "name": "Keep Your Brain Young.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Keep Your Brain Young.jpg",
+                                    "size": {
+                                        "value": "71.6",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:54:17"
+                                }
+                            },
+                            {
+                                "name": "Trekking and Hiking.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Trekking and Hiking.jpg",
+                                    "size": {
+                                        "value": "52.6",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 19:55:48"
+                                }
+                            },
+                            {
+                                "name": "Trekking Vacation.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Trekking Vacation.jpg",
+                                    "size": {
+                                        "value": "53.3",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:18:11"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "mountains",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/galleries/mountains",
+                            "size": {
+                                "value": "872",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:51:42"
+                        },
+                        "contains": {
+                            "files": "11",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Almaty, Kazakhstan.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Almaty, Kazakhstan.jpg",
+                                    "size": {
+                                        "value": "64.6",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:27:28"
+                                }
+                            },
+                            {
+                                "name": "Armenia Monastery.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Armenia Monastery.jpg",
+                                    "size": {
+                                        "value": "73.5",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:21:53"
+                                }
+                            },
+                            {
+                                "name": "France Mountains.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/France Mountains.jpg",
+                                    "size": {
+                                        "value": "78.3",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:25:12"
+                                }
+                            },
+                            {
+                                "name": "Himalayas.jpeg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Himalayas.jpeg",
+                                    "size": {
+                                        "value": "88.9",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:24:31"
+                                }
+                            },
+                            {
+                                "name": "Lac De Gaube France.jpeg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Lac De Gaube France.jpeg",
+                                    "size": {
+                                        "value": "71.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:25:55"
+                                }
+                            },
+                            {
+                                "name": "Mont Branc, France.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Mont Branc, France.jpg",
+                                    "size": {
+                                        "value": "60.4",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:24:57"
+                                }
+                            },
+                            {
+                                "name": "Mountains Habitat.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Mountains Habitat.jpg",
+                                    "size": {
+                                        "value": "92.6",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:23:05"
+                                }
+                            },
+                            {
+                                "name": "Nepal.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Nepal.jpg",
+                                    "size": {
+                                        "value": "96.8",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:26:34"
+                                }
+                            },
+                            {
+                                "name": "North Face Mount Everest Tibet Autonomous Region.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/North Face Mount Everest Tibet Autonomous Region.jpg",
+                                    "size": {
+                                        "value": "84.7",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:24:10"
+                                }
+                            },
+                            {
+                                "name": "Underground Mountains.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Underground Mountains.jpg",
+                                    "size": {
+                                        "value": "87.4",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:23:24"
+                                }
+                            },
+                            {
+                                "name": "Valley Taurus Mountains Turkey.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Valley Taurus Mountains Turkey.jpg",
+                                    "size": {
+                                        "value": "73.7",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Wednesday, April 21, 2021, 20:21:10"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "files": []
+            },
+            {
+                "name": "samples",
+                "info": {
+                    "type": "File folder",
+                    "path": "/js_repo/primeri/primer6/html/samples/",
+                    "size": {
+                        "value": "12.4",
+                        "unit": "MB"
+                    },
+                    "created": "Saturday, May 08, 2021, 17:52:54"
+                },
+                "contains": {
+                    "files": "15",
+                    "folders": "3"
+                },
+                "folders": [
+                    {
+                        "name": "music",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/samples/music",
+                            "size": {
+                                "value": "5.00",
+                                "unit": "MB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:00"
+                        },
+                        "contains": {
+                            "files": "6",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Lost Civilization.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Lost Civilization.mp3",
+                                    "size": {
+                                        "value": "1.00",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 21:57:53"
+                                }
+                            },
+                            {
+                                "name": "Plain Folks.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Plain Folks.mp3",
+                                    "size": {
+                                        "value": "871",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:00:19"
+                                }
+                            },
+                            {
+                                "name": "Rimsky Korsakov - The Flight of the Bumble Bee.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Rimsky Korsakov - The Flight of the Bumble Bee.mp3",
+                                    "size": {
+                                        "value": "1.13",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:08:24"
+                                }
+                            },
+                            {
+                                "name": "Ultimate Victory.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Ultimate Victory.mp3",
+                                    "size": {
+                                        "value": "563",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 21:59:01"
+                                }
+                            },
+                            {
+                                "name": "Under Cover of Darkness.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Under Cover of Darkness.mp3",
+                                    "size": {
+                                        "value": "317",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:06:03"
+                                }
+                            },
+                            {
+                                "name": "Without Regret.mp3",
+                                "info": {
+                                    "type": "MP3 Format Sound (.mp3)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/music/Without Regret.mp3",
+                                    "size": {
+                                        "value": "1.16",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:02:51"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "pictures",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/samples/pictures",
+                            "size": {
+                                "value": "239",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:05"
+                        },
+                        "contains": {
+                            "files": "5",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "bird.jpeg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/pictures/bird.jpeg",
+                                    "size": {
+                                        "value": "33.1",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:55:09"
+                                }
+                            },
+                            {
+                                "name": "butterfly.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/pictures/butterfly.jpg",
+                                    "size": {
+                                        "value": "74.9",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:57:11"
+                                }
+                            },
+                            {
+                                "name": "city.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/pictures/city.jpg",
+                                    "size": {
+                                        "value": "42.7",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:59:27"
+                                }
+                            },
+                            {
+                                "name": "flower.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/pictures/flower.jpg",
+                                    "size": {
+                                        "value": "37.3",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 23:06:28"
+                                }
+                            },
+                            {
+                                "name": "stones.jpg",
+                                "info": {
+                                    "type": "JPEG image (.jpg)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/pictures/stones.jpg",
+                                    "size": {
+                                        "value": "51.0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 23:08:10"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "videos",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/samples/videos",
+                            "size": {
+                                "value": "7.16",
+                                "unit": "MB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:09"
+                        },
+                        "contains": {
+                            "files": "4",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "Run 5.mp4",
+                                "info": {
+                                    "type": "MP4 Video (.mp4)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/videos/Run 5.mp4",
+                                    "size": {
+                                        "value": "1.77",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:27:23"
+                                }
+                            },
+                            {
+                                "name": "Sun.mp4",
+                                "info": {
+                                    "type": "MP4 Video (.mp4)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/videos/Sun.mp4",
+                                    "size": {
+                                        "value": "1.86",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:36:33"
+                                }
+                            },
+                            {
+                                "name": "Venice Beach Drone.mp4",
+                                "info": {
+                                    "type": "MP4 Video (.mp4)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/videos/Venice Beach Drone.mp4",
+                                    "size": {
+                                        "value": "1.56",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:26:09"
+                                }
+                            },
+                            {
+                                "name": "Water.mp4",
+                                "info": {
+                                    "type": "MP4 Video (.mp4)",
+                                    "path": "/js_repo/primeri/primer6/js/data/samples/videos/Water.mp4",
+                                    "size": {
+                                        "value": "1.95",
+                                        "unit": "MB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 22:49:25"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "files": []
+            },
+            {
+                "name": "tests",
+                "info": {
+                    "type": "File folder",
+                    "path": "/js_repo/primeri/primer6/html/tests/",
+                    "size": {
+                        "value": "30.5",
+                        "unit": "KB"
+                    },
+                    "created": "Saturday, May 08, 2021, 17:53:31"
+                },
+                "contains": {
+                    "files": "64",
+                    "folders": "6"
+                },
+                "folders": [
+                    {
+                        "name": "competency",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/competency",
+                            "size": {
+                                "value": "9.58",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:37"
+                        },
+                        "contains": {
+                            "files": "16",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test1.txt",
+                                    "size": {
+                                        "value": "658",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:26:39"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test2.txt",
+                                    "size": {
+                                        "value": "687",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:29:32"
+                                }
+                            },
+                            {
+                                "name": "test3.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test3.txt",
+                                    "size": {
+                                        "value": "634",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:31:02"
+                                }
+                            },
+                            {
+                                "name": "test4.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test4.txt",
+                                    "size": {
+                                        "value": "621",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:32:54"
+                                }
+                            },
+                            {
+                                "name": "test5.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test5.txt",
+                                    "size": {
+                                        "value": "588",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:34:07"
+                                }
+                            },
+                            {
+                                "name": "test6.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test6.txt",
+                                    "size": {
+                                        "value": "631",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:35:26"
+                                }
+                            },
+                            {
+                                "name": "test7.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test7.txt",
+                                    "size": {
+                                        "value": "571",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:36:51"
+                                }
+                            },
+                            {
+                                "name": "test8.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test8.txt",
+                                    "size": {
+                                        "value": "756",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:38:16"
+                                }
+                            },
+                            {
+                                "name": "test9.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test9.txt",
+                                    "size": {
+                                        "value": "622",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:39:48"
+                                }
+                            },
+                            {
+                                "name": "test10.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test10.txt",
+                                    "size": {
+                                        "value": "578",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:41:11"
+                                }
+                            },
+                            {
+                                "name": "test11.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test11.txt",
+                                    "size": {
+                                        "value": "661",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:42:39"
+                                }
+                            },
+                            {
+                                "name": "test12.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test12.txt",
+                                    "size": {
+                                        "value": "571",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:43:56"
+                                }
+                            },
+                            {
+                                "name": "test13.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test13.txt",
+                                    "size": {
+                                        "value": "623",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:45:29"
+                                }
+                            },
+                            {
+                                "name": "test14.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test14.txt",
+                                    "size": {
+                                        "value": "649",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:46:41"
+                                }
+                            },
+                            {
+                                "name": "test15.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test15.txt",
+                                    "size": {
+                                        "value": "691",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:47:56"
+                                }
+                            },
+                            {
+                                "name": "test16.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/competency/test16.txt",
+                                    "size": {
+                                        "value": "275",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:49:01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "disc",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/disc",
+                            "size": {
+                                "value": "3.80",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:55"
+                        },
+                        "contains": {
+                            "files": "14",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test1.txt",
+                                    "size": {
+                                        "value": "269",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:50:45"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test2.txt",
+                                    "size": {
+                                        "value": "296",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:16"
+                                }
+                            },
+                            {
+                                "name": "test3.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test3.txt",
+                                    "size": {
+                                        "value": "271",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:49"
+                                }
+                            },
+                            {
+                                "name": "test4.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test4.txt",
+                                    "size": {
+                                        "value": "275",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:51"
+                                }
+                            },
+                            {
+                                "name": "test5.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test5.txt",
+                                    "size": {
+                                        "value": "276",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:51"
+                                }
+                            },
+                            {
+                                "name": "test6.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test6.txt",
+                                    "size": {
+                                        "value": "245",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:51"
+                                }
+                            },
+                            {
+                                "name": "test7.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test7.txt",
+                                    "size": {
+                                        "value": "259",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:51"
+                                }
+                            },
+                            {
+                                "name": "test8.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test8.txt",
+                                    "size": {
+                                        "value": "283",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:50"
+                                }
+                            },
+                            {
+                                "name": "test9.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test9.txt",
+                                    "size": {
+                                        "value": "273",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:50"
+                                }
+                            },
+                            {
+                                "name": "test10.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test10.txt",
+                                    "size": {
+                                        "value": "296",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:50"
+                                }
+                            },
+                            {
+                                "name": "test11.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test11.txt",
+                                    "size": {
+                                        "value": "256",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:50"
+                                }
+                            },
+                            {
+                                "name": "test12.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test12.txt",
+                                    "size": {
+                                        "value": "250",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:49"
+                                }
+                            },
+                            {
+                                "name": "test13.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test13.txt",
+                                    "size": {
+                                        "value": "308",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 18:52:49"
+                                }
+                            },
+                            {
+                                "name": "test14.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/disc/test14.txt",
+                                    "size": {
+                                        "value": "341",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:04:12"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jung",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/jung",
+                            "size": {
+                                "value": "7.06",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:59"
+                        },
+                        "contains": {
+                            "files": "6",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test1.txt",
+                                    "size": {
+                                        "value": "1018",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:06:18"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test2.txt",
+                                    "size": {
+                                        "value": "1.26",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:09:46"
+                                }
+                            },
+                            {
+                                "name": "test3.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test3.txt",
+                                    "size": {
+                                        "value": "1.12",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:11:48"
+                                }
+                            },
+                            {
+                                "name": "test4.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test4.txt",
+                                    "size": {
+                                        "value": "1.27",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:13:40"
+                                }
+                            },
+                            {
+                                "name": "test5.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test5.txt",
+                                    "size": {
+                                        "value": "1.22",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:15:16"
+                                }
+                            },
+                            {
+                                "name": "test6.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/jung/test6.txt",
+                                    "size": {
+                                        "value": "1.18",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:16:48"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "personality",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/personality",
+                            "size": {
+                                "value": "9.58",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:53:37"
+                        },
+                        "contains": {
+                            "files": "16",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test1.txt",
+                                    "size": {
+                                        "value": "337",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:24"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test2.txt",
+                                    "size": {
+                                        "value": "335",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:27"
+                                }
+                            },
+                            {
+                                "name": "test3.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test3.txt",
+                                    "size": {
+                                        "value": "391",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:30"
+                                }
+                            },
+                            {
+                                "name": "test4.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test4.txt",
+                                    "size": {
+                                        "value": "442",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:29"
+                                }
+                            },
+                            {
+                                "name": "test5.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test5.txt",
+                                    "size": {
+                                        "value": "369",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:28"
+                                }
+                            },
+                            {
+                                "name": "test6.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test6.txt",
+                                    "size": {
+                                        "value": "379",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:28"
+                                }
+                            },
+                            {
+                                "name": "test7.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test7.txt",
+                                    "size": {
+                                        "value": "326",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:28"
+                                }
+                            },
+                            {
+                                "name": "test8.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test8.txt",
+                                    "size": {
+                                        "value": "344",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:28"
+                                }
+                            },
+                            {
+                                "name": "test9.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test9.txt",
+                                    "size": {
+                                        "value": "391",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:28"
+                                }
+                            },
+                            {
+                                "name": "test10.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test10.txt",
+                                    "size": {
+                                        "value": "368",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:27"
+                                }
+                            },
+                            {
+                                "name": "test11.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test11.txt",
+                                    "size": {
+                                        "value": "389",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:27"
+                                }
+                            },
+                            {
+                                "name": "test12.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/personality/test12.txt",
+                                    "size": {
+                                        "value": "374",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:19:27"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "team-role",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/team-role",
+                            "size": {
+                                "value": "1.19",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:54:11"
+                        },
+                        "contains": {
+                            "files": "2",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/team-role/test1.txt",
+                                    "size": {
+                                        "value": "510",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:32:51"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/team-role/test2.txt",
+                                    "size": {
+                                        "value": "717",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:32:54"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "work-values",
+                        "info": {
+                            "type": "File folder",
+                            "path": "/js_repo/primeri/primer6/html/tests/work-values",
+                            "size": {
+                                "value": "4.58",
+                                "unit": "KB"
+                            },
+                            "created": "Saturday, May 08, 2021, 17:54:16"
+                        },
+                        "contains": {
+                            "files": "14",
+                            "folders": "0"
+                        },
+                        "folders": [],
+                        "files": [
+                            {
+                                "name": "test1.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test1.txt",
+                                    "size": {
+                                        "value": "318",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:21"
+                                }
+                            },
+                            {
+                                "name": "test2.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test2.txt",
+                                    "size": {
+                                        "value": "365",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:24"
+                                }
+                            },
+                            {
+                                "name": "test3.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test3.txt",
+                                    "size": {
+                                        "value": "370",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:27"
+                                }
+                            },
+                            {
+                                "name": "test4.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test4.txt",
+                                    "size": {
+                                        "value": "293",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:27"
+                                }
+                            },
+                            {
+                                "name": "test5.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test5.txt",
+                                    "size": {
+                                        "value": "324",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:27"
+                                }
+                            },
+                            {
+                                "name": "test6.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test6.txt",
+                                    "size": {
+                                        "value": "285",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:27"
+                                }
+                            },
+                            {
+                                "name": "test7.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test7.txt",
+                                    "size": {
+                                        "value": "323",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:26"
+                                }
+                            },
+                            {
+                                "name": "test8.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test8.txt",
+                                    "size": {
+                                        "value": "383",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:26"
+                                }
+                            },
+                            {
+                                "name": "test9.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test9.txt",
+                                    "size": {
+                                        "value": "325",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:26"
+                                }
+                            },
+                            {
+                                "name": "test10.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test10.txt",
+                                    "size": {
+                                        "value": "321",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:26"
+                                }
+                            },
+                            {
+                                "name": "test11.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test11.txt",
+                                    "size": {
+                                        "value": "333",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:25"
+                                }
+                            },
+                            {
+                                "name": "test12.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test12.txt",
+                                    "size": {
+                                        "value": "370",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:25"
+                                }
+                            },
+                            {
+                                "name": "test13.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test13.txt",
+                                    "size": {
+                                        "value": "374",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:25"
+                                }
+                            },
+                            {
+                                "name": "test14.txt",
+                                "info": {
+                                    "type": "Text Document (.txt)",
+                                    "path": "/js_repo/primeri/primer6/js/data/tests/work-values/test14.txt",
+                                    "size": {
+                                        "value": "311",
+                                        "unit": "B"
+                                    },
+                                    "created": "Thuesday, April 20, 2021, 19:38:25"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "files": []
+            }
+        ],
+        "files": []
+    }
+}

@@ -20,6 +20,8 @@ $hamburger_button_padding: 0.2rem 0.5rem;
 $hamburger_button_margin_left: -0.75rem;
 $hamburger_button_border_radius: 0.2rem;
 $hamburger_icon_font_size: 0.9rem;
+$hamburger_icon_transition: 1s;
+$hamburger_icon_close_rotation: 180deg;
 
 // search
 $search_border_width: 0.15rem;
@@ -28,6 +30,7 @@ $search_border_radius: 0.2rem;
 $search_icon_font_size: 0.8rem;
 
 // navigation
+$navigation_transition: 0.5s;
 $navigation_breakpoint: 767.98px;
 $navigation_z_index: 10000;
 $navigation_box_padding_top: 0.3rem;
@@ -129,6 +132,10 @@ $preview_picture_min_width: 5rem;
 // header
 $header_border_width: 0.1rem;
 $header_icon_font_size: 1.1rem;
+$header_icon_transition: 0.5s;
+$header_icon_view_rotation: 45deg;
+$header_icon_sort_rotation: 360deg;
+$header_icon_theme_rotation: 180deg;
 $header_search_width: 24rem;
 
 // footer

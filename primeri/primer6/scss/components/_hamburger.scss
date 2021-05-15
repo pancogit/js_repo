@@ -33,5 +33,11 @@
 
     &__icon {
         font-size: variables.$hamburger_icon_font_size;
+        transition: variables.$hamburger_icon_transition;
+
+        // close icon by rotating with some transition
+        &--close {
+            transform: rotate(variables.$hamburger_icon_close_rotation);
+        }
     }
 }
