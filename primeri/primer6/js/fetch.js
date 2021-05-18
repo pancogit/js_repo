@@ -2,6 +2,7 @@
 
 
 export default class Fetch {
+    
     constructor(path) {
         this.path = path;
         this.data = 0;

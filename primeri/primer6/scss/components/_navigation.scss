@@ -86,10 +86,6 @@
                 color: colors.$navigation_text_color;
             }
         }
-
-        &--active {
-            pointer-events: none;
-        }
     }
 
     &__box {
@@ -126,10 +122,13 @@
     &__submenu {
         @include mixins.reset_list;
         
-        display: none;
+        // set height to zero and hide content by default
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height variables.$navigation_submenu_transition;
 
         &--expanded {
-            display: block;
+            max-height: max-content;
         }
     }
 
