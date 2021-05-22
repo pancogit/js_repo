@@ -9,6 +9,7 @@
     &__content {
         margin: 0 variables.$home_content_margin;
         background-color: colors.$home_content_background_color;
+        min-height: variables.$home_content_min_height;
 
         // dark mode for content
         &--dark {

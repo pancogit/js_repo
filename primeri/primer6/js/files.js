@@ -33,6 +33,13 @@ export default class Files {
                 type: 'MP4 Video (.mp4)'
             }
         }
+
+        this.maxFileNameCharacters = 30;
+
+        this.urlFormat = {
+            whitespace: '%20',
+            percentage: '%25'
+        }
     }
 
     // add folders and files on page from cached folder object
@@ -67,14 +74,41 @@ export default class Files {
     // create HTML for folder or file
     createFolderFileHTML(type, cachedElement) {
         var box = $('<div>').addClass('files__box');
-        var link = $('<a>').addClass('files__link').attr('href', cachedElement.info.path);
-        var name = $('<div>').addClass('files__name').text(cachedElement.name);
+        var link = $('<a>').addClass('files__link').attr('href', this.formatURL(cachedElement.info.path));
+        var name = $('<div>').addClass('files__name').text(this.formatName(cachedElement.name));
         var icon = this.createIconHTML(type, cachedElement);
 
         box.append(link);
         link.append(icon).append(name);
 
         return box;
+    }
+
+    // format folder / file name
+    // if it's too long, then set tree dots at the end of name, otherwise return given name
+    formatName(name) {
+        var numberOfCharacters = name.length;
+
+        return (numberOfCharacters > this.maxFileNameCharacters) ? 
+            name.slice(0, this.maxFileNameCharacters) + '...' : name;
+    }
+
+    // format url
+    // replace whitespaces with url whitespace sign (%20) and replace 
+    // percentages % with url percentage sign (%25)
+    formatURL(url) {
+        var formatPercentages = url.replaceAll('%', this.urlFormat.percentage);
+        var withoutSpaces = formatPercentages.replaceAll(' ', this.urlFormat.whitespace);
+
+        return withoutSpaces;
+    }
+
+    // reverse url format, replace url percentages and url whitespaces with real percentages and whitespaces
+    reverseURL(url) {
+        var withSpaces = url.replaceAll(this.urlFormat.whitespace, ' ');
+        var withPercentages = withSpaces.replaceAll(this.urlFormat.percentage, '%');
+
+        return withPercentages;
     }
 
     // create different icon depending on type of file / folder
@@ -94,7 +128,8 @@ export default class Files {
             case this.types.image.name:
                 let imageInfo = cachedElement.name.toLowerCase() + ' image';
 
-                icon = $('<img>').addClass('files__picture').attr('alt', imageInfo).attr('src', cachedElement.info.path);
+                icon = $('<img>').addClass('files__picture').attr('alt', imageInfo)
+                    .attr('src', this.formatURL(cachedElement.info.path));
                 break;
 
             case this.types.audio.name:

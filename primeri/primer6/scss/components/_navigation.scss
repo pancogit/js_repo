@@ -121,14 +121,13 @@
 
     &__submenu {
         @include mixins.reset_list;
-        
-        // set height to zero and hide content by default
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height variables.$navigation_submenu_transition;
 
+        // hide by default
+        display: none;
+
+        // show submenu when expanded
         &--expanded {
-            max-height: max-content;
+            display: block;
         }
     }
 

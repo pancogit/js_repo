@@ -12,7 +12,7 @@
         },
         "contains": {
             "files": "165",
-            "folders": "19"
+            "folders": "24"
         },
         "folders": [
             {
@@ -414,7 +414,7 @@
                 },
                 "contains": {
                     "files": "57",
-                    "folders": "5"
+                    "folders": "13"
                 },
                 "folders": [
                     {
@@ -430,9 +430,155 @@
                         },
                         "contains": {
                             "files": "10",
-                            "folders": "0"
+                            "folders": "8"
                         },
-                        "folders": [],
+                        "folders": [
+                            {
+                                "name": "test folder",
+                                "info": {
+                                    "type": "File folder",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/test folder",
+                                    "size": {
+                                        "value": "0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Saturday, May 08, 2021, 17:51:22"
+                                },
+                                "contains": {
+                                    "files": "0",
+                                    "folders": "0"
+                                },
+                                "folders": [],
+                                "files": []
+                            },
+                            {
+                                "name": "another folder",
+                                "info": {
+                                    "type": "File folder",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/another folder",
+                                    "size": {
+                                        "value": "0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Saturday, May 08, 2021, 17:51:22"
+                                },
+                                "contains": {
+                                    "files": "0",
+                                    "folders": "5"
+                                },
+                                "folders": [
+                                    {
+                                        "name": "folder 1",
+                                        "info": {
+                                            "type": "File folder",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 1",
+                                            "size": {
+                                                "value": "0",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Saturday, May 08, 2021, 17:51:22"
+                                        },
+                                        "contains": {
+                                            "files": "0",
+                                            "folders": "0"
+                                        },
+                                        "folders": [],
+                                        "files": []
+                                    },
+                                    {
+                                        "name": "folder 2",
+                                        "info": {
+                                            "type": "File folder",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 2",
+                                            "size": {
+                                                "value": "0",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Saturday, May 08, 2021, 17:51:22"
+                                        },
+                                        "contains": {
+                                            "files": "0",
+                                            "folders": "0"
+                                        },
+                                        "folders": [],
+                                        "files": []
+                                    },
+                                    {
+                                        "name": "folder 3",
+                                        "info": {
+                                            "type": "File folder",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 3",
+                                            "size": {
+                                                "value": "0",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Saturday, May 08, 2021, 17:51:22"
+                                        },
+                                        "contains": {
+                                            "files": "0",
+                                            "folders": "0"
+                                        },
+                                        "folders": [],
+                                        "files": []
+                                    },
+                                    {
+                                        "name": "folder 4",
+                                        "info": {
+                                            "type": "File folder",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 4",
+                                            "size": {
+                                                "value": "0",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Saturday, May 08, 2021, 17:51:22"
+                                        },
+                                        "contains": {
+                                            "files": "0",
+                                            "folders": "0"
+                                        },
+                                        "folders": [],
+                                        "files": []
+                                    },
+                                    {
+                                        "name": "folder 5",
+                                        "info": {
+                                            "type": "File folder",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 5",
+                                            "size": {
+                                                "value": "0",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Saturday, May 08, 2021, 17:51:22"
+                                        },
+                                        "contains": {
+                                            "files": "0",
+                                            "folders": "0"
+                                        },
+                                        "folders": [],
+                                        "files": []
+                                    }
+                                ],
+                                "files": []
+                            },
+                            {
+                                "name": "something about cars",
+                                "info": {
+                                    "type": "File folder",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/something about cars",
+                                    "size": {
+                                        "value": "0",
+                                        "unit": "KB"
+                                    },
+                                    "created": "Saturday, May 08, 2021, 17:51:22"
+                                },
+                                "contains": {
+                                    "files": "0",
+                                    "folders": "0"
+                                },
+                                "folders": [],
+                                "files": []
+                            }
+                        ],
                         "files": [
                             {
                                 "name": "Audi A6.jpg",
@@ -1972,7 +2118,7 @@
                             "created": "Saturday, May 08, 2021, 17:53:37"
                         },
                         "contains": {
-                            "files": "16",
+                            "files": "12",
                             "folders": "0"
                         },
                         "folders": [],

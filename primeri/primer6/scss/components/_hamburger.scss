@@ -33,7 +33,9 @@
 
     &__icon {
         font-size: variables.$hamburger_icon_font_size;
-        transition: variables.$hamburger_icon_transition;
+
+        // use same transition as navigation
+        transition: variables.$navigation_transition;
 
         // close icon by rotating with some transition
         &--close {

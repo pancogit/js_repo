@@ -43,7 +43,7 @@ a {
 }
 .hamburger__icon {
   font-size: 0.9rem;
-  transition: 1s;
+  transition: 0.5s;
 }
 .hamburger__icon--close {
   transform: rotate(180deg);
@@ -166,12 +166,10 @@ a {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.7s;
+  display: none;
 }
 .navigation__submenu--expanded {
-  max-height: max-content;
+  display: block;
 }
 .navigation__text {
   padding-right: 0.6rem;
@@ -614,6 +612,7 @@ a {
 .home__content {
   margin: 0 -0.75rem;
   background-color: #f7f7f7;
+  min-height: 5rem;
 }
 .home__content--dark {
   background-color: #212d63;
