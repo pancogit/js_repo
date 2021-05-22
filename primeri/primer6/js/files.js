@@ -1,6 +1,8 @@
 // grid with files
 
 
+import Preview from './preview.js';
+
 export default class Files {
 
     constructor() {
@@ -40,6 +42,11 @@ export default class Files {
             whitespace: '%20',
             percentage: '%25'
         }
+
+        // text fetched from server for clicked text file and set in HTML element
+        this.textFromServer = 0;
+
+        this.filePreview = new Preview();
     }
 
     // add folders and files on page from cached folder object
@@ -77,6 +84,14 @@ export default class Files {
         var link = $('<a>').addClass('files__link').attr('href', this.formatURL(cachedElement.info.path));
         var name = $('<div>').addClass('files__name').text(this.formatName(cachedElement.name));
         var icon = this.createIconHTML(type, cachedElement);
+        var isFolder = $(icon).hasClass('fa-folder');
+
+        // add event listener for folders to emulate click on navigation links
+        // send link for folder via function binding as additional argument
+        if (isFolder) $(link).on('click', this.folderIsClicked.bind(this, link.attr('href')));
+
+        // or add event listener for files to open them
+        else $(link).on('click', this.fileIsClicked.bind(this));
 
         box.append(link);
         link.append(icon).append(name);
@@ -177,5 +192,110 @@ export default class Files {
         }
 
         return type;
+    }
+
+    // when folder is clicked, search from active navigation link to descendants to find folder link
+    // it's much faster than to search entire tree structure
+    folderIsClicked(linkURL, event) {
+        event.preventDefault();
+
+        var currentActiveNavigationLink = $('.navigation__link--active');
+        var isHomepageLink = !currentActiveNavigationLink.length;
+        var listItems;
+
+        if (isHomepageLink) {
+            let navigationList = $('.navigation__list');
+            listItems = navigationList[0].children;
+        }
+        else {
+            let submenu = currentActiveNavigationLink.next();
+            listItems = submenu[0].children;
+        }
+
+        for (let i = 0; i < listItems.length; i++) {
+            let folderLink = listItems[i].firstChild;
+            let linkIsFound = folderLink.pathname === linkURL;
+
+            // when link with clicked folder is found in navigation list, then fire click event
+            // on navigation folder link to change folder structures, files, breadcrumbs
+            // emulate click on navigation link
+            if (linkIsFound) {
+                $(folderLink).click();
+                break;
+            }
+        }
+    }
+
+    // function must be asynchronous because of ajax call for text element
+    async fileIsClicked(event) {
+        event.preventDefault();
+
+        var link = event.currentTarget;
+        var media = link.firstChild;
+        var imageType = media.tagName === 'IMG';
+        var textType = $(media).hasClass('files__icon--text');
+        var audioType = $(media).hasClass('files__icon--audio');
+        var videoType = $(media).hasClass('files__icon--video');
+        var mediaElement;
+
+        // look what kind of media is clicked (image, text, audio, video)
+        if (imageType) mediaElement = this.createFilePreviewImage(media);
+        else if (audioType) mediaElement = this.createFilePreviewAudio(link);
+        else if (videoType) mediaElement = this.createFilePreviewVideo(link);
+
+        // for text, wait for ajax request to finish before continue
+        else if (textType) {
+            await this.createFilePreviewText(link.href);
+            mediaElement = this.textFromServer;
+        }
+
+        // now media element is ready, preview them on the screen
+        this.filePreview.show(mediaElement);
+    }
+
+    createFilePreviewImage(media) {
+        var imageSource = media.src;
+        var imageInfo = media.alt;
+        var image = $('<img>').addClass('preview__picture').attr('src', imageSource).attr('alt', imageInfo);
+
+        return image;
+    }
+
+    createFilePreviewText(link) {
+        // do ajax request to get text from server and return promise, 
+        // because await is used for waiting for promise to resolve
+        return $.ajax({
+            url: link,
+            method: 'GET'
+        })
+        .done(this.textIsFetched.bind(this));
+    }
+
+    textIsFetched(serverText) {
+        var text = $('<div>').addClass('preview__text');
+        text.text(serverText);
+
+        // save text element
+        this.textFromServer = text;
+    }
+
+    createFilePreviewAudio(link) {
+        var audioSource = link.href;
+        var audio = $('<audio>').addClass('preview__audio').attr('controls', true).attr('autoplay', true);
+        var source = $('<source>').attr('src', audioSource).attr('type', 'audio/mpeg');
+
+        audio.append(source);
+
+        return audio;
+    }
+
+    createFilePreviewVideo(link) {
+        var videoSource = link.href;
+        var video = $('<video>').addClass('preview__video').attr('controls', true).attr('autoplay', true);
+        var source = $('<source>').attr('src', videoSource).attr('type', 'video/mp4');
+
+        video.append(source);
+        
+        return video;
     }
 }

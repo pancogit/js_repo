@@ -181,9 +181,7 @@ export default class Navigation {
 
         if (submenuExists) {
             if (expanded || redefineHeight) {
-                // show submenu and expand parent links up to the home link
                 this.showSubmenu(icon, sign, submenu, redefineHeight);
-                this.expandParents(link);
             }
             else {
                 // hide submenu and hide all children nodes which are expanded when parent is closed
@@ -191,6 +189,9 @@ export default class Navigation {
                 this.hideAllChildren(submenu);
             }
         }
+
+        // expand parent links up to the home link
+        this.expandParents(link);
     }
 
     showSubmenu(icon, sign, submenu, redefineHeight) {
@@ -218,7 +219,6 @@ export default class Navigation {
 
     // expand parents links from navigation
     // when some nested link is expanded, then parent links must be expanded also
-    // because height for parents must be redefined to show all list items properly
     expandParents(link) {
         var parentSubmenu = $(link).parent().parent();
         var isSubmenu = parentSubmenu.hasClass(this.navigationSubmenuClass);
@@ -228,8 +228,20 @@ export default class Navigation {
         if (isSubmenu) {
             let parentLinkForExpanding = parentSubmenu.prev();
 
+            this.showParentLink(parentLinkForExpanding);
             this.expandHideFolders(parentLinkForExpanding, true);
         }
+    }
+
+    showParentLink(parentLink) {
+        var icon = $(parentLink).find(`.${this.navigationIconClass}`);
+        var sign = $(parentLink).find(`.${this.navigationSignClass}`);
+
+        // show link by removing plus and adding minus
+        icon.removeClass(this.folderPlusClass);
+        icon.addClass(this.folderMinusClass);
+        sign.removeClass(this.signPlusClass);
+        sign.addClass(this.signMinusClass);
     }
 
     // when some folder is closed, then close all children folders inside it
