@@ -5,13 +5,13 @@
             "type": "File folder",
             "path": "/js_repo/primeri/primer6/html/",
             "size": {
-                "value": "17.4",
+                "value": "20.27",
                 "unit": "MB"
             },
             "created": "Friday, January 08, 2021, 16:54:12"
         },
         "contains": {
-            "files": "165",
+            "files": "169",
             "folders": "24"
         },
         "folders": [
@@ -407,13 +407,13 @@
                     "type": "File folder",
                     "path": "/js_repo/primeri/primer6/html/galleries/",
                     "size": {
-                        "value": "4.54",
+                        "value": "7.41",
                         "unit": "MB"
                     },
                     "created": "Saturday, May 08, 2021, 17:51:16"
                 },
                 "contains": {
-                    "files": "57",
+                    "files": "61",
                     "folders": "13"
                 },
                 "folders": [
@@ -423,13 +423,13 @@
                             "type": "File folder",
                             "path": "/js_repo/primeri/primer6/html/galleries/cars",
                             "size": {
-                                "value": "977",
-                                "unit": "KB"
+                                "value": "3.82",
+                                "unit": "MB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:22"
                         },
                         "contains": {
-                            "files": "10",
+                            "files": "14",
                             "folders": "8"
                         },
                         "folders": [
@@ -457,13 +457,13 @@
                                     "type": "File folder",
                                     "path": "/js_repo/primeri/primer6/html/galleries/another folder",
                                     "size": {
-                                        "value": "0",
-                                        "unit": "KB"
+                                        "value": "2.87",
+                                        "unit": "MB"
                                     },
                                     "created": "Saturday, May 08, 2021, 17:51:22"
                                 },
                                 "contains": {
-                                    "files": "0",
+                                    "files": "4",
                                     "folders": "5"
                                 },
                                 "folders": [
@@ -558,7 +558,56 @@
                                         "files": []
                                     }
                                 ],
-                                "files": []
+                                "files": [
+                                    {
+                                        "name": "butterfly.jpg",
+                                        "info": {
+                                            "type": "JPEG image (.jpg)",
+                                            "path": "/js_repo/primeri/primer6/js/data/samples/pictures/butterfly.jpg",
+                                            "size": {
+                                                "value": "74.9",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Thuesday, April 20, 2021, 22:57:11"
+                                        }
+                                    },
+                                    {
+                                        "name": "Plain Folks.mp3",
+                                        "info": {
+                                            "type": "MP3 Format Sound (.mp3)",
+                                            "path": "/js_repo/primeri/primer6/js/data/samples/music/Plain Folks.mp3",
+                                            "size": {
+                                                "value": "871",
+                                                "unit": "KB"
+                                            },
+                                            "created": "Thuesday, April 20, 2021, 22:00:19"
+                                        }
+                                    },
+                                    {
+                                        "name": "Water.mp4",
+                                        "info": {
+                                            "type": "MP4 Video (.mp4)",
+                                            "path": "/js_repo/primeri/primer6/js/data/samples/videos/Water.mp4",
+                                            "size": {
+                                                "value": "1.95",
+                                                "unit": "MB"
+                                            },
+                                            "created": "Thuesday, April 20, 2021, 22:49:25"
+                                        }
+                                    },
+                                    {
+                                        "name": "test1.txt",
+                                        "info": {
+                                            "type": "Text Document (.txt)",
+                                            "path": "/js_repo/primeri/primer6/js/data/tests/disc/test1.txt",
+                                            "size": {
+                                                "value": "269",
+                                                "unit": "B"
+                                            },
+                                            "created": "Thuesday, April 20, 2021, 18:50:45"
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "name": "something about cars",

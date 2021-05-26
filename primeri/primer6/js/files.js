@@ -8,6 +8,20 @@ export default class Files {
     constructor() {
         this.wrapper = $('.home__content');
         this.files = $('.files');
+        this.filesNameClass = 'files__name';
+        this.filesPictureClass = 'files__picture';
+        this.filesIconTextClass = 'files__icon--text';
+        this.filesIconAudioClass = 'files__icon--audio';
+        this.filesIconVideoClass = 'files__icon--video';
+        this.filesIconFolderClass = 'files__icon--folder';
+
+        this.filesLargeClass = 'files--large';
+        this.filesMediumClass = 'files--medium';
+        this.filesSmallClass = 'files--small';
+
+        // by default, current view is medium for files
+        // but it can be changed to large or small
+        this.currentFilesView = this.filesMediumClass;
 
         this.types = {
             folder: {
@@ -47,13 +61,15 @@ export default class Files {
         this.textFromServer = 0;
 
         this.filePreview = new Preview();
+        this.filePreview.files = this;
     }
 
     // add folders and files on page from cached folder object
     addToPage(folderCache) {
         this.removeFilesFromPage();
 
-        this.files = $('<div>').addClass('files files--medium');
+        // add class for current grid view for files
+        this.files = $('<div>').addClass(`files ${this.currentFilesView}`);
 
         // add folders / files from cache
         this.addFoldersFiles(folderCache.folders);
@@ -82,7 +98,7 @@ export default class Files {
     createFolderFileHTML(type, cachedElement) {
         var box = $('<div>').addClass('files__box');
         var link = $('<a>').addClass('files__link').attr('href', this.formatURL(cachedElement.info.path));
-        var name = $('<div>').addClass('files__name').text(this.formatName(cachedElement.name));
+        var name = $('<div>').addClass(this.filesNameClass).text(this.formatName(cachedElement.name));
         var icon = this.createIconHTML(type, cachedElement);
         var isFolder = $(icon).hasClass('fa-folder');
 
@@ -104,7 +120,7 @@ export default class Files {
     formatName(name) {
         var numberOfCharacters = name.length;
 
-        return (numberOfCharacters > this.maxFileNameCharacters) ? 
+        return (numberOfCharacters > this.maxFileNameCharacters) ?
             name.slice(0, this.maxFileNameCharacters) + '...' : name;
     }
 
@@ -126,33 +142,40 @@ export default class Files {
         return withPercentages;
     }
 
+    // get pathname of URL without origin and protocol
+    static getURLPathname(url) {
+        var urlObject = new URL(url);
+
+        return urlObject.pathname;
+    }
+
     // create different icon depending on type of file / folder
     createIconHTML(type, cachedElement) {
         var icon;
 
         switch (type) {
             case this.types.folder.name:
-                icon = $('<i>').addClass('fas fa-folder files__icon files__icon--folder');
+                icon = $('<i>').addClass(`fas fa-folder files__icon ${this.filesIconFolderClass}`);
                 break;
 
             case this.types.file.name:
-                icon = $('<i>').addClass('fas fa-file-alt files__icon files__icon--text');
+                icon = $('<i>').addClass(`fas fa-file-alt files__icon ${this.filesIconTextClass}`);
                 break;
 
             // for image, create image element with picture and other info
             case this.types.image.name:
                 let imageInfo = cachedElement.name.toLowerCase() + ' image';
 
-                icon = $('<img>').addClass('files__picture').attr('alt', imageInfo)
+                icon = $('<img>').addClass(this.filesPictureClass).attr('alt', imageInfo)
                     .attr('src', this.formatURL(cachedElement.info.path));
                 break;
 
             case this.types.audio.name:
-                icon = $('<i>').addClass('fas fa-file-audio files__icon files__icon--audio');
+                icon = $('<i>').addClass(`fas fa-file-audio files__icon ${this.filesIconAudioClass}`);
                 break;
 
             case this.types.video.name:
-                icon = $('<i>').addClass('fas fa-file-video files__icon files__icon--video');
+                icon = $('<i>').addClass(`fas fa-file-video files__icon ${this.filesIconVideoClass}`);
                 break;
 
             default: break;
@@ -233,9 +256,9 @@ export default class Files {
         var link = event.currentTarget;
         var media = link.firstChild;
         var imageType = media.tagName === 'IMG';
-        var textType = $(media).hasClass('files__icon--text');
-        var audioType = $(media).hasClass('files__icon--audio');
-        var videoType = $(media).hasClass('files__icon--video');
+        var textType = $(media).hasClass(this.filesIconTextClass);
+        var audioType = $(media).hasClass(this.filesIconAudioClass);
+        var videoType = $(media).hasClass(this.filesIconVideoClass);
         var mediaElement;
 
         // look what kind of media is clicked (image, text, audio, video)
@@ -245,7 +268,7 @@ export default class Files {
 
         // for text, wait for ajax request to finish before continue
         else if (textType) {
-            await this.createFilePreviewText(link.href);
+            await this.createFilePreviewText(link);
             mediaElement = this.textFromServer;
         }
 
@@ -254,7 +277,7 @@ export default class Files {
     }
 
     createFilePreviewImage(media) {
-        var imageSource = media.src;
+        var imageSource = Files.getURLPathname(media.src);
         var imageInfo = media.alt;
         var image = $('<img>').addClass('preview__picture').attr('src', imageSource).attr('alt', imageInfo);
 
@@ -265,22 +288,27 @@ export default class Files {
         // do ajax request to get text from server and return promise, 
         // because await is used for waiting for promise to resolve
         return $.ajax({
-            url: link,
+            url: link.href,
             method: 'GET'
         })
-        .done(this.textIsFetched.bind(this));
+            .done(this.textIsFetched.bind(this, link));
     }
 
-    textIsFetched(serverText) {
+    textIsFetched(link, serverText) {
         var text = $('<div>').addClass('preview__text');
         text.text(serverText);
+
+        // set html data- attribute for text file name because that's how it's 
+        // identified in current folder
+        var filesName = $(link).find(`.${this.filesNameClass}`);
+        text.attr('data-name', filesName.text());
 
         // save text element
         this.textFromServer = text;
     }
 
     createFilePreviewAudio(link) {
-        var audioSource = link.href;
+        var audioSource = Files.getURLPathname(link.href);
         var audio = $('<audio>').addClass('preview__audio').attr('controls', true).attr('autoplay', true);
         var source = $('<source>').attr('src', audioSource).attr('type', 'audio/mpeg');
 
@@ -290,12 +318,121 @@ export default class Files {
     }
 
     createFilePreviewVideo(link) {
-        var videoSource = link.href;
+        var videoSource = Files.getURLPathname(link.href);
         var video = $('<video>').addClass('preview__video').attr('controls', true).attr('autoplay', true);
         var source = $('<source>').attr('src', videoSource).attr('type', 'video/mp4');
 
         video.append(source);
-        
+
         return video;
+    }
+
+    // get previous or next file link from DOM
+    getPreviousNextFileLink(fileType, fileInfo, previousNext) {
+        var isImage = fileType === this.types.image;
+        var isText = fileType === this.types.file;
+        var isAudio = fileType === this.types.audio;
+        var isVideo = fileType === this.types.video;
+        var filesBoxes = this.getFilesFromDOM();
+        var previousFileLink = previousNext === 0;
+        var nextFileLink = previousNext === 1;
+        var fileLink;
+
+        if (isImage)
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
+                                                         nextFileLink, this.filesPictureClass);
+        else if (isText)
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
+                                                         nextFileLink, this.filesIconTextClass);
+        else if (isAudio)
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
+                                                         nextFileLink, this.filesIconAudioClass);
+        else if (isVideo)
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
+                                                         nextFileLink, this.filesIconVideoClass);
+
+        return fileLink;
+    }
+
+    // just get files from DOM, ignore folders
+    getFilesFromDOM() {
+        var filesFolders = this.files[0].children;
+        var files = [];
+
+        for (let i = 0; i < filesFolders.length; i++) {
+            let folder = $(filesFolders[i]).find(`.${this.filesIconFolderClass}`);
+            let isFolder = folder.length;
+
+            // push just files into files array, if it's folder don't do anything
+            if (!isFolder) files.push(filesFolders[i]);
+        }
+
+        return files;
+    }
+
+    getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, nextFileLink, mediaClass) {
+
+        for (var i = 0; i < filesBoxes.length; i++) {
+            let media = $(filesBoxes[i]).find(`.${mediaClass}`);
+
+            if (media) {
+                let mediaPath;
+                let isText = mediaClass === this.filesIconTextClass;
+                let isImage = mediaClass === this.filesPictureClass;
+
+                // set media path for different type of media
+                if (isText) mediaPath = media.next().text();
+                else if (isImage) mediaPath = media.attr('src');
+                else mediaPath = media.parent().attr('href');
+
+                // media is found in DOM
+                if (mediaPath === fileInfo) break;
+            }
+        }
+
+        // return file link
+        return this.getFileLink(previousFileLink, nextFileLink, i, filesBoxes);
+    }
+
+    getFileLink(previousFileLink, nextFileLink, i, filesBoxes) {
+
+        // get file index of previous or next file
+        // for previous file, if it's first file, then return last file, otherwise just decrement index
+        // for next file, if it's last file, then return file file, otherwise just increment index
+        var fileIndex;
+
+        if (previousFileLink)
+            fileIndex = i === 0 ? filesBoxes.length - 1 : i - 1;
+        else if (nextFileLink)
+            fileIndex = i === filesBoxes.length - 1 ? 0 : i + 1;
+
+        var file = filesBoxes[fileIndex];
+
+        // return file link
+        return file.firstChild;
+    }
+
+    // change view for files in round
+    changeFilesGridView() {
+        this.files.removeClass(this.currentFilesView);
+
+        switch (this.currentFilesView) {
+            case this.filesLargeClass:
+                this.files.addClass(this.filesMediumClass);
+                this.currentFilesView = this.filesMediumClass;
+                break;
+
+            case this.filesMediumClass:
+                this.files.addClass(this.filesSmallClass);
+                this.currentFilesView = this.filesSmallClass;
+                break;
+
+            case this.filesSmallClass:
+                this.files.addClass(this.filesLargeClass);
+                this.currentFilesView = this.filesLargeClass;
+                break;
+
+            default: break;
+        }
     }
 }
