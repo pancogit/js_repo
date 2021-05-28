@@ -6,9 +6,10 @@ import Files from './files.js';
 
 export default class Navigation {
 
-    constructor(data, breadcrumbsObject) {
+    constructor(data, breadcrumbsObject, searchObject) {
         this.serverData = data;
         this.breadcrumbs = breadcrumbsObject;
+        this.search = searchObject;
 
         this.navigationClass = 'navigation';
         this.navigationActiveLinkClass = 'navigation__link--active';
@@ -25,6 +26,7 @@ export default class Navigation {
 
         this.size = new Size();
         this.files = new Files();
+        this.header = 0;
     }
 
     add(restoreHomepage = false) {
@@ -167,6 +169,13 @@ export default class Navigation {
         // update active link and add folder path for breadcrumbs menu
         this.updateActiveLink(linkObject);
         this.breadcrumbs.setFolderPath(this.serverData);
+
+        // when any folder is clicked, then set default icon for sorting to skip 
+        // sorting already sorted folder
+        this.header.setDefaultSortIcon();
+
+        // remove search results from page with click event fire
+        this.search.deleteIcon.click();
     }
 
     // expand folders from navigation or hide them

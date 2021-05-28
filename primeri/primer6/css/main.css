@@ -21,9 +21,7 @@ a {
 
 @media only screen and (max-width: 767.98px) {
   .hamburger {
-    position: fixed;
-    top: 25%;
-    z-index: 10000;
+    height: 0;
   }
 }
 .hamburger__button {
@@ -40,6 +38,13 @@ a {
 }
 .hamburger__button:focus {
   outline: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .hamburger__button {
+    position: fixed;
+    top: 25%;
+    z-index: 10000;
+  }
 }
 .hamburger__icon {
   font-size: 0.9rem;
@@ -67,6 +72,16 @@ a {
   outline: none;
   border: none;
   color: white;
+}
+.search__box::placeholder {
+  color: #a7b596;
+  font-style: italic;
+}
+.search__delete--hidden {
+  visibility: hidden;
+}
+.search__delete--hidden .search__icon {
+  cursor: auto;
 }
 .search__icon {
   cursor: pointer;

@@ -3,9 +3,11 @@
 
 export default class Breadcrumbs {
 
-    constructor() {
+    constructor(searchElement) {
         this.navigation = 0;
         this.navigationObject = 0;
+        this.search = searchElement;
+        this.header = 0;
         this.breadcrumbsContainer = $('.breadcrumbs .row');
         this.homepageLink = this.breadcrumbsContainer.find('.breadcrumbs__main');
         this.navigationActiveLink = 0;
@@ -172,5 +174,12 @@ export default class Breadcrumbs {
 
         // restore files and navigation for homepage
         this.navigationObject.add(true);
+
+        // when home folder is clicked, then set default icon for sorting to skip 
+        // sorting already sorted folder
+        this.header.setDefaultSortIcon();
+
+        // remove search results from page with click event fire
+        this.search.deleteIcon.click();
     }
 }

@@ -23,9 +23,15 @@ export default class Header {
             currentClass: this.viewClasses.medium
         }
 
+        this.sortClasses = {
+            ascending: 'fas fa-sort-alpha-down header__icon header__icon--sort',
+            descending: 'fas fa-sort-alpha-up header__icon header__icon--sort'
+        }
+
         this.iconSort = {
             icon: sort,
-            link: sort.parent()
+            link: sort.parent(),
+            currentClass: this.sortClasses.ascending
         }
 
         this.themeClasses = {
@@ -51,6 +57,8 @@ export default class Header {
             link: expand.parent(),
             currentClass: this.expandClasses.expand,
         }
+
+        this.fullscreenMode = false;
     }
 
     addListeners() {
@@ -58,10 +66,11 @@ export default class Header {
         this.iconSort.link.on('click', this.sortFolder.bind(this));
         this.iconTheme.link.on('click', this.changeHomeContentTheme.bind(this));
 
-        // add two event listeners for fullscreen icon, one for icon click, 
-        // another when fullscreen is leaved to change icon also
+        // add event listeners for fullscreen
+        // change fullscreen with click, F11 or escape button
         this.iconExpand.link.on('click', this.changeFullscreen.bind(this));
-        $(window).on('fullscreenchange', this.fullscreenLeaved.bind(this));
+        $(window).on('fullscreenchange', this.fullscreenChanged.bind(this));
+        //$(window).on('keydown', this.fullscreenKeyboard.bind(this));
     }
 
     changeGridView(event) {
@@ -99,6 +108,21 @@ export default class Header {
 
     sortFolder(event) {
         event.preventDefault();
+
+        var isAscending = this.iconSort.currentClass === this.sortClasses.ascending;
+        var isDescending = this.iconSort.currentClass === this.sortClasses.descending;
+
+        this.iconSort.icon.removeClass(this.iconSort.currentClass);
+
+        if (isAscending) 
+            this.iconSort.currentClass = this.sortClasses.descending;
+        else if (isDescending) 
+            this.iconSort.currentClass = this.sortClasses.ascending;
+
+        this.iconSort.icon.addClass(this.iconSort.currentClass);
+
+        // sort folder from DOM
+        this.files.sortFolder(isAscending ? 0 : 1);
     }
 
     // change themes in round
@@ -128,10 +152,11 @@ export default class Header {
         }
     }
 
-    // go to fullscreen or exit from them
+    // go to fullscreen or exit from them on click
     changeFullscreen(event) {
         event.preventDefault();
 
+        this.fullscreenMode = document.fullscreenElement ? true : false;
         this.iconExpand.icon.removeClass(this.iconExpand.currentClass);
 
         // exit from fullscreen and change icon
@@ -147,17 +172,59 @@ export default class Header {
         }
     }
 
-    // exit from fullscreen and change icon because if fullscreen is entered via click
+    // exit from fullscreen and change icon because if fullscreen is entered with click, 
     // then if escape key is pressed, it will not be detected by handler even if keyboard event is used
-    // because of that, no matter what's going on, when fullscreen mode is changed and if it's exit from fullscreen,
+    // because of that, no matter what's going on, when fullscreen mode is changed 
     // then change icon for fullscreen
-    fullscreenLeaved(event) {
-        event.preventDefault();
+    fullscreenChanged(event) {
+        this.fullscreenMode = document.fullscreenElement ? true : false;
 
         // when fullscreen is leaved, just change icon to normal expanded
-        if (!document.fullscreenElement) {
-            this.iconExpand.icon.removeClass(this.expandClasses.compress);
-            this.iconExpand.icon.addClass(this.expandClasses.expand);
+        if (!document.fullscreenElement) this.leaveFullscreenIcons();
+
+        // when fullscreen is entered, change icon also
+        else if (document.fullscreenElement) this.enterFullscreenIcons();
+    }
+
+    enterFullscreenIcons() {
+        this.iconExpand.icon.removeClass(this.expandClasses.expand);
+        this.iconExpand.icon.addClass(this.expandClasses.compress);
+    }
+
+    leaveFullscreenIcons() {
+        this.iconExpand.icon.removeClass(this.expandClasses.compress);
+        this.iconExpand.icon.addClass(this.expandClasses.expand);
+    }
+
+    // detect when F11 is pressed to change fullscreen mode
+    fullscreenKeyboard(event) {
+        event.preventDefault();
+
+        var f11Pressed = event.key === 'F11';
+
+        if (f11Pressed) {
+            if (this.fullscreenMode) {
+                document.exitFullscreen();
+                this.leaveFullscreenIcons();
+            }
+            else {
+                document.documentElement.requestFullscreen();
+                this.enterFullscreenIcons();
+            }
+
+            this.fullscreenMode = !this.fullscreenMode;
+        }
+    }
+
+    // set default icon for sorting in ascending order
+    setDefaultSortIcon() {
+        var isAscending = this.iconSort.currentClass === this.sortClasses.ascending;
+
+        // set ascending icon for sorting only if it's not already ascending
+        if (!isAscending) {
+            this.iconSort.icon.removeClass(this.iconSort.currentClass);
+            this.iconSort.currentClass = this.sortClasses.ascending;
+            this.iconSort.icon.addClass(this.iconSort.currentClass);
         }
     }
 }

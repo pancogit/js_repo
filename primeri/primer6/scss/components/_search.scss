@@ -22,6 +22,22 @@
         outline: none;
         border: none;
         color: colors.$search_box_color;
+
+        &::placeholder {
+            color: colors.$search_border_color;
+            font-style: italic;
+        }
+    }
+
+    &__delete {
+
+        &--hidden {
+            visibility: hidden;
+
+            .search__icon {
+                cursor: auto;
+            }
+        }
     }
 
     &__icon {

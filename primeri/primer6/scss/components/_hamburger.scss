@@ -6,11 +6,9 @@
 
 .hamburger {
 
-    // set fixed position for small screens
+    // remove height for small screens
     @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
-        position: fixed;
-        top: variables.$hamburger_top_position;
-        z-index: variables.$navigation_z_index;
+        height: 0;
     }
 
     &__button {
@@ -28,6 +26,13 @@
 
         &:focus {
             outline: none;
+        }
+
+        // set fixed position for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            position: fixed;
+            top: variables.$hamburger_button_top_position;
+            z-index: variables.$navigation_z_index;
         }
     }
 

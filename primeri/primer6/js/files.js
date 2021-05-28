@@ -14,6 +14,7 @@ export default class Files {
         this.filesIconAudioClass = 'files__icon--audio';
         this.filesIconVideoClass = 'files__icon--video';
         this.filesIconFolderClass = 'files__icon--folder';
+        this.filesLinkClass = 'files__link';
 
         this.filesLargeClass = 'files--large';
         this.filesMediumClass = 'files--medium';
@@ -97,7 +98,7 @@ export default class Files {
     // create HTML for folder or file
     createFolderFileHTML(type, cachedElement) {
         var box = $('<div>').addClass('files__box');
-        var link = $('<a>').addClass('files__link').attr('href', this.formatURL(cachedElement.info.path));
+        var link = $('<a>').addClass(this.filesLinkClass).attr('href', this.formatURL(cachedElement.info.path));
         var name = $('<div>').addClass(this.filesNameClass).text(this.formatName(cachedElement.name));
         var icon = this.createIconHTML(type, cachedElement);
         var isFolder = $(icon).hasClass('fa-folder');
@@ -165,8 +166,10 @@ export default class Files {
             // for image, create image element with picture and other info
             case this.types.image.name:
                 let imageInfo = cachedElement.name.toLowerCase() + ' image';
+                let imageInfoWithoutExtension = imageInfo.replaceAll('.jpg', '')
+                    .replaceAll('.jpeg', '').replaceAll('.png', '');
 
-                icon = $('<img>').addClass(this.filesPictureClass).attr('alt', imageInfo)
+                icon = $('<img>').addClass(this.filesPictureClass).attr('alt', imageInfoWithoutExtension)
                     .attr('src', this.formatURL(cachedElement.info.path));
                 break;
 
@@ -339,17 +342,17 @@ export default class Files {
         var fileLink;
 
         if (isImage)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
-                                                         nextFileLink, this.filesPictureClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
+                nextFileLink, this.filesPictureClass);
         else if (isText)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
-                                                         nextFileLink, this.filesIconTextClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
+                nextFileLink, this.filesIconTextClass);
         else if (isAudio)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
-                                                         nextFileLink, this.filesIconAudioClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
+                nextFileLink, this.filesIconAudioClass);
         else if (isVideo)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, 
-                                                         nextFileLink, this.filesIconVideoClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
+                nextFileLink, this.filesIconVideoClass);
 
         return fileLink;
     }
@@ -434,5 +437,94 @@ export default class Files {
 
             default: break;
         }
+    }
+
+    sortFolder(ascendingDescending) {
+        var filesAndFolders = this.getFoldersFiles();
+        var allFolders = filesAndFolders.folders;
+        var allFiles = filesAndFolders.files;
+
+        this.sortFilesFolders(allFolders, ascendingDescending);
+        this.sortFilesFolders(allFiles, ascendingDescending);
+
+        // remove files / folders from page
+        this.files.empty();
+
+        // add event listeners after sorting, because they are lost
+        this.addEventListenersFilesFolders(allFolders, true);
+        this.addEventListenersFilesFolders(allFiles);
+
+        this.addSortedFilesFoldersToPage(allFolders, allFiles);
+    }
+
+    getFoldersFiles() {
+        var foldersArray = [];
+        var filesArray = [];
+        var filesFolders = this.files[0].children;
+
+        // separate folders and files in two arrays
+        for (let i = 0; i < filesFolders.length; i++) {
+            let isFolder = $(filesFolders[i]).find(`.${this.filesIconFolderClass}`);
+
+            if (isFolder.length) foldersArray.push(filesFolders[i]);
+            else filesArray.push(filesFolders[i]);
+        }
+
+        return {
+            folders: foldersArray,
+            files: filesArray
+        }
+    }
+
+    // sort files or folders in ascending or descending order
+    sortFilesFolders(filesFolders, ascendingDescending) {
+
+        for (let i = 0; i < filesFolders.length - 1; i++)
+            for (let j = i + 1; j < filesFolders.length; j++) {
+                // compare uppercase case letters, because if uppercase and lowercase letters
+                // are mixed, then results are not correct
+                let firstName = $(filesFolders[i]).find(`.${this.filesNameClass}`).text().toUpperCase();
+                let secondName = $(filesFolders[j]).find(`.${this.filesNameClass}`).text().toUpperCase();
+
+                let sortAscending = (firstName > secondName) && ascendingDescending;
+                let sortDescending = (firstName < secondName) && !ascendingDescending;
+
+                // if it's ascending or descending order, then swap elements
+                if (sortAscending || sortDescending) this.swrapArrayElements(filesFolders, i, j);
+            }
+    }
+
+    swrapArrayElements(array, i, j) {
+        var temp = array[i];
+
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    addEventListenersFilesFolders(filesFolders, isFolder = false) {
+
+        filesFolders.forEach(function addFolders(value, index, array) {
+            let link = $(value).find(`.${this.filesLinkClass}`);
+
+            // add folder event listener
+            if (isFolder)
+                $(link).on('click', this.folderIsClicked.bind(this, link.attr('href')));
+
+            // add file event listener
+            else
+                $(link).on('click', this.fileIsClicked.bind(this));
+        }, this);
+    }
+
+    addSortedFilesFoldersToPage(allFolders, allFiles) {
+        // add sorted folders to the page
+        allFolders.forEach(function addFolders(value, index, array) {
+            this.files.append(value);
+        }, this);
+
+        // add sorted files to the page
+        allFiles.forEach(function addFolders(value, index, array) {
+            this.files.append(value);
+        }, this);
     }
 }
