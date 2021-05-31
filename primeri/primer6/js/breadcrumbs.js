@@ -3,7 +3,8 @@
 
 export default class Breadcrumbs {
 
-    constructor(searchElement) {
+    constructor(data, searchElement) {
+        this.serverData = data;
         this.navigation = 0;
         this.navigationObject = 0;
         this.search = searchElement;
@@ -13,6 +14,9 @@ export default class Breadcrumbs {
         this.navigationActiveLink = 0;
         this.navigationActiveLinkPath = [];
         this.activeLinkFound = false;
+
+        // current cached folder in breadcrumb menu
+        this.currentCachedFolder = this.serverData.home;
 
         this.navigationClass = 'navigation';
         this.linkClass = 'navigation__link';
@@ -25,12 +29,12 @@ export default class Breadcrumbs {
         $(this.homepageLink).on('click', this.emptyBreadcrumbs.bind(this));
     }
 
-    setFolderPath(serverData) {
+    setFolderPath() {
         if (!this.navigation) this.navigation = $(`.${this.navigationClass}`);
 
         // set default homepage path or active folder path
         if (!this.setHomepage()) {
-            this.findActiveLinkPath(serverData.home.folders);
+            this.findActiveLinkPath(this.serverData.home.folders);
             this.setPathOnPage();
         }
     }
@@ -79,6 +83,9 @@ export default class Breadcrumbs {
             if (currentLink === this.navigationActiveLink) {
                 this.setActiveLinkPath(folders[i]);
                 this.activeLinkFound = true;
+
+                // save current cached folder
+                this.currentCachedFolder = folders[i];
             }
 
             // don't search anymore if link is found
@@ -175,11 +182,14 @@ export default class Breadcrumbs {
         // restore files and navigation for homepage
         this.navigationObject.add(true);
 
+        // current folder is homepage
+        this.currentCachedFolder = this.serverData.home;
+
         // when home folder is clicked, then set default icon for sorting to skip 
         // sorting already sorted folder
         this.header.setDefaultSortIcon();
 
         // remove search results from page with click event fire
-        this.search.deleteIcon.click();
+        this.search.removeSearchResults();
     }
 }

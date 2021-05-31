@@ -5,30 +5,30 @@ existing underwater telecommunication cables to detect earthquakes. The techniqu
 lead to improved earthquake and tsunami warning systems around the world.
 
 A vast network of more than a million kilometers of fiber optic cable lies at the bottom 
-of Earth’s oceans. In the 1980s, telecommunication companies and governments began laying 
+of Earth's oceans. In the 1980s, telecommunication companies and governments began laying 
 these cables, each of which can span thousands of kilometers. Today, the global network 
 is considered the backbone of international telecommunications.
 
 Scientists have long sought a way to use those submerged cables to monitor seismicity. After 
 all, more than 70 percent of the globe is covered by water, and it is extremely difficult 
 and expensive to install, monitor, and run underwater seismometers to keep track of the 
-earth’s movements beneath the seas.
+earth's movements beneath the seas.
 
 What would be ideal, researchers say, is to monitor seismicity by making use of the 
 infrastructure already in place along the ocean floor.
 
 Now Zhongwen Zhan, PhD, assistant professor of geophysics at Caltech, and his colleagues 
-have come up with a way to analyze the light traveling through “lit” fibers—in other words, 
-existing and functioning submarine cables—to detect earthquakes and ocean waves without 
+have come up with a way to analyze the light traveling through lit fibers in other words, 
+existing and functioning submarine cables to detect earthquakes and ocean waves without 
 the need for any additional equipment. They describe the new method in the February 26 
 issue of the journal Science.
 
-“This new technique can really convert the majority of submarine cables into geophysical 
+"This new technique can really convert the majority of submarine cables into geophysical 
 sensors that are thousands of kilometers long to detect earthquakes and possibly tsunamis 
-in the future,” says Zhan. “We believe this is the first solution for monitoring seismicity 
+in the future," says Zhan. "We believe this is the first solution for monitoring seismicity 
 on the ocean floor that could feasibly be implemented around the world. It could complement 
 the existing network of ground-based seismometers and tsunami-monitoring buoys to make the 
-detection of submarine earthquakes and tsunamis much faster in many cases.”
+detection of submarine earthquakes and tsunamis much faster in many cases."
 
 The cable networks work through the use of lasers that send pulses of information through glass 
 fibers bundled within the cables to deliver data at rates faster than 200,000 kilometers per 

@@ -12,10 +12,10 @@ of free designs.
 
 This approach is called distributed recycling and additive manufacturing, or DRAM for short.
 
-As a professor of materials engineering at the forefront of this technology, I can explain—and 
+As a professor of materials engineering at the forefront of this technology, I can explain and 
 offer some ideas for what you can do to take advantage of this trend.
 
-The DRAM method starts with plastic waste—everything from used packaging to broken products.
+The DRAM method starts with plastic waste everything from used packaging to broken products.
 
 The first step is to sort and wash the plastic with soap and water or even run it through the 
 dishwasher. Next, the plastic needs to be ground into particles. For small amounts, a cross-cut 
@@ -43,6 +43,6 @@ These devices have been shown to work not only with the two most popular 3D prin
 but also a long list of plastics you likely use every day, including PET water bottles. It is now possible 
 to convert any plastic waste with a recycling symbol on it into valuable products.
 
-Furthermore, an “ecoprinting” initiative in Australia has demonstrated DRAM can work in isolated communities 
+Furthermore, an "ecoprinting" initiative in Australia has demonstrated DRAM can work in isolated communities 
 with no recycling and no power by using solar-powered systems. This makes DRAM applicable anywhere humans 
-live, waste plastic is abundant and the Sun shines – which is just about everywhere.
+live, waste plastic is abundant and the Sun shines which is just about everywhere.

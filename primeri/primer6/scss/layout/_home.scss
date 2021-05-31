@@ -80,5 +80,9 @@
 
         // break long words if text overflows
         word-break: break-all;
+
+        &--hide {
+            visibility: hidden;
+        }
     }
 }

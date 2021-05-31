@@ -80,6 +80,7 @@ export default class Files {
     }
 
     removeFilesFromPage() {
+        this.files = $('.files');
         this.files.remove();
     }
 
@@ -359,6 +360,8 @@ export default class Files {
 
     // just get files from DOM, ignore folders
     getFilesFromDOM() {
+        this.files = $('.files');
+
         var filesFolders = this.files[0].children;
         var files = [];
 
@@ -458,6 +461,8 @@ export default class Files {
     }
 
     getFoldersFiles() {
+        this.files = $('.files');
+        
         var foldersArray = [];
         var filesArray = [];
         var filesFolders = this.files[0].children;

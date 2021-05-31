@@ -12,6 +12,7 @@ export default class Navigation {
         this.search = searchObject;
 
         this.navigationClass = 'navigation';
+        this.navigationHideClass = 'navigation--hide';
         this.navigationActiveLinkClass = 'navigation__link--active';
         this.navigationIconClass = 'navigation__icon';
         this.navigationSignClass = 'navigation__sign';
@@ -77,7 +78,7 @@ export default class Navigation {
     }
 
     addNavigation() {
-        var navigation = $('<aside>').addClass(this.navigationClass + ' page__aside');
+        var navigation = $('<aside>').addClass(`${this.navigationClass} ${this.navigationHideClass} page__aside`);
         var exit = $('<div>').addClass('navigation__exit');
         var close = $('<i>').addClass('fas fa-times navigation__close');
         var list = $('<ul>').addClass('navigation__list');
@@ -168,14 +169,14 @@ export default class Navigation {
 
         // update active link and add folder path for breadcrumbs menu
         this.updateActiveLink(linkObject);
-        this.breadcrumbs.setFolderPath(this.serverData);
+        this.breadcrumbs.setFolderPath();
 
         // when any folder is clicked, then set default icon for sorting to skip 
         // sorting already sorted folder
         this.header.setDefaultSortIcon();
 
         // remove search results from page with click event fire
-        this.search.deleteIcon.click();
+        this.search.removeSearchResults();
     }
 
     // expand folders from navigation or hide them

@@ -242,13 +242,16 @@ a {
 }
 .matches__search {
   margin-right: 0.2rem;
-  word-break: break-word;
+  white-space: pre-wrap;
 }
 .matches__number, .matches__search {
   padding: 0.1rem 0.55rem;
   color: white;
   background-color: #77a645;
   border-radius: 0.15rem;
+}
+.matches__number, .matches__text, .matches__search {
+  word-break: break-all;
 }
 .matches__text {
   padding: 0;
@@ -672,6 +675,9 @@ a {
   border-radius: 0.15rem;
   color: white;
   word-break: break-all;
+}
+.home__size--hide {
+  visibility: hidden;
 }
 
 /* utility helper classes */

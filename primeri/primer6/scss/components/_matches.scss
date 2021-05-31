@@ -22,8 +22,10 @@
     &__search {
         margin-right: variables.$matches_search_margin_right;
 
-        // break long word to multiply lines
-        word-break: break-word;
+        // for search results, use more than one whitespace to show correct typed text input
+        // if more than one whitespaces are enterd, then it will be visible
+        // also wrap text to multiple lines
+        white-space: pre-wrap;
     }
 
     &__number, &__search {
@@ -31,6 +33,11 @@
         color: colors.$matches_search_color;
         background-color: colors.$matches_search_background_color;
         border-radius: variables.$matches_search_border_radius;
+    }
+
+    // break long word to multiply lines to not break layout
+    &__number, &__text, &__search {
+        word-break: break-all;
     }
 
     &__text {

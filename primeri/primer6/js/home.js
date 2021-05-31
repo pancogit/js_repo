@@ -27,7 +27,7 @@ class Home {
         this.search = new Search(this.fetch.data);
         this.search.addListeners();
 
-        this.breadcrumbs = new Breadcrumbs(this.search);
+        this.breadcrumbs = new Breadcrumbs(this.fetch.data, this.search);
 
         this.navigation = new Navigation(this.fetch.data, this.breadcrumbs, this.search);
         this.navigation.add();
@@ -41,6 +41,8 @@ class Home {
         this.navigation.header = this.header;
         this.breadcrumbs.navigationObject = this.navigation;
         this.breadcrumbs.header = this.header;
+        this.search.breadcrumbs = this.breadcrumbs;
+        this.search.files = this.navigation.files;
     }
 }
 
