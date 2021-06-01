@@ -74,32 +74,33 @@ export default class Preview {
         var fileLink;
 
         if (isImage) 
-            fileLink = this.arrowIsClickedForFile(mediaElement.src, leftArrowClicked, 
+            fileLink = this.arrowIsClickedForFile(mediaElement.src, mediaElement, leftArrowClicked, 
                                                   rightArrowClicked, this.files.types.image);
         else if (isText) 
-            fileLink = this.arrowIsClickedForFile(mediaElement, leftArrowClicked, 
+            fileLink = this.arrowIsClickedForFile(mediaElement, mediaElement, leftArrowClicked, 
                                                   rightArrowClicked, this.files.types.file);
         else if (isAudio)
-            fileLink = this.arrowIsClickedForFile(mediaElement.firstChild.src, leftArrowClicked, 
-                                                  rightArrowClicked, this.files.types.audio);
+            fileLink = this.arrowIsClickedForFile(mediaElement.firstChild.src, mediaElement.firstChild, 
+                                                  leftArrowClicked, rightArrowClicked, this.files.types.audio);
         else if (isVideo) 
-            fileLink = this.arrowIsClickedForFile(mediaElement.firstChild.src, leftArrowClicked, 
-                                                  rightArrowClicked, this.files.types.video);
+            fileLink = this.arrowIsClickedForFile(mediaElement.firstChild.src, mediaElement.firstChild, 
+                                                  leftArrowClicked, rightArrowClicked, this.files.types.video);
 
         // fire click event on file link to change preview
         $(fileLink).click();
     }
 
-    arrowIsClickedForFile(mediaElement, leftArrowClicked, rightArrowClicked, fileType) {
+    arrowIsClickedForFile(mediaElementSource, mediaElement, leftArrowClicked, rightArrowClicked, fileType) {
         var fileLink;
         var filePath = fileType === this.files.types.file ? 
-            $(mediaElement).data('name') : Files.getURLPathname(mediaElement);
+            $(mediaElementSource).data('name') : Files.getURLPathname(mediaElementSource);
+        var fileLocation = $(mediaElement).attr('data-location');
 
         // get previous or next file link
         if (leftArrowClicked)
-            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, 0);
+            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, 0);
         else if (rightArrowClicked)
-            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, 1);
+            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, 1);
 
         return fileLink;
     }

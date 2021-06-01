@@ -20,6 +20,8 @@ export default class Files {
         this.filesMediumClass = 'files--medium';
         this.filesSmallClass = 'files--small';
 
+        this.dataLocationAttr = 'data-location';
+
         // by default, current view is medium for files
         // but it can be changed to large or small
         this.currentFilesView = this.filesMediumClass;
@@ -185,6 +187,9 @@ export default class Files {
             default: break;
         }
 
+        // add location to the icon via custom data- attribute
+        icon.attr(this.dataLocationAttr, cachedElement.info.location);
+
         return icon;
     }
 
@@ -221,23 +226,13 @@ export default class Files {
         return type;
     }
 
-    // when folder is clicked, search from active navigation link to descendants to find folder link
-    // it's much faster than to search entire tree structure
+    // when folder is clicked, search all navigation links to find folder link
+    // it must be done because search results can search nested folders
     folderIsClicked(linkURL, event) {
         event.preventDefault();
 
-        var currentActiveNavigationLink = $('.navigation__link--active');
-        var isHomepageLink = !currentActiveNavigationLink.length;
-        var listItems;
-
-        if (isHomepageLink) {
-            let navigationList = $('.navigation__list');
-            listItems = navigationList[0].children;
-        }
-        else {
-            let submenu = currentActiveNavigationLink.next();
-            listItems = submenu[0].children;
-        }
+        // get all navigation items from entire tree
+        var listItems = $('.navigation__item');
 
         for (let i = 0; i < listItems.length; i++) {
             let folderLink = listItems[i].firstChild;
@@ -284,6 +279,10 @@ export default class Files {
         var imageSource = Files.getURLPathname(media.src);
         var imageInfo = media.alt;
         var image = $('<img>').addClass('preview__picture').attr('src', imageSource).attr('alt', imageInfo);
+        var imageLocation = $(media).attr(this.dataLocationAttr);
+
+        // add location to the image via custom data- attribute
+        image.attr(this.dataLocationAttr, imageLocation);
 
         return image;
     }
@@ -307,6 +306,12 @@ export default class Files {
         var filesName = $(link).find(`.${this.filesNameClass}`);
         text.attr('data-name', filesName.text());
 
+        var filesIcon = $(link).find(`.${this.filesIconTextClass}`);
+        var filesIconLocation = filesIcon.attr(this.dataLocationAttr);
+
+        // add location to the text via custom data- attribute
+        text.attr(this.dataLocationAttr, filesIconLocation);
+
         // save text element
         this.textFromServer = text;
     }
@@ -315,6 +320,11 @@ export default class Files {
         var audioSource = Files.getURLPathname(link.href);
         var audio = $('<audio>').addClass('preview__audio').attr('controls', true).attr('autoplay', true);
         var source = $('<source>').attr('src', audioSource).attr('type', 'audio/mpeg');
+        var audioIcon = link.firstChild;
+        var sourceLocation = $(audioIcon).attr(this.dataLocationAttr);
+
+        // add location to the audio via custom data- attribute
+        source.attr(this.dataLocationAttr, sourceLocation);
 
         audio.append(source);
 
@@ -325,6 +335,11 @@ export default class Files {
         var videoSource = Files.getURLPathname(link.href);
         var video = $('<video>').addClass('preview__video').attr('controls', true).attr('autoplay', true);
         var source = $('<source>').attr('src', videoSource).attr('type', 'video/mp4');
+        var videoIcon = link.firstChild;
+        var sourceLocation = $(videoIcon).attr(this.dataLocationAttr);
+
+        // add location to the video via custom data- attribute
+        source.attr(this.dataLocationAttr, sourceLocation);
 
         video.append(source);
 
@@ -332,7 +347,7 @@ export default class Files {
     }
 
     // get previous or next file link from DOM
-    getPreviousNextFileLink(fileType, fileInfo, previousNext) {
+    getPreviousNextFileLink(fileType, fileInfo, fileLocation, previousNext) {
         var isImage = fileType === this.types.image;
         var isText = fileType === this.types.file;
         var isAudio = fileType === this.types.audio;
@@ -343,17 +358,17 @@ export default class Files {
         var fileLink;
 
         if (isImage)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
-                nextFileLink, this.filesPictureClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+                previousFileLink, nextFileLink, this.filesPictureClass);
         else if (isText)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
-                nextFileLink, this.filesIconTextClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+                previousFileLink, nextFileLink, this.filesIconTextClass);
         else if (isAudio)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
-                nextFileLink, this.filesIconAudioClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+                previousFileLink, nextFileLink, this.filesIconAudioClass);
         else if (isVideo)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink,
-                nextFileLink, this.filesIconVideoClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+                previousFileLink, nextFileLink, this.filesIconVideoClass);
 
         return fileLink;
     }
@@ -376,13 +391,14 @@ export default class Files {
         return files;
     }
 
-    getPreviousNextFileLinkMedia(fileInfo, filesBoxes, previousFileLink, nextFileLink, mediaClass) {
+    getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, previousFileLink, nextFileLink, mediaClass) {
 
         for (var i = 0; i < filesBoxes.length; i++) {
             let media = $(filesBoxes[i]).find(`.${mediaClass}`);
 
             if (media) {
                 let mediaPath;
+                let mediaLocation = media.attr(this.dataLocationAttr);
                 let isText = mediaClass === this.filesIconTextClass;
                 let isImage = mediaClass === this.filesPictureClass;
 
@@ -391,8 +407,11 @@ export default class Files {
                 else if (isImage) mediaPath = media.attr('src');
                 else mediaPath = media.parent().attr('href');
 
-                // media is found in DOM
-                if (mediaPath === fileInfo) break;
+                let sameFilePath = mediaPath === fileInfo;
+                let sameFileLocation = mediaLocation === fileLocation;
+
+                // media is found in DOM only if both location and path are the same
+                if (sameFilePath && sameFileLocation) break;
             }
         }
 
@@ -462,7 +481,7 @@ export default class Files {
 
     getFoldersFiles() {
         this.files = $('.files');
-        
+
         var foldersArray = [];
         var filesArray = [];
         var filesFolders = this.files[0].children;
