@@ -6,6 +6,7 @@ import Hamburger from './hamburger.js';
 import Breadcrumbs from './breadcrumbs.js';
 import Header from './header.js';
 import Search from './search.js';
+import Properties from './properties.js';
 
 class Home {
     
@@ -16,6 +17,7 @@ class Home {
         this.breadcrumbs = 0;
         this.header = 0;
         this.search = 0;
+        this.properties = new Properties();
     }
 
     fetchData() {
@@ -37,6 +39,8 @@ class Home {
 
         this.header = new Header(this.navigation.files);
         this.header.addListeners();
+
+        this.properties.addListeners();
 
         this.navigation.header = this.header;
         this.breadcrumbs.navigationObject = this.navigation;

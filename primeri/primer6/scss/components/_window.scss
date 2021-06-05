@@ -115,12 +115,8 @@
         line-height: variables.$window_property_line_height;
     }
 
-    &__link {
-        color: colors.$window_link_color;
-
-        &:hover {
-            color: colors.$window_link_color_hover;
-        }
+    &__location {
+        color: colors.$window_location_color;
     }
 
     &__title {

@@ -21,7 +21,7 @@
             background-color: colors.$home_content_background_color_night;
 
             // change background for night mode
-            .files__link:hover {
+            .files__link:hover, .files__link--selected {
                 background-color: colors.$files_link_hover_background_color_night;
                 border-color: colors.$files_link_hover_border_color_night;
             }
@@ -34,7 +34,7 @@
                 color: colors.$files_name_color_dark;
             }
 
-            .files__link:hover .files__name {
+            .files__link:hover .files__name, .files__link--selected .files__name {
                 color: colors.$files_name_hover_color_dark;
             }
 

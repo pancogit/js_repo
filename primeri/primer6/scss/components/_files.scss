@@ -117,7 +117,7 @@
         border-radius: variables.$files_link_border_radius;
 
         // add little transparent background when hovered
-        &:hover {
+        &:hover, &--selected {
             background-color: colors.$files_link_hover_background_color;
             border-color: colors.$files_link_hover_border_color;
 

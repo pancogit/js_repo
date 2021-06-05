@@ -70,7 +70,7 @@
         display: block;
         color: colors.$navigation_link_color;
 
-        &:hover, &--active {
+        &:hover, &--active, &--selected {
             background-color: colors.$navigation_link_background_color;
             color: colors.$navigation_link_color;
 

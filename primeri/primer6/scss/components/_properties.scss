@@ -9,6 +9,8 @@
     z-index: variables.$properties_z_index;
 
     &__entry {
+        // positioning container for nested window
+        position: relative;
 
         &:hover {
             // when entry is hovered, change colors
@@ -100,6 +102,9 @@
 
             // set absolute position to move nested window out of normal flow, but in same place
             position: absolute;
+
+            // move properties to the bottom of entry row positioning container
+            bottom: 0;
         }
     }
 }
