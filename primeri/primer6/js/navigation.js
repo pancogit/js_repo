@@ -296,4 +296,56 @@ export default class Navigation {
 
         this.currentActiveLink = $(link);
     }
+
+    // get info for file / folder with given name and location or path
+    getFileFolderInfo(location, path, name) {
+        var pathFormatted = path ? this.files.reverseURL(path) : path;
+        var homePage = this.getHomepageFolderInfo(path, name);
+
+        // if it's homepage return them, otherwise search for nested folders
+        if (homePage) return homePage;
+        else return this.getFileFolderInfoRecursive(this.serverData.home, location, pathFormatted, name);
+    }
+
+    // get info for homepage folder
+    getHomepageFolderInfo(path, name) {
+        var homeFolderCached = this.serverData.home;
+        var homeName = homeFolderCached.name === name;
+        var homePath = homeFolderCached.info.path === path;
+
+        if (homeName && homePath) return homeFolderCached;
+    }
+
+    getFileFolderInfoRecursive(folderCache, location, path, name) {
+        var nameFound, locationFound, pathFound;
+        var filefolderFound = false;
+
+        // search files first
+        for (let i = 0; i < folderCache.files.length; i++) {
+            nameFound = folderCache.files[i].name === name;
+            locationFound = folderCache.files[i].info.location === location;
+
+            // file is found
+            if (locationFound && nameFound) 
+                return folderCache.files[i];
+        }
+
+        // then search folders
+        for (let i = 0; i < folderCache.folders.length; i++) {
+            nameFound = folderCache.folders[i].name === name;
+            locationFound = folderCache.folders[i].info.location === location;
+            pathFound = folderCache.folders[i].info.path === path;
+
+            if (filefolderFound) return filefolderFound;
+
+            // folder is found
+            if ((locationFound && nameFound) || (pathFound && nameFound))
+                return folderCache.folders[i];
+
+            // folder is not found, search further
+            else filefolderFound = this.getFileFolderInfoRecursive(folderCache.folders[i], location, path, name);
+        }
+
+        if (filefolderFound) return filefolderFound;
+    }
 }

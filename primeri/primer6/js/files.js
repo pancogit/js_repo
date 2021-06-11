@@ -102,7 +102,8 @@ export default class Files {
     createFolderFileHTML(type, cachedElement) {
         var box = $('<div>').addClass('files__box');
         var link = $('<a>').addClass(this.filesLinkClass).attr('href', this.formatURL(cachedElement.info.path));
-        var name = $('<div>').addClass(this.filesNameClass).text(this.formatName(cachedElement.name));
+        var name = $('<div>').addClass(this.filesNameClass).text(this.formatName(cachedElement.name))
+            .attr('data-fullname', cachedElement.name);
         var icon = this.createIconHTML(type, cachedElement);
         var isFolder = $(icon).hasClass('fa-folder');
 

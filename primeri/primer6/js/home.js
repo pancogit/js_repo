@@ -17,7 +17,7 @@ class Home {
         this.breadcrumbs = 0;
         this.header = 0;
         this.search = 0;
-        this.properties = new Properties();
+        this.properties = 0;
     }
 
     fetchData() {
@@ -40,6 +40,7 @@ class Home {
         this.header = new Header(this.navigation.files);
         this.header.addListeners();
 
+        this.properties = new Properties(this.navigation, this.files);
         this.properties.addListeners();
 
         this.navigation.header = this.header;
