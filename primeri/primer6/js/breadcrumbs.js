@@ -192,4 +192,15 @@ export default class Breadcrumbs {
         // remove search results from page with click event fire
         this.search.removeSearchResults();
     }
+
+    // when folder is renamed, update them on page to breadcrumbs menu
+    updateBreadcrumbsLinkName(oldFileFolderName, newFileFolderName) {
+        var breadcrumbsLinks = this.breadcrumbsContainer.find('.breadcrumbs__link');
+
+        for (let i = 0; i < breadcrumbsLinks.length; i++)
+            if ($(breadcrumbsLinks[i]).text() === oldFileFolderName) {
+                $(breadcrumbsLinks[i]).text(newFileFolderName);
+                break;
+            }
+    }
 }

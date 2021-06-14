@@ -34,6 +34,9 @@
         // break long words if text overflows
         word-break: break-all;
 
+        // keep whitespaces visible for the name
+        white-space: pre-wrap;
+
         &--active {
             pointer-events: none;
         }

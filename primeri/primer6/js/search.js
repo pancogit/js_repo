@@ -18,6 +18,7 @@ export default class Search {
         this.deleteHideClass = 'search__delete--hidden';
         this.filesClass = 'files';
         this.homeSizeHideClass = 'home__size--hide';
+        this.filesNameClass = 'files__name';
 
         // search results
         this.matches = new Matches(this);
@@ -195,5 +196,19 @@ export default class Search {
         this.homeSize.removeClass(this.homeSizeHideClass);
         this.currentFilesSaved = false;
         this.deleteIcon.click();
+    }
+
+    // when file or folder is renamed, update saved files before searching
+    updateSavedFilesName(oldFileFolderName, newFileFolderName) {
+        var filesNames = $(this.savedFiles).find(`.${this.filesNameClass}`);
+        
+        // search for saved files names and update correct one
+        // also update data custom attribute
+        for (let i = 0; i < filesNames.length; i++)
+            if ($(filesNames[i]).text() === oldFileFolderName) {
+                $(filesNames[i]).text(newFileFolderName);
+                $(filesNames[i]).attr('data-fullname', newFileFolderName);
+                break;
+            }
     }
 }

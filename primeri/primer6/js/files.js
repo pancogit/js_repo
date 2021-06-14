@@ -21,6 +21,7 @@ export default class Files {
         this.filesSmallClass = 'files--small';
 
         this.dataLocationAttr = 'data-location';
+        this.dataFullnameAttr = 'data-fullname';
 
         // by default, current view is medium for files
         // but it can be changed to large or small
@@ -103,7 +104,7 @@ export default class Files {
         var box = $('<div>').addClass('files__box');
         var link = $('<a>').addClass(this.filesLinkClass).attr('href', this.formatURL(cachedElement.info.path));
         var name = $('<div>').addClass(this.filesNameClass).text(this.formatName(cachedElement.name))
-            .attr('data-fullname', cachedElement.name);
+            .attr(this.dataFullnameAttr, cachedElement.name);
         var icon = this.createIconHTML(type, cachedElement);
         var isFolder = $(icon).hasClass('fa-folder');
 
@@ -152,6 +153,40 @@ export default class Files {
         var urlObject = new URL(url);
 
         return urlObject.pathname;
+    }
+
+    // remove file / folder extension and return them along with new name
+    static removeFileFolderExtension(fileFolderName) {
+        var newFileFolderName;
+        var normalExtension = fileFolderName.slice(fileFolderName.length - 4, fileFolderName.length);
+        var normalName = fileFolderName.slice(0, fileFolderName.length - 4);
+        var normalExtensionArray = ['.txt', '.jpg', '.png', '.mp3', '.mp4'];
+        var extendedExtension = fileFolderName.slice(fileFolderName.length - 5, fileFolderName.length);
+        var extendedName = fileFolderName.slice(0, fileFolderName.length - 5);
+        var extendedExtensionArray = ['.jpeg'];
+        var foundExtension = '';
+
+        for (let i = 0; i < normalExtensionArray.length; i++)
+            if (normalExtensionArray[i] === normalExtension) {
+                newFileFolderName = normalName;
+                foundExtension = normalExtensionArray[i];
+                break;
+            }
+
+        for (let i = 0; i < extendedExtensionArray.length; i++)
+            if (extendedExtensionArray[i] === extendedExtension) {
+                newFileFolderName = extendedName;
+                foundExtension = extendedExtensionArray[i];
+                break;
+            }
+
+        // if extension is not removed, return the same name
+        if (!newFileFolderName) newFileFolderName = fileFolderName;
+
+        return {
+            name: newFileFolderName,
+            extension: foundExtension
+        }
     }
 
     // create different icon depending on type of file / folder
@@ -359,16 +394,16 @@ export default class Files {
         var fileLink;
 
         if (isImage)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
                 previousFileLink, nextFileLink, this.filesPictureClass);
         else if (isText)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
                 previousFileLink, nextFileLink, this.filesIconTextClass);
         else if (isAudio)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
                 previousFileLink, nextFileLink, this.filesIconAudioClass);
         else if (isVideo)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, 
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
                 previousFileLink, nextFileLink, this.filesIconVideoClass);
 
         return fileLink;
@@ -551,5 +586,23 @@ export default class Files {
         allFiles.forEach(function addFolders(value, index, array) {
             this.files.append(value);
         }, this);
+    }
+
+    // when file or folder is renamed, update them on page
+    updateFilesName(oldFileFolderName, newFileFolderName) {
+        var filesNames = this.files.find(`.${this.filesNameClass}`);
+        
+        // search for files names on page and update correct one
+        // also update data custom attribute
+        for (let i = 0; i < filesNames.length; i++)
+            if ($(filesNames[i]).attr(this.dataFullnameAttr) === oldFileFolderName) {
+                let formattedName = this.formatName(newFileFolderName);
+
+                // add for too long names formatted name with three dots, 
+                // but keep full name on custom data attribute
+                $(filesNames[i]).text(formattedName);
+                $(filesNames[i]).attr(this.dataFullnameAttr, newFileFolderName);
+                break;
+            }
     }
 }

@@ -44,7 +44,7 @@ export default class Navigation {
             this.removeStaticData();
             this.addNavigation();
         }
-        
+
         // add home folder content at the beginning
         this.files.addToPage(this.serverData.home);
 
@@ -97,7 +97,7 @@ export default class Navigation {
 
     // loop through server data and add folders in tree structure
     addFolders(list, folders) {
-        
+
         folders.forEach(function iterate(value, index, array) {
             let item = $('<li>').addClass('navigation__item');
             let link = $('<a>').addClass('navigation__link');
@@ -313,7 +313,10 @@ export default class Navigation {
         var homeName = homeFolderCached.name === name;
         var homePath = homeFolderCached.info.path === path;
 
-        if (homeName && homePath) return homeFolderCached;
+        if (homeName && homePath) return {
+            filesFolders: homeFolderCached,
+            currentFolder: this.serverData
+        }
     }
 
     getFileFolderInfoRecursive(folderCache, location, path, name) {
@@ -326,8 +329,11 @@ export default class Navigation {
             locationFound = folderCache.files[i].info.location === location;
 
             // file is found
-            if (locationFound && nameFound) 
-                return folderCache.files[i];
+            if (locationFound && nameFound)
+                return {
+                    filesFolders: folderCache.files[i],
+                    currentFolder: folderCache
+                }
         }
 
         // then search folders
@@ -340,12 +346,74 @@ export default class Navigation {
 
             // folder is found
             if ((locationFound && nameFound) || (pathFound && nameFound))
-                return folderCache.folders[i];
+                return {
+                    filesFolders: folderCache.folders[i],
+                    currentFolder: folderCache
+                }
 
             // folder is not found, search further
             else filefolderFound = this.getFileFolderInfoRecursive(folderCache.folders[i], location, path, name);
         }
 
         if (filefolderFound) return filefolderFound;
+    }
+
+    // rename file or folder and return true if it's renamed, otherwise return false 
+    // with error message if it's not renamed
+    renameFileFolder(fileFolderCached, newFileFolderName) {
+        var files = fileFolderCached.currentFolder.files;
+        var folders = fileFolderCached.currentFolder.folders;
+        var oldFileFolderName = fileFolderCached.filesFolders.name;
+        var numberOfSameNames = 0;
+        var nameOnlyWhitespaces = newFileFolderName.match(/^\s*$/);
+
+        // don't rename if name contains only whitespaces
+        if (nameOnlyWhitespaces) return {
+            renamed: false,
+            errorMessage: 'Name must not be empty'
+        }
+
+        // add extension to typed name
+        var extension = Files.removeFileFolderExtension(oldFileFolderName).extension;
+        newFileFolderName += extension;
+
+        fileFolderCached.filesFolders.name = newFileFolderName;
+
+        // search through files and folders in current folder and look if name exists
+        for (let i = 0; i < files.length; i++)
+            if (files[i].name === newFileFolderName) numberOfSameNames++;
+
+        for (let i = 0; i < folders.length; i++)
+            if (folders[i].name === newFileFolderName) numberOfSameNames++;
+
+        var nameAlreadyExists = numberOfSameNames > 1;
+
+        // file / folder already exists, return false
+        if (nameAlreadyExists) {
+            fileFolderCached.filesFolders.name = oldFileFolderName;
+
+            return {
+                renamed: false,
+                errorMessage: 'Name already exists'
+            }
+        }
+        // file / folder is renamed, return true
+        // update navigation text, files name, breadcrumbs menu and saved files before searching
+        else {
+            this.updateNavigationText(fileFolderCached.filesFolders);
+            this.files.updateFilesName(oldFileFolderName, newFileFolderName);
+            this.breadcrumbs.updateBreadcrumbsLinkName(oldFileFolderName, newFileFolderName);
+            this.search.updateSavedFilesName(oldFileFolderName, newFileFolderName);
+
+            return {
+                renamed: true,
+                errorMessage: ''
+            }
+        }
+    }
+
+    updateNavigationText(fileFolder) {
+        var navigationText = $(fileFolder.link).find('.navigation__text');
+        navigationText.text(fileFolder.name);
     }
 }

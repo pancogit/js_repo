@@ -132,6 +132,9 @@
 
         // break long words to new lines
         word-break: break-all;
+
+        // keep whitespaces visible for the name
+        white-space: pre-wrap;
     }
 
     &__picture {

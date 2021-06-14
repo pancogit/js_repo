@@ -1,6 +1,8 @@
 // properties for files and folders
 
 
+import Files from './files.js';
+
 export default class Properties {
 
     constructor(navigationObject) {
@@ -14,6 +16,7 @@ export default class Properties {
         this.navigationTextClass = 'navigation__text';
         this.homeContentClass = 'home__content';
         this.windowClass = 'properties__window';
+        this.windowInputError = 'window__input--error';
 
         let propertiesObject = this.createPropertiesHTML();
 
@@ -32,6 +35,14 @@ export default class Properties {
 
         // info window
         this.info = this.createInfoHTML();
+
+        // rename windows for files and folders
+        this.renameFile = this.createRenameHTML(true);
+        this.renameFolder = this.createRenameHTML();
+        this.renameMessageError = $('<div>').addClass('window__message window__message--error');
+
+        // cached file or folder
+        this.fileFolderCached = 0;
     }
 
     // hide properties before show on page to get dimension of properties
@@ -68,7 +79,7 @@ export default class Properties {
         var info = this.createEntryRowHTML(null, 'Info');
 
         // add event listeners for individual properties
-        this.addPropertiesListeners(open, info);
+        this.addPropertiesListeners(open, info, rename);
 
         properties.append(windowProperty);
         windowProperty.append(open).append(cut).append(copy).append(paste)
@@ -79,12 +90,15 @@ export default class Properties {
 
     // add event listeners for individual properties
     // activate events for both left and right click
-    addPropertiesListeners(open, info) {
+    addPropertiesListeners(open, info, rename) {
         open.on('click', this.openFileFolder.bind(this));
         open.on('contextmenu', this.openFileFolder.bind(this));
 
         info.on('click', this.infoFileFolder.bind(this));
         info.on('contextmenu', this.infoFileFolder.bind(this));
+
+        rename.on('click', this.renameFileFolder.bind(this));
+        rename.on('contextmenu', this.renameFileFolder.bind(this));
     }
 
     createEntryRowHTML(icon, propertyText, hasDivider = false, isEntryDisabled = false, isFlexDivider = false) {
@@ -228,6 +242,56 @@ export default class Properties {
         }
     }
 
+    // create HTML for renaming files or folders
+    createRenameHTML(isFile) {
+        var window = $('<div>').addClass('align-items-center d-flex justify-content-center window');
+        var wrapper = $('<div>').addClass('window__wrapper flex-shrink-0');
+        var header = $('<div>').addClass('window__header d-flex justify-content-between');
+        var title = $('<span>').addClass('window__title');
+        var close = $('<i>').addClass('fas fa-times window__close d-flex justify-content-center align-items-center');
+
+        if (isFile) title.text('File Name');
+        else title.text('Folder Name');
+
+        var content = $('<div>').addClass('window__content');
+        var input = $('<input>').addClass('window__input').attr('type', 'text').attr('maxlength', '100');
+        var footer = $('<div>').addClass('window__footer d-flex justify-content-end');
+        var button = $('<button>').addClass('window__button').text('OK');
+
+        // add event listeners to close rename window
+        this.addListenersForRenameWindow(close, button, input, isFile);
+
+        window.append(wrapper);
+        wrapper.append(header).append(content);
+        header.append(title).append(close);
+        content.append(input).append(footer);
+        footer.append(button);
+
+        // return window along with input
+        return {
+            window: window,
+            input: input
+        }
+    }
+
+    // add event listeners for rename file / folder window
+    addListenersForRenameWindow(close, button, input, isFile) {
+
+        if (isFile) {
+            close.on('click', this.closeRenameFile.bind(this));
+            button.on('click', this.tryRenameFileFolder.bind(this, true));
+            $(window).on('keydown', this.closeRenameFile.bind(this));
+        }
+        else {
+            close.on('click', this.closeRenameFolder.bind(this));
+            button.on('click', this.tryRenameFileFolder.bind(this, false));
+            $(window).on('keydown', this.closeRenameFolder.bind(this));
+        }
+
+        // when enter is pressed in input element, then click button
+        input.on('keydown', this.renameInputIsChanged.bind(this, button));
+    }
+
     // right click open context menu, left click close them
     // also if window is resized or if escape key is pressed, close context menu
     addListeners() {
@@ -282,9 +346,11 @@ export default class Properties {
     calculateCoordinates(properties, event) {
         var documentWidth = $(document).outerWidth();
         var documentHeight = $(document).outerHeight();
-        var propertiesXCoordinate = event.clientX;
-        var propertiesYCoordinate = event.clientY;
         var propertiesDimensions = this.getPropertiesDimensions(properties);
+
+        // use coordinates relative to the whole document including possible scrolling bars
+        var propertiesXCoordinate = event.pageX;
+        var propertiesYCoordinate = event.pageY;
 
         // look if properties object is overflowing horizontal and vertical axis
         // overflow can happen on right or bottom side of document
@@ -410,6 +476,22 @@ export default class Properties {
 
     // open info window for selected file or folder
     infoFileFolder(event) {
+        var info = this.getFileFolderCached();
+
+        this.addInfoToPage(info);
+    }
+
+    // get file / folder cached info from navigation component
+    getFileFolderCached() {
+        var fileFolderPaths = this.getFileFolderPaths();
+        var location = fileFolderPaths.location, path = fileFolderPaths.path, name = fileFolderPaths.name;
+        var info = this.navigationObject.getFileFolderInfo(location, path, name);
+
+        return info;
+    }
+
+    // for current clicked file / folder return name and location or path
+    getFileFolderPaths() {
         var fileLinkSelected = $(`.${this.filesLinkSelectedClass}`);
         var navigationLinkSelected = $(`.${this.navigationLinkSelectedClass}`);
         var location, path, name;
@@ -417,7 +499,7 @@ export default class Properties {
         // file / folder from home content is selected
         if (fileLinkSelected.length) {
             location = fileLinkSelected[0].firstChild.dataset['location'];
-            name = fileLinkSelected.find(`.${this.filesNameClass}`).data('fullname');
+            name = fileLinkSelected.find(`.${this.filesNameClass}`).attr('data-fullname');
         }
         // folder from navigation is selected
         else if (navigationLinkSelected.length) {
@@ -433,18 +515,20 @@ export default class Properties {
             name = currentFolder.name;
         }
 
-        var info = this.navigationObject.getFileFolderInfo(location, path, name);
-
-        this.addInfoToPage(info);
+        return {
+            name: name,
+            location: location,
+            path: path
+        }
     }
 
     // update info properties and add info object to the page
     addInfoToPage(info) {
-        this.info.properties.name.text(info.name);
-        this.info.properties.fileType.text(info.info.type);
-        this.info.properties.location.text(info.info.location);
-        this.info.properties.size.text(info.info.size.value + info.info.size.unit);
-        this.info.properties.created.text(info.info.created);
+        this.info.properties.name.text(info.filesFolders.name);
+        this.info.properties.fileType.text(info.filesFolders.info.type);
+        this.info.properties.location.text(info.filesFolders.info.location);
+        this.info.properties.size.text(info.filesFolders.info.size.value + info.filesFolders.info.size.unit);
+        this.info.properties.created.text(info.filesFolders.info.created);
 
         $(document.body).append(this.info.object);
     }
@@ -471,8 +555,116 @@ export default class Properties {
         }
     }
 
-    // remove info window from page
     closeInfo(event) {
-        this.info.object.detach();
+        this.closePropertiesWindow(this.info.object, event);
+    }
+
+    closeRenameFile(event) {
+        this.closePropertiesWindow(this.renameFile.window, event);
+    }
+
+    closeRenameFolder(event) {
+        this.closePropertiesWindow(this.renameFolder.window, event);
+    }
+
+    // remove properties window from page
+    // for keyboard, just close info if escape key is pressed
+    closePropertiesWindow(windowObject, event) {
+        var isEscapePressed = event.key === 'Escape';
+        var keyboardEvent = event.type === 'keydown';
+
+        if (keyboardEvent) {
+            if (isEscapePressed) this.closeClearWindows(windowObject);
+        }
+        else this.closeClearWindows(windowObject);
+    }
+
+    // close and clear property windows
+    closeClearWindows(windowObject) {
+        windowObject.detach();
+
+        // clear also rename file inputs and error classes
+        this.renameFile.input.val('');
+        this.renameFile.input.removeClass(this.windowInputError);
+        this.renameFolder.input.val('');
+        this.renameFolder.input.removeClass(this.windowInputError);
+
+        // just remove element from page
+        this.renameMessageError.detach();
+    }
+
+    renameFileFolder(event) {
+        var info = this.getFileFolderCached();
+        var isFolder = info.filesFolders.info.type === 'File folder';
+
+        // save cached file / folder for later use
+        this.fileFolderCached = info;
+
+        // if it's folder get full name because extension doesn't matter,
+        // but if it's file then remove extension from name
+        var currentFileFolderName = isFolder ? info.filesFolders.name : 
+            Files.removeFileFolderExtension(info.filesFolders.name).name;
+
+        // add current file / folder name to the window input and 
+        // add corrent rename window to the page depending on file / folder type
+        if (isFolder) {
+            this.renameFolder.input.val(currentFileFolderName);
+            $(document.body).append(this.renameFolder.window);
+        }
+        else {
+            this.renameFile.input.val(currentFileFolderName);
+            $(document.body).append(this.renameFile.window);
+        }
+    }
+
+    // when button for rename window is clicked, try to rename file or folder
+    // if file or folder already exists in the current directory, then don't rename it 
+    // and show error on rename window
+    tryRenameFileFolder(isFile, event) {
+        var newFileFolderName = isFile ? this.renameFile.input.val() : this.renameFolder.input.val();
+        var renameIsPossible = this.navigationObject.renameFileFolder(this.fileFolderCached, newFileFolderName.trim());
+
+        // close rename window
+        if (renameIsPossible.renamed) {
+            if (isFile) this.closeRenameFile(event);
+            else this.closeRenameFolder(event);
+        }
+        // show error on rename window
+        else {
+            if (isFile) this.renameFile.input.addClass(this.windowInputError);
+            else this.renameFolder.input.addClass(this.windowInputError);
+
+            this.addRenameMessageError(renameIsPossible.errorMessage, isFile);
+        }
+    }
+
+    addRenameMessageError(errorMessage, isFile) {
+        var errorElement;
+        var inputElement;
+        var renameMessageErrorText = this.renameMessageError.text();
+
+        // just change error message
+        if (renameMessageErrorText !== errorMessage)
+            this.renameMessageError.text(errorMessage);
+
+        if (isFile) {
+            errorElement = this.renameFile.input.next();
+            inputElement = this.renameFile.input;
+        }
+        else {
+            errorElement = this.renameFolder.input.next();
+            inputElement = this.renameFolder.input;
+        }
+
+        // add error message for rename window to the page if doesn't exists
+        if (errorElement[0] !== this.renameMessageError[0])
+            inputElement.after(this.renameMessageError);
+    }
+
+    // when enter is pressed in input element, then click button
+    renameInputIsChanged(button, event) {
+        var enterIsPressed = event.key === 'Enter';
+
+        if (enterIsPressed) button.click();
     }
 }

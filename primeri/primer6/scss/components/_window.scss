@@ -102,6 +102,11 @@
         }
     }
 
+    // set higher cascade precence because of input focus style
+    .window__input--error {
+        border-color: colors.$window_input_border_color_error;
+    }
+
     &__property {
         padding: 0;
     }
@@ -127,6 +132,15 @@
 
     &__text {
 
+    }
+
+    &__message {
+        margin-top: variables.$window_message_margin_top;
+        font-weight: bold;
+
+        &--error {
+            color: colors.$window_input_border_color_error;
+        }
     }
 
     &__wrapper {

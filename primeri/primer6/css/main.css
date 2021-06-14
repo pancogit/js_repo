@@ -189,6 +189,7 @@ a {
 .navigation__text {
   padding-right: 0.6rem;
   word-break: break-all;
+  white-space: pre-wrap;
 }
 
 .breadcrumbs {
@@ -212,6 +213,7 @@ a {
   background-color: #191d23;
   border-radius: 0.15rem;
   word-break: break-all;
+  white-space: pre-wrap;
 }
 .breadcrumbs__link--active {
   pointer-events: none;
@@ -397,6 +399,9 @@ a {
 .window__input:focus {
   border-color: #116539;
 }
+.window .window__input--error {
+  border-color: red;
+}
 .window__property {
   padding: 0;
 }
@@ -413,6 +418,13 @@ a {
   padding: 0.2rem 0;
   color: black;
   font-weight: bold;
+}
+.window__message {
+  margin-top: 0.25rem;
+  font-weight: bold;
+}
+.window__message--error {
+  color: red;
 }
 .window__wrapper {
   width: 19rem;
@@ -513,6 +525,7 @@ a {
 .files__name {
   color: #018037;
   word-break: break-all;
+  white-space: pre-wrap;
 }
 .files__icon {
   flex-shrink: 0;
