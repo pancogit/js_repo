@@ -114,6 +114,9 @@
     &__info {
         // break long words to multiple lines, used especially for location info (URL)
         overflow-wrap: break-word;
+
+        // keep whitespaces visible for the info
+        white-space: pre-wrap;
     }
 
     &__property, &__info {

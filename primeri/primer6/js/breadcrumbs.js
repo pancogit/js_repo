@@ -203,4 +203,13 @@ export default class Breadcrumbs {
                 break;
             }
     }
+
+    // return current path for breadcrumbs menu for opened folder
+    getCurrentPath() {
+        var currentLocation = this.currentCachedFolder.info.location;
+        var openedFolderName = this.currentCachedFolder.name;
+        var currentPath = currentLocation + openedFolderName + '/';
+
+        return currentPath;
+    }
 }

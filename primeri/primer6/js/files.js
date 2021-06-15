@@ -5,7 +5,8 @@ import Preview from './preview.js';
 
 export default class Files {
 
-    constructor() {
+    constructor(breadcrumbsObject) {
+        this.breadcrumbs = breadcrumbsObject;
         this.wrapper = $('.home__content');
         this.files = $('.files');
         this.filesNameClass = 'files__name';
@@ -604,5 +605,21 @@ export default class Files {
                 $(filesNames[i]).attr(this.dataFullnameAttr, newFileFolderName);
                 break;
             }
+    }
+
+    // when folder is renamed, update locations for current opened folder on page
+    // because some folder name can be changed from navigation while child folder is still opened
+    // and in that situation files / folders locations for current opened folder on page 
+    // will not be changed
+    updateOpenedFolderLocations() {
+        var filesLinks = this.files.find(`.${this.filesLinkClass}`);
+
+        // update locations on page in current folder for files / folders
+        for (let i = 0; i < filesLinks.length; i++) {
+            let filesMedia = filesLinks[i].firstChild;
+            let openedFolderPath = this.breadcrumbs.getCurrentPath();
+
+            $(filesMedia).attr(this.dataLocationAttr, openedFolderPath);
+        }
     }
 }

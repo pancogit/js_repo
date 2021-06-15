@@ -407,6 +407,7 @@ a {
 }
 .window__info {
   overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 .window__property, .window__info {
   line-height: 1.2rem;

@@ -26,7 +26,7 @@ export default class Navigation {
         this.currentActiveLink = 0;
 
         this.size = new Size();
-        this.files = new Files();
+        this.files = new Files(breadcrumbsObject);
         this.header = 0;
     }
 
@@ -47,6 +47,9 @@ export default class Navigation {
 
         // add home folder content at the beginning
         this.files.addToPage(this.serverData.home);
+
+        // sort files / folders on page in ascending order
+        this.files.sortFolder(true);
 
         // update size for homepage when page is loaded
         this.size.updateOnPage(this.serverData.home);
@@ -166,6 +169,9 @@ export default class Navigation {
         // add files on page and update folder size on page
         this.files.addToPage(folder);
         this.size.updateOnPage(folder);
+
+        // sort files / folders on page in ascending order
+        this.files.sortFolder(true);
 
         // update active link and add folder path for breadcrumbs menu
         this.updateActiveLink(linkObject);
@@ -398,12 +404,8 @@ export default class Navigation {
             }
         }
         // file / folder is renamed, return true
-        // update navigation text, files name, breadcrumbs menu and saved files before searching
         else {
-            this.updateNavigationText(fileFolderCached.filesFolders);
-            this.files.updateFilesName(oldFileFolderName, newFileFolderName);
-            this.breadcrumbs.updateBreadcrumbsLinkName(oldFileFolderName, newFileFolderName);
-            this.search.updateSavedFilesName(oldFileFolderName, newFileFolderName);
+            this.updateRenamedFilesFolders(fileFolderCached, oldFileFolderName, newFileFolderName);
 
             return {
                 renamed: true,
@@ -412,8 +414,104 @@ export default class Navigation {
         }
     }
 
+    // update files / folders to navigation, files, breadcrumbs, search and other components
+    updateRenamedFilesFolders(fileFolderCached, oldFileFolderName, newFileFolderName) {
+
+        // update navigation text, files name, breadcrumbs menu and saved files before searching
+        this.updateNavigationText(fileFolderCached.filesFolders);
+        this.files.updateFilesName(oldFileFolderName, newFileFolderName);
+        this.breadcrumbs.updateBreadcrumbsLinkName(oldFileFolderName, newFileFolderName);
+        this.search.updateSavedFilesName(oldFileFolderName, newFileFolderName);
+
+        // change location for all subfolders and subfiles when folder is renamed
+        this.changeLocationSubFilesFolders(fileFolderCached.filesFolders, oldFileFolderName);
+
+        // when folder is renamed, update locations for current opened folder on page
+        this.files.updateOpenedFolderLocations();
+    }
+
     updateNavigationText(fileFolder) {
         var navigationText = $(fileFolder.link).find('.navigation__text');
         navigationText.text(fileFolder.name);
+    }
+
+    // when some folder is renamed, change location for for all subfiles and subfolders
+    changeLocationSubFilesFolders(filesFoldersCached, oldName) {
+        var isFolder = filesFoldersCached.info.type === 'File folder';
+        var newName = filesFoldersCached.name;
+        var changedLocation = this.changeFileFolderLocation(isFolder, filesFoldersCached, newName, oldName);
+
+        this.changeLocationSubFilesFoldersNested(isFolder, filesFoldersCached, changedLocation);
+    }
+
+    // get file / folder location for first level of nesting
+    changeFileFolderLocation(isFolder, filesFoldersCached, newName, oldName) {
+
+        // change location only if folder is renamed, because files doesn't contains subfiles or subfolders
+        if (isFolder) {
+            let filesExists = filesFoldersCached.files.length;
+            let foldersExists = filesFoldersCached.folders.length;
+            let oldLocation, newLocation;
+    
+            if (filesExists) 
+                oldLocation = filesFoldersCached.files[0].info.location;
+            else if (foldersExists) 
+                oldLocation = filesFoldersCached.folders[0].info.location;
+    
+            // if old location exists, then create new location
+            if (oldLocation) {
+                // remove last backslash from string and then find last occurense of backslash
+                // to insert new string with new name
+                let location = oldLocation.slice(0, oldLocation.length - 1);
+                let replaceIndex = location.lastIndexOf('/');
+    
+                newLocation = oldLocation.slice(0, replaceIndex + 1) + newName + '/';
+            }
+    
+            return newLocation;
+        }
+        else return 0;
+    }
+
+    changeLocationSubFilesFoldersNested(isFolder, filesFoldersCached, changedLocation) {
+
+        if (isFolder) {
+            // loop through files
+            filesFoldersCached.files.forEach(function iterate(value, index, array) {
+                this.insertNewLocation(value, changedLocation);
+            }, this);
+
+            // loop through folders
+            filesFoldersCached.folders.forEach(function iterate(value, index, array) {
+                this.insertNewLocation(value, changedLocation);
+
+                // change location for nested folders
+                this.changeLocationSubFilesFoldersNested(isFolder, value, changedLocation);
+            }, this);
+        }
+    }
+
+    // insert location part which is changed at the beginning of string and append remaining
+    // unchanged part of the old location string
+    insertNewLocation(value, changedLocation) {
+
+        // remove backslashes from the beginning and from the end
+        var changedLocationTrim = changedLocation.slice(1, changedLocation.length - 1);
+        var oldLocationTrim = value.info.location.slice(1, value.info.location.length - 1);
+
+        // tokenize strings first
+        var changedLocationParts = changedLocationTrim.split('/');
+        var oldLocationParts = oldLocationTrim.split('/');
+        var fullLocation = '/';
+
+        // insert first locations from changed part
+        for (var i = 0; i < changedLocationParts.length; i++)
+            fullLocation += changedLocationParts[i] + '/';
+
+        // append remaining unchanged parts from old location
+        for (; i < oldLocationParts.length; i++) 
+            fullLocation += oldLocationParts[i] + '/';
+
+        value.info.location = fullLocation;
     }
 }

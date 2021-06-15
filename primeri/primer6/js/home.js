@@ -40,7 +40,7 @@ class Home {
         this.header = new Header(this.navigation.files);
         this.header.addListeners();
 
-        this.properties = new Properties(this.navigation, this.files);
+        this.properties = new Properties(this.navigation, this.navigation.files);
         this.properties.addListeners();
 
         this.navigation.header = this.header;

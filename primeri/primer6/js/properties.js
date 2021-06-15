@@ -5,8 +5,9 @@ import Files from './files.js';
 
 export default class Properties {
 
-    constructor(navigationObject) {
+    constructor(navigationObject, filesObject) {
         this.navigationObject = navigationObject;
+        this.files = filesObject;
         this.filesLinkClass = 'files__link';
         this.filesLinkSelectedClass = 'files__link--selected';
         this.filesNameClass = 'files__name';
@@ -623,11 +624,15 @@ export default class Properties {
     tryRenameFileFolder(isFile, event) {
         var newFileFolderName = isFile ? this.renameFile.input.val() : this.renameFolder.input.val();
         var renameIsPossible = this.navigationObject.renameFileFolder(this.fileFolderCached, newFileFolderName.trim());
-
-        // close rename window
+        
+        // close rename window and sort files / folders on page
         if (renameIsPossible.renamed) {
             if (isFile) this.closeRenameFile(event);
             else this.closeRenameFolder(event);
+
+            // when file or folder is renamed, sorting must be done for all files and folders on page
+            // sort files / folders on page in ascending order
+            this.files.sortFolder(true);
         }
         // show error on rename window
         else {
