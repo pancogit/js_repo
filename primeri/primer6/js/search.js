@@ -93,6 +93,9 @@ export default class Search {
         // also restore current folder if search is active
         if (this.currentFilesSaved) this.restoreCurrentFolder();
 
+        // sort files / folders on page in ascending order
+        this.files.sortFolder(true);
+
         // remove search results to the page
         this.matches.removeElementsFromPage();
     }
@@ -210,5 +213,11 @@ export default class Search {
                 $(filesNames[i]).attr('data-fullname', newFileFolderName);
                 break;
             }
+    }
+
+    // if some file or folder is removed from search results, then search results can change
+    // for that situation, search results must be updated
+    updateSearchResults() {
+        this.textBoxTyping();
     }
 }

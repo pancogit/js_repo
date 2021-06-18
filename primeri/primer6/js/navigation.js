@@ -26,7 +26,7 @@ export default class Navigation {
         this.currentActiveLink = 0;
 
         this.size = new Size();
-        this.files = new Files(breadcrumbsObject);
+        this.files = new Files(breadcrumbsObject, searchObject);
         this.header = 0;
     }
 
@@ -427,7 +427,7 @@ export default class Navigation {
         this.changeLocationSubFilesFolders(fileFolderCached.filesFolders, oldFileFolderName);
 
         // when folder is renamed, update locations for current opened folder on page
-        this.files.updateOpenedFolderLocations();
+        this.files.updateOpenedFolderLocations(fileFolderCached, oldFileFolderName, newFileFolderName);
     }
 
     updateNavigationText(fileFolder) {
@@ -513,5 +513,33 @@ export default class Navigation {
             fullLocation += oldLocationParts[i] + '/';
 
         value.info.location = fullLocation;
+    }
+
+    // if folder is removed, then remove it from navigation also
+    removeFolderFromNavigation(folderLink) {
+        var navigationItem = $(folderLink).parent();
+        var navigationSubmenu = navigationItem.parent();
+
+        navigationItem.remove();
+
+        var navigationSubmenuEmpty = !navigationSubmenu.find('.navigation__item').length;
+
+        // if navigation submenu is empty after removing folder, then parent folder is empty
+        // and plus / minus folder signs should be removed also
+        if (navigationSubmenuEmpty) {
+            this.removeFolderSignsFromNavigation(navigationSubmenu);
+        }
+    }
+
+    // remove folder signs (plus, minus) for expanded submenu
+    removeFolderSignsFromNavigation(submenu) {
+        var navigationLink = submenu.prev();
+        var icon = navigationLink.find(`.${this.navigationIconClass}`);
+        var expand = navigationLink.find('.navigation__expand');
+
+        submenu.remove();
+        expand.remove();
+
+        icon.removeClass(`${this.folderPlusClass} ${this.folderMinusClass}`).addClass('fa-folder');
     }
 }

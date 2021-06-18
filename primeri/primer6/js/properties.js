@@ -42,6 +42,9 @@ export default class Properties {
         this.renameFolder = this.createRenameHTML();
         this.renameMessageError = $('<div>').addClass('window__message window__message--error');
 
+        // delete prompt window for files and folders
+        this.deleteWindow = this.createDeleteHTML();
+
         // cached file or folder
         this.fileFolderCached = 0;
     }
@@ -80,7 +83,7 @@ export default class Properties {
         var info = this.createEntryRowHTML(null, 'Info');
 
         // add event listeners for individual properties
-        this.addPropertiesListeners(open, info, rename);
+        this.addPropertiesListeners(open, info, rename, deleteEntry);
 
         properties.append(windowProperty);
         windowProperty.append(open).append(cut).append(copy).append(paste)
@@ -91,7 +94,7 @@ export default class Properties {
 
     // add event listeners for individual properties
     // activate events for both left and right click
-    addPropertiesListeners(open, info, rename) {
+    addPropertiesListeners(open, info, rename, deleteEntry) {
         open.on('click', this.openFileFolder.bind(this));
         open.on('contextmenu', this.openFileFolder.bind(this));
 
@@ -100,6 +103,9 @@ export default class Properties {
 
         rename.on('click', this.renameFileFolder.bind(this));
         rename.on('contextmenu', this.renameFileFolder.bind(this));
+
+        deleteEntry.on('click', this.deleteFileFolder.bind(this));
+        deleteEntry.on('contextmenu', this.deleteFileFolder.bind(this));
     }
 
     createEntryRowHTML(icon, propertyText, hasDivider = false, isEntryDisabled = false, isFlexDivider = false) {
@@ -291,6 +297,43 @@ export default class Properties {
 
         // when enter is pressed in input element, then click button
         input.on('keydown', this.renameInputIsChanged.bind(this, button));
+    }
+
+    createDeleteHTML() {
+        var window = $('<div>').addClass('align-items-center d-flex justify-content-center window');
+        var wrapper = $('<div>').addClass('window__wrapper flex-shrink-0');
+        var header = $('<div>').addClass('window__header d-flex justify-content-between');
+        var title = $('<span>').addClass('window__title');
+        var close = $('<i>').addClass('fas fa-times window__close d-flex justify-content-center align-items-center');
+        var content = $('<div>').addClass('window__content');
+        var text = $('<div>').addClass('window__text').text('Are you sure you want to delete?');
+        var footer = $('<div>').addClass('window__footer d-flex justify-content-end');
+        var buttonYes = $('<button>').addClass('window__button').text('Yes');
+        var buttonNo = $('<button>').addClass('window__button').text('No');
+
+        this.addListenersDeleteWindow(close, buttonYes, buttonNo);
+
+        window.append(wrapper);
+        wrapper.append(header).append(content);
+        header.append(title).append(close);
+        content.append(text).append(footer);
+        footer.append(buttonYes).append(buttonNo);
+
+        return window;
+    }
+
+    addListenersDeleteWindow(close, buttonYes, buttonNo) {
+        close.on('click', this.closeDeleteWindow.bind(this));
+        close.on('contextmenu', this.closeDeleteWindow.bind(this));
+
+        buttonNo.on('click', this.closeDeleteWindow.bind(this));
+        buttonNo.on('contextmenu', this.closeDeleteWindow.bind(this));
+
+        // also close delete window on escape key
+        $(window).on('keydown', this.closeDeleteWindow.bind(this));
+
+        buttonYes.on('click', this.removeFileFolder.bind(this));
+        buttonYes.on('contextmenu', this.removeFileFolder.bind(this));
     }
 
     // right click open context menu, left click close them
@@ -603,7 +646,7 @@ export default class Properties {
 
         // if it's folder get full name because extension doesn't matter,
         // but if it's file then remove extension from name
-        var currentFileFolderName = isFolder ? info.filesFolders.name : 
+        var currentFileFolderName = isFolder ? info.filesFolders.name :
             Files.removeFileFolderExtension(info.filesFolders.name).name;
 
         // add current file / folder name to the window input and 
@@ -624,7 +667,7 @@ export default class Properties {
     tryRenameFileFolder(isFile, event) {
         var newFileFolderName = isFile ? this.renameFile.input.val() : this.renameFolder.input.val();
         var renameIsPossible = this.navigationObject.renameFileFolder(this.fileFolderCached, newFileFolderName.trim());
-        
+
         // close rename window and sort files / folders on page
         if (renameIsPossible.renamed) {
             if (isFile) this.closeRenameFile(event);
@@ -671,5 +714,57 @@ export default class Properties {
         var enterIsPressed = event.key === 'Enter';
 
         if (enterIsPressed) button.click();
+    }
+
+    deleteFileFolder(event) {
+        var info = this.getFileFolderCached();
+
+        // save cached file / folder for later use
+        this.fileFolderCached = info;
+
+        $(document.body).append(this.deleteWindow);
+    }
+
+    closeDeleteWindow(event) {
+        this.closePropertiesWindow(this.deleteWindow, event);
+    }
+
+    // remove file or folder from system
+    removeFileFolder(event) {
+        this.closeDeleteWindow(event);
+
+        this.removeFileFolderFromCache();
+        this.files.removeFileFolderFromPage(this.fileFolderCached);
+
+        var isFolder = this.fileFolderCached.filesFolders.info.type === 'File folder';
+        var folderNavigationLink = this.fileFolderCached.filesFolders.link;
+        
+        if (isFolder) this.navigationObject.removeFolderFromNavigation(folderNavigationLink);
+    }
+
+    removeFileFolderFromCache() {
+        var parentFolder = this.fileFolderCached.currentFolder;
+
+        // search for file / folder in cached structure and remove them
+        this.removeElementFromCache(parentFolder.files);
+        this.removeElementFromCache(parentFolder.folders);
+    }
+
+    removeElementFromCache(element) {
+
+        for (let i = 0; i < element.length; i++)
+            if (element[i] === this.fileFolderCached.filesFolders) {
+                // move all elements one position left to remove found element
+                for (let j = i, k = i + 1; k < element.length; j++, k++)
+                element[j] = element[k];
+
+                // remove last element which is duplicated
+                delete element[element.length - 1];
+
+                // when element is removed, decrement length of array
+                element.length--;
+
+                return;
+            }
     }
 }

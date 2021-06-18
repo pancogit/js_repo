@@ -5,8 +5,9 @@ import Preview from './preview.js';
 
 export default class Files {
 
-    constructor(breadcrumbsObject) {
+    constructor(breadcrumbsObject, searchObject) {
         this.breadcrumbs = breadcrumbsObject;
+        this.search = searchObject;
         this.wrapper = $('.home__content');
         this.files = $('.files');
         this.filesNameClass = 'files__name';
@@ -592,7 +593,7 @@ export default class Files {
     // when file or folder is renamed, update them on page
     updateFilesName(oldFileFolderName, newFileFolderName) {
         var filesNames = this.files.find(`.${this.filesNameClass}`);
-        
+
         // search for files names on page and update correct one
         // also update data custom attribute
         for (let i = 0; i < filesNames.length; i++)
@@ -611,15 +612,131 @@ export default class Files {
     // because some folder name can be changed from navigation while child folder is still opened
     // and in that situation files / folders locations for current opened folder on page 
     // will not be changed
-    updateOpenedFolderLocations() {
+    updateOpenedFolderLocations(fileFolderCached, oldFileFolderName, newFileFolderName) {
+        var searchResultsOnPage = $('.matches__text').length;
         var filesLinks = this.files.find(`.${this.filesLinkClass}`);
 
-        // update locations on page in current folder for files / folders
-        for (let i = 0; i < filesLinks.length; i++) {
-            let filesMedia = filesLinks[i].firstChild;
-            let openedFolderPath = this.breadcrumbs.getCurrentPath();
+        if (searchResultsOnPage)
+            this.updateSearchResultsLocations(fileFolderCached, oldFileFolderName, newFileFolderName, filesLinks);
+        else {
+            // update locations on page in current folder for files / folders
+            for (let i = 0; i < filesLinks.length; i++) {
+                let filesMedia = filesLinks[i].firstChild;
+                let openedFolderPath = this.breadcrumbs.getCurrentPath();
 
-            $(filesMedia).attr(this.dataLocationAttr, openedFolderPath);
+                $(filesMedia).attr(this.dataLocationAttr, openedFolderPath);
+            }
+        }
+    }
+
+    // when some folder is renamed in search results, then every file or folder on page
+    // that's child of renamed folder must change their location
+    updateSearchResultsLocations(fileFolderCached, oldFileFolderName, newFileFolderName, filesLinks) {
+        var isFolder = fileFolderCached.filesFolders.info.type === 'File folder';
+
+        if (!isFolder) return;
+
+        var newFolderLocation = fileFolderCached.filesFolders.info.location + newFileFolderName + '/';
+        var oldFolderLocation = fileFolderCached.filesFolders.info.location + oldFileFolderName + '/';
+        var filesIcon, currentLocation, replaceLocation, newLocation;
+
+        for (let i = 0; i < filesLinks.length; i++) {
+            filesIcon = filesLinks[i].firstChild;
+            currentLocation = $(filesIcon).attr(this.dataLocationAttr);
+            replaceLocation = currentLocation.includes(oldFolderLocation);
+
+            // if location on page for search results is found, then that file or folder is 
+            // inside folder which name is changed and that location path should be changed
+            // with new location path
+            // form new location path by appending on old location remaining parts of current location
+            // if it's not the same as new location
+            if (replaceLocation) {
+                newLocation = newFolderLocation + currentLocation.slice(oldFolderLocation.length);
+                $(filesIcon).attr(this.dataLocationAttr, newLocation);
+            }
+        }
+    }
+
+    // remove file or folder from current opened folder, or from search results
+    removeFileFolderFromPage(fileFolderCached) {
+        var fileFolderName = fileFolderCached.filesFolders.name;
+        var names = this.files.find(`.${this.filesNameClass}`);
+        var fullname, box, namesPage;
+        var isFolder = fileFolderCached.filesFolders.info.type === 'File folder';
+        var folderLocation = fileFolderCached.filesFolders.info.location + fileFolderCached.filesFolders.name + '/';
+        var searchResultsOnPage = $('.matches__text').length;
+
+        // update search results after deletion, results can change if file / folder was on search list
+        // even if removed folder is not on search results list, after deletion search results can change
+        // because there are maybe some of their children on page
+        if (searchResultsOnPage) this.search.updateSearchResults();
+
+        for (let i = 0; i < names.length; i++) {
+            namesPage = $(names[i]);
+            fullname = namesPage.attr(this.dataFullnameAttr);
+
+            // file / folder found on page, get box and remove them from page
+            if (fileFolderName === fullname) {
+                box = namesPage.parent().parent();
+                box.remove();
+
+                // remove files / folders from search results if they are descendant of removed folder
+                if (isFolder && searchResultsOnPage) 
+                    this.removeFilesFoldersFromSearch(folderLocation);
+
+                return;
+            }
+        }
+
+        // file / folder is not found on page, try to remove current folder content if
+        // removed folder is parent of current folder
+        this.tryRemoveCurrentFolderContent(fileFolderCached);
+    }
+
+    // if folder is removed from page via navigation and it's not found on page,
+    // then it can be another folder or it can be parent folder
+    // if it's parent folder, then current folder content on page must be 
+    // removed from page because his content doesn't exist anymore
+    tryRemoveCurrentFolderContent(fileFolderCached) {
+        var currentFolderLocation = this.breadcrumbs.getCurrentPath();
+        var removedFolderLocation = fileFolderCached.filesFolders.info.location + fileFolderCached.filesFolders.name + '/';
+        var removeFolderIsParent = Files.stringBeginsWith(currentFolderLocation, removedFolderLocation);
+
+        // restore homepage if deleted folder is parent of current folder on page
+        if (removeFolderIsParent) $('.breadcrumbs__main').click();
+    }
+
+    // does original string begins with search string
+    // original string contains search string, but from the begining of original string
+    static stringBeginsWith(originalString, searchString) {
+        var searchStringLen = searchString.length;
+        var originalStringLen = originalString.length;
+
+        if (originalStringLen < searchStringLen) return false;
+
+        var originalStringSub = originalString.slice(0, searchStringLen);
+
+        // if search string is contained within original string from the beginning of 
+        // original string then return true, otherwise return false
+        return originalStringSub === searchString ? true : false;
+    }
+
+    // when some folder is deleted in search results, then remove all other files or folders
+    // which are children (direct or not) from deleted folder
+    removeFilesFoldersFromSearch(folderLocation) {
+        var names = this.files.find(`.${this.filesNameClass}`);
+        var icon, location, fileFolderIsChildren, box;
+
+        for (let i = 0; i < names.length; i++) {
+            icon = $(names[i]).prev();
+            location = icon.attr(this.dataLocationAttr);
+            fileFolderIsChildren = Files.stringBeginsWith(location, folderLocation);
+
+            // descendant is found, remove them from search results
+            if (fileFolderIsChildren) {
+                box = $(names[i]).parent().parent();
+                box.remove();
+            }
         }
     }
 }
