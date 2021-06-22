@@ -29,6 +29,8 @@ export default class Search {
         this.savedFiles = 0;
         this.savedHomeSize = 0;
         this.currentFilesSaved = false;
+
+        this.size = 0;
     }
 
     addListeners() {
@@ -179,6 +181,9 @@ export default class Search {
         var searchFiles = this.homeContent.find(`.${this.filesClass}`);
         searchFiles.remove();
 
+        // set home size with number of files / folders
+        this.size.updateOnPage(this.breadcrumbs.currentCachedFolder);
+
         // create file wrapper with the current files class including current class modifier
         // and add saved files boxes to them and finally to the page
         var filesWrapperClass = searchFiles.attr('class');
@@ -186,7 +191,6 @@ export default class Search {
         filesWrapper.append(this.savedFiles)
 
         this.homeContent.append(filesWrapper);
-        this.homeSize.text(this.savedHomeSize);
         this.homeSize.removeClass(this.homeSizeHideClass);
 
         // files are restored now
@@ -217,7 +221,38 @@ export default class Search {
 
     // if some file or folder is removed from search results, then search results can change
     // for that situation, search results must be updated
-    updateSearchResults() {
+    // also remove deleted file or folder from saved files before searching was done
+    updateSearchResults(fileFolderCached) {
         this.textBoxTyping();
+        this.removeSavedFile(fileFolderCached);
+    }
+
+    // when some file or folder is removed from search results, then when search results
+    // are closed, files are restored for current folder and then removed file or folder
+    // can be still on page
+    // but in some situations it could not be the problem if file or folder is nested inside current
+    // folder and in that situation nothing is done
+    removeSavedFile(fileFolderCached) {
+        var filesNames = $(this.savedFiles).find(`.${this.filesNameClass}`);
+        var currentFullname;
+        
+        // search for saved files names and update correct one
+        // also update data custom attribute
+        for (let i = 0; i < filesNames.length; i++) {
+            currentFullname = $(filesNames[i]).attr('data-fullname');
+
+            // file or folder is found, remove them from saved cache
+            if (currentFullname === fileFolderCached.name) {
+                
+                // move all elements to the left to remove found element from cache
+                for (let j = i, k = i + 1; k < filesNames.length; j++, k++)
+                    this.savedFiles[j] = this.savedFiles[k];
+
+                // decrement length of cached array to remove last element from them, it's duplicate
+                this.savedFiles.length--;
+
+                break;
+            }
+        }
     }
 }

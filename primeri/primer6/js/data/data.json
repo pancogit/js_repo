@@ -6,14 +6,14 @@
             "path": "/js_repo/primeri/primer6/html/",
             "location": "/",
             "size": {
-                "value": "20.27",
+                "value": "20.47",
                 "unit": "MB"
             },
             "created": "Friday, January 08, 2021, 16:54:12"
         },
         "contains": {
             "files": "169",
-            "folders": "24"
+            "folders": "27"
         },
         "folders": [
             {
@@ -23,7 +23,7 @@
                     "path": "/js_repo/primeri/primer6/html/ballons/",
                     "location": "/home/",
                     "size": {
-                        "value": "475",
+                        "value": "496",
                         "unit": "KB"
                     },
                     "created": "Saturday, May 08, 2021, 17:50:58"
@@ -41,7 +41,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Air Ballon Festival.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "82.1",
+                                "value": "84",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:37:44"
@@ -54,7 +54,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Air Balloon Ride.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "29.8",
+                                "value": "32",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:33:18"
@@ -67,7 +67,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Best Air Balloon Rides Cappadocia Turkey.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "58.3",
+                                "value": "60",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:35:57"
@@ -80,7 +80,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Cruse Destinations Air.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "61.4",
+                                "value": "64",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:38:21"
@@ -93,7 +93,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Desert Air Ride.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "49.5",
+                                "value": "52",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:38:42"
@@ -106,7 +106,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Educa Puzzle Air Ballons.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "84.9",
+                                "value": "88",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:36:57"
@@ -119,7 +119,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Ottawa Air Balloon Ride.jpeg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "25.4",
+                                "value": "28",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:34:24"
@@ -132,7 +132,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/South Tyrol Air Baloon Rides.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "42.2",
+                                "value": "44",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:35:27"
@@ -145,7 +145,7 @@
                             "path": "/js_repo/primeri/primer6/js/data/ballons/Wild Ballon Ride.jpg",
                             "location": "/home/ballons/",
                             "size": {
-                                "value": "41.1",
+                                "value": "44",
                                 "unit": "KB"
                             },
                             "created": "Wednesday, April 21, 2021, 20:36:22"
@@ -160,7 +160,7 @@
                     "path": "/js_repo/primeri/primer6/html/files/",
                     "location": "/home/",
                     "size": {
-                        "value": "36.9",
+                        "value": "36.8",
                         "unit": "KB"
                     },
                     "created": "Saturday, May 08, 2021, 17:51:10"
@@ -440,7 +440,7 @@
                     "path": "/js_repo/primeri/primer6/html/galleries/",
                     "location": "/home/",
                     "size": {
-                        "value": "7.41",
+                        "value": "7.52",
                         "unit": "MB"
                     },
                     "created": "Saturday, May 08, 2021, 17:51:16"
@@ -457,7 +457,7 @@
                             "path": "/js_repo/primeri/primer6/html/galleries/cars",
                             "location": "/home/galleries/",
                             "size": {
-                                "value": "3.82",
+                                "value": "3.84",
                                 "unit": "MB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:22"
@@ -607,7 +607,7 @@
                                             "path": "/js_repo/primeri/primer6/js/data/samples/pictures/butterfly.jpg",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
-                                                "value": "74.9",
+                                                "value": "76",
                                                 "unit": "KB"
                                             },
                                             "created": "Thuesday, April 20, 2021, 22:57:11"
@@ -620,7 +620,7 @@
                                             "path": "/js_repo/primeri/primer6/js/data/samples/music/Plain Folks.mp3",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
-                                                "value": "871",
+                                                "value": "872",
                                                 "unit": "KB"
                                             },
                                             "created": "Thuesday, April 20, 2021, 22:00:19"
@@ -682,7 +682,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Audi A6.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "75.8",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:28:14"
@@ -695,7 +695,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Dacia Sandero Stepway.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "112",
+                                        "value": "116",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:24:45"
@@ -708,7 +708,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Hyundai Sonata Hero.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "123",
+                                        "value": "124",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:16:16"
@@ -721,7 +721,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Mercedes AMG GT S.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "62.8",
+                                        "value": "64",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:18:37"
@@ -734,7 +734,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Peugeot 3008.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "84.0",
+                                        "value": "88",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:21:40"
@@ -747,7 +747,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Tesla Roadster Hero.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "52.2",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:19:10"
@@ -760,7 +760,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Toyota Hilux Special Edition 2019.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "55.1",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:29:05"
@@ -773,7 +773,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Transpo G70 TA.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "39.3",
+                                        "value": "40",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:15:50"
@@ -786,7 +786,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Volkswagen Europe.png",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "283",
+                                        "value": "284",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:20:57"
@@ -799,7 +799,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cars/Volvo XC60 Hero.jpg",
                                     "location": "/home/galleries/cars/",
                                     "size": {
-                                        "value": "88.0",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 18:26:14"
@@ -814,7 +814,7 @@
                             "path": "/js_repo/primeri/primer6/html/galleries/cityscape",
                             "location": "/home/galleries/",
                             "size": {
-                                "value": "1.03",
+                                "value": "1.06",
                                 "unit": "MB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:25"
@@ -832,7 +832,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Dubai.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "47.8",
+                                        "value": "48",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:31:56"
@@ -845,7 +845,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Golden Gate Bridge, California.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "61.1",
+                                        "value": "64",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:43:05"
@@ -858,7 +858,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Guaynabo City, Puerto Rico.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "73.8",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:36:46"
@@ -871,7 +871,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Madrid Doma Neboskreb.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "57.0",
+                                        "value": "60",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:34:05"
@@ -884,7 +884,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Madrid.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "58.2",
+                                        "value": "60",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:33:14"
@@ -897,7 +897,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Miami Cityscape at Night.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "93.5",
+                                        "value": "96",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:27:50"
@@ -910,7 +910,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Miami, Florida.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "44.5",
+                                        "value": "48",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:29:21"
@@ -923,7 +923,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Netherlands Aerial View.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "93.2",
+                                        "value": "96",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:38:15"
@@ -936,7 +936,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Netherlands.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "90.0",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:37:49"
@@ -949,7 +949,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/New York.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "75.7",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:29:53"
@@ -962,7 +962,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/San Juan.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "78.4",
+                                        "value": "80",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:34:58"
@@ -975,7 +975,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Santurce, San Juan, Puerto Rico.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "61.2",
+                                        "value": "64",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:36:02"
@@ -988,7 +988,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Sao Paulo, Brasil.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "91.2",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:38:53"
@@ -1001,7 +1001,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/Scientists.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "74.5",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:19:52"
@@ -1014,7 +1014,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/cityscape/The Caliverse.jpg",
                                     "location": "/home/galleries/cityscape/",
                                     "size": {
-                                        "value": "57.8",
+                                        "value": "60",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:20:14"
@@ -1029,7 +1029,7 @@
                             "path": "/js_repo/primeri/primer6/html/galleries/forests",
                             "location": "/home/galleries/",
                             "size": {
-                                "value": "1.08",
+                                "value": "1.11",
                                 "unit": "MB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:30"
@@ -1047,7 +1047,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Forest Habitat.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "100",
+                                        "value": "104",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:45:46"
@@ -1060,7 +1060,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Forest Nature.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "84.5",
+                                        "value": "88",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:44:41"
@@ -1073,7 +1073,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Healthy Forest.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "101",
+                                        "value": "104",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:49:45"
@@ -1086,7 +1086,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ireland Trails.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "110",
+                                        "value": "112",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:50:29"
@@ -1099,7 +1099,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ireland.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "97.6",
+                                        "value": "100",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:49:57"
@@ -1112,7 +1112,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Oak Forest.png",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "90.2",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:45:58"
@@ -1125,7 +1125,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Sunlight Forest.png",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "113",
+                                        "value": "116",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:47:35"
@@ -1138,7 +1138,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Sustainable Forestry.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "90.2",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:45:24"
@@ -1151,7 +1151,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Tara.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "124",
+                                        "value": "128",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:44:24"
@@ -1164,7 +1164,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Ukraine.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "95.8",
+                                        "value": "96",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:49:09"
@@ -1177,7 +1177,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/forests/Wildlife Forest.jpg",
                                     "location": "/home/galleries/forests/",
                                     "size": {
-                                        "value": "104",
+                                        "value": "108",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:46:19"
@@ -1192,7 +1192,7 @@
                             "path": "/js_repo/primeri/primer6/html/galleries/hiking",
                             "location": "/home/galleries/",
                             "size": {
-                                "value": "636",
+                                "value": "648",
                                 "unit": "KB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:35"
@@ -1210,7 +1210,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Alishan.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "98.5",
+                                        "value": "100",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:17:33"
@@ -1223,7 +1223,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Alps.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "71.2",
+                                        "value": "72",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:55:17"
@@ -1236,7 +1236,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Appalachian Trail.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "59.9",
+                                        "value": "60",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:57:39"
@@ -1249,7 +1249,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Backpacking.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "47.2",
+                                        "value": "48",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:58:06"
@@ -1262,7 +1262,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Brown Mountain.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "55.5",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:57:20"
@@ -1275,7 +1275,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/French Italian Alps Walking Hiking Tour.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "70.9",
+                                        "value": "72",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:54:59"
@@ -1288,7 +1288,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Hiking, Trekking, Mountaineering.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "55.2",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:56:19"
@@ -1301,7 +1301,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Keep Your Brain Young.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "71.6",
+                                        "value": "72",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:54:17"
@@ -1314,7 +1314,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Trekking and Hiking.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "52.6",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 19:55:48"
@@ -1327,7 +1327,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/hiking/Trekking Vacation.jpg",
                                     "location": "/home/galleries/hiking/",
                                     "size": {
-                                        "value": "53.3",
+                                        "value": "56",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:18:11"
@@ -1342,7 +1342,7 @@
                             "path": "/js_repo/primeri/primer6/html/galleries/mountains",
                             "location": "/home/galleries/",
                             "size": {
-                                "value": "872",
+                                "value": "900",
                                 "unit": "KB"
                             },
                             "created": "Saturday, May 08, 2021, 17:51:42"
@@ -1360,7 +1360,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Almaty, Kazakhstan.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "64.6",
+                                        "value": "68",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:27:28"
@@ -1373,7 +1373,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Armenia Monastery.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "73.5",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:21:53"
@@ -1386,7 +1386,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/France Mountains.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "78.3",
+                                        "value": "80",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:25:12"
@@ -1399,7 +1399,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Himalayas.jpeg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "88.9",
+                                        "value": "92",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:24:31"
@@ -1412,7 +1412,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Lac De Gaube France.jpeg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "71.0",
+                                        "value": "72",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:25:55"
@@ -1425,7 +1425,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Mont Branc, France.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "60.4",
+                                        "value": "64",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:24:57"
@@ -1438,7 +1438,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Mountains Habitat.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "92.6",
+                                        "value": "96",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:23:05"
@@ -1451,7 +1451,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Nepal.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "96.8",
+                                        "value": "100",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:26:34"
@@ -1464,7 +1464,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/North Face Mount Everest Tibet Autonomous Region.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "84.7",
+                                        "value": "88",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:24:10"
@@ -1477,7 +1477,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Underground Mountains.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "87.4",
+                                        "value": "88",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:23:24"
@@ -1490,7 +1490,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/galleries/mountains/Valley Taurus Mountains Turkey.jpg",
                                     "location": "/home/galleries/mountains/",
                                     "size": {
-                                        "value": "73.7",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Wednesday, April 21, 2021, 20:21:10"
@@ -1556,7 +1556,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/music/Plain Folks.mp3",
                                     "location": "/home/samples/music/",
                                     "size": {
-                                        "value": "871",
+                                        "value": "872",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:00:19"
@@ -1582,7 +1582,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/music/Ultimate Victory.mp3",
                                     "location": "/home/samples/music/",
                                     "size": {
-                                        "value": "563",
+                                        "value": "564",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 21:59:01"
@@ -1595,7 +1595,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/music/Under Cover of Darkness.mp3",
                                     "location": "/home/samples/music/",
                                     "size": {
-                                        "value": "317",
+                                        "value": "320",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:06:03"
@@ -1623,7 +1623,7 @@
                             "path": "/js_repo/primeri/primer6/html/samples/pictures",
                             "location": "/home/samples/",
                             "size": {
-                                "value": "239",
+                                "value": "248",
                                 "unit": "KB"
                             },
                             "created": "Saturday, May 08, 2021, 17:53:05"
@@ -1641,7 +1641,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/pictures/bird.jpeg",
                                     "location": "/home/samples/pictures/",
                                     "size": {
-                                        "value": "33.1",
+                                        "value": "36",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:55:09"
@@ -1654,7 +1654,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/pictures/butterfly.jpg",
                                     "location": "/home/samples/pictures/",
                                     "size": {
-                                        "value": "74.9",
+                                        "value": "76",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:57:11"
@@ -1667,7 +1667,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/pictures/city.jpg",
                                     "location": "/home/samples/pictures/",
                                     "size": {
-                                        "value": "42.7",
+                                        "value": "44",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:59:27"
@@ -1680,7 +1680,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/pictures/flower.jpg",
                                     "location": "/home/samples/pictures/",
                                     "size": {
-                                        "value": "37.3",
+                                        "value": "40",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 23:06:28"
@@ -1693,7 +1693,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/pictures/stones.jpg",
                                     "location": "/home/samples/pictures/",
                                     "size": {
-                                        "value": "51.0",
+                                        "value": "52",
                                         "unit": "KB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 23:08:10"
@@ -1739,7 +1739,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/videos/Sun.mp4",
                                     "location": "/home/samples/videos/",
                                     "size": {
-                                        "value": "1.86",
+                                        "value": "1.87",
                                         "unit": "MB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:36:33"
@@ -1752,7 +1752,7 @@
                                     "path": "/js_repo/primeri/primer6/js/data/samples/videos/Venice Beach Drone.mp4",
                                     "location": "/home/samples/videos/",
                                     "size": {
-                                        "value": "1.56",
+                                        "value": "1.57",
                                         "unit": "MB"
                                     },
                                     "created": "Thuesday, April 20, 2021, 22:26:09"
@@ -1783,7 +1783,7 @@
                     "path": "/js_repo/primeri/primer6/html/tests/",
                     "location": "/home/",
                     "size": {
-                        "value": "30.5",
+                        "value": "35.79",
                         "unit": "KB"
                     },
                     "created": "Saturday, May 08, 2021, 17:53:31"

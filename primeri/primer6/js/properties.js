@@ -47,6 +47,8 @@ export default class Properties {
 
         // cached file or folder
         this.fileFolderCached = 0;
+
+        this.size = 0;
     }
 
     // hide properties before show on page to get dimension of properties
@@ -764,7 +766,51 @@ export default class Properties {
                 // when element is removed, decrement length of array
                 element.length--;
 
+                // decrement sizes for current folder path
+                this.updateSizeParentFolders();
+
                 return;
             }
+    }
+
+    // when some file or folder is removed or added, then size of current folder and all parent folders
+    // up to the home folder must be updated, because size is smaller after deletion / addition
+    updateSizeParentFolders(decrement = true) {
+        var path = this.parseCurrentFolderPath(this.fileFolderCached.currentFolder.info.location, 
+                                               this.fileFolderCached.currentFolder.name);
+
+        var elementSize = this.fileFolderCached.filesFolders.info.size;
+        var isFolder = this.fileFolderCached.filesFolders.info.type === 'File folder';
+
+        // if file is removed, then number of files is equal to one
+        var numberOfFilesFolders = {
+            files: "1",
+            folders: "0"
+        }
+
+        // if folder is selected, then increment number of folders for that folder
+        if (isFolder) {
+            numberOfFilesFolders = this.fileFolderCached.filesFolders.contains;
+            numberOfFilesFolders.folders = (parseInt(numberOfFilesFolders.folders) + 1).toString();
+        }
+
+        // update size for parent folders in cached folder structure and on page also
+        this.size.updateSizeFolders(path, elementSize, numberOfFilesFolders, 
+                                    this.fileFolderCached.currentFolder, decrement);
+    }
+
+    // form strings for current folder path
+    parseCurrentFolderPath(currentLocation, currentFolder) {
+        var path = [];
+
+        var trimmedLocation = currentLocation.slice(1, currentLocation.length - 1);
+        var locations = trimmedLocation.split('/');
+
+        for (let i = 0; i < locations.length; i++) 
+            if (locations[i] !== '') path.push(locations[i]);
+
+        path.push(currentFolder);
+
+        return path;
     }
 }

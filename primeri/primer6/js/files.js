@@ -669,7 +669,8 @@ export default class Files {
         // update search results after deletion, results can change if file / folder was on search list
         // even if removed folder is not on search results list, after deletion search results can change
         // because there are maybe some of their children on page
-        if (searchResultsOnPage) this.search.updateSearchResults();
+        // also remove deleted file or folder from saved results before searching
+        if (searchResultsOnPage) this.search.updateSearchResults(fileFolderCached.filesFolders);
 
         for (let i = 0; i < names.length; i++) {
             namesPage = $(names[i]);

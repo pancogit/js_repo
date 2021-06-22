@@ -48,6 +48,8 @@ class Home {
         this.breadcrumbs.header = this.header;
         this.search.breadcrumbs = this.breadcrumbs;
         this.search.files = this.navigation.files;
+        this.search.size = this.navigation.size;
+        this.properties.size = this.navigation.size;
     }
 }
 

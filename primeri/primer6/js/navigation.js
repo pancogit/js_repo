@@ -25,7 +25,7 @@ export default class Navigation {
         this.navigation = 0;
         this.currentActiveLink = 0;
 
-        this.size = new Size();
+        this.size = new Size(data);
         this.files = new Files(breadcrumbsObject, searchObject);
         this.header = 0;
     }
