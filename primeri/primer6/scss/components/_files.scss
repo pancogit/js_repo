@@ -41,6 +41,12 @@
         .files__icon {
             font-size: variables.$files_picture_small_width;
         }
+
+        .files__image-cut {
+            position: absolute;
+            width: variables.$files_image_cut_small_width;
+            height: variables.$files_image_cut_small_width;
+        }
     }
 
     // reset small modifiers for larger icons
@@ -59,6 +65,10 @@
             margin-left: - variables.$files_link_padding_left + variables.$files_link_padding_top;
             margin-right: - variables.$files_link_padding_left + variables.$files_link_padding_top;
             text-align: center;
+        }
+
+        .files__image-cut {
+            position: relative;
         }
     }
 
@@ -80,6 +90,12 @@
         .files__icon {
             font-size: variables.$files_picture_medium_width;
         }
+
+        .files__image-cut {
+            width: variables.$files_image_cut_medium_width;
+            height: variables.$files_image_cut_medium_width;
+            margin-top: - variables.$files_image_cut_medium_width; 
+        }
     }
 
     &--large {
@@ -99,6 +115,12 @@
         // use the same size as picture
         .files__icon {
             font-size: variables.$files_picture_large_width;
+        }
+
+        .files__image-cut {
+            width: variables.$files_image_cut_large_width;
+            height: variables.$files_image_cut_large_width;
+            margin-top: - variables.$files_image_cut_large_width;
         }
     }
 
@@ -123,6 +145,31 @@
 
             .files__name {
                 color: colors.$files_name_hover_color;
+            }
+        }
+
+        // when file or folder is cut, then change color of icon
+        &--cut {
+
+            .files__icon--audio {
+                color: colors.$files_icon_cut_audio_color;
+            }
+
+            .files__icon--video {
+                color: colors.$files_icon_cut_video_color;
+            }
+
+            .files__icon--text {
+                color: colors.$files_icon_cut_text_color;
+            }
+
+            .files__icon--folder {
+                color: colors.$files_icon_cut_folder_color;
+            }
+
+            // when image is cut, show transparent color over image
+            .files__image-cut {
+                display: block;
             }
         }
     }
@@ -161,5 +208,12 @@
         &--folder {
             color: colors.$files_icon_folder_color;
         }
+    }
+
+    // when image is cut, then transparent background is shown over the image
+    // hide by default, show when image is cut
+    &__image-cut {
+        display: none;
+        background-color: colors.$files_image_cut_background-color;
     }
 }

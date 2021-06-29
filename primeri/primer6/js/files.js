@@ -5,9 +5,10 @@ import Preview from './preview.js';
 
 export default class Files {
 
-    constructor(breadcrumbsObject, searchObject) {
+    constructor(breadcrumbsObject, searchObject, navigationObject) {
         this.breadcrumbs = breadcrumbsObject;
         this.search = searchObject;
+        this.navigation = navigationObject;
         this.wrapper = $('.home__content');
         this.files = $('.files');
         this.filesNameClass = 'files__name';
@@ -110,6 +111,11 @@ export default class Files {
         var icon = this.createIconHTML(type, cachedElement);
         var isFolder = $(icon).hasClass('fa-folder');
 
+        // if image is created, then add element when image is cut to overlay image with transparent background
+        var imageCut;
+
+        if (type === 'image') imageCut = $('<div>').addClass('files__image-cut');
+
         // add event listener for folders to emulate click on navigation links
         // send link for folder via function binding as additional argument
         if (isFolder) $(link).on('click', this.folderIsClicked.bind(this, link.attr('href')));
@@ -118,7 +124,9 @@ export default class Files {
         else $(link).on('click', this.fileIsClicked.bind(this));
 
         box.append(link);
-        link.append(icon).append(name);
+
+        if (imageCut) link.append(icon).append(imageCut).append(name);
+        else link.append(icon).append(name);
 
         return box;
     }
@@ -739,5 +747,137 @@ export default class Files {
                 box.remove();
             }
         }
+    }
+
+    copyFileFolder(clipboard) {
+        var pathSource, pathDestination, name;
+        var isHomepage = false;
+
+        // set path and name from navigation if navigation folder is copied / cut
+        if (!clipboard.selectedFileFolder.location)
+            pathSource = this.reverseURL(clipboard.selectedFileFolder.selected.attr('href'));
+
+        // set path and name from navigation folder for paste folder destination
+        if (!clipboard.pasteFolder.location) {
+            if (clipboard.pasteFolder.selected) 
+                pathDestination = this.reverseURL(clipboard.pasteFolder.selected.attr('href'));
+
+            // then it's paste inside current opened folder
+            else {
+                let currentPath = this.breadcrumbs.getCurrentPath();
+                pathDestination = `/js_repo/primeri/primer6/html${currentPath.slice(5)}`;
+
+                if (currentPath === '/home/') isHomepage = true;
+            }
+        }
+
+        var infoSource = this.navigation.getFileFolderInfoRecursive(this.breadcrumbs.serverData.home, 
+                                                                    clipboard.selectedFileFolder.location, pathSource, 
+                                                                    clipboard.selectedFileFolder.name);
+
+        var infoDestination = isHomepage ? 
+                              this.navigation.getHomepageFolderInfo(pathDestination, clipboard.pasteFolder.name) :
+                              this.navigation.getFileFolderInfoRecursive(this.breadcrumbs.serverData.home, 
+                                                                         clipboard.pasteFolder.location, pathDestination, 
+                                                                         clipboard.pasteFolder.name);
+
+        this.copyFileFolderToDestination(clipboard, infoSource, infoDestination);
+    }
+
+    copyFileFolderToDestination(clipboard, infoSource, infoDestination) {
+        var isFolder = infoSource.filesFolders.info.type === 'File folder';
+
+        // copy source before moving to the destination because cached reference is used
+        // and if it's modified then it will alter original source files or folders
+        var fileFolderCopy = Object.create(infoSource.filesFolders);
+        var fileFolderCopyPrototype = Object.getPrototypeOf(fileFolderCopy);
+        fileFolderCopy = fileFolderCopyPrototype;
+
+        //this.updateDestinationFilesFoldersLocation(fileFolderCopy, infoDestination);
+
+        // copy as folder
+        if (isFolder) {
+            infoDestination.filesFolders.folders.push(fileFolderCopy);
+        }
+        // copy as file
+        else {
+            infoDestination.filesFolders.files.push(fileFolderCopy);
+        }
+    }
+
+    updateDestinationFilesFoldersLocation(fileFolderCopy, infoDestination) {
+        var destinationLocation = `${infoDestination.filesFolders.info.location}${infoDestination.filesFolders.name}/`;
+
+        fileFolderCopy.info.location = destinationLocation;
+
+        this.updateDestinationFilesFoldersCreatedTime(fileFolderCopy);
+    }
+
+    // set current time for new created time when some file or folder is copied or cut
+    updateDestinationFilesFoldersCreatedTime(fileFolderCopy) {
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var day = this.getCurrentDay(currentDate);
+        var date = currentDate.getDate();
+        var time = this.getCurrentTime(currentDate);
+        var month = this.getCurrentMonth(currentDate);
+        var createdTime = `${day}, ${month} ${date}, ${year}, ${time}`;
+
+        fileFolderCopy.info.created = createdTime;
+    }
+
+    getCurrentDay(currentDate) {
+        var dayNumber = currentDate.getDay();
+
+        switch (dayNumber) {
+            case 0: return 'Sunday';
+            case 1: return 'Monday';
+            case 2: return 'Tuesday';
+            case 3: return 'Wednesday';
+            case 4: return 'Thursday';
+            case 5: return 'Friday';
+            case 6: return 'Saturday';
+        }
+    }
+
+    getCurrentMonth(currentDate) {
+        var monthNumber = currentDate.getMonth();
+
+        switch (monthNumber) {
+            case 0: return 'January';
+            case 1: return 'February';
+            case 2: return 'March';
+            case 3: return 'April';
+            case 4: return 'May';
+            case 5: return 'June';
+            case 6: return 'July';
+            case 7: return 'August';
+            case 8: return 'September';
+            case 9: return 'October';
+            case 10: return 'November';
+            case 11: return 'December';
+        }
+    }
+
+    getCurrentTime(currentDate) {
+        var currentHours = currentDate.getHours(), 
+            currentMinutes = currentDate.getMinutes(), 
+            currentSeconds = currentDate.getSeconds();
+
+        // format hours, minutes and seconds to two digit numbers
+        // if it's one digit number add leading zero, otherwise add nothing
+        if (this.isNumberSingleDigit(currentHours) === true) currentHours = `0${currentHours}`;
+        if (this.isNumberSingleDigit(currentMinutes) === true) currentMinutes = `0${currentMinutes}`;
+        if (this.isNumberSingleDigit(currentSeconds) === true) currentSeconds = `0${currentSeconds}`;
+
+        var currentTime = `${currentHours}:${currentMinutes}:${currentSeconds}`;
+
+        return currentTime;
+    }
+
+    isNumberSingleDigit(number) {
+        if ((number >= 0) && (number <= 9)) return true;
+        else if (number > 9) return false;
+        else return -1;
     }
 }

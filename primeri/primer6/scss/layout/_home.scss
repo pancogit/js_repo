@@ -49,6 +49,22 @@
                     color: colors.$files_icon_text_color_dark;
                 }
             }
+
+            // change colors of cut files or folders for dark and night mode
+            .files__link--cut {
+
+                .files__icon--audio {
+                    color: colors.$files_icon_cut_audio_color_dark;
+                }
+    
+                .files__icon--video {
+                    color: colors.$files_icon_cut_video_color_dark;
+                }
+    
+                .files__icon--text {
+                    color: colors.$files_icon_cut_text_color_dark;
+                }
+            }
         }
     }
 

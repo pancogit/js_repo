@@ -10,14 +10,17 @@ export default class Properties {
         this.files = filesObject;
         this.filesLinkClass = 'files__link';
         this.filesLinkSelectedClass = 'files__link--selected';
+        this.filesLinkCutClass = 'files__link--cut';
         this.filesNameClass = 'files__name';
         this.navigationLinkClass = 'navigation__link';
         this.navigationLinkSelectedClass = 'navigation__link--selected';
         this.navigationActiveLinkClass = 'navigation__link--active';
+        this.navigationLinkCutClass = 'navigation__link--cut';
         this.navigationTextClass = 'navigation__text';
         this.homeContentClass = 'home__content';
         this.windowClass = 'properties__window';
         this.windowInputError = 'window__input--error';
+        this.propertiesEntryDisabledClass = 'properties__entry--disabled';
 
         let propertiesObject = this.createPropertiesHTML();
 
@@ -29,7 +32,7 @@ export default class Properties {
         this.overflowFreeSpace = 10;
 
         // some properties for open space, not for files or folders
-        this.smallProperties = this.createSmallPropertiesHTML(propertiesObject);
+        this.smallProperties = this.createSmallPropertiesHTML(propertiesObject.object);
 
         this.navigation = $('.navigation');
         this.homeContent = $(`.${this.homeContentClass}`);
@@ -49,6 +52,35 @@ export default class Properties {
         this.fileFolderCached = 0;
 
         this.size = 0;
+
+        // clipboard for files / folders copy / paste / cut
+        this.clipboard = {
+
+            // save selected file or folder on page or inside navigation
+            selectedFileFolder: {
+                selected: 0,
+
+                // location and name for file / folder for home content files
+                // if navigation folder is clicked don't set anything
+                location: 0,
+                name: 0
+            },
+
+            // save folder where paste is pressed
+            pasteFolder: {
+                selected: 0,
+
+                // location and name for folder for home content files or from navigation
+                location: 0,
+                name: 0
+            },
+
+            // is file or folder cut or not
+            cut: false,
+
+            // when some file or folder is cut or copied, then clipboard is filled
+            isFilled: false
+        }
     }
 
     // hide properties before show on page to get dimension of properties
@@ -85,18 +117,22 @@ export default class Properties {
         var info = this.createEntryRowHTML(null, 'Info');
 
         // add event listeners for individual properties
-        this.addPropertiesListeners(open, info, rename, deleteEntry);
+        this.addPropertiesListeners(open, info, rename, deleteEntry, copy, paste, cut);
 
         properties.append(windowProperty);
         windowProperty.append(open).append(cut).append(copy).append(paste)
             .append(deleteEntry).append(rename).append(info);
 
-        return properties;
+        // return properties object along with paste object
+        return {
+            object: properties,
+            paste: paste
+        }
     }
 
     // add event listeners for individual properties
     // activate events for both left and right click
-    addPropertiesListeners(open, info, rename, deleteEntry) {
+    addPropertiesListeners(open, info, rename, deleteEntry, copy, paste, cut) {
         open.on('click', this.openFileFolder.bind(this));
         open.on('contextmenu', this.openFileFolder.bind(this));
 
@@ -108,6 +144,15 @@ export default class Properties {
 
         deleteEntry.on('click', this.deleteFileFolder.bind(this));
         deleteEntry.on('contextmenu', this.deleteFileFolder.bind(this));
+
+        copy.on('click', this.copyFileFolder.bind(this));
+        copy.on('contextmenu', this.copyFileFolder.bind(this));
+
+        paste.on('click', this.pasteFileFolder.bind(this));
+        paste.on('contextmenu', this.pasteFileFolder.bind(this));
+
+        cut.on('click', this.cutFileFolder.bind(this));
+        cut.on('contextmenu', this.cutFileFolder.bind(this));
     }
 
     createEntryRowHTML(icon, propertyText, hasDivider = false, isEntryDisabled = false, isFlexDivider = false) {
@@ -116,7 +161,7 @@ export default class Properties {
         var right = $('<div>').addClass('properties__right col');
         var text = $('<span>').addClass('properties__text').text(propertyText);
 
-        if (isEntryDisabled) entryRow.addClass('properties__entry--disabled');
+        if (isEntryDisabled) entryRow.addClass(this.propertiesEntryDisabledClass);
         if (hasDivider) right.addClass('properties__right--divider');
         if (isFlexDivider) right.addClass('d-flex justify-content-between align-items-center');
         if (icon) image.append(icon);
@@ -173,7 +218,28 @@ export default class Properties {
         // add entry for create file / folder
         this.addCreateEntry(smallProperties);
 
-        return smallProperties;
+        // save reference to the paste object
+        var paste = this.getPasteObjectFromSmallProperties(smallProperties);
+
+        // return properties object along with paste object
+        return {
+            object: smallProperties,
+            paste: paste
+        }
+    }
+
+    getPasteObjectFromSmallProperties(smallProperties) {
+        var paste;
+        var texts = smallProperties.find('.properties__text');
+
+        for (var i = 0; i < texts.length; i++)
+            // paste reference is found
+            if ($(texts[i]).text() === 'Paste') break;
+
+        paste = $(texts[i]).parent().parent();
+
+        // return reference to paste object from small properties
+        return paste;
     }
 
     // add entry for creating file or folder
@@ -371,21 +437,49 @@ export default class Properties {
         if (closeContext) return;
 
         // calculate coordinates for files / folders properties or for home content properties
-        var coordinates = this.calculateCoordinates(fileFolderClicked ? this.properties :
-            homeContentClicked ? this.smallProperties : 0,
+        var coordinates = this.calculateCoordinates(fileFolderClicked ? this.properties.object :
+            homeContentClicked ? this.smallProperties.object : 0,
             event);
         var x = coordinates.x, y = coordinates.y;
         var properties;
 
-        if (fileFolderClicked) properties = this.properties;
-        else if (homeContentClicked) properties = this.smallProperties;
+        if (fileFolderClicked) properties = this.properties.object;
+        else if (homeContentClicked) properties = this.smallProperties.object;
 
         // x coordinate move property to the left, y coordinate move to the bottom
         properties.css('top', y);
         properties.css('left', x);
 
         // open file / folder properties or home content properties
-        if (fileFolderClicked || homeContentClicked) $(document.body).append(properties);
+        // also enable paste property if clipboard is filled, but don't enable for files
+        // because it's not possible to paste into file
+        // disable paste property if clipboard is not filled or file is selected on page
+        if (fileFolderClicked || homeContentClicked) {
+            if (this.clipboard.isFilled && this.isFolderSelectedOnPage())
+                this.enablePasteProperties();
+            else
+                this.disablePasteProperties();
+
+            $(document.body).append(properties);
+        }
+    }
+
+    // return true if folder is selected on page
+    isFolderSelectedOnPage() {
+        var navigationLinkSelected = $(`.${this.navigationLinkSelectedClass}`);
+
+        // if navigation link is selected, then it's folder for sure
+        if (navigationLinkSelected.length) return true;
+
+        var fileLinkSelected = $(`.${this.filesLinkSelectedClass}`);
+
+        // if current folder on home content is clicked, then it's folder
+        if (!fileLinkSelected.length) return true;
+
+        var icon = $(fileLinkSelected[0].firstChild);
+        var isFolderClicked = icon.hasClass('files__icon--folder');
+
+        return isFolderClicked ? true : false;
     }
 
     // calculate good coordinates for context menu
@@ -420,8 +514,8 @@ export default class Properties {
 
     // close files / folders properties or home content properties
     closeContextMenu(event, deselectFile = true) {
-        this.properties.detach();
-        this.smallProperties.detach();
+        this.properties.object.detach();
+        this.smallProperties.object.detach();
 
         // remove any selected class if exists from home content or from navigation
         if (deselectFile) {
@@ -740,7 +834,7 @@ export default class Properties {
 
         var isFolder = this.fileFolderCached.filesFolders.info.type === 'File folder';
         var folderNavigationLink = this.fileFolderCached.filesFolders.link;
-        
+
         if (isFolder) this.navigationObject.removeFolderFromNavigation(folderNavigationLink);
     }
 
@@ -758,7 +852,7 @@ export default class Properties {
             if (element[i] === this.fileFolderCached.filesFolders) {
                 // move all elements one position left to remove found element
                 for (let j = i, k = i + 1; k < element.length; j++, k++)
-                element[j] = element[k];
+                    element[j] = element[k];
 
                 // remove last element which is duplicated
                 delete element[element.length - 1];
@@ -776,7 +870,7 @@ export default class Properties {
     // when some file or folder is removed or added, then size of current folder and all parent folders
     // up to the home folder must be updated, because size is smaller after deletion / addition
     updateSizeParentFolders(decrement = true) {
-        var path = this.parseCurrentFolderPath(this.fileFolderCached.currentFolder.info.location, 
+        var path = this.parseCurrentFolderPath(this.fileFolderCached.currentFolder.info.location,
                                                this.fileFolderCached.currentFolder.name);
 
         var elementSize = this.fileFolderCached.filesFolders.info.size;
@@ -795,7 +889,7 @@ export default class Properties {
         }
 
         // update size for parent folders in cached folder structure and on page also
-        this.size.updateSizeFolders(path, elementSize, numberOfFilesFolders, 
+        this.size.updateSizeFolders(path, elementSize, numberOfFilesFolders,
                                     this.fileFolderCached.currentFolder, decrement);
     }
 
@@ -806,11 +900,147 @@ export default class Properties {
         var trimmedLocation = currentLocation.slice(1, currentLocation.length - 1);
         var locations = trimmedLocation.split('/');
 
-        for (let i = 0; i < locations.length; i++) 
+        for (let i = 0; i < locations.length; i++)
             if (locations[i] !== '') path.push(locations[i]);
 
         path.push(currentFolder);
 
         return path;
+    }
+
+    copyFileFolder(event) {
+        this.saveClipboardFileFolder(false);
+    }
+
+    cutFileFolder(event) {
+        this.saveClipboardFileFolder(true);
+    }
+
+    // save selected file or folder to the clipboard
+    // if it's cut, then add corresponding cut class for link
+    saveClipboardFileFolder(cut) {
+        var selectedFileFolder = $(`.${this.filesLinkSelectedClass}`);
+        var navigationSelectedFolder = $(`.${this.navigationLinkSelectedClass}`);
+
+        // remove previous cut class if exists
+        // if new element is cut or copy, then previous class is removed
+        // new cut disable previous cut, but new copy disable previous cut / copy
+        this.removeFileFolderCutClass();
+
+        // save selected element on page or inside navigation for copying
+        // also add cut class if file or folder is cut
+        if (selectedFileFolder.length) {
+            this.clipboard.selectedFileFolder.selected = selectedFileFolder;
+
+            if (cut) this.clipboard.selectedFileFolder.selected.addClass(this.filesLinkCutClass);
+        }
+        else if (navigationSelectedFolder.length) {
+            this.clipboard.selectedFileFolder.selected = navigationSelectedFolder;
+
+            if (cut) this.clipboard.selectedFileFolder.selected.addClass(this.navigationLinkCutClass);
+        }
+
+        this.clipboard.cut = cut;
+
+        // after cut or copy clipboard is filled
+        // paste property can be enabled when context menu is opened
+        this.clipboard.isFilled = true;
+    }
+
+    // save where file or folder is paste
+    // paste is always done in folder
+    saveClipboardPasteFolder() {
+        var selectedFileFolder = $(`.${this.filesLinkSelectedClass}`);
+        var navigationSelectedFolder = $(`.${this.navigationLinkSelectedClass}`);
+
+        // save selected element on page where paste is pressed
+        if (selectedFileFolder.length)
+            this.clipboard.pasteFolder.selected = selectedFileFolder;
+        else if (navigationSelectedFolder.length)
+            this.clipboard.pasteFolder.selected = navigationSelectedFolder;
+
+        // it's neither folder from home content or navigation, then current opened folder is paste location
+        else this.clipboard.pasteFolder.selected = 0;
+    }
+
+    // remove previous added cut element class for file / folder
+    removeFileFolderCutClass() {
+        $(`.${this.filesLinkCutClass}`).removeClass(this.filesLinkCutClass);
+        $(`.${this.navigationLinkCutClass}`).removeClass(this.navigationLinkCutClass);
+    }
+
+    // when some file or folder is cut or copied, then enable paste properties for 
+    // main property window and for small property window
+    enablePasteProperties() {
+        this.properties.paste.removeClass(this.propertiesEntryDisabledClass);
+        this.smallProperties.paste.removeClass(this.propertiesEntryDisabledClass);
+    }
+
+    disablePasteProperties() {
+        this.properties.paste.addClass(this.propertiesEntryDisabledClass);
+        this.smallProperties.paste.addClass(this.propertiesEntryDisabledClass);
+    }
+
+    pasteFileFolder(event) {
+        var pasteIsDisabled = $(event.currentTarget).hasClass(this.propertiesEntryDisabledClass);
+
+        // don't do anything if paste is disabled
+        if (pasteIsDisabled) return;
+
+        // in which folder it's paste
+        this.saveClipboardPasteFolder();
+
+        // first set location and name for copied / cut file / folder for home content files
+        // also set location and name for paste folder, because paste is possible only to folder
+        this.setClipboardLocationName();
+
+        this.files.copyFileFolder(this.clipboard);
+
+        // when paste is done for cut, then clipboard is not filled anymore
+        // if it's copy, then another paste can be pressed, etc.
+        if (this.clipboard.cut) {
+            this.clipboard.isFilled = false;
+            this.removeFileFolderCutClass();
+        }
+
+        this.clearClipboardLocationName();
+    }
+
+    clearClipboardLocationName() {
+        this.clipboard.selectedFileFolder.name = 0;
+        this.clipboard.selectedFileFolder.location = 0;
+        this.clipboard.pasteFolder.name = 0;
+        this.clipboard.pasteFolder.location = 0;
+    }
+
+    // if home content file / folder is copied / cut, then set location and name when paste is clicked
+    // also set location and name for paste folder
+    setClipboardLocationName() {
+        this.setClipboardLocationNameByObject(this.clipboard.selectedFileFolder);
+        this.setClipboardLocationNameByObject(this.clipboard.pasteFolder);
+    }
+
+    setClipboardLocationNameByObject(object) {
+        // if current folder is paste folder, then set name of current folder
+        if (!object.selected) {
+            let currentFolder = $('.breadcrumbs__link').last();
+            object.name = currentFolder.length ? currentFolder.text() : 'home';
+
+            return;
+        }
+
+        var filesName = object.selected.find(`.${this.filesNameClass}`);
+        var filesIcon = object.selected.find('.files__icon');
+
+        if (!filesIcon.length) filesIcon = object.selected.find('.files__picture');
+
+        var name = filesName.attr('data-fullname');
+        var location = filesIcon.attr('data-location');
+
+        // if name is not set, then navigation folder is copied / cut and get name from navigation link
+        if (!name) name = object.selected.find('.navigation__text').text();
+
+        object.name = name;
+        object.location = location;
     }
 }

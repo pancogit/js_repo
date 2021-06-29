@@ -86,6 +86,15 @@
                 color: colors.$navigation_text_color;
             }
         }
+
+        // when folder from navigation is cut or active, then change icon color
+        // also when cut folder is hovered, keep the same icon color
+        &--cut, &:hover.navigation__link--cut, &--active.navigation__link--cut, &--active:hover.navigation__link--cut {
+
+            .navigation__icon {
+                color: colors.$navigation_icon_cut_color;
+            }
+        }
     }
 
     &__box {

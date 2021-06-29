@@ -113,6 +113,9 @@ $files_link_medium_width: $files_picture_medium_width +
 $files_link_large_width: $files_picture_large_width + 
                           2 * $files_link_padding_left + 
                           2 * $files_link_border_width;
+$files_image_cut_small_width: 1.5rem;
+$files_image_cut_medium_width: 4rem;
+$files_image_cut_large_width: 8rem;
 
 // preview
 $preview_z_index: 60000;

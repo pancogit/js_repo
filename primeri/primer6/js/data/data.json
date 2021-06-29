@@ -454,7 +454,7 @@
                         "name": "cars",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/galleries/cars",
+                            "path": "/js_repo/primeri/primer6/html/galleries/cars/",
                             "location": "/home/galleries/",
                             "size": {
                                 "value": "3.84",
@@ -471,7 +471,7 @@
                                 "name": "test folder",
                                 "info": {
                                     "type": "File folder",
-                                    "path": "/js_repo/primeri/primer6/html/galleries/test folder",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/cars/test folder/",
                                     "location": "/home/galleries/cars/",
                                     "size": {
                                         "value": "0",
@@ -490,7 +490,7 @@
                                 "name": "another folder",
                                 "info": {
                                     "type": "File folder",
-                                    "path": "/js_repo/primeri/primer6/html/galleries/another folder",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/",
                                     "location": "/home/galleries/cars/",
                                     "size": {
                                         "value": "2.87",
@@ -507,7 +507,7 @@
                                         "name": "folder 1",
                                         "info": {
                                             "type": "File folder",
-                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 1",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/folder 1/",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
                                                 "value": "0",
@@ -526,7 +526,7 @@
                                         "name": "folder 2",
                                         "info": {
                                             "type": "File folder",
-                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 2",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/folder 2/",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
                                                 "value": "0",
@@ -545,7 +545,7 @@
                                         "name": "folder 3",
                                         "info": {
                                             "type": "File folder",
-                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 3",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/folder 3/",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
                                                 "value": "0",
@@ -564,7 +564,7 @@
                                         "name": "folder 4",
                                         "info": {
                                             "type": "File folder",
-                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 4",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/folder 4/",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
                                                 "value": "0",
@@ -583,7 +583,7 @@
                                         "name": "folder 5",
                                         "info": {
                                             "type": "File folder",
-                                            "path": "/js_repo/primeri/primer6/html/galleries/folder 5",
+                                            "path": "/js_repo/primeri/primer6/html/galleries/cars/another folder/folder 5/",
                                             "location": "/home/galleries/cars/another folder/",
                                             "size": {
                                                 "value": "0",
@@ -658,7 +658,7 @@
                                 "name": "something about cars",
                                 "info": {
                                     "type": "File folder",
-                                    "path": "/js_repo/primeri/primer6/html/galleries/something about cars",
+                                    "path": "/js_repo/primeri/primer6/html/galleries/cars/something about cars/",
                                     "location": "/home/galleries/cars/",
                                     "size": {
                                         "value": "0",
@@ -811,7 +811,7 @@
                         "name": "cityscape",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/galleries/cityscape",
+                            "path": "/js_repo/primeri/primer6/html/galleries/cityscape/",
                             "location": "/home/galleries/",
                             "size": {
                                 "value": "1.06",
@@ -1026,7 +1026,7 @@
                         "name": "forests",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/galleries/forests",
+                            "path": "/js_repo/primeri/primer6/html/galleries/forests/",
                             "location": "/home/galleries/",
                             "size": {
                                 "value": "1.11",
@@ -1189,7 +1189,7 @@
                         "name": "hiking",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/galleries/hiking",
+                            "path": "/js_repo/primeri/primer6/html/galleries/hiking/",
                             "location": "/home/galleries/",
                             "size": {
                                 "value": "648",
@@ -1339,7 +1339,7 @@
                         "name": "mountains",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/galleries/mountains",
+                            "path": "/js_repo/primeri/primer6/html/galleries/mountains/",
                             "location": "/home/galleries/",
                             "size": {
                                 "value": "900",
@@ -1522,7 +1522,7 @@
                         "name": "music",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/samples/music",
+                            "path": "/js_repo/primeri/primer6/html/samples/music/",
                             "location": "/home/samples/",
                             "size": {
                                 "value": "5.00",
@@ -1620,7 +1620,7 @@
                         "name": "pictures",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/samples/pictures",
+                            "path": "/js_repo/primeri/primer6/html/samples/pictures/",
                             "location": "/home/samples/",
                             "size": {
                                 "value": "248",
@@ -1705,7 +1705,7 @@
                         "name": "videos",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/samples/videos",
+                            "path": "/js_repo/primeri/primer6/html/samples/videos/",
                             "location": "/home/samples/",
                             "size": {
                                 "value": "7.16",
@@ -1797,7 +1797,7 @@
                         "name": "competency",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/competency",
+                            "path": "/js_repo/primeri/primer6/html/tests/competency/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "9.58",
@@ -2025,7 +2025,7 @@
                         "name": "disc",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/disc",
+                            "path": "/js_repo/primeri/primer6/html/tests/disc/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "3.80",
@@ -2227,7 +2227,7 @@
                         "name": "jung",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/jung",
+                            "path": "/js_repo/primeri/primer6/html/tests/jung/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "7.06",
@@ -2325,7 +2325,7 @@
                         "name": "personality",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/personality",
+                            "path": "/js_repo/primeri/primer6/html/tests/personality/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "9.58",
@@ -2501,7 +2501,7 @@
                         "name": "team-role",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/team-role",
+                            "path": "/js_repo/primeri/primer6/html/tests/team-role/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "1.19",
@@ -2547,7 +2547,7 @@
                         "name": "work-values",
                         "info": {
                             "type": "File folder",
-                            "path": "/js_repo/primeri/primer6/html/tests/work-values",
+                            "path": "/js_repo/primeri/primer6/html/tests/work-values/",
                             "location": "/home/tests/",
                             "size": {
                                 "value": "4.58",

@@ -24,6 +24,7 @@ $navigation_background_color: #303e45;
 $navigation_link_background_color: #191d23;
 $navigation_link_color: white;
 $navigation_icon_color: #1e8650;
+$navigation_icon_cut_color: #54af80;
 $navigation_text_color: #dcdcdc;
 $navigation_close_color: white;
 $navigation_close_color_hover: #dadada;
@@ -81,6 +82,14 @@ $files_icon_video_color_dark: #4b8ab5;
 $files_icon_text_color: #7b7a7a;
 $files_icon_text_color_dark: #949191;
 $files_icon_folder_color: #1e8650;
+$files_icon_cut_audio_color_dark: #f7cc7e;
+$files_icon_cut_video_color_dark: #8dc2e6;
+$files_icon_cut_text_color_dark: #d0d0d0;
+$files_icon_cut_audio_color: #f3c26a;
+$files_icon_cut_video_color: #74b3de;
+$files_icon_cut_text_color: #b3b3b3;
+$files_icon_cut_folder_color: #6bce9b;
+$files_image_cut_background-color: hsl(0deg 0% 100% / 49%);
 
 // preview
 $preview_background_color: black;

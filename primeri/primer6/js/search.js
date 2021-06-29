@@ -152,16 +152,22 @@ export default class Search {
     }
 
     // save current folder from DOM and home size
+    // before removing file or folder from current folder from DOM remove file link cut class
     saveCurrentFolder() {
         this.savedFiles = $(`.${this.filesClass}`);
 
         // get all files boxes from DOM
         var files = this.savedFiles.children();
         var filesArray = [];
+        var file;
 
+        // remove cut class if exists because when search window is opened, 
+        // any cut file or folder should be unmarked
         // detach files boxes from DOM and save each element into array
         for (let i = 0; i < files.length; i++) {
-            $(files[i]).detach();
+            file = $(files[i]);
+            file.find('.files__link').removeClass('files__link--cut');
+            file.detach();
             filesArray.push(files[i]);
         }
 
