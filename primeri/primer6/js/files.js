@@ -789,11 +789,23 @@ export default class Files {
 
         // copy source before moving to the destination because cached reference is used
         // and if it's modified then it will alter original source files or folders
-        var fileFolderCopy = Object.create(infoSource.filesFolders);
-        var fileFolderCopyPrototype = Object.getPrototypeOf(fileFolderCopy);
-        fileFolderCopy = fileFolderCopyPrototype;
+        // convert javascript object to string and then parse string as 
+        // javascript object and new fresh copy is made
+        var fileFolderCopyString = JSON.stringify(infoSource.filesFolders);
+        var fileFolderCopy = JSON.parse(fileFolderCopyString);
 
-        //this.updateDestinationFilesFoldersLocation(fileFolderCopy, infoDestination);
+        // copy destination for first file / folder
+        var destinationLocation = `${infoDestination.filesFolders.info.location}${infoDestination.filesFolders.name}/`;
+        fileFolderCopy.info.location = destinationLocation;
+
+        // if file or folder with the same name exists, then append next free number at the end of the new name
+        this.copyFileFolderNameAlreadyExists(fileFolderCopy, infoDestination);
+
+        // update folder link path if folder is copied / cut
+        // update first root folder
+        if (isFolder) this.updateDestinationFolderPath(fileFolderCopy);
+
+        this.updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder);
 
         // copy as folder
         if (isFolder) {
@@ -805,12 +817,224 @@ export default class Files {
         }
     }
 
-    updateDestinationFilesFoldersLocation(fileFolderCopy, infoDestination) {
-        var destinationLocation = `${infoDestination.filesFolders.info.location}${infoDestination.filesFolders.name}/`;
+    // when some file or folder is copied or cut, then it must be done
+    // but the name or new file or folder can already exist in current folder
+    // if the name already exists, then append first free number at the end of the name
+    copyFileFolderNameAlreadyExists(fileFolderCopy, infoDestination) {
+        var destinationFiles = infoDestination.filesFolders.files;
+        var destinationFolders = infoDestination.filesFolders.folders;
 
-        fileFolderCopy.info.location = destinationLocation;
+        // search in files and folders if the name exists, but only in direct destination folder
+        var filesNamesExists = this.findFilesFoldersCopyDestination(destinationFiles, fileFolderCopy);
+        var folderNamesExists = this.findFilesFoldersCopyDestination(destinationFolders, fileFolderCopy);
 
+        // sort files / folders names by number to for easier search
+        this.sortFilesFoldersNamesByNumber(filesNamesExists, folderNamesExists);
+
+        var nextFreeNumber, fileFolderName, fileFolderNameExists;
+
+        if (filesNamesExists.length) fileFolderNameExists = filesNamesExists;
+        else if (folderNamesExists.length) fileFolderNameExists = folderNamesExists;
+
+        // file or folder with same name is found, rename copied / cut file, append them right number
+        if (filesNamesExists.length || folderNamesExists.length) {
+            fileFolderName = Files.removeFileFolderExtension(fileFolderCopy.name);
+            nextFreeNumber = this.getFilesFoldersNameNextFreeNumber(fileFolderNameExists);
+            fileFolderCopy.name = `${fileFolderName.name} (${nextFreeNumber})${fileFolderName.extension}`;
+        }
+
+        // folders with same name are found, rename copied / cut folder, append them right number
+        // also rename all locations for nested files / folders because name of folder is changed
+        if (folderNamesExists.length) {
+
+        }
+    }
+
+    // find files or folders in current directory with given name and push them into array
+    // names should be the same and can be appended with numbers at the end of the name
+    // if the several names are the same, then they are appended with numbers
+    findFilesFoldersCopyDestination(destinationFilesFolders, fileFolderCopy) {
+        var filesFoldersNamesExists = [];
+        var nameStartsTheSame = false, isFolder = false;
+        var fileFolderNameDestination, fileFolderNameDestinationName, fileFolderNameCopy;
+        var fileExtensionsEqual = false;
+
+        var fileFolderNameCopy = isFolder ? fileFolderCopy.name :
+                    Files.removeFileFolderExtension(fileFolderCopy.name);
+
+        for (let i = 0; i < destinationFilesFolders.length; i++) {
+            isFolder = destinationFilesFolders[i].info.type === 'File folder';
+            fileFolderNameDestination = isFolder ? destinationFilesFolders[i].name :
+                    Files.removeFileFolderExtension(destinationFilesFolders[i].name);
+
+            fileExtensionsEqual = fileFolderNameDestination.extension === fileFolderNameCopy.extension;
+
+            // if it's file, then get name from file name, otherwise it's folder and get name from folder name
+            fileFolderNameDestinationName = fileFolderNameDestination.extension ? 
+                fileFolderNameDestination.name : fileFolderNameDestination;
+
+            // if it's folder of file extension are equal, then try to compare names
+            // name must starts the same
+            if (isFolder || fileExtensionsEqual) {
+                nameStartsTheSame = fileFolderNameDestinationName.startsWith(fileFolderNameCopy.name);
+
+                // destination name contains copy name, but it must be in correct form
+                // if the name is the same or it has number appended on it, then it's correct
+                if (nameStartsTheSame) {
+                    let nameRemainder = fileFolderNameDestinationName.slice(fileFolderNameCopy.name.length);
+
+                    // look if number is appended at the end of destination name (number)
+                    // or if names are the same and then add to the array if it's true
+                    if (nameRemainder.match(/^ \(\d+\)$/) || 
+                       (fileFolderNameDestinationName === fileFolderNameCopy.name)) {
+                        // extract number before push into array
+                        // if names are the same, then put empty string for number
+                        let number = nameRemainder.split('(');
+                        number = number[1] ? number[1].slice(0, number[1].length - 1) : '';
+
+                        filesFoldersNamesExists.push({
+                            number: number,
+                            name: destinationFilesFolders[i].name
+                        });
+                    }
+                }
+            }
+        }
+
+        return filesFoldersNamesExists;
+    }
+
+    // sort files / folders names by number with array sort function
+    sortFilesFoldersNamesByNumber(filesNamesExists, folderNamesExists) {
+
+        // use inline array sorting via built-in js function
+        // also bind this pointer to the js compare function to not lose this pointer
+        filesNamesExists.sort((function compareFunctionFiles(a, b) {
+            return this.sortFilesFoldersNamesCompare(a, b);
+        }).bind(this));
+
+        folderNamesExists.sort((function compareFunctionFiles(a, b) {
+            return this.sortFilesFoldersNamesCompare(a, b);
+        }).bind(this));
+    }
+
+    // when file or folder is copied or cut, then the name can already exists
+    // in that situation, get next free number to append at the end of file or folder name
+    getFilesFoldersNameNextFreeNumber(filesFoldersNames) {
+        var number, oldNumber, nextFreeNumber = 1, missedNumberFound = false;
+
+        if (filesFoldersNames.length)
+            oldNumber = this.parseFilesFoldersNamesNumber(filesFoldersNames[0].number);
+
+        // loop through array and find first next free number
+        for (var i = 0; i < filesFoldersNames.length; i++) {
+            number = this.parseFilesFoldersNamesNumber(filesFoldersNames[i].number);
+
+            // then it's hole in sequence of numbers, return new number
+            if (number > oldNumber + 1) {
+                nextFreeNumber = oldNumber + 1;
+                missedNumberFound = true;
+                break;
+            }
+
+            oldNumber = number;
+        }
+
+        // increment last number if hole in number sequence doesn't exists
+        // othewise return missed number in number sequence
+        if (missedNumberFound && (oldNumber === number)) nextFreeNumber++;
+        else nextFreeNumber = oldNumber + 1;
+
+        return nextFreeNumber;
+    }
+
+    // compare function for sorting js arrays with files / folders names
+    sortFilesFoldersNamesCompare(a, b) {
+        var firstNumber = this.parseFilesFoldersNamesNumber(a.number);
+        var secondNumber = this.parseFilesFoldersNamesNumber(b.number);
+
+        return firstNumber - secondNumber;
+    }
+
+    parseFilesFoldersNamesNumber(fileFolderNumber) {
+        if (fileFolderNumber === '') return 0;
+        else return parseInt(fileFolderNumber); 
+    }
+
+    updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder) {
+        
         this.updateDestinationFilesFoldersCreatedTime(fileFolderCopy);
+
+        // update files / folders locations if folder is copied / cut
+        if (isFolder) {
+            let concatenatedLocation = 0;
+
+            // update files location first
+            fileFolderCopy.files.forEach(function iterate(value, index, array) {
+                // concatenate location only once
+                if (!concatenatedLocation) 
+                    concatenatedLocation = this.concatenateSourceToDestinationLocation(value.info.location, destinationLocation)
+                value.info.location = concatenatedLocation;
+    
+                this.updateDestinationFilesFoldersCreatedTime(value);
+            }, this);
+    
+            concatenatedLocation = 0;
+
+            // update folders location recursively if it's not single file
+            // also update folder link path just for folders, because it's used when folder is clicked to 
+            // find which folder link is clicked and that link path must be unique for each folder
+            fileFolderCopy.folders.forEach(function iterate(value, index, array) {
+                if (!concatenatedLocation) 
+                    concatenatedLocation = this.concatenateSourceToDestinationLocation(value.info.location, destinationLocation);
+                value.info.location = concatenatedLocation;
+
+                // update folder link path for destination folder
+                this.updateDestinationFolderPath(value);
+    
+                this.updateDestinationFilesFoldersCreatedTime(value);
+                this.updateDestinationFilesFoldersLocation(value, destinationLocation, isFolder);
+            }, this);
+        }
+    }
+
+    // returns merged location from destination and source location
+    // append source location different parts to destination location
+    concatenateSourceToDestinationLocation(sourceLocation, destinationLocation) {
+        // split location into individual tokens and remove first and last backslash before that
+        var sourceArray = (sourceLocation.slice(1, sourceLocation.length - 1)).split('/');
+        var destinationArray = (destinationLocation.slice(1, destinationLocation.length - 1)).split('/');
+        var arrayMinLength = sourceArray.length >= destinationArray.length ? 
+            sourceArray.length : destinationArray.length;
+
+        // find first part of tokens which are the same
+        for (var i = 0; i < arrayMinLength; i++)
+            if (sourceArray[i] !== destinationArray[i]) break;
+
+        // append source location parts which are different to the destination
+        for (; i < sourceArray.length; i++) destinationArray.push(sourceArray[i]);
+
+        var mergedLocation = '/';
+
+        // merge all locations from new destination into single string
+        for (i = 0; i < destinationArray.length; i++) 
+            mergedLocation += `${destinationArray[i]}/`;
+
+        return mergedLocation;
+    }
+
+    // each folder must have unique folder link path url and that path must be 
+    // updated when location is changed
+    updateDestinationFolderPath(value) {
+        var location = value.info.location;
+        var pathHome = "js_repo/primeri/primer6/html";
+        var name = value.name + '/';
+
+        // slice location to remove home folder
+        var locationWithoutHome = location.slice(5);
+        
+        // set new folder link path which is unique (because location is unique)
+        value.info.path = this.formatURL(pathHome + locationWithoutHome + name);
     }
 
     // set current time for new created time when some file or folder is copied or cut

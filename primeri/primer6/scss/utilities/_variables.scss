@@ -132,6 +132,11 @@ $preview_media_margin_hover: 0 0.1rem;
 $preview_picture_max_width: 100%;
 $preview_picture_min_width: 5rem;
 
+// page-load
+$page_load_z_index: 80000;
+$page_load_icon_font_size: 3rem;
+$page_load_icon_animation_duration: 3s;
+
 // header
 $header_border_width: 0.1rem;
 $header_icon_font_size: 1.1rem;

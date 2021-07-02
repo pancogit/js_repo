@@ -7,11 +7,13 @@ import Breadcrumbs from './breadcrumbs.js';
 import Header from './header.js';
 import Search from './search.js';
 import Properties from './properties.js';
+import PageLoad from './page-load.js';
 
 class Home {
     
     constructor() {
         this.fetch = new Fetch('../js/data/data.json');
+        this.pageLoadWindow = new PageLoad();
         this.navigation = 0;
         this.hamburger = 0;
         this.breadcrumbs = 0;
@@ -21,7 +23,11 @@ class Home {
     }
 
     fetchData() {
-        this.fetch.getDataFromServer().then(this.fetchWithSuccess.bind(this));
+        // first get data from server, then close loading process window and 
+        // finally create javascript objects
+        this.fetch.getDataFromServer()
+            .then(this.closePageLoadWindow.bind(this))
+            .then(this.fetchWithSuccess.bind(this));
     }
 
     // if data is fetched from server successfuly, then continue
@@ -50,6 +56,27 @@ class Home {
         this.search.files = this.navigation.files;
         this.search.size = this.navigation.size;
         this.properties.size = this.navigation.size;
+    }
+
+    // when data is fetched from server close window for page loading because
+    // at that moment everything is ready for work
+    closePageLoadWindow() {
+
+        // when server data is fetched, then return resolved promise after some time
+        // to simulate loading process
+        return new Promise((function executor(resolve, reject) {
+            setTimeout((function closePageLoad() {
+                this.pageLoadWindow.removeFromPage();
+
+                // resolve promise with given string
+                resolve('Page load window is closed successfully');
+
+            // bind this pointer to not get window object as this pointer to 
+            // asynchronous timeout function
+            }).bind(this), this.pageLoadWindow.waitTime);
+
+        // bind this pointer to not lose them into promise executor function
+        }).bind(this));
     }
 }
 
