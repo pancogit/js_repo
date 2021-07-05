@@ -212,4 +212,8 @@ export default class Breadcrumbs {
 
         return currentPath;
     }
+
+    getCurrentCachedFolder() {
+        return this.currentCachedFolder;
+    }
 }

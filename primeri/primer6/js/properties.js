@@ -869,9 +869,10 @@ export default class Properties {
 
     // when some file or folder is removed or added, then size of current folder and all parent folders
     // up to the home folder must be updated, because size is smaller after deletion / addition
-    updateSizeParentFolders(decrement = true) {
-        var path = this.parseCurrentFolderPath(this.fileFolderCached.currentFolder.info.location,
-                                               this.fileFolderCached.currentFolder.name);
+    updateSizeParentFolders(decrement = true, destinationFolderCached = 0) {
+        var destinationFolder = destinationFolderCached ? 
+            destinationFolderCached.filesFolders : this.fileFolderCached.currentFolder;
+        var path = this.parseCurrentFolderPath(destinationFolder.info.location, destinationFolder.name);
 
         var elementSize = this.fileFolderCached.filesFolders.info.size;
         var isFolder = this.fileFolderCached.filesFolders.info.type === 'File folder';
@@ -884,13 +885,13 @@ export default class Properties {
 
         // if folder is selected, then increment number of folders for that folder
         if (isFolder) {
-            numberOfFilesFolders = this.fileFolderCached.filesFolders.contains;
-            numberOfFilesFolders.folders = (parseInt(numberOfFilesFolders.folders) + 1).toString();
+            let fileFolderContains = this.fileFolderCached.filesFolders.contains;
+            numberOfFilesFolders.files = fileFolderContains.files;
+            numberOfFilesFolders.folders = (parseInt(fileFolderContains.folders) + 1).toString();
         }
 
         // update size for parent folders in cached folder structure and on page also
-        this.size.updateSizeFolders(path, elementSize, numberOfFilesFolders,
-                                    this.fileFolderCached.currentFolder, decrement);
+        this.size.updateSizeFolders(path, elementSize, numberOfFilesFolders, decrement);
     }
 
     // form strings for current folder path

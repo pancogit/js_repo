@@ -3,8 +3,9 @@
 
 export default class Size {
 
-    constructor(data) {
+    constructor(data, breadcrumbsObject) {
         this.serverData = data;
+        this.breadcrumbs = breadcrumbsObject;
         this.size = $('.home__size');
 
         // when some file / folder is removed / added, then update size and number of elements
@@ -57,7 +58,7 @@ export default class Size {
     // update size for parent folders in cached folder structure and on page also
     // also update number of files and folders on folder path
     // sizes and numbers can be incremented or decremented
-    updateSizeFolders(currentFolderPath, elementSize, numberOfFilesFolders, currentFolderCached, decrement = true) {
+    updateSizeFolders(currentFolderPath, elementSize, numberOfFilesFolders, decrement = true) {
         this.currentFolderPath = currentFolderPath;
         this.elementSize = elementSize;
         this.numberOfFilesFolders = numberOfFilesFolders;
@@ -71,6 +72,8 @@ export default class Size {
         if (!onlyHomeFolder)
             // search through server data and update size and number of elements for folders
             this.updateSizeFoldersRecursively(this.serverData.home, currentFolderIndex);
+
+        var currentFolderCached = this.breadcrumbs.getCurrentCachedFolder();
 
         // update current folder size on page
         this.updateOnPage(currentFolderCached);

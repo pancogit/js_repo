@@ -56,6 +56,7 @@ class Home {
         this.search.files = this.navigation.files;
         this.search.size = this.navigation.size;
         this.properties.size = this.navigation.size;
+        this.navigation.files.properties = this.properties;
     }
 
     // when data is fetched from server close window for page loading because

@@ -18,6 +18,9 @@ export default class Files {
         this.filesIconVideoClass = 'files__icon--video';
         this.filesIconFolderClass = 'files__icon--folder';
         this.filesLinkClass = 'files__link';
+        this.filesLinkSelectedClass = 'files__link--selected';
+        this.navigationLinkSelectedClass = 'navigation__link--selected';
+        this.navigationLinkActiveClass = 'navigation__link--active';
 
         this.filesLargeClass = 'files--large';
         this.filesMediumClass = 'files--medium';
@@ -69,6 +72,8 @@ export default class Files {
 
         this.filePreview = new Preview();
         this.filePreview.files = this;
+
+        this.properties = 0;
     }
 
     // add folders and files on page from cached folder object
@@ -737,8 +742,8 @@ export default class Files {
         var icon, location, fileFolderIsChildren, box;
 
         for (let i = 0; i < names.length; i++) {
-            icon = $(names[i]).prev();
-            location = icon.attr(this.dataLocationAttr);
+            icon = $(names[i]).parent()[0].firstChild;
+            location = $(icon).attr(this.dataLocationAttr);
             fileFolderIsChildren = Files.stringBeginsWith(location, folderLocation);
 
             // descendant is found, remove them from search results
@@ -782,6 +787,72 @@ export default class Files {
                                                                          clipboard.pasteFolder.name);
 
         this.copyFileFolderToDestination(clipboard, infoSource, infoDestination);
+
+        // increment number of files / folders for parent folders after copying
+        // also update parent folders size in bytes
+        this.incrementSizeNumberOfFilesFoldersAfterCopy(infoSource, infoDestination);
+
+        // if copy location is the current opened folder, then refresh current page with files and folders
+        this.refreshCurrentPageAfterCopy();
+    }
+
+    incrementSizeNumberOfFilesFoldersAfterCopy(infoSource, infoDestination) {
+        this.properties.fileFolderCached = infoSource;
+        this.properties.updateSizeParentFolders(false, infoDestination);
+        this.properties.fileFolderCached = 0;
+    }
+
+    // when file or folder is copied / cut inside current folder, then refresh current folder
+    // with files and folders by clicking twice on navigation link for current folder
+    // if it's not the current folder, then do nothing
+    refreshCurrentPageAfterCopy() {
+        var currentFolderPath = this.breadcrumbs.getCurrentPath();
+        var activeNavigationLink = $(`.${this.navigationLinkActiveClass}`);
+        var activeSelectedLinkPath = '';
+        var filesLinkSelected = $(`.${this.filesLinkSelectedClass}`);
+        var navigationLinkSelected = $(`.${this.navigationLinkSelectedClass}`);
+
+        // it's selected file or folder from home content
+        if (filesLinkSelected.length)
+            activeSelectedLinkPath = this.getActiveSelectedLinkPath(filesLinkSelected);
+
+        // it's selected folder from navigation
+        else if (navigationLinkSelected.length)
+            activeSelectedLinkPath = this.getActiveSelectedLinkPath(navigationLinkSelected);
+
+        // it's active folder from navigation
+        else if (activeNavigationLink.length)
+            activeSelectedLinkPath = this.getActiveSelectedLinkPath(activeNavigationLink);
+        
+        // insert home folder string at the beginning of navigation link path
+        activeSelectedLinkPath = `/home/${activeSelectedLinkPath}`;
+
+        // if it's current folder, then refresh page by clickin twice on navigation link
+        // create event object with current target for navigation link and call event handler
+        if (currentFolderPath === activeSelectedLinkPath) {
+            let eventObject = {
+                currentTarget: activeNavigationLink[0],
+                preventDefault: function preventDefault() {}
+            }
+
+            // empty breadcrumbs and restore homepage if home is current folder for copy / cut
+            if (currentFolderPath === '/home/') this.breadcrumbs.emptyBreadcrumbs(eventObject);
+            else {
+                this.navigation.folderIsClicked(eventObject, true);
+                this.navigation.folderIsClicked(eventObject, true);
+            }
+        }
+    }
+
+    getActiveSelectedLinkPath(activeSelectedLink) {
+        var rootURLLength = '/js_repo/primeri/primer6/html/'.length;
+        var activeSelectedLinkPath;
+        var activeSelectedLinkURL = activeSelectedLink.attr('href');
+
+        activeSelectedLinkURL = this.reverseURL(activeSelectedLinkURL);
+        activeSelectedLinkPath = activeSelectedLinkURL.slice(rootURLLength);
+
+        return activeSelectedLinkPath;
     }
 
     copyFileFolderToDestination(clipboard, infoSource, infoDestination) {
@@ -844,10 +915,9 @@ export default class Files {
         }
 
         // folders with same name are found, rename copied / cut folder, append them right number
-        // also rename all locations for nested files / folders because name of folder is changed
-        if (folderNamesExists.length) {
-
-        }
+        // also update names for all nested files / folders because name of copied / cut folder is changed
+        if (folderNamesExists.length) 
+            this.updateNestedFilesFoldersCopyNames(fileFolderCopy, fileFolderName.name);
     }
 
     // find files or folders in current directory with given name and push them into array
@@ -860,7 +930,7 @@ export default class Files {
         var fileExtensionsEqual = false;
 
         var fileFolderNameCopy = isFolder ? fileFolderCopy.name :
-                    Files.removeFileFolderExtension(fileFolderCopy.name);
+            Files.removeFileFolderExtension(fileFolderCopy.name);
 
         for (let i = 0; i < destinationFilesFolders.length; i++) {
             isFolder = destinationFilesFolders[i].info.type === 'File folder';
@@ -948,6 +1018,61 @@ export default class Files {
         return nextFreeNumber;
     }
 
+    // when some folder is renamed and appended with number because there is another folder
+    // with the same name, then all locations for nested files / folders should be changed
+    // for new folder name
+    updateNestedFilesFoldersCopyNames(fileFolderCopy, oldFolderName) {
+        var location;
+
+        if (fileFolderCopy.files[0]) location = fileFolderCopy.files[0].info.location;
+        else if (fileFolderCopy.folders[0]) location = fileFolderCopy.folders[0].info.location;
+        else return;
+
+        // replace new folder name with old one
+        var locationSliced = location.slice(1, location.length - 1);
+        var locationSplitted = locationSliced.split('/');
+        locationSplitted[locationSplitted.length - 1] = fileFolderCopy.name;
+
+        var newLocation = '/';
+
+        // form new location with new folder name
+        for (let i = 0; i < locationSplitted.length; i++) newLocation += `${locationSplitted[i]}/`;
+
+        // replace old location with new location for all nested files and folders
+        // in that way, new folder name with appended number will be updated for nested files and folders
+        this.updateNestedFilesFoldersCopyNamesRecursively(fileFolderCopy, newLocation, location);
+    }
+
+    updateNestedFilesFoldersCopyNamesRecursively(fileFolderCopy, newLocation, oldLocation) {
+        // update nested files locations names
+        for (let i = 0; i < fileFolderCopy.files.length; i++)
+            fileFolderCopy.files[i].info.location = 
+                this.replaceFileFolderCopyLocation(fileFolderCopy.files[i].info.location, newLocation, oldLocation);
+
+        // update nested folders locations names
+        for (let i = 0; i < fileFolderCopy.folders.length; i++) {
+            fileFolderCopy.folders[i].info.location = 
+                this.replaceFileFolderCopyLocation(fileFolderCopy.folders[i].info.location, newLocation, oldLocation);
+            this.updateNestedFilesFoldersCopyNamesRecursively(fileFolderCopy.folders[i], newLocation, oldLocation);
+        }
+    }
+
+    // replace old location with new location in cached location
+    replaceFileFolderCopyLocation(cachedLocation, newLocation, oldLocation) {
+        var oldNumberOfTokens = oldLocation.slice(1, oldLocation.length - 1).split('/').length;
+        var newTokens = newLocation.slice(1, newLocation.length - 1).split('/');
+        var cachedTokens = cachedLocation.slice(1, cachedLocation.length - 1).split('/');
+        var newCachedLocation = '/';
+
+        // replace N old tokens with N new tokens inside cached tokens locations
+        for (let i = 0; i < oldNumberOfTokens; i++) cachedTokens[i] = newTokens[i];
+
+        // form new cached location with updated cached tokens
+        for (let i = 0; i < cachedTokens.length; i++) newCachedLocation += `${cachedTokens[i]}/`;
+
+        return newCachedLocation;
+    }
+
     // compare function for sorting js arrays with files / folders names
     sortFilesFoldersNamesCompare(a, b) {
         var firstNumber = this.parseFilesFoldersNamesNumber(a.number);
@@ -957,8 +1082,13 @@ export default class Files {
     }
 
     parseFilesFoldersNamesNumber(fileFolderNumber) {
-        if (fileFolderNumber === '') return 0;
-        else return parseInt(fileFolderNumber); 
+        // if it's number, then first digit must not be zero, 
+        // and other digits can be any of them or not exists at all
+        if (fileFolderNumber.match(/^[1-9]\d*$/)) 
+            return parseInt(fileFolderNumber);
+
+        // otherwise return 0
+        else return 0;
     }
 
     updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder) {

@@ -25,7 +25,7 @@ export default class Navigation {
         this.navigation = 0;
         this.currentActiveLink = 0;
 
-        this.size = new Size(data);
+        this.size = new Size(data, breadcrumbsObject);
         this.files = new Files(breadcrumbsObject, searchObject, this);
         this.header = 0;
     }
@@ -152,15 +152,16 @@ export default class Navigation {
         else folderElement.addClass('fas fa-folder');
     }
 
-    folderIsClicked(event) {
+    folderIsClicked(event, refreshCurrentFolder = false) {
         event.preventDefault();
 
         var linkObject = event.currentTarget;
 
         this.expandHideFolders(linkObject);
 
-        // don't do anything if the same link is clicked
-        if (this.currentActiveLink[0] === linkObject) return;
+        // don't do anything if the same link is clicked and if current folder is not refreshing
+        var sameLinkClicked = this.currentActiveLink[0] === linkObject;
+        if (sameLinkClicked && !refreshCurrentFolder) return;
 
         // reverse URL to original one string before tree searching
         var linkString = this.files.reverseURL(linkObject.pathname);
@@ -174,8 +175,11 @@ export default class Navigation {
         this.files.sortFolder(true);
 
         // update active link and add folder path for breadcrumbs menu
-        this.updateActiveLink(linkObject);
-        this.breadcrumbs.setFolderPath();
+        // do nothing if current folder is refreshing due to copy / cut file / folder
+        if (!refreshCurrentFolder) {
+            this.updateActiveLink(linkObject);
+            this.breadcrumbs.setFolderPath();
+        }
 
         // when any folder is clicked, then set default icon for sorting to skip 
         // sorting already sorted folder
