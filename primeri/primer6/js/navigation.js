@@ -37,8 +37,10 @@ export default class Navigation {
             this.closeFolders();
 
             // remove active link
-            this.currentActiveLink.removeClass(this.navigationActiveLinkClass);
-            this.currentActiveLink[0] = 0;
+            if (this.currentActiveLink) {
+                this.currentActiveLink.removeClass(this.navigationActiveLinkClass);
+                this.currentActiveLink[0] = 0;
+            }
         }
         else {
             this.removeStaticData();
@@ -545,5 +547,126 @@ export default class Navigation {
         expand.remove();
 
         icon.removeClass(`${this.folderPlusClass} ${this.folderMinusClass}`).addClass('fa-folder');
+    }
+
+    // if folder is copied or cut, then add them to navigation
+    createFolder(infoSource, infoDestination, fileFolderCopy) {
+        var isFolder = infoSource.filesFolders.info.type === 'File folder';
+
+        if (!isFolder) return;
+
+        // set destination link for home folder or for other folders
+        var isHomeFolder = infoDestination.filesFolders.name === 'home';
+        var destinationLink = isHomeFolder ? $('.navigation__exit') : infoDestination.filesFolders.link;
+
+        this.createFolderRecursively(infoSource, fileFolderCopy, destinationLink);
+
+        this.sortDestinationFolder(destinationLink);
+    }
+
+    createFolderRecursively(infoSource, fileFolderCopy, destinationLink) {
+        var submenu = $(destinationLink).next();
+        var newDestinationLink;
+
+        // there are no folders inside destination folder, create submenu, add icons and folder
+        if (!submenu.length) {
+            let folderSubmenu = this.createFolderSubmenu(fileFolderCopy);
+            this.createFolderPlusIcon(destinationLink);
+
+            // insert submenu for nested folders into navigation
+            $(destinationLink).after(folderSubmenu);
+
+            newDestinationLink = folderSubmenu.find('.navigation__link');
+        }
+        // destination folder is not empty, insert another folder
+        else {
+            let folder = this.createFolderListItem(fileFolderCopy);
+            submenu.append(folder);
+
+            newDestinationLink = folder.find('.navigation__link');
+        }
+
+        // loop through folders and create nested folders inside navigation if they exists
+        // use recursion for tree structure iteration
+        for (let i = 0; i < fileFolderCopy.folders.length; i++)
+            this.createFolderRecursively(infoSource, fileFolderCopy.folders[i], newDestinationLink);
+    }
+
+    createFolderSubmenu(fileFolderCopy) {
+        var submenu = $('<ul>').addClass(this.navigationSubmenuClass);
+        var listItem = this.createFolderListItem(fileFolderCopy);
+
+        submenu.append(listItem);
+
+        return submenu;
+    }
+
+    // add plus icon next to the destination link in navigation
+    createFolderPlusIcon(destinationLink) {
+        var link = $(destinationLink);
+        var box = link.find('.navigation__box');
+        var icon = link.find('.navigation__icon');
+        var expand = $('<span>').addClass('navigation__expand col-auto');
+        var sign = $('<i>').addClass('fas navigation__sign fa-plus');
+
+        // add plus to the icon
+        icon.removeClass('fa-folder').removeClass('fa-folder-minus').addClass('fa-folder-plus');
+
+        // add right icon to the link box
+        expand.append(sign);
+        box.append(expand);
+    }
+
+    // insert one folder into existing submenu folder navigation structure
+    createFolderListItem(fileFolderCopy) {
+        var listItem = $('<li>').addClass('navigation__item');
+        var link = $('<a>').addClass('navigation__link').attr('href', fileFolderCopy.info.path);
+        var box = $('<div>').addClass('navigation__box d-flex align-items-center flex-nowrap');
+        var icon = $('<i>').addClass('navigation__icon col-auto fas fa-folder');
+        var text = $('<spa>').addClass('navigation__text col').text(fileFolderCopy.name);
+
+        // save created link to the cached folder for navigation
+        fileFolderCopy.link = link[0];
+
+        // add event listener for link
+        $(link).on('click', this.folderIsClicked.bind(this));
+
+        listItem.append(link);
+        link.append(box);
+        box.append(icon).append(text);
+
+        return listItem;
+    }
+
+    // when some folder is copied / cut or created, then destination folder 
+    // where new folder is created in navigation must be sorted
+    sortDestinationFolder(destinationLink) {
+        var destinationFolder = $(destinationLink).next();
+        var subfolders = destinationFolder.children();
+        var subfoldersArray = [];
+
+        // insert all folders into array for easier sorting
+        for (let i = 0; i < subfolders.length; i++) subfoldersArray.push(subfolders[i]);
+
+        // sort folders with built-in js sort function using compare handler as argument
+        subfoldersArray.sort(this.sortSubfolders);
+
+        // just detach folders from page
+        subfolders.detach();
+
+        // insert new sorted folders into page
+        for (let i = 0; i < subfoldersArray.length; i++) 
+            destinationFolder.append(subfoldersArray[i]);
+    }
+
+    // compare function for sorting destination folders in navigation
+    sortSubfolders(a, b) {
+        var textFirst, textSecond;
+
+        textFirst = $(a).find('.navigation__link .navigation__text').text();
+        textSecond = $(b).find('.navigation__link .navigation__text').text();
+
+        if (textFirst === textSecond) return 0;
+        else return (textFirst > textSecond) ? 1 : -1;
     }
 }

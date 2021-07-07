@@ -786,7 +786,7 @@ export default class Files {
                                                                          clipboard.pasteFolder.location, pathDestination, 
                                                                          clipboard.pasteFolder.name);
 
-        this.copyFileFolderToDestination(clipboard, infoSource, infoDestination);
+        var fileFolderCopy = this.copyFileFolderToDestination(clipboard, infoSource, infoDestination);
 
         // increment number of files / folders for parent folders after copying
         // also update parent folders size in bytes
@@ -794,6 +794,9 @@ export default class Files {
 
         // if copy location is the current opened folder, then refresh current page with files and folders
         this.refreshCurrentPageAfterCopy();
+
+        // if folder is copied or cut, then add them to navigation
+        this.navigation.createFolder(infoSource, infoDestination, fileFolderCopy);
     }
 
     incrementSizeNumberOfFilesFoldersAfterCopy(infoSource, infoDestination) {
@@ -879,13 +882,13 @@ export default class Files {
         this.updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder);
 
         // copy as folder
-        if (isFolder) {
-            infoDestination.filesFolders.folders.push(fileFolderCopy);
-        }
+        if (isFolder) infoDestination.filesFolders.folders.push(fileFolderCopy);
+
         // copy as file
-        else {
-            infoDestination.filesFolders.files.push(fileFolderCopy);
-        }
+        else infoDestination.filesFolders.files.push(fileFolderCopy);
+
+        // return copied file / folder
+        return fileFolderCopy;
     }
 
     // when some file or folder is copied or cut, then it must be done
@@ -1157,14 +1160,14 @@ export default class Files {
     // updated when location is changed
     updateDestinationFolderPath(value) {
         var location = value.info.location;
-        var pathHome = "js_repo/primeri/primer6/html";
+        var pathHome = "/js_repo/primeri/primer6/html";
         var name = value.name + '/';
 
         // slice location to remove home folder
         var locationWithoutHome = location.slice(5);
         
         // set new folder link path which is unique (because location is unique)
-        value.info.path = this.formatURL(pathHome + locationWithoutHome + name);
+        value.info.path = pathHome + locationWithoutHome + name;
     }
 
     // set current time for new created time when some file or folder is copied or cut
