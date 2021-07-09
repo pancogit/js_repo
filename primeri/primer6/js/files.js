@@ -786,6 +786,16 @@ export default class Files {
                                                                          clipboard.pasteFolder.location, pathDestination, 
                                                                          clipboard.pasteFolder.name);
 
+        // if destination folder is subfolder of source folder, then it cannot be copied
+        // some folder cannot be copied inside yourself or inside own subfolder
+        if (this.destinationSubfolderSource(infoDestination.filesFolders, infoSource.filesFolders)) {
+            this.properties.printDestinationError();
+            return;
+        }
+
+        // if it's cut, then delete file / folder before paste another one
+        if (clipboard.cut) this.cutFileFolder(infoSource);
+
         var fileFolderCopy = this.copyFileFolderToDestination(clipboard, infoSource, infoDestination);
 
         // increment number of files / folders for parent folders after copying
@@ -793,7 +803,9 @@ export default class Files {
         this.incrementSizeNumberOfFilesFoldersAfterCopy(infoSource, infoDestination);
 
         // if copy location is the current opened folder, then refresh current page with files and folders
+        // also refresh search results if they exists on page
         this.refreshCurrentPageAfterCopy();
+        this.refreshSearchResultsAfterCopy();
 
         // if folder is copied or cut, then add them to navigation
         this.navigation.createFolder(infoSource, infoDestination, fileFolderCopy);
@@ -847,6 +859,14 @@ export default class Files {
         }
     }
 
+    refreshSearchResultsAfterCopy() {
+        var searchResultsOnPage = $('.matches__text').length;
+
+        // if there are search results, then search again with the same string to
+        // refresh search results after copy file / folder
+        if (searchResultsOnPage) this.search.textBoxTyping();
+    }
+
     getActiveSelectedLinkPath(activeSelectedLink) {
         var rootURLLength = '/js_repo/primeri/primer6/html/'.length;
         var activeSelectedLinkPath;
@@ -879,7 +899,7 @@ export default class Files {
         // update first root folder
         if (isFolder) this.updateDestinationFolderPath(fileFolderCopy);
 
-        this.updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder);
+        this.updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder, clipboard.cut);
 
         // copy as folder
         if (isFolder) infoDestination.filesFolders.folders.push(fileFolderCopy);
@@ -914,7 +934,8 @@ export default class Files {
         if (filesNamesExists.length || folderNamesExists.length) {
             fileFolderName = Files.removeFileFolderExtension(fileFolderCopy.name);
             nextFreeNumber = this.getFilesFoldersNameNextFreeNumber(fileFolderNameExists);
-            fileFolderCopy.name = `${fileFolderName.name} (${nextFreeNumber})${fileFolderName.extension}`;
+            fileFolderCopy.name = !nextFreeNumber ? `${fileFolderName.name}${fileFolderName.extension}` : 
+                `${fileFolderName.name} (${nextFreeNumber})${fileFolderName.extension}`;
         }
 
         // folders with same name are found, rename copied / cut folder, append them right number
@@ -995,6 +1016,7 @@ export default class Files {
     // in that situation, get next free number to append at the end of file or folder name
     getFilesFoldersNameNextFreeNumber(filesFoldersNames) {
         var number, oldNumber, nextFreeNumber = 1, missedNumberFound = false;
+        var nameWithoutNumberFound = false;
 
         if (filesFoldersNames.length)
             oldNumber = this.parseFilesFoldersNamesNumber(filesFoldersNames[0].number);
@@ -1002,6 +1024,8 @@ export default class Files {
         // loop through array and find first next free number
         for (var i = 0; i < filesFoldersNames.length; i++) {
             number = this.parseFilesFoldersNamesNumber(filesFoldersNames[i].number);
+
+            if (!number) nameWithoutNumberFound = true;
 
             // then it's hole in sequence of numbers, return new number
             if (number > oldNumber + 1) {
@@ -1013,9 +1037,14 @@ export default class Files {
             oldNumber = number;
         }
 
+        // if there are just names with numbers appended to it, then name can be created
+        // without any number appended and if it's true then return 0
+        if (!nameWithoutNumberFound) nextFreeNumber = 0;
+
         // increment last number if hole in number sequence doesn't exists
+        else if (missedNumberFound && (oldNumber === number)) nextFreeNumber++;
+
         // othewise return missed number in number sequence
-        if (missedNumberFound && (oldNumber === number)) nextFreeNumber++;
         else nextFreeNumber = oldNumber + 1;
 
         return nextFreeNumber;
@@ -1094,9 +1123,10 @@ export default class Files {
         else return 0;
     }
 
-    updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder) {
+    updateDestinationFilesFoldersLocation(fileFolderCopy, destinationLocation, isFolder, isCut) {
         
-        this.updateDestinationFilesFoldersCreatedTime(fileFolderCopy);
+        // update created time only if it's copy file / folder, don't do for cut
+        if (!isCut) this.updateDestinationFilesFoldersCreatedTime(fileFolderCopy);
 
         // update files / folders locations if folder is copied / cut
         if (isFolder) {
@@ -1109,7 +1139,7 @@ export default class Files {
                     concatenatedLocation = this.concatenateSourceToDestinationLocation(value.info.location, destinationLocation)
                 value.info.location = concatenatedLocation;
     
-                this.updateDestinationFilesFoldersCreatedTime(value);
+                if (!isCut) this.updateDestinationFilesFoldersCreatedTime(value);
             }, this);
     
             concatenatedLocation = 0;
@@ -1125,8 +1155,8 @@ export default class Files {
                 // update folder link path for destination folder
                 this.updateDestinationFolderPath(value);
     
-                this.updateDestinationFilesFoldersCreatedTime(value);
-                this.updateDestinationFilesFoldersLocation(value, destinationLocation, isFolder);
+                if (!isCut) this.updateDestinationFilesFoldersCreatedTime(value);
+                this.updateDestinationFilesFoldersLocation(value, destinationLocation, isFolder, isCut);
             }, this);
         }
     }
@@ -1170,7 +1200,7 @@ export default class Files {
         value.info.path = pathHome + locationWithoutHome + name;
     }
 
-    // set current time for new created time when some file or folder is copied or cut
+    // set current time for new created time when some file or folder is copied
     updateDestinationFilesFoldersCreatedTime(fileFolderCopy) {
         var currentDate = new Date();
         var year = currentDate.getFullYear();
@@ -1236,5 +1266,45 @@ export default class Files {
         if ((number >= 0) && (number <= 9)) return true;
         else if (number > 9) return false;
         else return -1;
+    }
+
+    // if destination folder is subfolder of source folder, then it cannot be copied
+    destinationSubfolderSource(destinationFolder, sourceFolder) {
+        var folderFound = false;
+        var isFolder = sourceFolder.info.type === 'File folder';
+
+        // if it's file, then do nothing
+        if (!isFolder) return false;
+
+        // destination and source folder cannot be the same
+        if (destinationFolder === sourceFolder) return true;
+
+        for (let i = 0; i < sourceFolder.folders.length; i++) {
+            // if folder is found by some previous recursion, then it's subfolder
+            if (folderFound) return true;
+
+            // destination folder is subfolder of source folder
+            if (destinationFolder === sourceFolder.folders[i]) {
+                folderFound = true;
+                break;
+            }
+            // search in subfolders by recursion
+            else folderFound = this.destinationSubfolderSource(destinationFolder, sourceFolder.folders[i]);
+        }
+
+        return folderFound;
+    }
+    
+    // cut file or folder from cached folder structure by removing them
+    cutFileFolder(infoSource) {
+        this.properties.fileFolderCached = infoSource;
+
+        // remove file or folder with delete feature
+        this.properties.removeFileFolder({
+            key: '',
+            type: ''
+        });
+
+        this.properties.fileFolderCached = 0;
     }
 }

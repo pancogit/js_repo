@@ -48,6 +48,9 @@ export default class Properties {
         // delete prompt window for files and folders
         this.deleteWindow = this.createDeleteHTML();
 
+        // window for folder copy error message
+        this.folderErrorWindow = this.createFolderErrorWindowHTML();
+
         // cached file or folder
         this.fileFolderCached = 0;
 
@@ -388,6 +391,41 @@ export default class Properties {
         footer.append(buttonYes).append(buttonNo);
 
         return window;
+    }
+
+    // when destination folder is trying to copy inside source folder then it's error
+    // create error window for that purpose
+    createFolderErrorWindowHTML() {
+        var errorWindow = this.createDeleteHTML();
+
+        // it's very similar to delete window, just modify them
+        var windowObj = $(errorWindow);
+        var buttons = windowObj.find('.window__button');
+        var yesButton = $(buttons[0]), noButton = $(buttons[1]);
+    
+        // remove 'yes' button from window and change text for another button
+        // also remove event listeners from 'no' button
+        yesButton.remove();
+        noButton.text('Cancel');
+        noButton.off();
+
+        // remove event listeners from close button
+        var close = windowObj.find('.window__close');
+        close.off();
+
+        // set new event listeners to close error window with close and cancel buttons
+        close.on('click', this.closeDestinationError.bind(this));
+        close.on('contextmenu', this.closeDestinationError.bind(this));
+        noButton.on('click', this.closeDestinationError.bind(this));
+        noButton.on('contextmenu', this.closeDestinationError.bind(this));
+
+        // close error window on escape key also
+        $(window).on('keydown', this.closeDestinationError.bind(this));
+        
+        // change text to error message
+        windowObj.find('.window__text').text('The destination folder is a subfolder of the source folder.');
+
+        return errorWindow;
     }
 
     addListenersDeleteWindow(close, buttonYes, buttonNo) {
@@ -1043,5 +1081,16 @@ export default class Properties {
 
         object.name = name;
         object.location = location;
+    }
+
+    // when destination folder for copy is subfolder of source folder, then copy is not possible
+    // when that happen, print error on page with window
+    printDestinationError() {
+        $(document.body).append(this.folderErrorWindow);
+    }
+
+    // close window for destination error
+    closeDestinationError(event) {
+        this.closePropertiesWindow(this.folderErrorWindow, event);
     }
 }
