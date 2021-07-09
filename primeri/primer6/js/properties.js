@@ -51,6 +51,10 @@ export default class Properties {
         // window for folder copy error message
         this.folderErrorWindow = this.createFolderErrorWindowHTML();
 
+        // window for creating files and folders
+        this.createFile = this.createFileFolderHTML(true);
+        this.createFolder = this.createFileFolderHTML(false);
+
         // cached file or folder
         this.fileFolderCached = 0;
 
@@ -253,6 +257,12 @@ export default class Properties {
         var fileIcon = $('<i>').addClass('fas fa-file properties__icon');
         var file = this.createEntryRowHTML(fileIcon, 'File');
 
+        // add event listeners for creating files and folders
+        file.on('click', this.createFileFolder.bind(this));
+        file.on('contextmenu', this.createFileFolder.bind(this));
+        folder.on('click', this.createFileFolder.bind(this));
+        folder.on('contextmenu', this.createFileFolder.bind(this));
+
         var subproperties = this.createSubpropertiesHTML(create, new Array(folder, file));
         var entries = smallProperties.find('.properties__entry');
 
@@ -357,12 +367,12 @@ export default class Properties {
 
         if (isFile) {
             close.on('click', this.closeRenameFile.bind(this));
-            button.on('click', this.tryRenameFileFolder.bind(this, true));
+            button.on('click', this.tryRenameFileFolder.bind(this, true, 0));
             $(window).on('keydown', this.closeRenameFile.bind(this));
         }
         else {
             close.on('click', this.closeRenameFolder.bind(this));
-            button.on('click', this.tryRenameFileFolder.bind(this, false));
+            button.on('click', this.tryRenameFileFolder.bind(this, false, 0));
             $(window).on('keydown', this.closeRenameFolder.bind(this));
         }
 
@@ -440,6 +450,33 @@ export default class Properties {
 
         buttonYes.on('click', this.removeFileFolder.bind(this));
         buttonYes.on('contextmenu', this.removeFileFolder.bind(this));
+    }
+
+    createFileFolderHTML(isFile) {
+        var windowObject = this.createRenameHTML(isFile);
+        var windowObjectQ = $(windowObject.window);
+        var title = windowObjectQ.find('.window__title');
+        var titleText = isFile ? 'Create File' : 'Create Folder';
+        var close = windowObjectQ.find('.window__close');
+        var input = windowObjectQ.find('.window__input');
+        var button = windowObjectQ.find('.window__button');
+
+        // remove old event listeners
+        close.off();
+        input.off();
+        button.off();
+
+        // add new event listeners
+        close.on('click', this.closeCreateFileFolderWindow.bind(this, isFile));
+        button.on('click', this.createNewFileFolder.bind(this, isFile));
+        $(window).on('keydown', this.closeCreateFileFolderWindow.bind(this, isFile));
+
+        // when enter is pressed in input element, then click button
+        input.on('keydown', this.createFileFolderInputIsChanged.bind(this, button));
+
+        title.text(titleText);
+
+        return windowObject;
     }
 
     // right click open context menu, left click close them
@@ -761,14 +798,25 @@ export default class Properties {
     closeClearWindows(windowObject) {
         windowObject.detach();
 
-        // clear also rename file inputs and error classes
+        // clear also rename / create file inputs and error classes
+        this.clearFileInputsErrors();
+
+        // just remove element from page
+        this.renameMessageError.detach();
+    }
+
+    clearFileInputsErrors() {
+        // clear rename file / folder inputs
         this.renameFile.input.val('');
         this.renameFile.input.removeClass(this.windowInputError);
         this.renameFolder.input.val('');
         this.renameFolder.input.removeClass(this.windowInputError);
 
-        // just remove element from page
-        this.renameMessageError.detach();
+        // clear create file / folder inputs
+        this.createFile.input.val('');
+        this.createFile.input.removeClass(this.windowInputError);
+        this.createFolder.input.val('');
+        this.createFolder.input.removeClass(this.windowInputError);
     }
 
     renameFileFolder(event) {
@@ -798,29 +846,40 @@ export default class Properties {
     // when button for rename window is clicked, try to rename file or folder
     // if file or folder already exists in the current directory, then don't rename it 
     // and show error on rename window
-    tryRenameFileFolder(isFile, event) {
-        var newFileFolderName = isFile ? this.renameFile.input.val() : this.renameFolder.input.val();
-        var renameIsPossible = this.navigationObject.renameFileFolder(this.fileFolderCached, newFileFolderName.trim());
+    tryRenameFileFolder(isFile, windowObject, event) {
+        var newFileFolderName;
+        var windowObj;
 
-        // close rename window and sort files / folders on page
+        if (windowObject) windowObj = windowObject;
+        else if (isFile) windowObj = this.renameFile;
+        else windowObj = this.renameFolder;
+
+        newFileFolderName = windowObj.input.val();
+
+        var renameIsPossible = this.navigationObject.renameFileFolder(this.fileFolderCached, newFileFolderName.trim(), windowObject);
+
         if (renameIsPossible.renamed) {
-            if (isFile) this.closeRenameFile(event);
-            else this.closeRenameFolder(event);
+            // close rename window and sort files / folders on page
+            if (!windowObject) {
+                if (isFile) this.closeRenameFile(event);
+                else this.closeRenameFolder(event);
+    
+                // when file or folder is renamed, sorting must be done for all files and folders on page
+                // sort files / folders on page in ascending order
+                this.files.sortFolder(true);
+            }
 
-            // when file or folder is renamed, sorting must be done for all files and folders on page
-            // sort files / folders on page in ascending order
-            this.files.sortFolder(true);
+            // close create file / folder window
+            else this.closeCreateFileFolderWindow(isFile, event);
         }
         // show error on rename window
         else {
-            if (isFile) this.renameFile.input.addClass(this.windowInputError);
-            else this.renameFolder.input.addClass(this.windowInputError);
-
-            this.addRenameMessageError(renameIsPossible.errorMessage, isFile);
+            windowObj.input.addClass(this.windowInputError);
+            this.addRenameMessageError(renameIsPossible.errorMessage, windowObj);
         }
     }
 
-    addRenameMessageError(errorMessage, isFile) {
+    addRenameMessageError(errorMessage, windowObj) {
         var errorElement;
         var inputElement;
         var renameMessageErrorText = this.renameMessageError.text();
@@ -829,14 +888,8 @@ export default class Properties {
         if (renameMessageErrorText !== errorMessage)
             this.renameMessageError.text(errorMessage);
 
-        if (isFile) {
-            errorElement = this.renameFile.input.next();
-            inputElement = this.renameFile.input;
-        }
-        else {
-            errorElement = this.renameFolder.input.next();
-            inputElement = this.renameFolder.input;
-        }
+        errorElement = windowObj.input.next();
+        inputElement = windowObj.input;
 
         // add error message for rename window to the page if doesn't exists
         if (errorElement[0] !== this.renameMessageError[0])
@@ -1092,5 +1145,52 @@ export default class Properties {
     // close window for destination error
     closeDestinationError(event) {
         this.closePropertiesWindow(this.folderErrorWindow, event);
+    }
+
+    // open window for creating file or folder
+    createFileFolder(event) {
+        var isFile = $(event.currentTarget).find('.properties__text').text() === 'File';
+
+        // add file / folder window to the page
+        if (isFile) $(document.body).append(this.createFile.window);
+        else $(document.body).append(this.createFolder.window);
+    }
+
+    closeCreateFileFolderWindow(isFile, event) {
+        var windowObject = isFile ? this.createFile : this.createFolder;
+
+        this.closePropertiesWindow(windowObject.window, event);
+    }
+
+    createNewFileFolder(isFile, event) {
+        var windowObject = isFile ? this.createFile : this.createFolder;
+        var name = windowObject.input.val();
+
+        // use rename feature to see if file / folder name is correct
+        this.createFileFolderCorrectName(name, isFile, windowObject, event);
+
+        // use copy feature to create file / folder
+    }
+
+    createFileFolderCorrectName(name, isFile, windowObject, event) {
+        var fileFolder = this.fileFolderCached;
+
+        this.fileFolderCached = {
+            currentFolder: this.files.breadcrumbs.currentCachedFolder,
+            filesFolders: {
+                name: name,
+                info: {
+                    type: isFile ? '' : 'File folder'
+                }
+            }
+        }
+
+        this.tryRenameFileFolder(isFile, windowObject, event);
+        this.fileFolderCached = fileFolder;
+    }
+
+    // when enter is pressed in input element for create file / folder, then click button
+    createFileFolderInputIsChanged(button, event) {
+        this.renameInputIsChanged(button, event);
     }
 }

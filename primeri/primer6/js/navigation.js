@@ -372,12 +372,13 @@ export default class Navigation {
 
     // rename file or folder and return true if it's renamed, otherwise return false 
     // with error message if it's not renamed
-    renameFileFolder(fileFolderCached, newFileFolderName) {
+    renameFileFolder(fileFolderCached, newFileFolderName, windowObject) {
         var files = fileFolderCached.currentFolder.files;
         var folders = fileFolderCached.currentFolder.folders;
         var oldFileFolderName = fileFolderCached.filesFolders.name;
         var numberOfSameNames = 0;
         var nameOnlyWhitespaces = newFileFolderName.match(/^\s*$/);
+        var isFolder = fileFolderCached.filesFolders.info.type === 'File folder';
 
         // don't rename if name contains only whitespaces
         if (nameOnlyWhitespaces) return {
@@ -386,7 +387,8 @@ export default class Navigation {
         }
 
         // add extension to typed name
-        var extension = Files.removeFileFolderExtension(oldFileFolderName).extension;
+        var extension = windowObject && !isFolder ? 
+            '.txt' : Files.removeFileFolderExtension(oldFileFolderName).extension;
         newFileFolderName += extension;
 
         fileFolderCached.filesFolders.name = newFileFolderName;
@@ -398,7 +400,10 @@ export default class Navigation {
         for (let i = 0; i < folders.length; i++)
             if (folders[i].name === newFileFolderName) numberOfSameNames++;
 
-        var nameAlreadyExists = numberOfSameNames > 1;
+        var nameAlreadyExists;
+
+        if (windowObject) nameAlreadyExists = numberOfSameNames ? true : false;
+        else nameAlreadyExists = numberOfSameNames > 1;
 
         // file / folder already exists, return false
         if (nameAlreadyExists) {
@@ -411,7 +416,8 @@ export default class Navigation {
         }
         // file / folder is renamed, return true
         else {
-            this.updateRenamedFilesFolders(fileFolderCached, oldFileFolderName, newFileFolderName);
+            if (!windowObject)
+                this.updateRenamedFilesFolders(fileFolderCached, oldFileFolderName, newFileFolderName);
 
             return {
                 renamed: true,
