@@ -754,7 +754,7 @@ export default class Files {
         }
     }
 
-    copyFileFolder(clipboard) {
+    copyFileFolder(clipboard, newFileFolder) {
         var pathSource, pathDestination, name;
         var isHomepage = false;
 
@@ -776,7 +776,8 @@ export default class Files {
             }
         }
 
-        var infoSource = this.navigation.getFileFolderInfoRecursive(this.breadcrumbs.serverData.home, 
+        var infoSource = newFileFolder ? newFileFolder :
+                         this.navigation.getFileFolderInfoRecursive(this.breadcrumbs.serverData.home, 
                                                                     clipboard.selectedFileFolder.location, pathSource, 
                                                                     clipboard.selectedFileFolder.name);
 
@@ -788,7 +789,7 @@ export default class Files {
 
         // if destination folder is subfolder of source folder, then it cannot be copied
         // some folder cannot be copied inside yourself or inside own subfolder
-        if (this.destinationSubfolderSource(infoDestination.filesFolders, infoSource.filesFolders)) {
+        if (this.destinationSubfolderSource(infoDestination.filesFolders, infoSource.filesFolders) && !newFileFolder) {
             this.properties.printDestinationError();
             return;
         }

@@ -5,9 +5,10 @@ import Files from './files.js';
 
 export default class Properties {
 
-    constructor(navigationObject, filesObject) {
+    constructor(navigationObject, filesObject, breadcrumbsObject) {
         this.navigationObject = navigationObject;
         this.files = filesObject;
+        this.breadcrumbs = breadcrumbsObject;
         this.filesLinkClass = 'files__link';
         this.filesLinkSelectedClass = 'files__link--selected';
         this.filesLinkCutClass = 'files__link--cut';
@@ -877,6 +878,8 @@ export default class Properties {
             windowObj.input.addClass(this.windowInputError);
             this.addRenameMessageError(renameIsPossible.errorMessage, windowObj);
         }
+
+        return renameIsPossible.renamed;
     }
 
     addRenameMessageError(errorMessage, windowObj) {
@@ -1107,9 +1110,11 @@ export default class Properties {
 
     // if home content file / folder is copied / cut, then set location and name when paste is clicked
     // also set location and name for paste folder
-    setClipboardLocationName() {
-        this.setClipboardLocationNameByObject(this.clipboard.selectedFileFolder);
-        this.setClipboardLocationNameByObject(this.clipboard.pasteFolder);
+    setClipboardLocationName(clipboardObject) {
+        var object = clipboardObject ? clipboardObject : this.clipboard;
+
+        this.setClipboardLocationNameByObject(object.selectedFileFolder);
+        this.setClipboardLocationNameByObject(object.pasteFolder);
     }
 
     setClipboardLocationNameByObject(object) {
@@ -1167,9 +1172,10 @@ export default class Properties {
         var name = windowObject.input.val();
 
         // use rename feature to see if file / folder name is correct
-        this.createFileFolderCorrectName(name, isFile, windowObject, event);
+        var fileFolderCanBeCreated = this.createFileFolderCorrectName(name, isFile, windowObject, event);
 
         // use copy feature to create file / folder
+        if (fileFolderCanBeCreated) this.createFileFolderCopy(isFile, name);
     }
 
     createFileFolderCorrectName(name, isFile, windowObject, event) {
@@ -1185,12 +1191,103 @@ export default class Properties {
             }
         }
 
-        this.tryRenameFileFolder(isFile, windowObject, event);
+        var createIsPossible = this.tryRenameFileFolder(isFile, windowObject, event);
         this.fileFolderCached = fileFolder;
+
+        return createIsPossible;
     }
 
     // when enter is pressed in input element for create file / folder, then click button
     createFileFolderInputIsChanged(button, event) {
         this.renameInputIsChanged(button, event);
+    }
+
+    // create file or folder using copy feature
+    createFileFolderCopy(isFile, name) {
+        var clipboardObject = this.createClipboardForCreate();
+        this.setClipboardLocationName(clipboardObject);
+
+        var currentLocation = this.breadcrumbs.getCurrentPath();
+
+        // if it's file use path for empty file, otherwise it's folder and set folder path
+        var currentPath = isFile ? 
+            '/js_repo/primeri/primer6/js/data/Empty File.txt' : 
+            `/js_repo/primeri/primer6/html${currentLocation.slice(5)}`;
+
+        // create file or folder object
+        var newFileFolder = isFile ? 
+            this.createNewTextFile(name, currentPath, currentLocation) : 
+            this.createNewFolder(name, currentPath, currentLocation);
+
+        // set created time for new file or folder
+        this.files.updateDestinationFilesFoldersCreatedTime(newFileFolder.filesFolders);
+
+        this.files.copyFileFolder(clipboardObject, newFileFolder);
+    }
+
+    // create clipboard object for create file / folder
+    createClipboardForCreate() {
+        return {
+            selectedFileFolder: {
+                selected: 0,
+                location: ' ',
+                name: 0
+            },
+
+            pasteFolder: {
+                selected: 0,
+                location: 0,
+                name: 0
+            },
+
+            // don't use clipboard for copy / cut
+            cut: false,
+            isFilled: false  
+        }
+    }
+
+    // create simple textual file
+    createNewTextFile(name, currentPath, currentLocation) {
+        return {
+            filesFolders: {
+                name: `${name}.txt`,
+                info: {
+                    type: 'Text Document (.txt)',
+                    path: currentPath,
+                    location: currentLocation,
+                    size: {
+                        value: '0',
+                        unit: 'B'
+                    },
+                    created: ''
+                }
+            }
+        }
+    }
+
+    // create simple folder
+    createNewFolder(name, currentPath, currentLocation) {
+        return {
+            filesFolders: {
+                name: name,
+                info: {
+                    type: 'File folder',
+                    path: `${currentPath}${name}/`,
+                    location: currentLocation,
+                    size: {
+                        value: '0',
+                        unit: 'B'
+                    },
+                    created: ''
+                },
+                contains: {
+                    files: 0,
+                    folders: 0
+                },
+                folders: [],
+                files: [],
+                link: {}
+            }
+        }
     }
 }

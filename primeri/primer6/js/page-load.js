@@ -11,7 +11,7 @@ export default class PageLoad {
 
         if (!windowObj.length) this.addToPage();
 
-        this.waitTime = 0; // 2000;
+        this.waitTime = 500;
     }
 
     createWindowHTML() {
