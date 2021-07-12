@@ -94,13 +94,15 @@ export default class Preview {
         var fileLink;
         var filePath = fileType === this.files.types.file ? 
             $(mediaElementSource).data('name') : Files.getURLPathname(mediaElementSource);
-        var fileLocation = $(mediaElement).attr('data-location');
+        var mediaObj = $(mediaElement);
+        var fileLocation = mediaObj.attr('data-location');
+        var fileFullname = mediaObj.attr('data-fullname');
 
         // get previous or next file link
         if (leftArrowClicked)
-            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, 0);
+            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, fileFullname, 0);
         else if (rightArrowClicked)
-            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, 1);
+            fileLink = this.files.getPreviousNextFileLink(fileType, filePath, fileLocation, fileFullname, 1);
 
         return fileLink;
     }

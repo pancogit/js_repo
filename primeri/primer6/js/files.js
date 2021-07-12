@@ -330,10 +330,13 @@ export default class Files {
         var imageSource = Files.getURLPathname(media.src);
         var imageInfo = media.alt;
         var image = $('<img>').addClass('preview__picture').attr('src', imageSource).attr('alt', imageInfo);
-        var imageLocation = $(media).attr(this.dataLocationAttr);
+        var mediaObj = $(media);
+        var imageLocation = mediaObj.attr(this.dataLocationAttr);
+        var imageName = mediaObj.parent().find(`.${this.filesNameClass}`).attr(this.dataFullnameAttr);
 
-        // add location to the image via custom data- attribute
+        // add location / name to the image via custom data- attribute
         image.attr(this.dataLocationAttr, imageLocation);
+        image.attr(this.dataFullnameAttr, imageName);
 
         return image;
     }
@@ -357,6 +360,10 @@ export default class Files {
         var filesName = $(link).find(`.${this.filesNameClass}`);
         text.attr('data-name', filesName.text());
 
+        // save fullname of file in dom
+        var filesFullName = filesName.attr(this.dataFullnameAttr);
+        text.attr(this.dataFullnameAttr, filesFullName);
+
         var filesIcon = $(link).find(`.${this.filesIconTextClass}`);
         var filesIconLocation = filesIcon.attr(this.dataLocationAttr);
 
@@ -373,9 +380,11 @@ export default class Files {
         var source = $('<source>').attr('src', audioSource).attr('type', 'audio/mpeg');
         var audioIcon = link.firstChild;
         var sourceLocation = $(audioIcon).attr(this.dataLocationAttr);
+        var sourceName = $(link).find(`.${this.filesNameClass}`).attr(this.dataFullnameAttr);
 
-        // add location to the audio via custom data- attribute
+        // add location / name to the audio via custom data- attribute
         source.attr(this.dataLocationAttr, sourceLocation);
+        source.attr(this.dataFullnameAttr, sourceName);
 
         audio.append(source);
 
@@ -388,9 +397,11 @@ export default class Files {
         var source = $('<source>').attr('src', videoSource).attr('type', 'video/mp4');
         var videoIcon = link.firstChild;
         var sourceLocation = $(videoIcon).attr(this.dataLocationAttr);
+        var sourceName = $(link).find(`.${this.filesNameClass}`).attr(this.dataFullnameAttr);
 
         // add location to the video via custom data- attribute
         source.attr(this.dataLocationAttr, sourceLocation);
+        source.attr(this.dataFullnameAttr, sourceName);
 
         video.append(source);
 
@@ -398,7 +409,7 @@ export default class Files {
     }
 
     // get previous or next file link from DOM
-    getPreviousNextFileLink(fileType, fileInfo, fileLocation, previousNext) {
+    getPreviousNextFileLink(fileType, fileInfo, fileLocation, fileFullname, previousNext) {
         var isImage = fileType === this.types.image;
         var isText = fileType === this.types.file;
         var isAudio = fileType === this.types.audio;
@@ -409,17 +420,17 @@ export default class Files {
         var fileLink;
 
         if (isImage)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
-                previousFileLink, nextFileLink, this.filesPictureClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, fileFullname, 
+                filesBoxes, previousFileLink, nextFileLink, this.filesPictureClass);
         else if (isText)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
-                previousFileLink, nextFileLink, this.filesIconTextClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, fileFullname,
+                filesBoxes, previousFileLink, nextFileLink, this.filesIconTextClass);
         else if (isAudio)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
-                previousFileLink, nextFileLink, this.filesIconAudioClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, fileFullname,
+                filesBoxes, previousFileLink, nextFileLink, this.filesIconAudioClass);
         else if (isVideo)
-            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes,
-                previousFileLink, nextFileLink, this.filesIconVideoClass);
+            fileLink = this.getPreviousNextFileLinkMedia(fileInfo, fileLocation, fileFullname,
+                filesBoxes, previousFileLink, nextFileLink, this.filesIconVideoClass);
 
         return fileLink;
     }
@@ -442,10 +453,12 @@ export default class Files {
         return files;
     }
 
-    getPreviousNextFileLinkMedia(fileInfo, fileLocation, filesBoxes, previousFileLink, nextFileLink, mediaClass) {
+    getPreviousNextFileLinkMedia(fileInfo, fileLocation, fileFullname, filesBoxes, previousFileLink, nextFileLink, mediaClass) {
 
         for (var i = 0; i < filesBoxes.length; i++) {
-            let media = $(filesBoxes[i]).find(`.${mediaClass}`);
+            let boxes = $(filesBoxes[i]);
+            let media = boxes.find(`.${mediaClass}`);
+            let mediaFullname = boxes.find(`.${this.filesNameClass}`).attr('data-fullname');
 
             if (media) {
                 let mediaPath;
@@ -460,9 +473,10 @@ export default class Files {
 
                 let sameFilePath = mediaPath === fileInfo;
                 let sameFileLocation = mediaLocation === fileLocation;
+                let sameFullname = mediaFullname === fileFullname;
 
-                // media is found in DOM only if both location and path are the same
-                if (sameFilePath && sameFileLocation) break;
+                // media is found in DOM only if location, path and fullname are the same
+                if (sameFilePath && sameFileLocation && sameFullname) break;
             }
         }
 
@@ -474,7 +488,7 @@ export default class Files {
 
         // get file index of previous or next file
         // for previous file, if it's first file, then return last file, otherwise just decrement index
-        // for next file, if it's last file, then return file file, otherwise just increment index
+        // for next file, if it's last file, then return first file, otherwise just increment index
         var fileIndex;
 
         if (previousFileLink)
@@ -956,6 +970,17 @@ export default class Files {
 
         var fileFolderNameCopy = isFolder ? fileFolderCopy.name :
             Files.removeFileFolderExtension(fileFolderCopy.name);
+
+        var foldersType = destinationFilesFolders[0] ?
+                          (destinationFilesFolders[0].info.type === 'File folder') &&
+                          (fileFolderCopy.info.type === 'File folder') : true;
+        var filesType = destinationFilesFolders[0] ?
+                        (destinationFilesFolders[0].info.type !== 'File folder') &&
+                        (fileFolderCopy.info.type !== 'File folder') : true;              
+
+        // compare the same types, files with files and folders with folders
+        // if they are not the same types, then return empty array
+        if (!foldersType && !filesType) return filesFoldersNamesExists;
 
         for (let i = 0; i < destinationFilesFolders.length; i++) {
             isFolder = destinationFilesFolders[i].info.type === 'File folder';
