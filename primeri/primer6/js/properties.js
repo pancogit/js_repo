@@ -872,6 +872,9 @@ export default class Properties {
 
             // close create file / folder window
             else this.closeCreateFileFolderWindow(isFile, event);
+
+            // when rename is finished, clear clipboard
+            this.clipboard.isFilled = false;
         }
         // show error on rename window
         else {

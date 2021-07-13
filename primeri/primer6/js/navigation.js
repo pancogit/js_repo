@@ -167,7 +167,8 @@ export default class Navigation {
 
         // reverse URL to original one string before tree searching
         var linkString = this.files.reverseURL(linkObject.pathname);
-        var folder = this.findFolder(linkString, this.serverData.home.folders);
+        var linkName = $(linkObject).find('.navigation__text')[0].textContent;
+        var folder = this.findFolder(linkString, linkName, this.serverData.home.folders);
 
         // add files on page and update folder size on page
         this.files.addToPage(folder);
@@ -281,18 +282,19 @@ export default class Navigation {
     }
 
     // deep search the tree structure and find folder with given link
-    findFolder(link, folders) {
+    findFolder(link, linkName, folders) {
         var folderFound = 0;
 
         for (let i = 0; i < folders.length; i++) {
             let linkFound = link === folders[i].info.path;
+            let linkNameFound = linkName === folders[i].name;
 
             // return found folder if it's found and don't search further
             if (folderFound) return folderFound;
 
             // if link is found, return cached folder from tree structure
-            if (linkFound) return folders[i];
-            else folderFound = this.findFolder(link, folders[i].folders);
+            if (linkFound && linkNameFound) return folders[i];
+            else folderFound = this.findFolder(link, linkName, folders[i].folders);
         }
 
         // folder is not found

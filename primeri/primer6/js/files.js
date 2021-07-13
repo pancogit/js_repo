@@ -123,7 +123,7 @@ export default class Files {
 
         // add event listener for folders to emulate click on navigation links
         // send link for folder via function binding as additional argument
-        if (isFolder) $(link).on('click', this.folderIsClicked.bind(this, link.attr('href')));
+        if (isFolder) $(link).on('click', this.folderIsClicked.bind(this, link.attr('href'), name.text()));
 
         // or add event listener for files to open them
         else $(link).on('click', this.fileIsClicked.bind(this));
@@ -279,7 +279,7 @@ export default class Files {
 
     // when folder is clicked, search all navigation links to find folder link
     // it must be done because search results can search nested folders
-    folderIsClicked(linkURL, event) {
+    folderIsClicked(linkURL, linkName, event) {
         event.preventDefault();
 
         // get all navigation items from entire tree
@@ -288,11 +288,13 @@ export default class Files {
         for (let i = 0; i < listItems.length; i++) {
             let folderLink = listItems[i].firstChild;
             let linkIsFound = folderLink.pathname === linkURL;
+            let navigationText = $(listItems[i]).find('.navigation__text')[0].textContent;
+            let nameIsFound = navigationText === linkName;
 
             // when link with clicked folder is found in navigation list, then fire click event
             // on navigation folder link to change folder structures, files, breadcrumbs
             // emulate click on navigation link
-            if (linkIsFound) {
+            if (linkIsFound && nameIsFound) {
                 $(folderLink).click();
                 break;
             }
@@ -593,11 +595,13 @@ export default class Files {
     addEventListenersFilesFolders(filesFolders, isFolder = false) {
 
         filesFolders.forEach(function addFolders(value, index, array) {
-            let link = $(value).find(`.${this.filesLinkClass}`);
+            let valueObj = $(value);
+            let link = valueObj.find(`.${this.filesLinkClass}`);
+            let name = valueObj.find(`.${this.filesNameClass}`)[0].textContent;
 
             // add folder event listener
             if (isFolder)
-                $(link).on('click', this.folderIsClicked.bind(this, link.attr('href')));
+                $(link).on('click', this.folderIsClicked.bind(this, link.attr('href'), name));
 
             // add file event listener
             else
@@ -784,7 +788,7 @@ export default class Files {
             // then it's paste inside current opened folder
             else {
                 let currentPath = this.breadcrumbs.getCurrentPath();
-                pathDestination = `/js_repo/primeri/primer6/html${currentPath.slice(5)}`;
+                pathDestination = this.breadcrumbs.currentCachedFolder.info.path;
 
                 if (currentPath === '/home/') isHomepage = true;
             }
@@ -836,7 +840,7 @@ export default class Files {
     // with files and folders by clicking twice on navigation link for current folder
     // if it's not the current folder, then do nothing
     refreshCurrentPageAfterCopy() {
-        var currentFolderPath = this.breadcrumbs.getCurrentPath();
+        var currentFolderPath = `/home/${(this.breadcrumbs.currentCachedFolder.info.path).slice(30)}`;
         var activeNavigationLink = $(`.${this.navigationLinkActiveClass}`);
         var activeSelectedLinkPath = '';
         var filesLinkSelected = $(`.${this.filesLinkSelectedClass}`);
