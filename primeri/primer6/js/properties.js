@@ -868,13 +868,13 @@ export default class Properties {
                 // when file or folder is renamed, sorting must be done for all files and folders on page
                 // sort files / folders on page in ascending order
                 this.files.sortFolder(true);
+
+                // when rename is finished, clear clipboard
+                this.clipboard.isFilled = false;
             }
 
             // close create file / folder window
             else this.closeCreateFileFolderWindow(isFile, event);
-
-            // when rename is finished, clear clipboard
-            this.clipboard.isFilled = false;
         }
         // show error on rename window
         else {
