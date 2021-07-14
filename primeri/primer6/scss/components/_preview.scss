@@ -1,0 +1,108 @@
+// preview for images, files, sounds, videos
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.preview {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: variables.$preview_z_index;
+    background-color: colors.$preview_background_color;
+
+    // when fixed positioning is used, overflow must be set to see remaining content by scrolling
+    overflow-y: auto;
+
+    &__arrow {
+        font-size: variables.$preview_arrow_font_size;
+
+        // move arrow to the left with translation
+        &--left {
+            &:hover {
+                transform: translateX(- variables.$preview_arrow_translate);
+            }
+        }
+
+        // move arrow to the right with translation
+        &--right {
+            &:hover {
+                transform: translateX(variables.$preview_arrow_translate);
+            }
+        }
+    }
+
+    &__close {
+        font-size: variables.$preview_close_font_size;
+        
+        &:hover {
+            transform: scale(variables.$preview_close_scale);
+        }
+    }
+
+    &__close, &__arrow {
+        margin: variables.$preview_close_margin;
+        cursor: pointer;
+        color: colors.$preview_close_color;
+        transition: variables.$preview_close_transition;
+
+        &:hover {
+            color: colors.$preview_close_color_hover;
+        }
+
+        // for small screens set smaller icon font
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$preview_close_breakpoint) {
+            font-size: variables.$preview_close_font_size_small;
+        }
+    }
+
+    &__content {
+
+    }
+
+    &__media {
+        margin: variables.$preview_media_margin;
+
+        // for small screens set smaller margins
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$preview_close_breakpoint) {
+            margin: variables.$preview_media_margin_hover;
+        }
+    }
+
+    &__navigation {
+
+    }
+
+    &__picture {
+
+    }
+
+    &__picture, &__audio, &__video {
+        // spread to maximum width, but responsive
+        max-width: variables.$preview_picture_max_width;
+
+        // don't shrink too much
+        min-width: variables.$preview_picture_min_width;
+    }
+
+    &__text {
+        font-family: cursive;
+        color: colors.$preview_text_color;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+    &__audio {
+
+    }
+
+    &__video {
+
+    }
+
+    &__top {
+        text-align: right;
+    }
+}

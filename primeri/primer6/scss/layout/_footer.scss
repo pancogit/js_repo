@@ -1,1 +1,13 @@
 /* footer */ 
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.footer {
+    @include mixins.set_borders($top_style: solid, 
+                                $top_width: variables.$header_border_width, 
+                                $top_color: colors.$header_border_color);
+
+    height: variables.$footer_height;
+}

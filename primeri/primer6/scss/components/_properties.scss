@@ -1,0 +1,110 @@
+// properties pop up
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.properties {
+    position: absolute;
+    z-index: variables.$properties_z_index;
+
+    &__entry {
+        // positioning container for nested window
+        position: relative;
+
+        &:hover {
+            // when entry is hovered, change colors
+            color: colors.$properties_entry_color_hover;
+            background-color: colors.$properties_entry_background_color_hover;
+
+            // color image, but in current window with direct descendants
+            // don't color images in nested window
+            > .properties__image {
+                > .properties__icon {
+                    color: colors.$properties_image_color_hover;
+                }
+            }
+
+            // show nested window when entry is hovered
+            .properties__window {
+                display: block;
+            }
+        }
+
+        // for disabled entry (paste item)
+        &--disabled {
+            .properties__text {
+                color: colors.$properties_text_disabled_color;
+            }
+
+            // set different background color for disabled entry
+            &:hover {
+                background-color: colors.$properties_entry_disabled_background_color;
+            }
+        }
+    }
+
+    &__expand {
+
+    }
+
+    &__icon {
+        font-size: variables.$properties_icon_font_size;
+    }
+
+    &__image {
+        width: variables.$properties_image_width;
+        padding: variables.$properties_image_padding;
+
+        @include mixins.set_borders($right_style: solid,
+                                    $right_width: variables.$properties_window_border_width,
+                                    $right_color: colors.$properties_window_border_color);
+    }
+
+    &__more {
+
+    }
+
+    &__right {
+        padding: variables.$properties_image_padding;
+
+        &--divider {
+            @include mixins.set_borders($bottom_style: solid,
+                                        $bottom_width: variables.$properties_window_border_width,
+                                        $bottom_color: colors.$properties_window_border_color);
+        }
+    }
+
+    &__text {
+        // set default mouse cursor for text
+        // don't change cursor style for text
+        cursor: default;
+
+        // set bold font for open option
+        &--open {
+            font-weight: bold;
+            color: colors.$properties_image_color_hover;
+        }
+    }
+
+    &__window {
+        width: variables.$properties_window_width;
+        background-color: colors.$properties_window_background_color;
+        color: colors.$properties_window_color;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$properties_window_border_width,
+                                    $color: colors.$properties_window_border_color);
+
+        .properties__window {
+            // hide nested window by default
+            display: none;
+
+            // set absolute position to move nested window out of normal flow, but in same place
+            position: absolute;
+
+            // move properties to the bottom of entry row positioning container
+            bottom: 0;
+        }
+    }
+}

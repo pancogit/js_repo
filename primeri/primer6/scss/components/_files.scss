@@ -1,0 +1,219 @@
+// files grid
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.files {
+
+    // spread css grid items to fill container width
+    @include mixins.set_grid_container($justify_content: space-between);
+
+    &--small, &--medium, &--large {
+        gap: variables.$files_gap;
+    }
+    
+    &--small {
+        // set responsive grid items
+        grid-template-columns: repeat(auto-fit, variables.$files_link_small_width);
+
+        .files__link {
+            @include mixins.set_flexbox_container();
+            gap: variables.$files_link_gap;
+
+            padding: variables.$files_link_padding_small;
+            width: variables.$files_link_small_width;
+        }
+
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
+            width: variables.$files_picture_small_width;
+            height: variables.$files_picture_small_width;
+        }
+
+        .files__name {
+            margin: unset;
+            width: variables.$files_name_width_small;
+            text-align: left;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_small_width;
+        }
+
+        .files__image-cut {
+            position: absolute;
+            width: variables.$files_image_cut_small_width;
+            height: variables.$files_image_cut_small_width;
+        }
+    }
+
+    // reset small modifiers for larger icons
+    &--medium, &--large {
+
+        .files__link {
+            display: block;
+            padding-top: variables.$files_link_padding_top;
+            padding-bottom: variables.$files_link_padding_top;
+            padding-left: variables.$files_link_padding_left;
+            padding-right: variables.$files_link_padding_left;
+        }
+
+        .files__name {
+            width: auto;
+            margin-left: - variables.$files_link_padding_left + variables.$files_link_padding_top;
+            margin-right: - variables.$files_link_padding_left + variables.$files_link_padding_top;
+            text-align: center;
+        }
+
+        .files__image-cut {
+            position: relative;
+        }
+    }
+
+    &--medium {
+        // set responsive grid items
+        grid-template-columns: repeat(auto-fit, variables.$files_link_medium_width);
+
+        .files__link {
+            width: variables.$files_link_medium_width;
+        }
+
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
+            width: variables.$files_picture_medium_width;
+            height: variables.$files_picture_medium_width;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_medium_width;
+        }
+
+        .files__image-cut {
+            width: variables.$files_image_cut_medium_width;
+            height: variables.$files_image_cut_medium_width;
+            margin-top: - variables.$files_image_cut_medium_width; 
+        }
+    }
+
+    &--large {
+        // set responsive grid items
+        grid-template-columns: repeat(auto-fit, variables.$files_link_large_width);
+
+        .files__link {
+            width: variables.$files_link_large_width;
+        }
+
+        // picture and icon should be the same size
+        .files__picture, .files__icon {
+            width: variables.$files_picture_large_width;
+            height: variables.$files_picture_large_width;
+        }
+
+        // use the same size as picture
+        .files__icon {
+            font-size: variables.$files_picture_large_width;
+        }
+
+        .files__image-cut {
+            width: variables.$files_image_cut_large_width;
+            height: variables.$files_image_cut_large_width;
+            margin-top: - variables.$files_image_cut_large_width;
+        }
+    }
+
+    &__box {
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+
+        // add borders, but hide them with transparent color by default
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$files_link_border_width,
+                                    $color: transparent);
+
+        border-radius: variables.$files_link_border_radius;
+
+        // add little transparent background when hovered
+        &:hover, &--selected {
+            background-color: colors.$files_link_hover_background_color;
+            border-color: colors.$files_link_hover_border_color;
+
+            .files__name {
+                color: colors.$files_name_hover_color;
+            }
+        }
+
+        // when file or folder is cut, then change color of icon
+        &--cut {
+
+            .files__icon--audio {
+                color: colors.$files_icon_cut_audio_color;
+            }
+
+            .files__icon--video {
+                color: colors.$files_icon_cut_video_color;
+            }
+
+            .files__icon--text {
+                color: colors.$files_icon_cut_text_color;
+            }
+
+            .files__icon--folder {
+                color: colors.$files_icon_cut_folder_color;
+            }
+
+            // when image is cut, show transparent color over image
+            .files__image-cut {
+                display: block;
+            }
+        }
+    }
+
+    &__name {
+        color: colors.$files_name_color;
+
+        // break long words to new lines
+        word-break: break-all;
+
+        // keep whitespaces visible for the name
+        white-space: pre-wrap;
+    }
+
+    &__picture {
+        
+    }
+
+    &__icon {
+        // don't shrink icon, use size as it is
+        flex-shrink: 0;
+
+        // element modifiers for colors
+        &--audio {
+            color: colors.$files_icon_audio_color;
+        }
+
+        &--video {
+            color: colors.$files_icon_video_color;
+        }
+
+        &--text {
+            color: colors.$files_icon_text_color;
+        }
+
+        &--folder {
+            color: colors.$files_icon_folder_color;
+        }
+    }
+
+    // when image is cut, then transparent background is shown over the image
+    // hide by default, show when image is cut
+    &__image-cut {
+        display: none;
+        background-color: colors.$files_image_cut_background-color;
+    }
+}

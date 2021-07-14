@@ -1,0 +1,152 @@
+// navigation
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.navigation {
+    background-color: colors.$navigation_background_color;
+    transition: variables.$navigation_transition;
+
+    // set positioned navigation
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: variables.$navigation_z_index;
+
+        // show vertical scrolling and hide horizontal
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @include mixins.set_borders($right_style: solid,
+                                    $right_color: colors.$header_border_color, 
+                                    $right_width: variables.$header_border_width);
+    }
+
+    // hide navigation with negative translation
+    &--hide {
+        transform: translateX(- variables.$page_aside_width);
+        margin-right: - variables.$page_aside_width;
+    }
+
+    &__exit {
+        display: none;
+        margin-top: variables.$navigation_exit_margin_top;
+        text-align: right;
+
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            display: block;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        font-size: variables.$navigation_close_font_size;
+        color: colors.$navigation_close_color;
+
+        &:hover {
+            color: colors.$navigation_close_color_hover;
+        }
+    }
+
+    &__expand {
+        padding: variables.$navigation_expand_padding;
+        margin-top: - variables.$navigation_box_padding_top;
+        margin-bottom: - variables.$navigation_box_padding_top;
+        background-color: colors.$navigation_link_background_color;
+    }
+
+    &__icon {
+        padding-right: variables.$navigation_icon_padding_right;
+        font-size: variables.$navigation_icon_font_size;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        color: colors.$navigation_link_color;
+
+        &:hover, &--active, &--selected {
+            background-color: colors.$navigation_link_background_color;
+            color: colors.$navigation_link_color;
+
+            .navigation__icon, .navigation__expand {
+                color: colors.$navigation_icon_color;
+            }
+
+            .navigation__box {
+                border-left-color: colors.$navigation_icon_color;
+            }
+
+            .navigation__text {
+                color: colors.$navigation_text_color;
+            }
+        }
+
+        // when folder from navigation is cut or active, then change icon color
+        // also when cut folder is hovered, keep the same icon color
+        &--cut, &:hover.navigation__link--cut, &--active.navigation__link--cut, &--active:hover.navigation__link--cut {
+
+            .navigation__icon {
+                color: colors.$navigation_icon_cut_color;
+            }
+        }
+    }
+
+    &__box {
+        padding-top: variables.$navigation_box_padding_top;
+        padding-bottom: variables.$navigation_box_padding_top;
+        padding-left: variables.$navigation_box_padding_left;
+
+        @include mixins.set_borders($left_style: solid,
+                                    $left_width: variables.$navigation_box_border_width,
+                                    $left_color: colors.$navigation_background_color);
+    }
+
+    &__list {
+        @include mixins.reset_list;
+
+        margin-top: variables.$navigation_list_margin_top;
+        margin-left: variables.$navigation_list_margin_left;
+        margin-right: variables.$navigation_list_margin_left;
+
+        // add submenu paddings only for first level of nesting to skip overflow
+        > .navigation__item {
+            > .navigation__submenu {
+                .navigation__box {
+                    padding-left: variables.$navigation_box_nested_padding_left;
+                }
+            }
+        }
+    }
+
+    &__sign {
+
+    }
+
+    &__submenu {
+        @include mixins.reset_list;
+
+        // hide by default
+        display: none;
+
+        // show submenu when expanded
+        &--expanded {
+            display: block;
+        }
+    }
+
+    &__text {
+        padding-right: variables.$navigation_icon_padding_right;
+        
+        // break long words if text overflows
+        word-break: break-all;
+
+        // keep whitespaces visible for the name
+        white-space: pre-wrap;
+    }
+}

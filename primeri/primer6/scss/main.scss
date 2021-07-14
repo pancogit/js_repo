@@ -4,8 +4,17 @@
 @use 'base/reset';
 
 // components
-@use 'components/button';
-@use 'components/logo';
+@use 'components/page';
+@use 'components/hamburger';
+@use 'components/search';
+@use 'components/navigation';
+@use 'components/breadcrumbs';
+@use 'components/matches';
+@use 'components/properties';
+@use 'components/window';
+@use 'components/files';
+@use 'components/preview';
+@use 'components/page-load';
 
 // layout
 @use 'layout/header';

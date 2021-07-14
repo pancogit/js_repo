@@ -1,0 +1,50 @@
+// hamburger
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.hamburger {
+
+    // remove height for small screens
+    @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+        height: 0;
+    }
+
+    &__button {
+        padding: variables.$hamburger_button_padding;
+        margin-left: variables.$hamburger_button_margin_left;
+        background-color: colors.$hamburger_button_background_color;
+        color: colors.$hamburger_button_color;
+        border: none;
+        border-top-right-radius: variables.$hamburger_button_border_radius;
+        border-bottom-right-radius: variables.$hamburger_button_border_radius;
+
+        &:hover {
+            background-color: colors.$hamburger_button_background_color_hover;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        // set fixed position for small screens
+        @include mixins.media_screen_breakpoint($breakpoint: variables.$navigation_breakpoint) {
+            position: fixed;
+            top: variables.$hamburger_button_top_position;
+            z-index: variables.$navigation_z_index;
+        }
+    }
+
+    &__icon {
+        font-size: variables.$hamburger_icon_font_size;
+
+        // use same transition as navigation
+        transition: variables.$navigation_transition;
+
+        // close icon by rotating with some transition
+        &--close {
+            transform: rotate(variables.$hamburger_icon_close_rotation);
+        }
+    }
+}

@@ -1,7 +1,7 @@
 // variables 
 
 
-// reset 
+// base 
 $body_font_family: 'Times New Roman', Times, serif;
 
 // media screen
@@ -10,12 +10,154 @@ $media_screen_medium: 40rem;
 $media_screen_large: 60rem;
 $media_screen_huge: 80rem;
 
-// button 
+// page
+$page_min_width: 20rem;
+$page_aside_width: 18rem;
 
-// logo
+// hamburger
+$hamburger_button_top_position: 25%;
+$hamburger_button_padding: 0.2rem 0.5rem;
+$hamburger_button_margin_left: -0.75rem;
+$hamburger_button_border_radius: 0.2rem;
+$hamburger_icon_font_size: 0.9rem;
+$hamburger_icon_close_rotation: 180deg;
 
-// header 
+// search
+$search_border_width: 0.15rem;
+$search_height: 2.2rem;
+$search_border_radius: 0.2rem;
+$search_icon_font_size: 0.8rem;
+
+// navigation
+$navigation_transition: 0.5s;
+$navigation_breakpoint: 767.98px;
+$navigation_z_index: 10000;
+$navigation_box_padding_top: 0.3rem;
+$navigation_box_padding_left: 0.5rem;
+$navigation_box_border_width: 0.2rem;
+$navigation_box_nested_padding_left: 1.8rem;
+$navigation_expand_padding: 0.3rem 0.55rem;
+$navigation_icon_padding_right: 0.6rem;
+$navigation_icon_font_size: 1.2rem;
+$navigation_list_margin_top: 0.7rem;
+$navigation_list_margin_left: -0.75rem;
+$navigation_exit_margin_top: 0.5rem;
+$navigation_close_font_size: 1.4rem;
+
+// breadcrumbs
+$breadcrumbs_padding_left: 1rem;
+$breadcrumbs_item_padding_left: 0.5rem;
+$breadcrumbs_item_padding_right: 0.25rem;
+$breadcrumbs_link_padding: 0.3rem 0.5rem;
+$breadcrumbs_link_border_radius: 0.15rem;
+
+// matches
+$matches_icon_font_size: 1.35rem;
+$matches_search_margin_right: 0.2rem;
+$matches_search_padding: 0.1rem 0.55rem;
+$matches_search_border_radius: 0.15rem;
+
+// properties
+$properties_z_index: 50000;
+$properties_window_border_width: 0.1rem;
+$properties_image_padding: 0.3rem 0.5rem;
+$properties_icon_font_size: 1rem;
+$properties_image_width: 2.5rem;
+$properties_window_width: 17rem;
+
+// window
+$window_z_index: 50000;
+$window_button_padding: 0 0.2rem;
+$window_button_width: 4rem;
+$window_button_height: 1.5rem;
+$window_button_font_size: 0.8rem;
+$window_button_border_radius: 0.2rem;
+$window_button_margin_left: 0.5rem;
+$window_close_margin_bottom: 0.8rem;
+$window_close_padding: 0.15rem;
+$window_close_width: 2.5rem;
+$window_close_font_size: 0.8rem;
+$window_close_border_radius: 0.2rem;
+$window_content_padding: 0.5rem;
+$window_container_max_height: 20rem;
+$window_footer_margin_top: 1.2rem;
+$window_input_padding: 0.1rem 0.4rem;
+$window_input_width: 100%;
+$window_property_line_height: 1.2rem;
+$window_title_padding: 0.2rem 0;
+$window_message_margin_top: 0.25rem;
+$window_wrapper_border_width: 0.1rem;
+$window_wrapper_width: 19rem;
+$window_wrapper_padding: 0.4rem;
+$window_wrapper_border_radius: 0.5rem;
+
+// files
+$files_gap: 0.5rem;
+$files_picture_small_width: 1.5rem;
+$files_picture_medium_width: 4rem;
+$files_picture_large_width: 8rem;
+$files_name_width_small: 10rem;
+$files_link_gap: 0.5rem;
+$files_link_border_radius: 0.3rem;
+$files_link_padding_small: 0.2rem;
+$files_link_padding_top: 0.15rem;
+$files_link_padding_left: 1rem;
+$files_link_border_width: 0.15rem;
+$files_link_small_width: $files_picture_small_width + 
+                         2 * $files_link_padding_small + 
+                         2 * $files_link_border_width +
+                         $files_name_width_small;
+$files_link_medium_width: $files_picture_medium_width + 
+                          2 * $files_link_padding_left + 
+                          2 * $files_link_border_width;
+$files_link_large_width: $files_picture_large_width + 
+                          2 * $files_link_padding_left + 
+                          2 * $files_link_border_width;
+$files_image_cut_small_width: 1.5rem;
+$files_image_cut_medium_width: 4rem;
+$files_image_cut_large_width: 8rem;
+
+// preview
+$preview_z_index: 60000;
+$preview_arrow_font_size: 2.5rem;
+$preview_arrow_translate: 0.5rem;
+$preview_close_font_size: 1.8rem;
+$preview_close_font_size_small: 1.5rem;
+$preview_close_scale: 0.8;
+$preview_close_margin: 1rem;
+$preview_close_transition: 0.4s;
+$preview_close_breakpoint: 575.98px;
+$preview_media_margin: 0 1.5rem;
+$preview_media_margin_hover: 0 0.1rem;
+$preview_picture_max_width: 100%;
+$preview_picture_min_width: 5rem;
+
+// page-load
+$page_load_z_index: 80000;
+$page_load_icon_font_size: 3rem;
+$page_load_icon_animation_duration: 3s;
+
+// header
+$header_border_width: 0.1rem;
+$header_icon_font_size: 1.1rem;
+$header_icon_transition: 0.5s;
+$header_icon_view_rotation: 45deg;
+$header_icon_sort_rotation: 360deg;
+$header_icon_theme_rotation: 180deg;
+$header_search_width: 24rem;
 
 // footer
+$footer_height: 3rem;
 
 // home
+$home_content_margin: -0.75rem;
+$home_content_min_height: 5rem;
+$home_properties_padding: 0.55rem 0;
+$home_properties_gap: 1rem;
+$home_properties_height: 2.8rem;
+$home_size_margin_top: -0.1rem;
+$home_size_margin_bottom: 0.1rem;
+$home_size_padding: 0.1rem 0.4rem;
+$home_size_border_radius: 0.15rem;
+$home_search_height: 3rem;
+$home_search_padding: 0.55rem 1rem;

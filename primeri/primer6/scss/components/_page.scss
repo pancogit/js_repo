@@ -1,0 +1,16 @@
+// page
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.page {
+    min-width: variables.$page_min_width;
+
+    &__aside {
+        width: variables.$page_aside_width;
+    }
+
+    &__content {
+        background-color: colors.$navigation_background_color;
+    }
+}

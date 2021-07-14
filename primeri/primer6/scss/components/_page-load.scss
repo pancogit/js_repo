@@ -1,0 +1,39 @@
+// page loading process
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.page-load {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: colors.$body_background_color;
+    z-index: variables.$page_load_z_index;
+
+    &__icon {
+        text-align: center;
+        font-size: variables.$page_load_icon_font_size;
+        color: colors.$page_load_icon_color;
+
+        // add animation to the icon to rotate icon infinitely
+        animation-name: rotate-icon;
+        animation-duration: variables.$page_load_icon_animation_duration;
+        animation-iteration-count: infinite;
+
+        // change direction from left to right and vice-versa and use linear function for animation
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+}
+
+// keyframes used for animating page load icon with rotation
+@keyframes rotate-icon {
+
+    // at 0% frame no rotation is done
+    // at 100% frame, do rotation by 360 percent (whole circle)
+    100% { 
+        transform: rotate(360deg); 
+    }
+}

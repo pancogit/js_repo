@@ -1,0 +1,160 @@
+// window for file rename, delete, info
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+@use '../utilities/mixins/mixins';
+
+.window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: variables.$window_z_index;
+    background-color: colors.$window_background_color;
+
+    &__button {
+        padding: variables.$window_button_padding;
+        width: variables.$window_button_width;
+        height: variables.$window_button_height;
+        font-size: variables.$window_button_font_size;
+        color: colors.$hamburger_button_color;
+        background-color: colors.$hamburger_button_background_color;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$window_wrapper_border_width,
+                                    $color: colors.$window_button_border_color);
+        
+        border-radius: variables.$window_button_border_radius;
+
+        &:hover {
+            background-color: colors.$hamburger_button_background_color_hover;
+            border-color: colors.$window_button_border_color_hover;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        // add left margin for all buttons except first
+        + .window__button {
+            margin-left: variables.$window_button_margin_left;
+        }
+    }
+
+    &__close {
+        margin-bottom: variables.$window_close_margin_bottom;
+        padding: variables.$window_close_padding;
+        width: variables.$window_close_width;
+        cursor: pointer;
+        background-color: colors.$window_close_background_color;
+        color: colors.$window_close_color;
+        font-size: variables.$window_close_font_size;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$window_wrapper_border_width,
+                                    $color: colors.$window_wrapper_border_color);
+        border-top-style: none;
+        border-bottom-left-radius: variables.$window_close_border_radius;
+        border-bottom-right-radius: variables.$window_close_border_radius;
+
+        &:hover {
+            background-color: colors.$window_close_background_color_hover;
+        }
+    }
+
+    &__content {
+        padding: variables.$window_content_padding;
+        background-color: colors.$window_content_background_color;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$window_wrapper_border_width,
+                                    $color: colors.$window_content_border_color);
+    }
+
+    &__container {
+        // show scroll bars if overflow exists, otherwise don't show anything
+        overflow: auto;
+
+        // set maximum height to allow scroll bars to show properly
+        max-height: variables.$window_container_max_height;
+    }
+
+    &__footer {
+        margin-top: variables.$window_footer_margin_top;
+    }
+
+    &__header {
+        text-align: right;
+    }
+
+    &__input {
+        padding: variables.$window_input_padding;
+        width: variables.$window_input_width;
+        outline: none;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$window_wrapper_border_width,
+                                    $color: colors.$window_input_border_color);
+
+        &:focus {
+            border-color: colors.$window_input_border_color_hover;
+        }
+    }
+
+    // set higher cascade precence because of input focus style
+    .window__input--error {
+        border-color: colors.$window_input_border_color_error;
+    }
+
+    &__property {
+        padding: 0;
+    }
+
+    &__info {
+        // break long words to multiple lines, used especially for location info (URL)
+        overflow-wrap: break-word;
+
+        // keep whitespaces visible for the info
+        white-space: pre-wrap;
+    }
+
+    &__property, &__info {
+        line-height: variables.$window_property_line_height;
+    }
+
+    &__location {
+        color: colors.$window_location_color;
+    }
+
+    &__title {
+        padding: variables.$window_title_padding;
+        color: colors.$window_title_color;
+        font-weight: bold;
+    }
+
+    &__text {
+
+    }
+
+    &__message {
+        margin-top: variables.$window_message_margin_top;
+        font-weight: bold;
+
+        &--error {
+            color: colors.$window_input_border_color_error;
+        }
+    }
+
+    &__wrapper {
+        width: variables.$window_wrapper_width;
+        padding: variables.$window_wrapper_padding;
+        padding-top: 0;
+        background-color: colors.$window_wrapper_background_color;
+        border-radius: variables.$window_wrapper_border_radius;
+
+        @include mixins.set_borders($style: solid,
+                                    $width: variables.$window_wrapper_border_width,
+                                    $color: colors.$window_wrapper_border_color);
+    }
+}

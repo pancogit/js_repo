@@ -1,0 +1,60 @@
+// breadcrumbs
+
+@use '../utilities/colors';
+@use '../utilities/variables';
+
+.breadcrumbs {
+    padding-left: variables.$breadcrumbs_padding_left;
+
+    &__home {
+        padding-right: 0;
+    }
+
+    &__icon {
+
+    }
+
+    &__item {
+        padding: 0;
+
+        &::before {
+            content: "/";
+            padding-left: variables.$breadcrumbs_item_padding_left;
+            padding-right: variables.$breadcrumbs_item_padding_right;
+            color: colors.$breadcrumbs_link_color;
+        }
+    }
+
+    &__link {
+        padding: variables.$breadcrumbs_link_padding;
+        color: colors.$breadcrumbs_link_color;
+        background-color: colors.$navigation_link_background_color;
+        border-radius: variables.$breadcrumbs_link_border_radius;
+
+        // break long words if text overflows
+        word-break: break-all;
+
+        // keep whitespaces visible for the name
+        white-space: pre-wrap;
+
+        &--active {
+            pointer-events: none;
+        }
+
+        &:hover {
+            color: colors.$breadcrumbs_link_color_hover;
+        }
+    }
+
+    &__main {
+        color: colors.$breadcrumbs_link_color;
+
+        &--active {
+            pointer-events: none;
+        }
+
+        &:hover {
+            color: colors.$breadcrumbs_link_color_hover;
+        }
+    }
+}

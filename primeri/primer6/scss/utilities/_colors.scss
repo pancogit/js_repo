@@ -1,12 +1,114 @@
 // colors
 
 
-// button 
+// base
+$body_background_color: #222b32;
 
-// logo
+// page
 
-// header 
+// hamburger
+$hamburger_button_background_color: #318b58;
+$hamburger_button_background_color_hover: #2b7a4e;
+$hamburger_button_color: white;
+
+// search
+$search_border_color: #a7b596;
+$search_border_color_active: #79a645;
+$search_background_color: #374750;
+$search_box_color: white;
+$search_icon_color: white;
+$search_icon_color_hover: #cacacb;
+
+// navigation
+$navigation_background_color: #303e45;
+$navigation_link_background_color: #191d23;
+$navigation_link_color: white;
+$navigation_icon_color: #1e8650;
+$navigation_icon_cut_color: #54af80;
+$navigation_text_color: #dcdcdc;
+$navigation_close_color: white;
+$navigation_close_color_hover: #dadada;
+
+// breadcrumbs
+$breadcrumbs_link_color: white;
+$breadcrumbs_link_color_hover: #dcdcdc;
+
+// matches
+$matches_icon_color: white;
+$matches_icon_color_hover: #dcdcdc;
+$matches_search_color: white;
+$matches_search_background_color: #77a645;
+$matches_text_color: white;
+
+// properties
+$properties_window_border_color: gray;
+$properties_image_color_hover: #1e8650;
+$properties_entry_color_hover: #dcdcdc;
+$properties_entry_background_color_hover: #313131;
+$properties_window_background_color: black;
+$properties_window_color: white;
+$properties_text_disabled_color: gray;
+$properties_entry_disabled_background_color: #101010;
+
+// window
+$window_background_color: rgb(0 0 0 / 80%);
+$window_button_border_color: #215237;
+$window_button_border_color_hover: #1e442f;
+$window_close_background_color: #b90404;
+$window_close_background_color_hover: #c70303;
+$window_close_color: white;
+$window_content_background_color: #d0d0d0;
+$window_content_border_color: black;
+$window_input_border_color: black;
+$window_input_border_color_hover: #116539;
+$window_input_border_color_error: red;
+$window_location_color: #066300;
+$window_title_color: black;
+$window_wrapper_border_color: #d0d0d0;
+$window_wrapper_background_color: #737373;
+
+// files
+$files_link_hover_background_color: rgb(15 148 29 / 30%);
+$files_link_hover_border_color: rgb(15 148 29 / 20%);
+$files_link_hover_background_color_night: rgb(15 114 148 / 30%);
+$files_link_hover_border_color_night: rgb(22 117 150 / 30%);
+$files_name_hover_color: #005f29;
+$files_name_color: #018037;
+$files_name_color_dark: #efefef;
+$files_name_hover_color_dark: #ffffff;
+$files_icon_audio_color: #da9b28;
+$files_icon_video_color: #3475a2;
+$files_icon_video_color_dark: #4b8ab5;
+$files_icon_text_color: #7b7a7a;
+$files_icon_text_color_dark: #949191;
+$files_icon_folder_color: #1e8650;
+$files_icon_cut_audio_color_dark: #f7cc7e;
+$files_icon_cut_video_color_dark: #8dc2e6;
+$files_icon_cut_text_color_dark: #d0d0d0;
+$files_icon_cut_audio_color: #f3c26a;
+$files_icon_cut_video_color: #74b3de;
+$files_icon_cut_text_color: #b3b3b3;
+$files_icon_cut_folder_color: #6bce9b;
+$files_image_cut_background-color: hsl(0deg 0% 100% / 49%);
+
+// preview
+$preview_background_color: black;
+$preview_close_color: #dadada;
+$preview_close_color_hover: #8a5d5d;
+$preview_text_color: #a5a5a5;
+
+// page-load
+$page_load_icon_color: #b5b5b5;
+
+// header
+$header_border_color: #585858;
+$header_link_color: white;
+$header_link_color_hover: #dcdcdc;
 
 // footer
 
 // home
+$home_content_background_color: #f7f7f7;
+$home_content_background_color_dark: #212d63;
+$home_content_background_color_night: #2b2b2b;
+$home_size_color: white;

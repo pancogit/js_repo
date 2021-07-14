@@ -3,7 +3,7 @@
 <html lang="sr-RS">
 
 <head>
-    <title>Primer 6</title>
+    <title>Primer 6 - Home</title>
 
     <!-- all character sets -->
     <meta charset="utf-8" />
@@ -11,25 +11,466 @@
     <!-- for responsive web design (mobile devices) -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
+    <!-- css bootstrap -->
+    <link href="/js_repo/libraries/bootstrap/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" type="text/css"
+        rel="stylesheet" />
+
+    <!-- font awesome icons -->
+    <link href="/js_repo/libraries/font-awesome/fontawesome-free-5.15.1-web/css/all.min.css" type="text/css"
+        rel="stylesheet" />
+
     <!-- css styles -->
-    <link href="../css/main.css" type="text/css" rel="stylesheet" />
+    <link href="/js_repo/primeri/primer6/css/main.min.css" type="text/css" rel="stylesheet" />
 
     <!-- favicon icon -->
-    <link rel="shortcut icon" type="image/png" href="../../../icon/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/js_repo/icon/favicon.png" />
 </head>
 
 <body>
 
-    <header>
-    </header>
+    <div class="page">
+        <header class="header container-fluid">
+            <div class="row">
+                <div class="hamburger page__aside d-flex align-items-center py-md-2">
+                    <button class="hamburger__button">
+                        <i class="fas fa-arrow-left hamburger__icon hamburger__icon--close"></i>
+                    </button>
+                </div>
+                <div class="col-12 ps-4 col-md">
+                    <div class="row h-100 py-2 flex-md-nowrap gap-2">
+                        <div class="header__search col-12 col-md-auto order-1 order-md-0">
+                            <div class="row flex-nowrap h-100 me-2">
+                                <div class="search col-8">
+                                    <div class="row h-100 align-items-center">
+                                        <input type="text" class="search__box col" placeholder="Search files/folders...">
+                                        <span class="search__delete search__delete--hidden col-auto px-2">
+                                            <i class="fas fa-times-circle search__icon"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <span class="header__sort col-2 d-flex justify-content-center align-items-center">
+                                    <a href="index.html" class="header__link">
+                                        <!-- <i class="fas fa-square header__icon header__icon--view"></i> -->
+                                        <i class="fas fa-th-large header__icon header__icon--view"></i>
+                                        <!-- <i class="fas fa-th header__icon header__icon--view"></i> -->
+                                    </a>
+                                </span>
+                                <span class="header__sort col-1 d-flex justify-content-center align-items-center ps-0">
+                                    <a href="index.html" class="header__link">
+                                        <i class="fas fa-sort-alpha-down header__icon header__icon--sort"></i>
+                                        <!-- <i class="fas fa-sort-alpha-up header__icon header__icon--sort"></i> -->
+                                    </a>
+                                </span>
+                                <span class="header__sort col-1 d-flex justify-content-center align-items-center">
+                                    <a href="index.html" class="header__link">
+                                        <i class="fas fa-adjust header__icon header__icon--theme"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md d-flex justify-content-end align-items-center">
+                            <a href="index.html" class="header__link me-2">
+                                <i class="fas fa-expand-alt header__icon"></i>
+                                <!-- <i class="fas fa-compress-alt header__icon"></i> -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <main>
-    </main>
+        <div class="container-fluid page__content">
+            <div class="row">
+                <aside class="navigation navigation--hide page__aside">
+                    <div class="navigation__exit">
+                        <i class="fas fa-times navigation__close"></i>
+                    </div>
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="/js_repo/primeri/primer6/html/ballons/" class="navigation__link">
+                                <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                    <i class="fas fa-folder navigation__icon col-auto"></i>
+                                    <span class="navigation__text col">ballons</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/js_repo/primeri/primer6/html/files/" class="navigation__link">
+                                <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                    <i class="fas fa-folder navigation__icon col-auto"></i>
+                                    <span class="navigation__text col">files</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/js_repo/primeri/primer6/html/galleries/" class="navigation__link">
+                                <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                    <i class="fas fa-folder-plus navigation__icon col-auto"></i>
+                                    <span class="navigation__text col">galleries</span>
+                                    <span class="navigation__expand col-auto">
+                                        <i class="fas fa-plus navigation__sign"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/galleries/cars/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">cars</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/galleries/cityscape/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">cityscape</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/galleries/forests/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">forests</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/galleries/hiking/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">hiking</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/galleries/mountains/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">mountains</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/js_repo/primeri/primer6/html/samples/" class="navigation__link">
+                                <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                    <i class="fas fa-folder-plus navigation__icon col-auto"></i>
+                                    <span class="navigation__text col">samples</span>
+                                    <span class="navigation__expand col-auto">
+                                        <i class="fas fa-plus navigation__sign"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/samples/music/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">music</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/samples/pictures/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">pictures</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/samples/videos/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">videos</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="/js_repo/primeri/primer6/html/tests/" class="navigation__link">
+                                <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                    <i class="fas fa-folder-plus navigation__icon col-auto"></i>
+                                    <span class="navigation__text col">tests</span>
+                                    <span class="navigation__expand col-auto">
+                                        <i class="fas fa-plus navigation__sign"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/competency/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">competency</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/disc/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">disc</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/jung/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">jung</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/personality/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">personality</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/team-role/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">team-role</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="/js_repo/primeri/primer6/html/tests/work-values/" class="navigation__link">
+                                        <div class="navigation__box d-flex align-items-center flex-nowrap">
+                                            <i class="fas fa-folder navigation__icon col-auto"></i>
+                                            <span class="navigation__text col">work-values</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
 
-    <footer>
-    </footer>
+                <main class="home col d-flex flex-column">
+                    <div class="home__properties row">
+                        <div class="breadcrumbs col-auto me-5">
+                            <div class="row g-2">
+                                <span class="breadcrumbs__home col-auto">
+                                    <a href="/js_repo/primeri/primer6/html/index.html" class="breadcrumbs__main breadcrumbs__main--active">
+                                        <i class="fas fa-home breadcrumbs__icon"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-auto ms-auto">
+                            <div class="home__size d-flex align-items-center"><!-- 19 folders 17.4MB -->27 folders, 169 files 20.47MB</div>
+                        </div>
+                    </div>
 
-    <script src="../js/menu.js"></script>
+                    <div class="home__search matches row gap-2 align-content-center"></div>
+
+                    <div class="home__content home__content--night p-2 flex-grow-1">
+                        <div class="files files--medium">
+                            <div class="files__box">
+                                <a href="/js_repo/primeri/primer6/html/ballons/" class="files__link">
+                                    <i class="fas fa-folder files__icon files__icon--folder"></i>
+                                    <div class="files__name">ballons</div>
+                                </a>
+                            </div>
+                            <div class="files__box">
+                                <a href="/js_repo/primeri/primer6/html/files/" class="files__link">
+                                    <i class="fas fa-folder files__icon files__icon--folder"></i>
+                                    <div class="files__name">files</div>
+                                </a>
+                            </div>
+                            <div class="files__box">
+                                <a href="/js_repo/primeri/primer6/html/galleries/" class="files__link">
+                                    <i class="fas fa-folder files__icon files__icon--folder"></i>
+                                    <div class="files__name">galleries</div>
+                                </a>
+                            </div>
+                            <div class="files__box">
+                                <a href="/js_repo/primeri/primer6/html/samples/" class="files__link">
+                                    <i class="fas fa-folder files__icon files__icon--folder"></i>
+                                    <div class="files__name">samples</div>
+                                </a>
+                            </div>
+                            <div class="files__box">
+                                <a href="/js_repo/primeri/primer6/html/tests/" class="files__link">
+                                    <i class="fas fa-folder files__icon files__icon--folder"></i>
+                                    <div class="files__name">tests</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <footer class="footer"></footer>
+
+        <div class="properties d-none">
+            <div class="properties__window container m-0">
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto">
+                        <i class="fas fa-door-open properties__icon"></i>
+                    </span>
+                    <div class="properties__right properties__right--divider col">
+                        <span class="properties__text properties__text--open">Open</span>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right col">
+                        <span class="properties__text">Cut</span>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right col">
+                        <span class="properties__text">Copy</span>
+                    </div>
+                </div>
+                <div class="properties__entry row properties__entry--disabled">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right properties__right--divider col">
+                        <span class="properties__text">Paste</span>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div
+                        class="properties__right properties__right--divider col d-flex justify-content-between align-items-center">
+                        <span class="properties__text">Create</span>
+                        <span class="properties__expand">
+                            <i class="fas fa-caret-right properties__more"></i>
+                        </span>
+                    </div>
+                    <div class="properties__window">
+                        <div class="properties__entry row">
+                            <span class="properties__image col-auto">
+                                <i class="fas fa-folder-open properties__icon"></i>
+                            </span>
+                            <div class="properties__right col">
+                                <span class="properties__text">Folder</span>
+                            </div>
+                        </div>
+                        <div class="properties__entry row">
+                            <span class="properties__image col-auto">
+                                <i class="fas fa-file properties__icon"></i>
+                            </span>
+                            <div class="properties__right col">
+                                <span class="properties__text">File</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right col">
+                        <span class="properties__text">Delete</span>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right properties__right--divider col">
+                        <span class="properties__text">Rename</span>
+                    </div>
+                </div>
+                <div class="properties__entry row">
+                    <span class="properties__image col-auto"></span>
+                    <div class="properties__right col">
+                        <span class="properties__text">Info</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Rename</span>
+                    <!-- <span class="window__title">File Name</span>
+                    <span class="window__title">Folder Name</span> -->
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <input type="text" class="window__input" maxlength="100" />
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Delete</span>
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <div class="window__text">Are you sure you want to delete?</div>
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">Yes</button>
+                        <button class="window__button">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window d-flex justify-content-center align-items-center d-none">
+            <div class="window__wrapper flex-shrink-0">
+                <div class="window__header d-flex justify-content-between">
+                    <span class="window__title">Info</span>
+                    <i class="fas fa-times window__close d-flex justify-content-center align-items-center"></i>
+                </div>
+                <div class="window__content">
+                    <div class="window__container container">
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Name:</span>
+                            <span class="window__info col-8">Mind-Bending Pictures of the Moon.txt</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Type of file:</span>
+                            <span class="window__info col-8">Text Document (.txt)</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Location:</span>
+                            <span class="window__info window__location col-8">/home/files/Mind-Bending Pictures of the Moon.txt</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Size:</span>
+                            <span class="window__info col-8">990B</span>
+                        </div>
+                        <div class="row mb-3">
+                            <span class="window__property col-4">Created:</span>
+                            <span class="window__info col-8">Wednesday, April 21, 2021, 20:52:25</span>
+                        </div>
+                    </div>
+                    <div class="window__footer d-flex justify-content-end">
+                        <button class="window__button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-load d-flex align-items-center">
+            <i class="fas fa-cog page-load__icon flex-grow-1"></i>
+        </div>
+
+    </div>
+
+    <!-- jQuery library -->
+    <script src="/js_repo/libraries/jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- homepage javascript -->
+    <script src="/js_repo/primeri/primer6/js/home.js" type="module"></script>
 </body>
 
 </html>
